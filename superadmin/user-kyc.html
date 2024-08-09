@@ -1,0 +1,551 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Agreement Pending</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/material-dashboard.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="g-sidenav-show bg-gray-100">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark bg-white main_sidebar" id="sidenav-main" data-color="dark">
+    <div class="sidenav-header">
+      <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
+      <a class="navbar-brand m-0" href="javascript:void(0);">
+        <img src="images/logo.svg" class="navbar-brand-img h-100" alt="main_logo">
+        <!-- <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span> -->
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2 mt-0">
+          <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">face</i>
+            <span class="nav-link-text ms-2 ps-1">Superadmin</span>
+          </a>
+          <div class="collapse" id="ProfileNav">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Settings </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <hr class="horizontal light mt-0 mb-2">
+        <li class="nav-item">
+          <a href="users.html" class="nav-link text-white active">
+            <i class="material-icons-round opacity-10">group</i>
+            <span class="nav-link-text ms-2 ps-1">Users</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">groups</i>
+            <span class="nav-link-text ms-2 ps-1">Teams</span>
+          </a>
+          <div class="collapse" id="teams">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="finance-and-audit.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Finance & Audit </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white" aria-controls="campaigns" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
+          </a>
+          <div class="collapse" id="campaigns">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="field-executives.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Field Executives </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activity.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activity </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="map.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Map </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">toc</i>
+            <span class="nav-link-text ms-2 ps-1">Orders</span>
+          </a>
+          <div class="collapse" id="orders">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requested-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Requested Orders </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="final-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Final Orders </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content border-radius-lg px-md-4">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 border-radius-xl shadow-none main_navbar0" id="navbarBlur" data-scroll="false">
+      <div class="container-fluid px-0 main_navbar1">
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none navPart_1">
+          <a href="javascript:;" class="nav-link p-0 text-body">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </a>
+        </div>
+        <ul class="navbar-nav justify-content-end navPart_4">
+          <li class="nav-item d-xl-none pe-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <nav aria-label="breadcrumb" class="navPart_2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Users</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Retitrak</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">User Detail</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
+          <div class="ms-sm-auto d-flex align-items-center">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Search here</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid px-0 pb-4 mainBody_box">
+      <div class="card card-body">
+        <div class="d-flex w-100 justify-content-between userDtl_head">
+          <div class="profile_box">
+            <div class="profile_info">
+              <h5 class="mb-0 font-weight-bolder">John Doe</h5>
+              <span class="badge badge-warning badge-sm">Pending</span>
+            </div>
+          </div>
+          <div class="dropdown action_dropdown">
+            <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Action<span class="material-icons-round">keyboard_arrow_down</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
+              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_user">Reject</a>
+            </div>
+          </div>
+        </div>
+        <div class="profile_info2 mt-0">
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">business_center</span>Vehement Capital Partners</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">mail</span>johndoe@gmail.com</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">phone</span>+234 946 380 2765</p>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="d-flex w-100 justify-content-between userDtl_head">
+          <div class="profile_box">
+            <div class="profile_info">
+              <h5 class="mb-0 font-weight-bolder">John Doe</h5>
+              <span class="badge badge-danger badge-sm">Rejected</span>
+            </div>
+          </div>
+          <div class="dropdown action_dropdown">
+            <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Action<span class="material-icons-round">keyboard_arrow_down</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
+            </div>
+          </div>
+        </div>
+        <div class="profile_info2 mt-0">
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">business_center</span>Vehement Capital Partners</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">mail</span>johndoe@gmail.com</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">phone</span>(44) 123 1234 123</p>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="d-flex w-100 justify-content-between userDtl_head">
+          <div class="profile_box">
+            <div class="profile_info">
+              <h5 class="mb-0 font-weight-bolder">John Doe</h5>
+              <span class="badge badge-success badge-sm">Approved</span>
+            </div>
+          </div>
+          <div class="right_side">
+            <div class="aggree_pen">
+              <span class="badge badge-sm badge_light">Agreement Pending<button type="button" class="resend_btn">Resend <span class="material-icons-round">chevron_right</span></button></span>
+            </div>
+            <div class="dropdown action_dropdown">
+              <button class="btn bg-gradient-primary m-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action<span class="material-icons-round">keyboard_arrow_down</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#disable_user">Disable</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile_info2 mt-0">
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">business_center</span>Vehement Capital Partners</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">mail</span>johndoe@gmail.com</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">phone</span>+234 946 380 2765</p>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header">
+          <div class="user_head">
+            <h6 class="mb-0">Business Detail</h6>
+            <div class="right_check">
+              <div class="form-check verified_dtl p-0 m-0 is-filled">
+                <input class="form-check-input" checked type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+              </div>
+              <label class="form-check-label mb-0">
+                <small id="profileVisibility">Verified</small>
+              </label>
+            </div>
+          </div>
+          <div class="user_body">
+            <ul class="list-group">
+              <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <span class="mb-2 text-sm">Company Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
+                  <span class="mb-2 text-sm">Official Address: <span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
+                  <span class="mb-2 text-sm">Email Address: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
+                  <span class="mb-2 text-sm">Phone Number: <span class="text-dark ms-sm-2 font-weight-bold">(44) 123 1234 123</span></span>
+                  <span class="mb-2 text-sm">TIN/Vat: <span class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                  <span class="text-sm">VAT Number: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson.com</span></span>
+                </div>
+              </li>
+            </ul>
+            <p class="card_footer font-weight-normal text-sm mb-0"><span class="material-icons-round">border_color</span>Shivani: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header">
+          <div class="user_head">
+            <h6 class="mb-0">Compliance Document</h6>
+            <div class="right_check">
+              <div class="form-check verified_dtl p-0 m-0 is-filled">
+                <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+              </div>
+              <label class="form-check-label mb-0">
+                <small id="profileVisibility">Click to Verify</small>
+              </label>
+            </div>
+          </div>
+          <div class="user_body">
+            <ul class="list-group">
+              <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex gap-6">
+                  <div class="document_box">
+                    <p>License from OAAN</p>
+                    <div class="">
+                      <img src="images/doc.svg">
+                      <button type="button"><span class="material-icons-round">file_download</span></button>
+                    </div>
+                  </div>
+                  <div class="document_box">
+                    <p>Local Partner of International Media Owners</p>
+                    <div class="">
+                      <img src="images/doc.svg">
+                      <button type="button"><span class="material-icons-round">file_download</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header">
+          <div class="user_head">
+            <h6 class="mb-0">Contact Information</h6>
+            <div class="right_check">
+              <div class="form-check verified_dtl p-0 m-0 is-filled">
+                <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+              </div>
+              <label class="form-check-label mb-0">
+                <small>Click to Verify</small>
+              </label>
+            </div>
+          </div>
+          <div class="user_body user_bodyFlex">
+            <ul class="list-group">
+              <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <h6 class="mb-3 text-sm">Director or Managing Director</h6>
+                  <span class="mb-2 text-sm">Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
+                  <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
+                  <span class="text-sm">Email: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <h6 class="mb-3 text-sm">Decision Maker</h6>
+                  <span class="mb-2 text-sm">Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
+                  <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
+                  <span class="text-sm">Email: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <h6 class="mb-3 text-sm">Designated Contact Person</h6>
+                  <span class="mb-2 text-sm">Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
+                  <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
+                  <span class="text-sm">Email: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header">
+          <div class="user_head">
+            <h6 class="mb-0">Bank Account Details</h6>
+            <div class="right_check">
+              <div class="form-check verified_dtl p-0 m-0 is-filled">
+                <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+              </div>
+              <label class="form-check-label mb-0">
+                <small id="profileVisibility">Click to Verify</small>
+              </label>
+            </div>
+          </div>
+          <div class="user_body">
+            <ul class="list-group">
+              <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <span class="mb-2 text-sm">Currency: <span class="text-dark ms-sm-2 font-weight-bold">$5000</span></span>
+                  <span class="mb-2 text-sm">Country of Bank Account: <span class="text-dark ms-sm-2 font-weight-bold">America</span></span>
+                  <span class="text-sm">Account Number: <span class="text-dark ms-sm-2 font-weight-bold">4111 1111 1113 3422</span></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header">
+          <div class="user_head">
+            <h6 class="mb-0">Media Information</h6>
+            <div class="right_check">
+              <div class="form-check verified_dtl p-0 m-0 is-filled">
+                <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+              </div>
+              <label class="form-check-label mb-0">
+                <small id="profileVisibility">Click to Verify</small>
+              </label>
+            </div>
+          </div>
+          <div class="user_body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex p-3 bg-danger-soft border-danger border-radius-lg">
+                <div class="d-flex flex-column">
+                  <span class="mb-2 text-sm">Cities/Area Applicable: <span class="text-dark ms-sm-2 font-weight-bold"><span class="badge badge-danger badge-sm">Information Missing</span></span></span>
+                  <span class="mb-2 text-sm">Type of Media: <span class="text-dark ms-sm-2 font-weight-bold">Digital Media</span></span>
+                  <span class="text-sm">No. of Media: <span class="text-dark ms-sm-2 font-weight-bold">40</span></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--======= APPROVE USER MODAL START =======-->
+      <div class="modal fade" id="approve_user" tabindex="-1" role="dialog" aria-labelledby="approve_userLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="approve_userLabel">Approve User</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <p>Send the agreement contract to 'Vehement Capital Partners'</p>
+                <div class="approval_doc">
+                  <img src="images/excel-doc.svg">
+                  <p>RetinaAd MO Agreement.pdf</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======== REJECT USER MODAL START =======-->
+      <div class="modal fade" id="reject_user" tabindex="-1" role="dialog" aria-labelledby="reject_userLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="reject_userLabel">Reject User</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline mb-3 left_width">
+                    <select class="form-control">
+                      <option disabled selected>Select Reason</option>
+                      <option>Reason 1</option>
+                      <option>Reason 2</option>
+                      <option>Reason 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline">
+                    <label for="exampleFormControlInput1" class="form-label">Comment</label>
+                    <input class="multisteps-form__input form-control pt-0" rows="2" spellcheck="false">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= DISABLE USER MODAL START =======-->
+      <div class="modal fade" id="disable_user" tabindex="-1" role="dialog" aria-labelledby="disable_userLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="approve_userLabel">Disable User</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <p>Do you really want to disable media owner?</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Disable</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= VERIFY DETAIL MODAL START ======-->
+      <div class="modal fade" id="click_verify" tabindex="-1" role="dialog" aria-labelledby="click_verifyLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="click_verifyLabel">Verify</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline">
+                    <label for="exampleFormControlInput1" class="form-label">Comment</label>
+                    <input class="multisteps-form__input form-control pt-0" rows="2" spellcheck="false">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/perfect-scrollbar.min.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/material-dashboard.min.js"></script>
+</body>
+</html>
+  
