@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <filter id="Ellipse_713" x="0" y="0" width="70" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Upload" transform="translate(-1357 -400)">
+    <g transform="matrix(1, 0, 0, 1, 1357, 400)" filter="url(#Ellipse_713)">
+      <g id="Ellipse_713-2" data-name="Ellipse 713" transform="translate(9 8)" fill="#fff" stroke="#e0e0e0" stroke-width="1">
+        <circle cx="26" cy="26" r="26" stroke="none"/>
+        <circle cx="26" cy="26" r="25.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_37081" data-name="Group 37081" transform="translate(1373.986 422.027)">
+      <path id="Path_84864" data-name="Path 84864" d="M25.561,36.727H3.38c-.455,0-.823-.518-.823-1.157V27.42c0-.639.368-1.157.823-1.157H25.561c.454,0,.823.518.823,1.157v8.15c0,.639-.369,1.157-.823,1.157" transform="translate(3.957 -14.654)" fill="#efefef"/>
+      <path id="Path_84866" data-name="Path 84866" d="M17.559,26.618h7.457c.422,0,.764.477.764,1.065v8.648c0,.588-.342,1.065-.764,1.065h-23c-.422,0-.764-.477-.764-1.065V27.683c0-.588.342-1.065.764-1.065H9.655" transform="translate(4.764 -14.893)" fill="none" stroke="#1d1d1b" stroke-linecap="round" stroke-width="2"/>
+      <circle id="Ellipse_714" data-name="Ellipse 714" cx="1.708" cy="1.708" r="1.708" transform="translate(23.229 15.406)" fill="none" stroke="#1d1d1b" stroke-linecap="round" stroke-width="2"/>
+      <path id="Path_84868" data-name="Path 84868" d="M51.028,5.015a.565.565,0,0,1-.812,0L47.161,1.961v8.406a.583.583,0,0,1-1.166,0V1.961L42.958,5.015a.575.575,0,0,1-.813-.812L46.19.159a.738.738,0,0,1,.194-.124A.349.349,0,0,1,46.578,0a.471.471,0,0,1,.212.053.725.725,0,0,1,.194.124l4.044,4.044A.575.575,0,0,1,51.028,5.015Z" transform="translate(-27.959 0.973)" stroke="#000" stroke-width="0.7"/>
+    </g>
+  </g>
+</svg>

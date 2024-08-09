@@ -1,0 +1,461 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audit Campaign</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link active" href="audit-campaign.html">
+              <span class="material-symbols-outlined link_icon">jamboard_kiosk</span>
+              <span class="link_text">Audit Campaign</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="activity.html">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Activity</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="reports.html">
+              <span class="material-symbols-outlined link_icon">analytics</span>
+              <span class="link_text">Reports</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">map</span>
+              <span class="link_text">Map</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Audit Campaign</li>
+          </ol>
+        </nav>
+        <div class="campaign_box">
+          <div class="heading_box">
+            <div class="headLeft">
+              <h3>Audit Campaign</h3>
+            </div>
+            <div class="headRight">
+              <a href="#" class="blue_btn" data-bs-toggle="modal" data-bs-target="#addCamModal">Add Campaign</a>
+              <div class="modal modal_box fade" id="addCamModal" tabindex="-1" aria-labelledby="addCamModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title" id="addCamModalLabel">Choose Audit Service</h3>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="modal_body">
+                        <p class="mb-0">Kindly choose one service to proceed further.</p>
+                        <ul class="audit_category">
+                          <li class="nav_item">
+                            <a class="nav_link active" href="#">OOH</a>
+                          </li>
+                          <li class="nav_item">
+                            <a class="nav_link" href="#">DOOH</a>
+                          </li>
+                          <li class="nav_item">
+                            <a class="nav_link" href="#">Retail</a>
+                          </li>
+                          <li class="nav_item">
+                            <a class="nav_link" href="#">BTL</a>
+                          </li>
+                          <li class="nav_item">
+                            <a class="nav_link" href="#">Asset & Inventory</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="modal-footer border-top-0">
+                      <button type="button" class="blue_btn m-0" data-bs-dismiss="modal">Save</button>
+                      <button type="button" class="grey_btn m-0 ms-2" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_header">
+            <ul>
+              <li>
+                <img src="images/campaigns.svg" alt="Campaigns" />
+                <div>
+                  <h3>6</h3>
+                  <p class="mb-0">Campaigns</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/locations.svg" alt="Locations" />
+                <div>
+                  <h3>72</h3>
+                  <p class="mb-0">Locations</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/images.svg" alt="Images" />
+                <div>
+                  <h3>26</h3>
+                  <p class="mb-0">Images</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/videos.svg" alt="Videos" />
+                <div>
+                  <h3>12</h3>
+                  <p class="mb-0">Videos</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="campaign_tabs">
+            <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="active-tab" data-bs-toggle="tab" data-bs-target="#active-tab-pane" type="button" role="tab" aria-controls="active-tab-pane" aria-selected="true">Active</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="upcoming-tab" data-bs-toggle="tab" data-bs-target="#upcoming-tab-pane" type="button" role="tab" aria-controls="upcoming-tab-pane" aria-selected="false">Upcoming</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="concluded-tab" data-bs-toggle="tab" data-bs-target="#concluded-tab-pane" type="button" role="tab" aria-controls="concluded-tab-pane" aria-selected="false">Concluded</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending-tab-pane" type="button" role="tab" aria-controls="pending-tab-pane" aria-selected="false">Pending</button>
+              </li>
+            </ul>
+            <div class="tab-content campaignTabs_con" id="myTabContent">
+              <div class="tab-pane fade show active" id="active-tab-pane" role="tabpanel" aria-labelledby="active-tab" tabindex="0">
+                <div class="horiz_cards">
+                  <ul>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type1 position_cam">OOH</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <div class="badge badge-success-solid">Paid</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type2 position_cam">DOOH</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <div class="badge badge-success-solid">Paid</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type3 position_cam">BTL</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <div class="badge badge-success-solid">Paid</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type4 position_cam">Sales</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <div class="badge badge-success-solid">Paid</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type5 position_cam">Asset Tracker</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <div class="badge badge-success-solid">Paid</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="upcoming-tab-pane" role="tabpanel" aria-labelledby="upcoming-tab" tabindex="0">
+                <div class="horiz_cards">
+                  <ul>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type1 position_cam">OOH</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <div class="badge badge-success-solid">Paid</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type1 position_cam">OOH</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <div class="badge badge-success-solid">Paid</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="concluded-tab-pane" role="tabpanel" aria-labelledby="concluded-tab" tabindex="0">
+                <div class="horiz_cards">
+                  <ul>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type1 position_cam">OOH</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <div class="badge badge-success-solid">Paid</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pending-tab-pane" role="tabpanel" aria-labelledby="pending-tab" tabindex="0">
+                <div class="horiz_cards">
+                  <ul>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-grey mb-2">Unverified</span>
+                          <span class="campaign_type camp_type2 position_cam">DOOH</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <p class="mb-0">Last Payment Date: June 30, 2024<span class="badge badge-success-solid ms-2">Paid</span></p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="error_box">
+                      <a href="campaign-detail.html">
+                        <div class="top_body bottom_body">
+                          <p class="mb-0"><span class="material-symbols-outlined">error</span>Your campaign will be deleted if payment is not made by June 30, 2024</p>
+                        </div>
+                        <div class="card_body">
+                          <span class="badge badge-grey mb-2">Unverified</span>
+                          <span class="campaign_type camp_type3 position_cam">BTL</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                            <p class="error_msg2 mb-0">Incomplete Setup</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <p class="mb-0">Last Payment Date: June 30, 2024<span class="badge badge-danger-solid ms-2">Unpaid</span></p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="campaign-detail.html">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Verified</span>
+                          <span class="campaign_type camp_type4 position_cam">Sales</span>
+                          <h3>The rise of advertising</h3>
+                          <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                          <div class="flex_box">
+                            <p class="bold_txt mb-0">15 Days Frequency</p>
+                          </div>
+                        </div>
+                        <div class="bottom_body">
+                          <p class="mb-0">Campaign Audit Cost: <span class="bold_txt">N 78,750</span></p>
+                          <p class="mb-0">Last Payment Date: June 30, 2024<span class="badge badge-danger-solid ms-2">Unpaid</span></p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="noFoundInner">
+          <img src="images/no-campaign.png" alt="Campaign not Found" />
+          <h3>No Campaigns Found</h3>
+          <p>Add a campaign through the 'Add Campaign' process to ensure accurate audits <span class="block_txt">and maximize your advertising impact.</span></p>
+          <a href="#" class="blue_btn">Add Campaign</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $('.nav_link').on('click', function (e) {
+        e.preventDefault();
+        $('.nav_link').removeClass('active');
+        $(this).toggleClass('active');
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+</body>
+</html>
