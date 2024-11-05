@@ -1,0 +1,663 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bookings</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="dashboard.html">
+              <span class="material-symbols-outlined link_icon">dashboard</span>
+              <span class="link_text">Dashboard</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="media-location.html">
+              <span class="material-symbols-outlined link_icon">ads_click</span>
+              <span class="link_text">Media Location</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link active" href="bookings.html">
+              <span class="material-symbols-outlined link_icon">edit_calendar</span>
+              <span class="link_text">Bookings</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Orders</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">map</span>
+              <span class="link_text">Map</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Bookings</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="heading_box">
+              <div class="headLeft">
+                <h3>Bookings</h3>
+              </div>
+            </div>
+            <div class="booking_fil">
+              <div class="page_31">
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">State</button>
+                    <div class="menu_drop">
+                      <div class="drop_note">
+                        <p>Select one or multiple states</p>
+                      </div>
+                      <ul>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Jos</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Kano</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Lagos</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall" checked>
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Maiduguri</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Minna</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Mokwa</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall" checked>
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Mubi</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Ogbomosho</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall" checked>
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Potiskum</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Sokoto</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">LGA</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>LGA 1</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>LGA 2</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>LGA 3</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>LGA 4</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">City</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>City 1</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>City 2</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>City 3</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>City 4</p>
+                            <input class="checkbox__input" type="checkbox" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Booking Type</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Booked</p>
+                            <input class="checkbox__input" type="radio" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Pending</p>
+                            <input class="checkbox__input" type="radio" name="selectall" checked>
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="list-item">
+                          <label class="checkbox">
+                            <p>Blocked</p>
+                            <input class="checkbox__input" type="radio" name="selectall">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                            </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <button type="button" class="blue_btn">Clear All</button>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-2 mb-4">
+              <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#blockLocModal">Block Location</button>
+              <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#RightDrawer">Open Sidebar</button>
+            </div>
+            <div class="booking_cal">
+              <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&bgcolor=%23ffffff&mode=WEEK&title=Retina&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+        </div>
+        <!--====== BLOCK LOCATION POPUP START =====-->
+        <div class="modal modal_box fade" id="blockLocModal" tabindex="-1" aria-labelledby="blockLocModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="blockLocModalLabel">Location 1</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="blockLoc_f">
+                    <p class="blockloc_btn">Block this Location</p>
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="drop_menu">
+                          <button type="button" class="form-select">Select Reason</button>
+                          <div class="menu_drop">
+                            <ul>
+                              <li class="list-item">
+                                <label class="checkbox">
+                                  <p>Contractual Obligations</p>
+                                  <input class="checkbox__input" type="radio" name="selectreason">
+                                  <span class="checkbox__in">
+                                    <span class="checkbox__tick"></span>
+                                  </span>
+                                </label>
+                              </li>
+                              <li class="list-item">
+                                <label class="checkbox">
+                                  <p>Maintenance or Upgrades</p>
+                                  <input class="checkbox__input" type="radio" name="selectreason">
+                                  <span class="checkbox__in">
+                                    <span class="checkbox__tick"></span>
+                                  </span>
+                                </label>
+                              </li>
+                              <li class="list-item">
+                                <label class="checkbox">
+                                  <p>Technical Problems</p>
+                                  <input class="checkbox__input" type="radio" name="selectreason" checked>
+                                  <span class="checkbox__in">
+                                    <span class="checkbox__tick"></span>
+                                  </span>
+                                </label>
+                              </li>
+                              <li class="list-item">
+                                <label class="checkbox">
+                                  <p>Regulatory Issues</p>
+                                  <input class="checkbox__input" type="radio" name="selectreason">
+                                  <span class="checkbox__in">
+                                    <span class="checkbox__tick"></span>
+                                  </span>
+                                </label>
+                              </li>
+                              <li class="list-item">
+                                <label class="checkbox">
+                                  <p>Performance Issues</p>
+                                  <input class="checkbox__input" type="radio" name="selectreason">
+                                  <span class="checkbox__in">
+                                    <span class="checkbox__tick"></span>
+                                  </span>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 col-sm-6">
+                        <div class="input_group mb-0">
+                          <div class="date_flex">
+                            <input class="form_control date" type="text" name="startdate" placeholder="Start Date">
+                            <span class="input-group-btn">
+                              <span class="material-symbols-outlined">calendar_month</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6">
+                        <div class="input_group mb-0">
+                          <div class="date_flex">
+                            <input class="form_control date" type="text" name="enddate" placeholder="End Date">
+                            <span class="input-group-btn">
+                              <span class="material-symbols-outlined">calendar_month</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= BLOCK LOCATION POPUP END ======-->
+        <!--==== CAMPAIGN DETAIL SIDEBAR START ====-->
+        <div class="modal fade modalCustomRight" id="RightDrawer">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="cam_sidebar">
+                  <div class="cam_box1">
+                    <p class="mb-0">#2000345</p>
+                  </div>
+                  <div class="cam_box1 cam_box2">
+                    <p class="mb-0"><span class="material-symbols-outlined">home</span>Location 1</p>
+                  </div>
+                  <div class="cam_box1 cam_box3">
+                    <p class="mb-0"><span class="green_txt2"></span>Confirmed</p>
+                    <p class="mb-0" style="display: none;"><span class="yellow_txt"></span>Pending</p>
+                  </div>
+                  <div class="cam_box1 cam_box4">
+                    <div class="cam_box41">
+                      <div class="date_flex">
+                        <span class="input-group-btn">
+                          <span class="material-symbols-outlined">calendar_month</span>
+                        </span>
+                        <input class="form_control date2" type="text" name="startdate" placeholder="Start Date" value="Jul 15">
+                      </div>
+                      <span class="material-symbols-outlined">east</span>
+                      <div class="date_flex">
+                        <span class="input-group-btn">
+                          <span class="material-symbols-outlined">calendar_month</span>
+                        </span>
+                        <input class="form_control date2" type="text" name="startdate" placeholder="Start Date" value="Jul 30">
+                      </div>
+                      <p>15 Days</p>
+                    </div>
+                  </div>
+                  <div class="cam_box1 cam_box5">
+                    <p class="mb-0"><img src="images/cam-green.svg" alt="Camapign" />Campaign 1</p>
+                  </div>
+                  <div class="cam_box6">
+                    <div class="cam_box1">
+                      <h4><span class="material-symbols-outlined">history</span>Campaign History</h4>
+                    </div>
+                    <ul class="vertical_scroll">
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                      <li class="cam_box1">
+                        <h5>Campaign 1</h5>
+                        <p class="mb-0"><span>15-06-2024</span> - <span>30-06-2024</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== CAMPAIGN DETAIL SIDEBAR END =====-->
+        <!--========== LOGOUT POPUP START =========-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "dd M yyyy"
+    });
+  </script>
+  <script>
+    $(".date2").datepicker({
+      format: "M dd"
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(".form-select").click(function (evt) {
+        evt.stopPropagation();
+        $(".form-select").removeClass('active');
+        $(this).addClass('active');
+        $(".menu_drop").hide();
+        $(this).parent().find(".menu_drop").show();
+      });
+    });
+    $(document).click(function (e) {
+      var container = $(".menu_drop");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.hide();
+        $(".form-select").removeClass('active');
+    }});
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+</body>
+</html>

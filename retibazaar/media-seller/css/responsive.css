@@ -1,0 +1,845 @@
+@charset "UTF-8";
+/* CSS Document */
+@media (max-width: 1680px) {
+.locDtl_head, .activity_body ul {
+  gap: 20px;
+}
+.loc_head1, .loc_head2 {
+  width: calc(50% - 10px);
+}
+.activity_body ul li {
+  width: calc(33.33% - 13.33px);
+}
+.page_2 .page_11 {
+  width: calc(45% - 30px);
+}
+.page_2 .page_12 {
+  width: 55%;
+}
+}
+@media (max-width: 1540px) {
+.report_header .card_header ul li {
+  width: calc(33.33% - 13.33px);
+  max-width: unset;
+}
+.report_header .card_header ul li h3 {
+  font-size: 16px;
+  line-height: 22px;
+}
+.page_2 .page_11 {
+  width: calc(50% - 30px);
+}
+.page_2 .page_12 {
+  width: 50%;
+}
+}
+@media (max-width: 1399px) {
+.filter_div {
+  padding-right: 12px;
+}
+.filter_div.filter_1 {
+  width: 23%;
+}
+.filter_div.filter_5 {
+  width: 12%;
+}
+.filter_div.filter_6 {
+  width: 5%;
+}
+.search_filters, .locDtl_head {
+  margin: 30px 0;
+}
+.activity_body, .campaign_cards ul {
+  margin-top: 30px;
+}
+.add_cam0 {
+  margin-top: 30px;
+}
+.contact_box {
+  margin: 0 auto;
+}
+.analyBox_1 {
+  gap: 20px;
+  flex-direction: column-reverse;
+}
+.analyBox_12 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.analyBox_11 {
+  width: 100%;
+}
+.cam_acti .activity_fil2 {
+  width: 45%;
+}
+.dash_1 {
+  width: calc(100% - 350px);
+}
+.dash_2 {
+  width: 320px;
+}
+}
+@media (max-width: 1280px) {
+.activity_fil1, .activity_fil2 {
+  width: 28%;
+  padding-right: 12px;
+}
+.activity_fil3 {
+  width: 19%;
+  padding-right: 12px;
+}
+.pay_div {
+  position: unset;
+}
+.plan_dtl .flex_box2 {
+  margin-top: 20px;
+}
+.plan_dtl .block_txt {
+  display: inline;
+}
+.report_header .card_header ul li {
+  width: calc(50% - 10px);
+}
+.chart_box img {
+  height: 300px;
+}
+.locDtl_body > ul > li {
+  width: 100%;
+}
+.authen_sc1 {
+  padding-top: 40px;
+}
+.page_1 {
+  gap: 20px;
+}
+.page_11 {
+  width: calc(50% - 20px);
+}
+.dash_0 {
+  gap: 20px;
+}
+.dash_1 {
+  width: calc(100% - 320px);
+}
+.dash_2 {
+  width: 300px;
+}
+.card_header ul li {
+  padding: 10px 15px;
+}
+.card_header ul li h3 {
+  font-size: 20px;
+  line-height: 22px;
+}
+.card_header ul li img {
+  width: 40px;
+}
+.header_sec1 {
+  gap: 60px;
+}
+.header_sec1 ul, .header_sec2 {
+  gap: 30px;
+}
+}
+@media (max-width: 1199px) {
+.search_filters {
+  gap: 15px 0;
+}
+.filter_div, .filter_div.filter_1 {
+  width: 33.33%;
+}
+.filter_div.filter_3 {
+  padding-right: 0;
+}
+.filter_div.filter_5 {
+  width: 112px;
+  padding-right: 12px;
+}
+.filter_div.filter_6 {
+  width: 42px;
+}
+.locations_box ul li, .locDtl_body > ul > li {
+  width: calc(50% - 10px);
+}
+.activity_fil1, .activity_fil2 {
+  width: 30%;
+}
+.activity_fil3 {
+  width: 16%;
+}
+.activity_fil4 {
+  width: 24%;
+}
+.activity_body ul li {
+  width: calc(50% - 10px);
+}
+.report_filters0, .report_filters {
+  max-width: 100%;
+}
+.rep_filter1, .rep_filter2 {
+  width: calc(50% - 78px);
+}
+.rep_filter3 {
+  width: 156px;
+}
+.tabs_left {
+  width: 280px;
+}
+.tabs_content {
+  width: calc(100% - 280px);
+}
+.activate_box2 ul {
+  gap: 15px;
+}
+.activate_box2 ul li {
+  width: calc(33.33% - 10px);
+}
+.campaign_cards ul li {
+  width: calc(50% - 10px);
+}
+.add_cam0 {
+  gap: 30px;
+}
+.add_cam1, .add_cam2 {
+  width: calc(50% - 15px);
+}
+.audit_category.audit_freq {
+  flex-wrap: wrap;
+}
+.audit_category.audit_freq li {
+  flex-grow: unset;
+  width: calc(33.33% - 7.33px);
+}
+.input_group .audit_category input.nav_link {
+  width: 100%;
+}
+.center_txt {
+  width: 34px;
+}
+.analyBox_2 {
+  margin-top: 30px;
+}
+.analyBox_11 ul, .analyBox_2 ul {
+  gap: 20px;
+}
+.analyBox_2 ul li {
+  width: calc(50% - 10px);
+}
+.chart_box img {
+  object-position: top;
+  height: 260px;
+}
+.full_width .loc_head1 {
+  width: 100%;
+}
+}
+@media (max-width: 1100px) {
+.secMap_legends {
+  top: unset;
+  right: unset;
+  bottom: 10px;
+  left: 0;
+  border: 1px solid #EAEAEA;
+  border-left: 0;
+}
+.secMap_legends p {
+  font-size: 13px;
+  line-height: 15px;
+}
+.dash_0 {
+  flex-direction: column;
+  gap: 25px;
+}
+.dash_1 {
+  width: 100%;
+  gap: 25px;
+}
+.dash_2 {
+  width: 100%;
+  flex-direction: row;
+  gap: 20px;
+}
+.card_header ul {
+  flex-wrap: wrap;
+}
+.card_header ul li {
+  width: calc(50% - 10px);
+  padding: 10px;
+}
+}
+@media (max-width: 991px) {
+.authen_sc1 {
+  padding-top: 20px;
+  padding-right: 40px;
+}
+.body_part {
+  padding: 40px;
+  padding-bottom: 20px;
+}
+.footer_part {
+  padding: 20px 40px;
+}
+.filter_div, .filter_div.filter_1 {
+  width: 50%;
+}
+.filter_div.filter_2, .filter_div.filter_4 {
+  padding-right: 0;
+}
+.filter_div.filter_3 {
+  padding-right: 12px;
+}
+.rep_filter1, .rep_filter2 {
+  padding-right: 12px;
+}
+.header_inner {
+  padding: 0 25px;
+}
+.head_part1 {
+  display: none;
+}
+.activate_box2 ul li {
+  width: 100%;
+}
+.campaignTabs.nav-tabs .nav-link {
+  width: 150px;
+}
+.contact_box {
+  max-width: 450px;
+  flex-direction: column;
+}
+.contact_left {
+  width: 100%;
+}
+.contact_right {
+  width: 100%;
+  border-top: 1px solid #dddddd;
+  margin-top: 25px;
+  padding-top: 20px;
+}
+.cam_acti .activity_fil2 {
+  width: 60%;
+}
+.connect_sec0 {
+  padding-left: 0;
+}
+.choose_option {
+  padding: 40px 0;
+}
+.choose_option ul {
+  gap: 40px;
+}
+.choose_option ul li {
+  width: calc(50% - 20px);
+}
+.uploaded_box ul {
+  margin-bottom: 30px;
+}
+.uploaded_box, .saveCam_btn {
+  margin-top: 30px;
+}
+}
+@media (max-width: 960px) {
+.activity_head {
+  gap: 15px 0;
+}
+.activity_fil1, .activity_fil2 {
+  width: calc(50% - 50px);
+}
+.activity_fil3 {
+  width: 100px;
+  padding-right: 0;
+}
+.activity_fil4 {
+  width: 100%;
+  justify-content: flex-start;
+}
+.head_part21 {
+  width: 400px;
+}
+.head_part {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 15px;
+}
+.content_box .steps_box {
+  padding: 6px 12px;
+  padding-bottom: 4px;
+}
+.campaignTabs.nav-tabs .nav-link {
+  width: 119px;
+}
+.add_cam0 {
+  flex-direction: column;
+}
+.add_cam1, .add_cam2 {
+  width: 100%;
+}
+.add_cam11 {
+  max-width: 100%;
+}
+.audit_category.audit_freq {
+  flex-wrap: nowrap;
+}
+.audit_category.audit_freq li {
+  width: unset;
+}
+.input_group .audit_category input.nav_link {
+  width: 80px;
+}
+}
+@media (max-width: 883px) {
+.report_filters {
+  gap: 15px 12px;
+}
+.rep_filter1, .rep_filter2 {
+  width: calc(50% - 6px);
+  padding-right: 0;
+}
+.head_part21 {
+  width: 350px;
+}
+.head_part3 {
+  gap: 15px;
+}
+.report_header .card_header ul li {
+  width: 100%;
+}
+.pay_methods.campaign_payment ul li img {
+  height: 64px;
+}
+}
+@media (max-width: 767px) {
+.expand_btn {
+  display: none;
+}
+.login_section {
+  min-height: unset;
+}
+.authen_sec {
+  max-width: 600px;
+  flex-direction: column;
+  gap: 40px;
+}
+.authen_sc1 {
+  padding: 0;
+  width: 100%;
+}
+.authen_sc2 {
+  width: 100%;
+}
+.authen_sc1 ul {
+  margin-top: 30px;
+}
+.addLoc_box {
+  margin-top: 30px;
+}
+.authen_sc13 {
+  display: none;
+}
+.tabs_left {
+  width: 260px;
+  padding: 20px;
+}
+.tabs_content {
+  width: calc(100% - 260px);
+}
+.content_box {
+  padding: 20px;
+}
+.account_activation {
+  margin: 30px auto;
+}
+.report_header .card_header ul li {
+  width: calc(50% - 10px);
+}
+/*====== MOBILE SIDEBAR CSS START =====*/
+.sidebar_header {
+  padding: 15px 30px;
+  justify-content: space-between;
+}
+.sidebar_header img {
+  width: 110px;
+}
+.b-menu2 {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  top: 4px;
+}
+.b-menu2 span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #000000;
+}
+.head_part1, .b-menu2 {
+  display: block;
+}
+.mobile_header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mobile_header button {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  left: -6px;
+}
+.mobile_header span {
+  font-size: 34px;
+  font-weight: 300;
+  color: #000000;
+}
+.mobile_header img {
+  width: auto;
+  height: 24px;
+  position: relative;
+  top: -2px;
+}
+.main_sidebar {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 33%);
+  z-index: 9999;
+  margin-left: -100%;
+  transition: .3s all;
+}
+.main_sidebar.open {
+  margin-left: 0;
+  transition: .3s all;
+}
+.fixed_sidebar + .main_content {
+  margin-left: 0;
+}
+.fixed_sidebar + .main_content .header_inner {
+  left: 0;
+}
+/*======= MOBILE SIDEBAR CSS END ======*/
+.choose_option {
+  padding: 0;
+}
+.choose_option ul {
+  margin-top: 30px;
+}
+.choose_option h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.productImageDetail video {
+  height: 400px;
+}
+.vid_demo11 {
+  margin-top: 30px;
+}
+}
+@media (max-width: 680px) {
+.tabs_box {
+  flex-direction: column;
+}
+.tabs_left {
+  width: 100%;
+  position: unset;
+  gap: 15px;
+}
+.tabs_content {
+  width: 100%;
+  border-left: 0;
+  border-top: 1px solid #e9e9e9;
+}
+.addLoc_div {
+  flex-direction: column;
+  gap: 10px;
+}
+.report_header .card_header ul li {
+  width: 100%;
+}
+.payment_modal .modal-content {
+  width: 500px;
+  margin: 20px auto;
+}
+.payment_box {
+  padding: 20px;
+}
+.payment_box img {
+  height: 120px;
+}
+.pay_methods {
+  padding: 25px 20px;
+}
+}
+@media (max-width: 576px) {
+.login_section {
+  padding: 30px 0;
+}
+.authen_sec {
+  gap: 30px;
+}
+.page_head {
+  margin-bottom: 20px;
+}
+.login_buttons {
+  margin-top: 30px;
+}
+.body_part {
+  padding: 30px;
+  padding-bottom: 20px;
+}
+.footer_part {
+  padding: 20px 30px;
+}
+.filter_div, .filter_div.filter_1 {
+  width: 100%;
+  padding-right: 0 !important;
+}
+.locations_box ul li, .loc_head1, .loc_head2, .locDtl_body > ul > li  {
+  width: 100%;
+}
+.search_filters, .locDtl_head {
+  margin: 20px 0;
+}
+.activity_fil1, .activity_fil2 {
+  width: 100%;
+  padding-right: 0;
+}
+.activity_fil4 {
+  width: 162px;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+.activity_body {
+  margin-top: 20px;
+}
+.campaign_cards ul {
+  margin-top: 25px;
+}
+.add_cam0 {
+  margin-top: 20px;
+}
+.activity_body ul li {
+  width: 100%;
+}
+.rep_filter1, .rep_filter2, .rep_filter3 {
+  width: 100%;
+}
+.head_part21 {
+  display: none;
+}
+.header_inner {
+  padding: 0 20px;
+}
+.main_inner, .loc_body, .activate_box {
+  padding: 20px;
+}
+.addLoc_box {
+  margin-top: 20px;
+}
+.option_or {
+  margin: 15px 0;
+}
+.campaignTabs.nav-tabs .nav-link {
+  width: unset;
+  padding: 0 15px 10px;
+}
+.campaign_cards ul li {
+  width: 100%;
+}
+.upload_flex {
+  flex-direction: column;
+}
+.files_flex {
+  width: 100%;
+}
+.audit_category.audit_freq {
+  flex-wrap: wrap;
+}
+.audit_category.audit_freq li {
+  width: calc(33.33% - 7.33px);
+}
+.input_group .audit_category input.nav_link {
+  width: 100%;
+}
+.plan_dtl h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.notifi_head {
+  margin-bottom: 20px;
+}
+.noti_cont {
+  padding: 10px 0;
+}
+.time_txt {
+  position: unset;
+  font-size: 13px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.alert_msg {
+  width: calc(100% + 40px);
+  top: -20px;
+  left: -20px;
+}
+.payment_modal .modal-content {
+  width: 100%;
+}
+.cam_acti {
+  width: 100%;
+}
+.cam_acti .activity_fil2 {
+  width: 100%;
+  padding-right: 12px;
+}
+.choose_option ul {
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 25px;
+}
+.choose_option ul li {
+  width: 100%;
+}
+.productImageDetail video {
+  height: 300px;
+}
+.vid_demo11 {
+  margin-top: 25px;
+}
+.optional_txt {
+  top: 3px;
+  right: 3px;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 6px;
+}
+.uploaded_box ul {
+  margin-bottom: 20px;
+}
+.uploaded_box, .saveCam_btn {
+  margin-top: 20px;
+}
+.dash_0 {
+  gap: 20px;
+  margin-top: 25px;
+}
+.dash_1 {
+  gap: 20px;
+}
+.dash_2 {
+  flex-direction: column;
+}
+.card_header ul {
+  gap: 10px;
+}
+.card_header ul li {
+  width: calc(50% - 5px);
+  gap: 10px;
+}
+.card_header ul li h3 {
+  font-size: 18px;
+  line-height: 18px;
+}
+.modal.modalCustomRight .modal-dialog {
+  max-width: 360px;
+}
+}
+@media (max-width: 480px) {
+.authen_sec {
+  padding: 0 15px;
+}
+.campaignTabs.nav-tabs .nav-link {
+  font-size: 14px;
+  padding: 0 10px 10px;
+}
+.heading_box {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.noFoundInner h3, .head_part h3, .activate_box2 h3, .headLeft h3, .vid_demo1 h3 {
+  font-size: 20px;
+  line-height: 28px;
+}
+.card_header ul li {
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  gap: 6px;
+}
+.card_header ul li h3 {
+  position: absolute;
+  margin: 0;
+  top: 18px;
+  left: 50px;
+}
+.card_header ul li img {
+  width: 30px;
+}
+}
+@media (max-width: 430px) {
+.locSearch_box0 {
+  width: calc(100% - 30px);
+  top: 15px;
+  left: 15px;
+  right: 15px;
+}
+.media_box {
+  left: 15px;
+  bottom: 15px;
+  width: 280px;
+}
+.card_header ul li {
+  padding: 8px 10px;
+}
+}
+@media (max-width: 400px) {
+.authen_sec {
+  gap: 20px;
+}
+.authen_sc1 ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.page_head h1 {
+  font-size: 28px;
+  line-height: 37px;
+}
+.body_part {
+  padding: 20px;
+  padding-bottom: 15px;
+}
+.footer_part {
+  padding: 15px 20px;
+}
+.form_field .phone_flex {
+  gap: 10px;
+}
+.form_field .phone_flex input {
+  width: calc(100% - 138px);
+}
+.notifi_head {
+  width: 100%;
+}
+.choose_option ul li img {
+  height: 50px;
+}
+.margin_top {
+  margin: 20px 0;
+}
+.main_inner, .loc_body, .activate_box {
+  padding: 20px 15px;
+}
+.page_43 ul {
+  gap: 15px;
+}
+.page_43 ul li {
+  margin-bottom: 10px;
+}
+.modal.modalCustomRight .modal-dialog {
+  max-width: 320px;
+}
+}
+@media (max-width: 360px) {
+.choose_option ul li a {
+  padding: 20px;
+}
+.modal.modalCustomRight .modal-dialog {
+  max-width: 300px;
+}
+}

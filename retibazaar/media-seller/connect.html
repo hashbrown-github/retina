@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Connect with Us</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/calendar.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="header_inner2">
+            <a href="#"><img src="images/logo.svg" alt="RetiBazaar" /></a>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <div class="connect_sec0">
+            <div class="heading_box d-flex flex-row align-items-center">
+              <div class="headLeft">
+                <h3><a href="choose-guide.html" class="back_arrow"><span class="material-symbols-outlined">arrow_back_ios</span></a>Back</h3>
+              </div>
+              <div class="headRight">
+                <a href="#" class="blue_btn">Skip to Account</a>
+              </div>
+            </div>
+            <iframe src='https://outlook.office365.com/owa/calendar/ConnectWithUs1@hashbrown.com/bookings/' width='100%' scrolling='yes'></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $('.nav_link').on('click', function (e) {
+        e.preventDefault();
+        $('.nav_link').removeClass('active');
+        $(this).toggleClass('active');
+    });
+  </script>
+  <script src="https://cdn.syncfusion.com/ej2/25.2.3/dist/ej2.min.js" type="text/javascript"></script>
+  <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
+  <script>  
+   
+    var calendar = new ej.calendars.Calendar({   
+      //sets the start view.
+      start: "Month",
+      //sets the value.
+      value: new Date()   
+    });
+    calendar.appendTo('#element');
+  </script>
+</body>
+</html>
