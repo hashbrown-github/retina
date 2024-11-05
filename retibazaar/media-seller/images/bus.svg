@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="24" viewBox="0 0 42 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_10" data-name="Rectangle 10" width="42" height="24" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_8" data-name="Mask Group 8" clip-path="url(#clip-path)">
+    <path id="Path_99792" data-name="Path 99792" d="M10.276,7.477H3.115V2.345h7.161Zm20.8,0V2.345h3.156l3.115,5.132ZM21.708,2.345h7.3V7.477h-7.3ZM7.624,16.206a2.683,2.683,0,1,1-2.683,2.683,2.683,2.683,0,0,1,2.683-2.683M31.18,18.889a2.683,2.683,0,1,1,2.683,2.683,2.683,2.683,0,0,1-2.683-2.683M16.558,12.154l8.372-2.042V9.846h1.018v7.123H24.93V16.7l-2.221-.537L21.494,17.7l-3.362-.817-.155-1.867-1.42-.347v.269H15.539V11.888h1.018v.265ZM35.543,0H.769V17.717H0v2.346H2.767a5,5,0,0,0,9.713,0H29a5,5,0,0,0,9.714,0h2.565V17.717h-.769V8.195ZM21.625,15.9l-2.611-.637.064.8,2.025.494ZM19.644,7.477h-7.3V2.345h7.3Z" transform="translate(0 0.114)" fill-rule="evenodd"/>
+  </g>
+</svg>
