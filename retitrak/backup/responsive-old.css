@@ -55,6 +55,15 @@
 .contact_box {
   margin: 0 auto;
 }
+.analyBox_1 {
+  gap: 20px;
+  flex-direction: column-reverse;
+}
+.analyBox_12 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 .analyBox_11 {
   width: 100%;
 }
@@ -291,17 +300,6 @@
 .input_group .audit_category input.nav_link {
   width: 80px;
 }
-.report_camdtl {
-  align-items: flex-start;
-  flex-direction: column;
-}
-.report_camdtl2 {
-  width: 100%;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 }
 @media (max-width: 883px) {
 .report_filters {
@@ -310,6 +308,10 @@
 .rep_filter1, .rep_filter2 {
   width: calc(50% - 6px);
   padding-right: 0;
+}
+.retinaAd_logo {
+  position: relative;
+  top: 0;
 }
 .reports_box {
   margin-bottom: 15px;
@@ -335,9 +337,6 @@
 .activity_fil4 {
   width: 100%;
   justify-content: flex-start;
-}
-.expandPopup #campaign_status {
-  height: calc(100vh - 100px);
 }
 }
 @media (max-width: 767px) {
@@ -447,6 +446,9 @@
 .static_page h1 {
   font-size: 22px;
   line-height: 30px;
+}
+.retinaAd_logo img {
+  height: 36px;
 }
 }
 @media (max-width: 680px) {
@@ -643,15 +645,6 @@
 .modal.modalCustomRight .modal-dialog {
   max-width: 390px;
 }
-.report_camdtl2 {
-  width: 100%;
-}
-.expandPopup .secMap_legends {
-  top: unset;
-  right: unset;
-  left: 20px;
-  bottom: 20px;
-}
 }
 @media (max-width: 400px) {
 .authen_sec {
@@ -838,9 +831,6 @@
 }
 .landSec_1 {
   height: 450px;
-}
-.expandPopup #site_status2 {
-  height: 400px;
 }
 }
 @media (max-width: 1100px) {
@@ -1417,9 +1407,6 @@ body.open .mobile-nav {
 .sec3_cont {
   width: 100%;
 }
-.expandPopup #site_status2 {
-  height: 300px;
-}
 }
 @media (max-width: 575px) {
 .header_sec1 img {
@@ -1515,9 +1502,6 @@ body.open .mobile-nav {
 }
 .sec3_cont {
   width: 100%;
-}
-.expandPopup #site_status2 {
-  height: 200px;
 }
 }
 @media (max-width: 480px) {
