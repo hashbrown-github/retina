@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Upload Ad Creatives</title>
+<title>Map</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -23,7 +23,7 @@
       <div class="sidebar_menu">
         <ul class="menu_list">
           <li class="menu_item">
-            <a class="menu_link active" href="audit-campaign.html">
+            <a class="menu_link" href="audit-campaign.html">
               <span class="material-symbols-outlined link_icon">jamboard_kiosk</span>
               <span class="link_text">Audit Campaign</span>
             </a>
@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="menu_item">
-            <a class="menu_link" href="#">
+            <a class="menu_link active" href="#">
               <span class="material-symbols-outlined link_icon">map</span>
               <span class="link_text">Map</span>
             </a>
@@ -100,88 +100,24 @@
         </div>
       </header>
       <div class="main_container">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Audit Campaign</li>
-          </ol>
-        </nav>
-        <div class="campaign_box">
-          <div class="campaign_dtl">
-            <h3>The rise of advertising</h3>
-            <p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-          </div>
-          <div class="addLoc_box">
-            <div class="addLoc_box1">
-              <div class="loc_head">
-                <h4>Upload Ad Creatives</h4>
-                <span class="optional_txt">Optional</span>
-              </div>
-              <div class="loc_body">
-                <div class="upload_flex">
-                  <div class="files_flex">
-                    <input class="file_input2" type="file" accept="image/png, image/jpeg, application/pdf" multiple />
-                    <div class="files_box">
-                      <img src="images/upload-icon.svg" alt="Upload Icon" />
-                      <h6><span class="blue_txt">Choose Image</span> or drag and drop</h6>
-                      <p class="mb-0">JPG, PNG & PDF formats. 5MB max file size.</p>
-                    </div>
-                  </div>
-                  <div class="files_flex">
-                    <input class="file_input2" type="file" accept="video/mp4" multiple />
-                    <div class="files_box">
-                      <img src="images/upload-icon.svg" alt="Upload Icon" />
-                      <h6><span class="blue_txt">Choose Video</span> or drag and drop</h6>
-                      <p class="mb-0">Mp4 format. 5MB max file size.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="upload_btn">
-                  <button type="button" class="blue_btn">Upload</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="uploaded_box">
-            <h4>Uploaded Files</h4>
-            <ul>
-              <li>
-                <div class="left_dtl">
-                  <img src="images/location-img.jpg" alt="Image" />
-                  <div>
-                    <h6>567855677.jpeg</h6>
-                    <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
-                  </div>
-                </div>
-                <div class="cross_btn">
-                  <button type="button"><span class="material-symbols-outlined">close</span></button>
-                </div>
-              </li>
-              <li>
-                <div class="left_dtl">
-                  <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline">
-                    <source type="video/mp4" src="images/video.mp4">
-                  </video>
-                  <div>
-                    <h6>567855677.mp4</h6>
-                    <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
-                  </div>
-                </div>
-                <div class="cross_btn">
-                  <button type="button"><span class="material-symbols-outlined">close</span></button>
-                </div>
-              </li>
-            </ul>
-            <div class="saveCam_btn">
-              <a href="not-verified-cam.html" class="blue_btn">Save Campaign and Send for Verification</a>
-            </div>
-          </div>
-        </div>
+        <div id="map_box"></div>
       </div>
     </main>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+    const map_box = new mapboxgl.Map({
+      container: 'map_box',
+      // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+      // style: 'mapbox://styles/meridian0/clhhjph1m01dv01pn7p7oh8ns',
+      style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+      center: [8.141140, 9.611302],
+      zoom: 5
+    });
+  </script>
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {

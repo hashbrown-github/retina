@@ -51,6 +51,12 @@
             </a>
           </li>
           <li class="menu_item">
+            <a class="menu_link" href="insight-and-analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Insight and Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
             <a class="menu_link" href="#">
               <span class="material-symbols-outlined link_icon">map</span>
               <span class="link_text">Map</span>
@@ -59,7 +65,7 @@
         </ul>
         <ul class="menu_list">
           <li class="menu_item">
-            <a class="menu_link" href="#">
+            <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
               <span class="link_text">Billing</span>
             </a>
@@ -105,7 +111,7 @@
       </header>
       <div class="main_container">
         <div class="alert_msg">
-          <p class="mb-0">You haven’t paid amount to set your account</p>
+          <p class="mb-0">A one-time registration fee is required to activate your account.</p>
         </div>
         <div class="activate_account">
           <div class="head_part">
@@ -152,10 +158,39 @@
                 <div class="modal_body payment_box">
                   <img src="images/payment-card.svg" alt="Payment Card" />
                   <h4>Account Setup Fee</h4>
-                  <p class="mb-0">Long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                  <p class="mb-0">To activate your account, please complete the one-time registration fee payment.</p>
                   <div class="payment_box2">
                     <h3>NGN 25000</h3>
-                    <p>One Time Fee</p>
+                    <p>One-Time Fee</p>
+                  </div>
+                  <div class="select_option popup_option">
+                    <div class="d-flex align-items-center justify-content-start">
+                      <label class="radio">
+                        <input class="radio__input" type="radio" name="plan3" checked="">
+                        <span class="radio__in">
+                          <span class="radio__tick"></span>
+                          <span class="radio_txt">Pay with Paystack<span class="sub_txt">(Cards, Banking, Opay, Transfers)</span></span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-start">
+                      <label class="radio">
+                        <input class="radio__input" type="radio" name="plan3">
+                        <span class="radio__in">
+                          <span class="radio__tick"></span>
+                          <span class="radio_txt">Pay with KoraPay<span class="sub_txt">It is a long established fact that a reader.</span></span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-start">
+                      <label class="radio">
+                        <input class="radio__input" type="radio" name="plan3">
+                        <span class="radio__in">
+                          <span class="radio__tick"></span>
+                          <span class="radio_txt">With Flutterwave<span class="sub_txt">Sed ut perspiciatis unde omnis iste.</span></span>
+                        </span>
+                      </label>
+                    </div>
                   </div>
                   <button type="button" class="blue_btn" data-bs-dismiss="modal">Pay</button>
                 </div>

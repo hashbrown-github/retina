@@ -41,6 +41,12 @@
             </a>
           </li>
           <li class="menu_item">
+            <a class="menu_link" href="insight-and-analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Insight and Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
             <a class="menu_link" href="#">
               <span class="material-symbols-outlined link_icon">map</span>
               <span class="link_text">Map</span>
@@ -49,7 +55,7 @@
         </ul>
         <ul class="menu_list">
           <li class="menu_item">
-            <a class="menu_link" href="#">
+            <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
               <span class="link_text">Billing</span>
             </a>
@@ -107,42 +113,45 @@
             <p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
           </div>
           <div class="addLoc_box">
-            <div class="loc_head">
-              <h4>Add Location</h4>
-            </div>
-            <div class="loc_stripe">
-              <p class="mb-0"><button type="button"><span class="material-symbols-outlined icon_down">download</span><span class="text_down">Download Template Excel</span></button> to upload thousands of locations.</p>
-            </div>
-            <div class="loc_body">
-              <div class="row">
-                <div class="col-12 col-sm-12">
-                  <div class="input_group mb-0">
-                    <label class="form_label"><span class="blue_txt">Choose file</span> or drag and drop</label>
-                    <div class="upload_file">
-                      <div class="file_input">
-                        <input class="file_input2" type="file">
-                        <input class="form_control" type="text" name="license" readonly="" placeholder="Maximum file size 20 MB" />
-                      </div>
-                      <div class="file_btn">
-                        <button type="button" class="blue_btn">Upload</button>
+            <div class="addLoc_box1">
+              <div class="loc_head">
+                <h4>Add Location</h4>
+              </div>
+              <div class="loc_stripe">
+                <p class="mb-0"><button type="button"><span class="material-symbols-outlined icon_down">download</span><span class="text_down">Download Template Excel</span></button> to upload thousands of locations.</p>
+              </div>
+              <div class="loc_body">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <label class="form_label"><span class="blue_txt">Choose file</span> or drag and drop</label>
+                      <div class="upload_file">
+                        <div class="file_input">
+                          <input class="file_input2" type="file">
+                          <input class="form_control" type="text" name="license" readonly="" placeholder="Maximum file size 20 MB" />
+                        </div>
+                        <div class="file_btn">
+                          <button type="button" class="blue_btn">Upload</button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="fail_box">
-                    <p>• Row 1: Lorem ipsunm Long established fact that a reader will be distracted.</p>
-                    <p>• Row 2: Readable English. Many desktop publishing packages and web page.</p>
-                  </div>
-                  <div class="succes_box">
-                    <p>Your excel file has been uploaded successfully</p>
+                    <div class="fail_box">
+                      <p>• Row 1: Lorem ipsunm Long established fact that a reader will be distracted.</p>
+                      <p>• Row 2: Readable English. Many desktop publishing packages and web page.</p>
+                    </div>
+                    <div class="succes_box">
+                      <p>Your excel file has been uploaded successfully</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <p class="option_or">OR</p>
-              <div class="addLoc_div">
-                <p class="mb-0">Click on <span class="blue_txt">Add Location</span> button to add new location</p>
-                <a href="#" class="blue_btn">Add Location</a>
+                <!-- <p class="option_or">OR</p>
+                <div class="addLoc_div">
+                  <p class="mb-0">Click on <span class="blue_txt">Add Location</span> button to add new location</p>
+                  <a href="#" class="blue_btn">Add Location</a>
+                </div> -->
               </div>
             </div>
+            <p class="loc_note">Ensure your Excel file contains the exact names for States/LGAs/Cities as per our predefined data for matching. Refer to our <a href="excel-resource.html" target="_blank">guide here</a> for details.</p>
           </div>
         </div>
       </div>
@@ -150,13 +159,6 @@
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script>
-    function alertFilename()
-            {
-                var thefile = document.getElementById('thefile');
-                alert(thefile.value);
-            }
-  </script>
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {

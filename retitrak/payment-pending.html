@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Upload Ad Creatives</title>
+<title>Payment Pending</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -100,88 +100,25 @@
         </div>
       </header>
       <div class="main_container">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Audit Campaign</li>
-          </ol>
-        </nav>
-        <div class="campaign_box">
-          <div class="campaign_dtl">
-            <h3>The rise of advertising</h3>
-            <p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-          </div>
-          <div class="addLoc_box">
-            <div class="addLoc_box1">
-              <div class="loc_head">
-                <h4>Upload Ad Creatives</h4>
-                <span class="optional_txt">Optional</span>
-              </div>
-              <div class="loc_body">
-                <div class="upload_flex">
-                  <div class="files_flex">
-                    <input class="file_input2" type="file" accept="image/png, image/jpeg, application/pdf" multiple />
-                    <div class="files_box">
-                      <img src="images/upload-icon.svg" alt="Upload Icon" />
-                      <h6><span class="blue_txt">Choose Image</span> or drag and drop</h6>
-                      <p class="mb-0">JPG, PNG & PDF formats. 5MB max file size.</p>
-                    </div>
-                  </div>
-                  <div class="files_flex">
-                    <input class="file_input2" type="file" accept="video/mp4" multiple />
-                    <div class="files_box">
-                      <img src="images/upload-icon.svg" alt="Upload Icon" />
-                      <h6><span class="blue_txt">Choose Video</span> or drag and drop</h6>
-                      <p class="mb-0">Mp4 format. 5MB max file size.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="upload_btn">
-                  <button type="button" class="blue_btn">Upload</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="uploaded_box">
-            <h4>Uploaded Files</h4>
-            <ul>
-              <li>
-                <div class="left_dtl">
-                  <img src="images/location-img.jpg" alt="Image" />
-                  <div>
-                    <h6>567855677.jpeg</h6>
-                    <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
-                  </div>
-                </div>
-                <div class="cross_btn">
-                  <button type="button"><span class="material-symbols-outlined">close</span></button>
-                </div>
-              </li>
-              <li>
-                <div class="left_dtl">
-                  <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline">
-                    <source type="video/mp4" src="images/video.mp4">
-                  </video>
-                  <div>
-                    <h6>567855677.mp4</h6>
-                    <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
-                  </div>
-                </div>
-                <div class="cross_btn">
-                  <button type="button"><span class="material-symbols-outlined">close</span></button>
-                </div>
-              </li>
-            </ul>
-            <div class="saveCam_btn">
-              <a href="not-verified-cam.html" class="blue_btn">Save Campaign and Send for Verification</a>
-            </div>
-          </div>
+        <div class="noFoundInner failed_box">
+          <img src="images/payment-pending.svg" alt="Payment Pending" />
+          <h3>Transaction Pending</h3>
+          <p class="mb-0">Your transaction with the payment reference 5329855242631737 is pending.</p>
+          <p>You can check the status of this transaction after some time.</p>
+          <button type="button" class="blue_btn">Try Again</button>
         </div>
       </div>
     </main>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script>
+    $('.nav_link').on('click', function (e) {
+        e.preventDefault();
+        $('.nav_link').removeClass('active');
+        $(this).toggleClass('active');
+    });
+  </script>
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {

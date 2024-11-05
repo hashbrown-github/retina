@@ -9,6 +9,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/responsive.css" />
@@ -41,6 +42,12 @@
             </a>
           </li>
           <li class="menu_item">
+            <a class="menu_link" href="insight-and-analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Insight and Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
             <a class="menu_link" href="#">
               <span class="material-symbols-outlined link_icon">map</span>
               <span class="link_text">Map</span>
@@ -49,7 +56,7 @@
         </ul>
         <ul class="menu_list">
           <li class="menu_item">
-            <a class="menu_link" href="#">
+            <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
               <span class="link_text">Billing</span>
             </a>
@@ -139,117 +146,466 @@
                 </div>
               </div>
             </div>
-            <div class="locDtl_body">
-              <ul>
-                <li>
-                  <div class="locCard_head">
-                    <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
-                    <p>Ikeja, lkeja, Lagos</p>
+            <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="images-tab" data-bs-toggle="tab" data-bs-target="#images-tab-pane" type="button" role="tab" aria-controls="images-tab-pane" aria-selected="true">Images</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="videos-tab" data-bs-toggle="tab" data-bs-target="#videos-tab-pane" type="button" role="tab" aria-controls="videos-tab-pane" aria-selected="false">Videos</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="flagged-tab" data-bs-toggle="tab" data-bs-target="#flagged-tab-pane" type="button" role="tab" aria-controls="flagged-tab-pane" aria-selected="false">Flagged</button>
+              </li>
+            </ul>
+            <div class="tab-content locations_con" id="myTabContent">
+              <div class="tab-pane fade show active" id="images-tab-pane" role="tabpanel" aria-labelledby="images-tab" tabindex="0">
+                <div class="locDtl_body">
+                  <ul>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="noFoundInner">
+                    <img src="images/no-campaign.png" alt="Not Found">
+                    <h3>No Images Found</h3>
                   </div>
-                  <div class="locCard_img">
-                    <img src="images/location-img.jpg" alt="Location Image" >
+                </div>
+              </div>
+              <div class="tab-pane fade" id="videos-tab-pane" role="tabpanel" aria-labelledby="videos-tab" tabindex="0">
+                <div class="locDtl_body">
+                  <ul>
+                    <li>
+                      <div class="locCard_img">
+                        <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                          <source type="video/mp4" src="images/demo-video.mp4">
+                        </video>
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                          <source type="video/mp4" src="images/demo-video.mp4">
+                        </video>
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                          <source type="video/mp4" src="images/demo-video.mp4">
+                        </video>
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                          <source type="video/mp4" src="images/demo-video.mp4">
+                        </video>
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                          <source type="video/mp4" src="images/demo-video.mp4">
+                        </video>
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                          <source type="video/mp4" src="images/demo-video.mp4">
+                        </video>
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="noFoundInner">
+                    <img src="images/no-campaign.png" alt="Not Found">
+                    <h3>No Videos Found</h3>
                   </div>
-                  <div class="locCard_body">
-                    <p class="bold_txt"><span>Naveen Chauhan</span> | <span>8397812568</span></p>
-                    <p><span>09:46 AM</span> | <span>Monday, June 10, 2024</span></p>
-                    <ul class="site_dtl">
-                      <li><p><span class="bold_txt">Site Flex:</span> <span>OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Lights:</span> <span>Not OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Visibility:</span> <span>OK</span></p></li>
-                    </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="flagged-tab-pane" role="tabpanel" aria-labelledby="flagged-tab" tabindex="0">
+                <div class="locDtl_body">
+                  <ul>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_img">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="noFoundInner">
+                    <img src="images/no-campaign.png" alt="Not Found">
+                    <h3>No Flagged Items Found</h3>
                   </div>
-                </li>
-                <li>
-                  <div class="locCard_head">
-                    <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
-                    <p>Ikeja, lkeja, Lagos</p>
-                  </div>
-                  <div class="locCard_img">
-                    <img src="images/location-img.jpg" alt="Location Image" >
-                  </div>
-                  <div class="locCard_body">
-                    <p class="bold_txt"><span>Naveen Chauhan</span> | <span>8397812568</span></p>
-                    <p><span>09:46 AM</span> | <span>Monday, June 10, 2024</span></p>
-                    <ul class="site_dtl">
-                      <li><p><span class="bold_txt">Site Flex:</span> <span>OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Lights:</span> <span>Not OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Visibility:</span> <span>OK</span></p></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div class="locCard_head">
-                    <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
-                    <p>Ikeja, lkeja, Lagos</p>
-                  </div>
-                  <div class="locCard_img">
-                    <img src="images/location-img.jpg" alt="Location Image" >
-                  </div>
-                  <div class="locCard_body">
-                    <p class="bold_txt"><span>Naveen Chauhan</span> | <span>8397812568</span></p>
-                    <p><span>09:46 AM</span> | <span>Monday, June 10, 2024</span></p>
-                    <ul class="site_dtl">
-                      <li><p><span class="bold_txt">Site Flex:</span> <span>OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Lights:</span> <span>Not OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Visibility:</span> <span>OK</span></p></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div class="locCard_head">
-                    <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
-                    <p>Ikeja, lkeja, Lagos</p>
-                  </div>
-                  <div class="locCard_img">
-                    <img src="images/location-img.jpg" alt="Location Image" >
-                  </div>
-                  <div class="locCard_body">
-                    <p class="bold_txt"><span>Naveen Chauhan</span> | <span>8397812568</span></p>
-                    <p><span>09:46 AM</span> | <span>Monday, June 10, 2024</span></p>
-                    <ul class="site_dtl">
-                      <li><p><span class="bold_txt">Site Flex:</span> <span>OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Lights:</span> <span>Not OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Visibility:</span> <span>OK</span></p></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div class="locCard_head">
-                    <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
-                    <p>Ikeja, lkeja, Lagos</p>
-                  </div>
-                  <div class="locCard_img">
-                    <img src="images/location-img.jpg" alt="Location Image" >
-                  </div>
-                  <div class="locCard_body">
-                    <p class="bold_txt"><span>Naveen Chauhan</span> | <span>8397812568</span></p>
-                    <p><span>09:46 AM</span> | <span>Monday, June 10, 2024</span></p>
-                    <ul class="site_dtl">
-                      <li><p><span class="bold_txt">Site Flex:</span> <span>OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Lights:</span> <span>Not OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Visibility:</span> <span>OK</span></p></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div class="locCard_head">
-                    <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
-                    <p>Ikeja, lkeja, Lagos</p>
-                  </div>
-                  <div class="locCard_img">
-                    <img src="images/location-img.jpg" alt="Location Image" >
-                  </div>
-                  <div class="locCard_body">
-                    <p class="bold_txt"><span>Naveen Chauhan</span> | <span>8397812568</span></p>
-                    <p><span>09:46 AM</span> | <span>Monday, June 10, 2024</span></p>
-                    <ul class="site_dtl">
-                      <li><p><span class="bold_txt">Site Flex:</span> <span>OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Lights:</span> <span>Not OK</span></p></li>
-                      <li><p><span class="bold_txt">Site Visibility:</span> <span>OK</span></p></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal_box payment_modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body img_slider">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="images/location-img.jpg" alt="Location Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal_box payment_modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body img_slider">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate fullscreen playsinline">
+                  <source type="video/mp4" src="images/demo-video.mp4">
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -260,12 +616,12 @@
   <script src="js/jquery.min.js"></script>
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
   <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibWVyaWRpYW4wIiwiYSI6ImNqejNxcDhobzA1dmgzb28xeWVpOWE2NDYifQ.o5MPxFVCgW4EIXIOswUdXg';
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/meridian0/clj88cqt7000l01nufo8ahlxs',
-      center: [4.072264, 7.491302],
-      zoom: 7
+      style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+      center: [8.141140, 9.611302],
+      zoom: 5
     });
   </script>
   <!--======= MOBILE MENU START =======-->

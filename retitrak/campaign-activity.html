@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Activity</title>
+<title>Campaign Activity</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -23,13 +23,13 @@
       <div class="sidebar_menu">
         <ul class="menu_list">
           <li class="menu_item">
-            <a class="menu_link" href="audit-campaign.html">
+            <a class="menu_link active" href="audit-campaign.html">
               <span class="material-symbols-outlined link_icon">jamboard_kiosk</span>
               <span class="link_text">Audit Campaign</span>
             </a>
           </li>
           <li class="menu_item">
-            <a class="menu_link active" href="activity.html">
+            <a class="menu_link" href="activity.html">
               <span class="material-symbols-outlined link_icon">broken_image</span>
               <span class="link_text">Activity</span>
             </a>
@@ -103,11 +103,19 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Activity</li>
+            <li class="breadcrumb-item"><a href="#">Audit Campaign</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Campaign Activity</li>
           </ol>
         </nav>
         <div class="campaign_box">
-          <div class="heading_box">
+          <div class="campaign_dtl">
+            <h3>The rise of advertising<span class="badge badge-success ms-3">Verified</span></h3>
+            <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+            <div class="flex_box2">
+              <div class="frequency_div">15 Days Frequency<span class="campaign_type camp_type1 ms-2">OOH</span></div>
+            </div>
+          </div>
+          <div class="heading_box mt-sm-0 mt-3">
             <div class="headLeft">
               <h3>Activity</h3>
             </div>
@@ -127,28 +135,9 @@
             <div class="tab-pane fade show active" id="images-tab-pane" role="tabpanel" aria-labelledby="images-tab" tabindex="0">
               <div class="activity_box">
                 <div class="activity_head">
-                  <div class="activity_fil1">
-                    <div class="row">
-                      <div class="col-12 col-sm-12">
-                        <div class="input_group mb-0">
-                          <select class="form_control">
-                            <option selected disabled>Select Campaign</option>
-                            <option>Test Campaign</option>
-                            <option>The rise of advertising</option>
-                            <option>The High Street</option>
-                            <option>OOH market</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="activity_fil3">
-                    <button type="button" class="blue_btn">Search</button>
-                  </div>
-                  <div class="activity_fil4">
+                  <div class="activity_fil4 w-100">
                     <button type="button" class="view_btn active" id="grid_view"><span class="material-symbols-outlined">grid_view</span></button>
                     <button type="button" class="view_btn" id="list_view"><span class="material-symbols-outlined fw-200">lists</span></button>
-                    <!-- <button type="button" class="view_btn"><span class="material-symbols-outlined">map</span></button> -->
                   </div>
                 </div>
                 <div class="activity_body">
@@ -159,13 +148,13 @@
                           <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
                         </div>
                         <div class="activity_dtl">
-                          <p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p>
+                          <p><span class="bold_txt">Date/Time: </span><span>16:32 PM | Thursday, June 06, 2024</span></p>
                           <p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p>
                           <p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p>
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Site Flex: </span><span>OK</span></p>
                           <p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p>
@@ -180,13 +169,13 @@
                           <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
                         </div>
                         <div class="activity_dtl">
-                          <p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p>
+                          <p><span class="bold_txt">Date/Time: </span><span>16:32 PM | Thursday, June 06, 2024</span></p>
                           <p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p>
                           <p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p>
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Site Flex: </span><span>OK</span></p>
                           <p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p>
@@ -201,13 +190,13 @@
                           <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
                         </div>
                         <div class="activity_dtl">
-                          <p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p>
+                          <p><span class="bold_txt">Date/Time: </span><span>16:32 PM | Thursday, June 06, 2024</span></p>
                           <p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p>
                           <p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p>
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Site Flex: </span><span>OK</span></p>
                           <p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p>
@@ -222,13 +211,13 @@
                           <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
                         </div>
                         <div class="activity_dtl">
-                          <p><span class="bold_txt">Date/Time: </span><span>16:28 PM | Monday, October 21, 2024</span></p>
+                          <p><span class="bold_txt">Date/Time: </span><span>16:32 PM | Thursday, June 06, 2024</span></p>
                           <p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p>
                           <p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p>
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Site Flex: </span><span>OK</span></p>
                           <p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p>
@@ -388,36 +377,18 @@
             </div>
             <div class="tab-pane fade" id="videos-tab-pane" role="tabpanel" aria-labelledby="videos-tab" tabindex="0">
               <div class="activity_box">
-                <div class="activity_head">
-                  <div class="activity_fil1">
-                    <div class="row">
-                      <div class="col-12 col-sm-12">
-                        <div class="input_group mb-0">
-                          <select class="form_control">
-                            <option selected disabled>Select Campaign</option>
-                            <option>Test Campaign</option>
-                            <option>The rise of advertising</option>
-                            <option>The High Street</option>
-                            <option>OOH market</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="activity_fil3">
-                    <button type="button" class="blue_btn">Search</button>
-                  </div>
-                  <!-- <div class="activity_fil4">
+                <!-- <div class="activity_head">
+                  <div class="activity_fil4 w-100">
                     <button type="button" class="view_btn"><span class="material-symbols-outlined">map</span></button>
-                  </div> -->
-                </div>
+                  </div>
+                </div> -->
                 <div class="activity_body">
                   <div class="activity_grid">
                     <ul>
                       <li>
                         <div class="activity_img">
                           <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
-                            <source type="video/mp4" src="images/demo-video.mp4">
+                            <source type="video/mp4" src="images/video.mp4">
                           </video>
                         </div>
                         <div class="activity_dtl">
@@ -427,7 +398,7 @@
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Site Flex: </span><span>OK</span></p>
                           <p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p>
@@ -450,7 +421,7 @@
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Site Flex: </span><span>OK</span></p>
                           <p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p>
@@ -473,7 +444,7 @@
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Site Flex: </span><span>OK</span></p>
                           <p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p>
@@ -496,7 +467,7 @@
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Site Flex: </span><span>OK</span></p>
                           <p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p>
@@ -513,29 +484,6 @@
             </div>
             <div class="tab-pane fade" id="flagged-tab-pane" role="tabpanel" aria-labelledby="flagged-tab" tabindex="0">
               <div class="activity_box">
-                <div class="activity_head">
-                  <div class="activity_fil1">
-                    <div class="row">
-                      <div class="col-12 col-sm-12">
-                        <div class="input_group mb-0">
-                          <select class="form_control">
-                            <option selected disabled>Select Campaign</option>
-                            <option>Test Campaign</option>
-                            <option>The rise of advertising</option>
-                            <option>The High Street</option>
-                            <option>OOH market</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="activity_fil3">
-                    <button type="button" class="blue_btn">Search</button>
-                  </div>
-                  <!-- <div class="activity_fil4">
-                    <button type="button" class="view_btn"><span class="material-symbols-outlined">map</span></button>
-                  </div> -->
-                </div>
                 <div class="activity_body">
                   <div class="activity_grid">
                     <ul>
@@ -550,7 +498,7 @@
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p>
                         </div>
@@ -566,7 +514,7 @@
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p>
                         </div>
@@ -582,7 +530,7 @@
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p>
                         </div>
@@ -598,7 +546,7 @@
                           <p><span class="bold_txt">City: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">State: </span><span>Lagos</span></p>
                           <p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p>
-                          <p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p>
+                          <p><span class="bold_txt">User: </span><span>Ade | +234 481 385 8996</span></p>
                           <p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p>
                           <p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p>
                         </div>
@@ -610,7 +558,7 @@
             </div>
           </div>
         </div>
-        <div class="modal modal_box payment_modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+        <div class="modal modal_box payment_modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" style="display: none;" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body img_slider">
@@ -620,13 +568,13 @@
             </div>
           </div>
         </div>
-        <div class="modal modal_box payment_modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal modal_box payment_modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" style="display: none;" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body img_slider">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate fullscreen playsinline">
-                  <source type="video/mp4" src="images/demo-video.mp4">
+                <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline">
+                  <source type="video/mp4" src="images/video.mp4">
                 </video>
               </div>
             </div>

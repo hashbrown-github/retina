@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Locations</title>
+<title>Check Payment Status</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -106,150 +106,9 @@
             <li class="breadcrumb-item active" aria-current="page">Audit Campaign</li>
           </ol>
         </nav>
-        <div class="campaign_box">
-          <div class="campaign_dtl">
-            <h3>The rise of advertising<span class="badge badge-success ms-3">Verified</span></h3>
-            <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-            <div class="flex_box2">
-              <div class="frequency_div">15 Days Frequency<span class="campaign_type camp_type1 ms-2">OOH</span></div>
-            </div>
-          </div>
-          <div class="search_filters">
-            <div class="filter_div filter_1">
-              <div class="row">
-                <div class="col-12 col-sm-12">
-                  <div class="input_group mb-0">
-                    <div class="date_flex">
-                      <input class="form_control date" type="text" name="startdate" placeholder="Search by Location" />
-                      <span class="input-group-btn">
-                        <span class="material-symbols-outlined">search</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="filter_div filter_2">
-              <div class="row">
-                <div class="col-12 col-sm-12">
-                  <div class="input_group mb-0">
-                    <select class="form_control">
-                      <option selected disabled>City</option>
-                      <option>City 1</option>
-                      <option>City 2</option>
-                      <option>City 3</option>
-                      <option>City 4</option>
-                      <option>City 5</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="filter_div filter_3">
-              <div class="row">
-                <div class="col-12 col-sm-12">
-                  <div class="input_group mb-0">
-                    <select class="form_control">
-                      <option selected disabled>District</option>
-                      <option>District 1</option>
-                      <option>District 2</option>
-                      <option>District 3</option>
-                      <option>District 4</option>
-                      <option>District 5</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="filter_div filter_4">
-              <div class="row">
-                <div class="col-12 col-sm-12">
-                  <div class="input_group mb-0">
-                    <select class="form_control">
-                      <option selected disabled>State</option>
-                      <option>State 1</option>
-                      <option>State 2</option>
-                      <option>State 3</option>
-                      <option>State 4</option>
-                      <option>State 5</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="filter_div filter_5">
-              <button type="button" class="blue_btn">Search</button>
-            </div>
-            <div class="filter_div filter_6">
-              <button type="button"><img src="images/locations.svg" alt="map" /></button>
-            </div>
-          </div>
-          <div class="locations_box">
-            <ul>
-              <li>
-                <a href="location-detail.html">
-                  <div class="loc_item">
-                    <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
-                    <p>Ikeja, lkeja, Lagos</p>
-                    <p class="camType">Billboard</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="location-detail.html">
-                  <div class="loc_item">
-                    <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
-                    <p>Ikeja, lkeja, Lagos</p>
-                    <p class="camType">Unipole</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="location-detail.html">
-                  <div class="loc_item">
-                    <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
-                    <p>Ikeja, lkeja, Lagos</p>
-                    <p class="camType">Billboard</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="location-detail.html">
-                  <div class="loc_item">
-                    <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
-                    <p>Ikeja, lkeja, Lagos</p>
-                    <p class="camType">Unipole</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="location-detail.html">
-                  <div class="loc_item">
-                    <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
-                    <p>Ikeja, lkeja, Lagos</p>
-                    <p class="camType">Billboard</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="location-detail.html">
-                  <div class="loc_item">
-                    <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
-                    <p>Ikeja, lkeja, Lagos</p>
-                    <p class="camType">Unipole</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="location-detail.html">
-                  <div class="loc_item">
-                    <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
-                    <p>Ikeja, lkeja, Lagos</p>
-                    <p class="camType">Billboard</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+        <div class="payment_loader">
+          <div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
           </div>
         </div>
       </div>
