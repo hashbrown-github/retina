@@ -1,0 +1,635 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Search Location</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link active" href="search-location.html">
+              <span class="material-symbols-outlined link_icon">travel_explore</span>
+              <span class="link_text">Search Location</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Order</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Search Location</li>
+            </ol>
+          </nav>
+          <div class="page_1">
+            <!-- <div class="finalizeOrd"><a href="#" class="blue_btn disabled" data-bs-toggle="modal" data-bs-target="#finalizeOrder">Finalize Cart Items</a></div> -->
+            <div class="finalizeOrd">
+              <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#finalizeOrder">Finalize Cart Items</button>
+            </div>
+            <div class="modal modal_box fade" id="finalizeOrder" tabindex="-1" aria-labelledby="finalizeOrderModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title" id="finalizeOrderModalLabel">Finalize Order Request</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal_body">
+                      <p class="mb-0">You have selected 50 locations. <span class="block_txt">Do you want to proceed with submitting your order request? Once your
+                        order request is submitted, you will be notified when it is approved and you can make the payment.</span></p>
+                      <p class="estimate_p">Estimated Price: <b>NGN 78,750</b></p>
+                    </div>
+                  </div>
+                  <div class="modal-footer border-top-0">
+                    <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page_11">
+              <div class="heading_box">
+                <div class="headLeft">
+                  <h3>Ikeja</h3>
+                </div>
+                <div class="headRight">
+                  <a href="#" class="blue_btn">Change State</a>
+                  <a href="#" class="blue_btn">Change User Persona</a>
+                </div>
+              </div>
+              <div class="page_3">
+                <ul>
+                  <li>
+                    <p>Campaign Goals?<span class="block_txt">Brand Awareness</span></p>
+                  </li>
+                  <li>
+                    <p>Media Types<span class="block_txt">Rooftop Advertising, Unipole, Billboard</span></p>
+                  </li>
+                  <li>
+                    <p>Budget<span class="block_txt">NG 20,000</span></p>
+                  </li>
+                  <li>
+                    <p>Campaign Timing<span class="block_txt">Aug 01, 2024 - Aug 11, 2024</span></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="page_31">
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Availability</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list_item">
+                          <p>Partially Available</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Fully Available</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Price Range</button>
+                    <div class="menu_drop price_range">
+                      <h5>Price Range</h5>
+                      <div class="price_set">
+                        <input type="text" placeholder="Min" />
+                        <input type="text" placeholder="Max" />
+                      </div>
+                      <div class="menu_bot px-0 pb-0">
+                        <button type="button" class="clear_btn">Clear</button>
+                        <button type="button" class="done_btn">Done</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Media Type</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list-item">
+                          <p>Billboard (113)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>Unipole (23)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>LED (113)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                      </ul>
+                      <div class="menu_bot">
+                        <button type="button" class="done_btn">Done</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Screen Type</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list-item">
+                          <p>Static (13)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>Digital (23)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                      </ul>
+                      <div class="menu_bot">
+                        <button type="button" class="done_btn">Done</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Size</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list-item">
+                          <p>10’ x 32’</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>12’ x 40’</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>12’ x 24’</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>10’6” x 36’</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>10’ x 32’</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>12’ x 40’</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>10’6” x 36’</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                      </ul>
+                      <div class="menu_bot">
+                        <button type="button" class="done_btn">Done</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Orientation</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list-item">
+                          <p>LHR (34)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>LeftOfRoad (65)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>RHR (45)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>RightOfRoad (78)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>E (1)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                        <li class="list-item">
+                          <p>W (1)</p>
+                          <span class="material-symbols-outlined tick-icon">check</span>
+                        </li>
+                      </ul>
+                      <div class="menu_bot">
+                        <button type="button" class="done_btn">Done</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page_311">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Photos</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list_item">
+                          <p>With Photos Only</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Without Photos Only</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page_32">
+                <div class="page_321">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="selectall">
+                    <span class="checkbox__in">
+                      <span class="checkbox__tick"></span>
+                    </span>
+                  </label>
+                  <p>32 Units</p>
+                  <button type="button" class="outline_btn"><span class="material-symbols-outlined">add</span>Add to Cart <span>(2)</span></button>
+                  <div class="outline_btn black_out"><p>Estimated Price: NG 20,000</p></div>
+                </div>
+                <div class="page_322">
+                  <button type="button" class="view_btn active" id="grid_view"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" class="view_btn" id="list_view"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <div class="drop_menu">
+                    <button type="button" class="form-select">Sort By Default</button>
+                    <div class="menu_drop">
+                      <ul>
+                        <li class="list_item">
+                          <p>Default</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Face ID</p>
+                        </li>
+                        <li class="list_item">
+                          <p>CPM: High to Low</p>
+                        </li>
+                        <li class="list_item">
+                          <p>CPM: Low to High</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Price: High to Low</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Price: Low to High</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Impressions: High to Low</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Impressions: Low to High</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Size: Small to Large</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Size: Large to Small</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Score: High to Low</p>
+                        </li>
+                        <li class="list_item">
+                          <p>Score: Low to High</p>
+                        </li>
+                        <li class="list_item">
+                          <p>POI: Closest to Farthest</p>
+                        </li>
+                        <li class="list_item">
+                          <p>POI: Farthest to Closest</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page_33">
+                <ul class="manager_grid">
+                  <li>
+                    <div class="page_331">
+                      <img src="images/location-image.jpg" alt="Location" />
+                      <div class="checkBox">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="page_332">
+                      <div class="page_3321">
+                        <p><b>#3919374</b></p>
+                        <p>Billboard</p>
+                        <p><b>Size:</b> <span>10'x32'</span></p>
+                        <p class="green_txt"><b>Available from</b> <span>Aug 05, 2024</span></p>
+                        <p class="icon_eye"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
+                      </div>
+                      <p class="price_box">Price: <b>NG 20,000/4weeks</b></p>
+                      <div class="addToC"><button type="button" class="view_btn"><span class="material-symbols-outlined">shopping_basket</span></button></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="page_331">
+                      <img src="images/location-image.jpg" alt="Location" />
+                      <div class="checkBox">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="page_332">
+                      <div class="page_3321">
+                        <p><b>#3919374</b></p>
+                        <p>Billboard</p>
+                        <p><b>Size:</b> <span>10'x32'</span></p>
+                        <p class="green_txt"><b>Available from</b> <span>Aug 05, 2024</span></p>
+                        <p class="icon_eye"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
+                      </div>
+                      <p class="price_box">Price: <b>NG 20,000/4weeks</b></p>
+                      <div class="addToC"><button type="button" class="view_btn active"><span class="material-symbols-outlined">shopping_basket</span></button></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="page_331">
+                      <img src="images/location-image.jpg" alt="Location" />
+                      <div class="checkBox">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall" checked>
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="page_332">
+                      <div class="page_3321">
+                        <p><b>#3919374</b></p>
+                        <p>Billboard</p>
+                        <p><b>Size:</b> <span>10'x32'</span></p>
+                        <p class="green_txt"><b>Available from</b> <span>Aug 05, 2024</span></p>
+                        <p class="icon_eye"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
+                      </div>
+                      <p class="price_box">Price: <b>NG 20,000/4weeks</b></p>
+                      <div class="addToC"><button type="button" class="view_btn active"><span class="material-symbols-outlined">shopping_basket</span></button></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="page_331">
+                      <img src="images/no-image-found.jpg" alt="Location" />
+                      <div class="checkBox">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="page_332">
+                      <div class="page_3321">
+                        <p><b>#3919374</b></p>
+                        <p>Billboard</p>
+                        <p><b>Size:</b> <span>10'x32'</span></p>
+                        <p class="green_txt"><b>Available from</b> <span>Aug 05, 2024</span></p>
+                        <p class="icon_eye"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
+                      </div>
+                      <p class="price_box">Price: <b>NG 20,000/4weeks</b></p>
+                      <div class="addToC"><button type="button" class="view_btn"><span class="material-symbols-outlined">shopping_basket</span></button></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="page_12">
+              <div class="searchLoc_map">
+                <div id="location_map2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== LOGOUT POPUP START =====-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+    const location_map2 = new mapboxgl.Map({
+      container: 'location_map2',
+      style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+      center: [8.141140, 9.611302],
+      zoom: 5
+    });
+  </script>
+  <script>
+    $('.nav_link').on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.inner_list').on('click', function(){
+        $(this).toggleClass('active');
+      });
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var listItems = document.querySelectorAll('.list-item');
+      listItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+          this.classList.toggle('active');
+          var tickIcon = this.querySelector('.tick-icon');
+          tickIcon.style.display = tickIcon.style.display === 'none' || tickIcon.style.display === '' ? 'inline' : 'none';
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(".form-select").click(function (evt) {
+        evt.stopPropagation();
+        $(this).addClass('active');
+        $(".menu_drop").hide();
+        $(this).parent().find(".menu_drop").show();
+        
+      });
+    });
+    $(document).click(function (e) {
+      var container = $(".menu_drop");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.hide();
+    }});
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#grid_view').on('click', function(){
+        $(this).addClass('active');
+        $('#list_view').removeClass('active');
+        $('.manager_grid').removeClass('manager_list');
+      });
+      $('#list_view').on('click', function(){
+        $(this).addClass('active');
+        $('#grid_view').removeClass('active');
+        $('.manager_grid').addClass('manager_list');
+      });
+    });
+  </script>
+</body>
+</html>
