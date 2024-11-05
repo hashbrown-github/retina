@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Locations</title>
+<title>Requests Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/material-dashboard.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="g-sidenav-show dark_theme">
+<body class="g-sidenav-show bg-gray-100 dark_theme">
    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
     <div class="sidenav-header">
       <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
@@ -25,7 +25,7 @@
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
-    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse w-auto h-auto" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item mb-2 mt-0">
           <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
@@ -56,6 +56,40 @@
             <span class="nav-link-text ms-2 ps-1">Users</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#doohtracker" class="nav-link text-white active" aria-controls="doohtracker" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">DOOH Tracker</span>
+          </a>
+          <div class="collapse show" id="doohtracker">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="inventory.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Inventory </span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="requests.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Requests</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="dooh-tracker-campaign.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Campaigns</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a href="location-inventory.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">map</i>
+            <span class="nav-link-text ms-2 ps-1">Location Inventory</span>
+          </a>
+        </li>
         <li class="nav-item" style="display: none;">
           <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">groups</i>
@@ -73,14 +107,14 @@
           </div>
         </li>
         <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white active" aria-controls="campaigns" role="button" aria-expanded="true">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white" aria-controls="campaigns" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">campaign</i>
             <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
           </a>
-          <div class="collapse show" id="campaigns">
+          <div class="collapse" id="campaigns">
             <ul class="nav">
-              <li class="nav-item active">
-                <a class="nav-link text-white active" href="campaigns.html">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
                   <span class="sidenav-mini-icon">  </span>
                   <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
                 </a>
@@ -180,9 +214,9 @@
         </ul>
         <nav aria-label="breadcrumb" class="navPart_2">
           <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Audit Campaigns</a></li>
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Campaigns</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Locations</li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">DOOH Tracker</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Requests</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Requests Detail</li>
           </ol>
         </nav>
         <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
@@ -198,6 +232,28 @@
     <!-- End Navbar -->
     <div class="container-fluid px-0 pb-4 mainBody_box">
       <div class="card">
+        <div class="card-body p-0">
+          <div class="card-body">
+            <div class="d-flex w-100 justify-content-between userDtl_head">
+              <div class="profile_box">
+                <div class="profile_info">
+                  <h5 class="mb-0 font-weight-bolder">John Doe</h5>
+                  <span class="badge badge-primary badge-sm">Owner</span>
+                  <span class="badge badge-success badge-sm">Approved</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile_info2 mt-0">
+              <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">business_center</span>Vehement Capital Partners</p>
+              <span class="border_line"></span>
+              <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">mail</span>johndoe@gmail.com</p>
+              <span class="border_line"></span>
+              <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">phone</span>+234 946 380 2765</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
         <div class="card-header pb-0">
           <div class="head_part">
             <div>
@@ -206,7 +262,6 @@
             <div class="right_side">
               <button type="button" id="grid_view" class="btn bg-gradient-primary m-0 px-2 py-2 blue_btn2"><span class="material-icons-round">grid_view</span></button>
               <button type="button" id="list_view" class="btn bg-gradient-primary m-0 px-2 py-2 blue_btn2"><span class="material-icons-round">table_rows</span></button>
-              <!-- <button type="button" class="btn bg-gradient-primary m-0 px-2 py-2 blue_btn2"><span class="material-icons-round">map</span></button> -->
             </div>
           </div>
         </div>
@@ -214,19 +269,22 @@
           <div class="nav-wrapper position-relative end-0">
             <ul class="nav nav-pills nav-fill px-0 nav_tabs" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#tab_1" role="tab" aria-controls="tab_1-tab" aria-selected="true">All</a>
+                <a class="nav-link active" data-bs-toggle="tab" href="#tab_1" role="tab" aria-controls="tab_1-tab" aria-selected="true">Requested</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab_2" role="tab" aria-controls="tab_2-tab" aria-selected="false">Verified</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab_3" role="tab" aria-controls="tab_3-tab" aria-selected="false">Pending</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab_2" role="tab" aria-controls="tab_2-tab" aria-selected="false">Active</a>
               </li>
             </ul>
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="tab_1" role="tabpanel" aria-labelledby="tab_1-tab">
                 <div class="filter_status filter_1 mx-0">
                   <div class="input-group input-group-static mb-0">
+                    <select class="form-control">
+                      <option disabled selected>Media Seller</option>
+                      <option>All</option>
+                      <option>John Doe</option>
+                      <option>Amber</option>
+                    </select>
                     <input class="form-control" type="text" placeholder="Search by location...">
                     <select class="form-control">
                       <option selected disabled>State</option>
@@ -264,12 +322,44 @@
                         </div>
                       </div>
                     </div>
-                    <div class="blue_btn disable_btn"><button type="button" class="btn bg-gradient-primary m-0 blue_btn2">Verify Locations</button></div>
+                    <div class="blue_btn">
+                      <div class="dropdown action_dropdown">
+                        <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action<span class="material-icons-round">keyboard_arrow_down</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_loc">Reject Location</a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="locations_grid locations_list">
                     <ul class="list-group">
                       <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
+                        <a href="order-location-detail.html">
+                          <div class="d-flex gap-2">
+                            <div class="select_unselect">
+                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                                <input class="form-check-input" type="checkbox">
+                              </div>
+                            </div>
+                            <div class="cam_head">
+                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
+                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
+                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                        <a href="order-location-detail.html">
                           <div class="d-flex gap-2">
                             <div class="select_unselect">
                               <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
@@ -280,62 +370,21 @@
                               <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
                               <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
                               <p class="mb-0 font-weight-normal text-sm text-primary icon_size">28.4480496, 77.0992021</p>
-                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
-                          <div class="d-flex gap-2">
-                            <div class="select_unselect">
-                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
-                                <input class="form-check-input" type="checkbox">
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
                               </div>
-                            </div>
-                            <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-warning badge-sm py-1">Pending</span></h5>
-                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
                               <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
                             </div>
                           </div>
                         </a>
                       </li>
-                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
-                          <div class="d-flex gap-2">
-                            <div class="select_unselect">
-                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
-                                <input class="form-check-input" type="checkbox">
-                              </div>
-                            </div>
-                            <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
-                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
-                            </div>
-                          </div>
-                        </a>
                       </li>
                       <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
-                          <div class="d-flex gap-2">
-                            <div class="select_unselect">
-                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
-                                <input class="form-check-input" type="checkbox">
-                              </div>
-                            </div>
-                            <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-warning badge-sm py-1">Pending</span></h5>
-                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                              <p class="mb-0 font-weight-normal text-sm text-primary icon_size">28.4480496, 77.0992021</p>
-                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
+                        <a href="order-location-detail.html">
                           <div class="d-flex gap-2">
                             <div class="select_unselect">
                               <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
@@ -346,13 +395,21 @@
                               <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
                               <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
                               <p class="mb-0 font-weight-normal text-sm text-primary icon_size">28.4480496, 77.0992021</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
                               <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
                             </div>
                           </div>
                         </a>
                       </li>
+                      </li>
                       <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
+                        <a href="order-location-detail.html">
                           <div class="d-flex gap-2">
                             <div class="select_unselect">
                               <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
@@ -360,9 +417,16 @@
                               </div>
                             </div>
                             <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-warning badge-sm py-1">Pending</span></h5>
+                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
                               <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
                               <p class="mb-0 font-weight-normal text-sm text-primary icon_size">28.4480496, 77.0992021</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
                               <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
                             </div>
                           </div>
@@ -375,6 +439,12 @@
               <div class="tab-pane fade" id="tab_2" role="tabpanel" aria-labelledby="tab_2-tab">
                 <div class="filter_status filter_1 mx-0">
                   <div class="input-group input-group-static mb-0">
+                    <select class="form-control">
+                      <option disabled selected>Media Seller</option>
+                      <option>All</option>
+                      <option>John Doe</option>
+                      <option>Amber</option>
+                    </select>
                     <input class="form-control" type="text" placeholder="Search by location...">
                     <select class="form-control">
                       <option selected disabled>State</option>
@@ -412,125 +482,22 @@
                         </div>
                       </div>
                     </div>
-                    <div class="blue_btn disable_btn"><button type="button" class="btn bg-gradient-primary m-0 blue_btn2" disabled="disabled">Verify Locations</button></div>
-                  </div>
-                  <div class="locations_grid locations_list">
-                    <ul class="list-group">
-                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
-                          <div class="d-flex gap-2">
-                            <div class="select_unselect">
-                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
-                                <input class="form-check-input" type="checkbox">
-                              </div>
-                            </div>
-                            <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
-                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                              <p class="mb-0 font-weight-normal text-sm text-primary icon_size">28.4480496, 77.0992021</p>
-                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
-                          <div class="d-flex gap-2">
-                            <div class="select_unselect">
-                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
-                                <input class="form-check-input" type="checkbox">
-                              </div>
-                            </div>
-                            <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
-                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
-                          <div class="d-flex gap-2">
-                            <div class="select_unselect">
-                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
-                                <input class="form-check-input" type="checkbox">
-                              </div>
-                            </div>
-                            <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
-                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
-                          <div class="d-flex gap-2">
-                            <div class="select_unselect">
-                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
-                                <input class="form-check-input" type="checkbox">
-                              </div>
-                            </div>
-                            <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
-                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="tab_3" role="tabpanel" aria-labelledby="tab_3-tab">
-                <div class="filter_status filter_1 mx-0">
-                  <div class="input-group input-group-static mb-0">
-                    <input class="form-control" type="text" placeholder="Search by location...">
-                    <select class="form-control">
-                      <option selected disabled>State</option>
-                      <option>State 1</option>
-                      <option>State 2</option>
-                      <option>State 3</option>
-                      <option>State 4</option>
-                    </select>
-                    <select class="form-control">
-                      <option selected disabled>LGA</option>
-                      <option>LGA 1</option>
-                      <option>LGA 2</option>
-                      <option>LGA 3</option>
-                      <option>LGA 4</option>
-                    </select>
-                    <select class="form-control">
-                      <option selected disabled>City</option>
-                      <option>City 1</option>
-                      <option>City 2</option>
-                      <option>City 3</option>
-                      <option>City 4</option>
-                    </select>
-                    <div class="search_btn">
-                      <button type="button" class="btn bg-gradient-primary m-0 px-2 py-2 blue_btn2"><span class="material-icons-round">search</span></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="select_items0">
-                  <div class="select_items">
-                    <div class="select_option">
-                      <div class="right_check">
-                        <div class="form-check verified_dtl p-0 m-0 is-filled select_all">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label text-sm mb-0">Select All</label>
+                    <div class="blue_btn">
+                      <div class="dropdown action_dropdown">
+                        <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action<span class="material-icons-round">keyboard_arrow_down</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_loc">Approve Location</a>
+                          <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_loc">Reject Location</a>
                         </div>
                       </div>
                     </div>
-                    <div class="blue_btn disable_btn"><button type="button" class="btn bg-gradient-primary m-0 blue_btn2" disabled="disabled">Verify Locations</button></div>
                   </div>
                   <div class="locations_grid locations_list">
                     <ul class="list-group">
                       <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
+                        <a href="order-location-detail.html">
                           <div class="d-flex gap-2">
                             <div class="select_unselect">
                               <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
@@ -538,16 +505,23 @@
                               </div>
                             </div>
                             <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-warning badge-sm py-1">Pending</span></h5>
+                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
                               <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
                               <p class="mb-0 font-weight-normal text-sm text-primary icon_size">28.4480496, 77.0992021</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
                               <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
                             </div>
                           </div>
                         </a>
                       </li>
                       <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
+                        <a href="order-location-detail.html">
                           <div class="d-flex gap-2">
                             <div class="select_unselect">
                               <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
@@ -555,15 +529,22 @@
                               </div>
                             </div>
                             <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-warning badge-sm py-1">Pending</span></h5>
+                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
                               <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
                               <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
                             </div>
                           </div>
                         </a>
                       </li>
                       <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
+                        <a href="order-location-detail.html">
                           <div class="d-flex gap-2">
                             <div class="select_unselect">
                               <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
@@ -571,15 +552,22 @@
                               </div>
                             </div>
                             <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-warning badge-sm py-1">Pending</span></h5>
+                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
                               <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
                               <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
                             </div>
                           </div>
                         </a>
                       </li>
                       <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-                        <a href="location-detail.html">
+                        <a href="order-location-detail.html">
                           <div class="d-flex gap-2">
                             <div class="select_unselect">
                               <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
@@ -587,8 +575,63 @@
                               </div>
                             </div>
                             <div class="cam_head">
-                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-warning badge-sm py-1">Pending</span></h5>
+                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
                               <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
+                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                        <a href="order-location-detail.html">
+                          <div class="d-flex gap-2">
+                            <div class="select_unselect">
+                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                                <input class="form-check-input" type="checkbox">
+                              </div>
+                            </div>
+                            <div class="cam_head">
+                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
+                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
+                              <p class="mb-0 font-weight-normal text-sm text-primary icon_size">28.4480496, 77.0992021</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
+                              <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                        <a href="order-location-detail.html">
+                          <div class="d-flex gap-2">
+                            <div class="select_unselect">
+                              <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                                <input class="form-check-input" type="checkbox">
+                              </div>
+                            </div>
+                            <div class="cam_head">
+                              <h5 class="mb-1 text-dark">Joel Ogunnaike St <span class="badge badge-success badge-sm py-1">Verified</span></h5>
+                              <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
+                              <p class="mb-0 font-weight-normal text-sm text-primary icon_size">28.4480496, 77.0992021</p>
+                              <div class="profile_info2 mt-1">
+                                <p class="mb-0 font-weight-bold text-sm text-dark icon_size">Media Seller: <span class="font-weight-normal">John Doe</span></p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">example@gamil.com</p>
+                                <span class="border_line"></span>
+                                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">+234 946 380 2765</p>
+                              </div>
                               <div class="media_txt font-weight-bold text-xs text-white">Billboard</div>
                             </div>
                           </div>
@@ -602,6 +645,50 @@
           </div>
         </div>
       </div>
+      <!--======= APPROVE LOCATION POPUP=======-->
+      <div class="modal fade" id="approve_loc" tabindex="-1" role="dialog" aria-labelledby="approve_locLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="approve_locLabel">Approve Location</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <p>Are you sure you want to approve location?</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Approve</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= REJECT LOCATION POPUP=======-->
+      <div class="modal fade" id="reject_loc" tabindex="-1" role="dialog" aria-labelledby="reject_locLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="reject_locLabel">Reject Location</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <p>Do you really want to reject location?</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Reject</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   <script src="js/jquery.min.js"></script>
@@ -609,16 +696,6 @@
   <script src="js/perfect-scrollbar.min.js"></script>
   <script src="js/datatables.js"></script>
   <script src="js/material-dashboard.min.js"></script>
-  <script>
-    if (document.getElementById('users-list1')) {
-      const dataTableSearch1 = new simpleDatatables.DataTable("#users-list1", {
-        perPageSelect: false,
-        searchable: false,
-        fixedHeight: false,
-        perPage: 10
-      });
-    }
-  </script>
   <script>
     $(document).ready(function(){
       $('#grid_view').on('click', function(){
@@ -633,39 +710,6 @@
       });
     });
   </script>
-  <!-- <script>
-    $(document).ready(function(){
-      $('.select_all input[type="checkbox"]').click(function() {
-        if ($(this).is(':checked')) {
-          $('.disable_btn button').prop('disabled', false);
-          $('.campaign_item').addClass('active');
-        }
-        else {
-          $(this).parent().find('.select_all').addClass('open');
-          $('.disable_btn button').prop('disabled', true); 
-          $('.campaign_item').removeClass('active');
-        }
-      });
-    });
-  </script> -->
-  <!-- <script>
-    $(document).ready(function(){
-      $('.select_all input[type="checkbox"]').click(function() {
-        if ($(this).is(':checked')) {
-          $(this).parent().parent().parent().parent().parent('.select_items0').find('.disable_btn button').prop('disabled', false);
-          $(this).parent().parent().parent().parent().parent('.select_items0').find('.campaign_item').addClass('active');
-          $(this).parent().parent().parent().parent().parent('.select_items0').find('.select_unselect').show();
-          $(this).parent().parent().parent().parent().parent('.select_items0').find('.select_one input').prop('checked', true);
-        }
-        else {
-          $(this).parent().parent().parent().parent().parent('.select_items0').find('.disable_btn button').prop('disabled', true);
-          $(this).parent().parent().parent().parent().parent('.select_items0').find('.campaign_item').removeClass('active');
-          $(this).parent().parent().parent().parent().parent('.select_items0').find('.select_unselect').hide();
-          $(this).parent().parent().parent().parent().parent('.select_items0').find('.select_one input').prop('checked', false);
-        }
-      });
-    });
-  </script> -->
   <script>
     $(document).ready(function(){
       $('.select_all input[type="checkbox"]').click(function() {

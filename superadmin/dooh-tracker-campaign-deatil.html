@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Media Seller Agreement</title>
+<title>DOOH Campaign Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -51,9 +51,43 @@
         </li>
         <hr class="horizontal light mt-0 mb-2">
         <li class="nav-item">
-          <a href="users.html" class="nav-link text-white active">
+          <a href="users.html" class="nav-link text-white">
             <i class="material-icons-round opacity-10">group</i>
             <span class="nav-link-text ms-2 ps-1">Users</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#doohtracker" class="nav-link text-white active" aria-controls="doohtracker" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">DOOH Tracker</span>
+          </a>
+          <div class="collapse show" id="doohtracker">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="inventory.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Inventory </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requests.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Requests</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="dooh-tracker-campaign.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Campaigns</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a href="location-inventory.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">map</i>
+            <span class="nav-link-text ms-2 ps-1">Location Inventory</span>
           </a>
         </li>
         <li class="nav-item" style="display: none;">
@@ -180,9 +214,9 @@
         </ul>
         <nav aria-label="breadcrumb" class="navPart_2">
           <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Users</a></li>
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">RetiBazaar</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">User Detail</li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">DOOH Tracker</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Activity</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Campaign Detail</li>
           </ol>
         </nav>
         <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
@@ -197,180 +231,208 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid px-0 pb-4 mainBody_box">
-      <div class="card card-body">
-        <div class="d-flex w-100 justify-content-between userDtl_head">
+      <div class="card card-body flex_unset">
+        <div class="d-flex w-100 justify-content-between">
           <div class="profile_box">
-            <div class="profile_info">
-              <h5 class="mb-0 font-weight-bolder">John Doe</h5>
-              <span class="badge badge-pink badge-sm">Seller</span>
-              <span class="badge badge-danger badge-sm">Rejected</span>
+            <div class="profile_info mb-0">
+              <h5 class="mb-0 font-weight-bolder">Rise of Audit</h5>
             </div>
-          </div>
-          <div class="dropdown action_dropdown">
-            <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Action<span class="material-icons-round">keyboard_arrow_down</span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
-            </div>
-          </div>
-        </div>
-        <div class="profile_info2 mt-0">
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">mail</span>johndoe@gmail.com</p>
-          <span class="border_line"></span>
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">business_center</span>Vehement Capital Partners</p>
-          <span class="border_line"></span>
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">phone</span>(44) 123 1234 123</p>
-        </div>
-      </div>
-      <div class="card card-body mt-4">
-        <div class="d-flex w-100 justify-content-between userDtl_head">
-          <div class="profile_box">
-            <div class="profile_info">
-              <h5 class="mb-0 font-weight-bolder">John Doe</h5>
-              <span class="badge badge-pink badge-sm">Seller</span>
-              <span class="badge badge-warning badge-sm">Pending</span>
-            </div>
-          </div>
-          <div class="dropdown action_dropdown">
-            <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Action<span class="material-icons-round">keyboard_arrow_down</span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
-              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_user">Reject</a>
-            </div>
-          </div>
-        </div>
-        <div class="profile_info2 mt-0">
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">mail</span>johndoe@gmail.com</p>
-          <span class="border_line"></span>
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">business_center</span>Vehement Capital Partners</p>
-          <span class="border_line"></span>
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">phone</span>(44) 123 1234 123</p>
-        </div>
-      </div>
-      <div class="card card-body mt-4">
-        <div class="d-flex w-100 justify-content-between userDtl_head">
-          <div class="profile_box">
-            <div class="profile_info">
-              <h5 class="mb-0 font-weight-bolder">John Doe</h5>
-              <span class="badge badge-pink badge-sm">Seller</span>
-              <span class="badge badge-success badge-sm">Approved</span>
+            <div class="campaign_status">
+              <span class="badge badge-success badge-md">Approved</span>
+              <div class="campaign_type camp_type2 mt-0">DOOH Tracker</div>
             </div>
           </div>
           <div class="right_side">
+            <button type="button" class="text-primary font-weight-normal text-decoration-underline text-sm m-0">View Ad Creatives</button>
             <div class="dropdown action_dropdown">
-              <button class="btn bg-gradient-primary m-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Action<span class="material-icons-round">keyboard_arrow_down</span>
               </button>
               <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#disable_user">Disable</a>
+                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_cam">Approve</a>
+                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_cam">Reject</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="profile_info2 mt-0">
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">mail</span>johndoe@gmail.com</p>
+        <div class="profile_info2">
+          <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
+          <!-- span class="border_line"></span>
+          <p class="mb-0 font-weight-normal align-items-start text-sm icon_size">
+            <span class="material-icons-round">event</span>
+            <span>June 09, 2023</span>
+            <span>to</span>
+            <span>June 30, 2023</span>
+          </p>
           <span class="border_line"></span>
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">business_center</span>Vehement Capital Partners</p>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">calendar_month</span><b>Audit Dates</b>: 28 June, 15 July, 10 April</p></a> -->
+          <div class="frequency_btn font-weight-bold text-xs text-white">Every 8 Days</div>
+        </div>
+        <div class="profile_info2 mt-2">
+          <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-danger">Pending</b></p>
           <span class="border_line"></span>
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">phone</span>(44) 123 1234 123</p>
+          <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</span></p>
         </div>
       </div>
-      <div class="card mt-4">
-        <div class="card-header">
-          <div class="user_head">
-            <h6 class="mb-0">Business Detail</h6>
-            <div class="right_check">
-              <div class="form-check verified_dtl p-0 is-filled">
-                <input class="form-check-input" checked="" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
-              </div>
-              <label class="form-check-label mb-0">
-                <small id="profileVisibility">Verified</small>
-              </label>
-            </div>
-          </div>
-          <div class="user_body">
-            <ul class="list-group">
-              <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
-                <div class="d-flex flex-column">
-                  <span class="mb-2 text-sm">Name:<span class="text-dark font-weight-bold ms-sm-2">John Doe</span></span>
-                  <span class="mb-2 text-sm">Account Email:<span class="text-dark font-weight-bold ms-sm-2">johndoe@gmail.com</span></span>
-                  <span class="mb-2 text-sm">Company Name:<span class="text-dark font-weight-bold ms-sm-2">Vehement Capital Partners</span></span>
-                  <span class="mb-2 text-sm">Address:<span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
-                  <span class="mb-2 text-sm">Contact Phone Number:<span class="text-dark ms-sm-2 font-weight-bold">(44) 123 1234 123</span></span>
-                  <span class="mb-2 text-sm">Company Email Address:<span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
-                  <span class="mb-2 text-sm">Account Type:<span class="text-dark ms-sm-2 font-weight-bold">Agency</span></span>
-                  <span class="text-sm">Password:<span class="text-dark ms-sm-2 font-weight-bold">alect_cvwx1568!</span></span>
-                </div>
-              </li>
-            </ul>
-            <p class="card_footer font-weight-normal text-sm mb-0"><span class="material-icons-round">border_color</span>Shivani: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div class="approvedUser_box approved_seller">
+      <div class="approvedUser_box">
         <div class="appUser_box1">
           <div class="appUser_box0">
             <div class="appUser_box11">
               <div class="card">
-                <div class="card-header p-3 pt-2">
-                  <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
-                    <i class="material-icons-round">category</i>
+                <a href="locations.html">
+                  <div class="card-header p-3 pt-2">
+                    <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
+                      <i class="material-icons-round">map</i>
+                    </div>
+                    <div class="text-end pt-1">
+                      <p class="font-weight-normal text-md mb-0 text-capitalize">Locations</p>
+                      <h4 class="mb-0">85</h4>
+                    </div>
                   </div>
-                  <div class="text-end pt-1">
-                    <p class="font-weight-normal text-md mb-0 text-capitalize">Orders</p>
-                    <h4 class="mb-0">85</h4>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-3">
+                    <p class="font-weight-normal text-sm mb-0"><span class="text-success text-bolder">70</span> Confirmed / <span class="text-warning text-bolder">15</span> Pending</p>
                   </div>
-                </div>
-                <hr class="dark horizontal my-0">
-                <div class="card-footer p-3">
-                  <!-- <p class="font-weight-normal text-sm mb-0">70 Confirmed / 15 Pending</p> -->
-                  <p class="font-weight-normal text-sm mb-0"><span class="text-success text-bolder">70</span> Confirmed / <span class="text-warning text-bolder">15</span> Pending</p>
-                </div>
+                </a>
               </div>
             </div>
             <div class="appUser_box11">
               <div class="card">
-                <div class="card-header p-3 pt-2">
-                  <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
-                    <i class="material-icons-round">event_available</i>
+                <a href="brand-managers.html">
+                  <div class="card-header p-3 pt-2">
+                    <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
+                      <i class="material-icons-round">style</i>
+                    </div>
+                    <div class="text-end pt-1">
+                      <p class="font-weight-normal text-md mb-0 text-capitalize">Brand Manager</p>
+                      <h4 class="mb-0">85</h4>
+                    </div>
                   </div>
-                  <div class="text-end pt-1">
-                    <p class="font-weight-normal text-md mb-0 text-capitalize">Bookings</p>
-                    <h4 class="mb-0">125</h4>
-                  </div>
-                </div>
-                <hr class="dark horizontal my-0">
-                <div class="card-footer p-3">
-                  <!-- <p class="font-weight-normal text-sm mb-0">100 Confirmed / 25 Pending</p> -->
-                  <p class="font-weight-normal text-sm mb-0"><span class="text-success text-bolder">100</span> Booked / <span class="text-warning text-bolder">25</span> Pending</p>
-                </div>
+                </a>
               </div>
             </div>
             <div class="appUser_box11">
               <div class="card">
-                <div class="card-header p-3 pt-2">
-                  <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
-                    <i class="material-icons-round">payments</i>
+                <a href="activity.html">
+                  <div class="card-header p-3 pt-2">
+                    <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
+                      <i class="material-icons-round">event_note</i>
+                    </div>
+                    <div class="text-end pt-1">
+                      <p class="font-weight-normal text-md mb-0 text-capitalize">Activity Dashboard</p>
+                      <h4 class="mb-0">125</h4>
+                    </div>
                   </div>
-                  <div class="text-end pt-1">
-                    <p class="font-weight-normal text-md mb-0 text-capitalize">Payment</p>
-                    <h4 class="mb-0">₦ 1,000</h4>
+                </a>
+              </div>
+            </div>
+            <div class="appUser_box11">
+              <div class="card">
+                <a href="reports.html">
+                  <div class="card-header p-3 pt-2">
+                    <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
+                      <i class="material-icons-round">library_books</i>
+                    </div>
+                    <div class="text-end pt-1">
+                      <p class="font-weight-normal text-md mb-0 text-capitalize">Reports</p>
+                      <h4 class="mb-0">125</h4>
+                    </div>
                   </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="appUser_box2">
+          <div class="card">
+            <div class="card-header p-0">
+              <div class="user_head user_head1">
+                <h6 class="w-100 text-md mb-0 text-white">Payment Detail</h6>
+              </div>
+              <div class="user_body user_body2">
+                <div class="user_body1">
+                  <h6 class="text-dark font-weight-bold mb-0">Plan Detail</h6>
+                  <p class="text-secondary font-weight-normal m-0"><span class="material-icons-round icon_dtl">event_note</span>6 Months</p>
+                  <!-- <p class="text-secondary font-weight-normal m-0"><span class="material-icons-round icon_dtl">collections</span>12 pictures per site</p> -->
+                </div>
+                <div class="user_body1">
+                  <h6 class="text-dark font-weight-bold mb-0">Start Date</h6>
+                  <p class="text-secondary font-weight-normal m-0"><span class="material-icons-round icon_dtl">event_note</span>12 Jun, 2024</p>
+                </div>
+                <div class="user_body1 markPaid">
+                  <button type="button" class="btn bg-gradient-primary text-xs" data-bs-toggle="modal" data-bs-target="#paidModal">Mark as Paid</button>
+                  <!-- <a href="#" class="view_btn">Download Invoice</a> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--======= APPROVE USER MODAL START =======-->
-      <div class="modal fade" id="approve_user" tabindex="-1" role="dialog" aria-labelledby="approve_userLabel" aria-hidden="true">
+      <!--======= MARK AS PAID MODAL START =======-->
+      <div class="modal fade" id="paidModal" tabindex="-1" role="dialog" aria-labelledby="paidModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title font-weight-normal" id="approve_userLabel">Approve User</h5>
+              <h5 class="modal-title font-weight-normal" id="paidModalLabel">Record Offline Payment</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline mb-3 left_width">
+                    <select class="form-control">
+                      <option disabled>Payment Type*</option>
+                      <option>Cheque</option>
+                      <option>Cash</option>
+                      <option>Bank Transfer</option>
+                      <option selected>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Enter other payment type*</label>
+                    <input class="multisteps-form__input form-control" type="text" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Enter cheque number, transaction id or reference number*</label>
+                    <input class="multisteps-form__input form-control" type="text" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 uploadDocs">
+                  <p class="text-sm font-weight-bold mb-1">Supporting Documentation (Optional)</p>
+                  <p class="text-sm">Please upload one of the following documents:</p>
+                  <p class="text-sm">Cheque Scan/Photo, Bank Transfer Receipt, or Payment Receipt.</p>
+                  <div class="markPaid mt-2">
+                    <input type="file"/>
+                    <button type="button" class="btn bg-gradient-primary py-1 px-3">Upload</button>
+                  </div>
+                  <div class="markPaid cancelBtn mt-2">
+                    <p class="text-sm font-weight-bold">Payment Receipt.pdf</p>
+                    <button type="button" class="btn bg-gradient-light"><span class="material-icons-round">close</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= APPROVE CAMPAIGN MODAL START =======-->
+      <div class="modal fade" id="approve_cam" tabindex="-1" role="dialog" aria-labelledby="approve_camLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="approve_camLabel">Approve Campaign</h5>
               <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -386,17 +448,17 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Send</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Approve</button>
             </div>
           </div>
         </div>
       </div>
-      <!--======== REJECT USER MODAL START =======-->
-      <div class="modal fade" id="reject_user" tabindex="-1" role="dialog" aria-labelledby="reject_userLabel" aria-hidden="true">
+      <!--======== REJECT CAMPAIGN MODAL START =======-->
+      <div class="modal fade" id="reject_cam" tabindex="-1" role="dialog" aria-labelledby="reject_camLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title font-weight-normal" id="reject_userLabel">Reject User</h5>
+              <h5 class="modal-title font-weight-normal" id="reject_camLabel">Reject Campaign</h5>
               <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -428,83 +490,13 @@
           </div>
         </div>
       </div>
-      <!--======= DISABLE USER MODAL START =======-->
-      <div class="modal fade" id="disable_user" tabindex="-1" role="dialog" aria-labelledby="disable_userLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title font-weight-normal" id="approve_userLabel">Disable User</h5>
-              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="modal_body">
-                <p>Do you really want to disable media seller?</p>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Disable</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--======= VERIFY DETAIL MODAL START ======-->
-      <div class="modal fade" id="click_verify" tabindex="-1" role="dialog" aria-labelledby="click_verifyLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title font-weight-normal" id="click_verifyLabel">Verify</h5>
-              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="modal_body">
-                <div class="col-12 col-sm-12">
-                  <div class="input-group input-group-outline">
-                    <label for="exampleFormControlInput1" class="form-label">Comment</label>
-                    <input class="multisteps-form__input form-control pt-0" rows="2" spellcheck="false">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">OK</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </main>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/perfect-scrollbar.min.js"></script>
   <script src="js/datatables.js"></script>
-  <script src="js/material-dashboard.min.js"></script>
-  <script>
-    if (document.getElementById('plan-list')) {
-      const dataTableSearch1 = new simpleDatatables.DataTable("#plan-list", {
-        perPageSelect: false,
-        searchable: false,
-        fixedHeight: false,
-        perPage: 10,
-        sortable: false
-      });
-    }
-    if (document.getElementById('logs-list')) {
-      const dataTableSearch1 = new simpleDatatables.DataTable("#logs-list", {
-        perPageSelect: false,
-        searchable: false,
-        fixedHeight: false,
-        perPage: 10,
-        sortable: false,
-        header: false
-      });
-    }
-  </script> 
+  <script src="js/material-dashboard.min.js"></script> 
 </body>
 </html>
   

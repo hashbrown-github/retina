@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="css/material-dashboard.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="g-sidenav-show bg-gray-100">
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark bg-white main_sidebar" id="sidenav-main" data-color="dark">
+<body class="g-sidenav-show bg-gray-100 dark_theme">
+   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
     <div class="sidenav-header">
       <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
       <a class="navbar-brand m-0" href="javascript:void(0);">
@@ -57,6 +57,40 @@
           </a>
         </li>
         <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#doohtracker" class="nav-link text-white" aria-controls="doohtracker" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">DOOH Tracker</span>
+          </a>
+          <div class="collapse" id="doohtracker">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="inventory.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Inventory </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requests.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Requests</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="dooh-tracker-campaign.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Campaigns</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a href="location-inventory.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">map</i>
+            <span class="nav-link-text ms-2 ps-1">Location Inventory</span>
+          </a>
+        </li>
+        <li class="nav-item" style="display: none;">
           <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">groups</i>
             <span class="nav-link-text ms-2 ps-1">Teams</span>
@@ -112,9 +146,9 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: none;">
           <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
-            <i class="material-icons-round opacity-10">toc</i>
+            <i class="material-icons-round opacity-10">article</i>
             <span class="nav-link-text ms-2 ps-1">Orders</span>
           </a>
           <div class="collapse" id="orders">
@@ -133,6 +167,23 @@
               </li>
             </ul>
           </div>
+        </li>
+        <li class="nav-item">
+          <a href="billing.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">receipt_long</i>
+            <span class="nav-link-text ms-2 ps-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:void(0);" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">format_paint</i>
+            <div class="switchThemeBtn">
+              <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
+              <div class="form-check form-switch ps-0 ms-auto my-auto">
+                <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+              </div>
+            </div>
+          </a>
         </li>
       </ul>
     </div>
@@ -181,97 +232,327 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid px-0 pb-4 mainBody_box">
-      <div class="card card-body">
-        <div class="d-flex w-100 justify-content-between">
-          <div class="profile_box">
-            <div class="profile_info">
-              <h5 class="mb-2 font-weight-bolder">Joel Ogunnaike St</h5>
+      <div class="orderLoc_dtl">
+        <div class="orderLoc_dtl1">
+          <div class="card card-body">
+            <div class="d-flex w-100 justify-content-between">
+              <div class="profile_box">
+                <div class="profile_info">
+                  <h5 class="mb-2 font-weight-bolder">Joel Ogunnaike St</h5>
+                </div>
+              </div>
+            </div>
+            <div class="location_info">
+              <div class="d-flex flex-column">
+                <span class="mb-2 text-sm">Installation Period: <span class="text-dark font-weight-bold ms-sm-2">12th July, 2024 - 30th July, 2024</span></span>
+                <h6 class="mt-3">Location Info</h6>
+                <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria Ikeja, Lagos</span></span>
+                <span class="mb-2 text-sm">Area Description: <span class="text-dark ms-sm-2 font-weight-bold">Behnd ABC street</span></span>
+                <span class="mb-2 text-sm">Lat/Long: <span class="text-dark ms-sm-2 font-weight-bold">6.5872721, 3.3569867</span></span>
+                <h6 class="mt-3">Media Info</h6>
+                <span class="mb-2 text-sm">Billboard: <span class="text-dark ms-sm-2 font-weight-bold">Static, Back-lit</span></span>
+                <span class="mb-2 text-sm">Area: <span class="text-dark ms-sm-2 font-weight-bold">4.6 m x 6.6 m, 162.36 sq. m</span></span>
+                <span class="mb-2 text-sm">Orientation: <span class="text-dark ms-sm-2 font-weight-bold">West</span></span>
+                <h6 class="mt-3">Executives</h6>
+                <span class="text-sm">Shivani, Gurpreet</span>
+              </div>
             </div>
           </div>
-          <div class="right_side">
-            
-          </div>
         </div>
-        <div class="location_info">
-          <div class="d-flex flex-column">
-            <span class="mb-2 text-sm">Installation Period: <span class="text-dark font-weight-bold ms-sm-2">12th July, 2024 - 30th July, 2024</span></span>
-            <h6 class="mt-3">Location Info</h6>
-            <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria Ikeja, Lagos</span></span>
-            <span class="mb-2 text-sm">Area Description: <span class="text-dark ms-sm-2 font-weight-bold">Behnd ABC street</span></span>
-            <span class="mb-2 text-sm">Lat/Long: <span class="text-dark ms-sm-2 font-weight-bold">6.5872721, 3.3569867</span></span>
-            <h6 class="mt-3">Media Info</h6>
-            <span class="mb-2 text-sm">Billboard: <span class="text-dark ms-sm-2 font-weight-bold">Static, Back-lit</span></span>
-            <span class="mb-2 text-sm">Area: <span class="text-dark ms-sm-2 font-weight-bold">4.6 m x 6.6 m, 162.36 sq. m</span></span>
-            <span class="mb-2 text-sm">Orientation: <span class="text-dark ms-sm-2 font-weight-bold">West</span></span>
-            <h6 class="mt-3">Executives</h6>
-            <span class="text-sm">Shivani, Gurpreet</span>
+        <div class="orderLoc_dtl2">
+          <div class="card card-body">
+            <div class="d-flex w-100 justify-content-between mb-1">
+              <div class="profile_box">
+                <div class="profile_info">
+                  <h5 class="mb-2 font-weight-bolder">Location Map</h5>
+                </div>
+              </div>
+              <div class="right_side">
+                <button type="button" class="font-weight-bold text-sm overrideBtn" data-bs-toggle="modal" data-bs-target="#overridemodal">Override</button>
+              </div>
+            </div>
+            <div class="ordLoc_map">
+              <div id="location_map"></div>
+            </div>
           </div>
         </div>
       </div>
       <div class="card card-body mt-4">
-        <div class="locations_grid mt-0">
-          <ul class="list-group">
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <a href="location-detail.html">
-                <div class="cam_head">
-                  <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                  <div class="loc_img">
-                    <img src="images/1-loc.jpg" alt="Location Image" />
+        <ul class="nav nav-pills nav-fill nav_tabs px-0" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#tab_1" role="tab" aria-controls="tab_1-tab" aria-selected="true">Images</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab_2" role="tab" aria-controls="tab_2-tab" aria-selected="false">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab_3" role="tab" aria-controls="tab_3-tab" aria-selected="false">Flagged</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="tab_1" role="tabpanel" aria-labelledby="tab_1-tab">
+            <div class="locations_grid mt-0">
+              <ul class="list-group">
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
                   </div>
-                </div>
-                <div class="loc_body">
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ade | 7069732441</p>
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">20:05 PM | Wednesday, June 05, 2024</p>
-                  <ul class="site_dtl">
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Flex: Okay</p></li>
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Lights: Not Okay</p></li>
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Visibility: Okay</p></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <a href="location-detail.html">
-                <div class="cam_head">
-                  <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                  <div class="loc_img">
-                    <img src="images/2-loc.jpg" alt="Location Image" />
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Flex:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Traffic Type:</span><span>(Vehicular and pedestrians)</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibility:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Landmark:</span><span>Backward School</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibilities:</span><span>MId-Level</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
                   </div>
-                </div>
-                <div class="loc_body">
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ade | 7069732441</p>
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">20:05 PM | Wednesday, June 05, 2024</p>
-                  <ul class="site_dtl">
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Flex: Not Okay</p></li>
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Lights: Okay</p></li>
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Visibility: Okay</p></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <a href="location-detail.html">
-                <div class="cam_head">
-                  <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ikeja, Lagos</p>
-                  <div class="loc_img">
-                    <img src="images/3-loc.jpg" alt="Location Image" />
+                </li>
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
                   </div>
-                </div>
-                <div class="loc_body">
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">Ade | 7069732441</p>
-                  <p class="mb-1 font-weight-normal text-sm text-dark icon_size">20:05 PM | Wednesday, June 05, 2024</p>
-                  <ul class="site_dtl">
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Flex: Okay</p></li>
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Lights: Okay</p></li>
-                    <li><p class="mb-0 font-weight-normal text-sm text-dark icon_size">Site Visibility: Okay</p></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-          </ul>
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Flex:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Traffic Type:</span><span>(Vehicular and pedestrians)</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibility:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Landmark:</span><span>Backward School</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibilities:</span><span>MId-Level</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
+                  </div>
+                </li>
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
+                  </div>
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Flex:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Traffic Type:</span><span>(Vehicular and pedestrians)</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibility:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Landmark:</span><span>Backward School</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibilities:</span><span>MId-Level</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="noFoundInner">
+              <img src="images/no-campaign.png" alt="Not Found">
+              <h5 class="mt-4 mb-0">No Images Found!</h5>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab_2" role="tabpanel" aria-labelledby="tab_2-tab">
+            <div class="locations_grid mt-0">
+              <ul class="list-group">
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <video width="100%" height="100%" controls disablepictureinpicture controlslist="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        <source type="video/mp4" src="images/video.mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Flex:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Traffic Type:</span><span>(Vehicular and pedestrians)</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibility:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Landmark:</span><span>Backward School</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibilities:</span><span>MId-Level</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
+                  </div>
+                </li>
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <video width="100%" height="100%" controls disablepictureinpicture controlslist="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        <source type="video/mp4" src="images/video.mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Flex:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Traffic Type:</span><span>(Vehicular and pedestrians)</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibility:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Landmark:</span><span>Backward School</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibilities:</span><span>MId-Level</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
+                  </div>
+                </li>
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <video width="100%" height="100%" controls disablepictureinpicture controlslist="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        <source type="video/mp4" src="images/video.mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Flex:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Traffic Type:</span><span>(Vehicular and pedestrians)</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibility:</span><span>OK</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Landmark:</span><span>Backward School</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Site Visibilities:</span><span>MId-Level</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="noFoundInner">
+              <img src="images/no-campaign.png" alt="Not Found">
+              <h5 class="mt-4 mb-0">No Videos Found!</h5>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab_3" role="tabpanel" aria-labelledby="tab_3-tab">
+            <div class="locations_grid mt-0">
+              <ul class="list-group">
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
+                  </div>
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
+                  </div>
+                </li>
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
+                  </div>
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
+                  </div>
+                </li>
+                <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                  <div class="cam_head">
+                    <div class="loc_img mt-0">
+                      <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
+                  </div>
+                  <div class="loc_body">
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Date/Time:</span><span>Friday, June 07, 2024 | 12:26 PM</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Coordinates:</span><span>N 28°23'7.47492" E 77°1'35.9994"</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Address:</span><span>C-44, Block C2, BPTP Adtaire Garden, Sector 70A, Gurugram, Haryana 122101, India</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">City:</span><span>Gurugram</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">State:</span><span>Haryana</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">User:</span><span>John Doe | +234 946 380 2765</span></p>
+                    <p class="mb-1 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Campaign:</span><span>The rise of advertising</span></p>
+                    <p class="mb-0 text-sm font-weight-normal text-dark"><span class="font-weight-bold me-1">Remarks:</span><span>Lorem ipsum dolor sit amet elit.</span></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="noFoundInner">
+              <img src="images/no-campaign.png" alt="Not Found">
+              <h5 class="mt-4 mb-0">No Flagged Items Found!</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal_box payment_modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body img_slider">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <img src="images/1-loc.jpg" alt="Location Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal_box payment_modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body img_slider">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline">
+                <source type="video/mp4" src="images/video.mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= OVERRIDE LOCATION POPUP =======-->
+      <div class="modal fade" id="overridemodal" tabindex="-1" role="dialog" aria-labelledby="overridemodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="overridemodalLabel">Override Location</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <p>Are you really want to override this location?</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Override</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -290,6 +571,29 @@
         perPage: 10
       });
     }
+  </script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+    const location_map = new mapboxgl.Map({
+      container: 'location_map',
+      // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+      // style: 'mapbox://styles/meridian0/clhhjph1m01dv01pn7p7oh8ns',
+      style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+      center: [8.141140, 9.611302],
+      zoom: 5
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(".lightBoxTable").click(function(){
+        $(".lightbox-target").css("display", "block");
+      });
+
+      $(".lightbox-close").click(function(){
+        $(".lightbox-target").css("display", "none");
+      });
+    });
   </script>
 </body>
 </html>

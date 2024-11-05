@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Campaigns</title>
+<title>DOOH Campaigns</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -56,6 +56,40 @@
             <span class="nav-link-text ms-2 ps-1">Users</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#doohtracker" class="nav-link text-white active" aria-controls="doohtracker" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">DOOH Tracker</span>
+          </a>
+          <div class="collapse show" id="doohtracker">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="inventory.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Inventory </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requests.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Requests</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="dooh-tracker-campaign.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Campaigns</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a href="location-inventory.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">map</i>
+            <span class="nav-link-text ms-2 ps-1">Location Inventory</span>
+          </a>
+        </li>
         <li class="nav-item" style="display: none;">
           <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">groups</i>
@@ -73,14 +107,14 @@
           </div>
         </li>
         <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white active" aria-controls="campaigns" role="button" aria-expanded="true">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white" aria-controls="campaigns" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">campaign</i>
             <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
           </a>
-          <div class="collapse show" id="campaigns">
+          <div class="collapse" id="campaigns">
             <ul class="nav">
-              <li class="nav-item active">
-                <a class="nav-link text-white active" href="campaigns.html">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
                   <span class="sidenav-mini-icon">  </span>
                   <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
                 </a>
@@ -180,7 +214,7 @@
         </ul>
         <nav aria-label="breadcrumb" class="navPart_2">
           <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Audit Campaigns</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">DOOH Tracker</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Campaigns</li>
           </ol>
         </nav>
@@ -230,44 +264,14 @@
             </ul>
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="tab_1" role="tabpanel" aria-labelledby="tab_1-tab">
-                <!-- <div class="filter_status filter_1 mx-0">
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Search by</label>
-                    <input class="form-control" type="text" placeholder="Enter user name or id..">
-                  </div>
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Campaign Type</label>
-                    <select class="form-control">
-                      <option selected>All</option>
-                      <option>OOH Tracker</option>
-                      <option>DOOH Tracker</option>
-                      <option>Retail Tracker</option>
-                      <option>BTL Tracker</option>
-                      <option>Asset & Inventory Tracker</option>
-                    </select>
-                  </div>
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Status</label>
-                    <select class="form-control">
-                      <option selected>All</option>
-                      <option>Verified Only</option>
-                      <option>Pending Only</option>
-                      <option>Rejected Only</option>
-                      <option>Paid Only</option>
-                      <option>Unpaid Only</option>
-                      <option>Verified & Paid</option>
-                      <option>Pending & Unpaid</option>
-                    </select>
-                  </div>
-                </div> -->
                 <div class="campaign_list">
                   <ul class="list-group">
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Rise of Audit</h5>
-                            <div class="campaign_type camp_type1">OOH Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -277,17 +281,15 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>20 Location</p>
-                        <span class="border_line"></span>
+                        <!-- <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size">
                           <span class="material-icons-round">event</span>
                           <span>June 01, 2024</span>
                           <span>to</span>
                           <span>Aug 30, 2024</span>
-                        </p>
+                        </p> -->
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -295,11 +297,10 @@
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Testing Camapign 1</h5>
-                            <!-- <div class="campaign_type camp_type2">DOOH Tracker</div> -->
-                            <div class="campaign_type camp_type1">OOH Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -309,17 +310,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>6 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 16, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -327,10 +319,10 @@
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Dummy Campaign</h5>
-                            <div class="campaign_type camp_type3">Retail Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -340,28 +332,19 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>5 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 13, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-danger">Rejected</b></p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-danger">Unpaid</b></p>
+                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
                       </div>
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Test Crash</h5>
-                            <div class="campaign_type camp_type4">BTL Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -371,28 +354,19 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>2 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 09, 2023</span>
-                          <span>to</span>
-                          <span>June 30, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-warning">Pending</b></p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-danger">Unpaid</b></p>
+                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
                       </div>
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Campaign Mohali Tower</h5>
-                            <div class="campaign_type camp_type5">Asset & Inventory Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -402,17 +376,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>5 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 13, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-warning">Pending</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -422,44 +387,14 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="tab_2" role="tabpanel" aria-labelledby="tab_2-tab">
-                <!-- <div class="filter_status filter_1 mx-0">
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Search by</label>
-                    <input class="form-control" type="text" placeholder="Enter user name or id..">
-                  </div>
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Campaign Type</label>
-                    <select class="form-control">
-                      <option selected>All</option>
-                      <option>OOH Tracker</option>
-                      <option>DOOH Tracker</option>
-                      <option>Retail Tracker</option>
-                      <option>BTL Tracker</option>
-                      <option>Asset & Inventory Tracker</option>
-                    </select>
-                  </div>
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Status</label>
-                    <select class="form-control">
-                      <option selected>All</option>
-                      <option>Verified Only</option>
-                      <option>Pending Only</option>
-                      <option>Rejected Only</option>
-                      <option>Paid Only</option>
-                      <option>Unpaid Only</option>
-                      <option>Verified & Paid</option>
-                      <option>Pending & Unpaid</option>
-                    </select>
-                  </div>
-                </div> -->
                 <div class="campaign_list">
                   <ul class="list-group">
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Rise of Audit</h5>
-                            <div class="campaign_type camp_type1">OOH Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date">Edit</button>
@@ -469,17 +404,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>20 Location</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 22, 2023</span>
-                          <span>to</span>
-                          <span>June 29, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -487,7 +413,7 @@
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Testing Camapign 1</h5>
                             <div class="campaign_type camp_type2">DOOH Tracker</div>
@@ -500,28 +426,19 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>6 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 16, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-danger">Unpaid</b></p>
+                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
                       </div>
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Dummy Campaign</h5>
-                            <div class="campaign_type camp_type3">Retail Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date">Edit</button>
@@ -531,17 +448,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>5 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 13, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -549,10 +457,10 @@
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Test Crash</h5>
-                            <div class="campaign_type camp_type4">BTL Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date">Edit</button>
@@ -562,28 +470,19 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>2 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 09, 2023</span>
-                          <span>to</span>
-                          <span>June 30, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-danger">Unpaid</b></p>
+                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
                       </div>
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Campaign Mohali Tower</h5>
-                            <div class="campaign_type camp_type5">Asset & Inventory Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date">Edit</button>
@@ -593,17 +492,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>5 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 13, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -613,42 +503,14 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="tab_3" role="tabpanel" aria-labelledby="tab_3-tab">
-                <!-- <div class="filter_status filter_1 mx-0">
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Search by</label>
-                    <input class="form-control" type="text" placeholder="Enter user name or id..">
-                  </div>
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Campaign Type</label>
-                    <select class="form-control">
-                      <option selected>All</option>
-                      <option>OOH Tracker</option>
-                      <option>DOOH Tracker</option>
-                      <option>Retail Tracker</option>
-                      <option>BTL Tracker</option>
-                      <option>Asset & Inventory Tracker</option>
-                    </select>
-                  </div>
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Status</label>
-                    <select class="form-control">
-                      <option selected>All</option>
-                      <option>Pending Only</option>
-                      <option>Paid Only</option>
-                      <option>Unpaid Only</option>
-                      <option>Pending & Paid</option>
-                      <option>Pending & Unpaid</option>
-                    </select>
-                  </div>
-                </div> -->
                 <div class="campaign_list">
                   <ul class="list-group">
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Test Crash</h5>
-                            <div class="campaign_type camp_type4">BTL Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -658,28 +520,19 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>2 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 09, 2023</span>
-                          <span>to</span>
-                          <span>June 30, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-warning">Pending</b></p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-danger">Unpaid</b></p>
+                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
                       </div>
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Campaign Mohali Tower</h5>
-                            <div class="campaign_type camp_type5">Asset & Inventory Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -689,17 +542,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>5 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 13, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-warning">Pending</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -709,44 +553,14 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="tab_4" role="tabpanel" aria-labelledby="tab_4-tab">
-                <!-- <div class="filter_status filter_1 mx-0">
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Search by</label>
-                    <input class="form-control" type="text" placeholder="Enter user name or id..">
-                  </div>
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Campaign Type</label>
-                    <select class="form-control">
-                      <option selected>All</option>
-                      <option>OOH Tracker</option>
-                      <option>DOOH Tracker</option>
-                      <option>Retail Tracker</option>
-                      <option>BTL Tracker</option>
-                      <option>Asset & Inventory Tracker</option>
-                    </select>
-                  </div>
-                  <div class="input-group input-group-static mb-0">
-                    <label class="m-0">Status</label>
-                    <select class="form-control">
-                      <option selected>All</option>
-                      <option>Verified Only</option>
-                      <option>Pending Only</option>
-                      <option>Rejected Only</option>
-                      <option>Paid Only</option>
-                      <option>Unpaid Only</option>
-                      <option>Verified & Paid</option>
-                      <option>Pending & Unpaid</option>
-                    </select>
-                  </div>
-                </div> -->
                 <div class="campaign_list">
                   <ul class="list-group">
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Rise of Audit</h5>
-                            <div class="campaign_type camp_type1">OOH Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -756,17 +570,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>20 Location</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 01, 2024</span>
-                          <span>to</span>
-                          <span>Aug 30, 2024</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -774,7 +579,7 @@
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Testing Camapign 1</h5>
                             <div class="campaign_type camp_type2">DOOH Tracker</div>
@@ -787,17 +592,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>6 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 16, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -805,10 +601,10 @@
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Dummy Campaign</h5>
-                            <div class="campaign_type camp_type3">Retail Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -818,28 +614,19 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>5 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 13, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-danger">Rejected</b></p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-danger">Unpaid</b></p>
+                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
                       </div>
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Test Crash</h5>
-                            <div class="campaign_type camp_type4">BTL Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -849,28 +636,19 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>2 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 09, 2023</span>
-                          <span>to</span>
-                          <span>June 30, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-warning">Pending</b></p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-danger">Unpaid</b></p>
+                        <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
                       </div>
                     </li>
                     <li class="list-group-item justify-content-between border-radius-lg campaign_item">
                       <div class="d-flex flex-column">
-                        <a href="campaign-detail.html">
+                        <a href="dooh-tracker-campaign-deatil.html">
                           <div class="cam_head">
                             <h5 class="mb-0 text-dark">Campaign Mohali Tower</h5>
-                            <div class="campaign_type camp_type5">Asset & Inventory Tracker</div>
+                            <div class="campaign_type camp_type2">DOOH Tracker</div>
                           </div>
                         </a>
                         <button type="button" class="edit_date" data-bs-toggle="modal" data-bs-target="#extend_cam">Edit</button>
@@ -880,17 +658,8 @@
                         <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>5 Locations</p>
-                        <span class="border_line"></span>
-                        <p class="mb-0 font-weight-normal text-sm icon_size">
-                          <span class="material-icons-round">event</span>
-                          <span>June 13, 2023</span>
-                          <span>to</span>
-                          <span>June 25, 2023</span>
-                        </p>
                       </div>
                       <div class="profile_info2 mt-2">
-                        <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-warning">Pending</b></p>
-                        <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
                         <span class="border_line"></span>
                         <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
@@ -899,54 +668,6 @@
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--======== EXTENDED MODAL START =======-->
-      <div class="modal fade" id="extend_cam" tabindex="-1" role="dialog" aria-labelledby="extend_camLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title font-weight-normal" id="extend_camLabel">Extend Campaign End Date</h5>
-              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="modal_body">
-                <div class="col-12 col-sm-12">
-                  <label class="ms-0 mb-1">End Date</label>
-                  <div class="input-group input-group-outline mb-0">
-                    <input class="form-control" type="date" placeholder="Start Date">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#extend_cam2">Extend</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="extend_cam2" tabindex="-1" role="dialog" aria-labelledby="extend_cam2Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title font-weight-normal" id="extend_cam2Label">Confirmation</h5>
-              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="modal_body">
-                <p>Are you sure you want to extend the campaign end date?</p>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Extend</button>
             </div>
           </div>
         </div>

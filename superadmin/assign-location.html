@@ -1,0 +1,449 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Assign Location</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/material-dashboard.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="g-sidenav-show bg-gray-100 dark_theme">
+   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
+    <div class="sidenav-header">
+      <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
+      <a class="navbar-brand m-0" href="javascript:void(0);">
+        <img src="images/logo.svg" class="navbar-brand-img h-100" alt="main_logo">
+        <!-- <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span> -->
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2 mt-0">
+          <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">face</i>
+            <span class="nav-link-text ms-2 ps-1">Superadmin</span>
+          </a>
+          <div class="collapse" id="ProfileNav">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Settings </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <hr class="horizontal light mt-0 mb-2">
+        <li class="nav-item">
+          <a href="users.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">group</i>
+            <span class="nav-link-text ms-2 ps-1">Users</span>
+          </a>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">groups</i>
+            <span class="nav-link-text ms-2 ps-1">Teams</span>
+          </a>
+          <div class="collapse" id="teams">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="finance-and-audit.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Finance & Audit </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white active" aria-controls="campaigns" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
+          </a>
+          <div class="collapse show" id="campaigns">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="field-executives.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Field Executives </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activity.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activity </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="map.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Map </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">article</i>
+            <span class="nav-link-text ms-2 ps-1">Orders</span>
+          </a>
+          <div class="collapse" id="orders">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requested-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Requested Orders </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="final-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Final Orders </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="billing.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">receipt_long</i>
+            <span class="nav-link-text ms-2 ps-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:void(0);" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">format_paint</i>
+            <div class="switchThemeBtn">
+              <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
+              <div class="form-check form-switch ps-0 ms-auto my-auto">
+                <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content border-radius-lg px-md-4">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 border-radius-xl shadow-none main_navbar0" id="navbarBlur" data-scroll="false">
+      <div class="container-fluid px-0 main_navbar1">
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none navPart_1">
+          <a href="javascript:;" class="nav-link p-0 text-body">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </a>
+        </div>
+        <ul class="navbar-nav justify-content-end navPart_4">
+          <li class="nav-item d-xl-none pe-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <nav aria-label="breadcrumb" class="navPart_2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Audit Campaigns</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Field Executives</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Assign Location</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
+          <div class="ms-sm-auto d-flex align-items-center">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Search here</label>
+              <input type="text" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid px-0 pb-4 mainBody_box">
+      <div class="card">
+        <div class="card-body p-0">
+          <div class="card-body">
+            <div class="d-flex w-100 justify-content-between userDtl_head">
+              <div class="profile_box">
+                <div class="profile_info">
+                  <h5 class="mb-0 font-weight-bolder">Assign Locations to Manoj Vashisht</h5>
+                </div>
+              </div>
+            </div>
+            <div class="profile_info2 mt-0">
+              <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">mail</span>johndoe@gmail.com</p>
+              <span class="border_line"></span>
+              <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">phone</span>+234 946 380 2765</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header pb-0">
+          <div class="head_part">
+            <div>
+              <h5 class="mb-0">Locations</h5>
+            </div>
+            <div class="right_side">
+              <button type="button" id="grid_view" class="btn bg-gradient-primary m-0 px-2 py-2 blue_btn2"><span class="material-icons-round">grid_view</span></button>
+              <button type="button" id="list_view" class="btn bg-gradient-primary m-0 px-2 py-2 blue_btn2"><span class="material-icons-round">table_rows</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body assignLoc">
+          <div class="nav-wrapper position-relative end-0">
+            <div class="filter_status filter_1 mx-0">
+              <div class="input-group input-group-static mb-0">
+                <input class="form-control" type="text" placeholder="Search by location...">
+                <select class="form-control">
+                  <option selected disabled>State</option>
+                  <option>State 1</option>
+                  <option>State 2</option>
+                  <option>State 3</option>
+                  <option>State 4</option>
+                </select>
+                <select class="form-control">
+                  <option selected disabled>LGA</option>
+                  <option>LGA 1</option>
+                  <option>LGA 2</option>
+                  <option>LGA 3</option>
+                  <option>LGA 4</option>
+                </select>
+                <select class="form-control">
+                  <option selected disabled>City</option>
+                  <option>City 1</option>
+                  <option>City 2</option>
+                  <option>City 3</option>
+                  <option>City 4</option>
+                </select>
+                <div class="search_btn">
+                  <button type="button" class="btn bg-gradient-primary m-0 px-2 py-2 blue_btn2"><span class="material-icons-round">search</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="select_items0">
+              <div class="select_items">
+                <div class="select_option">
+                  <div class="right_check">
+                    <div class="form-check verified_dtl p-0 m-0 is-filled select_all">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label text-sm mb-0">Select All</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="blue_btn disable_btn"><button type="button" data-bs-toggle="modal" data-bs-target="#assign_loc" class="btn bg-gradient-primary m-0 blue_btn2">Assign Locations</button></div>
+              </div>
+              <div class="locations_grid locations_list">
+                <ul class="list-group">
+                  <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                    <a href="location-detail.html">
+                      <div class="d-flex gap-2">
+                        <div class="select_unselect">
+                          <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                            <input class="form-check-input" type="checkbox">
+                          </div>
+                        </div>
+                        <div class="cam_head">
+                          <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
+                          <p class="mb-0 font-weight-normal text-sm text-dark icon_size">City, LGA, State</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                    <a href="location-detail.html">
+                      <div class="d-flex gap-2">
+                        <div class="select_unselect">
+                          <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                            <input class="form-check-input" type="checkbox">
+                          </div>
+                        </div>
+                        <div class="cam_head">
+                          <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
+                          <p class="mb-0 font-weight-normal text-sm text-dark icon_size">City, LGA, State</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                    <a href="location-detail.html">
+                      <div class="d-flex gap-2">
+                        <div class="select_unselect">
+                          <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                            <input class="form-check-input" type="checkbox">
+                          </div>
+                        </div>
+                        <div class="cam_head">
+                          <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
+                          <p class="mb-0 font-weight-normal text-sm text-dark icon_size">City, LGA, State</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                    <a href="location-detail.html">
+                      <div class="d-flex gap-2">
+                        <div class="select_unselect">
+                          <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                            <input class="form-check-input" type="checkbox">
+                          </div>
+                        </div>
+                        <div class="cam_head">
+                          <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
+                          <p class="mb-0 font-weight-normal text-sm text-dark icon_size">City, LGA, State</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                    <a href="location-detail.html">
+                      <div class="d-flex gap-2">
+                        <div class="select_unselect">
+                          <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                            <input class="form-check-input" type="checkbox">
+                          </div>
+                        </div>
+                        <div class="cam_head">
+                          <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
+                          <p class="mb-0 font-weight-normal text-sm text-dark icon_size">City, LGA, State</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                    <a href="location-detail.html">
+                      <div class="d-flex gap-2">
+                        <div class="select_unselect">
+                          <div class="form-check verified_dtl p-0 m-0 is-filled select_one">
+                            <input class="form-check-input" type="checkbox">
+                          </div>
+                        </div>
+                        <div class="cam_head">
+                          <h5 class="mb-1 text-dark">Joel Ogunnaike St</h5>
+                          <p class="mb-0 font-weight-normal text-sm text-dark icon_size">City, LGA, State</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= ASSIGN LOCATION POPUP=======-->
+      <div class="modal fade" id="assign_loc" tabindex="-1" role="dialog" aria-labelledby="assign_locLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="assign_locLabel">Assign Location</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <p>Do your really want to assign these locations?</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Assign</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/perfect-scrollbar.min.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/material-dashboard.min.js"></script>
+  <script>
+    if (document.getElementById('users-list1')) {
+      const dataTableSearch1 = new simpleDatatables.DataTable("#users-list1", {
+        perPageSelect: false,
+        searchable: false,
+        fixedHeight: false,
+        perPage: 10
+      });
+    }
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#grid_view').on('click', function(){
+        $(this).addClass('active');
+        $('#list_view').removeClass('active');
+        $('.locations_grid').removeClass('locations_list');
+      });
+      $('#list_view').on('click', function(){
+        $(this).addClass('active');
+        $('#grid_view').removeClass('active');
+        $('.locations_grid').addClass('locations_list');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.select_all input[type="checkbox"]').click(function() {
+        if ($(this).is(':checked')) {
+          $(this).parent().parent().parent().parent().parent('.select_items0').find('.campaign_item').addClass('active');
+          $(this).parent().parent().parent().parent().parent('.select_items0').find('.select_one input').prop('checked', true);
+        }
+        else {
+          $(this).parent().parent().parent().parent().parent('.select_items0').find('.campaign_item').removeClass('active');
+          $(this).parent().parent().parent().parent().parent('.select_items0').find('.select_one input').prop('checked', false);
+        }
+      });
+
+      $('.select_one input[type="checkbox"]').click(function() {
+        if ($(this).is(':checked')) {
+          $(this).parent().parent().parent().parent().parent('.campaign_item').addClass('active');
+        }
+        else {
+          $(this).parent().parent().parent().parent().parent('.campaign_item').removeClass('active');
+        }
+      });
+    });
+  </script> 
+</body>
+</html>
+  

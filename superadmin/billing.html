@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Order Location Detail</title>
+<title>Billing</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -112,12 +112,12 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white active" aria-controls="orders" role="button" aria-expanded="true">
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">article</i>
             <span class="nav-link-text ms-2 ps-1">Orders</span>
           </a>
-          <div class="collapse show" id="orders">
+          <div class="collapse" id="orders">
             <ul class="nav">
               <li class="nav-item">
                 <a class="nav-link text-white" href="requested-orders.html">
@@ -125,8 +125,8 @@
                   <span class="sidenav-normal ms-2  ps-1"> Requested Orders </span>
                 </a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link text-white active" href="final-orders.html">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="final-orders.html">
                   <span class="sidenav-mini-icon">  </span>
                   <span class="sidenav-normal ms-2  ps-1"> Final Orders </span>
                 </a>
@@ -134,8 +134,8 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item">
-          <a href="billing.html" class="nav-link text-white">
+        <li class="nav-item active">
+          <a href="billing.html" class="nav-link text-white active">
             <i class="material-icons-round opacity-10">receipt_long</i>
             <span class="nav-link-text ms-2 ps-1">Billing</span>
           </a>
@@ -180,9 +180,7 @@
         </ul>
         <nav aria-label="breadcrumb" class="navPart_2">
           <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Orders</a></li>
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Order Detail</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Location Detail</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Billing</li>
           </ol>
         </nav>
         <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
@@ -197,103 +195,122 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid px-0 pb-4 mainBody_box">
-      <div class="orderLoc_dtl">
-        <div class="orderLoc_dtl1">
-          <div class="card card-body">
-            <div class="d-flex w-100 justify-content-between">
-              <div class="profile_box">
-                <div class="profile_info">
-                  <h5 class="mb-0 mb-sm-2 font-weight-bolder">Joel Ogunnaike St</h5>
-                </div>
-              </div>
-            </div>
-            <div class="location_info">
-              <div class="d-flex flex-column">
-                <h6>Location Info</h6>
-                <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria Ikeja, Lagos</span></span>
-                <span class="mb-2 text-sm">Area Description: <span class="text-dark ms-sm-2 font-weight-bold">Behnd ABC street</span></span>
-                <span class="mb-2 text-sm">Lat/Long: <span class="text-dark ms-sm-2 font-weight-bold">6.5872721, 3.3569867</span></span>
-                <h6 class="mt-3">Media Info</h6>
-                <span class="mb-2 text-sm">Billboard: <span class="text-dark ms-sm-2 font-weight-bold">Static, Back-lit</span></span>
-                <span class="mb-2 text-sm">Area: <span class="text-dark ms-sm-2 font-weight-bold">4.6 m x 6.6 m, 162.36 sq. m</span></span>
-                <span class="mb-0 text-sm">Orientation: <span class="text-dark ms-sm-2 font-weight-bold">West</span></span>
-              </div>
+      <div class="card">
+        <div class="card-header pb-0">
+          <div class="head_part">
+            <div>
+              <h5 class="mb-0">Billing</h5>
             </div>
           </div>
         </div>
-        <div class="orderLoc_dtl2">
-          <div class="card card-body">
-            <div class="d-flex w-100 justify-content-between">
-              <div class="profile_box">
-                <div class="profile_info">
-                  <h5 class="mb-2 font-weight-bolder">Location Map</h5>
-                </div>
-              </div>
-            </div>
-            <div class="ordLoc_map">
-              <div id="map"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card card-body mt-4">
-        <div class="locations_grid mt-0">
-          <h6 class="mb-2">Real Visuals</h6>
-          <ul class="list-group">
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <div class="loc_img mt-0">
-                <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
-              </div>
-            </li>
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <div class="loc_img mt-0">
-                <video width="100%" height="100%" controls disablepictureinpicture controlslist="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
-                  <source type="video/mp4" src="images/video.mp4">
-                </video>
-              </div>
-            </li>
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <div class="loc_img mt-0">
-                <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
-              </div>
-            </li>
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <div class="loc_img mt-0">
-                <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
-              </div>
-            </li>
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <div class="loc_img mt-0">
-                <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
-              </div>
-            </li>
-            <li class="list-group-item justify-content-between border-radius-lg campaign_item">
-              <div class="loc_img mt-0">
-                <img src="images/1-loc.jpg" data-bs-toggle="modal" data-bs-target="#imgModal" />
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="modal modal_box payment_modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body img_slider">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              <img src="images/1-loc.jpg" alt="Location Image" />
+        <div class="card-body px-0 pb-0">
+          <div class="filter_status filter_4">
+            <div class="input-group input-group-static mb-0">
+              <input class="form-control" type="text" placeholder="Search by invoice number or user name" onfocus="focused(this)" onfocusout="defocused(this)">
+              <select class="form-control">
+                <option selected="" disabled="">Service</option>
+                <option>Retitrak</option>
+                <option>Retibazaar</option>
+                <option>Retimatrix</option>
+              </select>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="modal modal_box payment_modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body img_slider">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline">
-                <source type="video/mp4" src="images/video.mp4">
-              </video>
-            </div>
+          <h6 class="ms-4">Billing History</h6>
+          <div class="table-responsive">
+            <table class="table table-flush" id="report_list">
+              <thead class="thead-light">
+                <tr>
+                  <th>Invoice Id</th>
+                  <th>Date</th>
+                  <th>Customer</th>
+                  <th>Service</th>
+                  <th>Item</th>
+                  <th>Payment Method</th>
+                  <th>Payment Gateway</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-sm">RET000001</td>
+                  <td class="text-sm">Friday, June 07, 2024<span class="d-block">10:30 AM</span></td>
+                  <td class="text-sm">John Doe</td>
+                  <td class="text-sm"><span class="badge badge-pink badge-sm">RetiTrak</span></td>
+                  <td class="text-sm">Campaign Audit Payment</td>
+                  <td class="text-sm">Card</td>
+                  <td class="text-sm">Korapay</td>
+                  <td class="text-sm">NGN 100000</td>
+                  <td class="text-sm"><span class="badge badge-success badge-sm">Paid</span></td>
+                  <td class="text-sm">
+                    <a href="invoice-detail.html" data-bs-toggle="tooltip" data-bs-original-title="View">
+                      <i class="material-icons text-dark position-relative text-lg">visibility</i>
+                    </a>
+                    <a href="javascript:;" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Download">
+                      <i class="material-icons text-dark position-relative text-lg">download</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-sm">RET000002</td>
+                  <td class="text-sm">Friday, June 07, 2024<span class="d-block">10:30 AM</span></td>
+                  <td class="text-sm">Jenny Wilson</td>
+                  <td class="text-sm"><span class="badge badge-primary badge-sm">RetiBazaar</span></td>
+                  <td class="text-sm">Report Unlock Payment</td>
+                  <td class="text-sm">Bank Transfer</td>
+                  <td class="text-sm">Korapay</td>
+                  <td class="text-sm">NGN 300000</td>
+                  <td class="text-sm"><span class="badge badge-success badge-sm">Paid</span></td>
+                  <td class="text-sm">
+                    <a href="report-invoice-detail.html" data-bs-toggle="tooltip" data-bs-original-title="View">
+                      <i class="material-icons text-dark position-relative text-lg">visibility</i>
+                    </a>
+                    <a href="javascript:;" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Download">
+                      <i class="material-icons text-dark position-relative text-lg">download</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-sm">RET000003</td>
+                  <td class="text-sm">Friday, June 07, 2024<span class="d-block">10:30 AM</span></td>
+                  <td class="text-sm">Amber Jain</td>
+                  <td class="text-sm"><span class="badge badge-purple badge-sm">RetiMetrix</span></td>
+                  <td class="text-sm">Campaign Audit Payment</td>
+                  <td class="text-sm">Card</td>
+                  <td class="text-sm">Flutterwave</td>
+                  <td class="text-sm">NGN 20,000</td>
+                  <td class="text-sm"><span class="badge badge-success badge-sm">Paid</span></td>
+                  <td class="text-sm">
+                    <a href="invoice-detail.html" data-bs-toggle="tooltip" data-bs-original-title="View">
+                      <i class="material-icons text-dark position-relative text-lg">visibility</i>
+                    </a>
+                    <a href="javascript:;" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Download">
+                      <i class="material-icons text-dark position-relative text-lg">download</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-sm">RET000002</td>
+                  <td class="text-sm">Friday, June 07, 2024<span class="d-block">10:30 AM</span></td>
+                  <td class="text-sm">Jenny Wilson</td>
+                  <td class="text-sm"><span class="badge badge-pink badge-sm">RetiTrak</span></td>
+                  <td class="text-sm">Report Unlock Payment</td>
+                  <td class="text-sm">Bank Transfer</td>
+                  <td class="text-sm">Flutterwave</td>
+                  <td class="text-sm">NGN 250000</td>
+                  <td class="text-sm"><span class="badge badge-success badge-sm">Paid</span></td>
+                  <td class="text-sm">
+                    <a href="report-invoice-detail.html" data-bs-toggle="tooltip" data-bs-original-title="View">
+                      <i class="material-icons text-dark position-relative text-lg">visibility</i>
+                    </a>
+                    <a href="javascript:;" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Download">
+                      <i class="material-icons text-dark position-relative text-lg">download</i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -305,37 +322,15 @@
   <script src="js/datatables.js"></script>
   <script src="js/material-dashboard.min.js"></script>
   <script>
-    if (document.getElementById('users-list1')) {
-      const dataTableSearch1 = new simpleDatatables.DataTable("#users-list1", {
+    if (document.getElementById('report_list')) {
+      const dataTableSearch1 = new simpleDatatables.DataTable("#report_list", {
+        sortable: false,
         perPageSelect: false,
         searchable: false,
         fixedHeight: false,
         perPage: 10
       });
     }
-  </script>
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
-    const map = new mapboxgl.Map({
-      container: 'map',
-      // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-      // style: 'mapbox://styles/meridian0/clhhjph1m01dv01pn7p7oh8ns',
-      style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
-      center: [8.141140, 9.611302],
-      zoom: 5
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(".lightBoxTable").click(function(){
-        $(".lightbox-target").css("display", "block");
-      });
-
-      $(".lightbox-close").click(function(){
-        $(".lightbox-target").css("display", "none");
-      });
-    });
   </script> 
 </body>
 </html>

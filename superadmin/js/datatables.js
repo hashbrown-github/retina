@@ -967,7 +967,7 @@
           this.labels = [], this.headings && this.headings.length && this.headings.forEach(((t, e) => {
             if (this.labels[e] = t.textContent, t.firstElementChild && t.firstElementChild.classList.contains("dataTable-sorter") && (t.innerHTML = t.firstElementChild.innerHTML), t.sortable = "false" !== t.getAttribute("data-sortable"), t.originalCellIndex = e, this.options.sortable && t.sortable) {
               const e = a("a", {
-                href: "#",
+                href: "javascript:void(0);",
                 class: "dataTable-sorter",
                 html: t.innerHTML
               });
@@ -1281,3 +1281,4 @@
   }, {}, [2])(2)
 }));
 //# sourceMappingURL=/sm/b71d1fdf2e18834149b01e90c6fb68c49c8720f6f79466e6360b5d5b6793e05e.map
+

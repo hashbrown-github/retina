@@ -4351,7 +4351,6 @@ fieldset:disabled .btn {
    color: var(--bs-dropdown-link-hover-color);
    background-color: var(--bs-dropdown-link-hover-bg)
 }
-
 .dropdown-item.active,
 .dropdown-item:active {
    color: var(--bs-dropdown-link-active-color);
@@ -21273,12 +21272,9 @@ screen and (-ms-high-contrast:active) {
    color: #fff
 }
 
-.dark-version .card,
-.dark-version .dropdown .dropdown-menu,
-.dark-version .kanban-board,
-.dark-version .swal2-popup {
+.dark-version .card, .dark-version .dropdown .dropdown-menu, .dark-version .kanban-board, .dark-version .swal2-popup {
    background: #202940;
-   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 51%), 0 3px 1px -2px rgba(0 0 0 / 51%), 0 1px 5px 0 rgba(0 0 0 / 51%);
 }
 
 .dark-version .card .card-header,
@@ -21293,7 +21289,7 @@ screen and (-ms-high-contrast:active) {
 .dark-version .kanban-board p,
 .dark-version .swal2-popup p {
    color: #fff !important;
-   opacity: .6
+   /* opacity: .6 */
 }
 
 .dark-version .kanban-item {
@@ -21326,7 +21322,7 @@ screen and (-ms-high-contrast:active) {
 
 .dark-version .input-group.input-group-dynamic .form-control,
 .dark-version .input-group.input-group-static .form-control {
-   background-image: linear-gradient(0deg, #016DD6 2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, hsla(0, 0%, 82%, .6) 1px, hsla(0, 0%, 82%, 0) 0) !important;
+/* background-image: linear-gradient(0deg, #016DD6 2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, hsla(0, 0%, 82%, .6) 1px, hsla(0, 0%, 82%, 0) 0) !important;*/   
    background-size: 0 100%, 100% 100%
 }
 
@@ -21337,21 +21333,20 @@ screen and (-ms-high-contrast:active) {
 
 .dark-version .input-group.input-group-outline .form-control,
 .dark-version .input-group .is-invalid,
-.dark-version .input-group .is-valid {
-   border-color: hsla(0, 0%, 100%, .4) !important
+.dark-version .input-group .is-valid, .dark-version .uploadDocs, .dark-version .campaign_item {
+   border-color: hsl(0deg 0% 100% / 13%) !important
 }
 
 .dark-version .accordion .accordion-button {
-   border-color: hsla(0, 0%, 100%, .4) !important;
+   border-color: hsl(0deg 0% 100% / 13%) !important;
    color: #fff;
    opacity: .8
 }
 
 .dark-version .table>:not(caption)>*>* {
-   border-color: hsla(0, 0%, 100%, .4) !important;
-   color: hsla(0, 0%, 100%, .6) !important
+   border-color: hsl(0deg 0% 100% / 13%) !important;
+   color: hsla(0, 0%, 100%, .6) !important;
 }
-
 .dark-version label {
    color: hsla(0, 0%, 100%, .8) !important
 }
@@ -21864,7 +21859,7 @@ body.dark-version {
 .input-group.input-group-static .form-control,
 .input-group.input-group-static .form-control:focus {
    background-image: linear-gradient(0deg, #016DD6 2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #d2d2d2 1px, hsla(0, 0%, 82%, 0) 0);
-   border-radius: 0 !important
+   border-radius: 0;
 }
 
 .input-group.input-group-dynamic .form-control:focus,
@@ -23980,7 +23975,8 @@ hr.horizontal.gray-light {
 }
 
 .sidenav .navbar-brand {
-   padding: 1.5rem 2rem
+   padding: 1.5rem 2rem;
+   text-align: center;
 }
 
 .sidenav .collapse .nav-item .nav-link.active,
@@ -29917,7 +29913,7 @@ Github: https://github.com/fiduswriter/Simple-DataTables
 }
 
 .dataTable-wrapper .dataTable-bottom .dataTable-info {
-   color: #344764;
+   color: #7b809a;
    font-size: .875rem
 }
 

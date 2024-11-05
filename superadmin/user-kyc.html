@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="css/material-dashboard.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="g-sidenav-show bg-gray-100">
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark bg-white main_sidebar" id="sidenav-main" data-color="dark">
+<body class="g-sidenav-show bg-gray-100 dark_theme">
+   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
     <div class="sidenav-header">
       <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
       <a class="navbar-brand m-0" href="javascript:void(0);">
@@ -56,7 +56,7 @@
             <span class="nav-link-text ms-2 ps-1">Users</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: none;">
           <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">groups</i>
             <span class="nav-link-text ms-2 ps-1">Teams</span>
@@ -112,9 +112,9 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: none;">
           <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
-            <i class="material-icons-round opacity-10">toc</i>
+            <i class="material-icons-round opacity-10">article</i>
             <span class="nav-link-text ms-2 ps-1">Orders</span>
           </a>
           <div class="collapse" id="orders">
@@ -133,6 +133,23 @@
               </li>
             </ul>
           </div>
+        </li>
+        <li class="nav-item">
+          <a href="billing.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">receipt_long</i>
+            <span class="nav-link-text ms-2 ps-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:void(0);" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">format_paint</i>
+            <div class="switchThemeBtn">
+              <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
+              <div class="form-check form-switch ps-0 ms-auto my-auto">
+                <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+              </div>
+            </div>
+          </a>
         </li>
       </ul>
     </div>
@@ -188,13 +205,16 @@
               <span class="badge badge-warning badge-sm">Pending</span>
             </div>
           </div>
-          <div class="dropdown action_dropdown">
-            <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Action<span class="material-icons-round">keyboard_arrow_down</span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
-              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_user">Reject</a>
+          <div class="right_side">
+            <button type="button" class="btn bg-gradient-primary m-0 blue_btn" data-bs-toggle="modal" data-bs-target="#kyc_concern">Raise KYC Concern</button>
+            <div class="dropdown action_dropdown">
+              <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action<span class="material-icons-round">keyboard_arrow_down</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
+                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_user">Reject</a>
+              </div>
             </div>
           </div>
         </div>
@@ -214,12 +234,15 @@
               <span class="badge badge-danger badge-sm">Rejected</span>
             </div>
           </div>
-          <div class="dropdown action_dropdown">
-            <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Action<span class="material-icons-round">keyboard_arrow_down</span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
+          <div class="right_side">
+            <button type="button" class="btn bg-gradient-primary m-0 blue_btn" data-bs-toggle="modal" data-bs-target="#kyc_concern">Raise KYC Concern</button>
+            <div class="dropdown action_dropdown">
+              <button class="btn bg-gradient-primary mb-0" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action<span class="material-icons-round">keyboard_arrow_down</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
+              </div>
             </div>
           </div>
         </div>
@@ -309,19 +332,19 @@
               <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
                 <div class="d-flex gap-6">
                   <div class="document_box">
-                    <p>License from OAAN</p>
+                    <p>License from CAC</p>
                     <div class="">
                       <img src="images/doc.svg">
                       <button type="button"><span class="material-icons-round">file_download</span></button>
                     </div>
                   </div>
-                  <div class="document_box">
+                  <!-- <div class="document_box">
                     <p>Local Partner of International Media Owners</p>
                     <div class="">
                       <img src="images/doc.svg">
                       <button type="button"><span class="material-icons-round">file_download</span></button>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </li>
             </ul>
@@ -401,7 +424,7 @@
           </div>
         </div>
       </div>
-      <div class="card mt-4">
+      <!-- <div class="card mt-4">
         <div class="card-header">
           <div class="user_head">
             <h6 class="mb-0">Media Information</h6>
@@ -424,6 +447,43 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </div> -->
+      <!--======= RAISE KYC CONCERN MODAL START =======-->
+      <div class="modal fade" id="kyc_concern" tabindex="-1" role="dialog" aria-labelledby="kyc_concernLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="kyc_concernLabel">Raise KYC Concern</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline mb-3 left_width">
+                    <select class="form-control">
+                      <option selected>Select Reason</option>
+                      <option>Incomplete or Wrong Business Detail</option>
+                      <option>Issue regarding CAC Document</option>
+                      <option>Incomplete or Wrong Contact Details</option>
+                      <option>Incomplete or Wrong Bank Information</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline">
+                    <textarea class="multisteps-form__input form-control pt-0" rows="5" spellcheck="false" placeholder="Comment"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">OK</button>
+            </div>
           </div>
         </div>
       </div>
@@ -477,8 +537,7 @@
                 </div>
                 <div class="col-12 col-sm-12">
                   <div class="input-group input-group-outline">
-                    <label for="exampleFormControlInput1" class="form-label">Comment</label>
-                    <input class="multisteps-form__input form-control pt-0" rows="2" spellcheck="false">
+                    <textarea class="multisteps-form__input form-control pt-0" rows="5" spellcheck="false" placeholder="Comment"></textarea>
                   </div>
                 </div>
               </div>
@@ -526,8 +585,7 @@
               <div class="modal_body">
                 <div class="col-12 col-sm-12">
                   <div class="input-group input-group-outline">
-                    <label for="exampleFormControlInput1" class="form-label">Comment</label>
-                    <input class="multisteps-form__input form-control pt-0" rows="2" spellcheck="false">
+                    <textarea class="multisteps-form__input form-control pt-0" rows="5" spellcheck="false" placeholder="Comment"></textarea>
                   </div>
                 </div>
               </div>
@@ -545,7 +603,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/perfect-scrollbar.min.js"></script>
   <script src="js/datatables.js"></script>
-  <script src="js/material-dashboard.min.js"></script>
+  <script src="js/material-dashboard.min.js"></script> 
 </body>
 </html>
   
