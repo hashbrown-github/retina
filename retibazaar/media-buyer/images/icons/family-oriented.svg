@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Group_15" data-name="Group 15" transform="translate(-1 -1)">
+    <g id="Group_12" data-name="Group 12" transform="translate(0.999 0.999)">
+      <g id="Group_13" data-name="Group 13" transform="translate(0.001 0.001)">
+        <path id="Path_97" data-name="Path 97" d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0" transform="translate(0 0)" fill="#fff"/>
+        <path id="Path_98" data-name="Path 98" d="M15,.545a14.45,14.45,0,1,0,5.626,1.136A14.459,14.459,0,0,0,15,.545M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0" transform="translate(0 0)" fill="#036dd5"/>
+      </g>
+    </g>
+    <g id="Family_oriented_people" data-name="Family oriented people" transform="translate(5.344 7.689)">
+      <circle id="Ellipse_663" data-name="Ellipse 663" cx="1.695" cy="1.695" r="1.695" transform="translate(8.919 7.352)" fill="#026dd5"/>
+      <ellipse id="Ellipse_664" data-name="Ellipse 664" cx="2.123" cy="3.247" rx="2.123" ry="3.247" transform="translate(8.491 11.185)" fill="#026dd5"/>
+      <circle id="Ellipse_665" data-name="Ellipse 665" cx="2.901" cy="2.901" r="2.901" transform="translate(0.732 0)" fill="#026dd5"/>
+      <ellipse id="Ellipse_666" data-name="Ellipse 666" cx="3.634" cy="5.559" rx="3.634" ry="5.559" transform="translate(0 6.563)" fill="#026dd5"/>
+      <circle id="Ellipse_667" data-name="Ellipse 667" cx="2.901" cy="2.901" r="2.901" transform="translate(15.088 0)" fill="#026dd5"/>
+      <path id="Path_28453" data-name="Path 28453" d="M63.188,41.166c-2.405,0-4.354,4.5-4.354,5.95a2.221,2.221,0,0,0,1.173,1.79c.493,2.083,1.732,3.564,3.184,3.564s2.688-1.481,3.18-3.564a2.221,2.221,0,0,0,1.173-1.79C67.541,45.665,65.593,41.166,63.188,41.166Z" transform="translate(-45.198 -34.791)" fill="#026dd5"/>
+    </g>
+  </g>
+</svg>
