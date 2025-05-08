@@ -1,0 +1,406 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Final Order Detail | Retibazaar</title>
+<meta name="title" content="Transaction | Retibazaar" />
+<meta name="description" content="Transaction | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="users.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">group</span>
+                  </div>
+                  <div class="sidebar__text">Users</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">package_2</span>
+                  </div>
+                  <div class="sidebar__text">Orders</div>
+                </a>
+                <span><a href="requested-orders.html">Requested Orders</a></span>
+                <span class="active"><a href="final-orders.html">Final Orders</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">outbox</span>
+                  </div>
+                  <div class="sidebar__text">Campaigns</div>
+                </a>
+                <span><a href="campaigns.html">Active Campaigns</a></span>
+                <span><a href="pop-and-verification.html">PoP & Verification</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">layers</span>
+                  </div>
+                  <div class="sidebar__text">Teams</div>
+                </a>
+                <span><a href="field-executives.html">Field Executives</a></span>
+                <span><a href="sales-team.html">Sales Team</a></span>
+                <span><a href="#">Quality Auditors</a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="#">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">confirmation_number</span>
+                  </div>
+                  <div class="sidebar__text">Tickets</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="finOrdDtl card_body">
+            <div class="userDtl_head">
+              <div class="profile_box">
+                <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                <p class="small_p mb-2">Order Status: <span class="status_type success_1">Confirmed</span><span class="status_type warning_1 ms-1">Unpaid</span></p>
+                <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                <p class="small_p mb-0"><span class="status_type bg_secondary me-1">Payment Payment: <span class="blue_txt">NGN 25,000</span></span> | 
+                  <button type="button" class="blue_txt text-decoration-underline ms-1">View Payment Breakdown</button>
+                </p>
+                <div class="addOnSer">
+                  <p class="small_p mb-1"><b>Add on Service:</b> <span class="status_type retibazaar_1"><b>OOH Tracker</b></span></p>
+                  <p class="small_p mb-0">Audit Duration: <span>6 Months</span> | Audit Frequency: <span>Every 15 Days</span></p>
+                </div>
+              </div>
+              <div class="right_side">
+                <button type="button" class="blue_txt text-decoration-underline" data-bs-toggle="modal" data-bs-target="#approvePayment">Manually Approved Payment</button>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="finOrdDtl card_body">
+            <div class="userDtl_head">
+              <div class="profile_box">
+                <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                <p class="small_p mb-2">Order Status: <span class="status_type success_1">Confirmed</span><span class="status_type success_1 ms-1">Paid</span></p>
+                <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                <p class="small_p mb-0"><span class="status_type bg_secondary me-1">Payment Payment: <span class="blue_txt">NGN 25,000</span></span> | 
+                  <button type="button" class="blue_txt text-decoration-underline ms-1">View Payment Breakdown</button>
+                </p>
+                <div class="addOnSer">
+                  <p class="small_p mb-1"><b>Add on Service:</b> <span class="status_type retibazaar_1"><b>OOH Tracker</b></span></p>
+                  <p class="small_p mb-0">Audit Duration: <span>6 Months</span> | Audit Frequency: <span>Every 15 Days</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reqOrder_dtl card_body mt-20">
+            <h3 class="text_md text_dark mb-2">Media Locations</h6>
+            <div class="filter_box">
+              <div class="filter_box1 order_filters">
+                <div class="filter_div filter_div1">
+                  <div class="input_group">
+                    <div class="search_box">
+                      <input class="form_control" type="text" placeholder="Media Location" />
+                      <button type="button" class="searchIcon"><span class="material-symbols-outlined">search</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter_div filter_div2">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>State</option>
+                      <option>State 1</option>
+                      <option>State 2</option>
+                      <option>State 3</option>
+                      <option>State 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div3">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>LGA</option>
+                      <option>LGA 1</option>
+                      <option>LGA 2</option>
+                      <option>LGA 3</option>
+                      <option>LGA 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div4">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>City</option>
+                      <option>City 1</option>
+                      <option>City 2</option>
+                      <option>City 3</option>
+                      <option>City 4</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+              </div>
+            </div>
+            <div class="campaign_list mt-20">
+              <ul>
+                <li>
+                  <a href="#">
+                    <h6 class="text_sm text_dark mb-2">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria Ikeja, Lagos</h6>
+                    <p class="small_p mb-2">Ikeja, Lagos</p>
+                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span></p>
+                    <p class="small_p icon_size mb-2"><span class="material-symbols-outlined">visibility</span>840,000 imp/4w</p>
+                    <p class="small_p mb-0"><b>Media Seller:</b> <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                    <div class="media_txt">Billboard</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h6 class="text_sm text_dark mb-2">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria Ikeja, Lagos</h6>
+                    <p class="small_p mb-2">Ikeja, Lagos</p>
+                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span></p>
+                    <p class="small_p icon_size mb-2"><span class="material-symbols-outlined">visibility</span>840,000 imp/4w</p>
+                    <p class="small_p mb-0"><b>Media Seller:</b> <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                    <div class="media_txt">Unipole</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h6 class="text_sm text_dark mb-2">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria Ikeja, Lagos</h6>
+                    <p class="small_p mb-2">Ikeja, Lagos</p>
+                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span></p>
+                    <p class="small_p icon_size mb-2"><span class="material-symbols-outlined">visibility</span>840,000 imp/4w</p>
+                    <p class="small_p mb-0"><b>Media Seller:</b> <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                    <div class="media_txt">LED</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h6 class="text_sm text_dark mb-2">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria Ikeja, Lagos</h6>
+                    <p class="small_p mb-2">Ikeja, Lagos</p>
+                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span></p>
+                    <p class="small_p icon_size mb-2"><span class="material-symbols-outlined">visibility</span>840,000 imp/4w</p>
+                    <p class="small_p mb-0"><b>Media Seller:</b> <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                    <div class="media_txt">Hoarding</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="payBreakdown">
+              <div class="sec_6212 mt-0">
+                <h3>Transaction Breakdown</h3>
+                <ul class="mb-0">
+                  <li>
+                    <p><span></span><b>Total</b></p>
+                  </li>
+                  <li>
+                    <p><span>Media Location 1</span><span>NGN 15,000</span></p>
+                  </li>
+                  <li>
+                    <p><span>Media Location 2</span><span>NGN 10,000</span></p>
+                  </li>
+                  <li>
+                    <p><span>Media Location 3</span><span>NGN 20,000</span></p>
+                  </li>
+                  <li>
+                    <p><b>Add On OOH Tracker Fee</b><b>+ NGN 20,000</b></p>
+                  </li>
+                  <li>
+                    <p><b>Plateform Fee</b><b>+ NGN 30,000</b></p>
+                  </li>
+                  <li>
+                    <p><b>Net Amount</b><b>NGN 95,000</b></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== APPROVE PAYMENT MODAL START =======-->
+        <div class="modal fade" id="approvePayment" tabindex="-1" role="dialog" aria-labelledby="approvePaymentLabelModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="approvePaymentLabelModal">Record Offline Payment</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option selected disabled>Payment Type</option>
+                        <option>Cheque</option>
+                        <option>Cash</option>
+                        <option>Bank Transfer</option>
+                        <option selected>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <input type="text" class="form_control" placeholder="Enter other payment type*" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <input type="text" class="form_control" placeholder="Enter cheque number, transaction id or reference number*" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12 uploadDocs">
+                    <p class="mb-2"><b>Supporting Documentation (Optional)</b></p>
+                    <p class="small_p mb-1">Please upload one of the following documents:</p>
+                    <p class="small_p mb-0">Cheque Scan/Photo, Bank Transfer Receipt, or Payment Receipt.</p>
+                    <div class="markPaid mt-2">
+                      <input type="file">
+                      <button type="button" class="blue_btn">Upload</button>
+                    </div>
+                    <div class="markPaid cancelBtn mt-2">
+                      <p class="small_p mb-0"><b>Payment Receipt.pdf</b></p>
+                      <button type="button" class="outline_btn"><span class="material-symbols-outlined">close</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->

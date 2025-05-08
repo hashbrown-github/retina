@@ -1,0 +1,675 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dashboard | Retibazaar</title>
+<meta name="title" content="Dashboard | Retibazaar" />
+<meta name="description" content="Dashboard | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item active" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="users.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">group</span>
+                  </div>
+                  <div class="sidebar__text">Users</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">package_2</span>
+                  </div>
+                  <div class="sidebar__text">Orders</div>
+                </a>
+                <span><a href="requested-orders.html">Requested Orders</a></span>
+                <span><a href="final-orders.html">Final Orders</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">outbox</span>
+                  </div>
+                  <div class="sidebar__text">Campaigns</div>
+                </a>
+                <span><a href="campaigns.html">Active Campaigns</a></span>
+                <span><a href="#">PoP & Verification</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">layers</span>
+                  </div>
+                  <div class="sidebar__text">Teams</div>
+                </a>
+                <span><a href="#">Field Executives</a></span>
+                <span><a href="#">Sales Team</a></span>
+                <span><a href="#">Quality Auditors</a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="#">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">confirmation_number</span>
+                  </div>
+                  <div class="sidebar__text">Tickets</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="#"><span class="material-symbols-outlined">notifications_active</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="sec_1 mt-0">
+            <div class="sec_11 card_body">
+              <div class="secHead0">
+                <p class="small_p mb-0">Active Users</p>
+              </div>
+              <div class="secHead1">
+                <h4>Users Count</h4>
+              </div>
+              <div class="sec_body">
+                <img src="images/screenshot1.png" alt="" style="width: 900px; height: 250px; max-width: 100%; margin: 0 auto; object-fit: contain;">
+              </div>
+            </div>
+            <div class="sec_12 card_body">
+              <div class="secHead2">
+                <div class="secHead21">
+                  <h3>Registered Users</h3>
+                </div>
+              </div>
+              <div class="sec_body1">
+                <div class="users_body">
+                  <img src="images/Users.svg" alt="Users" />
+                  <h4 class="blue_txt">6789<span class="small_p text_dark mb-0"> users are registered</span></h4>
+                </div>
+                <div class="users_body1">
+                  <div>
+                    <h4 class="blue_txt"><span class="small_p text_dark mb-1 block_txt">Buyers Count </span>3450</h4>
+                  </div>
+                  <div>
+                    <h4 class="blue_txt"><span class="small_p text_dark mb-1 block_txt">Sellers Count </span>2340</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec_1 mt-20">
+            <div class="sec_12 card_body">
+              <div class="secHead2">
+                <div class="secHead21">
+                  <img src="images/Transaction-Summary.svg" alt="Card" />
+                  <h3>Transaction Summary<span class="block_txt">(Last 30 Days)</span></h3>
+                </div>
+                <div class="secHead22">
+                  <a href="#"><u>View all</u><span class="material-symbols-outlined">trending_flat</span></a>
+                </div>
+              </div>
+              <div class="sec_body">
+                <ul>
+                  <li>
+                    <p class="small_p mb-0">Total Payment</p>
+                    <h4 class="blue_txt">NGN 4567</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Amount Withhold</p>
+                    <h4 class="blue_txt">NGN 6789</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Amount Released</p>
+                    <h4 class="blue_txt">NGN 6789</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Amount Refunded</p>
+                    <h4 class="blue_txt">NGN 6789</h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sec_11 card_body">
+              <div class="secHead0">
+                <p class="small_p mb-0">Active Users</p>
+                <div class="input_group0">
+                  <span class="material-symbols-outlined searchIcon">expand_more</span>
+                  <select class="form_control">
+                    <option selected>Last 5 Years</option>
+                    <option>Last 1 Year</option>
+                    <option>Last 6 Months</option>
+                    <option>Last 3 Months</option>
+                    <option>Last Month</option>
+                  </select>
+                </div>
+              </div>
+              <div class="secHead1">
+                <h4>Order Spent vs Refunds</h4>
+              </div>
+              <div class="sec_body">
+                <img src="images/screenshot2.png" alt="" style="width: 900px; height: 250px; max-width: 100%; margin: 0 auto; object-fit: contain;">
+              </div>
+            </div>
+          </div>
+          <div class="sec_1 sec_2 mt-20">
+            <div class="sec_13 card_body">
+              <div class="secHead2">
+                <div class="secHead21">
+                  <img src="images/Order-Summary.svg" alt="Order" />
+                  <h3>Order Summary<span class="block_txt">(Last 30 Days)</span></h3>
+                </div>
+                <div class="secHead22">
+                  <a href="#"><u>View all</u><span class="material-symbols-outlined">trending_flat</span></a>
+                </div>
+              </div>
+              <div class="sec_body">
+                <ul>
+                  <li>
+                    <p class="small_p mb-0">Request Orders</p>
+                    <h4 class="blue_txt">1590</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Final Orders</p>
+                    <h4 class="blue_txt">1200</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Pending Orders</p>
+                    <h4 class="blue_txt">960</h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sec_13 card_body">
+              <div class="secHead2">
+                <div class="secHead21">
+                  <img src="images/Proof-of-Posting.svg" alt="PoP" />
+                  <h3>Proof of Posting<span class="block_txt">(Last 30 Days)</span></h3>
+                </div>
+                <div class="secHead22">
+                  <a href="#"><u>View all</u><span class="material-symbols-outlined">trending_flat</span></a>
+                </div>
+              </div>
+              <div class="sec_body">
+                <ul>
+                  <li>
+                    <p class="small_p mb-0">Pending Media Locations</p>
+                    <h4 class="blue_txt">630</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Verified Media Locations</p>
+                    <h4 class="blue_txt">120</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Total Media Locations</p>
+                    <h4 class="blue_txt">750</h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sec_13 card_body">
+              <div class="secHead2">
+                <div class="secHead21">
+                  <img src="images/Teams.svg" alt="Teams" />
+                  <h3>Teams<span class="block_txt">(Last 30 Days)</span></h3>
+                </div>
+                <div class="secHead22">
+                  <a href="#"><u>View all</u><span class="material-symbols-outlined">trending_flat</span></a>
+                </div>
+              </div>
+              <div class="sec_body">
+                <ul>
+                  <li>
+                    <p class="small_p mb-0">Total Field Agents</p>
+                    <h4 class="blue_txt">370</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Sales Team</p>
+                    <h4 class="blue_txt">120</h4>
+                  </li>
+                  <li>
+                    <p class="small_p mb-0">Quality Auditors</p>
+                    <h4 class="blue_txt">80</h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sec_13 card_body">
+              <div class="secHead2">
+                <div class="secHead21">
+                  <img src="images/Quick-links.svg" alt="Quick Links" />
+                  <h3>Quick Links</h3>
+                </div>
+              </div>
+              <div class="sec_body">
+                <ul>
+                  <li class="flex_item">
+                    <img src="images/Orders.svg" alt="Orders" />
+                    <h3>Orders</h3>
+                  </li>
+                  <li class="flex_item">
+                    <img src="images/Team.svg" alt="Team" />
+                    <h3>Assign Team</h3>
+                  </li>
+                  <li class="flex_item">
+                    <img src="images/Pop.svg" alt="PoP" />
+                    <h3>View PoP Images</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="sec_1 sec_3 mt-20">
+            <div class="sec_12 card_body">
+              <div class="secHead2">
+                <div class="secHead21">
+                  <h3>Overall Visiters</h3>
+                </div>
+              </div>
+              <div class="sec_body1">
+                <div class="users_body">
+                  <img src="images/Visiters.svg" alt="Visiters">
+                  <h4 class="blue_txt">6789<span class="small_p text_dark mb-0"> users are registered</span></h4>
+                </div>
+                <div class="users_body1 users_body2">
+                  <p class="small_p mb-0">Most Country Users</p>
+                </div>
+                <div class="sec_body sec_body2">
+                  <ul>
+                    <li>
+                      <h4 class="blue_txt mt-0">Nigeria</h4>
+                      <div id="bar_chart1"></div>
+                    </li>
+                    <li>
+                      <h4 class="blue_txt2 mt-0">USA</h4>
+                      <div id="bar_chart2"></div>
+                    </li>
+                    <li>
+                      <h4 class="blue_txt3 mt-0">Japan</h4>
+                      <div id="bar_chart3"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="sec_11 card_body p-0">
+              <div class="secHead3">
+                <h3>Location Map</h3>
+              </div>
+              <div class="sec_body3">
+                <div id="map_box"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+  const map_box = new mapboxgl.Map({
+    container: 'map_box',
+    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+    // style: 'mapbox://styles/meridian0/clhhjph1m01dv01pn7p7oh8ns',
+    style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+    center: [8.141140, 9.611302],
+    zoom: 5
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+<script>
+  var root = am5.Root.new("bar_chart1");
+  var myTheme = am5.Theme.new(root);
+
+  root.setThemes([
+    am5themes_Animated.new(root),
+    myTheme
+  ]);
+
+  var chart = root.container.children.push(am5xy.XYChart.new(root, {
+    panX: false,
+    panY: false,
+    wheelX: false,
+    wheelY: false,
+    paddingTop: -2,
+    paddingLeft: -10,
+    paddingRight: -37,
+    paddingBottom: -8,
+    layout: root.verticalLayout
+  }));
+
+  chart.set("scrollbarY", am5.Scrollbar.new(root, {
+    orientation: "vertical"
+  }));
+
+  var data = [{
+    "summary": "Balance Summary",
+    "amountWithhold": 20000,
+    "payoutExpected": 5000,
+  }]
+ 
+  var colors = [am5.color(0x7BB5D8), am5.color(0x7193D6)];
+
+  var yRenderer = am5xy.AxisRendererY.new(root, {});
+
+  var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+    categoryField: "summary",
+    renderer: yRenderer
+  }));
+
+  yAxis.data.setAll(data);
+
+  var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+    min: 0,
+    /* max: 7700, */
+    strictMinMax: true,
+    renderer: am5xy.AxisRendererX.new(root, {})
+  }));
+  yAxis.get("renderer").labels.template.set("visible", false);
+  xAxis.get("renderer").labels.template.set("visible", false);
+  yAxis.get("renderer").grid.template.set("forceHidden", true);
+  xAxis.get("renderer").grid.template.set("forceHidden", true);
+
+  function makeSeries(name, fieldName, colorIndex) {
+    var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+      name: name,
+      stacked: true,
+      xAxis: xAxis,
+      yAxis: yAxis,
+      baseAxis: yAxis,
+      valueXField: fieldName,
+      categoryYField: "summary"
+    }));
+
+    series.columns.template.setAll({
+      fill: colors[colorIndex],
+      stroke: colors[colorIndex],
+      width:am5.percent(100)
+    });
+
+    series.data.setAll(data);
+    series.appear();
+  }
+  makeSeries("Amount Withhold", "amountWithhold", 0);
+  makeSeries("Payout Expected", "payoutExpected", 1);
+
+  chart.appear(1000, 100);            
+</script>
+<script>
+  var root = am5.Root.new("bar_chart2");
+  var myTheme = am5.Theme.new(root);
+
+  root.setThemes([
+    am5themes_Animated.new(root),
+    myTheme
+  ]);
+
+  var chart = root.container.children.push(am5xy.XYChart.new(root, {
+    panX: false,
+    panY: false,
+    wheelX: false,
+    wheelY: false,
+    paddingTop: -2,
+    paddingLeft: -10,
+    paddingRight: -37,
+    paddingBottom: -8,
+    layout: root.verticalLayout
+  }));
+
+  chart.set("scrollbarY", am5.Scrollbar.new(root, {
+    orientation: "vertical"
+  }));
+
+  var data = [{
+    "summary": "Balance Summary",
+    "amountWithhold": 20000,
+    "payoutExpected": 5000,
+  }]
+ 
+  var colors = [am5.color(0x7BB5D8), am5.color(0x7193D6)];
+
+  var yRenderer = am5xy.AxisRendererY.new(root, {});
+
+  var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+    categoryField: "summary",
+    renderer: yRenderer
+  }));
+
+  yAxis.data.setAll(data);
+
+  var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+    min: 0,
+    /* max: 7700, */
+    strictMinMax: true,
+    renderer: am5xy.AxisRendererX.new(root, {})
+  }));
+  yAxis.get("renderer").labels.template.set("visible", false);
+  xAxis.get("renderer").labels.template.set("visible", false);
+  yAxis.get("renderer").grid.template.set("forceHidden", true);
+  xAxis.get("renderer").grid.template.set("forceHidden", true);
+
+  function makeSeries(name, fieldName, colorIndex) {
+    var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+      name: name,
+      stacked: true,
+      xAxis: xAxis,
+      yAxis: yAxis,
+      baseAxis: yAxis,
+      valueXField: fieldName,
+      categoryYField: "summary"
+    }));
+
+    series.columns.template.setAll({
+      fill: colors[colorIndex],
+      stroke: colors[colorIndex],
+      width:am5.percent(100)
+    });
+
+    series.data.setAll(data);
+    series.appear();
+  }
+  makeSeries("Amount Withhold", "amountWithhold", 0);
+  makeSeries("Payout Expected", "payoutExpected", 1);
+
+  chart.appear(1000, 100);            
+</script>
+<script>
+  var root = am5.Root.new("bar_chart3");
+  var myTheme = am5.Theme.new(root);
+
+  root.setThemes([
+    am5themes_Animated.new(root),
+    myTheme
+  ]);
+
+  var chart = root.container.children.push(am5xy.XYChart.new(root, {
+    panX: false,
+    panY: false,
+    wheelX: false,
+    wheelY: false,
+    paddingTop: -2,
+    paddingLeft: -10,
+    paddingRight: -37,
+    paddingBottom: -8,
+    layout: root.verticalLayout
+  }));
+
+  chart.set("scrollbarY", am5.Scrollbar.new(root, {
+    orientation: "vertical"
+  }));
+
+  var data = [{
+    "summary": "Balance Summary",
+    "amountWithhold": 20000,
+    "payoutExpected": 5000,
+  }]
+ 
+  var colors = [am5.color(0x7BB5D8), am5.color(0x7193D6)];
+
+  var yRenderer = am5xy.AxisRendererY.new(root, {});
+
+  var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+    categoryField: "summary",
+    renderer: yRenderer
+  }));
+
+  yAxis.data.setAll(data);
+
+  var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+    min: 0,
+    /* max: 7700, */
+    strictMinMax: true,
+    renderer: am5xy.AxisRendererX.new(root, {})
+  }));
+  yAxis.get("renderer").labels.template.set("visible", false);
+  xAxis.get("renderer").labels.template.set("visible", false);
+  yAxis.get("renderer").grid.template.set("forceHidden", true);
+  xAxis.get("renderer").grid.template.set("forceHidden", true);
+
+  function makeSeries(name, fieldName, colorIndex) {
+    var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+      name: name,
+      stacked: true,
+      xAxis: xAxis,
+      yAxis: yAxis,
+      baseAxis: yAxis,
+      valueXField: fieldName,
+      categoryYField: "summary"
+    }));
+
+    series.columns.template.setAll({
+      fill: colors[colorIndex],
+      stroke: colors[colorIndex],
+      width:am5.percent(100)
+    });
+
+    series.data.setAll(data);
+    series.appear();
+  }
+  makeSeries("Amount Withhold", "amountWithhold", 0);
+  makeSeries("Payout Expected", "payoutExpected", 1);
+
+  chart.appear(1000, 100);            
+</script>

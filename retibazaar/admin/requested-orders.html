@@ -1,0 +1,323 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Requested Orders | Retibazaar</title>
+<meta name="title" content="Transaction | Retibazaar" />
+<meta name="description" content="Transaction | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="users.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">group</span>
+                  </div>
+                  <div class="sidebar__text">Users</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">package_2</span>
+                  </div>
+                  <div class="sidebar__text">Orders</div>
+                </a>
+                <span class="active"><a href="requested-orders.html">Requested Orders</a></span>
+                <span><a href="final-orders.html">Final Orders</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">outbox</span>
+                  </div>
+                  <div class="sidebar__text">Campaigns</div>
+                </a>
+                <span><a href="campaigns.html">Active Campaigns</a></span>
+                <span><a href="pop-and-verification.html">PoP & Verification</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">layers</span>
+                  </div>
+                  <div class="sidebar__text">Teams</div>
+                </a>
+                <span><a href="field-executives.html">Field Executives</a></span>
+                <span><a href="sales-team.html">Sales Team</a></span>
+                <span><a href="#">Quality Auditors</a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="#">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">confirmation_number</span>
+                  </div>
+                  <div class="sidebar__text">Tickets</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="sec_4 card_body">
+            <div class="page_head">
+              <h6><span class="material-symbols-outlined">place_item</span>Requested Orders</h6>
+            </div>
+            <div class="card_header">
+              <ul>
+                <li>
+                  <img src="images/All-Orders.svg" alt="All Orders">
+                  <div>
+                    <h3>120</h3>
+                    <p class="mb-0">All</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/Active.svg" alt="Active Orders">
+                  <div>
+                    <h3>70</h3>
+                    <p class="mb-0">Active</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/Pending-orders.svg" alt="Partially Completed Orders">
+                  <div>
+                    <h3>30</h3>
+                    <p class="mb-0">Partially Completed</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/Completed.svg" alt="Completed Orders">
+                  <div>
+                    <h3>20</h3>
+                    <p class="mb-0">Completed</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="filter_box mt-20">
+              <div class="filter_box1 order_filters">
+                <div class="filter_div filter_div1">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected disabled>Media Buyer</option>
+                      <option>All</option>
+                      <option>Buyer 1</option>
+                      <option>Buyer 2</option>
+                      <option>Buyer 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div2">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>Media Seller</option>
+                      <option>All</option>
+                      <option>Seller 1</option>
+                      <option>Seller 2</option>
+                      <option>Seller 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div3">
+                  <div class="date_flex">
+                    <input type="text" class="form_control date" name="date" placeholder="Date" />
+                    <span class="input-group-btn">
+                      <span class="material-symbols-outlined">calendar_month</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="filter_div filter_div4">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected disabled>Filter by Status</option>
+                      <option>All</option>
+                      <option>Partially Responded</option>
+                      <option>Pending Seller Response</option>
+                      <option>All Seller Responded</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+              </div>
+            </div>
+            <div class="campaign_list mt-20">
+              <ul>
+                <li>
+                  <a href="requested-order-detail.html">
+                    <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                    <p class="small_p mb-2">Order Status: <span class="status_type retitrak_1">Partially Responded</span></p>
+                    <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                    <p class="small_p mb-0"><span class="status_type bg_secondary">Expected Payment: <span>NGN 25,000</span></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="requested-order-detail.html">
+                    <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                    <p class="small_p mb-2">Order Status: <span class="status_type warning_1">Pending Seller Response</span></p>
+                    <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                    <p class="small_p mb-0"><span class="status_type bg_secondary">Expected Payment: <span>NGN 25,000</span></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="requested-order-detail.html">
+                    <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                    <p class="small_p mb-2">Order Status: <span class="status_type success_1">All Seller Responded</span></p>
+                    <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                    <p class="small_p mb-0"><span class="status_type bg_secondary">Expected Payment: <span>NGN 25,000</span></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="requested-order-detail.html">
+                    <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                    <p class="small_p mb-2">Order Status: <span class="status_type success_1">All Seller Responded</span></p>
+                    <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                    <p class="small_p mb-0"><span class="status_type bg_secondary">Expected Payment: <span>NGN 25,000</span></span></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "M dd, yyyy",
+      orientation: 'bottom',
+      autoclose: true
+    });
+  </script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
