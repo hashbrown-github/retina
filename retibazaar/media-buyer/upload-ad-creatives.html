@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Notifications</title>
+<title>Upload Ad Creatives</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
               <span class="link_text">Search Location</span>
             </a>
           </li>
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
               <span class="link_text">Order</span>
@@ -43,7 +43,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="final-orders.html">
+                  <a class="menu_link active" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -121,134 +121,148 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="headLeft">
-            <h3 class="mb-0">Notifications</h3>
-          </div>
-          <div class="notifi_box">
-            <div class="notifi_head">
-              <ul class="audit_category">
-                <li class="nav_item">
-                  <a class="nav_link active" href="#">All</a>
-                </li>
-                <li class="nav_item">
-                  <a class="nav_link" href="#">Read (116)</a>
-                </li>
-                <li class="nav_item">
-                  <a class="nav_link" href="#">Unread (2)</a>
-                </li>
-              </ul>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Orders</a></li>
+              <li class="breadcrumb-item"><a href="#">Final Orders</a></li>
+              <li class="breadcrumb-item"><a href="#">Final Order Detail</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Upload Ad Creatives</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="campaign_dtl">
+              <a href="#" class="next_btn blue_btn">Upload Ad Creatives</a>
+              <h3>The rise of advertising<span class="badge badge-grey ms-3">Pending</span></h3>
+              <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
             </div>
-            <div class="notifi_body">
-              <div class="noti_list">
-                <h4>Today</h4>
+            <div class="addLoc_box">
+              <div class="addLoc_box1">
+                <div class="loc_head">
+                  <h4>Upload Ad Creatives</h4>
+                  <p class="mt-1 mb-0">(<b>Note:-</b> cdr format will accept only.)</p>
+                </div>
+                <div class="upload_asset">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th width="30%"><p>Media Type</p></th>
+                        <th width="30%"><p>Media Size List</p></th>
+                        <th width="40%"><p>Image/Video</p></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><p>Billboard (Static)</p></td>
+                        <td><p>3ft x 5ft</p></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><p>Unipole (Digital)</p></td>
+                        <td><p>5m x 8m</p></td>
+                        <td>
+                          <ul class="uploadedImg">
+                            <li>
+                              <img src="images/location-img.jpg" alt="Image">
+                            </li>
+                            <li>
+                              <button type="button"><span class="material-symbols-outlined">delete</span></button>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p>Billboard (Digital)</p></td>
+                        <td><p>3ft x 5ft</p></td>
+                        <td>
+                          <div class="files_flex2">
+                            <input class="file_input2" type="file" accept="application/doc, application/pdf, image/jpeg, image/png" multiple="">
+                            <div class="files_box">
+                              <h6><span class="blue_txt">Choose</span> File</h6>
+                              <img src="images/upload-icon.svg" alt="Upload Icon">
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p>Unipole (Static)</p></td>
+                        <td><p>5m x 8m</p></td>
+                        <td>
+                          <div class="files_flex2">
+                            <input class="file_input2" type="file" accept="application/doc, application/pdf, image/jpeg, image/png" multiple="">
+                            <div class="files_box">
+                              <h6><span class="blue_txt">Choose</span> File</h6>
+                              <img src="images/upload-icon.svg" alt="Upload Icon">
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p>Billboard (Digital)</p></td>
+                        <td><p>3ft x 5ft</p></td>
+                        <td>
+                          <ul class="uploadedImg">
+                            <li>
+                              <img src="images/location-img.jpg" alt="Image">
+                            </li>
+                            <li>
+                              <button type="button"><span class="material-symbols-outlined">delete</span></button>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <h5 class="margin_20 mb-0">OR</h5>
+              <div class="uploaded_box">
+                <h4>Uploaded Files</h4>
                 <ul>
                   <li>
-                    <div class="noti_item">
-                      <div class="noti_icon">
-                        <span class="material-symbols-outlined">notifications</span>
+                    <div class="left_dtl">
+                      <img src="images/zip-thumbnail.svg" alt="zip">
+                      <div>
+                        <h6>abc.zip</h6>
+                        <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
                       </div>
-                      <div class="noti_cont">
-                        <h5>Long Established Fact</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="time_txt">14:36 pm</span>
-                      </div>
+                    </div>
+                    <div class="cross_btn">
+                      <button type="button"><span class="material-symbols-outlined">close</span></button>
                     </div>
                   </li>
                   <li>
-                    <div class="noti_item">
-                      <div class="noti_icon">
-                        <span class="material-symbols-outlined">summarize</span>
-                      </div>
-                      <div class="noti_cont">
-                        <h5>Long Established Fact</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="time_txt">14:36 pm</span>
+                    <div class="left_dtl">
+                      <img src="images/zip-thumbnail.svg" alt="zip">
+                      <div>
+                        <h6>xyz.zip</h6>
+                        <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
                       </div>
                     </div>
-                  </li>
-                  <li class="unread_noti">
-                    <div class="noti_item">
-                      <div class="noti_icon">
-                        <span class="material-symbols-outlined">image</span>
-                      </div>
-                      <div class="noti_cont">
-                        <h5>Long Established Fact</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="time_txt">14:36 pm</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="noti_item">
-                      <div class="noti_icon">
-                        <span class="material-symbols-outlined">paid</span>
-                      </div>
-                      <div class="noti_cont">
-                        <h5>Long Established Fact</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="time_txt">14:36 pm</span>
-                      </div>
+                    <div class="cross_btn">
+                      <button type="button"><span class="material-symbols-outlined">close</span></button>
                     </div>
                   </li>
                 </ul>
               </div>
-              <div class="noti_list">
-                <h4>Yesterday, 7 July, 2024</h4>
-                <ul>
-                  <li>
-                    <div class="noti_item">
-                      <div class="noti_icon">
-                        <span class="material-symbols-outlined">local_mall</span>
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <label class="form_label">Choose a zip file to upload</label>
+                    <div class="upload_file">
+                      <div class="file_input">
+                        <input class="file_input2" type="file">
+                        <input class="form_control" type="text" name="license" readonly="" placeholder="Maximum file size 20 MB">
                       </div>
-                      <div class="noti_cont">
-                        <h5>Long Established Fact</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="time_txt">14:36 pm</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="unread_noti">
-                    <div class="noti_item">
-                      <div class="noti_icon">
-                        <span class="material-symbols-outlined">notifications</span>
-                      </div>
-                      <div class="noti_cont">
-                        <h5>Long Established Fact</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="time_txt">14:36 pm</span>
+                      <div class="file_btn">
+                        <button type="button" class="blue_btn">Upload</button>
                       </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="noti_item">
-                      <div class="noti_icon">
-                        <span class="material-symbols-outlined">paid</span>
-                      </div>
-                      <div class="noti_cont">
-                        <h5>Long Established Fact</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="time_txt">14:36 pm</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-              <div class="noti_list">
-                <h4>4 July, 2024</h4>
-                <ul>
-                  <li>
-                    <div class="noti_item">
-                      <div class="noti_icon">
-                        <span class="material-symbols-outlined">notifications</span>
-                      </div>
-                      <div class="noti_cont">
-                        <h5>Long Established Fact</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="time_txt">14:36 pm</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+              <div class="saveCam_btn">
+                <a href="#" class="blue_btn">Save Ad Creatives</a>
               </div>
             </div>
           </div>
@@ -283,20 +297,6 @@
       $('.inner_list').on('click', function(){
         $(this).toggleClass('active');
       });
-    });
-  </script>
-  <script>
-    $('#expand_btn').on('click', function (e) {
-        e.preventDefault();
-        $('.main_sidebar').toggleClass('small_sidebar');
-        $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $('.nav_link').removeClass('active');
-      $(this).toggleClass('active');
     });
   </script>
   <!--======= MOBILE MENU START =======-->

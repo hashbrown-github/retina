@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail</title>
+<title>Campaign Locations</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
               <span class="link_text">Search Location</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
               <span class="link_text">Order</span>
@@ -43,7 +43,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -52,7 +52,7 @@
             </div>
           </li>
           <li class="menu_item">
-            <a class="menu_link" href="proof-of-posting.html">
+            <a class="menu_link active" href="proof-of-posting.html">
               <span class="material-symbols-outlined link_icon">library_books</span>
               <span class="link_text">Proof of Posting</span>
             </a>
@@ -124,9 +124,8 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Order Detail</li>
+              <li class="breadcrumb-item"><a href="proof-of-posting.html">Proof of Posting</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Campaign Locations</li>
             </ol>
           </nav>
           <div class="campaign_box">
@@ -145,29 +144,180 @@
                 </div>
               </div>
             </div>
-            <div class="campaign_cards">
-              <ul>
-                <li>
-                  <a href="final-order-locations.html">
-                    <div class="inner_div">
-                      <img src="images/locations.svg" alt="Locations">
-                      <h4>Locations</h4>
-                      <p class="mb-0">Add multiple of location through excel or manually.</p>
-                      <span class="total_count">6 Locations</span>
+          </div>
+          <div class="search_filters locationsFilter">
+            <div class="filter_div filter_1">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <div class="date_flex">
+                      <input class="form_control date" type="text" name="startdate" placeholder="Search by Location" />
+                      <span class="input-group-btn">
+                        <span class="material-symbols-outlined">search</span>
+                      </span>
                     </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="upload-ad-creatives.html">
-                    <div class="inner_div">
-                      <img src="images/images.svg" alt="Ad Creatives">
-                      <h4>Upload Ad Creatives</h4>
-                      <p class="mb-0">Lorem established fact that a reader content.</p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="filter_div filter_21">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <select class="form_control">
+                      <option selected disabled>City</option>
+                      <option>City 1</option>
+                      <option>City 2</option>
+                      <option>City 3</option>
+                      <option>City 4</option>
+                      <option>City 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_22">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <select class="form_control">
+                      <option selected disabled>District</option>
+                      <option>District 1</option>
+                      <option>District 2</option>
+                      <option>District 3</option>
+                      <option>District 4</option>
+                      <option>District 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_3">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <select class="form_control">
+                      <option selected disabled>State</option>
+                      <option>State 1</option>
+                      <option>State 2</option>
+                      <option>State 3</option>
+                      <option>State 4</option>
+                      <option>State 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_4">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <select class="form_control">
+                      <option selected disabled>Media Seller</option>
+                      <option>Media Seller 1</option>
+                      <option>Media Seller 2</option>
+                      <option>Media Seller 3</option>
+                      <option>Media Seller 4</option>
+                      <option>Media Seller 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_5">
+              <button type="button" class="blue_btn">Search</button>
+            </div>
+            <div class="filter_div filter_6">
+              <button type="button"><img src="images/locations.svg" alt="map" /></button>
+            </div>
+          </div>
+          <div class="locations_box">
+            <ul>
+              <li>
+                <a href="campaign-location-detail.html">
+                  <div class="order_item">
+                    <div class="loc_item">
+                      <p class="camType">Billboard</p>
+                      <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                      <p>Ikeja, lkeja, Lagos</p>
+                      <p>Media Seller - <span>Abc Company</span></p>
+                      <span class="badge badge-success mt-1">Approved</span>
+                    </div>
+                    <p class="price_box">Proof of Posting Date - <span>June 30, 2024</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="campaign-location-detail.html">
+                  <div class="order_item">
+                    <div class="loc_item">
+                      <p class="camType">Unipole</p>
+                      <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                      <p>Ikeja, lkeja, Lagos</p>
+                      <p>Media Seller - <span>Abc Company</span></p>
+                      <span class="badge badge-grey mt-1">Pending</span>
+                    </div>
+                    <p class="price_box">Proof of Posting Date - <span>June 30, 2024</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="campaign-location-detail.html">
+                  <div class="order_item">
+                    <div class="loc_item">
+                      <p class="camType">Billboard</p>
+                      <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                      <p>Ikeja, lkeja, Lagos</p>
+                      <p>Media Seller - <span>Abc Company</span></p>
+                      <span class="badge badge-request mt-1">Admin Approval Pending</span>
+                    </div>
+                    <p class="price_box">Proof of Posting Date - <span>June 30, 2024</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="campaign-location-detail.html">
+                  <div class="order_item">
+                    <div class="loc_item">
+                      <p class="camType">Unipole</p>
+                      <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                      <p>Ikeja, lkeja, Lagos</p>
+                      <p>Media Seller - <span>Abc Company</span></p>
+                      <span class="badge badge-request mt-1">Admin Approval Pending</span>
+                    </div>
+                    <p class="price_box">Proof of Posting Date - <span>June 30, 2024</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="campaign-location-detail.html">
+                  <div class="order_item">
+                    <div class="loc_item">
+                      <p class="camType">Billboard</p>
+                      <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                      <p>Ikeja, lkeja, Lagos</p>
+                      <p>Media Seller - <span>Abc Company</span></p>
+                      <span class="badge badge-success mt-1">Approved</span>
+                    </div>
+                    <p class="price_box">Proof of Posting Date - <span>June 30, 2024</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="campaign-location-detail.html">
+                  <div class="order_item">
+                    <div class="loc_item">
+                      <p class="camType">Unipole</p>
+                      <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                      <p>Ikeja, lkeja, Lagos</p>
+                      <p>Media Seller - <span>Abc Company</span></p>
+                      <span class="badge badge-grey mt-1">Pending</span>
+                    </div>
+                    <p class="price_box">Proof of Posting Date - <span>June 30, 2024</span></p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -200,6 +350,13 @@
       $('.inner_list').on('click', function(){
         $(this).toggleClass('active');
       });
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
     });
   </script>
   <!--======= MOBILE MENU START =======-->
