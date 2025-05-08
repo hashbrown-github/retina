@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Contact Us</title>
+<title>Proof of Posting</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -64,7 +64,7 @@
             </div>
           </li>
           <li class="menu_item">
-            <a class="menu_link" href="proof-of-posting.html">
+            <a class="menu_link active" href="proof-of-posting.html">
               <span class="material-symbols-outlined link_icon">library_books</span>
               <span class="link_text">Proof of Posting</span>
             </a>
@@ -132,93 +132,137 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="contact_box">
-            <div class="contact_left">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Proof of Posting</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="heading_box">
               <div class="headLeft">
-                <h3>Contact Us</h3>
-                <p class="mb-2">Reach us via email at <span class="blue_txt">reti@retinaad.com</span></p>
-                <p class="mb-0">Or you can also fill out the form, and we will reach out to you shortly.</p>
+                <h3>Proof of Posting</h3>
               </div>
             </div>
-            <div class="contact_right">
-              <div class="form_fields">
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group error_box">
-                      <label class="form_label">Name</label>
-                      <input class="form_control" type="text" name="name">
-                      <span class="error_msg">Please enter your name</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group">
-                      <label class="form_label">Contact Email</label>
-                      <input class="form_control" type="text" name="email">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group">
-                      <label class="form_label">Contact Phone Number*</label>
-                      <div class="input_flex">
-                        <div class="left_width">
-                          <select class="form_control">
-                            <option>+91</option>
-                            <option>+90</option>
-                            <option>+996</option>
-                          </select>
-                        </div>
-                        <div class="right_width">
-                          <input class="form_control" type="number" name="phone">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group">
-                      <label class="form_label">Select your Issue</label>
-                      <select class="form_control">
-                        <option>Issue 1</option>
-                        <option>Issue 2</option>
-                        <option>Issue 3</option>
-                        <option>Issue 4</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group">
-                      <label class="form_label">Message*</label>
-                      <textarea class="form_control" type="text" name="message" rows="5" placeholder="Kindly describe your issue or question in detail"></textarea>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <button type="button" class="blue_btn mt-2" data-bs-toggle="modal" data-bs-target="#thanksModal">Contact Us</button>
-                    <!--===== THANK YOU POPUP START =====-->
-                    <div class="modal modal_box payment_modal fade" id="thanksModal" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header border-bottom-0">
-                            <button type="button" class="btn-close mt-1 me-1" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body p-0">
-                            <div class="modal_body payment_box">
-                              <img src="images/contact-img.svg" alt="Contact Us" />
-                              <h4>Thank You for Contacting Us!</h4>
-                              <p>We’ve received your message and will respond to you shortly.</p>
-                              <button type="button" class="blue_btn" data-bs-dismiss="modal">OK</button>
+            <div class="campaign_tabs mt-0">
+              <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">Active Locations</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false">Campaigns</button>
+                </li>
+              </ul>
+              <div class="tab-content campaignTabs_con" id="myTabContent">
+                <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                  <div class="orderReq_box">
+                    <div class="horiz_cards">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="card_body">
+                              <span class="badge badge-grey mb-2">Billboard</span>
+                              <h3>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h3>
+                              <p class="mb-2">Ikeja, lkeja, Lagos</p>
+                              <p class="mb-2"><span class="bold_txt">Campaign</span> - <span>My First Campaign</span></p>
+                              <p class="mb-2"><span class="bold_txt">Media Buyer</span> - <span>Abc Company</span></p>
+                              <p class="mb-0"><span class="bold_txt">Proof of Posting Date</span> - <span>June 30, 2024</span></p>
+                              <div class="loc_count3">
+                                <span class="badge badge-request">Admin Approval Pending</span>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="card_body">
+                              <span class="badge badge-grey mb-2">Billboard</span>
+                              <h3>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h3>
+                              <p class="mb-2">Ikeja, lkeja, Lagos</p>
+                              <p class="mb-2"><span class="bold_txt">Campaign</span> - <span>My First Campaign</span></p>
+                              <p class="mb-2"><span class="bold_txt">Media Buyer</span> - <span>Abc Company</span></p>
+                              <p class="mb-0"><span class="bold_txt">Proof of Posting Date</span> - <span>June 30, 2024</span></p>
+                              <div class="loc_count3">
+                                <span class="badge badge-success">Approved</span>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="card_body">
+                              <span class="badge badge-grey mb-2">Billboard</span>
+                              <h3>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h3>
+                              <p class="mb-2">Ikeja, lkeja, Lagos</p>
+                              <p class="mb-2"><span class="bold_txt">Campaign</span> - <span>My First Campaign</span></p>
+                              <p class="mb-2"><span class="bold_txt">Media Buyer</span> - <span>Abc Company</span></p>
+                              <p class="mb-0"><span class="bold_txt">Proof of Posting Date</span> - <span>June 30, 2024</span></p>
+                              <div class="loc_count3">
+                                <span class="badge badge-grey">Pending</span>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                  <div class="orderReq_box">
+                    <div class="horiz_cards">
+                      <ul>
+                        <li>
+                          <a href="campaign-locations.html">
+                            <div class="card_body">
+                              <h3>The rise of advertising</h3>
+                              <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                              <p class="mb-0">Media Buyer - <span>Abc Company</span></p>
+                              <div class="loc_count"><p class="mb-0">30 Locations</p></div>
+                              <div class="loc_count2">
+                                <span class="badge badge-success">Approved - <span>20</span></span>
+                                <span class="badge badge-grey">Pending - <span>10</span></span>
+                              </div>
+                            </div>
+                            <div class="bottom_body">
+                              <p class="mb-0">Price: <span class="bold_txt">NGN 78,750</span></p>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="campaign-locations.html">
+                            <div class="card_body">
+                              <h3>The rise of advertising</h3>
+                              <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                              <p class="mb-0">Media Buyer - <span>Abc Company</span></p>
+                              <div class="loc_count"><p class="mb-0">25 Locations</p></div>
+                              <div class="loc_count2">
+                                <span class="badge badge-success">Approved - <span>15</span></span>
+                                <span class="badge badge-grey">Pending - <span>10</span></span>
+                              </div>
+                            </div>
+                            <div class="bottom_body">
+                              <p class="mb-0">Price: <span class="bold_txt">NGN 78,750</span></p>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="campaign-locations.html">
+                            <div class="card_body">
+                              <h3>The rise of advertising</h3>
+                              <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+                              <p class="mb-0">Media Buyer - <span>Abc Company</span></p>
+                              <div class="loc_count"><p class="mb-0">28 Locations</p></div>
+                              <div class="loc_count2">
+                                <span class="badge badge-success">Approved - <span>20</span></span>
+                                <span class="badge badge-grey">Pending - <span>8</span></span>
+                              </div>
+                            </div>
+                            <div class="bottom_body">
+                              <p class="mb-0">Price: <span class="bold_txt">NGN 78,750</span></p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -260,9 +304,16 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-        e.preventDefault();
-        $('.main_sidebar').toggleClass('small_sidebar');
-        $(this).toggleClass('active');
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    $('.nav_link').on('click', function (e) {
+      e.preventDefault();
+      $('.nav_link').removeClass('active');
+      $(this).toggleClass('active');
     });
   </script>
   <!--======= MOBILE MENU START =======-->

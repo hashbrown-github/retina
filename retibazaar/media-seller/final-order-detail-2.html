@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Request Order Detail</title>
+<title>Final Order Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -49,13 +49,13 @@
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="order-requests.html">
+                  <a class="menu_link" href="order-requests.html">
                     <span class="link_span">O</span>
                     <span class="link_text">Order Requests</span>
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="final-orders.html">
+                  <a class="menu_link active" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -136,17 +136,24 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Order Requests</li>
+              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
             </ol>
           </nav>
           <div class="campaign_box">
             <div class="campaign_dtl">
-              <h3>The rise of advertising<span class="badge badge-request ms-3">Request</span></h3>
+              <h3>The rise of advertising<span class="badge badge-grey ms-2">Pending</span></h3>
               <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
               <h4>Buyer: <span>ABC Company</span></h4>
               <div class="flex_box2 flex_box3">
                 <div class="frequency_div">No. of Locations: <span>50</span></div>
                 <div class="frequency_div">Order Price: <span>N 78,750</span></div>
+                <div class="pay_div">
+                  <p class="red_txt mb-1"><span class="material-symbols-outlined">error</span>Last Payment Date: June 19, 2024</p>
+                  <div class="frequency_div">Order Price: <span class="bold_txt">N 78,750</span>
+                    <button type="button" class="blue_btn pay_button ms-2" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay</button>
+                    <button type="button" class="blue_btn pay_button ms-2 disabled" style="display: none;">Pay</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -234,61 +241,10 @@
                     <button type="button"><img src="images/locations.svg" alt="map" /></button>
                   </div>
                 </div>
-                <div class="page_32">
-                  <div class="page_321">
-                    <label class="checkbox">
-                      <input class="checkbox__input" type="checkbox" name="selectall">
-                      <span class="checkbox__in">
-                        <span class="checkbox__tick"></span>
-                      </span>
-                    </label>
-                    <p>Select All</p>
-                  </div>
-                  <div class="page_322">
-                    <div class="drop_menu">
-                      <button type="button" class="form-select">Action</button>
-                      <div class="menu_drop">
-                        <ul>
-                          <li class="list_item">
-                            <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                          </li>
-                          <li class="list_item">
-                            <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="locations_box">
                   <ul>
                     <li>
                       <div class="order_item">
-                        <div class="page_32">
-                          <div class="page_321">
-                            <label class="checkbox">
-                              <input class="checkbox__input" type="checkbox" name="selectall">
-                              <span class="checkbox__in">
-                                <span class="checkbox__tick"></span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="page_322">
-                            <div class="drop_menu">
-                              <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                              <div class="menu_drop">
-                                <ul>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                                  </li>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <a href="location-detail.html">
                           <div class="loc_item pt-2">
                             <p class="camType">Billboard</p>
@@ -303,31 +259,6 @@
                     </li>
                     <li>
                       <div class="order_item">
-                        <div class="page_32">
-                          <div class="page_321">
-                            <label class="checkbox">
-                              <input class="checkbox__input" type="checkbox" name="selectall">
-                              <span class="checkbox__in">
-                                <span class="checkbox__tick"></span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="page_322">
-                            <div class="drop_menu">
-                              <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                              <div class="menu_drop">
-                                <ul>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                                  </li>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <a href="location-detail.html">
                           <div class="loc_item pt-2">
                             <p class="camType">Unipole</p>
@@ -342,31 +273,6 @@
                     </li>
                     <li>
                       <div class="order_item">
-                        <div class="page_32">
-                          <div class="page_321">
-                            <label class="checkbox">
-                              <input class="checkbox__input" type="checkbox" name="selectall">
-                              <span class="checkbox__in">
-                                <span class="checkbox__tick"></span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="page_322">
-                            <div class="drop_menu">
-                              <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                              <div class="menu_drop">
-                                <ul>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                                  </li>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <a href="location-detail.html">
                           <div class="loc_item pt-2">
                             <p class="camType">Billboard</p>
@@ -381,31 +287,6 @@
                     </li>
                     <li>
                       <div class="order_item">
-                        <div class="page_32">
-                          <div class="page_321">
-                            <label class="checkbox">
-                              <input class="checkbox__input" type="checkbox" name="selectall">
-                              <span class="checkbox__in">
-                                <span class="checkbox__tick"></span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="page_322">
-                            <div class="drop_menu">
-                              <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                              <div class="menu_drop">
-                                <ul>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                                  </li>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <a href="location-detail.html">
                           <div class="loc_item pt-2">
                             <p class="camType">Unipole</p>
@@ -420,31 +301,6 @@
                     </li>
                     <li>
                       <div class="order_item">
-                        <div class="page_32">
-                          <div class="page_321">
-                            <label class="checkbox">
-                              <input class="checkbox__input" type="checkbox" name="selectall">
-                              <span class="checkbox__in">
-                                <span class="checkbox__tick"></span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="page_322">
-                            <div class="drop_menu">
-                              <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                              <div class="menu_drop">
-                                <ul>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                                  </li>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <a href="location-detail.html">
                           <div class="loc_item pt-2">
                             <p class="camType">Billboard</p>
@@ -459,31 +315,6 @@
                     </li>
                     <li>
                       <div class="order_item">
-                        <div class="page_32">
-                          <div class="page_321">
-                            <label class="checkbox">
-                              <input class="checkbox__input" type="checkbox" name="selectall">
-                              <span class="checkbox__in">
-                                <span class="checkbox__tick"></span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="page_322">
-                            <div class="drop_menu">
-                              <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                              <div class="menu_drop">
-                                <ul>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                                  </li>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <a href="location-detail.html">
                           <div class="loc_item pt-2">
                             <p class="camType">Unipole</p>
@@ -570,55 +401,10 @@
                     <button type="button"><img src="images/locations.svg" alt="map" /></button>
                   </div>
                 </div>
-                <div class="page_32">
-                  <div class="page_321">
-                    <label class="checkbox">
-                      <input class="checkbox__input" type="checkbox" name="selectall">
-                      <span class="checkbox__in">
-                        <span class="checkbox__tick"></span>
-                      </span>
-                    </label>
-                    <p>Select All</p>
-                  </div>
-                  <div class="page_322">
-                    <div class="drop_menu">
-                      <button type="button" class="form-select">Action</button>
-                      <div class="menu_drop">
-                        <ul>
-                          <li class="list_item">
-                            <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="locations_box">
                   <ul>
                     <li>
                       <div class="order_item">
-                        <div class="page_32">
-                          <div class="page_321">
-                            <label class="checkbox">
-                              <input class="checkbox__input" type="checkbox" name="selectall">
-                              <span class="checkbox__in">
-                                <span class="checkbox__tick"></span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="page_322">
-                            <div class="drop_menu">
-                              <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                              <div class="menu_drop">
-                                <ul>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <a href="location-detail.html">
                           <div class="loc_item pt-2">
                             <p class="camType">Billboard</p>
@@ -705,55 +491,10 @@
                     <button type="button"><img src="images/locations.svg" alt="map" /></button>
                   </div>
                 </div>
-                <div class="page_32">
-                  <div class="page_321">
-                    <label class="checkbox">
-                      <input class="checkbox__input" type="checkbox" name="selectall">
-                      <span class="checkbox__in">
-                        <span class="checkbox__tick"></span>
-                      </span>
-                    </label>
-                    <p>Select All</p>
-                  </div>
-                  <div class="page_322">
-                    <div class="drop_menu">
-                      <button type="button" class="form-select">Action</button>
-                      <div class="menu_drop">
-                        <ul>
-                          <li class="list_item">
-                            <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="locations_box">
                   <ul>
                     <li>
                       <div class="order_item">
-                        <div class="page_32">
-                          <div class="page_321">
-                            <label class="checkbox">
-                              <input class="checkbox__input" type="checkbox" name="selectall">
-                              <span class="checkbox__in">
-                                <span class="checkbox__tick"></span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="page_322">
-                            <div class="drop_menu">
-                              <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                              <div class="menu_drop">
-                                <ul>
-                                  <li class="list_item">
-                                    <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <a href="location-detail.html">
                           <div class="loc_item pt-2">
                             <p class="camType">Billboard</p>
@@ -771,43 +512,41 @@
               </div>
             </div>
           </div>
-        </div>
-        <!--===== APPROVE LOCATION POPUP START =====-->
-        <div class="modal modal_box fade" id="approveLoc" tabindex="-1" aria-labelledby="approveLocModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="approveLocModalLabel">Approve Location</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="modal_body">
-                  <p class="mb-0">Do you really want to approve these 5 locations for this order request?</p>
+          <!--===== PAYMENT POPUP START =====-->
+          <div class="modal modal_box payment_modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                  <button type="button" class="btn-close mt-1 me-1" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-              </div>
-              <div class="modal-footer border-top-0">
-                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Confirm</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--===== REJECT LOCATION POPUP START =====-->
-        <div class="modal modal_box fade" id="rejectLoc" tabindex="-1" aria-labelledby="rejectLocModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title" id="rejectLocModalLabel">Reject Location</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="modal_body">
-                  <p class="mb-0">Are you sure you want to reject these locations for this order request?</p>
+                <div class="modal-body p-0">
+                  <div class="modal_body payment_box">
+                    <img src="images/payment-card.svg" alt="Payment Card" />
+                    <h4>Do you want to confirm this order?</h4>
+                    <div class="confirmOrder">
+                      <p>Total Location: <b>50</b></p>
+                      <p>Total Price: <b>NG 20,000</b></p>
+                      <div class="orderBtns">
+                        <button type="button" class="grey_btn" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="blue_btn ms-2" data-bs-dismiss="modal">Confirm</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pay_methods">
+                    <h6>Supported Payment Methods</h6>
+                    <ul>
+                      <li><a href="#"><img src="images/card-pay.png" alt="Card" /></a></li>
+                      <li><a href="#"><img src="images/ussd-pay.png" alt="USSD" /></a></li>
+                      <li><a href="#"><img src="images/qr-code-pay.png" alt="QR" /></a></li>
+                      <li><a href="#"><img src="images/apple-pay.png" alt="Apple Pay" /></a></li>
+                      <li><a href="#"><img src="images/mobile-money-pay.png" alt="Mobile Money" /></a></li>
+                      <li><a href="#"><img src="images/google-pay.png" alt="Google Pay" /></a></li>
+                      <li><a href="#"><img src="images/bank-account-pay.png" alt="Bank Account" /></a></li>
+                      <li><a href="#"><img src="images/bank-transfer-pay.png" alt="Bank Transfer" /></a></li>
+                      <li><a href="#"><img src="images/kenyan-pay.png" alt="Kenyan Mpesa" /></a></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="modal-footer border-top-0">
-                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Reject</button>
               </div>
             </div>
           </div>
