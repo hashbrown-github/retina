@@ -2439,7 +2439,7 @@ progress {
 .table {
    --bs-table-color: #344764;
    --bs-table-bg: transparent;
-   --bs-table-border-color: #f0f2f5;
+   --bs-table-border-color: #e8ebf1;
    --bs-table-accent-bg: transparent;
    --bs-table-striped-color: #344764;
    --bs-table-striped-bg: rgba(0, 0, 0, .05);
@@ -2634,42 +2634,59 @@ progress {
 }
 
 .table-responsive {
+   overflow: hidden;
    overflow-x: auto;
-   -webkit-overflow-scrolling: touch
+}
+
+.table-responsive::-webkit-scrollbar {
+   height: 2px;
+   border-radius: 2px;
+}
+.table-responsive::-webkit-scrollbar-track {
+   background: #dddddd;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+   background: #016DD6;
+   border-radius: 2px;
+   cursor: pointer;
+}
+.table-responsive::-webkit-scrollbar-thumb:hover {
+   background: #016DD6;
+   cursor: pointer;
 }
 
 @media (max-width: 575.98px) {
    .table-responsive-sm {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch
+      overflow: hidden;
+   overflow-x: auto;
    }
 }
 
 @media (max-width: 767.98px) {
    .table-responsive-md {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch
+      overflow: hidden;
+   overflow-x: auto;
    }
 }
 
 @media (max-width: 991.98px) {
    .table-responsive-lg {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch
+      overflow: hidden;
+   overflow-x: auto;
    }
 }
 
 @media (max-width: 1199.98px) {
    .table-responsive-xl {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch
+      overflow: hidden;
+   overflow-x: auto;
    }
 }
 
 @media (max-width: 1399.98px) {
    .table-responsive-xxl {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch
+      overflow: hidden;
+   overflow-x: auto;
    }
 }
 
@@ -4351,11 +4368,10 @@ fieldset:disabled .btn {
    color: var(--bs-dropdown-link-hover-color);
    background-color: var(--bs-dropdown-link-hover-bg)
 }
-.dropdown-item.active,
-.dropdown-item:active {
+.dropdown-item.active, .dropdown-item:active {
    color: var(--bs-dropdown-link-active-color);
    text-decoration: none;
-   background-color: var(--bs-dropdown-link-active-bg)
+   background-color: var(--bs-dropdown-link-hover-bg);
 }
 
 .dropdown-item.disabled,
@@ -20301,7 +20317,7 @@ fieldset:disabled .btn {
    padding: 7px 20px 8px 20px;
    height: 40px;
    font-size: 14px;
-   line-height: 17px;
+   line-height: 18px;
    margin-bottom: 1rem;
    letter-spacing: 0;
    background-size: 150%;
@@ -25319,7 +25335,7 @@ body:not(.dark-version) .sidenav.bg-white .collapse .nav-item .nav-link.active.t
 }
 
 .table>:not(:last-child)>:last-child>* {
-   border-bottom-color: #f0f2f5
+   border-bottom-color: #dee2e8;
 }
 
 .table>:not(:first-child) {

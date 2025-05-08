@@ -1251,12 +1251,12 @@
           const h = window.open();
           h.document.body.appendChild(s), h.print()
         }
-        setMessage(t) {
+        /* setMessage(t) {
           let e = 1;
           this.hasRows ? e = this.data[0].cells.length : this.activeHeadings.length && (e = this.activeHeadings.length), this.wrapper.classList.add("dataTable-empty"), this.label && (this.label.innerHTML = ""), this.totalPages = 0, this.render("pager"), this.clear(a("tr", {
             html: `<td class="dataTables-empty" colspan="${e}">${t}</td>`
           }))
-        }
+        } */
         columns(t) {
           return new l(this, t)
         }

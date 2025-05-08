@@ -1,0 +1,601 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Create Quotation</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/material-dashboard.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="g-sidenav-show bg-gray-100 dark_theme">
+   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
+    <div class="sidenav-header">
+      <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
+      <a class="navbar-brand m-0" href="javascript:void(0);">
+        <img src="../images/logo.svg" class="navbar-brand-img h-100" alt="main_logo">
+        <!-- <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span> -->
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse w-auto h-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2 mt-0">
+          <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">face</i>
+            <span class="nav-link-text ms-2 ps-1">Superadmin</span>
+          </a>
+          <div class="collapse" id="ProfileNav">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Settings </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <hr class="horizontal light mt-0 mb-2">
+        <li class="nav-item active">
+          <a href="quotations.html" class="nav-link text-white active">
+            <i class="material-icons-round opacity-10">receipt_long</i>
+            <span class="nav-link-text ms-2 ps-1">Quotations</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:void(0);" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">format_paint</i>
+            <div class="switchThemeBtn">
+              <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
+              <div class="form-check form-switch ps-0 ms-auto my-auto">
+                <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content border-radius-lg px-md-4">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 border-radius-xl shadow-none main_navbar0" id="navbarBlur" data-scroll="false">
+      <div class="container-fluid px-0 main_navbar1">
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none navPart_1">
+          <a href="javascript:;" class="nav-link p-0 text-body">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </a>
+        </div>
+        <ul class="navbar-nav justify-content-end navPart_4">
+          <li class="nav-item d-xl-none pe-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <nav aria-label="breadcrumb" class="navPart_2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Quotations</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Create Quotation</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
+          <div class="ms-sm-auto d-flex align-items-center">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Search here</label>
+              <input type="text" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid px-0 pb-4 mainBody_box">
+      <div class="card">
+        <div class="card-header pb-0">
+          <div class="head_part head_boxBtns">
+            <div>
+              <h5 class="mb-0">Create Quotation</h5>
+            </div>
+          </div>
+        </div>
+        <div class="card-body pt-3">
+          <div class="createQuote0">
+            <div class="logo_img">
+              <img src="../images/logo3.svg" alt="RetinaAd" />
+            </div>
+            <div class="dtl_line0">
+              <div class="dtl_line">
+                <p class="font-weight-normal text-sm mb-1">Quotation Date: <span class="font-weight-bold">24 Jan, 2025</span></p>
+                <p class="font-weight-normal text-sm mb-0">Quotation ID: <span class="font-weight-bold">#456788999</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="createQuote1">
+            <div class="createQuote11">
+              <h5 class="mb-3 text-dark">Quotation From <span class="text-sm font-weight-normal">(Your Details)</span></h5>
+              <div class="card-body">
+                <div class="dtl_line0">
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Company Name</p>
+                    <p class="font-weight-bold text-sm mb-0">Retinaad</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Email</p>
+                    <p class="font-weight-bold text-sm mb-0">support@retinaad.africa</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Phone Number</p>
+                    <p class="font-weight-bold text-sm mb-0">+234(0) 707 219 0284</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Address</p>
+                    <p class="font-weight-bold text-sm mb-0">16B Ayoola Coker Street, Ikeja GRA,</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">City</p>
+                    <p class="font-weight-bold text-sm mb-0">Ikeja</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">State</p>
+                    <p class="font-weight-bold text-sm mb-0">Lagos</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Pincode</p>
+                    <p class="font-weight-bold text-sm mb-0">100282</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Country</p>
+                    <p class="font-weight-bold text-sm mb-0">Nigeria</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">GST</p>
+                    <p class="font-weight-bold text-sm mb-0">123456789</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="createQuote11 createQuote12">
+              <h5 class="mb-3 text-dark">Quotation For <span class="text-sm font-weight-normal">(Client Details)</span></h5>
+              <div class="card-body">
+                <div class="dtl_line0">
+                  <div class="dtl_line">
+                    <div class="col-12 col-sm-12">
+                      <label class="form-label">Client Name<span class="text-danger">*</span></label>
+                      <div class="input-group input-group-outline">
+                        <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dtl_line">
+                    <div class="col-12 col-sm-12">
+                      <label class="form-label">Company Name<span class="text-danger">*</span></label>
+                      <div class="input-group input-group-outline">
+                        <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dtl_line">
+                    <div class="col-12 col-sm-12">
+                      <label class="form-label">Email<span class="text-danger">*</span></label>
+                      <div class="input-group input-group-outline">
+                        <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dtl_line">
+                    <div class="col-12 col-sm-12">
+                      <label class="form-label">Phone Number<span class="text-danger">*</span></label>
+                      <div class="input_flex">
+                        <div class="input-group input-group-outline left_width">
+                          <span class="material-icons-round selectIcon">expand_more</span>
+                          <select class="form-control">
+                            <option>+91</option>
+                            <option>+90</option>
+                            <option>+996</option>
+                          </select>
+                        </div>
+                        <div class="input-group input-group-outline left_width right_width">
+                          <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dtl_line">
+                    <div class="col-12 col-sm-12">
+                      <label class="form-label">Address<span class="text-danger">*</span></label>
+                      <div class="input-group input-group-outline">
+                        <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dtl_line">
+                    <div class="row">
+                      <div class="col-6 col-sm-6 pe-1">
+                        <label class="form-label">City<span class="text-danger">*</span></label>
+                        <div class="input-group input-group-outline">
+                          <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 ps-2">
+                        <label class="form-label">State<span class="text-danger">*</span></label>
+                        <div class="input-group input-group-outline">
+                          <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dtl_line">
+                    <div class="row">
+                      <div class="col-6 col-sm-6 pe-1">
+                        <label class="form-label">Pincode<span class="text-danger">*</span></label>
+                        <div class="input-group input-group-outline">
+                          <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 ps-2">
+                        <label class="form-label">Country<span class="text-danger">*</span></label>
+                        <div class="input-group input-group-outline">
+                          <span class="material-icons-round selectIcon">expand_more</span>
+                          <select class="form-control">
+                            <option>India</option>
+                            <option>Nigeria</option>
+                            <option>America</option>
+                            <option>China</option>
+                            <option>France</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dtl_line">
+                    <div class="col-12 col-sm-12">
+                      <label class="form-label">GST<span class="opacity-4">(Optional)</span></label>
+                      <div class="input-group input-group-outline">
+                        <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header pb-0">
+          <div class="head_part head_boxBtns">
+            <div>
+              <h5 class="mb-0">Enter Details</h5>
+            </div>
+          </div>
+        </div>
+        <div class="card-body pt-3">
+          <div class="payEst_dtl mt-0">
+            <div class="createQuote11 createQuote12">
+              <div class="nav-wrapper position-relative end-0">
+                <ul class="nav nav-pills nav-fill px-0 nav_tabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#tab_1" role="tab" aria-controls="tab_1-tab" aria-selected="true">OOH</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#tab_2" role="tab" aria-controls="tab_2-tab" aria-selected="false">BTL</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#tab_3" role="tab" aria-controls="tab_3-tab" aria-selected="false">DOOH</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#tab_4" role="tab" aria-controls="tab_4-tab" aria-selected="false">Retail</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#tab_5" role="tab" aria-controls="tab_5-tab" aria-selected="false">Asset</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="tab_1" role="tabpanel" aria-labelledby="tab_1-tab">
+                    <div class="dtl_line0">
+                      <div class="dtl_line">
+                        <div class="col-12 col-sm-12">
+                          <label class="form-label">Audit Period</label>
+                          <div class="input-group input-group-outline">
+                            <span class="material-icons-round selectIcon">expand_more</span>
+                            <select class="form-control">
+                              <option selected disabled>Select Audit Period</option>
+                              <option>3 Months</option>
+                              <option>4 Months</option>
+                              <option>5 Months</option>
+                              <option>6 Months</option>
+                              <option>7 Months</option>
+                              <option>8 Months</option>
+                              <option>9 Months</option>
+                              <option>10 Months</option>
+                              <option>11 Months</option>
+                              <option>12 Months</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dtl_line">
+                        <div class="col-12 col-sm-12">
+                          <label class="form-label">Number of Locations</label>
+                          <div class="input-group input-group-outline">
+                            <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dtl_line">
+                        <div class="col-12 col-sm-12">
+                          <label class="form-label">Number of Pictures</label>
+                          <div class="input-group input-group-outline">
+                            <span class="material-icons-round selectIcon">expand_more</span>
+                            <select class="form-control">
+                              <option selected disabled>Select Number of Pictures</option>
+                              <option>3 Pictures</option>
+                              <option>6 Pictures</option>
+                              <option>12 Pictures</option>
+                              <option>24 Pictures</option>
+                              <option>48 Pictures</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn bg-gradient-primary m-0 mt-2 px-4 blue_btn">Submit</button>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tab_2" role="tabpanel" aria-labelledby="tab_2-tab">
+                    <div class="dtl_line0">
+                      <div class="dtl_line">
+                        <label class="form-label">Date</label>
+                        <div class="row gy-1">
+                          <div class="col-6 col-sm-6 pe-1">
+                            <div class="input-group input-group-outline">
+                              <input class="form-control date" type="text" placeholder="Start Date" onfocus="focused(this)" onfocusout="defocused(this)" />
+                              <span class="searchIcon">
+                                <span class="material-icons-round text-dark">date_range</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="col-6 col-sm-6 ps-2">
+                            <div class="input-group input-group-outline">
+                              <input class="form-control date" type="text" placeholder="End Date" onfocus="focused(this)" onfocusout="defocused(this)" />
+                              <span class="searchIcon">
+                                <span class="material-icons-round text-dark">date_range</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="font-weight-normal text-sm my-1">Audit Period: <b>6 Months</b></p>
+                      </div>
+                      <div class="dtl_line">
+                        <div class="col-12 col-sm-12">
+                          <label class="form-label">Number of Activated Activities</label>
+                          <div class="input-group input-group-outline">
+                            <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dtl_line">
+                        <div class="col-12 col-sm-12">
+                          <label class="form-label">Number of Visits</label>
+                          <div class="input-group input-group-outline">
+                            <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                          </div>
+                        </div>
+                        <div class="right_check mt-2">
+                          <div class="form-check verified_dtl p-0 m-0 is-filled">
+                            <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+                          </div>
+                          <label class="form-check-label mb-0">
+                            <span class="font-weight-normal text-sm">Include Weekends</span>
+                          </label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn bg-gradient-primary m-0 mt-2 px-4 blue_btn">Submit</button>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tab_3" role="tabpanel" aria-labelledby="tab_3-tab">
+                    <div class="dtl_line0">
+                      <div class="dtl_line">
+                        <div class="col-12 col-sm-12">
+                          <label class="form-label">Audit Period</label>
+                          <div class="input-group input-group-outline">
+                            <span class="material-icons-round selectIcon">expand_more</span>
+                            <select class="form-control">
+                              <option selected disabled>Select Audit Period</option>
+                              <option>3 Months</option>
+                              <option>4 Months</option>
+                              <option>5 Months</option>
+                              <option>6 Months</option>
+                              <option>7 Months</option>
+                              <option>8 Months</option>
+                              <option>9 Months</option>
+                              <option>10 Months</option>
+                              <option>11 Months</option>
+                              <option>12 Months</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dtl_line">
+                        <div class="col-12 col-sm-12">
+                          <label class="form-label">Number of Slots</label>
+                          <div class="input-group input-group-outline">
+                            <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dtl_line">
+                        <div class="col-12 col-sm-12">
+                          <label class="form-label">Number of Sites</label>
+                          <div class="input-group input-group-outline">
+                            <input class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" />
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn bg-gradient-primary m-0 mt-2 px-4 blue_btn">Submit</button>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tab_4" role="tabpanel" aria-labelledby="tab_4-tab"></div>
+                  <div class="tab-pane fade" id="tab_5" role="tabpanel" aria-labelledby="tab_5-tab"></div>
+                </div>
+              </div>
+            </div>
+            <div class="createQuote11 quote_dtl">
+              <div class="card-body">
+                <div class="dtl_line0">
+                  <div class="dtl_line">
+                    <p class="font-weight-bold text-md mb-0">Payment Estimate</p>
+                  </div>
+                  <hr class="horizontal dark mt-0 mb-0 w-100 border">
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-1">Audit Period: <b>6 Months</b></p>
+                    <p class="font-weight-normal text-sm mb-1">Number of Locations: <b>45</b></p>
+                    <p class="font-weight-normal text-sm mb-3">Number of Pictures: <b>6 Pictures</b></p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-bold text-sm mb-1">Your Campiagn Audit Estimate: <b>NGN 78,750</b></p>
+                    <p class="font-weight-bold text-sm mb-0">VAT(7.5)%: <b>NGN 78,750</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header pb-0">
+          <div class="head_part head_boxBtns">
+            <div>
+              <h5 class="mb-0">Quotation</h5>
+            </div>
+          </div>
+        </div>
+        <div class="card-body pt-3 px-0 pb-0">
+          <div class="table-responsive overflow-y-visible">
+            <table class="table table-flush" id="quotation_list">
+              <thead class="thead-light">
+                <tr>
+                  <th>Sr No.</th>
+                  <th>Service Type</th>
+                  <th>Audit Period</th>
+                  <th>No. of Locations</th>
+                  <th>No. of Pictures</th>
+                  <th>Amount</th>
+                  <th>VAT (7.5%)</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-sm">#1</td>
+                  <td class="text-sm"><div class="campaign_type camp_type1 mt-0">OOH Tracker</div></td>
+                  <td class="text-sm">3 Months</td>
+                  <td class="text-sm">21</td>
+                  <td class="text-sm">45</td>
+                  <td class="text-sm">NGN 45000</td>
+                  <td class="text-sm">NGN 3375</td>
+                  <td class="text-sm">NGN 48375</td>
+                  <td class="text-sm">
+                    <button type="button" class="d-flex gap-1 align-items-center">
+                      <i class="material-icons text-primary position-relative text-lg mt-1">drive_file_rename_outline</i>
+                      <span class="text-sm text-primary">Edit</span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="quot_detail0">
+            <div class="quot_detail1">
+              <p class="text-sm font-weight-normal mb-2"><span>Amount</span><span class="font-weight-bold">NGN 45000</span></p>
+              <p class="text-sm font-weight-normal mb-2"><span>VAT</span><span class="font-weight-bold">NGN 3375</span></p>
+              <h5 class="text-md font-weight-bold mb-0"><span>Total</span><span>NGN 48375</span></h5>
+            </div>
+            <button type="button" class="btn bg-gradient-primary m-0 mt-3 px-4 blue_btn" data-bs-toggle="modal" data-bs-target="#sendQuot_modal">Send Quotation</button>
+          </div>
+        </div>
+      </div>
+      <!-- SEND QUOTATION POPUP -->
+      <div class="modal fade" id="sendQuot_modal" tabindex="-1" role="dialog" aria-labelledby="sendQuot_modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="sendQuot_modalLabel">Send Quotation to</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline mb-4">
+                    <label for="exampleFormControlInput1" class="form-label">Email*</label>
+                    <input class="multisteps-form__input form-control" type="text" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <div class="input-group input-group-outline">
+                    <label for="exampleFormControlInput1" class="form-label">CC<span class="opacity-6 ms-1">(Optional)</span></label>
+                    <input class="multisteps-form__input form-control" type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Save as Draft</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/perfect-scrollbar.min.js"></script>
+  <script src="../js/datatables.js"></script>
+  <script src="../js/material-dashboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "dd M, yyyy"
+    });
+  </script>
+  <script>
+    if (document.getElementById('quotation_list')) {
+      const dataTableSearch1 = new simpleDatatables.DataTable("#quotation_list", {
+        sortable: false,
+        perPageSelect: false,
+        searchable: false,
+        fixedHeight: false,
+        perPage: 10,
+        paging: false,
+      });
+    }
+  </script>
+</body>
+</html>
+  
