@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Dashboard</title>
+<title>Audit Monitoring</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -280,6 +280,12 @@
             <span class="nav-link-text ms-2 ps-1">Location Inventory</span>
           </a>
         </li>
+        <li class="nav-item active">
+          <a href="audit-monitoring.html" class="nav-link text-white active">
+            <i class="material-icons-round opacity-10">computer</i>
+            <span class="nav-link-text ms-2 ps-1">Audit Monitoring</span>
+          </a>
+        </li>
         <li class="nav-item">
           <a href="billing.html" class="nav-link text-white">
             <i class="material-icons-round opacity-10">receipt_long</i>
@@ -326,7 +332,7 @@
         </ul>
         <nav aria-label="breadcrumb" class="navPart_2">
           <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Audit Monitoring</li>
           </ol>
         </nav>
         <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
@@ -341,9 +347,240 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid px-0 pb-4 mainBody_box">
-      <div class="card">
-        <div class="card-body">
-          Dashboard
+      <div class="monitoringSec">
+        <div class="appUser_box1">
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header px-3 py-1">
+                <div class="text-start pt-1">
+                  <p class="font-weight-bold text-sm mb-0 text-capitalize">Total Campaigns</p>
+                  <h5 class="mb-0 text-primary">85</h5>
+                </div>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer p-3 py-2">
+                <p class="font-weight-normal text-xs mb-0">Active campaigns with ongoing audits.</p>
+              </div>
+            </div>
+          </div>
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header px-3 py-1">
+                <div class="text-start pt-1">
+                  <p class="font-weight-bold text-sm mb-0 text-capitalize">Total Locations</p>
+                  <h5 class="mb-0 text-primary">125</h5>
+                </div>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer p-3 py-2">
+                <p class="font-weight-normal text-xs mb-0">Number of locations under audit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header px-3 py-1">
+                <div class="text-start pt-1">
+                  <p class="font-weight-bold text-sm mb-0 text-capitalize">Audited Locations</p>
+                  <h5 class="mb-0 text-primary">85</h5>
+                </div>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer p-3 py-2">
+                <p class="font-weight-normal text-xs mb-0">Locations successfully audited.</p>
+              </div>
+            </div>
+          </div>
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header px-3 py-1">
+                <div class="text-start pt-1">
+                  <p class="font-weight-bold text-sm mb-0 text-capitalize">Pending Locations</p>
+                  <h5 class="mb-0 text-primary">60</h5>
+                </div>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer p-3 py-2">
+                <p class="font-weight-normal text-xs mb-0">Locations yet to be audited.</p>
+              </div>
+            </div>
+          </div>
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header px-3 py-1">
+                <div class="text-start pt-1">
+                  <p class="font-weight-bold text-sm mb-0 text-capitalize">Overdue Audits</p>
+                  <h5 class="mb-0 text-primary">50</h5>
+                </div>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer p-3 py-2">
+                <p class="font-weight-normal text-xs mb-0">Locations missed after the scheduled audit date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header pb-0">
+          <div class="head_part">
+            <div>
+              <h5 class="mb-0">Campaigns</h5>
+            </div>
+          </div>
+        </div>
+        <div class="card-body pt-3">
+          <div class="campaign_list mt-0">
+            <ul class="list-group">
+              <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                <div class="d-flex">
+                  <a href="audit-campaign-detail.html">
+                    <div class="cam_head">
+                      <h5 class="mb-0 text-dark">Rise of Audit</h5>
+                      <div class="campaign_type camp_type1">OOH Tracker</div>
+                    </div>
+                  </a>
+                </div>
+                <!-- <div class="frequency_btn font-weight-bold text-xs text-white">Every 8 Days</div> -->
+                <div class="profile_info2 mt-2">
+                  <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>20 Locations</p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size">
+                    <span class="material-icons-round">event</span>
+                    <span>June 01, 2024</span>
+                    <span>to</span>
+                    <span>Aug 30, 2024</span>
+                  </p>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Frequency: <b class="text-success">15 Days</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
+                </div>
+              </li>
+              <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                <div class="d-flex">
+                  <a href="audit-campaign-detail.html">
+                    <div class="cam_head">
+                      <h5 class="mb-0 text-dark">Testing Camapign 1</h5>
+                      <!-- <div class="campaign_type camp_type2">DOOH Tracker</div> -->
+                      <div class="campaign_type camp_type1">OOH Tracker</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>6 Locations</p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size">
+                    <span class="material-icons-round">event</span>
+                    <span>June 16, 2023</span>
+                    <span>to</span>
+                    <span>June 25, 2023</span>
+                  </p>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Frequency: <b class="text-success">15 Days</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
+                </div>
+              </li>
+              <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                <div class="d-flex flex-column">
+                  <a href="audit-campaign-detail.html">
+                    <div class="cam_head">
+                      <h5 class="mb-0 text-dark">Dummy Campaign</h5>
+                      <div class="campaign_type camp_type3">Retail Tracker</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>20 Location</p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size">
+                    <span class="material-icons-round">event</span>
+                    <span>June 01, 2024</span>
+                    <span>to</span>
+                    <span>Aug 30, 2024</span>
+                  </p>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Frequency: <b class="text-success">15 Days</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
+                </div>
+              </li>
+              <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                <div class="d-flex flex-column">
+                  <a href="audit-campaign-detail.html">
+                    <div class="cam_head">
+                      <h5 class="mb-0 text-dark">Test Crash</h5>
+                      <div class="campaign_type camp_type4">BTL Tracker</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>20 Location</p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size">
+                    <span class="material-icons-round">event</span>
+                    <span>June 01, 2024</span>
+                    <span>to</span>
+                    <span>Aug 30, 2024</span>
+                  </p>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Frequency: <b class="text-success">15 Days</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
+                </div>
+              </li>
+              <li class="list-group-item justify-content-between border-radius-lg campaign_item">
+                <div class="d-flex flex-column">
+                  <a href="audit-campaign-detail.html">
+                    <div class="cam_head">
+                      <h5 class="mb-0 text-dark">Campaign Mohali Tower</h5>
+                      <div class="campaign_type camp_type5">Asset Tracker</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">map</span>20 Location</p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-normal text-sm icon_size">
+                    <span class="material-icons-round">event</span>
+                    <span>June 01, 2024</span>
+                    <span>to</span>
+                    <span>Aug 30, 2024</span>
+                  </p>
+                </div>
+                <div class="profile_info2 mt-2">
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size">Frequency: <b class="text-success">15 Days</b></p>
+                  <span class="border_line"></span>
+                  <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</b></p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

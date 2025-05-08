@@ -455,11 +455,12 @@
       opens: 'left',
       autoUpdateInput: false,
       locale: {
-        cancelLabel: 'Clear'
+        cancelLabel: 'Clear',
+        format: 'MMM DD, YYYY'
       }
     });
     $('input[name="datesrange"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        $(this).val(picker.startDate.format('MMM DD, YYYY') + ' - ' + picker.endDate.format('MMM DD, YYYY'));
     });
     $('input[name="datesrange"]').on('cancel.daterangepicker', function(ev, picker) {
         $(this).val('');

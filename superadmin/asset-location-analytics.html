@@ -1,0 +1,866 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Asset Location Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/material-dashboard.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="g-sidenav-show bg-gray-100 dark_theme">
+   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
+    <div class="sidenav-header">
+      <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
+      <a class="navbar-brand m-0" href="javascript:void(0);">
+        <img src="images/logo.svg" class="navbar-brand-img h-100" alt="main_logo">
+        <!-- <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span> -->
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2 mt-0">
+          <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">face</i>
+            <span class="nav-link-text ms-2 ps-1">Superadmin</span>
+          </a>
+          <div class="collapse" id="ProfileNav">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Settings </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <hr class="horizontal light mt-0 mb-2">
+        <li class="nav-item">
+          <a href="users.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">group</i>
+            <span class="nav-link-text ms-2 ps-1">Users</span>
+          </a>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">groups</i>
+            <span class="nav-link-text ms-2 ps-1">Teams</span>
+          </a>
+          <div class="collapse" id="teams">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="finance-and-audit.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Finance & Audit </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white" aria-controls="campaigns" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
+          </a>
+          <div class="collapse" id="campaigns">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="field-executives.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Field Executives </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activity.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activity </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="map.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Map </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#activations" class="nav-link text-white" aria-controls="activations" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">wysiwyg</i>
+            <span class="nav-link-text ms-2 ps-1">Asset Tracker</span>
+          </a>
+          <div class="collapse" id="activations">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activations.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activations </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#retail" class="nav-link text-white" aria-controls="retail" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">store</i>
+            <span class="nav-link-text ms-2 ps-1">Retail Tracker</span>
+          </a>
+          <div class="collapse" id="retail">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-audits.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Retail Audits </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#asset" class="nav-link text-white active" aria-controls="asset" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">devices</i>
+            <span class="nav-link-text ms-2 ps-1">Asset Tracker</span>
+          </a>
+          <div class="collapse show" id="asset">
+            <ul class="nav">
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="asset-tracker.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Asset Tracker </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="asset-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="asset-activity.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activity </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="asset-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">article</i>
+            <span class="nav-link-text ms-2 ps-1">Orders</span>
+          </a>
+          <div class="collapse" id="orders">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requested-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Requested Orders </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="final-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Final Orders </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="billing.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">receipt_long</i>
+            <span class="nav-link-text ms-2 ps-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#checklist" class="nav-link text-white" aria-controls="checklist" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">done_all</i>
+            <span class="nav-link-text ms-2 ps-1">Checklist</span>
+          </a>
+          <div class="collapse" id="checklist">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="btl-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">BTL Checklist</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Retail Checklist</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:void(0);" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">format_paint</i>
+            <div class="switchThemeBtn">
+              <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
+              <div class="form-check form-switch ps-0 ms-auto my-auto">
+                <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content border-radius-lg px-md-4">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 border-radius-xl shadow-none main_navbar0" id="navbarBlur" data-scroll="false">
+      <div class="container-fluid px-0 main_navbar1">
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none navPart_1">
+          <a href="javascript:;" class="nav-link p-0 text-body">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </a>
+        </div>
+        <ul class="navbar-nav justify-content-end navPart_4">
+          <li class="nav-item d-xl-none pe-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <nav aria-label="breadcrumb" class="navPart_2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Asset Tracker</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Asset Location Detail</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Asset Location Analytics</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
+          <div class="ms-sm-auto d-flex align-items-center">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Search here</label>
+              <input type="text" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid px-0 pb-4 mainBody_box">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex w-100 flex-wrap gap-3 justify-content-between">
+            <div class="profile_box">
+              <div class="profile_info">
+                <h5 class="mb-0 font-weight-bolder">Asset Name 1</h5>
+              </div>
+              <div class="profile_info2 mt-2">
+                <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">date_range</span><span>Number of Visits: <b>5</b></span></p>
+              </div>
+            </div>
+            <div class="right_side">
+              <a href="asset-location-detail.html" class="btn bg-gradient-primary m-0 blue_btn"><span class="material-icons-round text-md">arrow_back_ios</span>Back to Details</a>
+            </div>
+          </div>
+          <div class="dtl_line0 dtl_line1">
+            <div class="dtl_line">
+              <p class="font-weight-normal text-sm mb-0">Date: <span class="font-weight-bold">07 Nov, 2024</span></p>
+              <p class="font-weight-normal text-sm mb-0">Auditor: <span class="font-weight-bold">John Doe</span></p>
+            </div>
+            <div class="dtl_score">
+              <p class="font-weight-normal text-sm mb-0">Audit Score: <span class="font-weight-bold text-md mb-0">7.5</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body flex_unset">
+        <div class="noFoundInner">
+          <img src="images/tracker-empty.svg" alt="Not Found">
+          <h5 class="mb-2 text-dark">No Asset Tracker selected</h5>
+          <p class="font-weight-normal text-sm mb-3">Please select asset tracker & asset to view analytics</p>
+          <div class="scoreHeadR">
+            <div class="input-group input-group-static mb-0">
+              <span class="material-icons-round selectIcon">expand_more</span>
+              <select class="form-control">
+                <option selected="" disabled="">Select Asset Tracker</option>
+                <option>Asset Tracker 1</option>
+                <option>Asset Tracker 2</option>
+                <option>Asset Tracker 3</option>
+                <option>Asset Tracker 4</option>
+              </select>
+            </div>
+            <div class="input-group input-group-static mb-0">
+              <span class="material-icons-round selectIcon">expand_more</span>
+              <select class="form-control">
+                <option selected="" disabled="">Select Asset</option>
+                <option>Asset 1</option>
+                <option>Asset 2</option>
+                <option>Asset 3</option>
+                <option>Asset 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="">
+          <div class="scoreHead">
+            <h5 class="mb-0 text-dark">Rating Trend Chart</h5>
+            <div class="scoreHeadR">
+              <button type="button" id="expandPopup1"><span class="material-icons-round">zoom_out_map</span></button>
+            </div>
+          </div>
+          <div class="score_chart1" style="width: 100%; text-align: center;">
+            <div id="ratTrend_chart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="">
+          <div class="scoreHead">
+            <h5 class="mb-0 text-dark">Section Performance</h5>
+            <div class="scoreHeadR">
+              <p class="font-weight-bold text-sm text-center mb-0 text-capitalize">Generate Visitwise Report:</p>
+              <div class="input-group input-group-static mb-0">
+                <span class="material-icons-round selectIcon">expand_more</span>
+                <select class="form-control">
+                  <option selected disabled>Select Visit</option>
+                  <option>Visit 1</option>
+                  <option>Visit 2</option>
+                  <option>Visit 3</option>
+                  <option>Visit 4</option>
+                </select>
+              </div>
+              <button type="button" id="expandPopup2"><span class="material-icons-round">zoom_out_map</span></button>
+            </div>
+          </div>
+          <div class="score_chart1" style="width: 100%; text-align: center;">
+            <div id="secPer_chart"></div>
+          </div>
+          <div class="secMap_legends pos_unset1">
+            <div class="pos_unset2">
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Asset Condition<span class="inter_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Risk Assessment<span class="sign_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Campaign Execution<span class="sales_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Lighting &amp; Power<span class="downl_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">DOOH-Specific KPIs<span class="DoohKPI_box"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="scoreHead mb-0">
+          <h5 class="mb-0 text-dark">Additional Inputs</h5>
+        </div>
+        <div class="btlLoc_dtl3 mt-3">
+          <table>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Location: <span class="font-weight-bold">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Town/City: <span class="font-weight-bold">Lagos</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Board Type: <span class="font-weight-bold">Digital</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Board Dimension: <span class="font-weight-bold">6.096m x 3.048m</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Screen Type: <span class="font-weight-bold">Billboard</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Brand on Display: <span class="font-weight-bold">Billboard</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Illumination: <span class="font-weight-bold">Back Lit</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Landmark: <span class="font-weight-bold">Roundabout</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Traffic: <span class="font-weight-bold">Vehicular</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Type of Road: <span class="font-weight-bold">District/Rural Road</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Visibility: <span class="font-weight-bold">Below Eye Level</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Clustering: <span class="font-weight-bold">10</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="scoreHead mb-0 mt-4">
+          <h5 class="mb-0 text-dark">Audit Report</h5>
+        </div>
+        <div class="btlLoc_dtl3 mt-3">
+          <div class="table_name py-2">
+            <h6 class="w-100 text-sm mb-0 text-white"><span>Asset Condition</span></h6>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">1. Structure Integrity: <span class="font-weight-bold">OK</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">2. Standing Position: <span class="font-weight-bold">Not OK (Leaning dangerously)</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">3. Foundation Condition: <span class="font-weight-bold">Not OK (Cracked plinth)</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">4. Rust or Detachment: <span class="font-weight-bold">OK</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">5. Site Cleanliness: <span class="font-weight-bold">OK</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">6. Painting Condition: <span class="font-weight-bold">Not OK (Faded paint)</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">7. Board Condition: <span class="font-weight-bold">Not OK (Displaced for Road Construction)</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table_name py-2 rounded-0">
+            <h6 class="w-100 text-sm mb-0 text-white"><span>Risk Assessment</span></h6>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">1. Position Risk: <span class="font-weight-bold">Not OK (Obstructing visibility of traffic lights/signage)</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">2. Impairment Level: <span class="font-weight-bold">OK</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table_name py-2 rounded-0">
+            <h6 class="w-100 text-sm mb-0 text-white"><span>Execution (OOH)</span></h6>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">1. Banner Tension: <span class="font-weight-bold">OK</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">2. Message Visibility: <span class="font-weight-bold">Not OK (Faded or unclear message)</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table_name py-2 rounded-0">
+            <h6 class="w-100 text-sm mb-0 text-white"><span>Lighting and Power</span></h6>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">1. Lighting Availability: <span class="font-weight-bold">Not OK (Insufficient light points)</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">2. Number of Light Points: <span class="font-weight-bold">Not OK (Requires repair or replacement)</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">3. Power Source: <span class="font-weight-bold">OK</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table_name py-2 rounded-0">
+            <h6 class="w-100 text-sm mb-0 text-white"><span>DOOH-Specific KPIs</span></h6>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">1. Number of Display Messages: <span class="font-weight-bold">OK</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">2. Display Functionality: <span class="font-weight-bold">OK</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">3. Power Source (DOOH): <span class="font-weight-bold">Not OK (Faulty generator or transformer)</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table_name py-2 rounded-0">
+            <h6 class="w-100 text-sm mb-0 text-white"><span>Site Staff Verification</span></h6>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">1. Staff Presence: <span class="font-weight-bold">Not OK (Insufficient staff for the task)</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btlLoc_dtl5 mt-3">
+          <span class="mb-0 font-weight-bold text-sm">Report Generated by</span>
+          <img src="images/retitrak-logo.svg" alt="Retitrak">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/perfect-scrollbar.min.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/material-dashboard.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup1').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup2').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  <script>
+    var rootLine = am5.Root.new("ratTrend_chart");
+
+    rootLine.setThemes([
+      am5themes_Animated.new(rootLine)
+    ]);
+    var chartLine = rootLine.container.children.push(
+      am5xy.XYChart.new(rootLine, {
+        panX: true,
+        panY: true,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        layout: rootLine.verticalLayout,
+        pinchZoomX: true,
+        paddingLeft: 0
+      })
+    );
+
+    var cursor = chartLine.set(
+      "cursor",
+      am5xy.XYCursor.new(rootLine, {
+        behavior: "none"
+      })
+    );
+    cursor.lineY.set("visible", false);
+
+    var colorSet = am5.ColorSet.new(rootLine, {});
+
+    // The data
+    var data = [
+      {
+        visit: "Visit 1",
+        value: 6.5
+      },
+      {
+        visit: "Visit 2",
+        value: 5.7
+      },
+      {
+        visit: "Visit 3",
+        value: 6
+      },
+      {
+        visit: "Visit 4",
+        value: 8.1
+      },
+      {
+        visit: "Visit 5",
+        value: 7.3
+      },
+      {
+        visit: "Visit 6",
+        value: 9.5
+      }
+    ];
+
+    var xRenderer = am5xy.AxisRendererX.new(rootLine, {
+      minGridDistance: 20
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    xRenderer.labels.template.setAll({
+      rotation: -20,
+    });
+
+    var xAxis = chartLine.xAxes.push(am5xy.CategoryAxis.new(rootLine, {
+      categoryField: "visit",
+      renderer: xRenderer
+    }));
+    var yRenderer = am5xy.AxisRendererY.new(rootLine, {
+      minGridDistance: 20
+    });
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+    });
+    yRenderer.grid.template.set("forceHidden", false);
+    yRenderer.labels.template.set("minPosition", 0.05);
+
+    var yAxis = chartLine.yAxes.push(
+      am5xy.ValueAxis.new(rootLine, {
+        min: 0,
+        max: 10,
+        strictMinMax: true,
+        renderer: yRenderer
+      })
+    );
+
+    var series = chartLine.series.push(
+      am5xy.LineSeries.new(rootLine, {
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "value",
+        categoryXField: "visit",
+        maskBullets: false
+      })
+    );
+
+    // Actual bullet with label
+    series.bullets.push(function (rootLine, series, dataItem) {
+      var container = am5.Container.new(rootLine, {});
+
+      var bulletCircle = container.children.push(
+        am5.Circle.new(rootLine, {
+          radius: 5,
+          fill: series.get("fill")
+        })
+      );
+
+      var label = container.children.push(
+        am5.Label.new(rootLine, {
+          text: dataItem.get("valueY").toString(),
+          centerY: am5.p10,
+          centerX: am5.p50,
+          fill: am5.color(0x808191),
+          fontSize: 12,
+          fontWeight: 600
+        })
+      );
+
+      return am5.Bullet.new(rootLine, {
+        sprite: container
+      });
+    });
+
+    series.strokes.template.setAll({ strokeDasharray: [3, 3], strokeWidth: 2 });
+    xAxis.data.setAll(data);
+    series.data.setAll(data);
+    series.appear(1000);
+    chartLine.appear(1000, 100);
+  </script>
+  <script>
+    var root = am5.Root.new("secPer_chart");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "panX",
+      wheelY: "zoomX",
+      layout: root.verticalLayout
+    }));
+    var data = [{
+      "Visit": "Visit 1",
+      "Asset Condition": 6.5,
+      "Risk Assessment": 2.1,
+      "Campaign Execution": 5.5,
+      "Lighting & Power": 4.1,
+      "DOOH-Specific KPIs": 7.8
+    },
+    {
+      "Visit": "Visit 2",
+      "Asset Condition": 8,
+      "Risk Assessment": 4.8,
+      "Campaign Execution": 8,
+      "Lighting & Power": 4.8,
+      "DOOH-Specific KPIs": 8
+    },
+    {
+      "Visit": "Visit 3",
+      "Asset Condition": 8,
+      "Risk Assessment": 4,
+      "Campaign Execution": 4.8,
+      "Lighting & Power": 4,
+      "DOOH-Specific KPIs": 4.8
+    },
+    {
+      "Visit": "Visit 4",
+      "Asset Condition": 8.1,
+      "Risk Assessment": 1.9,
+      "Campaign Execution": 7.5,
+      "Lighting & Power": 7.9,
+      "DOOH-Specific KPIs": 7.5
+    },
+    {
+      "Visit": "Visit 5",
+      "Asset Condition": 5.6,
+      "Risk Assessment": 9.6,
+      "Campaign Execution": 3.4,
+      "Lighting & Power": 9.6,
+      "DOOH-Specific KPIs": 3.4
+    },
+    {
+      "Visit": "Visit 6",
+      "Asset Condition": 5.5,
+      "Risk Assessment": 2.7,
+      "Campaign Execution": 6.9,
+      "Lighting & Power": 2.7,
+      "DOOH-Specific KPIs": 6.9
+    },
+    {
+      "Visit": "Visit 7",
+      "Asset Condition": 4,
+      "Risk Assessment": 9.9,
+      "Campaign Execution": 7,
+      "Lighting & Power": 9.9,
+      "DOOH-Specific KPIs": 7
+    }
+  ]
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    xRenderer.labels.template.setAll({
+      rotation: -48,
+    });
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "Visit",
+      renderer: xRenderer
+    }));
+    xAxis.data.setAll(data);
+
+    var yRenderer = am5xy.AxisRendererY.new(root, {})
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+    });
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      calculateTotals: true,
+      renderer: yRenderer
+    }));
+
+    function makeSeries(name, fieldName) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: fieldName,
+        // valueYShow: "valueYTotalPercent",
+        categoryXField: "Visit"
+      }));
+      series.bullets.push(function () {
+        return am5.Bullet.new(root, {
+          sprite: am5.Label.new(root, {
+            text: "{valueY}",
+            fill: root.interfaceColors.get("alternativeText"),
+            centerY: am5.p50,
+            centerX: am5.p50,
+            fontSize: 12,
+            populateText: true
+          })
+        });
+      });
+      series.data.setAll(data);
+      series.appear();
+    }
+
+    makeSeries("Asset Condition", "Asset Condition");
+    makeSeries("Risk Assessment", "Risk Assessment");
+    makeSeries("Campaign Execution", "Campaign Execution");
+    makeSeries("Lighting & Power", "Lighting & Power");
+    makeSeries("DOOH-Specific KPIs", "DOOH-Specific KPIs");
+    chart.appear(1000, 100);
+  </script>
+</body>
+</html>
+  

@@ -1,0 +1,1055 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Store Location Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/material-dashboard.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="g-sidenav-show bg-gray-100 dark_theme">
+   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
+    <div class="sidenav-header">
+      <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
+      <a class="navbar-brand m-0" href="javascript:void(0);">
+        <img src="images/logo.svg" class="navbar-brand-img h-100" alt="main_logo">
+        <!-- <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span> -->
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2 mt-0">
+          <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">face</i>
+            <span class="nav-link-text ms-2 ps-1">Superadmin</span>
+          </a>
+          <div class="collapse" id="ProfileNav">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Settings </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <hr class="horizontal light mt-0 mb-2">
+        <li class="nav-item">
+          <a href="users.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">group</i>
+            <span class="nav-link-text ms-2 ps-1">Users</span>
+          </a>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">groups</i>
+            <span class="nav-link-text ms-2 ps-1">Teams</span>
+          </a>
+          <div class="collapse" id="teams">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="finance-and-audit.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Finance & Audit </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white" aria-controls="campaigns" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
+          </a>
+          <div class="collapse" id="campaigns">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="field-executives.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Field Executives </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activity.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activity </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="map.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Map </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#activations" class="nav-link text-white" aria-controls="activations" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">wysiwyg</i>
+            <span class="nav-link-text ms-2 ps-1">BTL Tracker</span>
+          </a>
+          <div class="collapse" id="activations">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activations.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activations </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#retail" class="nav-link text-white active" aria-controls="retail" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">store</i>
+            <span class="nav-link-text ms-2 ps-1">Retail Tracker</span>
+          </a>
+          <div class="collapse show" id="retail">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-audits.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Retail Audits </span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="retail-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">article</i>
+            <span class="nav-link-text ms-2 ps-1">Orders</span>
+          </a>
+          <div class="collapse" id="orders">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requested-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Requested Orders </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="final-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Final Orders </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="billing.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">receipt_long</i>
+            <span class="nav-link-text ms-2 ps-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#checklist" class="nav-link text-white" aria-controls="checklist" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">done_all</i>
+            <span class="nav-link-text ms-2 ps-1">Checklist</span>
+          </a>
+          <div class="collapse" id="checklist">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="btl-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">BTL Checklist</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Retail Checklist</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:void(0);" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">format_paint</i>
+            <div class="switchThemeBtn">
+              <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
+              <div class="form-check form-switch ps-0 ms-auto my-auto">
+                <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content border-radius-lg px-md-4">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 border-radius-xl shadow-none main_navbar0" id="navbarBlur" data-scroll="false">
+      <div class="container-fluid px-0 main_navbar1">
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none navPart_1">
+          <a href="javascript:;" class="nav-link p-0 text-body">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </a>
+        </div>
+        <ul class="navbar-nav justify-content-end navPart_4">
+          <li class="nav-item d-xl-none pe-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <nav aria-label="breadcrumb" class="navPart_2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Retail Tracker</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Store Location Analytics</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
+          <div class="ms-sm-auto d-flex align-items-center">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Search here</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid px-0 pb-4 mainBody_box">
+      <div class="card card-body flex_unset">
+        <div class="d-flex w-100 justify-content-between">
+          <div class="profile_box">
+            <div class="profile_info mb-0">
+              <h5 class="mb-0 font-weight-bolder">Retail Store Name<span class="badge badge-success badge-sm py-1 ms-2">Completed</span></h5>
+            </div>
+            <div class="campaign_status">
+              <div class="campaign_type camp_type3 mt-0">Retail Tracker</div>
+            </div>
+          </div>
+          <div class="right_side">
+            <div class="scoreHeadR">
+              <button type="button" class="download_btn" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download as PDF"><i class="material-icons text-secondary position-relative text-lg">download</i></button>
+            </div>
+          </div>
+        </div>
+        <div class="profile_info2">
+          <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal align-items-start text-sm icon_size"><span class="material-icons-round">store</span>Indomie</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal align-items-start text-sm icon_size"><span class="material-icons-round">calendar_month</span>Starts 07 Nov, 2024</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">event</span>5 Days Duration</p></a>
+        </div>
+        <div class="profile_info2 mt-2">
+          <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
+        </div>
+      </div>
+      <div class="card card-body flex_unset">
+        <div class="noFoundInner">
+          <img src="images/location-not-found.svg" alt="Location Not Found">
+          <h5 class="mb-2 text-dark">Store Location Analytics Not Found</h5>
+          <p class="font-weight-normal text-sm mb-0">No analytics available yet. The analytics for this location has not been submitted.</p>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="dtl_line0">
+          <div class="dtl_line">
+            <p class="font-weight-normal text-sm mb-0">Audit Date/Time:</p>
+            <p class="font-weight-bold text-sm mb-0">07 Nov, 2024, 11:59:00 AM to 12:59:00 PM</h4>
+          </div>
+          <div class="btlLoc_dtl11">
+            <div class="dtl_line">
+              <p class="font-weight-normal text-sm mb-0">Auditor</p>
+              <p class="font-weight-bold text-sm mb-0">John Doe</h4>
+            </div>
+            <div class="dtl_line">
+              <p class="font-weight-normal text-sm mb-0">Brand Associate</p>
+              <p class="font-weight-bold text-sm mb-0">John Doe</h4>
+            </div>
+          </div>
+          <div class="dtl_score">
+            <p class="font-weight-normal text-sm mb-0">Audit Score: <span class="font-weight-bold text-md mb-0">7.5%</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="dtl_line0">
+          <h5 class="mb-0 text-dark">PoS Compliance</h3>
+          <div class="btlLoc_dtl3 mt-0">
+            <table>
+              <thead>
+                <tr>
+                  <th width="50%"><p class="mb-0 font-weight-bold text-sm">Item</p></th>
+                  <th width="20%"><p class="mb-0 font-weight-bold text-sm">Quantity Met</p></th>
+                  <th width="30%"><p class="mb-0 font-weight-bold text-sm">PoS Compliance</p></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Leaflet</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">4</span></p></td>
+                  <td rowspan="9">
+                    <div id="compliance_chart"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Posters</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">5</span></p></td>
+                </tr>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Roll-Up Banners</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">10</span></p></td>
+                </tr>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Standees</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">13</span></p></td>
+                </tr>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Tabletop Holders</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">12</span></p></td>
+                </tr>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Danglers</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">2</span></p></td>
+                </tr>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Shelf Strips/Talkers</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">7</span></p></td>
+                </tr>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Floor Stickers</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">12</span></p></td>
+                </tr>
+                <tr>
+                  <td><p class="mb-0 font-weight-normal text-sm">Costume</p></td>
+                  <td><p class="mb-0 text-sm"><span class="font-weight-bold">20</span></p></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="approvedUser_box mt-4">
+        <div class="appUser_box0">
+          <div class="appUser_box11 locDtl_1">
+            <div class="card justify-content-center">
+              <div class="card-body">
+                <div class="">
+                  <div class="scoreHead">
+                    <h5 class="mb-0 text-dark">Section by Score</h5>
+                    <div class="scoreHeadR">
+                      <button type="button" id="expandPopup1"><span class="material-icons-round">zoom_out_map</span></button>
+                    </div>
+                  </div>
+                  <div class="score_chart1" style="width: 100%; text-align: center;">
+                    <div id="secBy_score"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="appUser_box11 locDtl_2">
+            <div class="card justify-content-center">
+              <div class="card-body">
+                <div class="">
+                  <div class="scoreHead">
+                    <h5 class="mb-0 text-dark">Response Pie Chart</h5>
+                    <div class="scoreHeadR">
+                      <button type="button" id="expandPopup2"><span class="material-icons-round">zoom_out_map</span></button>
+                    </div>
+                  </div>
+                  <div class="score_chart1" style="width: 100%; text-align: center;">
+                    <div id="pie_chart"></div>
+                  </div>
+                  <div class="secMap_legends pos_unset1">
+                    <div class="pos_unset2">
+                      <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Yes<span class="yes_box"></span></p>
+                      <p class="mb-0 font-weight-normal text-sm text-dark icon_size">No<span class="no_box"></span></p>
+                      <p class="mb-0 font-weight-normal text-sm text-dark icon_size">N/A<span class="null_box"></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="scoreHead mb-0">
+          <h5 class="mb-0 text-dark">Audit Report</h5>
+        </div>
+        <div class="btlLoc_dtl3 mt-3">
+          <div class="table_name">
+            <h6 class="w-100 text-md mb-0 text-white"><span>PoS Presence, Qty And Placement</span></h6>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th width="40%"><p class="mb-0 font-weight-bold text-sm">PoS Item</p></th>
+                <th width="20%"><p class="mb-0 font-weight-bold text-sm">Presence</p></th>
+                <th width="20%"><p class="mb-0 font-weight-bold text-sm">Quantity Met</p></th>
+                <th width="20%"><p class="mb-0 font-weight-bold text-sm">Placement</p></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Leaflet/Flyers</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span> (20)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Posters</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span> (10)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Roll-Up Banners</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span> (30)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Standees</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span> (20)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Tabletop Holders</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span> (15)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Danglers</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span> (14)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Shelf Strips/Talkers</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span> (11)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Floor Stickers</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span> (12)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">Costume</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span> (17)</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btlLoc_dtl3">
+          <div class="table_name">
+            <h6 class="w-100 text-md mb-0 text-white"><span>Brand Ambassador Engagement</span><span>(3/3) 10</span></h6>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th width="70%"><p class="mb-0 font-weight-bold text-sm">Question</p></th>
+                <th width="30%"><p class="mb-0 font-weight-bold text-sm">Response</p></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">1. Was the <span class="font-weight-bold">brand ambassador</span> present during the visit?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">2. Did the <span class="font-weight-bold">brand ambassador</span> adhere to the provided script or guidelines?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">3. Did they engage with customers effectively <span class="font-weight-bold">(e.g., explained promotions or products)</span>?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">4. Did they <span class="font-weight-bold">educate customers</span> about the brand and promotions?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">5. Was the brand ambassador wearing the <span class="font-weight-bold">correct branded uniform</span>?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">6. Were <span class="font-weight-bold">badges or IDs</span> displayed appropriately?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+              </tr>
+              </tr>
+              <tr>
+                <td>
+                  <p class="mb-0 font-weight-normal text-sm">7. Did the brand ambassador actively <span class="font-weight-bold">engage with customers</span>?</p>
+                  <div class="locaImg">
+                    <div class="locaImg1">
+                      <div class="loc_img mt-0">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+                      </div>
+                    </div>
+                    <span class="mb-0 font-weight-normal text-sm">07 Nov, 2024, 11:00 AM</span>
+                    <p class="mb-0 font-weight-normal text-sm"><span class="font-weight-bold">Remarks:-</span> Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                  </div>
+                </td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">8. Did they demonstrate product <span class="font-weight-bold">usage or benefits</span>?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">9. Did they distribute promotional materials <span class="font-weight-bold">(e.g., flyers, samples)</span>?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">10. Did the <span class="font-weight-bold">brand ambassador</span> maintain a polite and professional demeanor?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">11. Was the <span class="font-weight-bold">interaction with customers</span> positive?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">12. Did the brand ambassador follow the <span class="font-weight-bold">brand script and tone</span> during interactions?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btlLoc_dtl3">
+          <div class="table_name">
+            <h6 class="w-100 text-md mb-0 text-white"><span>Adherence to Promotional Guidelines</span><span>(7/3) 10</span></h6>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th width="70%"><p class="mb-0 font-weight-bold text-sm">Question</p></th>
+                <th width="30%"><p class="mb-0 font-weight-bold text-sm">Response</p></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">1. Are all PoS materials displayed in the correct location as per the <span class="font-weight-bold">planogram or photograph</span>?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="mb-0 font-weight-normal text-sm">2. Are all PoS materials <span class="font-weight-bold">visible and undamaged</span>?</p>
+                  <div class="locaImg">
+                    <div class="locaImg1">
+                      <div class="loc_img mt-0">
+                        <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+                      </div>
+                    </div>
+                    <span class="mb-0 font-weight-normal text-sm">07 Nov, 2024, 11:00 AM</span>
+                    <p class="mb-0 font-weight-normal text-sm"><span class="font-weight-bold">Remarks:-</span> Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                  </div>
+                </td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">3. Are <span class="font-weight-bold">products placed as specified</span> in the planogram or photograph?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">4. Are <span class="font-weight-bold">featured/promoted products</span> easily accessible to customers?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">5. Are all specified promotional materials <span class="font-weight-bold">(e.g., leaflets, posters, banners)</span> present at the location?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">6. Are <span class="font-weight-bold">tabletop holders, roll-up banners, or standees</span> positioned properly?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">7. Is the <span class="font-weight-bold">shelf arrangement</span> neat and organized?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">8. Are <span class="font-weight-bold">stock levels</span> adequate for the promotion period?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">9. Are the <span class="font-weight-bold">correct pricing labels</span> displayed?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">10. Are <span class="font-weight-bold">discounts or offers</span> clearly communicated?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="emptyTxt">N/A</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">11. Does the <span class="font-weight-bold">arrangement of PoS materials and products</span> match the uploaded planogram or photograph?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="redTxt">No</span></p></td>
+              </tr>
+              <tr>
+                <td><p class="mb-0 font-weight-normal text-sm">12. Are <span class="font-weight-bold">all products</span> arranged as per the guidelines provided?</p></td>
+                <td><p class="mb-0 font-weight-normal text-sm"><span class="greenTxt">Yes</span></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btlLoc_dtl3">
+          <div class="table_name">
+            <h6 class="w-100 text-md mb-0 text-white"><span>Additional Comments & Location Visuals</span></h6>
+          </div>
+          <div class="table_images0">
+            <p class="mb-3 font-weight-normal text-sm"><span class="font-weight-bold">Additional Comments:-</span> Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui corporis labore in natus magnam veniam officiis distinctio nihil fugiat veritatis asperiores, molestias ipsa debitis, ex voluptatibus ipsam. Iusto, ex quaerat.</p>
+            <div class="table_images p-0 border-0">
+              <div class="loc_img mt-0">
+                <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+              </div>
+              <div class="loc_img mt-0">
+                <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+              </div>
+              <div class="loc_img mt-0">
+                <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+              </div>
+            </div>
+          </div>
+          <div class="table_images mt-2">
+            <div class="loc_img mt-0">
+              <video width="100%" height="100%" controls disablepictureinpicture controlslist="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                <source type="video/mp4" src="images/video.mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="btlLoc_dtl4">
+          <div class="btlLoc_dtl11">
+            <div class="dtl_line">
+              <p class="font-weight-normal text-sm mb-0">Auditor</p>
+              <p class="font-weight-bold text-sm mb-0">John Doe</p>
+            </div>
+            <div class="dtl_line">
+              <p class="font-weight-normal text-sm mb-0">Brand Associate</p>
+              <p class="font-weight-bold text-sm mb-0">John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="btlLoc_dtl5">
+          <span class="mb-0 font-weight-bold text-sm">Report Generated by</span>
+          <img src="images/retitrak-logo.svg" alt="Retitrak" />
+        </div>
+      </div>
+      <!-- IMAGE / VIDEO MODAL -->
+      <div class="modal modal_box payment_modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body img_slider">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <img src="images/1-loc.jpg" alt="Location Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal_box payment_modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body img_slider">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline">
+                <source type="video/mp4" src="images/video.mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- DOWNLOADING LOADER -->
+      <div class="payment_loader2" style="display: none;">
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span role="status" class="font-weight-normal text-sm text-light">Downloading...</span>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/perfect-scrollbar.min.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/material-dashboard.min.js"></script> 
+
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup1').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup2').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <!--===== CHARTS START =======-->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  
+  <script>
+    var root = am5.Root.new("compliance_chart");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    var chart = root.container.children.push(
+      am5radar.RadarChart.new(root, {
+        panX: false,
+        panY: false,
+        paddingTop: 14,
+        paddingRight: -10,
+        paddingLeft: -10,
+        paddingBottom: 5,
+        startAngle: 180,
+        endAngle: 360
+      })
+    );
+
+    var axisRenderer = am5radar.AxisRendererCircular.new(root, {
+      innerRadius: -1,
+      strokeOpacity: 1,
+      strokeWidth: 7,
+      minGridDistance: 50,
+      strokeGradient: am5.LinearGradient.new(root, {
+        rotation: 0,
+        stops: [
+          { color: am5.color(0x016dd6) },
+          { color: am5.color(0x016dd6) },
+          { color: am5.color(0x016dd6) },
+          { color: am5.color(0x016dd6) }
+        ]
+      })
+
+    });
+
+    var xAxis = chart.xAxes.push(
+      am5xy.ValueAxis.new(root, {
+        maxDeviation: 0,
+        min: 0,
+        max: 100,
+        strictMinMax: true,
+        renderer: axisRenderer
+      })
+    );
+
+    xAxis.get("renderer").labels.template.setAll({
+      fontSize: 13,
+      fill: am5.color(0x016dd6)
+    });
+
+    var axisDataItem = xAxis.makeDataItem({});
+    axisDataItem.set("value", 50);
+
+    var bullet = axisDataItem.set("bullet", am5xy.AxisBullet.new(root, {
+      sprite: am5radar.ClockHand.new(root, {
+        radius: am5.percent(80),
+        bottomWidth: 7,
+        pinRadius: 7
+      })
+    }));
+
+    bullet.get("sprite").pin.setAll({
+      fill: am5.color(0x016dd6),
+    });
+
+    bullet.get("sprite").hand.setAll({
+      fill: am5.color(0x016dd6)
+    });
+
+    xAxis.createAxisRange(axisDataItem);
+
+    axisDataItem.get("grid").set("visible", false);
+
+    /* setInterval(() => {
+      axisDataItem.animate({
+        key: "value",
+        to: Math.round(Math.random() * 100),
+        duration: 800,
+        easing: am5.ease.out(am5.ease.cubic)
+      });
+    }, 2000);
+    */
+    chart.appear(1000, 100);
+  </script>
+  
+  <script>
+    var root = am5.Root.new("secBy_score");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: true,
+      panY: true,
+      wheelX: "panX",
+      wheelY: "zoomX",
+      pinchZoomX: true,
+      paddingLeft: 6,
+      paddingBottom: 0,
+      paddingRight: 1
+    }));
+    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+    cursor.lineY.set("visible", false);
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+      rotation: -20,
+      centerY: am5.p0,
+      centerX: am5.p150,
+      paddingRight: 0,
+      oversizedBehavior: "wrap",
+      maxWidth: 150
+    });
+
+    xRenderer.grid.template.setAll({
+      location: 1
+    })
+
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      maxDeviation: 0.3,
+      categoryField: "category",
+      renderer: xRenderer
+    }));
+
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      minGridDistance: 20,
+      strokeOpacity: 0.1,
+    })
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      maxDeviation: 0.3,
+      min: 0,
+      max: 10,
+      strictMinMax: true,
+      renderer: yRenderer
+    }));
+
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50
+    }));
+
+    var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+      name: "Series 1",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value",
+      sequencedInterpolation: true,
+      categoryXField: "category",
+      tooltip: am5.Tooltip.new(root, {
+        labelText: "{valueY}"
+      })
+    }));
+
+    series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
+    series.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        locationY: 0.5,
+        sprite: am5.Label.new(root, {
+          text: "{valueY}",
+          fontSize: 12,
+          fill: root.interfaceColors.get("alternativeText"),
+          centerY: am5.percent(50),
+          centerX: am5.percent(50),
+          populateText: true
+        })
+      });
+    });
+    legend.data.push(series);
+    series.columns.template.adapters.add("fill", function (fill, target) {
+      var index = series.columns.indexOf(target);
+      var colors = [am5.color(0x6771dc), am5.color(0xa366dc), am5.color(0xdc67ce)];
+      return colors[index % colors.length];
+    });
+
+
+    series.columns.template.adapters.add("stroke", function (stroke, target) {
+      return chart.get("colors").getIndex(series.columns.indexOf(target));
+    });
+
+    // Set data
+    var data = [{
+      category: "PoS Analysis",
+      value: 7
+    }, {
+      category: "Brand Ambassador Engagement",
+      value: 9.5
+    }, {
+      category: "Adherence to Promotional Guidelines",
+      value: 6.5
+    }];
+    xAxis.data.setAll(data);
+    series.data.setAll(data);
+    series.appear(1000);
+    chart.appear(1000, 100);
+  </script>
+  
+  <script>
+    am5.ready(function () {
+      var root = am5.Root.new("pie_chart");
+
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+      }));
+
+      // Create series
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category",
+        alignLabels: false
+      })
+      );
+
+      series.slices.template.adapters.add("fill", function (fill, target) {
+        if (target.dataItem.get("category") == "Yes") {
+          return am5.color(0xACC7FF);
+        }
+        else if (target.dataItem.get("category") == "No") {
+          return am5.color(0xDDD8F5);
+        }
+        else if (target.dataItem.get("category") == "N/A") {
+          return am5.color(0xDDE8FF);
+        }
+        else {
+          return fill;
+        }
+      });
+
+      series.slices.template.adapters.add("stroke", function (stroke, target) {
+        if (target.dataItem.get("category") == "Yes") {
+          return am5.color(0xACC7FF);
+        }
+        else if (target.dataItem.get("category") == "No") {
+          return am5.color(0xDDD8F5);
+        }
+        else if (target.dataItem.get("category") == "N/A") {
+          return am5.color(0xDDE8FF);
+        }
+        else {
+          return stroke;
+        }
+      });
+
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight: 600,
+        text: "{value}%",
+        /* textType: "circular", */
+        inside: true,
+        radius: 40,
+        fill: am5.color(0x000000)
+      })
+
+      // Remove ticks for cleaner look
+      series.ticks.template.set("visible", false);
+
+      series.data.setAll([
+        { value: 66.67, category: "Yes" },
+        { value: 23.33, category: "No" },
+        { value: 10, category: "N/A" },
+      ]);
+    });
+  </script>
+</body>
+</html>

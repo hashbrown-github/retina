@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Dashboard</title>
+<title>Reports</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -56,7 +56,7 @@
             <span class="nav-link-text ms-2 ps-1">Users</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: none;">
           <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">groups</i>
             <span class="nav-link-text ms-2 ps-1">Teams</span>
@@ -67,34 +67,6 @@
                 <a class="nav-link text-white" href="finance-and-audit.html">
                   <span class="sidenav-mini-icon">  </span>
                   <span class="sidenav-normal ms-2  ps-1"> Finance & Audit </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#doohtracker" class="nav-link text-white" aria-controls="doohtracker" role="button" aria-expanded="false">
-            <i class="material-icons-round opacity-10">campaign</i>
-            <span class="nav-link-text ms-2 ps-1">DOOH Tracker</span>
-          </a>
-          <div class="collapse" id="doohtracker">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="inventory.html">
-                  <span class="sidenav-mini-icon">  </span>
-                  <span class="sidenav-normal ms-2 ps-1"> Inventory </span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="requests.html">
-                  <span class="sidenav-mini-icon">  </span>
-                  <span class="sidenav-normal ms-2 ps-1">Requests</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="dooh-tracker-campaign.html">
-                  <span class="sidenav-mini-icon">  </span>
-                  <span class="sidenav-normal ms-2 ps-1">Campaigns</span>
                 </a>
               </li>
             </ul>
@@ -143,7 +115,7 @@
         <li class="nav-item">
           <a data-bs-toggle="collapse" href="#activations" class="nav-link text-white" aria-controls="activations" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">wysiwyg</i>
-            <span class="nav-link-text ms-2 ps-1">BTL Tracker</span>
+            <span class="nav-link-text ms-2 ps-1">Asset Tracker</span>
           </a>
           <div class="collapse" id="activations">
             <ul class="nav">
@@ -197,11 +169,11 @@
           </div>
         </li>
         <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#asset" class="nav-link text-white" aria-controls="asset" role="button" aria-expanded="false">
+          <a data-bs-toggle="collapse" href="#asset" class="nav-link text-white active" aria-controls="asset" role="button" aria-expanded="true">
             <i class="material-icons-round opacity-10">devices</i>
             <span class="nav-link-text ms-2 ps-1">Asset Tracker</span>
           </a>
-          <div class="collapse" id="asset">
+          <div class="collapse show" id="asset">
             <ul class="nav">
               <li class="nav-item">
                 <a class="nav-link text-white" href="asset-tracker.html">
@@ -221,8 +193,8 @@
                   <span class="sidenav-normal ms-2 ps-1"> Activity </span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="asset-reports.html">
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="asset-reports.html">
                   <span class="sidenav-mini-icon">  </span>
                   <span class="sidenav-normal ms-2 ps-1"> Reports </span>
                 </a>
@@ -230,29 +202,7 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#checklist" class="nav-link text-white" aria-controls="checklist" role="button" aria-expanded="false">
-            <i class="material-icons-round opacity-10">done_all</i>
-            <span class="nav-link-text ms-2 ps-1">Checklist</span>
-          </a>
-          <div class="collapse" id="checklist">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="btl-checklist.html">
-                  <span class="sidenav-mini-icon">  </span>
-                  <span class="sidenav-normal ms-2 ps-1">BTL Checklist</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="retail-checklist.html">
-                  <span class="sidenav-mini-icon">  </span>
-                  <span class="sidenav-normal ms-2 ps-1">Retail Checklist</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: none;">
           <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">article</i>
             <span class="nav-link-text ms-2 ps-1">Orders</span>
@@ -275,16 +225,32 @@
           </div>
         </li>
         <li class="nav-item">
-          <a href="location-inventory.html" class="nav-link text-white">
-            <i class="material-icons-round opacity-10">map</i>
-            <span class="nav-link-text ms-2 ps-1">Location Inventory</span>
-          </a>
-        </li>
-        <li class="nav-item">
           <a href="billing.html" class="nav-link text-white">
             <i class="material-icons-round opacity-10">receipt_long</i>
             <span class="nav-link-text ms-2 ps-1">Billing</span>
           </a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#checklist" class="nav-link text-white" aria-controls="checklist" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">done_all</i>
+            <span class="nav-link-text ms-2 ps-1">Checklist</span>
+          </a>
+          <div class="collapse" id="checklist">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="btl-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">BTL Checklist</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Retail Checklist</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a href="javascript:void(0);" class="nav-link text-white">
@@ -326,7 +292,9 @@
         </ul>
         <nav aria-label="breadcrumb" class="navPart_2">
           <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Asset Tracker</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Asset Tracker Detail</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Reports</li>
           </ol>
         </nav>
         <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
@@ -341,9 +309,96 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid px-0 pb-4 mainBody_box">
-      <div class="card">
-        <div class="card-body">
-          Dashboard
+      <div class="card card-body">
+        <div class="d-flex w-100 justify-content-between">
+          <div class="profile_box">
+            <div class="profile_info mb-0">
+              <h5 class="mb-0 font-weight-bolder">Rise of Audit</h5>
+            </div>
+            <div class="campaign_status">
+              <span class="badge badge-success badge-md">Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="profile_info2">
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">event</span><span>No. Of Visits: <b>5</b></span></p>
+        </div>
+      </div>
+      <div class="monitSec assetReports mt-4">
+        <div class="appUser_box1 pt-3">
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header p-3 pt-2">
+                <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
+                  <i class="material-icons-round">desktop_windows</i>
+                </div>
+                <div class="text-end pt-1">
+                  <h4 class="mb-2 text-lg">5</h4>
+                  <p class="font-weight-normal text-sm mb-0">Total Number of Visits</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header p-3 pt-2">
+                <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
+                  <i class="material-icons-round">desktop_windows</i>
+                </div>
+                <div class="text-end pt-1">
+                  <h4 class="mb-2 text-lg">3</h4>
+                  <p class="font-weight-normal text-sm mb-0">Number of Visits Done</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header p-3 pt-2">
+                <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
+                  <i class="material-icons-round">event_note</i>
+                </div>
+                <div class="text-end pt-1">
+                  <h4 class="mb-2 text-md">12 Dec, 2024 | 11:30 AM</h4>
+                  <p class="font-weight-normal text-sm mb-0">Last Visit Date & Time</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="appUser_box11">
+            <div class="card">
+              <div class="card-header p-3 pt-2">
+                <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
+                  <i class="material-icons-round">reviews</i>
+                </div>
+                <div class="text-end pt-1">
+                  <h4 class="mb-2 text-lg">7.5</h4>
+                  <p class="font-weight-normal text-sm mb-0">Latest Visit Rating</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-header pb-0">
+          <div class="head_part">
+            <div>
+              <h5 class="mb-2">Generate Report</h5>
+              <p class="mb-0 font-weight-normal text-sm">Choose one to generate report</p>
+              <div class="report_filters0">
+                <ul class="audit_category audit_period mt-0">
+                  <li class="nav_item">
+                    <a class="nav_link active" href="#"><img src="images/pdf.svg" alt="PDF">PDF</a>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="btn bg-gradient-primary m-0 blue_btn">Generate Report</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body pt-0">
+          
         </div>
       </div>
     </div>
@@ -353,7 +408,6 @@
   <script src="js/perfect-scrollbar.min.js"></script>
   <script src="js/datatables.js"></script>
   <script src="js/material-dashboard.min.js"></script>
-
 </body>
 </html>
   

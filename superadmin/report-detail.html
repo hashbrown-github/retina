@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/material-dashboard.min.css" />
 <link rel="stylesheet" href="css/style.css" />
@@ -208,12 +209,18 @@
         <div class="card-body px-0 pb-0">
           <div class="filter_status filter_2">
             <div class="input-group input-group-static mb-0">
-              <label class="m-0">Start Date</label>
-              <input class="form-control" type="date" placeholder="Start Date" onfocus="focused(this)" onfocusout="defocused(this)">
+              <!-- <label class="m-0">Start Date</label> -->
+              <input class="form-control date max-width-unset" type="text" placeholder="Start Date" onfocus="focused(this)" onfocusout="defocused(this)">
+              <span class="searchIcon">
+                <span class="material-icons-round text-dark">date_range</span>
+              </span>
             </div>
             <div class="input-group input-group-static mb-0">
-              <label class="m-0">End Date</label>
-              <input class="form-control" type="date" placeholder="End Date" onfocus="focused(this)" onfocusout="defocused(this)">
+              <!-- <label class="m-0">End Date</label> -->
+              <input class="form-control date max-width-unset" type="text" placeholder="End Date" onfocus="focused(this)" onfocusout="defocused(this)">
+              <span class="searchIcon">
+                <span class="material-icons-round text-dark">date_range</span>
+              </span>
             </div>
             <div class="search_btn">
               <button type="button" class="btn bg-gradient-primary text-nowrap m-0 px-4 py-2 blue_btn2">Generate Report</button>
@@ -236,8 +243,8 @@
                   <td class="text-sm">2 days</td>
                   <td class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                   <td class="text-sm">
-                    <button type="button" class="download_btn me-3">Excel<i class="material-icons text-secondary position-relative text-lg">download</i>
-                    <button type="button" class="download_btn">Image<i class="material-icons text-secondary position-relative text-lg">download</i>
+                    <button type="button" class="download_btn me-3 py-1 pe-2">Excel<i class="material-icons text-secondary position-relative text-lg">download</i>
+                    <button type="button" class="download_btn py-1 pe-2">Image<i class="material-icons text-secondary position-relative text-lg">download</i>
                   </td>
                 </tr>
                 <tr>
@@ -245,8 +252,8 @@
                   <td class="text-sm">4 days</td>
                   <td class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                   <td class="text-sm">
-                    <button type="button" class="download_btn me-3">Excel<i class="material-icons text-secondary position-relative text-lg">download</i>
-                    <button type="button" class="download_btn">Image<i class="material-icons text-secondary position-relative text-lg">download</i>
+                    <button type="button" class="download_btn me-3 py-1 pe-2">Excel<i class="material-icons text-secondary position-relative text-lg">download</i>
+                    <button type="button" class="download_btn py-1 pe-2">Image<i class="material-icons text-secondary position-relative text-lg">download</i>
                   </td>
                 </tr>
                 <tr>
@@ -254,8 +261,8 @@
                   <td class="text-sm">2 days</td>
                   <td class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                   <td class="text-sm">
-                    <button type="button" class="download_btn me-3">Excel<i class="material-icons text-secondary position-relative text-lg">download</i>
-                    <button type="button" class="download_btn">Image<i class="material-icons text-secondary position-relative text-lg">download</i>
+                    <button type="button" class="download_btn me-3 py-1 pe-2">Excel<i class="material-icons text-secondary position-relative text-lg">download</i>
+                    <button type="button" class="download_btn py-1 pe-2">Image<i class="material-icons text-secondary position-relative text-lg">download</i>
                   </td>
                 </tr>
                 <tr>
@@ -263,8 +270,8 @@
                   <td class="text-sm">4 days</td>
                   <td class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                   <td class="text-sm">
-                    <button type="button" class="download_btn me-3">Excel<i class="material-icons text-secondary position-relative text-lg">download</i>
-                    <button type="button" class="download_btn">Image<i class="material-icons text-secondary position-relative text-lg">download</i>
+                    <button type="button" class="download_btn me-3 py-1 pe-2">Excel<i class="material-icons text-secondary position-relative text-lg">download</i>
+                    <button type="button" class="download_btn py-1 pe-2">Image<i class="material-icons text-secondary position-relative text-lg">download</i>
                   </td>
                 </tr>
               </tbody>
@@ -279,6 +286,12 @@
   <script src="js/perfect-scrollbar.min.js"></script>
   <script src="js/datatables.js"></script>
   <script src="js/material-dashboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "M dd, yyyy"
+    });
+  </script>
   <script>
     if (document.getElementById('report_list')) {
       const dataTableSearch1 = new simpleDatatables.DataTable("#report_list", {

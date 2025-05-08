@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Campaign Detail</title>
+<title>Retail Audit Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -73,14 +73,14 @@
           </div>
         </li>
         <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white active" aria-controls="campaigns" role="button" aria-expanded="true">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white" aria-controls="campaigns" role="button" aria-expanded="false">
             <i class="material-icons-round opacity-10">campaign</i>
             <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
           </a>
-          <div class="collapse show" id="campaigns">
+          <div class="collapse" id="campaigns">
             <ul class="nav">
-              <li class="nav-item active">
-                <a class="nav-link text-white active" href="campaigns.html">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
                   <span class="sidenav-mini-icon">  </span>
                   <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
                 </a>
@@ -107,6 +107,62 @@
                 <a class="nav-link text-white" href="map.html">
                   <span class="sidenav-mini-icon">  </span>
                   <span class="sidenav-normal ms-2 ps-1"> Map </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#activations" class="nav-link text-white" aria-controls="activations" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">wysiwyg</i>
+            <span class="nav-link-text ms-2 ps-1">BTL Tracker</span>
+          </a>
+          <div class="collapse" id="activations">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activations.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activations </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#retail" class="nav-link text-white active" aria-controls="retail" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">store</i>
+            <span class="nav-link-text ms-2 ps-1">Retail Tracker</span>
+          </a>
+          <div class="collapse show" id="retail">
+            <ul class="nav">
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="retail-audits.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Retail Audits </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
                 </a>
               </li>
             </ul>
@@ -139,6 +195,28 @@
             <i class="material-icons-round opacity-10">receipt_long</i>
             <span class="nav-link-text ms-2 ps-1">Billing</span>
           </a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#checklist" class="nav-link text-white" aria-controls="checklist" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">done_all</i>
+            <span class="nav-link-text ms-2 ps-1">Checklist</span>
+          </a>
+          <div class="collapse" id="checklist">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="btl-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">BTL Checklist</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Retail Checklist</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a href="javascript:void(0);" class="nav-link text-white">
@@ -180,9 +258,9 @@
         </ul>
         <nav aria-label="breadcrumb" class="navPart_2">
           <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Audit Campaigns</a></li>
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Campaigns</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Campaign Detail</li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Retail Tracker</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Retail Audits</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Retail Audits Detail</li>
           </ol>
         </nav>
         <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
@@ -201,11 +279,10 @@
         <div class="d-flex w-100 justify-content-between">
           <div class="profile_box">
             <div class="profile_info mb-0">
-              <h5 class="mb-0 font-weight-bolder">Rise of Audit</h5>
+              <h5 class="mb-0 font-weight-bolder">Retail Chain Name</h5>
             </div>
             <div class="campaign_status">
-              <span class="badge badge-success badge-md">Approved</span>
-              <div class="campaign_type camp_type1 mt-0">OOH Tracker</div>
+              <div class="campaign_type camp_type3 mt-0">Retail Tracker</div>
             </div>
           </div>
           <div class="right_side">
@@ -224,22 +301,16 @@
         <div class="profile_info2">
           <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
           <span class="border_line"></span>
-          <p class="mb-0 font-weight-normal align-items-start text-sm icon_size">
-            <span class="material-icons-round">event</span>
-            <span>June 09, 2023</span>
-            <span>to</span>
-            <span>June 30, 2023</span>
-          </p>
+          <p class="mb-0 font-weight-normal align-items-start text-sm icon_size"><span class="material-icons-round">store</span>Indomie</p>
           <span class="border_line"></span>
-          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">calendar_month</span><b>Audit Dates</b>: 28 June, 15 July, 10 April</p></a>
-          <div class="frequency_btn font-weight-bold text-xs text-white">Every 8 Days</div>
+          <p class="mb-0 font-weight-normal align-items-start text-sm icon_size"><span class="material-icons-round">calendar_month</span>Starts 07 Nov, 2024</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">event</span>5 Days Duration</p></a>
         </div>
         <div class="profile_info2 mt-2">
-          <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-danger">Pending</b></p>
+          <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
           <span class="border_line"></span>
           <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
-          <span class="border_line"></span>
-          <p class="mb-0 font-weight-bold text-sm icon_size d-block">Audit Period: <span class="font-weight-normal"><b class="text-success">3 Months</b> (June 01, 2024 - Aug 30, 2024)</span></p>
         </div>
       </div>
       <div class="approvedUser_box">
@@ -247,19 +318,19 @@
           <div class="appUser_box0">
             <div class="appUser_box11">
               <div class="card">
-                <a href="locations.html">
+                <a href="store-locations.html">
                   <div class="card-header p-3 pt-2">
                     <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
                       <i class="material-icons-round">map</i>
                     </div>
                     <div class="text-end pt-1">
-                      <p class="font-weight-normal text-md mb-0 text-capitalize">Locations</p>
-                      <h4 class="mb-0">85</h4>
+                      <p class="font-weight-normal text-md mb-0 text-capitalize">Store Locations</p>
+                      <h4 class="mb-0">12</h4>
                     </div>
                   </div>
                   <hr class="dark horizontal my-0">
                   <div class="card-footer p-3">
-                    <p class="font-weight-normal text-sm mb-0"><span class="text-success text-bolder">70</span> Confirmed / <span class="text-warning text-bolder">15</span> Pending</p>
+                    <p class="font-weight-normal text-sm mb-0"><span class="text-success text-bolder">8</span> Active / <span class="text-warning text-bolder">4</span> Upcoming</p>
                   </div>
                 </a>
               </div>
@@ -273,7 +344,7 @@
                     </div>
                     <div class="text-end pt-1">
                       <p class="font-weight-normal text-md mb-0 text-capitalize">Field Executives</p>
-                      <h4 class="mb-0">125</h4>
+                      <h4 class="mb-0">10</h4>
                     </div>
                   </div>
                 </a>
@@ -281,14 +352,14 @@
             </div>
             <div class="appUser_box11">
               <div class="card">
-                <a href="brand-managers.html">
+                <a href="activation-brand-managers.html">
                   <div class="card-header p-3 pt-2">
                     <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
                       <i class="material-icons-round">style</i>
                     </div>
                     <div class="text-end pt-1">
                       <p class="font-weight-normal text-md mb-0 text-capitalize">Brand Manager</p>
-                      <h4 class="mb-0">85</h4>
+                      <h4 class="mb-0">10</h4>
                     </div>
                   </div>
                 </a>
@@ -296,13 +367,13 @@
             </div>
             <div class="appUser_box11">
               <div class="card">
-                <a href="activity.html">
+                <a href="retail-analytics.html">
                   <div class="card-header p-3 pt-2">
                     <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
-                      <i class="material-icons-round">event_note</i>
+                      <i class="material-icons-round">insert_chart_outlined</i>
                     </div>
                     <div class="text-end pt-1">
-                      <p class="font-weight-normal text-md mb-0 text-capitalize">Activity</p>
+                      <p class="font-weight-normal text-md mb-0 text-capitalize">Analytics</p>
                       <h4 class="mb-0">125</h4>
                     </div>
                   </div>
@@ -311,7 +382,7 @@
             </div>
             <div class="appUser_box11">
               <div class="card">
-                <a href="reports.html">
+                <a href="retail-reports.html">
                   <div class="card-header p-3 pt-2">
                     <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
                       <i class="material-icons-round">library_books</i>
@@ -335,12 +406,11 @@
               <div class="user_body user_body2">
                 <div class="user_body1">
                   <h6 class="text-dark font-weight-bold mb-0">Plan Detail</h6>
-                  <p class="text-secondary font-weight-normal m-0"><span class="material-icons-round icon_dtl">event_note</span>6 Months</p>
-                  <p class="text-secondary font-weight-normal m-0"><span class="material-icons-round icon_dtl">collections</span>12 pictures per site</p>
+                  <p class="text-secondary font-weight-normal m-0"><span class="material-icons-round icon_dtl">store</span>No of Stores - <span>12</span></p>
                 </div>
                 <div class="user_body1">
                   <h6 class="text-dark font-weight-bold mb-0">Start Date</h6>
-                  <p class="text-secondary font-weight-normal m-0"><span class="material-icons-round icon_dtl">event_note</span>12 Jun, 2024</p>
+                  <p class="text-secondary font-weight-normal m-0"><span class="material-icons-round icon_dtl">event_note</span>07 Nov, 2024</p>
                 </div>
                 <div class="user_body1 markPaid">
                   <button type="button" class="btn bg-gradient-primary text-xs" data-bs-toggle="modal" data-bs-target="#paidModal">Mark as Paid</button>
@@ -408,12 +478,12 @@
           </div>
         </div>
       </div>
-      <!--======= APPROVE CAMPAIGN MODAL START =======-->
+      <!--======= APPROVE ACTIVATION MODAL START =======-->
       <div class="modal fade" id="approve_cam" tabindex="-1" role="dialog" aria-labelledby="approve_camLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title font-weight-normal" id="approve_camLabel">Approve Campaign</h5>
+              <h5 class="modal-title font-weight-normal" id="approve_camLabel">Approve Activation</h5>
               <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -434,12 +504,12 @@
           </div>
         </div>
       </div>
-      <!--======== REJECT CAMPAIGN MODAL START =======-->
+      <!--======== REJECT ACTIVATION MODAL START =======-->
       <div class="modal fade" id="reject_cam" tabindex="-1" role="dialog" aria-labelledby="reject_camLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title font-weight-normal" id="reject_camLabel">Reject Campaign</h5>
+              <h5 class="modal-title font-weight-normal" id="reject_camLabel">Reject Activation</h5>
               <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

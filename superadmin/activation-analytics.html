@@ -1,0 +1,1160 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Activation Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/material-dashboard.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="g-sidenav-show bg-gray-100 dark_theme">
+   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
+    <div class="sidenav-header">
+      <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
+      <a class="navbar-brand m-0" href="javascript:void(0);">
+        <img src="images/logo.svg" class="navbar-brand-img h-100" alt="main_logo">
+        <!-- <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span> -->
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2 mt-0">
+          <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">face</i>
+            <span class="nav-link-text ms-2 ps-1">Superadmin</span>
+          </a>
+          <div class="collapse" id="ProfileNav">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Settings </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <hr class="horizontal light mt-0 mb-2">
+        <li class="nav-item">
+          <a href="users.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">group</i>
+            <span class="nav-link-text ms-2 ps-1">Users</span>
+          </a>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">groups</i>
+            <span class="nav-link-text ms-2 ps-1">Teams</span>
+          </a>
+          <div class="collapse" id="teams">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="finance-and-audit.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Finance & Audit </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white" aria-controls="campaigns" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
+          </a>
+          <div class="collapse" id="campaigns">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="field-executives.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Field Executives </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activity.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activity </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="map.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Map </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#activations" class="nav-link text-white active" aria-controls="activations" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">wysiwyg</i>
+            <span class="nav-link-text ms-2 ps-1">BTL Tracker</span>
+          </a>
+          <div class="collapse show" id="activations">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activations.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activations </span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="activation-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">article</i>
+            <span class="nav-link-text ms-2 ps-1">Orders</span>
+          </a>
+          <div class="collapse" id="orders">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requested-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Requested Orders </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="final-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Final Orders </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="billing.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">receipt_long</i>
+            <span class="nav-link-text ms-2 ps-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#checklist" class="nav-link text-white" aria-controls="checklist" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">done_all</i>
+            <span class="nav-link-text ms-2 ps-1">Checklist</span>
+          </a>
+          <div class="collapse" id="checklist">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="btl-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">BTL Checklist</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Retail Checklist</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:void(0);" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">format_paint</i>
+            <div class="switchThemeBtn">
+              <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
+              <div class="form-check form-switch ps-0 ms-auto my-auto">
+                <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content border-radius-lg px-md-4">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 border-radius-xl shadow-none main_navbar0" id="navbarBlur" data-scroll="false">
+      <div class="container-fluid px-0 main_navbar1">
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none navPart_1">
+          <a href="javascript:;" class="nav-link p-0 text-body">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </a>
+        </div>
+        <ul class="navbar-nav justify-content-end navPart_4">
+          <li class="nav-item d-xl-none pe-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <nav aria-label="breadcrumb" class="navPart_2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">BTL Tracker</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Activation Analytics</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
+          <div class="ms-sm-auto d-flex align-items-center">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Search here</label>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid px-0 pb-4 mainBody_box">
+      <div class="card card-body flex_unset">
+        <div class="d-flex w-100 justify-content-between">
+          <div class="profile_box">
+            <div class="profile_info mb-0">
+              <h5 class="mb-0 font-weight-bolder">My First Activation</h5>
+            </div>
+            <div class="campaign_status">
+              <div class="campaign_type camp_type4 mt-0">BTL Tracker</div>
+            </div>
+          </div>
+          <div class="right_side">
+            <div class="scoreHeadR">
+              <div class="input-group input-group-static mb-0">
+                <span class="material-icons-round selectIcon">expand_more</span>
+                <select class="form-control">
+                  <option selected>Select Activation</option>
+                  <option>Activation 1</option>
+                  <option>Activation 2</option>
+                  <option>Activation 3</option>
+                  <option>Activation 4</option>
+                </select>
+              </div>
+              <button type="button" class="download_btn" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download as PDF"><i class="material-icons text-secondary position-relative text-lg">download</i></button>
+            </div>
+          </div>
+        </div>
+        <div class="profile_info2">
+          <a href="mo-agreement-signed.html"><p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">account_circle</span>John Doe</p></a>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal align-items-start text-sm icon_size"><span class="material-icons-round">calendar_month</span>Starts 07 Nov, 2024</p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">event</span>5 Days Duration</p></a>
+        </div>
+        <div class="profile_info2 mt-2">
+          <p class="mb-0 font-weight-bold text-sm icon_size">Verification Status: <b class="text-success">Verified</b></p>
+          <span class="border_line"></span>
+          <p class="mb-0 font-weight-bold text-sm icon_size">Payment Status: <b class="text-success">Paid</b></p>
+        </div>
+      </div>
+      <div class="card card-body flex_unset">
+        <div class="noFoundInner">
+          <img src="images/activation-not-found.svg" alt="Activation not Selected">
+          <h5 class="mb-2 text-dark">Activation Not Selected</h5>
+          <p class="font-weight-normal text-sm mb-3">Please select a activation to view analytics.</p>
+          <div class="scoreHeadR">
+            <div class="input-group input-group-static mb-0">
+              <span class="material-icons-round selectIcon">expand_more</span>
+              <select class="form-control">
+                <option selected>Select Activation</option>
+                <option>Activation 1</option>
+                <option>Activation 2</option>
+                <option>Activation 3</option>
+                <option>Activation 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="approvedUser_box mt-4">
+        <div class="appUser_box1 w-100">
+          <div class="appUser_box0 analytic_box0">
+            <div class="appUser_box11">
+              <div class="card justify-content-center">
+                <div class="card-header p-3 pt-2">
+                  <div class="text-center">
+                    <p class="font-weight-normal text-md mb-2 text-capitalize">Average Audit Score</p>
+                    <h4 class="mb-0">7.5%</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="appUser_box11">
+              <div class="card justify-content-center">
+                <div class="card-header p-3 pt-2">
+                  <div class="text-center">
+                    <p class="font-weight-normal text-md mb-2 text-capitalize">Target Achieved</p>
+                    <h4 class="mb-0">20,000</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="appUser_box11">
+              <div class="card justify-content-center">
+                <div class="card-header p-3 pt-2">
+                  <div class="text-center">
+                    <p class="font-weight-normal text-md mb-2 text-capitalize">Performance: 60%</p>
+                    <div id="gauge_chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="">
+          <div>
+            <h5 class="mb-0 text-dark">Total KPIs Achieved</h5>
+            <div class="days_dtl">
+              <div class="days_dtl1">
+                <ul>
+                  <li>
+                    <p class="font-weight-normal text-sm text-center mb-0 text-capitalize">Total Interactions <span class="font-weight-bold d-block">5000</span></p>
+                  </li>
+                  <li>
+                    <p class="font-weight-normal text-sm text-center mb-0 text-capitalize">Sign Ups <span class="font-weight-bold d-block">2000</span></p>
+                  </li>
+                  <li>
+                    <p class="font-weight-normal text-sm text-center mb-0 text-capitalize">Product Sales <span class="font-weight-bold d-block">2000</span></p>
+                  </li>
+                  <li>
+                    <p class="font-weight-normal text-sm text-center mb-0 text-capitalize">App Downloads <span class="font-weight-bold d-block">1000</span></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="days_dtl2">
+                <div id="stacked-bar-chart"></div>
+                <div id="stacked-bar-chart2"></div>
+                <div id="stacked-bar-chart3"></div>
+                <div id="stacked-bar-chart4"></div>
+              </div>
+            </div>
+          </div>
+          <div class="secMap_legends pos_unset1">
+            <div class="pos_unset2">
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 1<span class="day1_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 2<span class="day2_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 3<span class="day3_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 4<span class="day4_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 5<span class="day5_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 6<span class="day6_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 7<span class="day7_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 8<span class="day8_box"></span></p>
+              <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Day 9<span class="day9_box"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="">
+          <div class="scoreHead">
+            <h5 class="mb-0 text-dark">Average Audit Score</h5>
+            <div class="scoreHeadR">
+              <p class="font-weight-bold text-sm text-center mb-0 text-capitalize">Generate Daywise Report:</p>
+              <div class="input-group input-group-static mb-0">
+                <span class="material-icons-round selectIcon">expand_more</span>
+                <select class="form-control">
+                  <option selected>Select Day</option>
+                  <option>Day 1</option>
+                  <option>Day 2</option>
+                  <option>Day 3</option>
+                  <option>Day 4</option>
+                </select>
+              </div>
+              <button type="button" id="expandPopup1"><span class="material-icons-round">zoom_out_map</span></button>
+            </div>
+          </div>
+          <div class="score_chart1" style="width: 100%; text-align: center;">
+            <div id="audit_score-chart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/perfect-scrollbar.min.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/material-dashboard.min.js"></script>
+
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
+  <!--======= EXPAND CHART SCRIPT START =======-->
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup1').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <!--===== CHARTS START =======-->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  <script>
+    var root = am5.Root.new("gauge_chart");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    var chart = root.container.children.push(
+      am5radar.RadarChart.new(root, {
+        panX: false,
+        panY: false,
+        paddingTop: 14,
+        paddingRight: -10,
+        paddingLeft: -10,
+        paddingBottom: 5,
+        startAngle: 180,
+        endAngle: 360
+      })
+    );
+
+    var axisRenderer = am5radar.AxisRendererCircular.new(root, {
+      innerRadius: -1,
+      strokeOpacity: 1,
+      strokeWidth: 5,
+      minGridDistance: 30,
+      strokeGradient: am5.LinearGradient.new(root, {
+        rotation: 0,
+        stops: [
+          { color: am5.color(0x016dd6) },
+          { color: am5.color(0x016dd6) },
+          { color: am5.color(0x016dd6) },
+          { color: am5.color(0x016dd6) }
+        ]
+      })
+    });
+
+    var xAxis = chart.xAxes.push(
+      am5xy.ValueAxis.new(root, {
+        maxDeviation: 0,
+        min: 0,
+        max: 100,
+        strictMinMax: true,
+        renderer: axisRenderer
+      })
+    );
+
+    xAxis.get("renderer").labels.template.setAll({
+      fontSize: 13,
+      fill: am5.color(0x016dd6)
+    });
+
+    var axisDataItem = xAxis.makeDataItem({});
+    axisDataItem.set("value", 50);
+
+    var bullet = axisDataItem.set("bullet", am5xy.AxisBullet.new(root, {
+      sprite: am5radar.ClockHand.new(root, {
+        radius: am5.percent(80),
+        bottomWidth: 5,
+        pinRadius: 5
+      })
+    }));
+
+    bullet.get("sprite").pin.setAll({
+      fill: am5.color(0x016dd6),
+    });
+
+    bullet.get("sprite").hand.setAll({
+      fill: am5.color(0x016dd6)
+    });
+
+    xAxis.createAxisRange(axisDataItem);
+
+    axisDataItem.get("grid").set("visible", false);
+
+    /* setInterval(() => {
+      axisDataItem.animate({
+        key: "value",
+        to: Math.round(Math.random() * 100),
+        duration: 800,
+        easing: am5.ease.out(am5.ease.cubic)
+      });
+    }, 2000); */
+    chart.appear(1000, 100);
+  </script>
+
+  <script>
+    var root = am5.Root.new("stacked-bar-chart");
+    var myTheme = am5.Theme.new(root);
+    myTheme.rule("Grid", ["base"]).setAll({
+      strokeOpacity: 0.1
+    });
+
+    root.setThemes([
+      am5themes_Animated.new(root),
+      myTheme
+    ]);
+
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: false,
+      wheelY: false,
+      paddingTop: 0,
+      paddingRight: -30,
+      paddingBottom: 0,
+      paddingLeft: 0,
+      layout: root.verticalLayout
+    }));
+
+    chart.set("scrollbarY", am5.Scrollbar.new(root, {
+      orientation: "vertical"
+    }));
+
+    var data = [{
+      "kpivalue": "Total Interactions",
+      "day1": 0,
+      "day2": 1000,
+      "day3": 3000,
+      "day4": 1000,
+      "day5": 600,
+      "day6": 500,
+      "day7": 1000,
+      "day8": 100,
+      "day9": 250,
+      "day10": 300,
+      "day11": 800,
+      "day12": 600,
+      "day13": 800,
+      "day14": 200,
+      "day15": 900
+    }]
+
+    var colors = [am5.color(0x6771dc), am5.color(0x7f67dc), am5.color(0xa366dc), am5.color(0xc767dc), am5.color(0xdc67ce), am5.color(0xdb67ab), am5.color(0xdb6788), am5.color(0xdb6184), am5.color(0xdc8c68), am5.color(0xdc6967), am5.color(0xdc9a68), am5.color(0xdcaf66), am5.color(0xdcd266), am5.color(0xc3db67), am5.color(0xa0dc67)];
+
+    var yRenderer = am5xy.AxisRendererY.new(root, {});
+
+    var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "kpivalue",
+      renderer: yRenderer
+    }));
+
+    yAxis.data.setAll(data);
+
+    var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+      min: 0,
+      /* max: 7700, */
+      strictMinMax: true,
+      renderer: am5xy.AxisRendererX.new(root, {})
+    }));
+    yAxis.get("renderer").labels.template.set("visible", false);
+    xAxis.get("renderer").labels.template.set("visible", false);
+    yAxis.get("renderer").grid.template.set("forceHidden", true);
+    xAxis.get("renderer").grid.template.set("forceHidden", true);
+
+    function makeSeries(name, fieldName, colorIndex) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        baseAxis: yAxis,
+        valueXField: fieldName,
+        categoryYField: "kpivalue"
+      }));
+
+      series.columns.template.setAll({
+        fill: colors[colorIndex],
+        stroke: colors[colorIndex],
+        width: am5.percent(100)
+      });
+
+      series.data.setAll(data);
+      series.appear();
+
+      series.bullets.push(function (root, series, dataItem) {
+        if (dataItem.get("valueX") > 0) {
+          return am5.Bullet.new(root, {
+            sprite: am5.Label.new(root, {
+              text: "{valueX}",
+              fill: root.interfaceColors.get("alternativeText"),
+              centerY: am5.p50,
+              centerX: am5.p50,
+              populateText: true
+            })
+          });
+        } return null;
+      })
+    }
+    makeSeries("Day 1", "day1", 0);
+    makeSeries("Day 2", "day2", 1);
+    makeSeries("Day 3", "day3", 2);
+    makeSeries("Day 4", "day4", 3);
+    makeSeries("Day 5", "day5", 4);
+    makeSeries("Day 6", "day6", 5);
+    makeSeries("Day 7", "day7", 6);
+    makeSeries("Day 8", "day8", 7);
+    makeSeries("Day 9", "day9", 8);
+    makeSeries("Day 10", "day10", 9);
+    makeSeries("Day 11", "day11", 10);
+    makeSeries("Day 12", "day12", 11);
+    makeSeries("Day 13", "day13", 12);
+    makeSeries("Day 14", "day14", 13);
+    makeSeries("Day 15", "day15", 14);
+
+    chart.appear(1000, 100);            
+  </script>
+  
+  <script>
+    var root2 = am5.Root.new("stacked-bar-chart2");
+    var myTheme = am5.Theme.new(root2);
+    myTheme.rule("Grid", ["base"]).setAll({
+      strokeOpacity: 0.1
+    });
+
+    root2.setThemes([
+      am5themes_Animated.new(root2),
+      myTheme
+    ]);
+
+    var chart2 = root2.container.children.push(am5xy.XYChart.new(root2, {
+      panX: false,
+      panY: false,
+      wheelX: false,
+      wheelY: false,
+      paddingTop: 0,
+      paddingRight: -30,
+      paddingBottom: 0,
+      paddingLeft: 0,
+      layout: root2.verticalLayout
+    }));
+
+    chart2.set("scrollbarY", am5.Scrollbar.new(root2, {
+      orientation: "vertical"
+    }));
+
+    var data = [{
+      "kpivalue": "Sign Ups",
+      "day1": 0,
+      "day2": 1000,
+      "day3": 3000,
+      "day4": 1000,
+      "day5": 600,
+      "day6": 500,
+      "day7": 1000,
+      "day8": 100,
+      "day9": 250,
+      "day10": 300,
+      "day11": 800,
+      "day12": 600,
+      "day13": 800,
+      "day14": 200,
+      "day15": 900
+    }]
+
+    var colors = [am5.color(0x6771dc), am5.color(0x7f67dc), am5.color(0xa366dc), am5.color(0xc767dc), am5.color(0xdc67ce), am5.color(0xdb67ab), am5.color(0xdb6788), am5.color(0xdb6184), am5.color(0xdc8c68), am5.color(0xdc6967), am5.color(0xdc9a68), am5.color(0xdcaf66), am5.color(0xdcd266), am5.color(0xc3db67), am5.color(0xa0dc67)];
+
+    var yRenderer = am5xy.AxisRendererY.new(root2, {});
+
+    var yAxis = chart2.yAxes.push(am5xy.CategoryAxis.new(root2, {
+      categoryField: "kpivalue",
+      renderer: yRenderer
+    }));
+
+    yAxis.data.setAll(data);
+
+    var xAxis = chart2.xAxes.push(am5xy.ValueAxis.new(root2, {
+      min: 0,
+      /* max: 7700, */
+      strictMinMax: true,
+      renderer: am5xy.AxisRendererX.new(root2, {})
+    }));
+    yAxis.get("renderer").labels.template.set("visible", false);
+    xAxis.get("renderer").labels.template.set("visible", false);
+    yAxis.get("renderer").grid.template.set("forceHidden", true);
+    xAxis.get("renderer").grid.template.set("forceHidden", true);
+
+    function makeSeries(name, fieldName, colorIndex) {
+      var series = chart2.series.push(am5xy.ColumnSeries.new(root2, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        baseAxis: yAxis,
+        valueXField: fieldName,
+        categoryYField: "kpivalue"
+      }));
+
+      series.columns.template.setAll({
+        fill: colors[colorIndex],
+        stroke: colors[colorIndex],
+        width: am5.percent(100)
+      });
+
+      series.data.setAll(data);
+      series.appear();
+
+      series.bullets.push(function (root2, series, dataItem) {
+        if (dataItem.get("valueX") > 0) {
+          return am5.Bullet.new(root2, {
+            sprite: am5.Label.new(root2, {
+              text: "{valueX}",
+              fill: root2.interfaceColors.get("alternativeText"),
+              centerY: am5.p50,
+              centerX: am5.p50,
+              populateText: true
+            })
+          });
+        } return null;
+      })
+    }
+    makeSeries("Day 1", "day1", 0);
+    makeSeries("Day 2", "day2", 1);
+    makeSeries("Day 3", "day3", 2);
+    makeSeries("Day 4", "day4", 3);
+    makeSeries("Day 5", "day5", 4);
+    makeSeries("Day 6", "day6", 5);
+    makeSeries("Day 7", "day7", 6);
+    makeSeries("Day 8", "day8", 7);
+    makeSeries("Day 9", "day9", 8);
+    makeSeries("Day 10", "day10", 9);
+    makeSeries("Day 11", "day11", 10);
+    makeSeries("Day 12", "day12", 11);
+    makeSeries("Day 13", "day13", 12);
+    makeSeries("Day 14", "day14", 13);
+    makeSeries("Day 15", "day15", 14);
+
+    chart2.appear(1000, 100);            
+  </script>
+  
+  <script>
+    var root3 = am5.Root.new("stacked-bar-chart3");
+    var myTheme = am5.Theme.new(root3);
+    myTheme.rule("Grid", ["base"]).setAll({
+      strokeOpacity: 0.1
+    });
+
+    root3.setThemes([
+      am5themes_Animated.new(root3),
+      myTheme
+    ]);
+
+    var chart3 = root3.container.children.push(am5xy.XYChart.new(root3, {
+      panX: false,
+      panY: false,
+      wheelX: false,
+      wheelY: false,
+      paddingTop: 0,
+      paddingRight: -30,
+      paddingBottom: 0,
+      paddingLeft: 0,
+      layout: root3.verticalLayout
+    }));
+
+    chart3.set("scrollbarY", am5.Scrollbar.new(root3, {
+      orientation: "vertical"
+    }));
+
+    var data = [{
+      "kpivalue": "Product Sales",
+      "day1": 0,
+      "day2": 1000,
+      "day3": 3000,
+      "day4": 1000,
+      "day5": 600,
+      "day6": 500,
+      "day7": 1000,
+      "day8": 100,
+      "day9": 250,
+      "day10": 300,
+      "day11": 800,
+      "day12": 600,
+      "day13": 800,
+      "day14": 200,
+      "day15": 900
+    }]
+
+    var colors = [am5.color(0x6771dc), am5.color(0x7f67dc), am5.color(0xa366dc), am5.color(0xc767dc), am5.color(0xdc67ce), am5.color(0xdb67ab), am5.color(0xdb6788), am5.color(0xdb6184), am5.color(0xdc8c68), am5.color(0xdc6967), am5.color(0xdc9a68), am5.color(0xdcaf66), am5.color(0xdcd266), am5.color(0xc3db67), am5.color(0xa0dc67)];
+
+    var yRenderer = am5xy.AxisRendererY.new(root3, {});
+
+    var yAxis = chart3.yAxes.push(am5xy.CategoryAxis.new(root3, {
+      categoryField: "kpivalue",
+      renderer: yRenderer
+    }));
+
+    yAxis.data.setAll(data);
+
+    var xAxis = chart3.xAxes.push(am5xy.ValueAxis.new(root3, {
+      min: 0,
+      /* max: 7700, */
+      strictMinMax: true,
+      renderer: am5xy.AxisRendererX.new(root3, {})
+    }));
+    yAxis.get("renderer").labels.template.set("visible", false);
+    xAxis.get("renderer").labels.template.set("visible", false);
+    yAxis.get("renderer").grid.template.set("forceHidden", true);
+    xAxis.get("renderer").grid.template.set("forceHidden", true);
+
+    function makeSeries(name, fieldName, colorIndex) {
+      var series = chart3.series.push(am5xy.ColumnSeries.new(root3, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        baseAxis: yAxis,
+        valueXField: fieldName,
+        categoryYField: "kpivalue"
+      }));
+
+      series.columns.template.setAll({
+        fill: colors[colorIndex],
+        stroke: colors[colorIndex],
+        width: am5.percent(100)
+      });
+
+      series.data.setAll(data);
+      series.appear();
+
+      series.bullets.push(function (root3, series, dataItem) {
+        if (dataItem.get("valueX") > 0) {
+          return am5.Bullet.new(root3, {
+            sprite: am5.Label.new(root3, {
+              text: "{valueX}",
+              fill: root3.interfaceColors.get("alternativeText"),
+              centerY: am5.p50,
+              centerX: am5.p50,
+              populateText: true
+            })
+          });
+        } return null;
+      })
+    }
+    makeSeries("Day 1", "day1", 0);
+    makeSeries("Day 2", "day2", 1);
+    makeSeries("Day 3", "day3", 2);
+    makeSeries("Day 4", "day4", 3);
+    makeSeries("Day 5", "day5", 4);
+    makeSeries("Day 6", "day6", 5);
+    makeSeries("Day 7", "day7", 6);
+    makeSeries("Day 8", "day8", 7);
+    makeSeries("Day 9", "day9", 8);
+    makeSeries("Day 10", "day10", 9);
+    makeSeries("Day 11", "day11", 10);
+    makeSeries("Day 12", "day12", 11);
+    makeSeries("Day 13", "day13", 12);
+    makeSeries("Day 14", "day14", 13);
+    makeSeries("Day 15", "day15", 14);
+
+    chart3.appear(1000, 100);            
+  </script>
+  
+  <script>
+    var root4 = am5.Root.new("stacked-bar-chart4");
+    var myTheme = am5.Theme.new(root4);
+    myTheme.rule("Grid", ["base"]).setAll({
+      strokeOpacity: 0.1
+    });
+
+    root4.setThemes([
+      am5themes_Animated.new(root4),
+      myTheme
+    ]);
+
+    var chart4 = root4.container.children.push(am5xy.XYChart.new(root4, {
+      panX: false,
+      panY: false,
+      wheelX: false,
+      wheelY: false,
+      paddingTop: 0,
+      paddingRight: -30,
+      paddingBottom: 0,
+      paddingLeft: 0,
+      layout: root4.verticalLayout
+    }));
+
+    chart4.set("scrollbarY", am5.Scrollbar.new(root4, {
+      orientation: "vertical"
+    }));
+
+    var data = [{
+      "kpivalue": "App Downloads",
+      "day1": 0,
+      "day2": 1000,
+      "day3": 3000,
+      "day4": 1000,
+      "day5": 600,
+      "day6": 500,
+      "day7": 1000,
+      "day8": 100,
+      "day9": 250,
+      "day10": 300,
+      "day11": 800,
+      "day12": 600,
+      "day13": 800,
+      "day14": 200,
+      "day15": 900
+    }]
+
+    var colors = [am5.color(0x6771dc), am5.color(0x7f67dc), am5.color(0xa366dc), am5.color(0xc767dc), am5.color(0xdc67ce), am5.color(0xdb67ab), am5.color(0xdb6788), am5.color(0xdb6184), am5.color(0xdc8c68), am5.color(0xdc6967), am5.color(0xdc9a68), am5.color(0xdcaf66), am5.color(0xdcd266), am5.color(0xc3db67), am5.color(0xa0dc67)];
+
+    var yRenderer = am5xy.AxisRendererY.new(root4, {});
+
+    var yAxis = chart4.yAxes.push(am5xy.CategoryAxis.new(root4, {
+      categoryField: "kpivalue",
+      renderer: yRenderer
+    }));
+
+    yAxis.data.setAll(data);
+
+    var xAxis = chart4.xAxes.push(am5xy.ValueAxis.new(root4, {
+      min: 0,
+      /* max: 7700, */
+      strictMinMax: true,
+      renderer: am5xy.AxisRendererX.new(root4, {})
+    }));
+    yAxis.get("renderer").labels.template.set("visible", false);
+    xAxis.get("renderer").labels.template.set("visible", false);
+    yAxis.get("renderer").grid.template.set("forceHidden", true);
+    xAxis.get("renderer").grid.template.set("forceHidden", true);
+
+    function makeSeries(name, fieldName, colorIndex) {
+      var series = chart4.series.push(am5xy.ColumnSeries.new(root4, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        baseAxis: yAxis,
+        valueXField: fieldName,
+        categoryYField: "kpivalue"
+      }));
+
+      series.columns.template.setAll({
+        fill: colors[colorIndex],
+        stroke: colors[colorIndex],
+        width: am5.percent(100)
+      });
+
+      series.data.setAll(data);
+      series.appear();
+
+      series.bullets.push(function (root4, series, dataItem) {
+        if (dataItem.get("valueX") > 0) {
+          return am5.Bullet.new(root4, {
+            sprite: am5.Label.new(root4, {
+              text: "{valueX}",
+              fill: root4.interfaceColors.get("alternativeText"),
+              centerY: am5.p50,
+              centerX: am5.p50,
+              populateText: true
+            })
+          });
+        } return null;
+      })
+    }
+    makeSeries("Day 1", "day1", 0);
+    makeSeries("Day 2", "day2", 1);
+    makeSeries("Day 3", "day3", 2);
+    makeSeries("Day 4", "day4", 3);
+    makeSeries("Day 5", "day5", 4);
+    makeSeries("Day 6", "day6", 5);
+    makeSeries("Day 7", "day7", 6);
+    makeSeries("Day 8", "day8", 7);
+    makeSeries("Day 9", "day9", 8);
+    makeSeries("Day 10", "day10", 9);
+    makeSeries("Day 11", "day11", 10);
+    makeSeries("Day 12", "day12", 11);
+    makeSeries("Day 13", "day13", 12);
+    makeSeries("Day 14", "day14", 13);
+    makeSeries("Day 15", "day15", 14);
+
+    chart4.appear(1000, 100);            
+  </script>
+  
+  <script>
+    var root_audit = am5.Root.new("audit_score-chart");
+    root_audit.setThemes([
+      am5themes_Animated.new(root_audit)
+    ]);
+    var chart_root_audit = root_audit.container.children.push(am5xy.XYChart.new(root_audit, {
+      panX: true,
+      panY: true,
+      wheelX: "panX",
+      wheelY: "zoomX",
+      pinchZoomX: true,
+      paddingLeft: 6,
+      paddingBottom: 0,
+      paddingRight: 1
+    }));
+    var cursor = chart_root_audit.set("cursor", am5xy.XYCursor.new(root_audit, {}));
+    cursor.lineY.set("visible", false);
+    var xRenderer = am5xy.AxisRendererX.new(root_audit, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+      oversizedBehavior: "wrap",
+      maxWidth: 77
+    });
+    xRenderer.labels.template.setAll({
+      rotation: -48,
+      centerY: am5.p50,
+      centerX: am5.p100,
+      paddingRight: 0
+    });
+
+    xRenderer.grid.template.setAll({
+      location: 1
+    })
+
+    var xAxis = chart_root_audit.xAxes.push(am5xy.CategoryAxis.new(root_audit, {
+      maxDeviation: 0.3,
+      categoryField: "day",
+      renderer: xRenderer,
+      tooltip: am5.Tooltip.new(root_audit, {})
+    }));
+    xAxis.get("tooltip").label.setAll({
+      fontSize: 10
+    });
+
+    var yRenderer = am5xy.AxisRendererY.new(root_audit, {
+      strokeOpacity: 0.1,
+    })
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+      oversizedBehavior: "wrap",
+      maxWidth: 75
+    });
+    var yAxis = chart_root_audit.yAxes.push(am5xy.ValueAxis.new(root_audit, {
+      maxDeviation: 0.3,
+      min: 0,
+      max: 10,
+      strictMinMax: true,
+      renderer: yRenderer
+    }));
+    var legend = chart_root_audit.children.push(am5.Legend.new(root_audit, {
+      centerX: am5.p50,
+      x: am5.p50
+    }));
+
+    var seriesColumn = chart_root_audit.series.push(am5xy.ColumnSeries.new(root_audit, {
+      name: "Series 1",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value",
+      sequencedInterpolation: true,
+      categoryXField: "day",
+      tooltip: am5.Tooltip.new(root_audit, { labelText: "{valueY}" })
+    }));
+
+    seriesColumn.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
+    seriesColumn.bullets.push(function () {
+      return am5.Bullet.new(root_audit, {
+        locationY: 0.5,
+        sprite: am5.Label.new(root_audit, {
+          text: "{valueY}",
+          fontSize: 12,
+          fill: root_audit.interfaceColors.get("alternativeText"),
+          centerY: am5.percent(50),
+          centerX: am5.percent(50),
+          populateText: true
+        })
+      });
+    });
+
+    legend.data.push(seriesColumn);
+
+    seriesColumn.columns.template.adapters.add("fill", function (fill, target) {
+      const index = seriesColumn.columns.indexOf(target);
+      const colors = [am5.color(0x6771dc), am5.color(0x7f67dc), am5.color(0xa366dc), am5.color(0xc767dc), am5.color(0xdc67ce), am5.color(0xdb67ab), am5.color(0xdb6788), am5.color(0xdc6967), am5.color(0xdc8c68)];
+      return colors[index % colors.length];
+    });
+
+    seriesColumn.columns.template.adapters.add("stroke", function (stroke, target) {
+      return chart_root_audit.get("colors").getIndex(seriesColumn.columns.indexOf(target));
+    });
+
+    // Set data
+    var data = [{
+      day: "Day 1",
+      value: 1.2
+    }, {
+      day: "Day 2",
+      value: 7.7
+    }, {
+      day: "Day 3",
+      value: 3.9
+    }, {
+      day: "Day 4",
+      value: 5.2
+    }, {
+      day: "Day 5",
+      value: 7.1
+    }, {
+      day: "Day 6",
+      value: 8.5
+    }, {
+      day: "Day 7",
+      value: 4.2
+    }, {
+      day: "Day 8",
+      value: 8.6
+    }, {
+      day: "Day 9",
+      value: 9.3
+    }];
+    xAxis.data.setAll(data);
+    seriesColumn.data.setAll(data);
+    seriesColumn.appear(1000);
+    chart_root_audit.appear(1000, 100);
+  </script>
+</body>
+</html>
+  

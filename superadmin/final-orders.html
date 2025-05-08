@@ -226,7 +226,7 @@
                 <div class="filter_status filter_1 mx-0">
                   <div class="input-group input-group-static mb-0">
                     <label class="m-0">Media Buyer</label>
-                    <select class="form-control">
+                    <select class="form-control max-width-500 max-width-unset">
                       <option selected>All</option>
                       <option>John Doe</option>
                       <option>Buyer 2</option>
@@ -235,7 +235,7 @@
                   </div>
                   <div class="input-group input-group-static mb-0">
                     <label class="m-0">Media Seller</label>
-                    <select class="form-control">
+                    <select class="form-control max-width-500 max-width-unset">
                       <option selected>All</option>
                       <option>John Doe</option>
                       <option>Buyer 2</option>
@@ -244,7 +244,7 @@
                   </div>
                   <div class="input-group input-group-static mb-0">
                     <label class="m-0">Ordered Date</label>
-                    <input class="form-control" type="text" name="datesrange" placeholder="Start Date - End Date">
+                    <input class="form-control max-width-500 max-width-unset" type="text" name="datesrange" placeholder="Start Date - End Date">
                   </div>
                 </div>
                 <div class="campaign_list">
@@ -728,11 +728,12 @@
       opens: 'left',
       autoUpdateInput: false,
       locale: {
-        cancelLabel: 'Clear'
+        cancelLabel: 'Clear',
+        format: 'MMM DD, YYYY'
       }
     });
     $('input[name="datesrange"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        $(this).val(picker.startDate.format('MMM DD, YYYY') + ' - ' + picker.endDate.format('MMM DD, YYYY'));
     });
     $('input[name="datesrange"]').on('cancel.daterangepicker', function(ev, picker) {
         $(this).val('');
