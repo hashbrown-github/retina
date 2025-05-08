@@ -1,0 +1,305 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Store Location Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="../images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item active" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>Retail Tracker</h3>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link active" href="retail-audits.html">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Retail Audits</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="reports.html">
+              <span class="material-symbols-outlined link_icon">analytics</span>
+              <span class="link_text">Reports</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="../billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="../help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="../images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="campaign_box">
+          <div class="analyticsBox_0">
+            <div class="btlLocationDtl">
+              <div class="btlLoc_dtl2">
+                <div class="dtl_line0">
+                  <h3 class="mb-0">PoS Compliance</h3>
+                  <button id="addTd">Add TD</button>
+                  <div class="btlLoc_dtl3 mt-0">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th width="50%">Item</th>
+                          <th width="20%">Quantity Met</th>
+                          <th width="30%">PoS Compliance</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr id="myRow">
+                          <td>
+                            <p>Leaflet</p>
+                            <div class="locaImg">
+                              <div class="locaImg1">
+                                <div class="imgVideo">
+                                  <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+                                </div>
+                              </div>
+                              <span>07 Nov, 2024, 11:00 AM</span>
+                              <p><strong>Remarks:-</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                            </div>
+                          </td>
+                          <td><p><strong>4</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Posters</p></td>
+                          <td><p><strong>5</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Roll-Up Banners</p></td>
+                          <td><p><strong>10</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Standees</p></td>
+                          <td><p><strong>13</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Tabletop Holders</p></td>
+                          <td><p><strong>12</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Danglers</p></td>
+                          <td><p><strong>2</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Shelf Strips/Talkers</p></td>
+                          <td><p><strong>7</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Floor Stickers</p></td>
+                          <td><p><strong>12</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Costume</p></td>
+                          <td><p><strong>20</strong></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  <script>
+    $(document).ready(function () {
+      var tdElement = $('<td rowspan="9"><div id="compliance_chart"></div></td>');
+
+      // Append to the last <tr> in the table
+      $('table tr:first-child:last').append(tdElement);
+
+      // Now initialize the chart AFTER the div exists
+      initializeComplianceChart();
+    });
+
+    function initializeComplianceChart() {
+      var root = am5.Root.new("compliance_chart");
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+
+      var chart = root.container.children.push(
+        am5radar.RadarChart.new(root, {
+          panX: false,
+          panY: false,
+          paddingTop: 14,
+          paddingRight: -10,
+          paddingLeft: -10,
+          paddingBottom: 5,
+          startAngle: 180,
+          endAngle: 360
+        })
+      );
+
+      var axisRenderer = am5radar.AxisRendererCircular.new(root, {
+        innerRadius: -1,
+        strokeOpacity: 1,
+        strokeWidth: 7,
+        minGridDistance: 50,
+        strokeGradient: am5.LinearGradient.new(root, {
+          rotation: 0,
+          stops: [
+            { color: am5.color(0x000000) },
+            { color: am5.color(0x000000) },
+            { color: am5.color(0x000000) },
+            { color: am5.color(0x000000) }
+          ]
+        })
+
+      });
+
+      var xAxis = chart.xAxes.push(
+        am5xy.ValueAxis.new(root, {
+          maxDeviation: 0,
+          min: 0,
+          max: 100,
+          strictMinMax: true,
+          renderer: axisRenderer
+        })
+      );
+
+      xAxis.get("renderer").labels.template.setAll({
+        fontSize: 13,
+        fill: am5.color(0x000000)
+      });
+
+      var axisDataItem = xAxis.makeDataItem({});
+      axisDataItem.set("value", 50);
+
+      var bullet = axisDataItem.set("bullet", am5xy.AxisBullet.new(root, {
+        sprite: am5radar.ClockHand.new(root, {
+          radius: am5.percent(80),
+          bottomWidth: 7,
+          pinRadius: 7
+        })
+      }));
+
+      bullet.get("sprite").pin.setAll({
+        fill: am5.color(0x000000),
+      });
+
+      bullet.get("sprite").hand.setAll({
+        fill: am5.color(0x000000)
+      });
+
+      xAxis.createAxisRange(axisDataItem);
+
+      axisDataItem.get("grid").set("visible", false);
+
+      /* setInterval(() => {
+        axisDataItem.animate({
+          key: "value",
+          to: Math.round(Math.random() * 100),
+          duration: 800,
+          easing: am5.ease.out(am5.ease.cubic)
+        });
+      }, 2000);
+      */
+      chart.appear(1000, 100);
+    }
+  </script>
+</body>
+</html>

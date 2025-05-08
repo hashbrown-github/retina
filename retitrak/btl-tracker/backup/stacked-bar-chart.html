@@ -1,0 +1,236 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Activation Analytics</title>
+  <meta name="title" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <!-- Styles -->
+  <style>
+    #stacked-bar-chart {
+      width: 1320px;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="stacked-bar-chart"></div>
+
+
+  <!-- Resources -->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  
+<script>
+  var root = am5.Root.new("stacked-bar-chart");
+
+  var myTheme = am5.Theme.new(root);
+
+  myTheme.rule("Grid", ["base"]).setAll({
+    strokeOpacity: 0.1
+  });
+
+  root.setThemes([
+    am5themes_Animated.new(root),
+    myTheme
+  ]);
+
+  var chart = root.container.children.push(am5xy.XYChart.new(root, {
+    panX: false,
+    panY: false,
+    wheelX: false,
+    wheelY: false,
+    paddingLeft: 0,
+    layout: root.verticalLayout
+  }));
+
+  chart.set("scrollbarY", am5.Scrollbar.new(root, {
+    orientation: "vertical"
+  }));
+
+  var data = [{
+    "kpivalue": "App Downloads",
+    "day1": 1,
+    "day2": 1,
+    "day3": 2,
+    "day4": 3,
+    "day5": 1,
+    "day6": 1,
+    "day7": 1
+  }, {
+    "kpivalue": "Product Sales",
+    "day1": 1,
+    "day2": 1,
+    "day3": 1,
+    "day4": 1,
+    "day5": 2,
+    "day6": 1,
+    "day7": 3
+  }, {
+    "kpivalue": "Sign Ups",
+    "day1": 2,
+    "day2": 1,
+    "day3": 2,
+    "day4": 1,
+    "day5": 2,
+    "day6": 1,
+    "day7": 1
+  }, {
+    "kpivalue": "Total Interactions",
+    "day1": 1,
+    "day2": 1,
+    "day3": 2,
+    "day4": 1,
+    "day5": 2,
+    "day6": 1,
+    "day7": 2
+  }]
+
+  var yRenderer = am5xy.AxisRendererY.new(root, {});
+  var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+    categoryField: "kpivalue",
+    renderer: yRenderer
+
+  }));
+
+  yRenderer.grid.template.setAll({
+    location: 1
+  })
+
+  yAxis.data.setAll(data);
+
+  var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+    min: 0,
+    max: 10,
+    maxPrecision: 0,
+    renderer: am5xy.AxisRendererX.new(root, {
+      minGridDistance: 10,
+      strokeOpacity: 0.1
+    })
+  }));
+  yAxis.get("renderer").labels.template.set("visible", false);
+
+  function makeSeries(name, fieldName) {
+    var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+      name: name,
+      stacked: true,
+      xAxis: xAxis,
+      yAxis: yAxis,
+      baseAxis: yAxis,
+      valueXField: fieldName,
+      categoryYField: "kpivalue"
+    }));
+    series.data.setAll(data);
+    series.appear();
+
+    series.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        sprite: am5.Label.new(root, {
+          text: "{valueX}",
+          fill: root.interfaceColors.get("alternativeText"),
+          centerY: am5.p50,
+          centerX: am5.p50,
+          populateText: true
+        })
+      });
+    });
+  }
+
+  makeSeries("Day 1", "day1");
+  makeSeries("Day 2", "day2");
+  makeSeries("Day 3", "day3");
+  makeSeries("Day 4", "day4");
+  makeSeries("Day 5", "day5");
+  makeSeries("Day 6", "day6");
+  makeSeries("Day 7", "day7");
+
+  chart.appear(1000, 100);            
+</script>
+<!-- <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script>
+  am4core.useTheme(am4themes_animated);
+
+  // create chart
+  var chart = am4core.create("gauge", am4charts.GaugeChart);
+  chart.innerRadius = -4;
+  chart.padding(-16, 5, 0, 0); 
+  
+  var axis = chart.xAxes.push(new am4charts.CategoryAxis());
+  axis.dataFields.category = "category";
+  axis.data = [{
+    category: "0"
+  }, {
+    category: "20"
+  }, {
+    category: "40"
+  }, {
+    category: "60"
+  }, {
+    category: "80"
+  }, {
+    category: "100"
+  }];
+
+
+  axis.renderer.labels.template.radius = 2;
+  axis.renderer.labels.template.fontSize = 12;
+  axis.renderer.labels.template.padding(0, 0, 0, 0); 
+
+  axis.renderer.labels.template.location = 0.5;
+  axis.renderer.grid.template.location = 0.5;
+  axis.startLocation = 0.5;
+  axis.endLocation = 0.5;
+
+
+  var range0 = axis.axisRanges.create();
+  range0.category = "0";
+  range0.endCategory = "40";
+  range0.axisFill.fillOpacity = 1;
+  range0.axisFill.fill = am4core.color("#000000");
+  range0.axisFill.zIndex = -1;
+  range0.locations.category = 0.5;
+  range0.locations.endCategory = 0.5;
+  range0.label.text = "";
+  range0.grid.disabled = true;
+
+  var range1 = axis.axisRanges.create();
+  range1.category = "40";
+  range1.endCategory = "80";
+  range1.axisFill.fillOpacity = 1;
+  range1.axisFill.fill = am4core.color("#000000");
+  range1.axisFill.zIndex = -1;
+  range1.locations.category = 0.5;
+  range1.locations.endCategory = 0.5;
+  range1.label.text = "";
+  range1.grid.disabled = true;
+
+  var range2 = axis.axisRanges.create();
+  range2.category = "80";
+  range2.endCategory = "100";
+  range2.axisFill.fillOpacity = 1;
+  range2.axisFill.fill = am4core.color("#000000");
+  range2.axisFill.zIndex = -1;
+  range2.locations.category = 0.5;
+  range2.locations.endCategory = 0.5;
+  range2.label.text = "";
+  range2.grid.disabled = true;
+
+  var hand = chart.hands.push(new am4charts.ClockHand());
+  hand.value = "60";
+  hand.radius = am4core.percent(80); // Adjust the length of the hand
+</script> -->
+</body>
+</html>

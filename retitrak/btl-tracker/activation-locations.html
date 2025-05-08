@@ -1,0 +1,423 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Activation Locations</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="../images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item active" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>BTL Tracker</h3>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link active" href="activations.html">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Activations</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="activation-analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="reports.html">
+              <span class="material-symbols-outlined link_icon">analytics</span>
+              <span class="link_text">Reports</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="../billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="../help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="../images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="activations.html">Activations</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Activation Locations</li>
+          </ol>
+        </nav>
+        <div class="campaign_box">
+          <div class="campaign_dtl">
+            <h3 class="mb-2">My First Activation</h3>
+            <p class="mb-2">Starts 07 Nov, 2024</p>
+            <div class="frequency_div">5 Days Duration<span class="campaign_type camp_type3 ms-2">BTL</span></div>
+          </div>
+          <div class="campaign_tabs mt-3">
+            <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="active-tab" data-bs-toggle="tab" data-bs-target="#active-tab-pane" type="button" role="tab" aria-controls="active-tab-pane" aria-selected="true">Active</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="upcoming-tab" data-bs-toggle="tab" data-bs-target="#upcoming-tab-pane" type="button" role="tab" aria-controls="upcoming-tab-pane" aria-selected="false">Upcoming</button>
+              </li>
+            </ul>
+            <div class="tab-content campaignTabs_con" id="myTabContent">
+              <div class="tab-pane fade show active" id="active-tab-pane" role="tabpanel" aria-labelledby="active-tab" tabindex="0">
+                <div class="search_filters">
+                  <div class="filter_div filter_1">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <div class="date_flex">
+                            <input class="form_control date" type="text" name="startdate" placeholder="Search by Location">
+                            <button type="button" class="input-group-btn">
+                              <span class="material-symbols-outlined">search</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_2">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected="" disabled="">State</option>
+                            <option>State 1</option>
+                            <option>State 2</option>
+                            <option>State 3</option>
+                            <option>State 4</option>
+                            <option>State 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_3">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected="" disabled="">LGA</option>
+                            <option>LGA 1</option>
+                            <option>LGA 2</option>
+                            <option>LGA 3</option>
+                            <option>LGA 4</option>
+                            <option>LGA 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected="" disabled="">City</option>
+                            <option>City 1</option>
+                            <option>City 2</option>
+                            <option>City 3</option>
+                            <option>City 4</option>
+                            <option>City 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5">
+                    <button type="button" class="blue_btn">Search</button>
+                  </div>
+                </div>
+                <div class="horiz_cards">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="card_body">
+                          <span class="badge badge-success mb-2">Completed</span>
+                          <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+                          <p class="mb-2">Activation: <span>Brand Activation</span></p>
+                          <p class="mb-0"><span>07 Nov, 2024</span>, <span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="card_body">
+                          <span class="badge badge-grey mb-2">Not Started</span>
+                          <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+                          <p class="mb-2">Activation: <span>Brand Activation</span></p>
+                          <p class="mb-0"><span>07 Nov, 2024</span>, <span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="card_body">
+                          <span class="badge badge-scondary mb-2">In Progress</span>
+                          <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+                          <p class="mb-2">Activation: <span>Brand Activation</span></p>
+                          <p class="mb-0"><span>07 Nov, 2024</span>, <span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="card_body">
+                          <span class="badge badge-danger mb-2">Overdue</span>
+                          <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+                          <p class="mb-2">Activation: <span>Brand Activation</span></p>
+                          <p class="mb-0"><span>07 Nov, 2024</span>, <span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="upcoming-tab-pane" role="tabpanel" aria-labelledby="upcoming-tab" tabindex="0">
+                <div class="search_filters">
+                  <div class="filter_div filter_1">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <div class="date_flex">
+                            <input class="form_control date" type="text" name="startdate" placeholder="Search by Location">
+                            <span class="input-group-btn">
+                              <span class="material-symbols-outlined">search</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_2">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected="" disabled="">State</option>
+                            <option>State 1</option>
+                            <option>State 2</option>
+                            <option>State 3</option>
+                            <option>State 4</option>
+                            <option>State 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_3">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected="" disabled="">LGA</option>
+                            <option>LGA 1</option>
+                            <option>LGA 2</option>
+                            <option>LGA 3</option>
+                            <option>LGA 4</option>
+                            <option>LGA 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected="" disabled="">City</option>
+                            <option>City 1</option>
+                            <option>City 2</option>
+                            <option>City 3</option>
+                            <option>City 4</option>
+                            <option>City 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5">
+                    <button type="button" class="blue_btn">Search</button>
+                  </div>
+                </div>
+                <div class="horiz_cards">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="card_body">
+                          <span class="badge badge-grey mb-2">Not Started</span>
+                          <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+                          <p class="mb-2">Activation: <span>Brand Activation</span></p>
+                          <p class="mb-0"><span>07 Nov, 2024</span>, <span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="card_body">
+                          <span class="badge badge-grey mb-2">Not Started</span>
+                          <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+                          <p class="mb-2">Activation: <span>Brand Activation</span></p>
+                          <p class="mb-0"><span>07 Nov, 2024</span>, <span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="card_body">
+                          <span class="badge badge-grey mb-2">Not Started</span>
+                          <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+                          <p class="mb-2">Activation: <span>Brand Activation</span></p>
+                          <p class="mb-0"><span>07 Nov, 2024</span>, <span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="card_body">
+                          <span class="badge badge-grey mb-2">Not Started</span>
+                          <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+                          <p class="mb-2">Activation: <span>Brand Activation</span></p>
+                          <p class="mb-0"><span>07 Nov, 2024</span>, <span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="noFoundInner">
+          <img src="../images/location-not-found.svg" alt="Locations not Found" />
+          <h3>No Locations Found</h3>
+          <p>reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
+          <a href="add-activation.html" class="blue_btn">Start Activation</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+</body>
+</html>

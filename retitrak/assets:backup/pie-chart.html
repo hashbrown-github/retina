@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pie Chart | Retitrak</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="title" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+#pie_chart {
+  width: 100%;
+  height: 350px;
+}
+/* .am5-layer-30 {
+  display: none;
+} */
+.secMap_legends {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pos_unset2 {
+  display: flex;
+  gap: 15px;
+  padding: 4px 10px;
+  padding-bottom: 3px;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.secMap_legends p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+.secMap_legends span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 1px;
+  position: relative;
+  top: -1px;
+}
+.yes_box {
+  background-color: #ACC7FF;
+}
+.no_box {
+  background-color: #DDD8F5;
+}
+.null_box {
+  background-color: #DDE8FF;
+}
+</style>
+</head>
+<body>
+  <div id="pie_chart"></div>
+  <!-- <div class="secMap_legends">
+    <div class="pos_unset2">
+      <p>Yes<span class="yes_box"></span></p>
+      <p>No<span class="no_box"></span></p>
+      <p>N/A<span class="null_box"></span></p>
+    </div>
+  </div> -->
+
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  <script>
+    am5.ready(function () {
+      var root = am5.Root.new("pie_chart");
+
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+      }));
+
+      // Create series
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category",
+        alignLabels: false
+      }));
+
+      // Set slice colors based on category
+      series.slices.template.adapters.add("fill", function (fill, target) {
+        var category = target.dataItem.get("category");
+        if (category === "Yes") return am5.color(0xACC7FF);
+        if (category === "No") return am5.color(0xDDD8F5);
+        if (category === "N/A") return am5.color(0xDDE8FF);
+        return fill;
+      });
+
+      series.slices.template.adapters.add("stroke", function (stroke, target) {
+        var category = target.dataItem.get("category");
+        if (category === "Yes") return am5.color(0xACC7FF);
+        if (category === "No") return am5.color(0xDDD8F5);
+        if (category === "N/A") return am5.color(0xDDE8FF);
+        return stroke;
+      });
+
+      // Label styling inside the pie chart
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight: 600,
+        text: "{value}%", // Only inside pie chart
+        inside: true,
+        radius: 40,
+        fill: am5.color(0x000000)
+      });
+
+      // Remove ticks for a cleaner look
+      series.ticks.template.set("visible", false);
+
+      // Set data
+      series.data.setAll([
+        { value: 66.67, category: "Yes" },
+        { value: 23.33, category: "No" },
+        { value: 10, category: "N/A" },
+      ]);
+
+      // Add legend
+      var legend = chart.children.push(am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50
+      }));
+
+      // Ensure legend shows only category names (no percentages)
+      legend.labels.template.setAll({
+        text: "{category}", // Display only the category name
+        populateText: true 
+      });
+
+      // Add spacing between legend items
+      legend.itemContainers.template.setAll({
+        paddingBottom: 5,  // Adjust spacing if needed
+        paddingTop: 5,
+        paddingRight: 10
+      });
+
+      // Bind legend to series dataItems
+      legend.data.setAll(series.dataItems);
+
+    });
+  </script>
+<!-- <script>
+  am5.ready(function () {
+      var root = am5.Root.new("pie_chart");
+
+      root.setThemes([
+          am5themes_Animated.new(root)
+      ]);
+
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+          layout: root.verticalLayout
+      }));
+
+      // Create series
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+          valueField: "value",
+          categoryField: "category",
+          alignLabels: false
+      }));
+
+      // Set slice colors based on category
+      series.slices.template.adapters.add("fill", function (fill, target) {
+          var category = target.dataItem.get("category");
+          if (category === "Yes") return am5.color(0xACC7FF);
+          if (category === "No") return am5.color(0xDDD8F5);
+          if (category === "N/A") return am5.color(0xDDE8FF);
+          return fill;
+      });
+
+      series.slices.template.adapters.add("stroke", function (stroke, target) {
+          var category = target.dataItem.get("category");
+          if (category === "Yes") return am5.color(0xACC7FF);
+          if (category === "No") return am5.color(0xDDD8F5);
+          if (category === "N/A") return am5.color(0xDDE8FF);
+          return stroke;
+      });
+
+      // Label styling inside the pie chart
+      series.labels.template.setAll({
+          fontSize: 12,
+          fontWeight: 600,
+          text: "{value}%", // Only inside pie chart
+          inside: true,
+          radius: 40,
+          fill: am5.color(0x000000)
+      });
+
+      // Remove ticks for a cleaner look
+      series.ticks.template.set("visible", false);
+
+      // Set data
+      series.data.setAll([
+          { value: 66.67, category: "Yes" },
+          { value: 23.33, category: "No" },
+          { value: 10, category: "N/A" },
+      ]);
+
+      // REMOVE OR COMMENT OUT THE LEGEND SECTION
+      /*
+      var legend = chart.children.push(am5.Legend.new(root, {
+          centerX: am5.p50,
+          x: am5.p50
+      }));
+
+      legend.labels.template.setAll({
+          text: "{category}",
+          fontSize: 14
+      });
+
+      legend.itemContainers.template.setAll({
+          paddingBottom: 5,
+          paddingTop: 5,
+          paddingRight: 10
+      });
+
+      legend.data.setAll(series.dataItems);
+      */
+
+  });
+</script> -->
+
+
+
+
+  <!-- <script>
+    am5.ready(function () {
+      var root = am5.Root.new("pie_chart");
+  
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+  
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+      }));
+  
+      // Create series
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category",
+        alignLabels: false
+      })
+      );
+  
+      series.slices.template.adapters.add("fill", function (fill, target) {
+        if (target.dataItem.get("category") == "Yes") {
+          return am5.color(0xACC7FF);
+        }
+        else if (target.dataItem.get("category") == "No") {
+          return am5.color(0xDDD8F5);
+        }
+        else if (target.dataItem.get("category") == "N/A") {
+          return am5.color(0xDDE8FF);
+        }
+        else {
+          return fill;
+        }
+      });
+  
+      series.slices.template.adapters.add("stroke", function (stroke, target) {
+        if (target.dataItem.get("category") == "Yes") {
+          return am5.color(0xACC7FF);
+        }
+        else if (target.dataItem.get("category") == "No") {
+          return am5.color(0xDDD8F5);
+        }
+        else if (target.dataItem.get("category") == "N/A") {
+          return am5.color(0xDDE8FF);
+        }
+        else {
+          return stroke;
+        }
+      });
+  
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight: 600,
+        text: "{value}%",
+        /* textType: "circular", */
+        inside: true,
+        radius: 40,
+        fill: am5.color(0x000000)
+      })
+  
+      // Remove ticks for cleaner look
+      series.ticks.template.set("visible", false);
+  
+      series.data.setAll([
+        { value: 66.67, category: "Yes" },
+        { value: 23.33, category: "No" },
+        { value: 10, category: "N/A" },
+      ]);
+    });
+  </script> -->
+</body>
+</html>

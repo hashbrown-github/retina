@@ -1,0 +1,333 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Location Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="../images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item active" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>BTL Tracker</h3>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="activations.html">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Activations</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link active" href="activation-analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="reports.html">
+              <span class="material-symbols-outlined link_icon">analytics</span>
+              <span class="link_text">Reports</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="../billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="../help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="../images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Location Analytics</li>
+          </ol>
+        </nav>
+        <div class="campaign_box">
+          <div class="analyticsBox_0">
+            <div class="campaign_dtl">
+              <h3 class="mb-2">My First Activation<span class="badge badge-success ms-3">Verified</span></h3>
+              <p class="mb-2">Starts 07 Nov, 2024</p>
+              <div class="frequency_div">5 Days Duration<span class="campaign_type camp_type3 ms-2">BTL</span></div>
+            </div>
+            <!-- <div class="exportAction">
+              <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+            </div> -->
+            <div class="noFoundInner mt-5">
+              <img src="../images/location-not-found.svg" class="mt-5" alt="Locations not Found">
+              <h3>Activation Report Pending</h3>
+              <p>No analytics available yet. The activation report for <span class="block_txt">this location has not been submitted.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+
+  <script>
+    var root = am5.Root.new("score-chart");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: true,
+      panY: true,
+      wheelX: "panX",
+      wheelY: "zoomX",
+      pinchZoomX: true,
+      paddingLeft: 6,
+      paddingBottom: 0,
+      paddingRight: 1
+    }));
+    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+    cursor.lineY.set("visible", false);
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+      oversizedBehavior: "wrap",
+      maxWidth: 77
+    });
+    xRenderer.labels.template.setAll({
+      rotation: -48,
+      centerY: am5.p50,
+      centerX: am5.p100,
+      paddingRight: 0,
+      oversizedBehavior: "wrap",
+      maxWidth: 75
+    });
+
+    xRenderer.grid.template.setAll({
+      location: 1
+    })
+
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      maxDeviation: 0.3,
+      categoryField: "category",
+      renderer: xRenderer
+    }));
+
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      strokeOpacity: 0.1,
+    })
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      maxDeviation: 0.3,
+      min: 0,
+      max: 10,
+      strictMinMax: true,
+      renderer: yRenderer
+    }));
+
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50
+    }));
+
+    var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+      name: "Series 1",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value",
+      sequencedInterpolation: true,
+      categoryXField: "category",
+      tooltip: am5.Tooltip.new(root, {
+        labelText: "{valueY}"
+      })
+    }));
+
+    series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
+    series.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        locationY: 0.5,
+        sprite: am5.Label.new(root, {
+          text: "{valueY}",
+          fontSize: 12,
+          fill: root.interfaceColors.get("alternativeText"),
+          centerY: am5.percent(50),
+          centerX: am5.percent(50),
+          populateText: true
+        })
+      });
+    });
+    legend.data.push(series);
+    series.columns.template.adapters.add("fill", function (fill, target) {
+      var index = series.columns.indexOf(target); 
+      var colors = [am5.color(0x6771dc), am5.color(0x7f67dc), am5.color(0xa366dc),am5.color(0xc767dc),am5.color(0xdc67ce), am5.color(0xdb67ab),am5.color(0xdb6788),am5.color(0xdc6967),am5.color(0xdc8c68)]; 
+      return colors[index % colors.length]; 
+    });
+
+
+    series.columns.template.adapters.add("stroke", function (stroke, target) {
+      return chart.get("colors").getIndex(series.columns.indexOf(target));
+    });
+
+    // Set data
+    var data = [{
+      category: "Sales or Engagement Targets",
+      value: 5
+    }, {
+      category: "Customer Demographics",
+      value: 2
+    }, {
+      category: "Key Activities",
+      value: 4
+    }, {
+      category: "Requied Equipment or Materials",
+      value: 5
+    }, {
+      category: "Engagement Level",
+      value: 6
+    }, {
+      category: "Customer",
+      value: 8
+    }, {
+      category: "Demographics",
+      value: 2
+    }, {
+      category: "Engagement Targets",
+      value: 9
+    }, {
+      category: "Equipment",
+      value: 10
+    }];
+    xAxis.data.setAll(data);
+    series.data.setAll(data);
+    series.appear(1000);
+    chart.appear(1000, 100);
+  </script>
+</body>
+</html>

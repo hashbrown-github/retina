@@ -1,0 +1,651 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Location Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="../images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item active" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>BTL Tracker</h3>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="activations.html">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Activations</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link active" href="activation-analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="reports.html">
+              <span class="material-symbols-outlined link_icon">analytics</span>
+              <span class="link_text">Reports</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="../billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="../help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="../images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Location Analytics</li>
+          </ol>
+        </nav>
+        <div class="campaign_box">
+          <div class="analyticsBox_0">
+            <div class="campaign_dtl">
+              <div class="retinaAd_logo">
+                <img src="../images/retinaad-logo.svg" alt="Retinaad">
+              </div>
+              <h3 class="mb-2">5 Joel Ogunnaike St, Ikeja GRA<span class="badge badge-success ms-3">Completed</span></h3>
+              <p class="mb-2">Starts 07 Nov, 2024</p>
+              <div class="frequency_div">5 Days Duration<span class="campaign_type camp_type3 ms-2">BTL</span></div>
+            </div>
+            <div class="exportAction">
+              <h3>My First Activation</h3>
+              <div class="exportBtn">
+                <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download as PDF"><img src="../images/download-icon.svg" alt="Download" /></button>
+                <!-- <button type="button"><img src="../images/share-icon.svg" alt="Share" /></button> -->
+              </div>
+            </div>
+            <div class="btlLocationDtl">
+              <div class="btlLoc_dtl1">
+                <div class="dtl_line0">
+                  <div class="dtl_score">
+                    <div class="dtl_line">
+                      <p>Audit Score: <span>7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="dtl_line">
+                    <p>Audit Date/Time:</p>
+                    <h5>07 Nov, 2024, 11:59:00 AM to 12:59:00 PM</h5>
+                  </div>
+                  <div class="btlLoc_dtl11">
+                    <div class="dtl_line">
+                      <p>Auditor</p>
+                      <h5>John Doe</h5>
+                    </div>
+                    <div class="dtl_line">
+                      <p>Brand Associate</p>
+                      <h5>John Doe</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btlLoc_dtl2">
+                <div class="dtl_line0">
+                  <div class="scoreHead">
+                    <h3 class="mb-0">Section by Score</h3>
+                    <div class="scoreHeadR">
+                      <button type="button" id="expandPopup1"><span class="material-symbols-outlined">zoom_out_map</span></button>
+                    </div>
+                  </div>
+                  <div id="score-chart"></div>
+                  <div class="w-100 text-center">
+                    <h3 class="mb-0">Key Performance Indicator</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="btlLoc_dtl3">
+                <div class="table_name">
+                  <h3><span>Sales or Engagement Targets</span><span>(4/6) 8.5</span></h3>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="70%">Question</th>
+                      <th width="30%">Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><p>1. Was the <strong>target interaction count</strong> achieved?</p></td>
+                      <td><p><span class="greenTxt">Yes</span> (1000)</p></td>
+                    </tr>
+                    <tr>
+                      <td><p>2. Were there <strong>product sales</strong> recorded during the activation?</p></td>
+                      <td><p><span class="emptyTxt">N/A</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>3. Did <strong>service sign-ups</strong> occur during the activation?</p></td>
+                      <td><p><span class="greenTxt">Yes</span> (100)</p></td>
+                    </tr>
+                    <tr>
+                      <td><p>4. Were <strong>app downloads</strong> achieved at the activation location?</p></td>
+                      <td><p><span class="redTxt">No</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>5. Were <strong>target demographic groups</strong> (e.g., young professionals, students) reached?</p></td>
+                      <td><p><span class="greenTxt">Yes</span> (2000)</p></td>
+                    </tr>
+                    <tr>
+                      <td><p>6. Did app installations happened for preferred <strong>platform</strong> (iOS, Android, or Website) during ?</p></td>
+                      <td><p><span class="redTxt">No</span></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btlLoc_dtl3">
+                <div class="table_name">
+                  <h3><span>Customer Demographics</span><span>(3/3) 10</span></h3>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="70%">Question</th>
+                      <th width="30%">Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><p>1. Were interactions primarily with the <strong>age group(18-24, 25-40)</strong>?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>2. Were target genders equally engaged <strong>(male, female)</strong>?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>3. Did we engage with <strong>specific interests or lifestyles?(Health & Fitness Enthusiasts, Eco-Conscious individuals)</strong></p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btlLoc_dtl3">
+                <div class="table_name">
+                  <h3><span>Key Activities</span><span>(3/4) 7.5</span></h3>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="70%">Question</th>
+                      <th width="30%">Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><p>1. Were <strong>product demonstrations</strong> performed to showcase product features?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>2. Were <strong>promotional materials</strong> (e.g., brochures, samples) distributed to customers?</p></td>
+                      <td><p><span class="redTxt">No</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>3. Was a <strong>survey or questionnaire</strong> conducted to gather customer feedback or preferences?</p></td>
+                      <td><p><span class="emptyTxt">N/A</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>4. Was <strong>customer feedback</strong> actively gathered on the product?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btlLoc_dtl3">
+                <div class="table_name">
+                  <h3><span>Required Equipment or Materials</span><span>(8/10) 0.8</span></h3>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="70%">Question</th>
+                      <th width="30%">Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>1. Were <strong>printed promotional materials</strong> such as brochures, flyers, posters, or coupons available and distributed?</p>
+                        <div class="locaImg">
+                          <div class="locaImg1">
+                            <div class="imgVideo">
+                              <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                            </div>
+                          </div>
+                          <span>07 Nov, 2024, 11:00 AM</span>
+                          <p><strong>Remarks:-</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                        </div>
+                      </td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>2. <strong>Were product samples</strong> and giveaways provided to customers?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>3. Were <strong>branding and display items</strong> (e.g., banners, standees, branded tents) used at the activation site?</p></td>
+                      <td><p><span class="emptyTxt">N/A</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>4. Were <strong>digital devices</strong> (tablets, laptops) and audio/visual equipment (speakers, monitors) set up and used?</p></td>
+                      <td><p><span class="redTxt">No</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>5. Was <strong>demo and sampling equipment</strong> (tables, trays, waste bins) available and utilized?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>6. Did the field agent use <strong>uniforms or identification</strong> (e.g., branded apparel, ID cards)?</p></td>
+                      <td><p><span class="redTxt">No</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>7. Were <strong>interactive tools</strong> (e.g., feedback tablets, gamification items, photo props) available for customer engagement?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>8. Were <strong>health and safety supplies</strong> (e.g., hand sanitizers, first aid kit) provided if required?</p></td>
+                      <td><p><span class="emptyTxt">N/A</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>9. Were <strong>logistical and utility items</strong> (e.g., transport cases, clipboards, lighting) used during the activation?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>10. Were <strong>data collection tools</strong> (e.g., mobile devices, portable printers) utilized for capturing data?</p></td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btlLoc_dtl3">
+                <div class="table_name">
+                  <h3><span>Engagement Level</span><span>(1/1) 10</span></h3>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="70%">Question</th>
+                      <th width="30%">Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>1. Was the <strong>level of engagement</strong> with customers considered high?</p>
+                        <div class="locaImg">
+                          <div class="locaImg1">
+                            <div class="imgVideo">
+                              <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                            </div>
+                            <div class="imgVideo">
+                              <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                            </div>
+                          </div>
+                          <span>07 Nov, 2024, 11:00 AM</span>
+                          <p><strong>Remarks:-</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                        </div>
+                      </td>
+                      <td><p><span class="greenTxt">Yes</span></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btlLoc_dtl3">
+                <div class="table_name">
+                  <h3><span>Additional Comments & Location Visuals</span></h3>
+                </div>
+                <div class="table_images0">
+                  <p><strong>Additional Comments:- </strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vel, eum provident inventore dolor, at temporibus accusamus, cupiditate cumque necessitatibus eius distinctio dicta qui iure! Harum quos saepe ipsa at.</p>
+                  <div class="table_images p-0 border-0">
+                    <div class="imgVideo">
+                      <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
+                    <div class="imgVideo">
+                      <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
+                    <div class="imgVideo">
+                      <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                    </div>
+                  </div>
+                </div>
+                <div class="table_images mt-2">
+                  <div class="imgVideo">
+                    <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                      <source type="video/mp4" src="../images/demo-video.mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="btlLoc_dtl4">
+                <div class="btlLoc_dtl11">
+                  <div class="dtl_line">
+                    <p>Auditor</p>
+                    <h5>John Doe</h5>
+                  </div>
+                  <div class="dtl_line">
+                    <p>Brand Associate</p>
+                    <h5>John Doe</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="btlLoc_dtl5">
+                <span>Report Generated by</span>
+                <img src="../images/logo.svg" alt="Retitrak" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal_box payment_modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body img_slider">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="../images/location-img.jpg" alt="Location Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal_box payment_modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body img_slider">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate fullscreen playsinline">
+                  <source type="video/mp4" src="../images/demo-video.mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup1').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+
+  <script>
+    var root = am5.Root.new("score-chart");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      pinchZoomX: false,
+      paddingLeft: 6,
+      paddingBottom: 0,
+      paddingRight: 1
+    }));
+    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+    cursor.lineY.set("visible", false);
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+      oversizedBehavior: "wrap",
+      maxWidth: 77
+    });
+    xRenderer.labels.template.setAll({
+      rotation: -48,
+      centerY: am5.p50,
+      centerX: am5.p100,
+      paddingRight: 0,
+      oversizedBehavior: "wrap",
+      maxWidth: 75
+    });
+
+    xRenderer.grid.template.setAll({
+      location: 1
+    })
+
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      maxDeviation: 0.3,
+      categoryField: "category",
+      renderer: xRenderer
+    }));
+
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      strokeOpacity: 0.1,
+    })
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      maxDeviation: 0.3,
+      min: 0,
+      max: 10,
+      strictMinMax: true,
+      renderer: yRenderer
+    }));
+
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50
+    }));
+
+    var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+      name: "Series 1",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value",
+      sequencedInterpolation: true,
+      categoryXField: "category",
+      tooltip: am5.Tooltip.new(root, {
+        labelText: "{valueY}"
+      })
+    }));
+
+    series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
+    series.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        locationY: 0.5,
+        sprite: am5.Label.new(root, {
+          text: "{valueY}",
+          fontSize: 12,
+          fill: root.interfaceColors.get("alternativeText"),
+          centerY: am5.percent(50),
+          centerX: am5.percent(50),
+          populateText: true
+        })
+      });
+    });
+    legend.data.push(series);
+    series.columns.template.adapters.add("fill", function (fill, target) {
+      var index = series.columns.indexOf(target); 
+      var colors = [am5.color(0x6771dc), am5.color(0x7f67dc), am5.color(0xa366dc),am5.color(0xc767dc),am5.color(0xdc67ce), am5.color(0xdb67ab),am5.color(0xdb6788),am5.color(0xdc6967),am5.color(0xdc8c68)]; 
+      return colors[index % colors.length]; 
+    });
+
+
+    series.columns.template.adapters.add("stroke", function (stroke, target) {
+      return chart.get("colors").getIndex(series.columns.indexOf(target));
+    });
+
+    // Set data
+    var data = [{
+      category: "Sales or Engagement Targets",
+      value: 5
+    }, {
+      category: "Customer Demographics",
+      value: 2
+    }, {
+      category: "Key Activities",
+      value: 4
+    }, {
+      category: "Requied Equipment or Materials",
+      value: 5
+    }, {
+      category: "Engagement Level",
+      value: 6
+    }, {
+      category: "Customer",
+      value: 8
+    }, {
+      category: "Demographics",
+      value: 2
+    }, {
+      category: "Engagement Targets",
+      value: 9
+    }, {
+      category: "Equipment",
+      value: 10
+    }];
+    xAxis.data.setAll(data);
+    series.data.setAll(data);
+    series.appear(1000);
+    chart.appear(1000, 100);
+  </script>
+</body>
+</html>
