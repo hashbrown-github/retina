@@ -1,0 +1,757 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="../images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item active" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>Retail Tracker</h3>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="retail-audits.html">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Retail Audits</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link active" href="analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="reports.html">
+              <span class="material-symbols-outlined link_icon">analytics</span>
+              <span class="link_text">Reports</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="../billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="../help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="../images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Analytics</li>
+          </ol>
+        </nav>
+        <div class="campaign_box">
+          <div class="analyticsBox_0">
+            <div class="campaign_dtl">
+              <div class="retinaAd_logo">
+                <img src="../images/retinaad-logo.svg" alt="Retinaad">
+              </div>
+              <h3 class="mb-2">Retail Chain Name</h3>
+              <p class="mb-3"><span>Starts 07 Nov, 2024, </span><span>No. Of Stores: 20, </span><span>Brand: Indomie</span></p>
+              <div class="frequency_div">5 Days Duration<span class="campaign_type camp_type4 ms-2">Retail</span></div>
+              <div class="analytics_sel exportFlex">
+                <div class="input_group mb-0">
+                  <select class="form_control">
+                    <option selected disabled>Select Retail Audit</option>
+                    <option>Retail Audit 1</option>
+                    <option>Retail Audit 2</option>
+                    <option>Retail Audit 3</option>
+                    <option>Retail Audit 4</option>
+                  </select>
+                  <div class="exportBtn">
+                    <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download as PDF"><img src="../images/download-icon.svg" alt="Download"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btlLocationDtl">
+              <div class="btlLoc_dtl6">
+                <ul class="mb-5">
+                  <li>
+                    <div class="card_cont">
+                      <p>Average Audit Score</p>
+                      <h4>7.5</h4>
+                      <div class="ratingGuide">
+                        <p><b>(Good)</b></p>
+                      </div>
+                    </div>
+                    <div class="guide_link"><a href="../retail-rating-guide.html">What does this score means?</a></div>
+                  </li>
+                  <li>
+                    <div class="card_cont">
+                      <p>PoS Compliance</p>
+                      <div id="compliance_chart2"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card_cont">
+                      <p>Performance: 60%</p>
+                      <div>
+                        <div id="performance_chart"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="btlLoc_dtl2">
+                <div class="dtl_line0">
+                  <div class="scoreHead">
+                    <h3 class="mb-0">Store Wise PoS Compliance</h3>
+                    <div class="scoreHeadR">
+                      <button type="button" id="expandPopup1"><span class="material-symbols-outlined">zoom_out_map</span></button>
+                    </div>
+                  </div>
+                  <img src="../images/score-chart4.png" alt="Score Chart" style="display: none;">
+                  <div id="store_loc_chart"></div>
+                </div>
+              </div>
+              <div class="btlLoc_dtl2">
+                <div class="dtl_line0">
+                  <div class="scoreHead">
+                    <h3 class="mb-0">Day Wise Average Audit Score</h3>
+                    <div class="scoreHeadR">
+                      <p>Generate Daywise Report:</p>
+                      <div class="input_group mb-0">
+                        <select class="form_control">
+                          <option selected disabled>Select Day</option>
+                          <option>Day 1</option>
+                          <option>Day 2</option>
+                          <option>Day 3</option>
+                          <option>Day 4</option>
+                        </select>
+                      </div>
+                      <button type="button" id="expandPopup2"><span class="material-symbols-outlined">zoom_out_map</span></button>
+                    </div>
+                  </div>
+                  <img src="../images/score-chart2.png" alt="Score Chart" style="display: none;" />
+                  <div id="day_score_chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="noFoundInner">
+            <img src="../images/activation-not-found.svg" alt="Activation not Selected">
+            <h3>Retail Audit not Selected</h3>
+            <p>Please select a retail audit to view analytics.</p>
+            <div class="noCam_sel">
+              <div class="input_group mb-0">
+                <select class="form_control">
+                  <option selected>Select Retail Audit</option>
+                  <option>Retail Audit 1</option>
+                  <option>Retail Audit 2</option>
+                  <option>Retail Audit 3</option>
+                  <option>Retail Audit 4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
+  <!--======= EXPAND CHART SCRIPT START =======-->
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup1').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup2').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  <script>
+    var root = am5.Root.new("compliance_chart2");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    var chart = root.container.children.push(
+      am5radar.RadarChart.new(root, {
+        panX: false,
+        panY: false,
+        paddingTop: 14,
+        paddingRight: -10,
+        paddingLeft: -10,
+        paddingBottom: 5,
+        startAngle: 180,
+        endAngle: 360
+      })
+    );
+
+    var axisRenderer = am5radar.AxisRendererCircular.new(root, {
+      innerRadius: -1,
+      strokeOpacity: 1,
+      strokeWidth: 5,
+      minGridDistance: 50,
+      strokeGradient: am5.LinearGradient.new(root, {
+        rotation: 0,
+        stops: [
+          { color: am5.color(0x7F67DC) },
+          { color: am5.color(0x7F67DC) },
+          { color: am5.color(0x7F67DC) },
+          { color: am5.color(0x7F67DC) }
+        ]
+      })
+    });
+
+    var xAxis = chart.xAxes.push(
+      am5xy.ValueAxis.new(root, {
+        maxDeviation: 0,
+        min: 0,
+        max: 100,
+        strictMinMax: true,
+        renderer: axisRenderer
+      })
+    );
+
+    xAxis.get("renderer").labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x7F67DC)
+    });
+
+    var axisDataItem = xAxis.makeDataItem({});
+    axisDataItem.set("value", 40);
+
+    var bullet = axisDataItem.set("bullet", am5xy.AxisBullet.new(root, {
+      sprite: am5radar.ClockHand.new(root, {
+        radius: am5.percent(80),
+        bottomWidth: 5,
+        pinRadius: 5
+      })
+    }));
+
+    bullet.get("sprite").pin.setAll({
+      fill: am5.color(0x7F67DC),
+    });
+
+    bullet.get("sprite").hand.setAll({
+      fill: am5.color(0x7F67DC)
+    });
+
+    xAxis.createAxisRange(axisDataItem);
+
+    axisDataItem.get("grid").set("visible", false);
+
+    /* setInterval(() => {
+      axisDataItem.animate({
+        key: "value",
+        to: Math.round(Math.random() * 100),
+        duration: 800,
+        easing: am5.ease.out(am5.ease.cubic)
+      });
+    }, 2000); */
+
+    chart.appear(1000, 100);
+  </script>
+  
+  <script>
+    var root = am5.Root.new("performance_chart");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    var chart = root.container.children.push(
+      am5radar.RadarChart.new(root, {
+        panX: false,
+        panY: false,
+        paddingTop: 14,
+        paddingRight: -10,
+        paddingLeft: -10,
+        paddingBottom: 5,
+        startAngle: 180,
+        endAngle: 360
+      })
+    );
+
+    var axisRenderer = am5radar.AxisRendererCircular.new(root, {
+      innerRadius: -1,
+      strokeOpacity: 1,
+      strokeWidth: 5,
+      minGridDistance: 50,
+      strokeGradient: am5.LinearGradient.new(root, {
+        rotation: 0,
+        stops: [
+          { color: am5.color(0xA367DC) },
+          { color: am5.color(0xA367DC) },
+          { color: am5.color(0xA367DC) },
+          { color: am5.color(0xA367DC) }
+        ]
+      })
+    });
+
+    var xAxis = chart.xAxes.push(
+      am5xy.ValueAxis.new(root, {
+        maxDeviation: 0,
+        min: 0,
+        max: 100,
+        strictMinMax: true,
+        renderer: axisRenderer
+      })
+    );
+
+    xAxis.get("renderer").labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0xA367DC)
+    });
+
+    var axisDataItem = xAxis.makeDataItem({});
+    axisDataItem.set("value", 60);
+
+    var bullet = axisDataItem.set("bullet", am5xy.AxisBullet.new(root, {
+      sprite: am5radar.ClockHand.new(root, {
+        radius: am5.percent(80),
+        bottomWidth: 5,
+        pinRadius: 5
+      })
+    }));
+
+    bullet.get("sprite").pin.setAll({
+      fill: am5.color(0xA367DC),
+    });
+
+    bullet.get("sprite").hand.setAll({
+      fill: am5.color(0xA367DC)
+    });
+
+    xAxis.createAxisRange(axisDataItem);
+
+    axisDataItem.get("grid").set("visible", false);
+
+    /* setInterval(() => {
+      axisDataItem.animate({
+        key: "value",
+        to: Math.round(Math.random() * 100),
+        duration: 800,
+        easing: am5.ease.out(am5.ease.cubic)
+      });
+    }, 2000); */
+
+    chart.appear(1000, 100);
+  </script>
+
+  <script>
+
+    var rootLine = am5.Root.new("store_loc_chart");
+
+    rootLine.setThemes([
+      am5themes_Animated.new(rootLine)
+    ]);
+    var chartLine = rootLine.container.children.push(
+      am5xy.XYChart.new(rootLine, {
+        panX: true,
+        panY: true,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        layout: rootLine.verticalLayout,
+        pinchZoomX: true,
+        paddingLeft: 0
+      })
+    );
+
+    var cursor = chartLine.set(
+      "cursor",
+      am5xy.XYCursor.new(rootLine, {
+        behavior: "none"
+      })
+    );
+    cursor.lineY.set("visible", false);
+
+    var colorSet = am5.ColorSet.new(rootLine, {});
+
+    // The data
+    var data = [
+      {
+        location: "Store 1",
+        value: 1
+      },
+      {
+        location: "Store 2",
+        value: 4
+      },
+      {
+        location: "Store 3",
+        value: 5
+      },
+      {
+        location: "Store 4",
+        value: 7
+      },
+      {
+        location: "Store 5",
+        value: 8
+      },
+      {
+        location: "Store 6",
+        value: 6
+      },
+      {
+        location: "Store 7",
+        value: 9
+      },
+      {
+        location: "Store 8",
+        value: 8
+      },
+      {
+        location: "Store 9",
+        value: 7
+      }
+    ];
+
+    var xRenderer = am5xy.AxisRendererX.new(rootLine, {
+      minorGridEnabled: true,
+      minGridDistance: 70
+    });
+    xRenderer.grid.template.set("location", 0.5);
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    xRenderer.labels.template.setAll({
+      rotation: -48,
+    });
+
+    var xAxis = chartLine.xAxes.push(am5xy.CategoryAxis.new(rootLine, {
+      categoryField: "location",
+      renderer: xRenderer
+    }));
+    var yRenderer = am5xy.AxisRendererY.new(rootLine, {
+      minGridDistance: 20
+    });
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    yRenderer.grid.template.set("forceHidden", false);
+    yRenderer.labels.template.set("minPosition", 0.05);
+
+    var yAxis = chartLine.yAxes.push(
+      am5xy.ValueAxis.new(rootLine, {
+        min: 0,
+        max: 10,
+        strictMinMax: true,
+        renderer: yRenderer
+      })
+    );
+
+    var series = chartLine.series.push(
+      am5xy.LineSeries.new(rootLine, {
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "value",
+        categoryXField: "location",
+        maskBullets: false
+      })
+    );
+    // Actual bullet
+    series.bullets.push(function () {
+      var bulletCircle = am5.Circle.new(rootLine, {
+        radius: 5,
+        fill: series.get("fill")
+      });
+      return am5.Bullet.new(rootLine, {
+        sprite: bulletCircle
+      })
+    })
+
+    series.strokes.template.setAll({ strokeDasharray: [3, 3], strokeWidth: 2 });
+    xAxis.data.setAll(data);
+    series.data.setAll(data);
+    series.appear(1000);
+    chartLine.appear(1000, 100);
+  </script>
+  
+  <script>
+    var root_audit = am5.Root.new("day_score_chart");
+    root_audit.setThemes([
+      am5themes_Animated.new(root_audit)
+    ]);
+    var chart_root_audit = root_audit.container.children.push(am5xy.XYChart.new(root_audit, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      pinchZoomX: false,
+      paddingLeft: 6,
+      paddingBottom: 0,
+      paddingRight: 1
+    }));
+    var cursor = chart_root_audit.set("cursor", am5xy.XYCursor.new(root_audit, {}));
+    cursor.lineY.set("visible", false);
+    var xRenderer = am5xy.AxisRendererX.new(root_audit, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+      oversizedBehavior: "wrap",
+      maxWidth: 77
+    });
+    xRenderer.labels.template.setAll({
+      rotation: -48,
+      centerY: am5.p50,
+      centerX: am5.p100,
+      paddingRight: 0
+    });
+
+    xRenderer.grid.template.setAll({
+      location: 1
+    })
+
+    var xAxis = chart_root_audit.xAxes.push(am5xy.CategoryAxis.new(root_audit, {
+      maxDeviation: 0.3,
+      categoryField: "day",
+      renderer: xRenderer,
+      tooltip: am5.Tooltip.new(root_audit, {})
+    }));
+    xAxis.get("tooltip").label.setAll({
+      fontSize: 10
+    });
+
+    var yRenderer = am5xy.AxisRendererY.new(root_audit, {
+      strokeOpacity: 0.1,
+    })
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+      oversizedBehavior: "wrap",
+      maxWidth: 75
+    });
+    var yAxis = chart_root_audit.yAxes.push(am5xy.ValueAxis.new(root_audit, {
+      maxDeviation: 0.3,
+      min: 0,
+      max: 10,
+      strictMinMax: true,
+      renderer: yRenderer
+    }));
+    var legend = chart_root_audit.children.push(am5.Legend.new(root_audit, {
+      centerX: am5.p50,
+      x: am5.p50
+    }));
+
+    var seriesColumn = chart_root_audit.series.push(am5xy.ColumnSeries.new(root_audit, {
+      name: "Series 1",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value",
+      sequencedInterpolation: true,
+      categoryXField: "day",
+      tooltip: am5.Tooltip.new(root_audit, { labelText: "{valueY}" })
+    }));
+
+    seriesColumn.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
+    seriesColumn.bullets.push(function () {
+      return am5.Bullet.new(root_audit, {
+        locationY: 0.5,
+        sprite: am5.Label.new(root_audit, {
+          text: "{valueY}",
+          fontSize: 12,
+          fill: root_audit.interfaceColors.get("alternativeText"),
+          centerY: am5.percent(50),
+          centerX: am5.percent(50),
+          populateText: true
+        })
+      });
+    });
+
+    legend.data.push(seriesColumn);
+
+    seriesColumn.columns.template.adapters.add("fill", function (fill, target) {
+      const index = seriesColumn.columns.indexOf(target);
+      const colors = [am5.color(0x6771dc), am5.color(0x7f67dc), am5.color(0xa366dc), am5.color(0xc767dc), am5.color(0xdc67ce), am5.color(0xdb67ab), am5.color(0xdb6788), am5.color(0xdc6967), am5.color(0xdc8c68)];
+      return colors[index % colors.length];
+    });
+
+    seriesColumn.columns.template.adapters.add("stroke", function (stroke, target) {
+      return chart_root_audit.get("colors").getIndex(seriesColumn.columns.indexOf(target));
+    });
+
+    // Set data
+    var data = [{
+      day: "Day 1",
+      value: 1.2
+    }, {
+      day: "Day 2",
+      value: 7.7
+    }, {
+      day: "Day 3",
+      value: 3.9
+    }, {
+      day: "Day 4",
+      value: 5.2
+    }, {
+      day: "Day 5",
+      value: 7.1
+    }, {
+      day: "Day 6",
+      value: 8.5
+    }, {
+      day: "Day 7",
+      value: 4.2
+    }, {
+      day: "Day 8",
+      value: 8.6
+    }, {
+      day: "Day 9",
+      value: 9.3
+    }];
+    xAxis.data.setAll(data);
+    seriesColumn.data.setAll(data);
+    seriesColumn.appear(1000);
+    chart_root_audit.appear(1000, 100);
+  </script>
+</body>
+</html>

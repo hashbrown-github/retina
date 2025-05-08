@@ -1,0 +1,561 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Day Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="../images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item active" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>Retail Tracker</h3>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="retail-audits.html">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Retail Audits</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link active" href="analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="reports.html">
+              <span class="material-symbols-outlined link_icon">analytics</span>
+              <span class="link_text">Reports</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="../billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="../help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="../images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Day Analytics</li>
+          </ol>
+        </nav>
+        <div class="campaign_box">
+          <div class="analyticsBox_0">
+            <div class="campaign_dtl">
+              <div class="retinaAd_logo">
+                <img src="../images/retinaad-logo.svg" alt="Retinaad">
+              </div>
+              <h3 class="mb-2">Retail Chain Name</h3>
+              <p class="mb-3"><span>Starts 07 Nov, 2024, </span><span>No. Of Stores: 20, </span><span>Brand: Indomie</span></p>
+              <div class="frequency_div">5 Days Duration<span class="campaign_type camp_type4 ms-2">Retail</span></div>
+            </div>
+            <div class="exportAction">
+              <h3>Day 2/5</h3>
+              <div class="analytics_sel exportFlex">
+                <div class="input_group mb-0">
+                  <select class="form_control">
+                    <option selected="" disabled="">Switch Day</option>
+                    <option>Day 1</option>
+                    <option>Day 2</option>
+                    <option>Day 3</option>
+                    <option>Day 4</option>
+                  </select>
+                  <div class="exportBtn">
+                    <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download as PDF"><img src="../images/download-icon.svg" alt="Download"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btlLocationDtl">
+              <div class="day_analytics">
+                <div class="btlLoc_dtl6">
+                  <ul>
+                    <li>
+                      <div class="card_cont">
+                        <p>Average Audit Score</p>
+                        <h4>7.5</h4>
+                        <div class="ratingGuide">
+                          <p><b>(Good)</b></p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card_cont">
+                        <p>Target Achieved</p>
+                        <h4>20,000</h4>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="analyBox_2 store_report2">
+                <ul>
+                  <li>
+                    <h3>Response wise chart<button type="button" id="expandPopup1"><span class="material-symbols-outlined">zoom_out_map</span></button></h3>
+                    <div class="chart_box">
+                      <div id="funnel_chart"></div>
+                    </div>
+                    <div class="secMap_legends pos_unset1">
+                      <div class="pos_unset2">
+                        <p>Yes<span class="yes_box2"></span></p>
+                        <p>No<span class="no_box2"></span></p>
+                        <p>N/A<span class="null_box2"></span></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="scoreHead">
+                      <h3 class="mb-2">Audit Score<button type="button" id="expandPopup2"><span class="material-symbols-outlined">zoom_out_map</span></button></h3>
+                      <div class="scoreHeadR">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected="" disabled="">Select Store Location</option>
+                            <option>Store Location 1</option>
+                            <option>Store Location 2</option>
+                            <option>Store Location 3</option>
+                            <option>Store Location 4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chart_box">
+                      <div id="store_loc_chart"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="locRep_list">
+              <div class="heading_box">
+                <div class="headLeft">
+                  <h3>Store Locations</h3>
+                </div>
+              </div>
+              <div class="horiz_cards mt-0">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <div class="card_body">
+                        <span class="badge badge-success mb-2">Completed</span>
+                        <h3>Retail Store Name</h3>
+                        <p class="mb-2">Ikeja, lkeja, Lagos</p>
+                        <p class="mb-2">Retail Audit: <span>Retail Chain Name</span></p>
+                        <p class="mb-0"span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        <span class="campaign_type blueBtn_type position_cam">View Audit Report</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="card_body">
+                        <span class="badge badge-grey mb-2">Not Started</span>
+                        <h3>Retail Store Name</h3>
+                        <p class="mb-2">Ikeja, lkeja, Lagos</p>
+                        <p class="mb-2">Retail Audit: <span>Retail Chain Name</span></p>
+                        <p class="mb-0"span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        <span class="campaign_type blueBtn_type position_cam">View Audit Report</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="card_body">
+                        <span class="badge badge-scondary mb-2">In Progress</span>
+                        <h3>Retail Store Name</h3>
+                        <p class="mb-2">Ikeja, lkeja, Lagos</p>
+                        <p class="mb-2">Retail Audit: <span>Retail Chain Name</span></p>
+                        <p class="mb-0"span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        <span class="campaign_type blueBtn_type position_cam">View Audit Report</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="card_body">
+                        <span class="badge badge-danger mb-2">Overdue</span>
+                        <h3>Retail Store Name</h3>
+                        <p class="mb-2">Ikeja, lkeja, Lagos</p>
+                        <p class="mb-2">Retail Audit: <span>Retail Chain Name</span></p>
+                        <p class="mb-0"span>11:00 AM</span> to <span>12:00 PM</span></p>
+                        <span class="campaign_type blueBtn_type position_cam">View Audit Report</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="noFoundInner">
+          <img src="../images/activation-not-found.svg" alt="Analytics" />
+          <h3>No Day Analytics Found</h3>
+          <p>No store locations were audited on this day, so there is no insights to display. <span class="block_txt">Try selecting a different day for insights.</span></p>
+          <div class="noCam_sel">
+            <div class="input_group mb-0">
+              <select class="form_control">
+                <option selected="">Select Demo</option>
+                <option>Demo 1</option>
+                <option>Demo 2</option>
+                <option>Demo 3</option>
+                <option>Demo 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup1').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup2').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+
+  <script>
+    var root = am5.Root.new("funnel_chart");
+    root.setThemes([am5themes_Animated.new(root)]);
+    var chart = root.container.children.push(am5percent.SlicedChart.new(root, { layout: root.verticalLayout }));
+    var series = chart.series.push(am5percent.FunnelSeries.new(root, {
+      alignLabels: false,
+      orientation: "horizontal",
+      valueField: "value",
+      categoryField: "category",
+      bottomRatio: 1,
+    }));
+    series.data.setAll([
+      { value: 1000, category: "Yes" },
+      { value: 1200, category: "No" },
+      { value: 500, category: "N/A" }
+    ]);
+    series.slices.template.adapters.add("fill", function (fill, target) {
+      var category = target.dataItem.dataContext.category;
+      if (category === "Yes") {
+        return am5.color(0xc6fdc9);
+      } else if (category === "No") {
+        return am5.color(0xffd5d6);
+      } else if (category === "N/A") {
+        return am5.color(0xd3eafd);
+      } return fill;
+    });
+    series.slices.template.setAll({ strokeWidth: 2 });
+    series.slices.template.adapters.add("stroke", function (stroke, target) {
+      var category = target.dataItem.dataContext.category;
+      if (category === "Yes") {
+        return am5.color(0x8dce90);
+      } else if (category === "No") {
+        return am5.color(0xd46768);
+      } else if (category === "N/A") {
+        return am5.color(0x4d99e2);
+      } return stroke;
+    });
+    series.labels.template.setAll({
+      text: "{category}\n[bold]{value}",
+      textAlign: "center",
+      fill: am5.color(0x000000),
+      fontSize: 14,
+      rotation: -360
+    });
+    function updateFunnelData(filter) {
+      var filteredData = [];
+      if (filter === "yes_no") {
+        filteredData = [
+          { value: 1000, category: "Yes" },
+          { value: 1200, category: "No" },
+          { value: 800, category: "N/A" }
+        ]
+      }
+      series.data.setAll(filteredData)
+    }
+    updateFunnelData("yes_no");
+    series.appear();
+    chart.appear(1000, 100);
+  </script>
+
+  <script>
+
+    var rootLine = am5.Root.new("store_loc_chart");
+
+    rootLine.setThemes([
+      am5themes_Animated.new(rootLine)
+    ]);
+    var chartLine = rootLine.container.children.push(
+      am5xy.XYChart.new(rootLine, {
+        panX: true,
+        panY: true,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        layout: rootLine.verticalLayout,
+        pinchZoomX: true,
+        paddingLeft: 0
+      })
+    );
+
+    var cursor = chartLine.set(
+      "cursor",
+      am5xy.XYCursor.new(rootLine, {
+        behavior: "none"
+      })
+    );
+    cursor.lineY.set("visible", false);
+
+    var colorSet = am5.ColorSet.new(rootLine, {});
+
+    // The data
+    var data = [
+      {
+        location: "Store 1",
+        value: 1
+      },
+      {
+        location: "Store 2",
+        value: 4
+      },
+      {
+        location: "Store 3",
+        value: 5
+      },
+      {
+        location: "Store 4",
+        value: 7
+      },
+      {
+        location: "Store 5",
+        value: 8
+      },
+      {
+        location: "Store 6",
+        value: 6
+      },
+      {
+        location: "Store 7",
+        value: 9
+      },
+      {
+        location: "Store 8",
+        value: 8
+      },
+      {
+        location: "Store 9",
+        value: 7
+      }
+    ];
+
+    var xRenderer = am5xy.AxisRendererX.new(rootLine, {
+      minorGridEnabled: true,
+      minGridDistance: 70
+    });
+    xRenderer.grid.template.set("location", 0.5);
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    xRenderer.labels.template.setAll({
+      rotation: -48,
+    });
+
+    var xAxis = chartLine.xAxes.push(am5xy.CategoryAxis.new(rootLine, {
+      categoryField: "location",
+      renderer: xRenderer
+    }));
+    var yRenderer = am5xy.AxisRendererY.new(rootLine, {
+      minGridDistance: 20
+    });
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    yRenderer.grid.template.set("forceHidden", false);
+    yRenderer.labels.template.set("minPosition", 0.05);
+
+    var yAxis = chartLine.yAxes.push(
+      am5xy.ValueAxis.new(rootLine, {
+        min: 0,
+        max: 10,
+        strictMinMax: true,
+        renderer: yRenderer
+      })
+    );
+
+    var series = chartLine.series.push(
+      am5xy.LineSeries.new(rootLine, {
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "value",
+        categoryXField: "location",
+        maskBullets: false
+      })
+    );
+    // Actual bullet
+    series.bullets.push(function () {
+      var bulletCircle = am5.Circle.new(rootLine, {
+        radius: 5,
+        fill: series.get("fill")
+      });
+      return am5.Bullet.new(rootLine, {
+        sprite: bulletCircle
+      })
+    })
+
+    series.strokes.template.setAll({ strokeDasharray: [3, 3], strokeWidth: 2 });
+    xAxis.data.setAll(data);
+    series.data.setAll(data);
+    series.appear(1000);
+    chartLine.appear(1000, 100);
+  </script>
+</body>
+</html>

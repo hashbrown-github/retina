@@ -1,0 +1,726 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Asset Location Detail</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="../images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item active" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>Asset Tracker</h3>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link active" href="asset-tracker.html">
+              <span class="material-symbols-outlined link_icon">jamboard_kiosk</span>
+              <span class="link_text">Asset Tracker</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="activity.html">
+              <span class="material-symbols-outlined link_icon">broken_image</span>
+              <span class="link_text">Activity</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="analytics.html">
+              <span class="material-symbols-outlined link_icon">monitoring</span>
+              <span class="link_text">Insights & Analytics</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="reports.html">
+              <span class="material-symbols-outlined link_icon">analytics</span>
+              <span class="link_text">Reports</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="../billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="../help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="../images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="asset-tracker.html">Asset Tracker</a></li>
+            <li class="breadcrumb-item"><a href="asset-locations.html">Locations</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Location Detail</li>
+          </ol>
+        </nav>
+        <div class="campaign_box">
+          <div class="campaign_dtl">
+            <h3>Asset Name 1</h3>
+            <p>No. Of Visits: <span>5</span></p>
+          </div>
+          <div class="card_header" style="display: none;">
+            <ul>
+              <li>
+                <img src="../images/campaigns.svg" alt="Campaigns">
+                <div>
+                  <h3>5</h3>
+                  <p class="mb-0">Total Number of Visits</p>
+                </div>
+              </li>
+              <li>
+                <img src="../images/campaigns.svg" alt="Campaigns">
+                <div>
+                  <h3>3</h3>
+                  <p class="mb-0">Number of Visits Done</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="search_filters justify-content-end my-0" style="display: none;">
+            <div class="filter_div filter_6 w-auto">
+              <a href="asset-location-analytics.html"><img src="../images/asset-analytics.svg" alt="Asset Analytics"></a>
+            </div>
+          </div>
+          <div class="loc_dtl">
+            <div class="locDtl_head mt-4">
+              <div class="loc_head1">
+                <div class="loc_head11">
+                  <h4>#1111111, Billboard 1</h4>
+                </div>
+                <div class="loc_head12">
+                  <ul>
+                    <li><h5 class="mt-0">Address</h5></li>
+                    <li>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</li>
+                    <li><h5>Latitude/Longitude</h5></li>
+                    <li>30.704649/76.717873</li>
+                    <li><h5>Media Type</h5></li>
+                    <li>Unipole</li>
+                    <li><h5>Type</h5></li>
+                    <li>OOH</li>
+                    <li><h5>Size</h5></li>
+                    <li>6.096m x 3.048m</li>
+                    <li><h5>Format</h5></li>
+                    <li>Landscape</li>
+                    <li><h5>Current State</h5></li>
+                    <li>Under Installation</li>
+                    <li><h5>Site Type</h5></li>
+                    <li>Outdoor</li>
+                    <li><h5>Viewing Direction</h5></li>
+                    <li>FTT</li>
+                    <li><h5>Auditor</h5></li>
+                    <li>John Doe, 23 Dec, 2024 | 11:30 AM</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="loc_head2">
+                <div class="loc_head11">
+                  <h4>Location Map</h4>
+                </div>
+                <div class="loc_head22 assetLoc_dtl">
+                  <div id="map"></div>
+                </div>
+              </div>
+            </div>
+            <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="activity-tab" data-bs-toggle="tab" data-bs-target="#activity-tab-pane" type="button" role="tab" aria-controls="activity-tab-pane" aria-selected="true">All Activity</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="visits-tab" data-bs-toggle="tab" data-bs-target="#visits-tab-pane" type="button" role="tab" aria-controls="visits-tab-pane" aria-selected="false">By Visits</button>
+              </li>
+            </ul>
+            <div class="tab-content locations_con" id="myTabContent">
+              <div class="tab-pane fade show active" id="activity-tab-pane" role="tabpanel" aria-labelledby="activity-tab" tabindex="0">
+                <div class="locDtl_body assetLoc_body">
+                  <ul>
+                    <!-- <li>
+                      <div class="locCard_head">
+                        <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <span class="campaign_type blueBtn_type position_cam">Visit 5 of 5</span>
+                      </div>
+                      <div class="locCard_img">
+                        <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Date/Time: </span><span>05:30 PM | Monday, Dec 23, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li><p><span class="bold_txt">City: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">State: </span><span>Lagos</span></p></li>
+                          <li><p><span class="bold_txt">PIN / ZIP: </span><span>101233</span></p></li>
+                          <li><p><span class="bold_txt">Field Executive: </span><span>Ade | +234 481 385 8996</span></p></li>
+                          <li><p><span class="bold_txt">Campaign: </span><span>The rise of advertising</span></p></li>
+                          <li><p><span class="bold_txt">Site Flex: </span><span>OK</span></p></li>
+                          <li><p><span class="bold_txt">Traffic Type: </span><span>(Vehicular and pedestrians)</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibility: </span><span>Not OK (Physical Barriers)</span></p></li>
+                          <li><p><span class="bold_txt">Site Landmark: </span><span>Backward School</span></p></li>
+                          <li><p><span class="bold_txt">Site Visibilities: </span><span>MId-Level</span></p></li>
+                          <li><p><span class="bold_txt">Remarks: </span><span>Lorem Ipsum is that it has a more-or-less normal.</span></p></li>
+                        </ul>
+                      </div>
+                    </li> -->
+                    <li>
+                      <div class="locCard_head">
+                        <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <span class="campaign_type blueBtn_type position_cam">Visit 0 of 5</span>
+                      </div>
+                      <div class="locCard_img">
+                        <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Naveen Chauhan</span> | <span class="bold_txt">********68</span></p></li>
+                          <li><p><span class="bold_txt">Date/Time: </span><span>05:30 PM | Monday, Dec 23, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li class="viewKpi"><button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#kpi_modal">View KPIs</button></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_head">
+                        <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <span class="campaign_type blueBtn_type position_cam">Visit 5 of 5</span>
+                      </div>
+                      <div class="locCard_img">
+                        <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Naveen Chauhan</span> | <span class="bold_txt">********68</span></p></li>
+                          <li><p><span class="bold_txt">Date/Time: </span><span>05:30 PM | Monday, Dec 23, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li class="viewKpi"><button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#kpi_modal">View KPIs</button></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_head">
+                        <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <span class="campaign_type blueBtn_type position_cam">Visit 3 of 5</span>
+                      </div>
+                      <div class="locCard_img">
+                        <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Naveen Chauhan</span> | <span class="bold_txt">********68</span></p></li>
+                          <li><p><span class="bold_txt">Date/Time: </span><span>05:30 PM | Monday, Dec 23, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li class="viewKpi"><button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#kpi_modal">View KPIs</button></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_head">
+                        <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <span class="campaign_type blueBtn_type position_cam">Visit 2 of 5</span>
+                      </div>
+                      <div class="locCard_img">
+                        <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                          <source type="video/mp4" src="../images/demo-video.mp4">
+                        </video>
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Naveen Chauhan</span> | <span class="bold_txt">********68</span></p></li>
+                          <li><p><span class="bold_txt">Date/Time: </span><span>05:30 PM | Monday, Dec 23, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li class="viewKpi"><button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#kpi_modal">View KPIs</button></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_head">
+                        <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <span class="campaign_type blueBtn_type position_cam">Visit 4 of 5</span>
+                      </div>
+                      <div class="locCard_img">
+                        <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Naveen Chauhan</span> | <span class="bold_txt">********68</span></p></li>
+                          <li><p><span class="bold_txt">Date/Time: </span><span>05:30 PM | Monday, Dec 23, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li class="viewKpi"><button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#kpi_modal">View KPIs</button></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locCard_head">
+                        <h6>5 Joel Ogunnaike St, Ikeja GRA</h6>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <span class="campaign_type blueBtn_type position_cam">Visit 2 of 5</span>
+                      </div>
+                      <div class="locCard_img">
+                        <img src="../images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                      </div>
+                      <div class="locCard_body">
+                        <ul class="site_dtl mt-0">
+                          <li><p><span class="bold_txt">Naveen Chauhan</span> | <span class="bold_txt">********68</span></p></li>
+                          <li><p><span class="bold_txt">Date/Time: </span><span>05:30 PM | Monday, Dec 23, 2024</span></p></li>
+                          <li><p><span class="bold_txt">Address: </span><span>Ikorodu - Lagos Rd, Maryland, Lagos 101233, Lagos, Nigeria</span></p></li>
+                          <li><p><span class="bold_txt">Coordinates: </span><span class="blue_txt">N 6°34’33.43224” E 3°22’11.07048”</span></p></li>
+                          <li class="viewKpi"><button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#kpi_modal">View KPIs</button></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="noFoundInner">
+                    <img src="../images/images-videos-not-found.svg" alt="Not Found">
+                    <h3>No Activity Found</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="visits-tab-pane" role="tabpanel" aria-labelledby="visits-tab" tabindex="0">
+                <div class="visits_body">
+                  <ul>
+                    <li>
+                      <a href="visit-analytics.html">
+                        <div class="visit_item">
+                          <h5>Visit No. 5</h5>
+                          <p class="mb-0">23 Dec, 2024 | 11:30 AM</p>
+                          <span>7.5</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="visit-analytics.html">
+                        <div class="visit_item">
+                          <h5>Visit No. 5</h5>
+                          <p class="mb-0">23 Dec, 2024 | 11:30 AM</p>
+                          <span>6.7</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="visit-analytics.html">
+                        <div class="visit_item">
+                          <h5>Visit No. 5</h5>
+                          <p class="mb-0">23 Dec, 2024 | 11:30 AM</p>
+                          <span>9</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="visit-analytics.html">
+                        <div class="visit_item">
+                          <h5>Visit No. 5</h5>
+                          <p class="mb-0">23 Dec, 2024 | 11:30 AM</p>
+                          <span>5.9</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="visit-analytics.html">
+                        <div class="visit_item">
+                          <h5>Visit No. 5</h5>
+                          <p class="mb-0">23 Dec, 2024 | 11:30 AM</p>
+                          <span>8</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="noFoundInner">
+                    <img src="../images/images-videos-not-found.svg" alt="Not Found">
+                    <h3>No Visits Found</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== VIEW KPIs POPUP START =====-->
+        <div class="modal modal_box payment_modal auditRep_box fade" id="kpi_modal" tabindex="-1" aria-labelledby="kpi_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header border-bottom-0">
+                <button type="button" class="btn-close mt-1 me-1" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="modal_body payment_box text-start">
+                  <div class="auditRep_head">
+                    <h4 class="mb-0">Audit Report</h4>
+                    <div class="flex_Box">
+                      <p class="blueBox">7.5</p>
+                    </div>
+                  </div>
+                  <div class="btlLoc_dtl3 mt-0">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th width="100%">Asset Condition</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><p>1. Structure Integrity: <strong>OK</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>2. Standing Position: <strong>Not OK (Leaning dangerously)</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>3. Foundation Condition: <strong>Not OK (Cracked plinth)</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>4. Rust or Detachment: <strong>OK</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>5. Site Cleanliness: <strong>OK</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>6. Painting Condition: <strong>Not OK (Faded paint)</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>7. Board Condition: <strong>Not OK (Displaced for Road Construction)</strong></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="border-top-0">
+                      <thead>
+                        <tr>
+                          <th width="100%">Risk Assessment</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><p>1. Position Risk: <strong>Not OK (Obstructing visibility of traffic lights/signage)</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>2. Impairment Level: <strong>OK</strong></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="border-top-0">
+                      <thead>
+                        <tr>
+                          <th width="100%">Execution (OOH)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><p>1. Banner Tension: <strong>OK</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>2. Message Visibility: <strong>Not OK (Faded or unclear message)</strong></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="border-top-0">
+                      <thead>
+                        <tr>
+                          <th width="100%">Lighting and Power</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><p>1. Lighting Availability: <strong>Not OK (Insufficient light points)</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>2. Number of Light Points: <strong>Not OK (Requires repair or replacement)</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>3. Power Source: <strong>OK</strong></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="border-top-0">
+                      <thead>
+                        <tr>
+                          <th width="100%">DOOH-Specific KPIs</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><p>1. Number of Display Messages: <strong>OK</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>2. Display Functionality: <strong>OK</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>3. Power Source (DOOH): <strong>Not OK (Faulty generator or transformer)</strong></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="border-top-0">
+                      <thead>
+                        <tr>
+                          <th width="100%">Site Staff Verification</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><p>1. Staff Presence: <strong>Not OK (Insufficient staff for the task)</strong></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="border-top-0">
+                      <thead>
+                        <tr>
+                          <th width="100%">Additional Inputs</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><p>Location: <strong>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Town/City: <strong>Lagos</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Board Type: <strong>Digital</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Board Dimension: <strong>6.096m x 3.048m</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Screen Type: <strong>Billboard</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Brand on Display: <strong>Billboard</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Illumination: <strong>Back Lit</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Landmark: <strong>Roundabout</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Traffic: <strong>Vehicular</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Type of Road: <strong>District/Rural Road</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Visibility: <strong>Below Eye Level</strong></p></td>
+                        </tr>
+                        <tr>
+                          <td><p>Clustering: <strong>10</strong></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--====== VIEW KPIs POPUP END ======-->
+        <div class="modal modal_box payment_modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body img_slider">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="../images/location-img.jpg" alt="Location Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal_box payment_modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body img_slider">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate fullscreen playsinline">
+                  <source type="video/mp4" src="../images/demo-video.mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+      center: [8.141140, 9.611302],
+      zoom: 5
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#grid_view').on('click', function(){
+        $(this).addClass('active');
+        $('#list_view').removeClass('active');
+        $('.activityGrid').show();
+        $('.activityList').hide();
+      });
+      $('#list_view').on('click', function(){
+        $(this).addClass('active');
+        $('#grid_view').removeClass('active');
+        $('.activityList').show();
+        $('.activityGrid').hide();
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      if ($('#activity-tab').hasClass('active')) {
+        $('.search_filters').show();
+        $('.card_header').hide();
+      }
+      else {
+        $('.search_filters').hide();
+        $('.card_header').show();
+      }
+
+      $('#activity-tab').on('click', function(){
+        if ($(this).hasClass('active')) {
+          $('.search_filters').show();
+          $('.card_header').hide();
+        }
+        else {
+          $('.search_filters').hide();
+          $('.card_header').show();
+        }
+      });
+
+      $('#visits-tab').on('click', function(){
+        if ($(this).hasClass('active')) {
+          $('.search_filters').hide();
+          $('.card_header').show();
+        }
+        else {
+          $('.search_filters').show();
+          $('.card_header').hide();
+        }
+      });
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+</body>
+</html>
