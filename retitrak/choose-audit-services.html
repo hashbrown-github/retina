@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Notifications</title>
+<title>Choose Audit Services</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
       <div class="sidebar_header">
         <div class="auditSer_box">
           <a href="../home.html"><img src="images/logo.svg" alt="Retitrak" /></a>
-          <div class="auditSer_drop">
+          <div class="auditSer_drop" style="display: none;">
             <div class="dropdown">
               <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
               <ul class="dropdown-menu">
@@ -35,13 +35,38 @@
         <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
         <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
       </div>
-      <div class="sidebar_head">
+      <div class="sidebar_head" style="display: none;">
         <h3>OOH Tracker</h3>
       </div>
       <div class="sidebar_menu">
+        <ul class="menu_list border-top-0 mt-0 pt-0">
+          <li class="menu_item">
+            <a class="menu_link active" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">account_box</span>
+              <span class="link_text">Activate Profile</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar_menu" style="display: none;">
         <ul class="menu_list">
           <li class="menu_item">
-            <a class="menu_link" href="audit-campaign.html">
+            <a class="menu_link active" href="audit-campaign.html">
               <span class="material-symbols-outlined link_icon">jamboard_kiosk</span>
               <span class="link_text">Audit Campaign</span>
             </a>
@@ -56,12 +81,6 @@
             <a class="menu_link" href="reports.html">
               <span class="material-symbols-outlined link_icon">analytics</span>
               <span class="link_text">Reports</span>
-            </a>
-          </li>
-          <li class="menu_item">
-            <a class="menu_link" href="insight-and-analytics.html">
-              <span class="material-symbols-outlined link_icon">monitoring</span>
-              <span class="link_text">Insight and Analytics</span>
             </a>
           </li>
           <li class="menu_item">
@@ -82,21 +101,6 @@
             <a class="menu_link" href="help.html">
               <span class="material-symbols-outlined link_icon">inbox</span>
               <span class="link_text">Help</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="menu_list fixed_menu">
-          <li class="menu_item">
-            <div class="profile_txt">
-              <p class="name_letter">J</p>
-              <p>
-                <span>Welcome,</span>
-                <span>John Doe</span>
-              </p>
-            </div>
-            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
-              <span class="material-symbols-outlined link_icon">logout</span>
-              <span class="link_text">Logout</span>
             </a>
           </li>
         </ul>
@@ -133,141 +137,57 @@
         </div>
       </header>
       <div class="main_container">
-        <div class="headLeft">
-          <h3 class="mb-0">Notifications</h3>
-        </div>
-        <div class="notifi_box">
-          <div class="notifi_head">
-            <ul class="audit_category">
+        <div class="activate_account chooseAuditSer">
+          <div class="head_part">
+            <div class="head_left">
+              <h3 class="mb-2">Choose Audit Services</h3>
+              <p class="mb-0">Select the service you want to access and get started.</p>
+            </div>
+          </div>
+          <div class="choose_option">
+            <ul>
               <li class="nav_item">
-                <a class="nav_link active" href="#">All</a>
+                <a class="nav_link active" href="#">
+                  <img src="images/icon-1.png" alt="OOH Tracker">
+                  <div class="margin_top">
+                    <h3>OOH Tracker</h3>
+                  </div>
+                </a>
               </li>
               <li class="nav_item">
-                <a class="nav_link" href="#">Read (116)</a>
+                <a class="nav_link" href="#">
+                  <img src="images/icon-2.png" alt="DOOH Tracker">
+                  <div class="margin_top">
+                    <h3>DOOH Tracker</h3>
+                  </div>
+                </a>
               </li>
               <li class="nav_item">
-                <a class="nav_link" href="#">Unread (2)</a>
+                <a class="nav_link" href="#">
+                  <img src="images/icon-3.png" alt="BTL Tracker">
+                  <div class="margin_top">
+                    <h3>BTL Tracker</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#">
+                  <img src="images/icon-4.png" alt="Retail">
+                  <div class="margin_top">
+                    <h3>Retail Tracker</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link disabled" href="#">
+                  <img src="images/icon-5.png" alt="Asset Tracker">
+                  <div class="margin_top">
+                    <h3>Asset Tracker</h3>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
-          <div class="notifi_body">
-            <div class="noti_list">
-              <h4>Today</h4>
-              <ul>
-                <li>
-                  <div class="noti_item">
-                    <div class="noti_icon">
-                      <span class="material-symbols-outlined">notifications</span>
-                    </div>
-                    <div class="noti_cont">
-                      <h5>Long Established Fact</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <span class="time_txt">14:36 pm</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="noti_item">
-                    <div class="noti_icon">
-                      <span class="material-symbols-outlined">summarize</span>
-                    </div>
-                    <div class="noti_cont">
-                      <h5>Long Established Fact</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <span class="time_txt">14:36 pm</span>
-                    </div>
-                  </div>
-                </li>
-                <li class="unread_noti">
-                  <div class="noti_item">
-                    <div class="noti_icon">
-                      <span class="material-symbols-outlined">image</span>
-                    </div>
-                    <div class="noti_cont">
-                      <h5>Long Established Fact</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <span class="time_txt">14:36 pm</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="noti_item">
-                    <div class="noti_icon">
-                      <span class="material-symbols-outlined">paid</span>
-                    </div>
-                    <div class="noti_cont">
-                      <h5>Long Established Fact</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <span class="time_txt">14:36 pm</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="noti_list">
-              <h4>Yesterday, 7 July, 2024</h4>
-              <ul>
-                <li>
-                  <div class="noti_item">
-                    <div class="noti_icon">
-                      <span class="material-symbols-outlined">local_mall</span>
-                    </div>
-                    <div class="noti_cont">
-                      <h5>Long Established Fact</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <span class="time_txt">14:36 pm</span>
-                    </div>
-                  </div>
-                </li>
-                <li class="unread_noti">
-                  <div class="noti_item">
-                    <div class="noti_icon">
-                      <span class="material-symbols-outlined">notifications</span>
-                    </div>
-                    <div class="noti_cont">
-                      <h5>Long Established Fact</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <span class="time_txt">14:36 pm</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="noti_item">
-                    <div class="noti_icon">
-                      <span class="material-symbols-outlined">paid</span>
-                    </div>
-                    <div class="noti_cont">
-                      <h5>Long Established Fact</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <span class="time_txt">14:36 pm</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="noti_list">
-              <h4>4 July, 2024</h4>
-              <ul>
-                <li>
-                  <div class="noti_item">
-                    <div class="noti_icon">
-                      <span class="material-symbols-outlined">notifications</span>
-                    </div>
-                    <div class="noti_cont">
-                      <h5>Long Established Fact</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <span class="time_txt">14:36 pm</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="noFoundInner">
-          <img src="images/notification-empty.svg" alt="No Notification"/>
-          <h3>No Notification</h3>
-          <p>When you have notification, you'll see them here.</p>
         </div>
       </div>
     </main>

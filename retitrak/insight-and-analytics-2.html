@@ -18,8 +18,26 @@
   <div class="main_body">
     <aside class="main_sidebar fixed_sidebar">
       <div class="sidebar_header">
-        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
         <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>OOH Tracker</h3>
       </div>
       <div class="sidebar_menu">
         <ul class="menu_list">
@@ -68,6 +86,21 @@
             </a>
           </li>
         </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </aside>
     <main class="main_content">
@@ -92,8 +125,8 @@
               <div class="dropdown">
                 <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
-                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
                 </ul>
               </div>
             </div>
@@ -133,19 +166,27 @@
                       </div>
                       <div class="dtl_line">
                         <p>Total Number of Sites</p>
-                        <h5>50</h5>
+                        <h5>80</h5>
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="dtl_line0">
                       <div class="dtl_line">
+                        <p>Total Audited Sites</p>
+                        <h5>55</h5>
+                      </div>
+                      <div class="dtl_line">
                         <p>Total OK</p>
-                        <h5>10</h5>
+                        <h5>35</h5>
                       </div>
                       <div class="dtl_line">
                         <p>Total NOT OK</p>
-                        <h5>40</h5>
+                        <h5>20</h5>
+                      </div>
+                      <div class="dtl_line">
+                        <p>Total Not Audited Sites</p>
+                        <h5>25</h5>
                       </div>
                     </div>
                     <div class="dtl_line1">
@@ -223,6 +264,13 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
   <!--======= EXPAND CHART SCRIPT START =======-->
   <script>
     $(document).ready(function(){
@@ -349,8 +397,8 @@
       }));
 
       series1.columns.template.setAll({
-        fill: am5.color("#F5D965"),
-        stroke: am5.color("#F5D965")
+        fill: am5.color("#fccc50"),
+        stroke: am5.color("#fccc50")
       });
 
       series1.data.setAll(data);
@@ -365,8 +413,8 @@
       }));
 
       series2.columns.template.setAll({
-        fill: am5.color("#006DD5"),
-        stroke: am5.color("#006DD5")
+        fill: am5.color("#338bdf"),
+        stroke: am5.color("#338bdf")
       });
       series2.data.setAll(data);
 
@@ -413,15 +461,21 @@
       }));
       var series = chart.series.push(am5percent.PieSeries.new(root, {
         valueField: "value",
-        categoryField: "category"
+        categoryField: "category",
+        alignLabels: false
       }));
+
+      
 
       series.slices.template.adapters.add("fill", function (fill, target) {
         if (target.dataItem.get("category") == "OK") {
-          return am5.color(0x016DD5);
+          return am5.color(0xfccc50);
         }
         else if (target.dataItem.get("category") == "NotOK") {
-          return am5.color(0xF5D965);
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
         }
         else {
           return fill;
@@ -429,19 +483,39 @@
       });
       series.slices.template.adapters.add("stroke", function (stroke, target) {
         if (target.dataItem.get("category") == "OK") {
-          return am5.color(0x016DD5);
+          return am5.color(0xfccc50);
         }
         else if (target.dataItem.get("category") == "NotOK") {
-          return am5.color(0xffffff);
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
         }
         else {
           return stroke;
         }
       });
 
+      // Add labels inside slices
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight:600,
+        text: "{value}",
+        /* fill:am5.color(0xffffff),
+        radius:am5.percent(0),
+        centerX: am5.percent(100), */
+        inside: true,
+        radius: 35,
+        fill: am5.color(0xffffff)
+      });
+
+      // Remove ticks for cleaner look
+      series.ticks.template.set("visible", false);
+
       series.data.setAll([
-        { value: 75, category: "OK" },
-        { value: 25, category: "NotOK" },
+        { value: 35, category: "OK" },
+        { value: 20, category: "NotOK" },
+        { value: 25, category: "Pending" },
       ]);
       series.appear(1000, 100);
     });

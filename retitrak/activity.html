@@ -17,8 +17,26 @@
   <div class="main_body">
     <aside class="main_sidebar fixed_sidebar">
       <div class="sidebar_header">
-        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
         <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>OOH Tracker</h3>
       </div>
       <div class="sidebar_menu">
         <ul class="menu_list">
@@ -67,6 +85,21 @@
             </a>
           </li>
         </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </aside>
     <main class="main_content">
@@ -91,8 +124,8 @@
               <div class="dropdown">
                 <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
-                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
                 </ul>
               </div>
             </div>
@@ -127,7 +160,7 @@
             <div class="tab-pane fade show active" id="images-tab-pane" role="tabpanel" aria-labelledby="images-tab" tabindex="0">
               <div class="activity_box">
                 <div class="activity_head">
-                  <div class="activity_fil1">
+                  <div class="activity_fil1 activity_fil2">
                     <div class="row">
                       <div class="col-12 col-sm-12">
                         <div class="input_group mb-0">
@@ -142,10 +175,22 @@
                       </div>
                     </div>
                   </div>
-                  <div class="activity_fil3">
-                    <button type="button" class="blue_btn">Search</button>
+                  <div class="activity_fil1 activity_fil2">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Select Brand</option>
+                            <option>Barnd 1</option>
+                            <option>Barnd 2</option>
+                            <option>Barnd 3</option>
+                            <option>Barnd 4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="activity_fil4">
+                  <div class="activity_fil2 activity_fil4">
                     <button type="button" class="view_btn active" id="grid_view"><span class="material-symbols-outlined">grid_view</span></button>
                     <button type="button" class="view_btn" id="list_view"><span class="material-symbols-outlined fw-200">lists</span></button>
                     <!-- <button type="button" class="view_btn"><span class="material-symbols-outlined">map</span></button> -->
@@ -637,6 +682,13 @@
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
   <script>
     $(document).ready(function(){
       $('#grid_view').on('click', function(){

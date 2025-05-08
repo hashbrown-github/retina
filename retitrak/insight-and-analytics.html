@@ -18,8 +18,26 @@
   <div class="main_body">
     <aside class="main_sidebar fixed_sidebar">
       <div class="sidebar_header">
-        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <div class="auditSer_box">
+          <a href="../home.html"><img src="images/logo.svg" alt="Retitrak" /></a>
+          <div class="auditSer_drop">
+            <div class="dropdown">
+              <button class="drop_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">unfold_more</span></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="javascript:void(0);">OOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">DOOH Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">BTL Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Retail Tracker</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Asset Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
         <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_head">
+        <h3>OOH Tracker</h3>
       </div>
       <div class="sidebar_menu">
         <ul class="menu_list">
@@ -68,6 +86,21 @@
             </a>
           </li>
         </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </aside>
     <main class="main_content">
@@ -92,8 +125,8 @@
               <div class="dropdown">
                 <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
-                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                  <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
                 </ul>
               </div>
             </div>
@@ -104,23 +137,41 @@
         <div class="campaign_box">
           <div class="analyticsBox_0">
             <div class="report_camdtl">
+              <p>RetiTrak Report</p>
               <div class="cam_name">
                 <h3>The rise of advertising</h3>
                 <p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
               </div>
-              <div class="report_camdtl2">
-                <div class="retinaAd_logo">
-                  <img src="images/logo.svg" alt="Retinaad" />
+            </div>
+            <div class="report_camdtl2">
+              <div class="retinaAd_logo">
+                <img src="images/retinaad-logo.svg" alt="Retinaad" />
+              </div>
+              <div class="flexBoxes">
+                <div class="flexBoxes1">
+                  <div class="input_group mb-0">
+                    <label>Select Campaign:</label>
+                    <select class="form_control">
+                      <option selected>Test Campaign</option>
+                      <option>Test Campaign 2</option>
+                      <option>The rise of advertising</option>
+                      <option>The High Street</option>
+                      <option>OOH market</option>
+                    </select>
+                  </div>
+                  <div class="input_group mb-0">
+                    <label>Select Brand:</label>
+                    <select class="form_control">
+                      <option selected>Brand 1</option>
+                      <option>Brand 2</option>
+                      <option>Brand 3</option>
+                      <option>Brand 4</option>
+                      <option>Brand 5</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="input_group mb-0">
-                  <label>Select Campaign:</label>
-                  <select class="form_control">
-                    <option selected>Test Campaign</option>
-                    <option>Test Campaign 2</option>
-                    <option>The rise of advertising</option>
-                    <option>The High Street</option>
-                    <option>OOH market</option>
-                  </select>
+                <div class="analyBox_02">
+                  <button type="button"><img src="images/pdf.svg" alt="PDF">Export as PDF</button>
                 </div>
               </div>
             </div>
@@ -129,9 +180,6 @@
                 <div class="analyBox_0">
                   <div class="analyBox_01">
                     <h3 class="mb-0">Insight and Analytics</h3>
-                  </div>
-                  <div class="analyBox_02">
-                    <button type="button"><img src="images/pdf.svg" alt="PDF">Export as PDF</button>
                   </div>
                 </div>
                 <ul>
@@ -143,19 +191,27 @@
                       </div>
                       <div class="dtl_line">
                         <p>Total Number of Sites</p>
-                        <h5>50</h5>
+                        <h5>80</h5>
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="dtl_line0">
                       <div class="dtl_line">
+                        <p>Total Audited Sites</p>
+                        <h5>55</h5>
+                      </div>
+                      <div class="dtl_line">
                         <p>Total OK</p>
-                        <h5>10</h5>
+                        <h5>35</h5>
                       </div>
                       <div class="dtl_line">
                         <p>Total NOT OK</p>
-                        <h5>40</h5>
+                        <h5>20</h5>
+                      </div>
+                      <div class="dtl_line">
+                        <p>Total Not Audited Sites</p>
+                        <h5>25</h5>
                       </div>
                     </div>
                     <div class="dtl_line1">
@@ -164,33 +220,35 @@
                     </div>
                   </li>
                   <li>
-                    <div class="dtl_line2">
-                      <div class="input_group mb-0">
-                        <select class="form_control">
-                          <option selected disabled>Select Location</option>
-                          <option>Location 1</option>
-                          <option>Location 2</option>
-                          <option>Location 3</option>
-                          <option>Location 4</option>
-                        </select>
+                    <div>
+                      <div class="dtl_line2">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Select Location</option>
+                            <option>Location 1</option>
+                            <option>Location 2</option>
+                            <option>Location 3</option>
+                            <option>Location 4</option>
+                          </select>
+                        </div>
                       </div>
-                    </div>
-                    <div class="dtl_line0">
-                      <div class="dtl_line">
-                        <p>Start Date</p>
-                        <h5>June 20, 2024</h5>
-                      </div>
-                      <div class="dtl_line">
-                        <p>End Date</p>
-                        <h5>June 30, 2024</h5>
-                      </div>
-                      <div class="dtl_line">
-                        <p>Media Types</p>
-                        <h5>Billboard, Unipole, Transit Advertisement, Bus Advertising…</h5>
-                      </div>
-                      <div class="dtl_line">
-                        <p>Screen Type</p>
-                        <h5>Static, Digital</h5>
+                      <div class="dtl_line0">
+                        <div class="dtl_line">
+                          <p>Start Date</p>
+                          <h5>June 20, 2024</h5>
+                        </div>
+                        <div class="dtl_line">
+                          <p>End Date</p>
+                          <h5>June 30, 2024</h5>
+                        </div>
+                        <div class="dtl_line">
+                          <p>Media Types</p>
+                          <h5>Billboard, Unipole, Transit Advertisement, Bus Advertising…</h5>
+                        </div>
+                        <div class="dtl_line">
+                          <p>Screen Type</p>
+                          <h5>Static, Digital</h5>
+                        </div>
                       </div>
                     </div>
                     <div class="dtl_line1">
@@ -206,8 +264,9 @@
                 <li>
                   <h3>Site Status Summary<button type="button" id="expandPopup1"><span class="material-symbols-outlined">zoom_out_map</span></button></h3>
                   <div class="secMap_legends">
-                    <p><span class="yellow_box"></span>OK</p>
-                    <p><span class="blue_box"></span>Not OK</p>
+                    <p>OK<span class="yellow_box"></span></p>
+                    <p>Not OK<span class="blue_box"></span></p>
+                    <p>Pending<span class="red_box"></span></p>
                   </div>
                   <div class="chart_box">
                     <div id="site_status2"></div>
@@ -216,14 +275,25 @@
                 <li>
                   <h3>Campaign Status Summary<button type="button" id="expandPopup2"><span class="material-symbols-outlined">zoom_out_map</span></button></h3>
                   <div class="secMap_legends">
-                    <p><span class="yellow_box"></span>OK</p>
-                    <p><span class="blue_box"></span>Not OK</p>
+                    <p>OK<span class="yellow_box"></span></p>
+                    <p>Not OK<span class="blue_box"></span></p>
                   </div>
                   <div class="chart_box">
                     <div id="campaign_status"></div>
                   </div>
                 </li>
               </ul>
+            </div>
+            <div class="btlLoc_dtl2">
+              <div class="dtl_line0">
+                <div class="scoreHead">
+                  <h3 class="mb-0">Deployed Board-Types</h3>
+                  <div class="scoreHeadR">
+                    <button type="button" id="expandPopup3"><span class="material-symbols-outlined">zoom_out_map</span></button>
+                  </div>
+                </div>
+                <div id="board_types"></div>
+              </div>
             </div>
           </div>
           <div class="noFoundInner">
@@ -249,6 +319,13 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
   <!--======= EXPAND CHART SCRIPT START =======-->
   <script>
     $(document).ready(function(){
@@ -269,6 +346,17 @@
           return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
         });
         $(this).parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup3').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
       });
     });
   </script>
@@ -301,9 +389,9 @@
   </script>
   <!--======== MOBILE MENU END ========-->
   <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
   <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
   <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
   <script>
     am5.ready(function () {
       var root = am5.Root.new("campaign_status");
@@ -375,8 +463,8 @@
       }));
 
       series1.columns.template.setAll({
-        fill: am5.color("#F5D965"),
-        stroke: am5.color("#F5D965")
+        fill: am5.color("#fccc50"),
+        stroke: am5.color("#fccc50")
       });
 
       series1.data.setAll(data);
@@ -391,8 +479,8 @@
       }));
 
       series2.columns.template.setAll({
-        fill: am5.color("#006DD5"),
-        stroke: am5.color("#006DD5")
+        fill: am5.color("#338bdf"),
+        stroke: am5.color("#338bdf")
       });
       series2.data.setAll(data);
 
@@ -439,15 +527,21 @@
       }));
       var series = chart.series.push(am5percent.PieSeries.new(root, {
         valueField: "value",
-        categoryField: "category"
+        categoryField: "category",
+        alignLabels: false
       }));
+
+      
 
       series.slices.template.adapters.add("fill", function (fill, target) {
         if (target.dataItem.get("category") == "OK") {
-          return am5.color(0x016DD5);
+          return am5.color(0xfccc50);
         }
         else if (target.dataItem.get("category") == "NotOK") {
-          return am5.color(0xF5D965);
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
         }
         else {
           return fill;
@@ -455,22 +549,171 @@
       });
       series.slices.template.adapters.add("stroke", function (stroke, target) {
         if (target.dataItem.get("category") == "OK") {
-          return am5.color(0x016DD5);
+          return am5.color(0xfccc50);
         }
         else if (target.dataItem.get("category") == "NotOK") {
-          return am5.color(0xffffff);
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
         }
         else {
           return stroke;
         }
       });
 
+      // Add labels inside slices
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight:600,
+        text: "{value}",
+        /* fill:am5.color(0xffffff),
+        radius:am5.percent(0),
+        centerX: am5.percent(100), */
+        /* inside: true,
+        radius: 35, */
+        
+        centerX: am5.percent(100),
+        fill: am5.color(0x000000)
+      });
+
+
       series.data.setAll([
-        { value: 75, category: "OK" },
-        { value: 25, category: "NotOK" },
+        { value: 35, category: "OK" },
+        { value: 20, category: "NotOK" },
+        { value: 25, category: "Pending" },
       ]);
       series.appear(1000, 100);
     });
+  </script>
+  <script>
+    var root = am5.Root.new("board_types");
+    var myTheme = am5.Theme.new(root);
+    myTheme.rule("Grid", ["base"]).setAll({
+      strokeOpacity: 0.1
+    });
+    root.setThemes([
+      am5themes_Animated.new(root),
+      myTheme
+    ]);
+    var chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        wheelX: "none",
+        wheelY: "none",
+        paddingLeft: 0
+      })
+    );
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    yRenderer.grid.template.set("location", 1);
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x000000),
+      fontSize: 10,
+      fontWeight: 600,
+      forceHidden: false
+    });
+    var yAxis = chart.yAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        maxDeviation: 0,
+        categoryField: "category",
+        renderer: yRenderer
+      })
+    );
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: true
+    });
+    var xAxis = chart.xAxes.push(
+      am5xy.ValueAxis.new(root, {
+        maxDeviation: 0,
+        min: 0,
+        renderer: xRenderer
+      })
+    );
+    yRenderer.grid.template.setAll({
+      forceHidden: true
+    });
+    xRenderer.grid.template.setAll({
+      forceHidden: true
+    });
+    var series = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Series 1",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueXField: "value",
+        sequencedInterpolation: true,
+        categoryYField: "category",
+        fill: am5.color(0x338bdf)
+      })
+    );
+    series.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        locationY: 0.5,
+        sprite: am5.Label.new(root, {
+          text: "{valueX.formatNumber('#.00')}%",
+          fontSize: 12,
+          fill: root.interfaceColors.get("alternativeText"),
+          centerY: am5.percent(50),
+          centerX: am5.percent(50),
+          populateText: true
+        })
+      })
+    });
+    var columnTemplate = series.columns.template;
+    columnTemplate.setAll({
+      draggable: true,
+      cursorOverStyle: "pointer",
+      tooltipText: "drag to rearrange",
+      cornerRadiusBR: 3,
+      cornerRadiusTR: 3,
+      strokeOpacity: 0
+    });
+
+    var data = [{
+      category: "Rooftop",
+      value: 22.3456
+    }, {
+      category: "Portrait Portrait Portrait Portrait Portrait",
+      value: 50.5463
+    }, {
+      category: "48 Sheets",
+      value: 76.6754
+    }, {
+      category: "Unipole",
+      value: 82.1234
+    }, {
+      category: "Lamppoles",
+      value: 95.3256
+    },
+    {
+      category: "Eye Catcher",
+      value: 2.3456
+    },
+    {
+      category: "LED",
+      value: 47.8654
+    },
+    {
+      category: "Gantryx",
+      value: 87.9086
+    }];
+
+    data.sort((a, b) => a.value - b.value);
+
+    yAxis.data.setAll(data);
+    series.data.setAll(data);
+    series.appear(1000);
+    chart.appear(1000, 100);
   </script>
 </body>
 </html>

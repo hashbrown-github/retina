@@ -44,7 +44,7 @@
               <h4><span class="step_no">4</span>Designated Contact Person</h4>
             </button>
             <button class="nav-link" id="v-pills-five-tab" data-bs-toggle="pill" data-bs-target="#v-pills-five" type="button" role="tab" aria-controls="v-pills-five" aria-selected="false">
-              <h4><span class="step_no">5</span>Bank Account Details</h4>
+              <h4><span class="step_no">5</span>Account Preferences</h4>
             </button>
             <button class="nav-link" id="v-pills-seven-tab" data-bs-toggle="pill" data-bs-target="#v-pills-seven" type="button" role="tab" aria-controls="v-pills-seven" aria-selected="false">
               <h4><span class="step_no">6</span>Review and Finish</h4>
@@ -354,21 +354,45 @@
               <div class="content_box">
                 <div class="head_part">
                   <div class="head_left">
-                    <h3>Bank Account Details</h3>
+                    <h3>Account Preferences</h3>
                   </div>
                   <div class="head_right">
                     <div class="steps_box">5/6 Steps Completed</div>
                   </div>
                 </div>
                 <div class="form_fields">
+                  <h5>Profile Settings</h5>
                   <div class="row">
                     <div class="col-12 col-sm-12">
                       <div class="input_group">
                         <label class="form_label">Currency</label>
-                        <input class="form_control" type="number" name="currency" />
+                        <select class="form_control">
+                          <option>United States Dollar (USD)</option>
+                          <option>Naira (NGN)</option>
+                          <option>Ghana Cedi (GHS)</option>
+                          <option>Kenyan Shilling (KES)</option>
+                          <option>United States Dollar (USD)</option>
+                        </select>
                       </div>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-12 col-sm-12">
+                      <div class="input_group">
+                        <label class="form_label">Time Zone</label>
+                        <select class="form_control">
+                          <option>UTC</option>
+                          <option>UTC +14</option>
+                          <option>UTC +13:45</option>
+                          <option>UTC +13</option>
+                          <option>UTC +12</option>
+                          <option>UTC +11</option>
+                          <option>UTC +10:30</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="mt-2">Bank Account Details</h5>
                   <div class="row">
                     <div class="col-12 col-sm-12">
                       <div class="input_group">
