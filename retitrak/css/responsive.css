@@ -1,5 +1,21 @@
 @charset "UTF-8";
 /* CSS Document */
+@media (max-width: 2100px) {
+.assetFilters .filter_div.filter_11 {
+  min-width: 210px;
+}
+.assetFilters .filter_div:not(.filter_15) {
+  width: calc(14.28% - 55.7px);
+}
+}
+@media (max-width: 1860px) {
+.search_filters2 .filter_div, .search_filters2 .filter_div.filter_1 {
+  width: 30%;
+}
+.search_filters2 .filter_div.filter_5 {
+  width: 10%;
+}
+}
 @media (max-width: 1680px) {
 .locDtl_head, .locDtl_body > ul, .activity_body ul {
   gap: 20px;
@@ -16,15 +32,36 @@
 .activity_fil1, .activity_fil3, .activity_fil4 {
   width: 33.33%;
 }
+.box_13 ul li .check_box1 .box_11 {
+  min-width: unset;
+  width: 100%;
 }
-@media (max-width: 1540px) {
+.check_box01, .check_box1 {
+  width: calc(100% - 480px);
+}
+.check_box0, .check_box {
+  gap: 20px;
+}
+.check_box02, .check_box2 {
+  width: 220px;
+}
+.assetFilters select.form_control {
+  padding-right: 40px;
+}
+.assetFilters .filter_div.filter_11, .assetFilters .filter_div.filter_12, .assetFilters .filter_div.filter_13, .assetFilters .filter_div.filter_14 {
+  width: calc(25% - 7.5px);
+}
+.assetFilters .filter_div.filter_16, .assetFilters .filter_div.filter_17, .assetFilters .filter_div.filter_18, .assetFilters .filter_div.filter_19 {
+  width: calc(25% - 35px);
+}
 .report_header .card_header ul li {
-  width: calc(33.33% - 13.33px);
+  width: calc(25% - 11.25px);
   max-width: unset;
 }
-.report_header .card_header ul li h3 {
-  font-size: 16px;
-  line-height: 22px;
+}
+@media (max-width: 1540px) {
+.locDtl_body > ul > li {
+  width: calc(33.33% - 13.33px);
 }
 }
 @media (max-width: 1399px) {
@@ -49,9 +86,6 @@
 .add_cam0 {
   margin-top: 30px;
 }
-.locDtl_body > ul > li {
-  width: calc(33.33% - 13.33px);
-}
 .contact_box {
   margin: 0 auto;
 }
@@ -66,6 +100,29 @@
 }
 .activity_fil3 {
   width: 20%;
+}
+.activity_fil2.activity_fil4 {
+  width: 20%;
+  padding-right: 0;
+  justify-content: flex-end;
+}
+.btlLoc_dtl6 ul {
+  gap: 20px;
+}
+.btlLoc_dtl6 ul li {
+  width: calc(33.33% - 13.33px);
+}
+.days_dtl {
+  max-width: 100%;
+}
+.days_dtl2 {
+  width: calc(100% - 180px);
+}
+#stacked-bar-chart, #stacked-bar-chart2, #stacked-bar-chart3, #stacked-bar-chart4 {
+  width: 100%;
+}
+.report_header .card_header ul li {
+  width: calc(33.33% - 10px);
 }
 }
 @media (max-width: 1280px) {
@@ -84,11 +141,41 @@
 .plan_dtl .block_txt {
   display: inline;
 }
-.report_header .card_header ul li {
-  width: calc(50% - 10px);
-}
 .chart_box img {
   height: 300px;
+}
+.checklist_2 .box_13 {
+  padding-left: 0;
+}
+.search_filters.search_filters2 {
+  gap: 12px;
+}
+.search_filters2 .filter_div, .search_filters2 .filter_div.filter_1 {
+  width: calc(33.33% - 8px);
+  padding-right: 0;
+}
+.card_header ul li {
+  padding: 8px 12px;
+}
+.card_header ul li img {
+  width: 40px;
+}
+.card_header ul li h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+.asset_reports .card_header ul li h3 {
+  font-size: 16px;
+  line-height: 22px;
+}
+.asset_reports .card_header ul li h3.smallSize {
+  font-size: 15px;
+}
+}
+@media (max-width: 1220px) {
+#secBy_score, #kpi_performance {
+  width: 380px;
+  height: 350px;
 }
 }
 @media (max-width: 1199px) {
@@ -170,8 +257,11 @@
   object-position: top;
   height: 260px;
 }
+.box_1 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
 }
-@media (max-width: 1100px) {
 .secMap_legends {
   top: unset;
   right: unset;
@@ -184,10 +274,74 @@
   font-size: 13px;
   line-height: 15px;
 }
+#secBy_score, #kpi_performance {
+  width: 353px;
+}
+.assetFilters .filter_div.filter_11 {
+  min-width: unset;
+}
+.first_chart .secMap_legends {
+  top: 18px;
+  right: 0;
+  left: unset;
+  bottom: unset;
+  border: 1px solid #EAEAEA;
+  border-right: 0;
+}
+}
+@media (max-width: 1140px) {
+.btlLocationDtl .analyBox_11 ul {
+  grid-template-columns: 1fr;
+}
+.assetFilters .filter_div.filter_11 {
+  width: 210px;
+}
+.assetFilters .filter_div.filter_12, .assetFilters .filter_div.filter_13, .assetFilters .filter_div.filter_14 {
+  width: calc(33.33% - 80px);
+}
+}
+@media (max-width: 1100px) {
+.checklist_21 {
+  min-width: 920px;
+}
+.analyBox_11 ul li:last-child {
+  grid-column: 1 / 2 span;
+  grid-row: 2;
+}
+.analyBox_2 ul {
+  flex-direction: column;
+}
+.analyBox_2 ul li {
+  width: 100%;
+}
+.rightTxt .btlLoc_dtl6 ul {
+  flex-direction: column;
+  gap: 15px;
+}
+.rightTxt .btlLoc_dtl6 ul li {
+  width: 200px;
+  padding: 8px;
+  padding-bottom: 6px;
+}
+.card_cont p {
+  font-size: 16px;
+  line-height: 22px;
+}
+.card_cont h4 {
+  font-size: 16px;
+  line-height: 20px;
+}
+#secBy_score, #kpi_performance {
+  width: 750px;
+  max-width: 100%;
+}
+.assetInsights .flexBoxes {
+  flex-direction: row;
+}
 }
 @media (max-width: 991px) {
 .authen_sc1 {
-  padding-top: 60px;
+  padding-top: 20px;
   padding-right: 40px;
 }
 .body_part {
@@ -227,6 +381,7 @@
 .card_header ul li {
   width: calc(50% - 10px);
   padding: 10px;
+  max-width: 100%;
 }
 .campaignTabs.nav-tabs .nav-link {
   width: 150px;
@@ -252,6 +407,49 @@
 }
 .activity_fil4 {
   width: 35%;
+}
+.activity_fil1.activity_fil2 {
+  width: 40%;
+}
+.locRep_list {
+  margin-top: 20px;
+}
+.heading_box {
+  margin-bottom: 15px;
+}
+.card_body h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+.plan_head h4, .plan_body h4 {
+  font-size: 20px;
+  line-height: 28px;
+}
+.assetFilters .filter_div {
+  width: calc(50% - 7.5px);
+}
+.assetFilters .filter_div.filter_11, .assetFilters .filter_div.filter_12, .assetFilters .filter_div.filter_13, 
+.assetFilters .filter_div.filter_14, .assetFilters .filter_div.filter_16, .assetFilters .filter_div.filter_17,
+.assetFilters .filter_div.filter_18, .assetFilters .filter_div.filter_19, .assetFilters .filter_div.filter_15 {
+  width: calc(33.33% - 6.66px);
+}
+.first_chart {
+  width: 100%;
+  text-align: center;
+}
+.first_chart .secMap_legends {
+  position: unset;
+  border: 1px solid #EAEAEA;
+  display: inline-flex;
+  margin-top: 15px;
+}
+.second_chart ul li {
+  width: 100%;
+  padding: 20px 0;
+}
+.second_chart ul li:nth-child(1), .second_chart ul li:nth-child(2), .second_chart ul li:nth-child(3) {
+  border: 0;
+  border-bottom: 1px solid #EAEAEA;
 }
 }
 @media (max-width: 960px) {
@@ -291,16 +489,18 @@
 .input_group .audit_category input.nav_link {
   width: 80px;
 }
-.report_camdtl {
-  align-items: flex-start;
-  flex-direction: column;
-}
 .report_camdtl2 {
   width: 100%;
   align-items: flex-start;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.search_filters2 .filter_div, .search_filters2 .filter_div.filter_1 {
+  width: calc(50% - 6px);
+}
+.search_filters2 .filter_div.filter_3 {
+  padding-right: 0;
 }
 }
 @media (max-width: 883px) {
@@ -320,9 +520,6 @@
 .head_part3 {
   gap: 15px;
 }
-.report_header .card_header ul li {
-  width: 100%;
-}
 .pay_methods.campaign_payment ul li img {
   height: 64px;
 }
@@ -338,6 +535,14 @@
 }
 .expandPopup #campaign_status {
   height: calc(100vh - 100px);
+}
+.boxTxt {
+  gap: 15px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.rightTxt .btlLoc_dtl6 ul {
+  flex-direction: row;
 }
 }
 @media (max-width: 767px) {
@@ -448,6 +653,9 @@
   font-size: 22px;
   line-height: 30px;
 }
+.expand_btn {
+  display: none;
+}
 }
 @media (max-width: 680px) {
 .tabs_box {
@@ -488,6 +696,14 @@
 }
 .authen_sec {
   gap: 30px;
+}
+.asset_reports .card_header ul li {
+  width: 100%;
+}
+.assetFilters .filter_div.filter_11, .assetFilters .filter_div.filter_12, .assetFilters .filter_div.filter_13, 
+.assetFilters .filter_div.filter_14, .assetFilters .filter_div.filter_16, .assetFilters .filter_div.filter_17, 
+.assetFilters .filter_div.filter_18, .assetFilters .filter_div.filter_19, .assetFilters .filter_div.filter_15 {
+  width: calc(50% - 5px);
 }
 }
 @media (max-width: 576px) {
@@ -621,6 +837,64 @@
   gap: 15px;
   margin-top: 20px;
 }
+.activity_fil1.activity_fil2 {
+  width: 100%;
+  padding-right: 0;
+}
+.activity_fil2.activity_fil4 {
+  width: unset;
+  justify-content: flex-start;
+}
+.report_camdtl .cam_name {
+  max-width: 100%;
+}
+.card_body h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+.analyBox_11 ul {
+  grid-template-columns: 1fr;
+}
+.analyBox_11 ul li:first-child {
+  grid-row: 1;
+  grid-column: 1 / 2 span;
+}
+.analyBox_11 ul li:nth-child(2) {
+  grid-row: 2;
+  grid-column: 1 / 2 span;
+}
+.analyBox_11 ul li:last-child {
+  grid-row: 3;
+}
+.analyBox_2 {
+  margin-top: 20px;
+}
+.report_camdtl h3 {
+  font-size: 18px;
+  line-height: 20px;
+}
+.btlLocationDtl .analyBox_11 ul li, .btlLocationDtl .analyBox_11 ul li:last-child {
+  grid-column: 1 / 2 span;
+}
+.dtl_score {
+  padding: 6px 10px;
+  padding-top: 8px;
+}
+.dtl_score .dtl_line p {
+  font-size: 15px;
+}
+.dtl_score .dtl_line p span {
+  font-size: 16px;
+}
+.assetFilters .filter_div {
+  width: 100%;
+}
+.search_filters2 .filter_div, .search_filters2 .filter_div.filter_1 {
+  width: 100%;
+}
+.assetInsights .flexBoxes {
+  flex-direction: column;
+}
 }
 @media (max-width: 480px) {
 .authen_sec {
@@ -706,6 +980,9 @@
 .container-1200 {
   max-width: 1100px;
 }
+.landSec_1 {
+  height: 500px;
+}
 .bodyPart_2 ul li {
   padding: 40px;
 }
@@ -768,6 +1045,9 @@
 .list_3:after {
   right: 22px;
 }
+.asset_reports {
+  margin-top: 30px;
+}
 }
 @media (max-width: 1280px) {
 .landSec_12 h1 {
@@ -788,8 +1068,8 @@
   gap: 60px;
   margin-top: 60px;
 }
-.landSec_1 {
-  height: 500px;
+.asset_reports {
+  margin-top: 20px;
 }
 }
 @media (max-width: 1199px) {
@@ -842,6 +1122,12 @@
 .expandPopup #site_status2 {
   height: 400px;
 }
+.checklist_11 {
+  gap: 8px;
+}
+.profile_1 {
+  gap: 40px;
+}
 }
 @media (max-width: 1100px) {
 .bodyPart_2 ul {
@@ -875,6 +1161,13 @@
 }
 .list_3:after {
   top: 40%;
+}
+.flexBoxes {
+  align-items: flex-start;
+  flex-direction: column;
+}
+.report_header .card_header ul li, .report_header .card_header ul li {
+  width: calc(50% - 7.5px);
 }
 }
 @media (max-width: 991px) {
@@ -959,6 +1252,23 @@
 }
 .sec3_img {
   width: calc(46% - 30px);
+}
+.profile_1 {
+  flex-direction: column;
+  gap: 0;
+}
+.profile_11 ul {
+  gap: 15px;
+}
+.profile_11 ul li:first-child {
+  padding-bottom: 15px;
+}
+.profile_11.profile_12 {
+  max-width: 100%;
+  margin-top: 25px;
+  border: 1px solid #dddddd;
+  padding: 15px;
+  border-radius: 3px;
 }
 }
 @media (max-width: 950px) {
@@ -1420,6 +1730,9 @@ body.open .mobile-nav {
 .expandPopup #site_status2 {
   height: 300px;
 }
+.report_header .card_header ul li, .report_header .card_header ul li {
+  width: 100%;
+}
 }
 @media (max-width: 575px) {
 .header_sec1 img {
@@ -1529,6 +1842,14 @@ body.open .mobile-nav {
 }
 .header_sec3 {
   gap: 15px;
+}
+.side_21 img {
+  width: 100%;
+  height: unset;
+  max-height: 360px;
+}
+.oohSec_1 .mobileImg .side_21 img {
+  height: unset;
 }
 .landSec_12 h1 {
   font-size: 32px;
