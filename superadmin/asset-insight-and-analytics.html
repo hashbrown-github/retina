@@ -1,0 +1,1483 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Asset Insights & Analytics</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/material-dashboard.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="g-sidenav-show bg-gray-100 dark_theme">
+   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark main_sidebar" id="sidenav-main" data-color="dark">
+    <div class="sidenav-header">
+      <i class="material-icons-round p-2 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav">close</i>
+      <a class="navbar-brand m-0" href="javascript:void(0);">
+        <img src="images/logo.svg" class="navbar-brand-img h-100" alt="main_logo">
+        <!-- <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span> -->
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2 mt-0">
+          <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">face</i>
+            <span class="nav-link-text ms-2 ps-1">Superadmin</span>
+          </a>
+          <div class="collapse" id="ProfileNav">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Settings </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-3 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <hr class="horizontal light mt-0 mb-2">
+        <li class="nav-item">
+          <a href="users.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">group</i>
+            <span class="nav-link-text ms-2 ps-1">Users</span>
+          </a>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#teams" class="nav-link text-white" aria-controls="teams" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">groups</i>
+            <span class="nav-link-text ms-2 ps-1">Teams</span>
+          </a>
+          <div class="collapse" id="teams">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="finance-and-audit.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Finance & Audit </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#campaigns" class="nav-link text-white" aria-controls="campaigns" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">campaign</i>
+            <span class="nav-link-text ms-2 ps-1">Audit Campaigns</span>
+          </a>
+          <div class="collapse" id="campaigns">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="campaigns.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Campaigns </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="field-executives.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Field Executives </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activity.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activity </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="map.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Map </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#activations" class="nav-link text-white" aria-controls="activations" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">wysiwyg</i>
+            <span class="nav-link-text ms-2 ps-1">Asset Tracker</span>
+          </a>
+          <div class="collapse" id="activations">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activations.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activations </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="activation-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#retail" class="nav-link text-white" aria-controls="retail" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">store</i>
+            <span class="nav-link-text ms-2 ps-1">Retail Tracker</span>
+          </a>
+          <div class="collapse" id="retail">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-audits.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Retail Audits </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#asset" class="nav-link text-white active" aria-controls="asset" role="button" aria-expanded="true">
+            <i class="material-icons-round opacity-10">devices</i>
+            <span class="nav-link-text ms-2 ps-1">Asset Tracker</span>
+          </a>
+          <div class="collapse show" id="asset">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="asset-tracker.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Asset Tracker </span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="asset-analytics.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="asset-activity.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Activity </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="asset-reports.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1"> Reports </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="display: none;">
+          <a data-bs-toggle="collapse" href="#orders" class="nav-link text-white" aria-controls="orders" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">article</i>
+            <span class="nav-link-text ms-2 ps-1">Orders</span>
+          </a>
+          <div class="collapse" id="orders">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="requested-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Requested Orders </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="final-orders.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2  ps-1"> Final Orders </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="billing.html" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">receipt_long</i>
+            <span class="nav-link-text ms-2 ps-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#checklist" class="nav-link text-white" aria-controls="checklist" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">done_all</i>
+            <span class="nav-link-text ms-2 ps-1">Checklist</span>
+          </a>
+          <div class="collapse" id="checklist">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="btl-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">BTL Checklist</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="retail-checklist.html">
+                  <span class="sidenav-mini-icon">  </span>
+                  <span class="sidenav-normal ms-2 ps-1">Retail Checklist</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:void(0);" class="nav-link text-white">
+            <i class="material-icons-round opacity-10">format_paint</i>
+            <div class="switchThemeBtn">
+              <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
+              <div class="form-check form-switch ps-0 ms-auto my-auto">
+                <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content border-radius-lg px-md-4">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 border-radius-xl shadow-none main_navbar0" id="navbarBlur" data-scroll="false">
+      <div class="container-fluid px-0 main_navbar1">
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none navPart_1">
+          <a href="javascript:;" class="nav-link p-0 text-body">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </a>
+        </div>
+        <ul class="navbar-nav justify-content-end navPart_4">
+          <li class="nav-item d-xl-none pe-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <nav aria-label="breadcrumb" class="navPart_2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-4 me-xs-0">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Asset Tracker</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:void(0);">Asset Tracker Detail</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Insights & Analytics</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse me-md-0 navPart_3" id="navbar">
+          <div class="ms-sm-auto d-flex align-items-center">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Search here</label>
+              <input type="text" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid px-0 pb-4 mainBody_box">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex w-100 flex-wrap gap-3 justify-content-between">
+            <div class="profile_box">
+              <div class="profile_info">
+                <h5 class="mb-0 font-weight-bolder">Asset Tracker 1<span class="badge badge-success badge-sm py-1 ms-2">Verified</span></h5>
+              </div>
+              <div class="profile_info2 mt-2">
+                <p class="mb-0 font-weight-normal align-items-start text-sm icon_size"><span class="material-icons-round">calendar_month</span>Starts 07 Nov, 2024</p>
+                <span class="border_line"></span>
+                <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">date_range</span><span>Total Number of Visits: <b>5</b></span></p>
+                <span class="border_line"></span>
+                <p class="mb-0 font-weight-normal text-sm icon_size"><span class="material-icons-round">event</span>5 Days Duration</p>
+              </div>
+            </div>
+            <div class="right_side">
+              <div class="scoreHeadR asset_analytics">
+                <div class="input-group input-group-static mb-0">
+                  <span class="material-icons-round selectIcon">expand_more</span>
+                  <select class="form-control w-220">
+                    <option selected disabled>Select Asset Tracker</option>
+                    <option>Asset Tracker 1</option>
+                    <option>Asset Tracker 2</option>
+                    <option>Asset Tracker 3</option>
+                    <option>Asset Tracker 4</option>
+                  </select>
+                </div>
+                <button type="button" class="download_btn" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Download as Excel"><img src="images/excel-icon.svg"></button>
+                <button type="button" class="download_btn" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Download as PDF"><img src="images/pdf-icon.svg"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body flex_unset mt-4">
+        <div class="noFoundInner">
+          <img src="images/tracker-empty.svg" alt="Not Found">
+          <h5 class="mb-2 text-dark">No Asset Tracker selected</h5>
+          <p class="font-weight-normal text-sm mb-3">Please select asset tracker & asset to view analytics</p>
+          <div class="scoreHeadR">
+            <div class="input-group input-group-static mb-0">
+              <span class="material-icons-round selectIcon">expand_more</span>
+              <select class="form-control">
+                <option selected disabled>Select Asset Tracker</option>
+                <option>Asset Tracker 1</option>
+                <option>Asset Tracker 2</option>
+                <option>Asset Tracker 3</option>
+                <option>Asset Tracker 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-body">
+          <p class="font-weight-normal mb-3">Select Insight Duration</p>
+          <div class="filter_status filter_2 mx-0">
+            <div class="input-group input-group-static mb-0">
+              <input class="form-control date max-width-unset" type="text" placeholder="Start Date" onfocus="focused(this)" onfocusout="defocused(this)">
+              <span class="searchIcon">
+                <span class="material-icons-round text-dark">date_range</span>
+              </span>
+            </div>
+            <div class="input-group input-group-static mb-0">
+              <input class="form-control date max-width-unset" type="text" placeholder="End Date" onfocus="focused(this)" onfocusout="defocused(this)">
+              <span class="searchIcon">
+                <span class="material-icons-round text-dark">date_range</span>
+              </span>
+            </div>
+            <div class="search_btn">
+              <button type="button" class="btn bg-gradient-primary text-nowrap m-0 px-4 py-2 blue_btn2">Generate Report</button>
+            </div>
+          </div>
+          <h5 class="mb-3 text-dark">Insight and Analytics</h5>
+          <div class="asset_analytics1">
+            <div class="asset_analytics11">
+              <div class="list-group-item justify-content-between border-radius-lg campaign_item">
+                <div class="dtl_line0">
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Report Date</p>
+                    <p class="font-weight-bold text-sm mb-0">June 20, 2024</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Total Number of Sites</p>
+                    <p class="font-weight-bold text-sm mb-0">80</p>
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item justify-content-between border-radius-lg campaign_item">
+                <div class="dtl_line0">
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Total Audited Sites</p>
+                    <p class="font-weight-bold text-sm mb-0">55</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Total OK</p>
+                    <p class="font-weight-bold text-sm mb-0">35</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Total NOT OK</p>
+                    <p class="font-weight-bold text-sm mb-0">20</p>
+                  </div>
+                  <div class="dtl_line">
+                    <p class="font-weight-normal text-sm mb-0">Total Not Audited Sites</p>
+                    <p class="font-weight-bold text-sm mb-0">25</p>
+                  </div>
+                </div>
+                <div class="dtl_line1">
+                  <p class="font-weight-normal text-sm mb-0">Sites Condition</p>
+                  <img src="images/site-condition.svg" alt="Site Condition" />
+                </div>
+              </div>
+            </div>
+            <div class="asset_analytics12">
+              <div class="list-group-item justify-content-between border-radius-lg campaign_item">
+                <div class="spaceBetween">
+                  <div class="scoreHeadR">
+                    <div class="input-group input-group-static mb-0">
+                      <span class="material-icons-round selectIcon">expand_more</span>
+                      <select class="form-control w-220">
+                        <option selected disabled>Select Location</option>
+                        <option>Location 1</option>
+                        <option>Location 2</option>
+                        <option>Location 3</option>
+                        <option>Location 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="dtl_line0">
+                    <div class="dtl_line">
+                      <p class="font-weight-normal text-sm mb-0">Start Date</p>
+                      <p class="font-weight-bold text-sm mb-0">June 20, 2024</p>
+                    </div>
+                    <div class="dtl_line">
+                      <p class="font-weight-normal text-sm mb-0">End Date</p>
+                      <p class="font-weight-bold text-sm mb-0">June 30, 2024</p>
+                    </div>
+                    <div class="dtl_line">
+                      <p class="font-weight-normal text-sm mb-0">Media Types</p>
+                      <p class="font-weight-bold text-sm mb-0">Billboard, Unipole, Transit Advertisement, Bus Advertising…</p>
+                    </div>
+                    <div class="dtl_line">
+                      <p class="font-weight-normal text-sm mb-0">Screen Type</p>
+                      <p class="font-weight-bold text-sm mb-0">Static, Digital</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="dtl_line1">
+                  <p class="font-weight-normal text-sm mb-0">Asset Summary</p>
+                  <img src="images/recently-audit.svg" alt="Audited Site">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="asset_analytics2">
+          <div class="scoreHead">
+            <h5 class="mb-0 text-dark">Asset Audit Rating</h5>
+            <div class="scoreHeadR">
+              <button type="button" id="expandPopup1"><span class="material-icons-round">zoom_out_map</span></button>
+            </div>
+          </div>
+          <div class="score_chart1" style="width: 100%; text-align: center;">
+            <div id="audit_rating_chart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="">
+          <div class="scoreHead">
+            <h5 class="mb-0 text-dark">Distribution of Assets Across States</h5>
+            <div class="scoreHeadR">
+              <button type="button" id="expandPopup2"><span class="material-icons-round">zoom_out_map</span></button>
+            </div>
+          </div>
+          <div class="first_chart">
+            <div class="bar_chart">
+              <div id="bar_chart"></div>
+            </div>
+            <div class="secMap_legends pos_unset1 mt-3">
+              <div class="pos_unset2">
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Abia<span class="loc_1"></span></p>
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Adamawa<span class="loc_2"></span></p>
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Akwa Ibom<span class="loc_3"></span></p>
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Anambra<span class="loc_4"></span></p>
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Bauchi<span class="loc_5"></span></p>
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Bayelsa<span class="loc_6"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="second_chart">
+            <ul>
+              <li>
+                <p class="font-weight-bold text-sm mb-0">Lagos<span class="font-weight-normal d-block">Total Sites: <span class="font-weight-bold">50</span></p>
+                <div id="state_chart1"></div>
+              </li>
+              <li>
+                <p class="font-weight-bold text-sm mb-0">Abia<span class="font-weight-normal d-block">Total Sites: <span class="font-weight-bold">45</span></p>
+                <div id="state_chart2"></div>
+              </li>
+              <li>
+                <p class="font-weight-bold text-sm mb-0">Adamawa<span class="font-weight-normal d-block">Total Sites: <span class="font-weight-bold">55</span></p>
+                <div id="state_chart3"></div>
+              </li>
+              <li>
+                <p class="font-weight-bold text-sm mb-0">Akwa Ibom<span class="font-weight-normal d-block">Total Sites: <span class="font-weight-bold">60</span></p>
+                <div id="state_chart4"></div>
+              </li>
+            </ul>
+            <div class="secMap_legends pos_unset1 mt-2">
+              <div class="pos_unset2">
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">OK<span class="yellow_box"></span></p>
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Not OK<span class="blue_box"></span></p>
+                <p class="mb-0 font-weight-normal text-sm text-dark icon_size">Pending<span class="red_box"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body mt-4">
+        <div class="">
+          <div class="scoreHead">
+            <h5 class="mb-0 text-dark">Deployed Board-Types</h5>
+            <div class="scoreHeadR">
+              <button type="button" id="expandPopup3"><span class="material-icons-round">zoom_out_map</span></button>
+            </div>
+          </div>
+          <div class="score_chart1" style="width: 100%; text-align: center;">
+            <div id="board_type_chart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/perfect-scrollbar.min.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/material-dashboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "M dd, yyyy"
+    });
+  </script>
+
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup1').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup2').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup3').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+
+  <script>
+    var rootLine = am5.Root.new("audit_rating_chart");
+    rootLine.setThemes([
+      am5themes_Animated.new(rootLine)
+    ]);
+    var chartLine = rootLine.container.children.push(
+      am5xy.XYChart.new(rootLine, {
+        panX: true,
+        panY: true,
+        wheelX: "none",
+        wheelY: "none",
+        layout: rootLine.verticalLayout,
+        pinchZoomX: true,
+        paddingLeft: 0,
+        paddingRight: 0,
+        paddingTop: 5,
+        paddingBottom: 0
+      })
+    );
+
+    var cursor = chartLine.set(
+      "cursor",
+      am5xy.XYCursor.new(rootLine, {
+        behavior: "none"
+      })
+    );
+    cursor.lineY.set("visible", false);
+
+    var colorSet = am5.ColorSet.new(rootLine, {});
+    var auditdata = [];
+    // assetauditgraph.forEach(function (visa) {
+    //     auditdata.push({
+    //         asset: visa.assetName,
+    //         value: visa.value
+    //     });
+    // });
+    var xRenderer = am5xy.AxisRendererX.new(rootLine, {
+      minGridDistance: 0
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false
+    });
+    xRenderer.labels.template.setAll({
+      rotation: 90,
+    });
+
+    var xAxis1 = chartLine.xAxes.push(am5xy.CategoryAxis.new(rootLine, {
+      categoryField: "assetName",
+      renderer: xRenderer
+    }));
+    var yRenderer = am5xy.AxisRendererY.new(rootLine, {
+      minGridDistance: 20
+    });
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: false,
+
+    });
+    yRenderer.grid.template.set("forceHidden", false);
+    yRenderer.labels.template.set("minPosition", 0.05);
+
+    var yAxis1 = chartLine.yAxes.push(
+      am5xy.ValueAxis.new(rootLine, {
+
+        renderer: yRenderer
+      })
+    );
+    yAxis1.setAll({
+      extraMin: 0.001,
+      min: 0,
+      max: 10
+    });
+
+    var auditdata = [
+      {
+        "assetName": "WAG ASSET 2",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 31",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 16",
+        "value": 10
+      },
+      {
+        "assetName": "WAG ASSET 7",
+        "value": 3.7
+      },
+      {
+        "assetName": "WAG ASSET 8",
+        "value": 1.7
+      },
+      {
+        "assetName": "WAG ASSET 67",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 65",
+        "value": 7.4
+      },
+      {
+        "assetName": "WAG ASSET 62",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 63",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 24",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 25",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 30",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 60",
+        "value": 6.4
+      },
+      {
+        "assetName": "WAG ASSET 56",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 59",
+        "value": 6.4
+      },
+      {
+        "assetName": "WAG ASSET 27",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 61",
+        "value": 5.7
+      },
+      {
+        "assetName": "WAG ASSET 23",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 21",
+        "value": 4
+      },
+      {
+        "assetName": "WAG ASSET 22",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 33",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 49",
+        "value": 0
+      },
+      {
+        "assetName": "WAG ASSET 29",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 57",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 55",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 18",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 17",
+        "value": 4
+      },
+      {
+        "assetName": "WAG ASSET 68",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 66",
+        "value": 7.7
+      },
+      {
+        "assetName": "WAG ASSET 53",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 52",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 51",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 47",
+        "value": 3.7
+      },
+      {
+        "assetName": "WAG ASSET 35",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 40",
+        "value": 3.7
+      },
+      {
+        "assetName": "WAG ASSET 37",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 38",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 39",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 43",
+        "value": 0
+      },
+      {
+        "assetName": "WAG ASSET 36",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 14",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 19",
+        "value": 4
+      },
+      {
+        "assetName": "WAG ASSET 13",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 34",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 58",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 41",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 42",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 1",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 3",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 5",
+        "value": 0
+      },
+      {
+        "assetName": "WAG ASSET 4",
+        "value": 8
+      }
+    ]
+    var series = chartLine.series.push(
+      am5xy.LineSeries.new(rootLine, {
+        xAxis: xAxis1,
+        yAxis: yAxis1,
+        valueYField: "value",
+        categoryXField: "assetName",
+        maskBullets: false
+      })
+    );
+
+    // Actual bullet with label
+    series.bullets.push(function (rootLine, series, dataItem) {
+      var container = am5.Container.new(rootLine, {});
+
+      var bulletCircle = container.children.push(
+        am5.Circle.new(rootLine, {
+          radius: 5,
+          fill: series.get("fill"),
+          stroke: am5.color(0x808191),
+        })
+      );
+
+      var label = container.children.push(
+        am5.Label.new(rootLine, {
+          text: dataItem.get("valueY").toString(),
+          centerY: am5.p100,
+          centerX: am5.p50, paddingTop: 5,
+          fill: am5.color(0x808191),
+          fontSize: 12,
+          fontWeight: 600
+        })
+      );
+
+      return am5.Bullet.new(rootLine, {
+        sprite: container
+      });
+    });
+
+    series.strokes.template.setAll({ strokeDasharray: [3, 3], strokeWidth: 2 });
+    xAxis1.data.setAll(auditdata);
+    series.data.setAll(auditdata);
+    series.appear(1000);
+    chartLine.appear(1000, 100);
+  </script>
+  
+  <script>
+    var root = am5.Root.new("bar_chart");
+    var myTheme = am5.Theme.new(root);
+  
+    root.setThemes([
+      am5themes_Animated.new(root),
+      myTheme
+    ]);
+  
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: false,
+      wheelY: false,
+      paddingTop: -2,
+      paddingLeft: -10,
+      paddingRight: -37,
+      paddingBottom: -8,
+      layout: root.verticalLayout
+    }));
+  
+    chart.set("scrollbarY", am5.Scrollbar.new(root, {
+      orientation: "vertical"
+    }));
+  
+    var data = [{
+      "states": "assets",
+      "abia": 12000,
+      "adamawa": 9300,
+      "akwaIbom": 15000,
+      "anambra": 11800,
+      "bauchi": 10200,
+      "bayelsa": 8500,
+      /* "benue": 10600,
+      "borno": 9700,
+      "crossRiver": 11000,
+      "delta": 13500,
+      "ebonyi": 9500,
+      "edo": 12300,
+      "ekiti": 8900,
+      "enugu": 11400,
+      "gombe": 8500,
+      "imo": 11800,
+      "jigawa": 9600,
+      "kaduna": 13200,
+      "kano": 14500,
+      "katsina": 11500,
+      "kebbi": 9900,
+      "kogi": 10600,
+      "kwara": 10200,
+      "lagos": 20000,
+      "nasarawa": 9800,
+      "niger": 10800,
+      "ogun": 12600,
+      "ondo": 12100,
+      "osun": 10900,
+      "oyo": 13400,
+      "plateau": 10100,
+      "rivers": 14000,
+      "sokoto": 9300,
+      "taraba": 9500,
+      "yobe": 8700,
+      "zamfara": 9400 */
+    }];
+
+
+    /* var colors = [am5.color(0xFFD8A3), am5.color(0xFDEC92), am5.color(0xACE2AE), am5.color(0x9DDDFA), am5.color(0xCABDE0), am5.color(0xFFD3F0)]; */
+
+    var colors = [am5.color(0xDE2F36), am5.color(0xFA5B62), am5.color(0xF1891E), am5.color(0xF8B217), 
+                  am5.color(0xF8E507), am5.color(0xFAF293)/* , am5.color(0x004D40), am5.color(0x04733A), 
+                  am5.color(0x159757), am5.color(0x20BA54), am5.color(0x4AD973), am5.color(0xC2EDCF), 
+                  am5.color(0x67751D), am5.color(0xA0B843), am5.color(0xDBED96), am5.color(0x1A237E), 
+                  am5.color(0x0D47A1), am5.color(0x0277BD), am5.color(0x03A9F4), am5.color(0x23C6DA), 
+                  am5.color(0x80DEEA), am5.color(0x733E88), am5.color(0xAE54A4), am5.color(0x9953B5), 
+                  am5.color(0xBE69E0), am5.color(0xE9B2FF), am5.color(0xCE1A6E), am5.color(0xE45688), 
+                  am5.color(0xEE9FB5), am5.color(0xFCD2E4), am5.color(0x831702), am5.color(0xA93725), 
+                  am5.color(0xC75105), am5.color(0xD37D27), am5.color(0xDA9E40), am5.color(0xF4D3A7) */];
+   
+    var yRenderer = am5xy.AxisRendererY.new(root, {});
+  
+    var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "states",
+      renderer: yRenderer
+    }));
+  
+    yAxis.data.setAll(data);
+  
+    var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+      min: 0,
+      /* max: 7700, */
+      strictMinMax: true,
+      renderer: am5xy.AxisRendererX.new(root, {})
+    }));
+    yAxis.get("renderer").labels.template.set("visible", false);
+    xAxis.get("renderer").labels.template.set("visible", false);
+    yAxis.get("renderer").grid.template.set("forceHidden", true);
+    xAxis.get("renderer").grid.template.set("forceHidden", true);
+  
+    function makeSeries(name, fieldName, colorIndex) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        baseAxis: yAxis,
+        valueXField: fieldName,
+        categoryYField: "states"
+      }));
+      series.columns.template.setAll({
+        fill: colors[colorIndex],
+        stroke: colors[colorIndex],
+        width:am5.percent(100)
+      });
+  
+      series.data.setAll(data);
+      series.appear();
+    }
+      makeSeries("Abia", "abia", 0);
+      makeSeries("Adamawa", "adamawa", 1);
+      makeSeries("Akwa Ibom", "akwaIbom", 2);
+      makeSeries("Anambra", "anambra", 3);
+      makeSeries("Bauchi", "bauchi", 4);
+      makeSeries("Bayelsa", "bayelsa", 5);
+      /* makeSeries("Benue", "benue", 6);
+      makeSeries("Borno", "borno", 7);
+      makeSeries("Cross River", "crossRiver", 8);
+      makeSeries("Delta", "delta", 9);
+      makeSeries("Ebonyi", "ebonyi", 10);
+      makeSeries("Edo", "edo", 11);
+      makeSeries("Ekiti", "ekiti", 12);
+      makeSeries("Enugu", "enugu", 13);
+      makeSeries("Gombe", "gombe", 14);
+      makeSeries("Imo", "imo", 15);
+      makeSeries("Jigawa", "jigawa", 16);
+      makeSeries("Kaduna", "kaduna", 17);
+      makeSeries("Kano", "kano", 18);
+      makeSeries("Katsina", "katsina", 19);
+      makeSeries("Kebbi", "kebbi", 20);
+      makeSeries("Kogi", "kogi", 21);
+      makeSeries("Kwara", "kwara", 22);
+      makeSeries("Lagos", "lagos", 23);
+      makeSeries("Nasarawa", "nasarawa", 24);
+      makeSeries("Niger", "niger", 25);
+      makeSeries("Ogun", "ogun", 26);
+      makeSeries("Ondo", "ondo", 27);
+      makeSeries("Osun", "osun", 28);
+      makeSeries("Oyo", "oyo", 29);
+      makeSeries("Plateau", "plateau", 30);
+      makeSeries("Rivers", "rivers", 31);
+      makeSeries("Sokoto", "sokoto", 32);
+      makeSeries("Taraba", "taraba", 33);
+      makeSeries("Yobe", "yobe", 34);
+      makeSeries("Zamfara", "zamfara", 35); */
+
+    chart.appear(1000, 100);            
+  </script>
+  
+  <script>
+    am5.ready(function () {
+      var root = am5.Root.new("state_chart1");
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+  
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+      }));
+  
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category",
+        alignLabels: true
+      }));
+  
+      series.slices.template.adapters.add("fill", function (fill, target) {
+        if (target.dataItem.get("category") == "OK") {
+          return am5.color(0xfccc50);
+        }
+        else if (target.dataItem.get("category") == "NotOK") {
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
+        }
+        else {
+          return fill;
+        }
+      });
+      series.slices.template.adapters.add("stroke", function (stroke, target) {
+        if (target.dataItem.get("category") == "OK") {
+          return am5.color(0xfccc50);
+        }
+        else if (target.dataItem.get("category") == "NotOK") {
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
+        }
+        else {
+          return stroke;
+        }
+      });
+  
+      // Add labels inside slices
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight:600,
+        text: "{category}: {value}",
+      });
+      series.data.setAll([
+        { value: 30, category: "OK" },
+        { value: 15, category: "NotOK" },
+        { value: 5, category: "Pending" },
+      ]);
+      series.appear(1000, 100);
+    });
+  </script>
+
+  <script>
+    am5.ready(function () {
+      var root = am5.Root.new("state_chart2");
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+  
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+      }));
+  
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category",
+        alignLabels: true
+      }));
+  
+      series.slices.template.adapters.add("fill", function (fill, target) {
+        if (target.dataItem.get("category") == "OK") {
+          return am5.color(0xfccc50);
+        }
+        else if (target.dataItem.get("category") == "NotOK") {
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
+        }
+        else {
+          return fill;
+        }
+      });
+      series.slices.template.adapters.add("stroke", function (stroke, target) {
+        if (target.dataItem.get("category") == "OK") {
+          return am5.color(0xfccc50);
+        }
+        else if (target.dataItem.get("category") == "NotOK") {
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
+        }
+        else {
+          return stroke;
+        }
+      });
+  
+      // Add labels inside slices
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight:600,
+        text: "{category}: {value}",
+      });
+      series.data.setAll([
+        { value: 10, category: "OK" },
+        { value: 25, category: "NotOK" },
+        { value: 15, category: "Pending" },
+      ]);
+      series.appear(1000, 100);
+    });
+  </script>
+  
+  <script>
+    am5.ready(function () {
+      var root = am5.Root.new("state_chart3");
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+  
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+      }));
+  
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category",
+        alignLabels: true
+      }));
+  
+      series.slices.template.adapters.add("fill", function (fill, target) {
+        if (target.dataItem.get("category") == "OK") {
+          return am5.color(0xfccc50);
+        }
+        else if (target.dataItem.get("category") == "NotOK") {
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
+        }
+        else {
+          return fill;
+        }
+      });
+      series.slices.template.adapters.add("stroke", function (stroke, target) {
+        if (target.dataItem.get("category") == "OK") {
+          return am5.color(0xfccc50);
+        }
+        else if (target.dataItem.get("category") == "NotOK") {
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
+        }
+        else {
+          return stroke;
+        }
+      });
+  
+      // Add labels inside slices
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight:600,
+        text: "{category}: {value}",
+      });
+      series.data.setAll([
+        { value: 20, category: "OK" },
+        { value: 15, category: "NotOK" },
+        { value: 20, category: "Pending" },
+      ]);
+      series.appear(1000, 100);
+    });
+  </script>
+
+  <script>
+    am5.ready(function () {
+      var root = am5.Root.new("state_chart4");
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+  
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+      }));
+  
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category",
+        alignLabels: true
+      }));
+  
+      series.slices.template.adapters.add("fill", function (fill, target) {
+        if (target.dataItem.get("category") == "OK") {
+          return am5.color(0xfccc50);
+        }
+        else if (target.dataItem.get("category") == "NotOK") {
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
+        }
+        else {
+          return fill;
+        }
+      });
+      series.slices.template.adapters.add("stroke", function (stroke, target) {
+        if (target.dataItem.get("category") == "OK") {
+          return am5.color(0xfccc50);
+        }
+        else if (target.dataItem.get("category") == "NotOK") {
+          return am5.color(0x338bdf);
+        }
+        else if (target.dataItem.get("category") == "Pending") {
+          return am5.color(0xfc6c88);
+        }
+        else {
+          return stroke;
+        }
+      });
+  
+      // Add labels inside slices
+      series.labels.template.setAll({
+        fontSize: 12,
+        fontWeight: 600,
+        text: "{category}: {value}",
+      });
+
+      /* // Original data
+      const rawData = [
+        { value: 60, category: "OK" },
+        { value: 1, category: "NotOK" },
+        { value: 1, category: "Pending" },
+      ];
+
+      // Only include items where value > 0
+      const filteredData = rawData.filter(item => item.value > 0);
+
+      // Set data
+      series.data.setAll(filteredData);
+
+      series.appear(1000, 100); */
+      
+      series.data.setAll([
+        { value: 2, category: "OK" },
+        { value: 0, category: "NotOK" },
+        { value: 0, category: "Pending" },
+      ]);
+      series.appear(1000, 100);
+    });
+  </script>
+
+  <script>
+    var root = am5.Root.new("board_type_chart");
+    var myTheme = am5.Theme.new(root);
+    myTheme.rule("Grid", ["base"]).setAll({
+      strokeOpacity: 0.1
+    });
+    root.setThemes([
+      am5themes_Animated.new(root),
+      myTheme
+    ]);
+    var chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        wheelX: "none",
+        wheelY: "none",
+        paddingLeft: 0
+      })
+    );
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    yRenderer.grid.template.set("location", 1);
+    yRenderer.labels.template.setAll({
+      fill: am5.color(0x000000),
+      fontSize: 10,
+      fontWeight: 600,
+      forceHidden: false
+    });
+    var yAxis = chart.yAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        maxDeviation: 0,
+        categoryField: "category",
+        renderer: yRenderer
+      })
+    );
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      minGridDistance: 30,
+      minorGridEnabled: true
+    });
+    xRenderer.labels.template.setAll({
+      fill: am5.color(0x808191),
+      fontSize: 10,
+      forceHidden: true
+    });
+    var xAxis = chart.xAxes.push(
+      am5xy.ValueAxis.new(root, {
+        maxDeviation: 0,
+        min: 0,
+        renderer: xRenderer
+      })
+    );
+    yRenderer.grid.template.setAll({
+      forceHidden: true
+    });
+    xRenderer.grid.template.setAll({
+      forceHidden: true
+    });
+    var series = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Series 1",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueXField: "value",
+        sequencedInterpolation: true,
+        categoryYField: "category",
+        fill: am5.color(0x338bdf)
+      })
+    );
+    series.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        locationY: 0.5,
+        sprite: am5.Label.new(root, {
+          text: "{valueX.formatNumber('#.00')}%",
+          fontSize: 12,
+          fill: root.interfaceColors.get("alternativeText"),
+          centerY: am5.percent(50),
+          centerX: am5.percent(50),
+          populateText: true
+        })
+      })
+    });
+    var columnTemplate = series.columns.template;
+    columnTemplate.setAll({
+      draggable: true,
+      cursorOverStyle: "pointer",
+      tooltipText: "drag to rearrange",
+      cornerRadiusBR: 3,
+      cornerRadiusTR: 3,
+      strokeOpacity: 0
+    });
+
+    var data = [{
+      category: "Rooftop",
+      value: 30.6
+    }, {
+      category: "Portrait",
+      value: 22.2
+    }, {
+      category: "48 Sheets",
+      value: 21.3
+    }, {
+      category: "Unipole",
+      value: 18.5
+    }, {
+      category: "Lamppoles",
+      value: 3.7
+    },
+    {
+      category: "Eye Catcher",
+      value: 1.9
+    },
+    {
+      category: "LED",
+      value: 0.9
+    },
+    {
+      category: "Gantry",
+      value: 0.9
+    }];
+
+    data.sort((a, b) => a.value - b.value);
+
+    yAxis.data.setAll(data);
+    series.data.setAll(data);
+    series.appear(1000);
+    chart.appear(1000, 100);
+  </script>
+</body>
+</html>
+  
