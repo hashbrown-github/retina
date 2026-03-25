@@ -1,0 +1,522 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Request Detail</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="dashboard.html">
+              <span class="material-symbols-outlined link_icon">dashboard</span>
+              <span class="link_text">Dashboard</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">ads_click</span>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="bookings.html">
+              <span class="material-symbols-outlined link_icon">edit_calendar</span>
+              <span class="link_text">Bookings</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">package_2</span>
+              <span class="link_text">Orders</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="proof-of-posting.html">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link active" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">map</span>
+              <span class="link_text">Map</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="manage-requests.html">Manage Requests</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Request Detail</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="request_box">
+              <div class="card_body card_body2">
+                <div class="card_body21">
+                  <p class="mb-1"><b>#1234567</b><span class="status_type warning_5 ms-2">Open</span></p>
+                  <h3 class="p_flex mb-2">The Rise of Advertising<span class="badge badge-digital ms-2">Digital</span></h3>
+                  <p class="mb-2"><span>Media Buyer:</span> <span class="blue_txt">John Doe</span></p>
+                  <p class="mb-2"><span>Request Raised On:</span> <span>15 Sep, 2025</span> | <span>12:00 PM</span></p>
+                  <p class="mb-2"><span>Start - End Date:</span> <span>04 Sep, 2025</span> - <span>30 Sep, 2025</span></p>
+                  <p class="mb-0"><b>Pause Date:</b> <span>16 Sep, 2025</span> - <span>18 Sep, 2025</span></p>  
+                </div>
+                <div class="card_body22">
+                  <div>
+                    <p class="p_flex mb-2"><span class="status_type warning_5">Fully Approved</span><span class="status_type warning_9 ms-1">Pause Campaign</span></p>
+                    <p class="grey_txt mb-0">(Campaign on hold until new approvals are received.)</p>
+                  </div>
+                  <div>
+                    <p class="mt-2 mb-0">Request Closing Date: <b>12:00 AM</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="request_box mt-3">
+              <div class="card_body card_body2">
+                <div class="card_body21">
+                  <p class="mb-1"><b>#1234567</b><span class="status_type warning_5 ms-2">Open</span></p>
+                  <h3 class="p_flex mb-2">The Rise of Advertising<span class="badge badge-static ms-2">Static</span></h3>
+                  <p class="mb-2"><span>Media Buyer:</span> <span class="blue_txt">John Doe</span></p>
+                  <p class="mb-2"><span>Request Raised On:</span> <span>15 Sep, 2025</span> | <span>12:00 PM</span></p>
+                  <p class="mb-0"><span>Start - End Date:</span> <span>04 Sep, 2025</span> - <span>30 Sep, 2025</span></p>
+                </div>
+                <div class="card_body22">
+                  <div>
+                    <p class="p_flex mb-2"><span class="status_type warning_1">Partially Approved</span><span class="status_type warning_3 ms-1">Change Material</span></p>
+                  </div>
+                  <div>
+                    <div class="req_box">
+                      <a href="#" class="blue_txt"><span>View Creatives</span><span class="material-symbols-outlined">trending_flat</span></a>
+                    </div>
+                    <p class="mt-2 mb-0">Request Closing Date: <b>17 Sep, 2025</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="request_box mt-3">
+              <div class="card_body card_body2">
+                <div class="card_body21">
+                  <p class="mb-1"><b>#1234567</b><span class="status_type warning_8 ms-2">Closed</span></p>
+                  <h3 class="p_flex mb-2">The Rise of Advertising<span class="badge badge-digital ms-2">Digital</span></h3>
+                  <p class="mb-2"><span>Media Buyer:</span> <span class="blue_txt">John Doe</span></p>
+                  <p class="mb-2">Request Raised On: <span>15 Sep, 2025</span> | <span>12:00 PM</span></p>
+                  <p class="mb-0"><b>Renewal Date:</b> <span>16 Sep, 2025</span> - <span>18 Sep, 2025</span></p>  
+                </div>
+                <div class="card_body22">
+                  <div>
+                    <p class="p_flex mb-2"><span class="status_type warning_5">Fully Approved</span><span class="status_type warning_6 ms-1">Campaign Renewal</span></p>
+                  </div>
+                  <div>
+                    <p class="mt-2 mb-0">Payment Status: <span class="status_type warning_5">Paid</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="request_box2">
+              <div class="page_32">
+                <div class="page_321">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="selectall">
+                    <span class="checkbox__in">
+                      <span class="checkbox__tick"></span>
+                    </span>
+                  </label>
+                  <p>Select All</p>
+                </div>
+                <div class="page_322">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select active">Action</button>
+                    <div class="menu_drop" style="display: none;">
+                      <ul>
+                        <li class="list_item">
+                          <p data-bs-toggle="modal" data-bs-target="#approveLoc">Approve</p>
+                        </li>
+                        <li class="list_item">
+                          <p data-bs-toggle="modal" data-bs-target="#rejectLoc">Reject</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="campaign_list">
+                <h5>Locations</h5>
+                <ul>
+                  <li>
+                    <p>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="selectall">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                        </span>
+                      </label>
+                    </p>
+                    <a href="#">
+                      <div class="cam_head">
+                        <h5 class="p_flex mb-2"><span>#1234567</span><span class="badge badge-digital ms-2">Digital</span><span class="badge badge-blue ms-2">Billboard</span></h5>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p class="mb-0">Ikeja, Lagos</p>
+                        <div class="loc_count2">
+                          <span class="badge badge-success">Approved</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <p>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="selectall">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                        </span>
+                      </label>
+                    </p>
+                    <a href="#">
+                      <div class="cam_head">
+                        <h5 class="p_flex mb-2"><span>#1234567</span><span class="badge badge-static ms-2">Static</span><span class="badge badge-blue ms-2">Billboard</span></h5>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p class="mb-0">Ikeja, Lagos</p>
+                        <div class="loc_count2">
+                          <span class="badge badge-grey">Pending</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <p>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="selectall">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                        </span>
+                      </label>
+                    </p>
+                    <a href="#">
+                      <div class="cam_head">
+                        <h5 class="p_flex mb-2"><span>#1234567</span><span class="badge badge-digital ms-2">Digital</span><span class="badge badge-blue ms-2">Billboard</span></h5>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p class="mb-0">Ikeja, Lagos</p>
+                        <div class="loc_count2">
+                          <span class="badge badge-danger">Rejected</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <p>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="selectall">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                        </span>
+                      </label>
+                    </p>
+                    <a href="#">
+                      <div class="cam_head">
+                        <h5 class="p_flex mb-2"><span>#1234567</span><span class="badge badge-static ms-2">Static</span><span class="badge badge-blue ms-2">Hoarding</span></h5>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p class="mb-0">Ikeja, Lagos</p>
+                        <div class="loc_count2">
+                          <span class="badge badge-success">Approved</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== APPROVE LOCATION POPUP START =====-->
+        <div class="modal modal_box fade" id="approveLoc" tabindex="-1" aria-labelledby="approveLocModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="approveLocModalLabel">Approve Location</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to approve these 5 locations for this order request?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== REJECT LOCATION POPUP START =====-->
+        <div class="modal modal_box fade" id="rejectLoc" tabindex="-1" aria-labelledby="rejectLocModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="rejectLocModalLabel">Reject Request</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">You have rejected the pause request.</p>
+                  <div class="grey_form mt-3">
+                    <label class="form_label">Reason</label>
+                    <div class="input_group mb-0">
+                      <textarea class="form_control" rows="4" name="reason" placeholder="Please enter a valid reason for rejection"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#requestSubmit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal_box fade" id="requestSubmit" tabindex="-1" aria-labelledby="requestSubmitModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body modal_body2">
+                  <img src="images/thanks-img.svg" alt="Request Rejected" />
+                  <h4>Request Rejected!</h4>
+                  <p class="mb-0">You have rejected the <b>Pause Campaign</b> request.</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0 justify-content-center">
+                <button type="button" class="blue_btn m-0" data-bs-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== LOGOUT POPUP START =====-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.inner_list').on('click', function(){
+        $(this).toggleClass('active');
+      });
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(".form-select").click(function (evt) {
+        evt.stopPropagation();
+        $(this).addClass('active');
+        $(".menu_drop").hide();
+        $(this).parent().find(".menu_drop").show();
+        
+      });
+    });
+    $(document).click(function (e) {
+      var container = $(".menu_drop");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.hide();
+    }});
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+</body>
+</html>

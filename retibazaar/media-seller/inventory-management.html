@@ -1,0 +1,735 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inventory Management</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="dashboard.html">
+              <span class="material-symbols-outlined link_icon">dashboard</span>
+              <span class="link_text">Dashboard</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list active">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">ads_click</span>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="location-inventory.html">
+                    <span class="link_span">S</span>
+                    <span class="link_text">Static Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="digital-location-inventory.html">
+                    <span class="link_span">D</span>
+                    <span class="link_text">Digital Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link active" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="bookings.html">
+              <span class="material-symbols-outlined link_icon">edit_calendar</span>
+              <span class="link_text">Bookings</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">package_2</span>
+              <span class="link_text">Orders</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="proof-of-posting.html">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">map</span>
+              <span class="link_text">Map</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Location Inventory</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Inventory Management</li>
+            </ol>
+          </nav>
+          <div class="heading_box">
+            <div class="headLeft">
+              <h3>DOOH Inventory Management</h3>
+            </div>
+            <div class="headRight">
+              <!-- <button type="button" class="blue_btn disabled" data-bs-toggle="modal" data-bs-target="#bulkAction_modal">Bulk Action</a> -->
+              <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#bulkAction_modal">Bulk Action</a>
+            </div>
+          </div>
+          <div class="card_header inven_cards">
+            <ul>
+              <li>
+                <img src="images/approve-location.svg" alt="All Locations" />
+                <div>
+                  <h3>30</h3>
+                  <p class="mb-0">All Locations</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/active-location.svg" alt="Active Locations">
+                <div>
+                  <h3>22</h3>
+                  <p class="mb-0">Active Locations</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/blocked-location.svg" alt="Blocked Locations">
+                <div>
+                  <h3>4</h3>
+                  <p class="mb-0">Blocked Locations</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/verified-location.svg" alt="Booked Locations">
+                <div>
+                  <h3>4</h3>
+                  <p class="mb-0">Booked Locations</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="search_filters inven_filter">
+            <div class="filter_div filter_1 minWidth flex-grow-1">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <div class="date_flex">
+                      <input class="form_control date" type="text" name="startdate" placeholder="Search by location name or ID">
+                      <span class="input-group-btn">
+                        <span class="material-symbols-outlined">search</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_2">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <select class="form_control">
+                      <option selected="" disabled="">State</option>
+                      <option>State 1</option>
+                      <option>State 2</option>
+                      <option>State 3</option>
+                      <option>State 4</option>
+                      <option>State 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_3">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <select class="form_control">
+                      <option selected="" disabled="">LGA</option>
+                      <option>LGA 1</option>
+                      <option>LGA 2</option>
+                      <option>LGA 3</option>
+                      <option>LGA 4</option>
+                      <option>LGA 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_4">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <select class="form_control">
+                      <option selected="" disabled="">City</option>
+                      <option>City 1</option>
+                      <option>City 2</option>
+                      <option>City 3</option>
+                      <option>City 4</option>
+                      <option>City 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_6">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="drop_menu">
+                    <button type="button" class="form-select form_control">Price Range</button>
+                    <div class="menu_drop price_range" style="display: none;">
+                      <div class="price_set">
+                        <div class="price_set1">
+                          <p class="mb-0">₦</p>
+                          <input type="text" placeholder="Min">
+                        </div>
+                        <p class="mb-0">-</p>
+                        <div class="price_set1">
+                          <p class="mb-0">₦</p>
+                          <input type="text" placeholder="Max">
+                        </div>
+                      </div>
+                      <div class="menu_bot px-0 pb-0">
+                        <button type="button" class="blue_btn done_btn">Apply</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_5">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <select class="form_control">
+                      <option selected disabled>Slot Availability</option>
+                      <option>Fully Booked</option>
+                      <option>Partially Available</option>
+                      <option>Fully Available</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_div filter_5 w_100px pe-0">
+              <button type="button" class="blue_btn">Search</button>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <div class="table_view inventory_table hori_scroll">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th width="4%">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </th>
+                      <th width="10%">Location ID</th>
+                      <th width="15%">Location Name</th>
+                      <th width="12%">Location Status</th>
+                      <th width="18%">Pricing/Slot</th>
+                      <th width="11%">Discount</th>
+                      <th width="11%">Total Slots</th>
+                      <th width="11%">Available Slots</th>
+                      <th width="8%">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall" checked>
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><p><a href="#" class="blue_txt">#12345</a></p></td>
+                      <td><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></td>
+                      <td>
+                        <span class="badge badge-success">Available</span>
+                      </td>
+                      <td>
+                        <div class="editInputBox">
+                          <p class="mb-0">₦</p>
+                          <input type="text" value="230,000" class="editInput editInput2" />
+                          <select class="editInput">
+                            <option selected>Day</option>
+                            <option>Week</option>
+                            <option>Month</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="editInputBox">
+                          <input type="text" value="20" class="editInput" />
+                          <p>%</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="editInputBox">
+                          <input type="text" value="50" class="editInput" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="editInputBox">
+                          <input type="text" value="20" class="editInput" />
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="actionBtn me-3"><span class="material-symbols-outlined green_text">check</span></button>
+                        <button type="button" class="actionBtn"><span class="material-symbols-outlined red_text">close</span></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall" checked>
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><p><a href="#" class="blue_txt">#12345</a></p></td>
+                      <td><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></td>
+                      <td>
+                        <span class="badge badge-warning">Archive</span>
+                      </td>
+                      <td><p>₦230,000/day</p></td>
+                      <td><p>20%</p></td>
+                      <td><p>50</p></td>
+                      <td><p>20</p></td>
+                      <td>
+                        <button type="button" class="actionBtn me-3"><span class="material-symbols-outlined">edit</span></button>
+                        <a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><p><a href="#" class="blue_txt">#12345</a></p></td>
+                      <td><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></td>
+                      <td>
+                        <span class="badge badge-danger">Blocked</span>
+                      </td>
+                      <td><p>₦230,000/day</p></td>
+                      <td><p>40%</p></td>
+                      <td><p>60</p></td>
+                      <td><p>30</p></td>
+                      <td>
+                        <button type="button" class="actionBtn me-3"><span class="material-symbols-outlined">edit</span></button>
+                        <a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall" checked>
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><p><a href="#" class="blue_txt">#12345</a></p></td>
+                      <td><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></td>
+                      <td>
+                        <span class="badge badge-warning">Archive</span>
+                      </td>
+                      <td><p>₦230,000/day</p></td>
+                      <td><p>50%</p></td>
+                      <td><p>30</p></td>
+                      <td><p>10</p></td>
+                      <td>
+                        <button type="button" class="actionBtn me-3"><span class="material-symbols-outlined">edit</span></button>
+                        <a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="selectall">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><p><a href="#" class="blue_txt">#12345</a></p></td>
+                      <td><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></td>
+                      <td>
+                        <span class="badge badge-success">Available</span>
+                      </td>
+                      <td><p>₦230,000/day</p></td>
+                      <td><p>10%</p></td>
+                      <td><p>40</p></td>
+                      <td><p>20</p></td>
+                      <td>
+                        <button type="button" class="actionBtn me-3"><span class="material-symbols-outlined">edit</span></button>
+                        <a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== APPROVE LOCATION POPUP START =====-->
+        <div class="modal modal_box fade" id="bulkAction_modal" tabindex="-1" aria-labelledby="bulkAction_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="bulkAction_modalLabel">Bulk Update</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="bulk_sec1">
+                    <div class="bulk_sec11">
+                      <h5>Filter By</h5>
+                      <div class="bulk_sec111">
+                        <label class="radio radio_btn">
+                          <input class="radio__input" type="radio" name="filterby" value="discount" checked>
+                          <span class="radio__in">
+                            <span class="radio__tick"></span>
+                            <span class="radio__text">Discount</span>
+                          </span>
+                        </label>
+                        <label class="radio radio_btn">
+                          <input class="radio__input" type="radio" name="filterby" value="slots" />
+                          <span class="radio__in">
+                            <span class="radio__tick"></span>
+                            <span class="radio__text">Total Slots</span>
+                          </span>
+                        </label>
+                        <label class="radio radio_btn">
+                          <input class="radio__input" type="radio" name="filterby" value="availability" />
+                          <span class="radio__in">
+                            <span class="radio__tick"></span>
+                            <span class="radio__text">Availability</span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bulk_sec2" id="box_discount">
+                    <div class="bulk_sec11">
+                      <h5>Set</h5>
+                      <div class="bulk_sec111">
+                        <div class="editInputBox">
+                          <p class="mb-0">Discount to</p>
+                          <input type="text" value="20" class="editInput" />
+                          <p class="mb-0">%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bulk_sec11 mb-0">
+                      <h5>Where</h5>
+                      <div class="bulk_sec111">
+                        <div class="editInputBox">
+                          <p class="mb-0"><span class="bold_txt">Price:</span> Min ₦</p>
+                          <input type="text" value="25,000" class="editInput editInput2" />
+                          <span class="divider_line"></span>
+                          <p class="mb-0">Max ₦</p>
+                          <input type="text" value="35,000" class="editInput editInput2" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bulk_sec2" id="box_slots">
+                    <div class="bulk_sec11">
+                      <h5>Set</h5>
+                      <div class="bulk_sec111">
+                        <div class="editInputBox">
+                          <p class="mb-0">Total Slots</p>
+                          <input type="text" value="30" class="editInput" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bulk_sec11 mb-0">
+                      <h5>Where</h5>
+                      <div class="bulk_sec111">
+                        <div class="editInputBox">
+                          <p class="mb-0"><span class="bold_txt">Price:</span> Min ₦</p>
+                          <input type="text" value="25,000" class="editInput editInput2" />
+                          <span class="divider_line"></span>
+                          <p class="mb-0">Max ₦</p>
+                          <input type="text" value="₦35,000" class="editInput editInput2" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bulk_sec2" id="box_availability">
+                    <div class="bulk_sec11">
+                      <h5>Set</h5>
+                      <div class="bulk_sec111">
+                        <div class="editInputBox">
+                          <p class="mb-0">Availability</p>
+                          <select class="editInput">
+                            <option>Fully Booked</option>
+                            <option selected>Partially Available</option>
+                            <option>Fully Available</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bulk_sec11 mb-0">
+                      <h5>Where</h5>
+                      <div class="bulk_sec111">
+                        <div class="editInputBox">
+                          <p class="mb-0"><span class="bold_txt">Price:</span> Min ₦</p>
+                          <input type="text" value="25,000" class="editInput editInput2" />
+                          <span class="divider_line"></span>
+                          <p class="mb-0">Max ₦</p>
+                          <input type="text" value="₦35,000" class="editInput editInput2" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p><i>This will effect <b>25 media locations</b> you have selected.</i></p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Apply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== LOGOUT POPUP START =====-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.inner_list').on('click', function(){
+        $(this).toggleClass('active');
+      });
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+  <script>
+    $(document).ready(function(){
+      $(".form-select").click(function (evt) {
+        evt.stopPropagation();
+        $(this).addClass('active');
+        $(".menu_drop").hide();
+        $(this).parent().find(".menu_drop").show();
+      });
+    });
+    $(document).click(function (e) {
+      var container = $(".menu_drop");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.hide();
+    }});
+  </script>
+  <script>
+    $(document).ready(function(){
+      function showSelected() {
+        var selected = $("input[name='filterby']:checked").val();
+        $(".bulk_sec2").hide(); 
+        $("#box_" + selected).show();
+      }
+      // Run on page load
+      showSelected();
+      // Run when radio changes
+      $("input[name='filterby']").on("change", showSelected);
+    });
+  </script>
+</body>
+</html>

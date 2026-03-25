@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Add Media</title>
+<title>Order Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
               <span class="link_text">Dashboard</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">ads_click</span>
               <span class="link_text">Location Inventory</span>
@@ -37,7 +37,7 @@
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="location-inventory.html">
+                  <a class="menu_link" href="location-inventory.html">
                     <span class="link_span">L</span>
                     <span class="link_text">Locations</span>
                   </a>
@@ -99,7 +99,7 @@
           </li>
         </ul>
         <ul class="menu_list">
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <div class="flex_menu">
               <a href="payment-insights.html" class="menu_link">
                 <span class="material-symbols-outlined link_icon">checkbook</span>
@@ -110,7 +110,7 @@
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="payment-insights-by-order.html">
+                  <a class="menu_link active" href="payment-insights-by-order.html">
                     <span class="link_span">B</span>
                     <span class="link_text">By Order</span>
                   </a>
@@ -126,7 +126,7 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
-              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
           </li>
@@ -188,81 +188,215 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="javascript:void(0);">Location Inventory</a></li>
-              <li class="breadcrumb-item"><a href="location-inventory.html">Locations</a></li>
-              <li class="breadcrumb-item"><a href="location-detail.html">Location Detail</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Add Media</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Payment Insights</a></li>
+              <li class="breadcrumb-item"><a href="payment-insights-by-order.html">By Order</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Order Detail</li>
             </ol>
           </nav>
           <div class="campaign_box">
             <div class="campaign_dtl">
-              <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
-              <div class="loc_media">
-                <span class="badge badge-grey"><img src="images/billboard.svg" alt="">Billboard</span>
-                <span class="badge badge-digital ms-1">Digital</span>
+              <h3>The Rise of Advertisement<span class="badge badge-static ms-2">Static</span></h3>
+              <p class="mb-2">Campaign ID: <span>#123456</span></p>
+              <p class="mb-2"><span>Apr 10, 2025</span> - <span>Apr 30, 2025</span></p>
+              <div class="flex_box2 flex_box3">
+                <div class="frequency_div">No. of Locations: <span>50</span></div>
+                <div class="frequency_div">Order Price: <span>₦ 78,750</span></div>
+                <div class="frequency_div">Order ID: <span>#12345678</span></div>
+                <a href="campaign-logs.html" class="next_btn smallBlu_btn">View Campaign Logs</a>
               </div>
             </div>
-            <div class="addLoc_box">
-              <div class="loc_head">
-                <h4>Upload Location Image/Video</h4>
-                <span class="optional_txt">Optional</span>
-              </div>
-              <div class="loc_body">
-                <div class="upload_flex">
-                  <div class="files_flex">
-                    <input class="file_input2" type="file" accept="image/png, image/jpeg, application/pdf" multiple />
-                    <div class="files_box">
-                      <img src="images/upload-icon.svg" alt="Upload Icon" />
-                      <h6><span class="blue_txt">Choose Image</span> or drag and drop</h6>
-                      <p class="mb-0">JPG, PNG & PDF formats. 5MB max file size.</p>
-                    </div>
-                  </div>
-                  <div class="files_flex">
-                    <input class="file_input2" type="file" accept="video/mp4" multiple />
-                    <div class="files_box">
-                      <img src="images/upload-icon.svg" alt="Upload Icon" />
-                      <h6><span class="blue_txt">Choose Video</span> or drag and drop</h6>
-                      <p class="mb-0">Mp4 format. 5MB max file size.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="upload_btn">
-                  <button type="button" class="blue_btn">Upload</button>
-                </div>
-              </div>
-            </div>
-            <div class="uploaded_box">
-              <h4>Uploaded Files</h4>
+            <div class="card_header card_header2">
               <ul>
                 <li>
-                  <div class="left_dtl">
-                    <img src="images/location-img.jpg" alt="Image" />
-                    <div>
-                      <h6>567855677.jpeg</h6>
-                      <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
-                    </div>
-                  </div>
-                  <div class="cross_btn">
-                    <button type="button"><span class="material-symbols-outlined">close</span></button>
+                  <img src="images/approve-location.svg" alt="Active Locations" />
+                  <div>
+                    <h3>27</h3>
+                    <p class="mb-0">Active Locations</p>
                   </div>
                 </li>
                 <li>
-                  <div class="left_dtl">
-                    <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline">
-                      <source type="video/mp4" src="images/video.mp4">
-                    </video>
-                    <div>
-                      <h6>567855677.mp4</h6>
-                      <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
-                    </div>
+                  <img src="images/verified-location.svg" alt="Verified Locations" />
+                  <div>
+                    <h3>22</h3>
+                    <p class="mb-0">Verified Locations</p>
                   </div>
-                  <div class="cross_btn">
-                    <button type="button"><span class="material-symbols-outlined">close</span></button>
+                </li>
+                <li>
+                  <img src="images/pending-locations.svg" alt="Pending Locations" />
+                  <div>
+                    <h3>5</h3>
+                    <p class="mb-0">Pending Locations</p>
                   </div>
                 </li>
               </ul>
-              <div class="saveCam_btn">
-                <a href="not-verified-cam.html" class="blue_btn">Save Campaign and Send for Verification</a>
+            </div>
+          </div>
+          <div class="locVeri_list">
+            <h3>Locations</h3>
+            <div class="search_filters camFilter mt-0">
+              <div class="filter_div filter_1">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>Install Status</option>
+                        <option>Awaiting Proof of Posting</option>
+                        <option>Under Field Verification</option>
+                        <option>Verification Passed</option>
+                        <option>Verification Failed</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_3">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>Payout Status</option>
+                        <option>Withholding</option>
+                        <option>Payout Released</option>
+                        <option>Refund Initiated</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_4">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>Amount Released</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>All</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_6 w-auto">
+                <button type="button"><img src="images/filters.svg" class="border-0" alt="Filter"></button>
+              </div>
+            </div>
+            <div class="table_view camLoc_table hori_scroll">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th width="15%">Location ID</th>
+                    <th width="20%">Install Status</th>
+                    <th width="15%">Payout Status</th>
+                    <th width="15%">Location Rate</th>
+                    <th width="12%">Dicount</th>
+                    <th width="15%">Estimated Payout</th>
+                    <th width="8%">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p class="blue_txt">#123456</p></td>
+                    <td><p><span class="status_type warning_7">Verification Failed</span></p></td>
+                    <td><p><span class="status_type warning_6">Withholding</span></p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><p>10%</p></td>
+                    <td><p>₦22,500</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                  </tr>
+                  <tr>
+                    <td><p class="blue_txt">#123456</p></td>
+                    <td><p><span class="status_type warning_2">Under Field Verification</span></p></td>
+                    <td><p><span class="status_type warning_5">Payout Released</span></p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><p>--</p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                  </tr>
+                  <tr>
+                    <td><p class="blue_txt">#123456</p></td>
+                    <td><p><span class="status_type warning_5">Verification Passed</span></p></td>
+                    <td><p><span class="status_type warning_3">Refund Initiated</span></p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><p>15%</p></td>
+                    <td><p>₦20,000</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                  </tr>
+                  <tr>
+                    <td><p class="blue_txt">#123456</p></td>
+                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                    <td><p><span class="status_type warning_6">Withholding</span></p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><p>--</p></td>
+                    <td><p>₦15,000</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="payBreakdown payBreakdown2">
+              <div class="sec_6212 mt-0">
+                <h3>Payment Breakdown</h3>
+                <div class="longPrice hori_scroll">
+                  <ul class="mb-0">
+                    <li>
+                      <table class="beakdown_table">
+                        <thead>
+                          <tr>
+                            <th width="15%"><p><b>Locations</b></p></th>
+                            <th width="10%"><p><b>Rate</b></p></th>
+                            <th width="9%"><p><b>Discount</b></p></th>
+                            <th width="13%"><p><b>Expected Payout</b></p></th>
+                            <th width="15%"><p><b>Installation Charges</b></p></th>
+                            <th width="13%"><p><b>Printing Charges</b></p></th>
+                            <th width="15%"><p class="text-end"><b>Total</b></p></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><p>Media Location 1</p></td>
+                            <td><p>₦25,000</p></td>
+                            <td><p>10%</p></td>
+                            <td><p>₦22,500</p></td>
+                            <td><p>₦2000</p></td>
+                            <td><p>₦3000</p></td>
+                            <td><p class="text-end"><span>₦22,500</span> / <span class="line_through">₦25,000</span></p></td>
+                          </tr>
+                          <tr>
+                            <td><p>Media Location 2</p></td>
+                            <td><p>₦25,000</p></td>
+                            <td><p>--</p></td>
+                            <td><p>₦25,000</p></td>
+                            <td><p>₦2000</p></td>
+                            <td><p>₦3000</p></td>
+                            <td><p class="text-end"><span>₦25,000</span></p></td>
+                          </tr>
+                          <tr>
+                            <td><p>Media Location 3</p></td>
+                            <td><p>₦25,000</p></td>
+                            <td><p>15%</p></td>
+                            <td><p>₦21,250</p></td>
+                            <td><p>₦2000</p></td>
+                            <td><p>₦3000</p></td>
+                            <td><p class="text-end"><span>₦21,250</span> / <span class="line_through">₦21,000</span></p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                    <li>
+                      <p><b>Subtotal</b><b>₦68,750</b></p>
+                    </li>
+                    <li>
+                      <p><b>Platform Fee</b><b>₦15,000</b></p>
+                    </li>
+                    <li>
+                      <p><b>VAT</b><b>₦10,000</b></p>
+                    </li>
+                    <li class="mb-0">
+                      <p><b>Net Amount</b><b>₦108,750</b></p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -301,9 +435,9 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
     });
   </script>
   <!--======= MOBILE MENU START =======-->

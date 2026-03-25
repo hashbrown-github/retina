@@ -29,11 +29,27 @@
               <span class="link_text">Dashboard</span>
             </a>
           </li>
-          <li class="menu_item">
-            <a class="menu_link" href="media-location.html">
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">ads_click</span>
-              <span class="link_text">Media Location</span>
-            </a>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="menu_item">
             <a class="menu_link" href="bookings.html">
@@ -65,8 +81,14 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
           <li class="menu_item">
@@ -77,6 +99,31 @@
           </li>
         </ul>
         <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
@@ -92,6 +139,13 @@
         </ul>
         <ul class="menu_list fixed_menu">
           <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
             <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
               <span class="material-symbols-outlined link_icon">logout</span>
               <span class="link_text">Logout</span>
@@ -134,19 +188,19 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Order Requests</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
+              <li class="breadcrumb-item"><a href="order-requests.html">Order Requests</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Request Order Detail</li>
             </ol>
           </nav>
           <div class="campaign_box">
             <div class="campaign_dtl">
-              <h3>The rise of advertising<span class="badge badge-request ms-3">Request</span></h3>
+              <h3>The rise of advertising<span class="badge badge-request ms-2">Request</span><span class="badge badge-static ms-2">Static</span></h3>
               <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
               <h4>Buyer: <span>ABC Company</span></h4>
               <div class="flex_box2 flex_box3">
                 <div class="frequency_div">No. of Locations: <span>50</span></div>
-                <div class="frequency_div">Order Price: <span>N 78,750</span></div>
+                <div class="frequency_div">Order Price: <span>₦78,750</span></div>
               </div>
             </div>
           </div>
@@ -289,15 +343,15 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="#">
                           <div class="loc_item pt-2">
-                            <p class="camType">Billboard</p>
+                            <p><span class="camType">Billboard</span><span class="badge badge-static ms-2">Static</span></p>
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
                             <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
                           </div>
-                          <p class="price_box">Location Cost: <b>N 78,750</b></p>
+                          <p class="price_box">Location Cost: <b>₦78,750</b></p>
                         </a>
                       </div>
                     </li>
@@ -328,15 +382,15 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="#">
                           <div class="loc_item pt-2">
-                            <p class="camType">Unipole</p>
+                            <p><span class="camType">Unipole</span><span class="badge badge-static ms-2">Static</span></p>
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
                             <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
                           </div>
-                          <p class="price_box">Location Cost: <b>N 78,750</b></p>
+                          <p class="price_box">Location Cost: <b>₦78,750</b></p>
                         </a>
                       </div>
                     </li>
@@ -367,15 +421,15 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="#">
                           <div class="loc_item pt-2">
-                            <p class="camType">Billboard</p>
+                            <p><span class="camType">Billboard</span><span class="badge badge-static ms-2">Static</span></p>
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
                             <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
                           </div>
-                          <p class="price_box">Location Cost: <b>N 78,750</b></p>
+                          <p class="price_box">Location Cost: <b>₦78,750</b></p>
                         </a>
                       </div>
                     </li>
@@ -406,15 +460,15 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="#">
                           <div class="loc_item pt-2">
-                            <p class="camType">Unipole</p>
+                            <p><span class="camType">Unipole</span><span class="badge badge-static ms-2">Static</span></p>
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
                             <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
                           </div>
-                          <p class="price_box">Location Cost: <b>N 78,750</b></p>
+                          <p class="price_box">Location Cost: <b>₦78,750</b></p>
                         </a>
                       </div>
                     </li>
@@ -445,15 +499,15 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="#">
                           <div class="loc_item pt-2">
-                            <p class="camType">Billboard</p>
+                            <p><span class="camType">Unipole</span><span class="badge badge-static ms-2">Static</span></p>
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
                             <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
                           </div>
-                          <p class="price_box">Location Cost: <b>N 78,750</b></p>
+                          <p class="price_box">Location Cost: <b>₦78,750</b></p>
                         </a>
                       </div>
                     </li>
@@ -484,15 +538,15 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="#">
                           <div class="loc_item pt-2">
-                            <p class="camType">Unipole</p>
+                            <p><span class="camType">Billboard</span><span class="badge badge-static ms-2">Static</span></p>
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
                             <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
                           </div>
-                          <p class="price_box">Location Cost: <b>N 78,750</b></p>
+                          <p class="price_box">Location Cost: <b>₦78,750</b></p>
                         </a>
                       </div>
                     </li>
@@ -619,15 +673,15 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="#">
                           <div class="loc_item pt-2">
-                            <p class="camType">Billboard</p>
+                            <p><span class="camType">Billboard</span><span class="badge badge-static ms-2">Static</span></p>
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
                             <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
                           </div>
-                          <p class="price_box">Location Cost: <b>N 78,750</b></p>
+                          <p class="price_box">Location Cost: <b>₦78,750</b></p>
                         </a>
                       </div>
                     </li>
@@ -754,15 +808,15 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="#">
                           <div class="loc_item pt-2">
-                            <p class="camType">Billboard</p>
+                            <p><span class="camType">Billboard</span><span class="badge badge-static ms-2">Static</span></p>
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
                             <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p>
                           </div>
-                          <p class="price_box">Location Cost: <b>N 78,750</b></p>
+                          <p class="price_box">Location Cost: <b>₦78,750</b></p>
                         </a>
                       </div>
                     </li>

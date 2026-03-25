@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail</title>
+<title>Static Location Logs</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -57,10 +57,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Order</span>
+              <span class="link_text">Orders</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -71,7 +71,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -99,7 +99,7 @@
           </li>
         </ul>
         <ul class="menu_list">
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <div class="flex_menu">
               <a href="payment-insights.html" class="menu_link">
                 <span class="material-symbols-outlined link_icon">checkbook</span>
@@ -116,7 +116,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="payment-insights-by-location.html">
+                  <a class="menu_link active" href="payment-insights-by-location.html">
                     <span class="link_span">B</span>
                     <span class="link_text">By Location</span>
                   </a>
@@ -126,7 +126,7 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
-              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
           </li>
@@ -188,22 +188,118 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Payment Insights</a></li>
+              <li class="breadcrumb-item"><a href="payment-insights-by-location.html">By Location</a></li>
+              <li class="breadcrumb-item"><a href="payment-insights-location-detail.html">Location Detail</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Static Location Logs</li>
             </ol>
           </nav>
-          <!-- <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks" />
-            <h3>Thank You for your payment.</h3>
-            <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-          </div> -->
-          <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks">
-            <h3 class="mb-1">Thank You for your payment.</h3>
-            <h3>You can now go ahead to upload campaign.</h3>
-            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
-            <p class="order_id">Transaction Id: SCPI8792306925</p>
+          <div class="sec_6 campaign_logs">
+            <div class="sec_61">
+              <div class="sec_611">
+                <p class="mb-2">Location ID: <b class="blue_txt">#123456</b></p>
+                <h3>5 Joel Ogunnaike St, Ikea GRA<span class="badge badge-static">Static</span></h3>
+                <p class="mb-0">Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</p>
+              </div>
+            </div>
+            <div class="sec_62">
+              <div class="sec_621">
+                <div class="sec_6211">
+                  <h3>Location Logs</h3>
+                  <ul>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Payout released for Location.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Location confirmed by media owner.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Location requested for order, Order ID: <span class="blue_txt">#12345678</span></b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Location edited (price, state) by media owner.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Location approved / rejected by admin.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Location was created.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sec_622">
+                <div class="sec_6221">
+                  <h3>Site Information</h3>
+                  <ul>
+                    <li>
+                      <p><b class="block_txt">Location Name</b><span>Mall Entrance</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Media Type</b><span>Billboard</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Area</b><span>Behind ABC Street</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Latitude/Longitude</b><span>6.5872721, 3.3569867</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Environment</b><span>Indoor</span></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sec_6222">
+                  <h3>Display Specifications</h3>
+                  <ul>
+                    <li>
+                      <p><b class="block_txt">Size Dimensions</b><span>2 m × 1 m</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Illumination Type</b><span>Digital LED inches</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Orientation</b><span>Landscape</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Occupancy Rate</b><span>75%</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Impressions/4 weeks</b><span>1,200,000 impressions / 4 weeks</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Availability Status</b><span>Available</span></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sec_6222">
+                  <h3>Pricing & Charges</h3>
+                  <ul>
+                    <li>
+                      <p><b class="block_txt">Price/4 weeks</b><span>NGN 25,000 /week</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Installation charges</b><span>NGN 2,000</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Printing charges</b><span>NGN 5,000</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Discount</b><span>10% off for 12-week booking</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Current Installation</b><span>11 Sep, 2025 - 22 Sep, 2025</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -240,32 +336,10 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
     });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(".form-select").click(function (evt) {
-        evt.stopPropagation();
-        $(this).addClass('active');
-        $(".menu_drop").hide();
-        $(this).parent().find(".menu_drop").show();
-        
-      });
-    });
-    $(document).click(function (e) {
-      var container = $(".menu_drop");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
-    }});
   </script>
   <!--======= MOBILE MENU START =======-->
   <script>

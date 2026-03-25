@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail</title>
+<title>Transaction Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/responsive.css" />
@@ -57,10 +58,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Order</span>
+              <span class="link_text">Orders</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -71,7 +72,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -101,7 +102,7 @@
         <ul class="menu_list">
           <li class="menu_item inner_list">
             <div class="flex_menu">
-              <a href="payment-insights.html" class="menu_link">
+              <a href="payment-insights.html" class="menu_link active">
                 <span class="material-symbols-outlined link_icon">checkbook</span>
                 <span class="link_text">Payment Insights</span>
               </a>
@@ -126,7 +127,7 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
-              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
           </li>
@@ -188,22 +189,106 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
+              <li class="breadcrumb-item"><a href="payment-insights.html">Payment Insights</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Transaction Detail</li>
             </ol>
           </nav>
-          <!-- <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks" />
-            <h3>Thank You for your payment.</h3>
-            <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-          </div> -->
-          <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks">
-            <h3 class="mb-1">Thank You for your payment.</h3>
-            <h3>You can now go ahead to upload campaign.</h3>
-            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
-            <p class="order_id">Transaction Id: SCPI8792306925</p>
+          <div class="sec_6">
+            <div class="page_head">
+              <h6><span class="material-symbols-outlined">credit_card</span>Transaction</h6>
+            </div>
+            <div class="sec_61">
+              <div class="sec_611">
+                <h3>NGN 6750<span class="badge badge-success">Succeeded</span></h3>
+                <p class="mb-0">Charged to <b class="blue_txt">johndoe@gmail.com</b></p>
+              </div>
+            </div>
+            <div class="sec_62">
+              <div class="sec_621">
+                <div class="sec_6211">
+                  <h3>Recent Activity</h3>
+                  <ul>
+                    <li>
+                      <span class="material-symbols-outlined success_color">task_alt</span>
+                      <!-- <span class="material-symbols-outlined danger_color">cancel</span>
+                      <span class="material-symbols-outlined warning_color">undo</span> -->
+                      <p><b class="block_txt">Transaction Succeeded</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span class="material-symbols-outlined">credit_score</span>
+                      <p><span class="block_txt">This payment successfully set up for ABC order, Order ID: <span class="blue_txt">#1234567</span></span><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span class="material-symbols-outlined">payments</span>
+                      <p><b class="block_txt">Transaction Started</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sec_6212">
+                  <h3>Payment Breakdown</h3>
+                  <ul>
+                    <li>
+                      <p><b>Amount</b><span>₦25,000</span></p>
+                    </li>
+                    <li>
+                      <p><b>Processing Fee</b><span>- ₦2,000</span></p>
+                    </li>
+                    <li>
+                      <p><b>Printing Charges</b><span>- ₦5,000</span></p>
+                    </li>
+                    <li>
+                      <p><b>Installation Charges</b><span>- ₦3,000</span></p>
+                    </li>
+                    <li>
+                      <p><b>Net Amount</b><b>₦35,000</b></p>
+                    </li>
+                  </ul>
+                  <p class="small_p mb-0"><b>Note:</b> The amount is refunded as the location could not be verified.</p>
+                </div>
+              </div>
+              <div class="sec_622">
+                <div class="sec_6221">
+                  <h3>Details</h3>
+                  <ul>
+                    <li>
+                      <p><b class="block_txt">Transaction ID</b><span class="blue_txt">#1234567</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Transaction Method</b></p><div class="card_dtl"><img src="images/visa.svg" alt="Card"><span class="small_p">...7997</span></div><p></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Description</b><span>Final Order Payment, Order ID: #1234</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Last Updated</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sec_6222">
+                  <h3>Customer Details</h3>
+                  <ul>
+                    <li>
+                      <p><b class="block_txt">Customer ID</b><span class="blue_txt">#1234567</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Customer Name</b><span>John Doe</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Description</b><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Email</b><span class="blue_txt">johndoe@gmail.com</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Phone</b><span>+234-809-555-60</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Country</b><span>Nigeria</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -240,32 +325,10 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
     });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(".form-select").click(function (evt) {
-        evt.stopPropagation();
-        $(this).addClass('active');
-        $(".menu_drop").hide();
-        $(this).parent().find(".menu_drop").show();
-        
-      });
-    });
-    $(document).click(function (e) {
-      var container = $(".menu_drop");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
-    }});
   </script>
   <!--======= MOBILE MENU START =======-->
   <script>

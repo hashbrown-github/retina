@@ -1,0 +1,1721 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Static Location Inventory</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="dashboard.html">
+              <span class="material-symbols-outlined link_icon">dashboard</span>
+              <span class="link_text">Dashboard</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list active">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">ads_click</span>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link active" href="location-inventory.html">
+                    <span class="link_span">S</span>
+                    <span class="link_text">Static Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="digital-location-inventory.html">
+                    <span class="link_span">D</span>
+                    <span class="link_text">Digital Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="bookings.html">
+              <span class="material-symbols-outlined link_icon">edit_calendar</span>
+              <span class="link_text">Bookings</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">package_2</span>
+              <span class="link_text">Orders</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="proof-of-posting.html">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">map</span>
+              <span class="link_text">Map</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Location Inventory</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Static Locations</li>
+            </ol>
+          </nav>
+          <div class="heading_box">
+            <div class="headLeft">
+              <h3>Static Locations</h3>
+            </div>
+            <div class="headRight">
+              <a href="add-location.html" class="blue_btn">Add Location</a>
+            </div>
+          </div>
+          <div class="card_header inven_cards">
+            <ul>
+              <li>
+                <img src="images/approve-location.svg" alt="All Locations">
+                <div>
+                  <h3>30</h3>
+                  <p class="mb-0">All Locations</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/verified-location.svg" alt="Verified Locations">
+                <div>
+                  <h3>22</h3>
+                  <p class="mb-0">Verified Locations</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/pending-locations.svg" alt="Pending Locations">
+                <div>
+                  <h3>4</h3>
+                  <p class="mb-0">Pending Locations</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/blocked-location.svg" alt="Archive Locations">
+                <div>
+                  <h3>4</h3>
+                  <p class="mb-0">Archive Locations</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="campaign_tabs">
+            <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">All</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="verified-tab" data-bs-toggle="tab" data-bs-target="#verified-tab-pane" type="button" role="tab" aria-controls="verified-tab-pane" aria-selected="false">Verified</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="unverified-tab" data-bs-toggle="tab" data-bs-target="#unverified-tab-pane" type="button" role="tab" aria-controls="unverified-tab-pane" aria-selected="false">Pending</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="archive-tab" data-bs-toggle="tab" data-bs-target="#archive-tab-pane" type="button" role="tab" aria-controls="archive-tab-pane" aria-selected="false">Archive</button>
+              </li>
+            </ul>
+            <div class="tab-content campaignTabs_con" id="myTabContent">
+              <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+                <div class="search_filters inven_filter">
+                  <div class="filter_div filter_1 minWidth flex-grow-1">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <div class="date_flex">
+                            <input class="form_control date" type="text" name="startdate" placeholder="Search by Location name or ID" />
+                            <span class="input-group-btn">
+                              <span class="material-symbols-outlined">search</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_2">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>State</option>
+                            <option>State 1</option>
+                            <option>State 2</option>
+                            <option>State 3</option>
+                            <option>State 4</option>
+                            <option>State 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_3">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>LGA</option>
+                            <option>LGA 1</option>
+                            <option>LGA 2</option>
+                            <option>LGA 3</option>
+                            <option>LGA 4</option>
+                            <option>LGA 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>City</option>
+                            <option>City 1</option>
+                            <option>City 2</option>
+                            <option>City 3</option>
+                            <option>City 4</option>
+                            <option>City 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Media Type</option>
+                            <option>Unipole</option>
+                            <option>Billboard</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_6">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Screen Type</option>
+                            <option>Digital</option>
+                            <option>Static</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Status</option>
+                            <option>Enalbed</option>
+                            <option>Disabled</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5 w_100px pe-0">
+                    <button type="button" class="blue_btn">Search</button>
+                  </div>
+                </div>
+                <div class="locTblist_view">
+                  <button type="button" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button"><img src="images/locations.svg" alt="map" /></button>
+                </div>
+                <div class="locations_box">
+                  <ul class="grid_view2 active">
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <div class="locID">
+                            <h4>#12345678</h4>
+                            <span class="badge badge-success">Verified</span>
+                          </div>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-digital-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="digital-media-location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
+                                <span class="badge badge-digital ms-1">Digital</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="bluTxt mb-0">Active</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <div class="locID">
+                            <h4>#12345678</h4>
+                            <span class="badge badge-danger">Pending</span>
+                          </div>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="static-media-location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/unipole.svg">Unipole</p>
+                                <span class="badge badge-static ms-1">Static</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="greyTxt mb-0">Disabled</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" data-bs-toggle="modal" data-bs-target="#enableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <div class="locID">
+                            <h4>#12345678</h4>
+                            <span class="badge badge-success">Verified</span>
+                          </div>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="static-media-location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/unipole.svg">Unipole</p>
+                                <span class="badge badge-static ms-1">Static</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="greyTxt mb-0">Disabled</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" data-bs-toggle="modal" data-bs-target="#enableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <div class="locID">
+                            <h4>#12345678</h4>
+                            <span class="badge badge-danger">Pending</span>
+                          </div>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="static-media-location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/unipole.svg">Unipole</p>
+                                <span class="badge badge-static ms-1">Static</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="bluTxt mb-0">Active</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <div class="locID">
+                            <h4>#12345678</h4>
+                            <span class="badge badge-success">Verified</span>
+                          </div>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-digital-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
+                                <span class="badge badge-digital ms-1">Digital</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="bluTxt mb-0">Active</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <div class="locID">
+                            <h4>#12345678</h4>
+                            <span class="badge badge-danger">Pending</span>
+                          </div>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-digital-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="digital-media-location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
+                                <span class="badge badge-digital ms-1">Digital</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="greyTxt mb-0">Disabled</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" data-bs-toggle="modal" data-bs-target="#enableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="table_view inventory_table list_view2 hori_scroll">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th width="5%">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </th>
+                          <th width="10%">Location ID</th>
+                          <th width="15%">Location Name</th>
+                          <th width="12%">City/State</th>
+                          <th width="12%">Media Type</th>
+                          <th width="10%">Screen Type</th>
+                          <th width="14%">Verification Status</th>
+                          <th width="12%">Status</th>
+                          <th width="10%">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </td>
+                          <td>
+                            <p><a href="#" class="blue_txt">#12345</a></p>
+                          </td>
+                          <td>
+                            <a href="#" class="blue_txt"><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></a>
+                          </td>
+                          <td>
+                            <p>Ikeja, Lagos</p>
+                          </td>
+                          <td>
+                            <p class="camType mb-0">Unipole</p>
+                          </td>
+                          <td>
+                            <span class="badge badge-static">Static</span>
+                          </td>
+                          <td>
+                            <span class="badge badge-success">Verified</span>
+                          </td>
+                          <td>
+                            <div class="locStatus_box1">
+                              <p class="bluTxt">Active</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc">
+                                  <span></span>
+                                </label>
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">edit</span></button>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">visibility</span></button>
+                            <!-- <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">map</span></button>
+                            <button type="button" class="actionBtn"><span class="material-symbols-outlined">archive</span></button> -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </td>
+                          <td>
+                            <p><a href="#" class="blue_txt">#12345</a></p>
+                          </td>
+                          <td>
+                            <a href="#" class="blue_txt"><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></a>
+                          </td>
+                          <td>
+                            <p>Ikeja, Lagos</p>
+                          </td>
+                          <td>
+                            <p class="camType mb-0">Billboard</p>
+                          </td>
+                          <td>
+                            <span class="badge badge-static">Static</span>
+                          </td>
+                          <td>
+                            <span class="badge badge-danger">Pending</span>
+                          </td>
+                          <td>
+                            <div class="locStatus_box1">
+                              <p class="greyTxt">Disabled</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select" data-bs-toggle="modal" data-bs-target="#enableLoc" />
+                                  <span></span>
+                                </label>
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">edit</span></button>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">visibility</span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </td>
+                          <td>
+                            <p><a href="#" class="blue_txt">#12345</a></p>
+                          </td>
+                          <td>
+                            <a href="#" class="blue_txt"><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></a>
+                          </td>
+                          <td>
+                            <p>Ikeja, Lagos</p>
+                          </td>
+                          <td>
+                            <p class="camType mb-0">Billboard</p>
+                          </td>
+                          <td>
+                            <span class="badge badge-digital">Digital</span>
+                          </td>
+                          <td>
+                            <span class="badge badge-success">Verified</span>
+                          </td>
+                          <td>
+                            <div class="locStatus_box1">
+                              <p class="bluTxt">Active</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc">
+                                  <span></span>
+                                </label>
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">edit</span></button>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">visibility</span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </td>
+                          <td>
+                            <p><a href="#" class="blue_txt">#12345</a></p>
+                          </td>
+                          <td>
+                            <a href="#" class="blue_txt"><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></a>
+                          </td>
+                          <td>
+                            <p>Ikeja, Lagos</p>
+                          </td>
+                          <td>
+                            <p class="camType mb-0">Unipole</p>
+                          </td>
+                          <td>
+                            <span class="badge badge-digital">Digital</span>
+                          </td>
+                          <td>
+                            <span class="badge badge-danger">Pending</span>
+                          </td>
+                          <td>
+                            <div class="locStatus_box1">
+                              <p class="greyTxt">Disabled</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select" data-bs-toggle="modal" data-bs-target="#enableLoc" />
+                                  <span></span>
+                                </label>
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">edit</span></button>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">visibility</span></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="verified-tab-pane" role="tabpanel" aria-labelledby="verified-tab" tabindex="0">
+                <div class="search_filters inven_filter">
+                  <div class="filter_div filter_1 minWidth flex-grow-1">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <div class="date_flex">
+                            <input class="form_control date" type="text" name="startdate" placeholder="Search by Location name or ID" />
+                            <span class="input-group-btn">
+                              <span class="material-symbols-outlined">search</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_2">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>City</option>
+                            <option>City 1</option>
+                            <option>City 2</option>
+                            <option>City 3</option>
+                            <option>City 4</option>
+                            <option>City 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_3">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>District</option>
+                            <option>District 1</option>
+                            <option>District 2</option>
+                            <option>District 3</option>
+                            <option>District 4</option>
+                            <option>District 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>State</option>
+                            <option>State 1</option>
+                            <option>State 2</option>
+                            <option>State 3</option>
+                            <option>State 4</option>
+                            <option>State 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Media Type</option>
+                            <option>Unipole</option>
+                            <option>Billboard</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_6">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Screen Type</option>
+                            <option>Digital</option>
+                            <option>Static</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Status</option>
+                            <option>Enalbed</option>
+                            <option>Disabled</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5 w_100px pe-0">
+                    <button type="button" class="blue_btn">Search</button>
+                  </div>
+                </div>
+                <div class="locTblist_view">
+                  <button type="button" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button"><img src="images/locations.svg" alt="map" /></button>
+                </div>
+                <div class="locations_box">
+                  <ul class="grid_view2 active">
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <span class="badge badge-success">Verified</span>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-digital-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
+                                <span class="badge badge-digital ms-1">Digital</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="bluTxt mb-0">Active</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="table_view inventory_table list_view2 hori_scroll">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th width="5%">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </th>
+                          <th width="10%">Location ID</th>
+                          <th width="15%">Location Name</th>
+                          <th width="12%">City/State</th>
+                          <th width="12%">Media Type</th>
+                          <th width="10%">Screen Type</th>
+                          <th width="14%">Verification Status</th>
+                          <th width="12%">Status</th>
+                          <th width="10%">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </td>
+                          <td>
+                            <p><a href="#" class="blue_txt">#12345</a></p>
+                          </td>
+                          <td>
+                            <a href="#" class="blue_txt"><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></a>
+                          </td>
+                          <td>
+                            <p>Ikeja, Lagos</p>
+                          </td>
+                          <td>
+                            <p class="camType mb-0">Billboard</p>
+                          </td>
+                          <td>
+                            <span class="badge badge-digital">Digital</span>
+                          </td>
+                          <td>
+                            <span class="badge badge-success">Verified</span>
+                          </td>
+                          <td>
+                            <div class="locStatus_box1">
+                              <p class="bluTxt">Active</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc">
+                                  <span></span>
+                                </label>
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">edit</span></button>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">visibility</span></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="unverified-tab-pane" role="tabpanel" aria-labelledby="unverified-tab" tabindex="0">
+                <div class="search_filters inven_filter">
+                  <div class="filter_div filter_1 minWidth flex-grow-1">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <div class="date_flex">
+                            <input class="form_control date" type="text" name="startdate" placeholder="Search by Location name or ID" />
+                            <span class="input-group-btn">
+                              <span class="material-symbols-outlined">search</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_2">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>City</option>
+                            <option>City 1</option>
+                            <option>City 2</option>
+                            <option>City 3</option>
+                            <option>City 4</option>
+                            <option>City 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_3">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>District</option>
+                            <option>District 1</option>
+                            <option>District 2</option>
+                            <option>District 3</option>
+                            <option>District 4</option>
+                            <option>District 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>State</option>
+                            <option>State 1</option>
+                            <option>State 2</option>
+                            <option>State 3</option>
+                            <option>State 4</option>
+                            <option>State 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Media Type</option>
+                            <option>Unipole</option>
+                            <option>Billboard</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_6">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Screen Type</option>
+                            <option>Digital</option>
+                            <option>Static</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Status</option>
+                            <option>Enalbed</option>
+                            <option>Disabled</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5 w_100px pe-0">
+                    <button type="button" class="blue_btn">Search</button>
+                  </div>
+                </div>
+                <div class="locTblist_view">
+                  <button type="button" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button"><img src="images/locations.svg" alt="map" /></button>
+                </div>
+                <div class="locations_box">
+                  <ul class="grid_view2 active">
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <span class="badge badge-danger">Pending</span>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/unipole.svg">Unipole</p>
+                                <span class="badge badge-static ms-1">Static</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="bluTxt mb-0">Active</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="table_view inventory_table list_view2 hori_scroll">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th width="5%">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </th>
+                          <th width="10%">Location ID</th>
+                          <th width="15%">Location Name</th>
+                          <th width="12%">City/State</th>
+                          <th width="12%">Media Type</th>
+                          <th width="10%">Screen Type</th>
+                          <th width="14%">Verification Status</th>
+                          <th width="12%">Status</th>
+                          <th width="10%">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </td>
+                          <td>
+                            <p><a href="#" class="blue_txt">#12345</a></p>
+                          </td>
+                          <td>
+                            <a href="#" class="blue_txt"><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></a>
+                          </td>
+                          <td>
+                            <p>Ikeja, Lagos</p>
+                          </td>
+                          <td>
+                            <p class="camType mb-0">Unipole</p>
+                          </td>
+                          <td>
+                            <span class="badge badge-digital">Digital</span>
+                          </td>
+                          <td>
+                            <span class="badge badge-danger">Pending</span>
+                          </td>
+                          <td>
+                            <div class="locStatus_box1">
+                              <p class="greyTxt">Disabled</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select" data-bs-toggle="modal" data-bs-target="#enableLoc" />
+                                  <span></span>
+                                </label>
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">edit</span></button>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">visibility</span></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="archive-tab-pane" role="tabpanel" aria-labelledby="archive-tab" tabindex="0">
+                <div class="search_filters inven_filter">
+                  <div class="filter_div filter_1 minWidth flex-grow-1">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <div class="date_flex">
+                            <input class="form_control date" type="text" name="startdate" placeholder="Search by Location name or ID" />
+                            <span class="input-group-btn">
+                              <span class="material-symbols-outlined">search</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_2">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>City</option>
+                            <option>City 1</option>
+                            <option>City 2</option>
+                            <option>City 3</option>
+                            <option>City 4</option>
+                            <option>City 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_3">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>District</option>
+                            <option>District 1</option>
+                            <option>District 2</option>
+                            <option>District 3</option>
+                            <option>District 4</option>
+                            <option>District 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>State</option>
+                            <option>State 1</option>
+                            <option>State 2</option>
+                            <option>State 3</option>
+                            <option>State 4</option>
+                            <option>State 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Media Type</option>
+                            <option>Unipole</option>
+                            <option>Billboard</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_6">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Screen Type</option>
+                            <option>Digital</option>
+                            <option>Static</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Status</option>
+                            <option>Enalbed</option>
+                            <option>Disabled</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_5 w_100px pe-0">
+                    <button type="button" class="blue_btn">Search</button>
+                  </div>
+                </div>
+                <div class="locTblist_view">
+                  <button type="button" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button"><img src="images/locations.svg" alt="map" /></button>
+                </div>
+                <div class="locations_box">
+                  <ul class="grid_view2 active">
+                    <li>
+                      <div class="order_item">
+                        <div class="page_32">
+                          <span class="badge badge-danger">Pending</span>
+                          <div class="page_322">
+                            <div class="drop_menu locationEdit">
+                              <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
+                              <div class="menu_drop">
+                                <ul>
+                                  <li class="list_item">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Location Insight</p></a>
+                                  </li>
+                                  <li class="list_item">
+                                    <a href="#"><p>Archive Location</p></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="location-detail.html">
+                          <div class="loc_item border-0">
+                            <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                            <p>Ikeja, lkeja, Lagos</p>
+                            <div class="loc_media locStatus_box mt-4">
+                              <div class="p_flex">
+                                <p class="camType mb-0"><img src="images/unipole.svg">Unipole</p>
+                                <span class="badge badge-static ms-1">Static</span>
+                              </div>
+                              <div class="locStatus_box1">
+                                <p class="bluTxt mb-0">Active</p>
+                                <span class="switch1 switch-sm">
+                                  <label class="m-0">
+                                    <input type="checkbox" name="select" checked data-bs-toggle="modal" data-bs-target="#disableLoc" />
+                                    <span></span>
+                                  </label>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="table_view inventory_table list_view2 hori_scroll">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th width="5%">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </th>
+                          <th width="10%">Location ID</th>
+                          <th width="15%">Location Name</th>
+                          <th width="12%">City/State</th>
+                          <th width="12%">Media Type</th>
+                          <th width="10%">Screen Type</th>
+                          <th width="14%">Verification Status</th>
+                          <th width="12%">Status</th>
+                          <th width="10%">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox" name="selectall">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                              </span>
+                            </label>
+                          </td>
+                          <td>
+                            <p><a href="#" class="blue_txt">#12345</a></p>
+                          </td>
+                          <td>
+                            <a href="#" class="blue_txt"><p><span class="blue_txt big_txt">ABC Location</span><span class="block_txt small_txt">Ikeja, Lagos</span></p></a>
+                          </td>
+                          <td>
+                            <p>Ikeja, Lagos</p>
+                          </td>
+                          <td>
+                            <p class="camType mb-0">Unipole</p>
+                          </td>
+                          <td>
+                            <span class="badge badge-digital">Digital</span>
+                          </td>
+                          <td>
+                            <span class="badge badge-danger">Pending</span>
+                          </td>
+                          <td>
+                            <div class="locStatus_box1">
+                              <p class="greyTxt">Disabled</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select" data-bs-toggle="modal" data-bs-target="#enableLoc" />
+                                  <span></span>
+                                </label>
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">edit</span></button>
+                            <button type="button" class="actionBtn me-1"><span class="material-symbols-outlined">visibility</span></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== ENABLE LOCATION POPUP START =====-->
+        <div class="modal modal_box fade" id="enableLoc" tabindex="-1" aria-labelledby="enableLocModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="enableLocModalLabel">Enable Location</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="small_p mb-1">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria <span class="badge badge-static ms-1">Static</span></p>
+                  <p class="small_p mb-4">ID: <span>#123456</span></p>
+                  <p class="mb-0">Do you really want to enable location?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== DISABLE LOCATION POPUP START =====-->
+        <div class="modal modal_box fade" id="disableLoc" tabindex="-1" aria-labelledby="disableLocModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="disableLocModalLabel">Disable Location</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="small_p mb-1">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria <span class="badge badge-digital ms-1">Digital</span></p>
+                  <p class="small_p mb-4">ID: <span>#123456</span></p>
+                  <p class="mb-0">Do you really want to disable location?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== LOGOUT POPUP START =====-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.inner_list').on('click', function(){
+        $(this).toggleClass('active');
+      });
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+  <script>
+    $(document).ready(function(){
+      $(".form-select").click(function (evt) {
+        evt.stopPropagation();
+        $(this).addClass('active');
+        $(".menu_drop").hide();
+        $(this).parent().find(".menu_drop").show();
+        
+      });
+    });
+    $(document).click(function (e) {
+      var container = $(".menu_drop");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.hide();
+    }});
+  </script>
+
+  <script>
+    $(document).ready(function () {
+  $('.grid_view1').on('click', function () {
+    const $wrapper = $(this).closest('.tab-pane');
+
+    $(this).addClass('active');
+    $wrapper.find('.list_view1').removeClass('active');
+    $wrapper.find('.list_view2').removeClass('active');
+    $wrapper.find('.grid_view2').addClass('active');
+  });
+
+  $('.list_view1').on('click', function () {
+    const $wrapper = $(this).closest('.tab-pane');
+
+    $(this).addClass('active');
+    $wrapper.find('.grid_view1').removeClass('active');
+    $wrapper.find('.grid_view2').removeClass('active');
+    $wrapper.find('.list_view2').addClass('active');
+  });
+});
+  </script>
+</body>
+</html>

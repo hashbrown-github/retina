@@ -30,11 +30,27 @@
               <span class="link_text">Dashboard</span>
             </a>
           </li>
-          <li class="menu_item">
-            <a class="menu_link" href="media-location.html">
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">ads_click</span>
-              <span class="link_text">Media Location</span>
-            </a>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="menu_item">
             <a class="menu_link active" href="bookings.html">
@@ -66,8 +82,14 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
           <li class="menu_item">
@@ -78,6 +100,31 @@
           </li>
         </ul>
         <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
@@ -93,6 +140,13 @@
         </ul>
         <ul class="menu_list fixed_menu">
           <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
             <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
               <span class="material-symbols-outlined link_icon">logout</span>
               <span class="link_text">Logout</span>
@@ -145,7 +199,32 @@
                 <h3>Bookings</h3>
               </div>
             </div>
-            <div class="booking_fil">
+            <div class="heading_box">
+              <div class="headLeft">
+                <div class="booking_fil">
+                  <div class="page_31 mb-0">
+                    <div class="page_311">
+                      <div class="drop_menu">
+                        <select class="form-select">
+                          <option selected>Booking Type</option>
+                          <option>Booked</option>
+                          <option>Pending</option>
+                          <option>Blocked</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="page_311">
+                  <button type="button" class="blue_btn">Clear All</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="headRight">
+                <button type="button" class="back_btn" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Back to ..." data-bs-original-title="Back to ..."><span class="material-symbols-outlined">undo</span></button>
+                <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#blockLocModal">Block Location</button>
+              </div>
+            </div>
+            <div class="booking_fil" style="display: none;">
               <div class="page_31">
                 <div class="page_311">
                   <div class="drop_menu">
@@ -341,6 +420,16 @@
                 </div>
                 <div class="page_311">
                   <div class="drop_menu">
+                    <select class="form-select">
+                      <option selected>Booking Type</option>
+                      <option>Booked</option>
+                      <option>Pending</option>
+                      <option>Blocked</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- <div class="page_311">
+                  <div class="drop_menu">
                     <button type="button" class="form-select">Booking Type</button>
                     <div class="menu_drop">
                       <ul>
@@ -374,15 +463,19 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="page_311">
                   <button type="button" class="blue_btn">Clear All</button>
                 </div>
               </div>
             </div>
-            <div class="d-flex gap-2 mb-4">
+            <!-- <div class="d-flex gap-2 mb-4">
               <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#blockLocModal">Block Location</button>
               <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#RightDrawer">Open Sidebar</button>
+            </div> -->
+            <div class="noFoundInner">
+              <img src="images/bookings-not-found.svg" alt="Bookings not Found" />
+              <h3>Bookings not found!</h3>
             </div>
             <div class="booking_cal">
               <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&bgcolor=%23ffffff&mode=WEEK&title=Retina&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
@@ -404,6 +497,16 @@
                     <div class="row">
                       <div class="col-12 col-sm-12">
                         <div class="drop_menu">
+                          <select class="form-select">
+                            <option selected>Select Reason</option>
+                            <option>Contractual Obligations</option>
+                            <option>Maintenance or Upgrades</option>
+                            <option>Technical Problems</option>
+                            <option>Regulatory Issues</option>
+                            <option>Performance Issues</option>
+                          </select>
+                        </div>
+                        <!-- <div class="drop_menu">
                           <button type="button" class="form-select">Select Reason</button>
                           <div class="menu_drop">
                             <ul>
@@ -454,7 +557,7 @@
                               </li>
                             </ul>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                     <div class="row">
@@ -506,8 +609,9 @@
                     <p class="mb-0"><span class="material-symbols-outlined">home</span>Location 1</p>
                   </div>
                   <div class="cam_box1 cam_box3">
-                    <p class="mb-0"><span class="green_txt2"></span>Confirmed</p>
+                    <p class="mb-0" style="display: none;"><span class="green_txt2"></span>Confirmed</p>
                     <p class="mb-0" style="display: none;"><span class="yellow_txt"></span>Pending</p>
+                    <p class="mb-0"><span class="red_txt"></span>Blocked</p>
                   </div>
                   <div class="cam_box1 cam_box4">
                     <div class="cam_box41">
@@ -599,11 +703,22 @@
             </div>
           </div>
         </div>
+        <div class="payment_loader" style="display: none;">
+          <div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
       </div>
     </main>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
   <script>
     $(".date").datepicker({

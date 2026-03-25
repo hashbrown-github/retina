@@ -1,0 +1,586 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Add Static Media Location</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="dashboard.html">
+              <span class="material-symbols-outlined link_icon">dashboard</span>
+              <span class="link_text">Dashboard</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list active">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">ads_click</span>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link active" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="bookings.html">
+              <span class="material-symbols-outlined link_icon">edit_calendar</span>
+              <span class="link_text">Bookings</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">package_2</span>
+              <span class="link_text">Orders</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="proof-of-posting.html">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">map</span>
+              <span class="link_text">Map</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Location Inventory</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add Location</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="addLocForm">
+              <div class="addLocForm1">
+                <h4>Static Media Location</h4>
+                <div class="addLocForm11">
+                  <div class="addLocForm111">
+                    <div class="addLoc_form">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group error_box">
+                            <label class="form_label">Site ID*</label>
+                            <input class="form_control" type="text" placeholder="Marketplace ID, auto-generated" />
+                            <span class="error_msg">Please enter site ID</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">State</label>
+                            <select class="form_control">
+                              <option selected disabled>State</option>
+                              <option>State 2</option>
+                              <option>State 3</option>
+                              <option>State 4</option>
+                              <option>State 5</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 pe-2">
+                          <div class="input_group">
+                            <label class="form_label">City</label>
+                            <select class="form_control">
+                              <option selected disabled>City</option>
+                              <option>City 2</option>
+                              <option>City 3</option>
+                              <option>City 4</option>
+                              <option>City 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-6 ps-2">
+                          <div class="input_group">
+                            <label class="form_label">LGA</label>
+                            <select class="form_control">
+                              <option selected disabled>LGA</option>
+                              <option>LGA 2</option>
+                              <option>LGA 3</option>
+                              <option>LGA 4</option>
+                              <option>LGA 5</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Location name*</label>
+                            <input class="form_control" type="text" placeholder="Mall Entrance, Highway Billboard, etc." />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Media type*</label>
+                            <select class="form_control">
+                              <option selected disabled>Media type</option>
+                              <option>Billboard</option>
+                              <option>Unipole</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Exact Location*</label>
+                            <input class="form_control" type="text" placeholder="Address" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Area (optional)</label>
+                            <input class="form_control" type="text" placeholder="Area/Neighborhood" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 pe-2">
+                          <div class="input_group">
+                            <label class="form_label">Latitude*</label>
+                            <input class="form_control" type="text" placeholder="Latitude" />
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-6 ps-2">
+                          <div class="input_group">
+                            <label class="form_label">Longitude*</label>
+                            <input class="form_control" type="text" placeholder="Longitude" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Environment*</label>
+                            <select class="form_control">
+                              <option selected disabled>Environment</option>
+                              <option>Indoor</option>
+                              <option>Outdoor</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <label class="form_label">Size Dimensions*</label>
+                      <div class="row">
+                        <div class="col-6 col-sm-6 pe-2">
+                          <div class="input_group">
+                            <input class="form_control" type="text" placeholder="Width" />
+                            <span class="measures">m</span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-sm-6 ps-2">
+                          <div class="input_group">
+                            <input class="form_control" type="text" placeholder="Height" />
+                            <span class="measures">m</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Illumination type*</label>
+                            <select class="form_control">
+                              <option selected disabled>Illumination type</option>
+                              <option>Front-lit</option>
+                              <option>BackliT</option>
+                              <option>Digital</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Orientation*</label>
+                            <select class="form_control">
+                              <option selected disabled>Orientation</option>
+                              <option>Portrait</option>
+                              <option>Landscape</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Occupancy Rate (optional)</label>
+                            <input class="form_control" type="text" placeholder="Occupancy Rate" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Impressions/4 Weeks (optional)</label>
+                            <input class="form_control" type="text" placeholder="Impressions/4 Weeks" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Availability status</label>
+                            <select class="form_control">
+                              <option selected disabled>Availability status</option>
+                              <option>Available</option>
+                              <option>Occupied</option>
+                              <option>Under maintenance</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Price/4weeks</label>
+                            <input class="form_control" type="text" placeholder="Price/4weeks" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Installation charges</label>
+                            <input class="form_control" type="text" placeholder="Installation charges" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Printing Charges</label>
+                            <input class="form_control" type="text" placeholder="Printing Charges" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Discount (optional)</label>
+                            <input class="form_control" type="text" placeholder="Discount" />
+                            <span class="measures">%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <label class="form_label">Current Installation</label>
+                      <div class="row">
+                        <div class="col-6 col-sm-6 pe-2">
+                          <div class="input_group mb-0">
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="startdate" placeholder="Start Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 col-sm-6 ps-2">
+                          <div class="input_group mb-0">
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="enddate" placeholder="End Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="saveCam_btn">
+                      <a href="#" class="blue_btn">Countinue</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="addLocForm2">
+                <div class="addLoc_box">
+                  <div class="loc_head">
+                    <h4>Upload Location Image/Video</h4>
+                    <span class="optional_txt">Optional</span>
+                  </div>
+                  <div class="loc_body">
+                    <div class="upload_flex">
+                      <div class="files_flex">
+                        <input class="file_input2" type="file" accept="image/png, image/jpeg, application/pdf" multiple />
+                        <div class="files_box">
+                          <img src="images/upload-icon.svg" alt="Upload Icon" />
+                          <h6><span class="blue_txt">Choose Image</span> or drag and drop</h6>
+                          <p class="mb-0">JPG, PNG & PDF formats. 5MB max file size.</p>
+                        </div>
+                      </div>
+                      <div class="files_flex">
+                        <input class="file_input2" type="file" accept="video/mp4" multiple />
+                        <div class="files_box">
+                          <img src="images/upload-icon.svg" alt="Upload Icon" />
+                          <h6><span class="blue_txt">Choose Video</span> or drag and drop</h6>
+                          <p class="mb-0">Mp4 format. 5MB max file size.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="upload_btn">
+                      <button type="button" class="blue_btn">Upload</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="uploaded_box">
+                  <h4>Uploaded Files</h4>
+                  <ul>
+                    <li>
+                      <div class="left_dtl">
+                        <img src="images/location-img.jpg" alt="Image" />
+                        <div>
+                          <h6>567855677.jpeg</h6>
+                          <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
+                        </div>
+                      </div>
+                      <div class="cross_btn">
+                        <button type="button"><span class="material-symbols-outlined">close</span></button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="left_dtl">
+                        <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline">
+                          <source type="video/mp4" src="images/video.mp4">
+                        </video>
+                        <div>
+                          <h6>567855677.mp4</h6>
+                          <p class="mb-0"><span>24 June, 2024</span> | <span>4.8MB</span></p>
+                        </div>
+                      </div>
+                      <div class="cross_btn">
+                        <button type="button"><span class="material-symbols-outlined">close</span></button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== LOGOUT POPUP START =====-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "dd-mm-yyyy",
+      orientation: "top left",
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.inner_list').on('click', function(){
+        $(this).toggleClass('active');
+      });
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+</body>
+</html>

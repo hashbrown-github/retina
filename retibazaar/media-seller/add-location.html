@@ -29,11 +29,27 @@
               <span class="link_text">Dashboard</span>
             </a>
           </li>
-          <li class="menu_item">
-            <a class="menu_link active" href="media-location.html">
+          <li class="menu_item inner_list active">
+            <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">ads_click</span>
-              <span class="link_text">Media Location</span>
-            </a>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link active" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="menu_item">
             <a class="menu_link" href="bookings.html">
@@ -65,8 +81,14 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
           <li class="menu_item">
@@ -77,6 +99,31 @@
           </li>
         </ul>
         <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
@@ -92,6 +139,13 @@
         </ul>
         <ul class="menu_list fixed_menu">
           <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
             <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
               <span class="material-symbols-outlined link_icon">logout</span>
               <span class="link_text">Logout</span>
@@ -134,51 +188,54 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Media Location</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Location Inventory</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add Location</li>
             </ol>
           </nav>
           <div class="campaign_box">
-            <div class="addLoc_box">
-              <div class="loc_head">
-                <h4>Add Location</h4>
-              </div>
-              <div class="loc_stripe">
-                <p class="mb-0"><button type="button"><span class="material-symbols-outlined icon_down">download</span><span class="text_down">Download Template Excel</span></button> to upload thousands of locations.</p>
-              </div>
-              <div class="loc_body">
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group mb-0">
-                      <label class="form_label"><span class="blue_txt">Choose file</span> or drag and drop</label>
-                      <div class="upload_file">
-                        <div class="file_input">
-                          <input class="file_input2" type="file">
-                          <input class="form_control" type="text" name="license" readonly="" placeholder="Maximum file size 20 MB" />
-                        </div>
-                        <div class="file_btn">
-                          <button type="button" class="blue_btn">Upload</button>
+            <div class="addLoc_box border-0">
+              <div class="addLoc_box1">
+                <div class="loc_head">
+                  <h4>Add Location <span class="badge badge-digital ms-1">Digital</span></h4>
+                </div>
+                <div class="loc_stripe">
+                  <p class="mb-0"><button type="button"><span class="material-symbols-outlined icon_down">download</span><span class="text_down">Download Template Excel</span></button> to upload thousands of locations.</p>
+                </div>
+                <div class="loc_body">
+                  <div class="row">
+                    <div class="col-12 col-sm-12">
+                      <div class="input_group mb-0">
+                        <label class="form_label"><span class="blue_txt">Choose file</span> or drag and drop</label>
+                        <div class="upload_file">
+                          <div class="file_input">
+                            <input class="file_input2" type="file">
+                            <input class="form_control" type="text" name="license" readonly="" placeholder="Maximum file size 20 MB" />
+                          </div>
+                          <div class="file_btn">
+                            <button type="button" class="blue_btn">Upload</button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="fail_box">
-                      <p>• Row 1: Lorem ipsunm Long established fact that a reader will be distracted.</p>
-                      <p>• Row 2: Readable English. Many desktop publishing packages and web page.</p>
-                    </div>
-                    <div class="succes_box">
-                      <p>Your excel file has been uploaded successfully</p>
+                      <div class="fail_box">
+                        <p>• Row 1: Lorem ipsunm Long established fact that a reader will be distracted.</p>
+                        <p>• Row 2: Readable English. Many desktop publishing packages and web page.</p>
+                      </div>
+                      <div class="succes_box">
+                        <p>Your excel file has been uploaded successfully</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p class="option_or">OR</p>
-                <div class="addLoc_div">
-                  <p class="mb-0">Click on <span class="blue_txt">Add Location</span> button to add new location</p>
-                  <a href="#" class="blue_btn">Add Location</a>
-                </div>
-                <div class="border_box">
-                  <p class="mb-0">If you are unable to add locations, please <a href="#" class="blue_txt">Contact Us</a> for assistance.</p>
+                  <p class="option_or">OR</p>
+                  <div class="addLoc_div">
+                    <p class="mb-0">Click on <span class="blue_txt">Add Location</span> button to add new location</p>
+                    <a href="add-digital-media-location.html" class="blue_btn">Add Location</a>
+                  </div>
+                  <div class="border_box">
+                    <p class="mb-0">If you are unable to add locations, please <a href="#" class="blue_txt">Contact Us</a> for assistance.</p>
+                  </div>
                 </div>
               </div>
+              <p class="loc_note">Ensure your Excel file contains the exact names for States/LGAs/Cities as per our predefined data for matching. Refer to our <a href="excel-resource.html" target="_blank">guide here</a> for details.</p>
             </div>
           </div>
         </div>

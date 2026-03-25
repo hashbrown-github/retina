@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Contact Us</title>
+<title>Help</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -29,11 +29,27 @@
               <span class="link_text">Dashboard</span>
             </a>
           </li>
-          <li class="menu_item">
-            <a class="menu_link" href="media-location.html">
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">ads_click</span>
-              <span class="link_text">Media Location</span>
-            </a>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="menu_item">
             <a class="menu_link" href="bookings.html">
@@ -65,8 +81,14 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
           <li class="menu_item">
@@ -77,6 +99,31 @@
           </li>
         </ul>
         <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
@@ -84,7 +131,7 @@
             </a>
           </li>
           <li class="menu_item">
-            <a class="menu_link" href="help.html">
+            <a class="menu_link active" href="help.html">
               <span class="material-symbols-outlined link_icon">inbox</span>
               <span class="link_text">Help</span>
             </a>
@@ -92,6 +139,13 @@
         </ul>
         <ul class="menu_list fixed_menu">
           <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
             <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
               <span class="material-symbols-outlined link_icon">logout</span>
               <span class="link_text">Logout</span>
@@ -132,97 +186,34 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="contact_box">
-            <div class="contact_left">
-              <div class="headLeft">
-                <h3>Contact Us</h3>
-                <p class="mb-2">Reach us via email at <span class="blue_txt">reti@retinaad.com</span></p>
-                <p class="mb-0">Or you can also fill out the form, and we will reach out to you shortly.</p>
-              </div>
+          <div class="choose_option choose_option2">
+            <h1>Please select how you would like to proceed.</h1>
+            <p>You can explore help resources, raise a new support request, or track an existing query.</p>
+            <div class="help_search">
+              <p><a href="#"><b class="blue_txt">Have any questions?</b></a></p>
             </div>
-            <div class="contact_right">
-              <div class="form_fields">
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group error_box">
-                      <label class="form_label">Name</label>
-                      <input class="form_control" type="text" name="name">
-                      <span class="error_msg">Please enter your name</span>
-                    </div>
+            <ul>
+              <li class="nav_item">
+                <a class="nav_link" href="contact.html">
+                  <img src="images/contact-support.svg" alt="Contact Support" />
+                  <div class="margin_top">
+                    <h3>Contact Support</h3>
+                    <p class="mb-0">Reach out to us directly for urgent assistance. We aim to respond to all queries as quickly as possible.</p>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group">
-                      <label class="form_label">Contact Email</label>
-                      <input class="form_control" type="text" name="email">
-                    </div>
+                </a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link active" href="support-requests.html">
+                  <img src="images/support-request.svg" alt="Support Request" />
+                  <div class="margin_top">
+                    <h3>Support Request</h3>
+                    <p class="mb-0">Submit a new request describing your issue in detail. Our team will review it and get back to you with a resolution.</p>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group">
-                      <label class="form_label">Contact Phone Number*</label>
-                      <div class="input_flex">
-                        <div class="left_width">
-                          <select class="form_control">
-                            <option>+91</option>
-                            <option>+90</option>
-                            <option>+996</option>
-                          </select>
-                        </div>
-                        <div class="right_width">
-                          <input class="form_control" type="number" name="phone">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group">
-                      <label class="form_label">Select your Issue</label>
-                      <select class="form_control">
-                        <option>Issue 1</option>
-                        <option>Issue 2</option>
-                        <option>Issue 3</option>
-                        <option>Issue 4</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group">
-                      <label class="form_label">Message*</label>
-                      <textarea class="form_control" type="text" name="message" rows="5" placeholder="Kindly describe your issue or question in detail"></textarea>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <button type="button" class="blue_btn mt-2" data-bs-toggle="modal" data-bs-target="#thanksModal">Contact Us</button>
-                    <!--===== THANK YOU POPUP START =====-->
-                    <div class="modal modal_box payment_modal fade" id="thanksModal" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header border-bottom-0">
-                            <button type="button" class="btn-close mt-1 me-1" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body p-0">
-                            <div class="modal_body payment_box">
-                              <img src="images/contact-img.svg" alt="Contact Us" />
-                              <h4>Thank You for Contacting Us!</h4>
-                              <p>We’ve received your message and will respond to you shortly.</p>
-                              <button type="button" class="blue_btn" data-bs-dismiss="modal">OK</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                </a>
+              </li>
+            </ul>
+            <div class="login_buttons login_buttons2">
+              <a href="support-requests.html" class="blue_btn2">Continue</a>
             </div>
           </div>
         </div>
@@ -263,6 +254,13 @@
         e.preventDefault();
         $('.main_sidebar').toggleClass('small_sidebar');
         $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    $('.nav_link').on('click', function (e) {
+      e.preventDefault();
+      $('.nav_link').removeClass('active');
+      $(this).toggleClass('active');
     });
   </script>
   <!--======= MOBILE MENU START =======-->

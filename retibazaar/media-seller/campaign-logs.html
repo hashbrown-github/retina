@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail</title>
+<title>Campaign Logs</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -57,10 +57,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Order</span>
+              <span class="link_text">Orders</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -71,7 +71,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -99,7 +99,7 @@
           </li>
         </ul>
         <ul class="menu_list">
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <div class="flex_menu">
               <a href="payment-insights.html" class="menu_link">
                 <span class="material-symbols-outlined link_icon">checkbook</span>
@@ -110,7 +110,7 @@
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="payment-insights-by-order.html">
+                  <a class="menu_link active" href="payment-insights-by-order.html">
                     <span class="link_span">B</span>
                     <span class="link_text">By Order</span>
                   </a>
@@ -126,7 +126,7 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
-              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
           </li>
@@ -188,22 +188,88 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Payment Insights</a></li>
+              <li class="breadcrumb-item"><a href="order-insights.html">By Order</a></li>
+              <li class="breadcrumb-item"><a href="order-detail.html">Order Detail</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Campaign Logs</li>
             </ol>
           </nav>
-          <!-- <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks" />
-            <h3>Thank You for your payment.</h3>
-            <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-          </div> -->
-          <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks">
-            <h3 class="mb-1">Thank You for your payment.</h3>
-            <h3>You can now go ahead to upload campaign.</h3>
-            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
-            <p class="order_id">Transaction Id: SCPI8792306925</p>
+          <div class="sec_6 campaign_logs">
+            <div class="sec_61">
+              <div class="sec_611">
+                <p class="mb-2">Order ID: <b class="blue_txt">#123456</b></p>
+                <h3>The Rise of Advertisement<span class="badge badge-success">Succeeded</span></h3>
+                <p class="mb-0">Charged to Media Buyer: <b class="blue_txt">johndoe@gmail.com</b></p>
+              </div>
+            </div>
+            <div class="sec_62">
+              <div class="sec_621">
+                <div class="sec_6211">
+                  <h3>Recent Activity</h3>
+                  <ul>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Pause Request Generated for Campaign , Campaign ID: <span class="blue_txt">#123456</span></b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><span class="block_txt">Seller A Provided PoP for Location ABC</span><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Campaign Active</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Order Finalised by Admin</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Seller B approved 15 Locations.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Seller A approved 10 Locations.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <p><b class="block_txt">Order Request Sent</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sec_622">
+                <div class="sec_6221">
+                  <h3>Details</h3>
+                  <ul>
+                    <li>
+                      <p><b class="block_txt">Order ID</b><span class="blue_txt">#12345678</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Requested On</b><span>Apr 10, 2025</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Confirmed On</b><span>Apr 12, 2025</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Total Media Sites</b><span>52</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Static Sites / Digital Sites</b><span>32 / 20</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Campaign Start Date</b><span>May 10, 2025</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Campaign End Date</b><span>June 20, 2025</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Campaign Last Status</b><span>Completed</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -240,32 +306,10 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
     });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(".form-select").click(function (evt) {
-        evt.stopPropagation();
-        $(this).addClass('active');
-        $(".menu_drop").hide();
-        $(this).parent().find(".menu_drop").show();
-        
-      });
-    });
-    $(document).click(function (e) {
-      var container = $(".menu_drop");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
-    }});
   </script>
   <!--======= MOBILE MENU START =======-->
   <script>

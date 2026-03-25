@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail</title>
+<title>Support Requests</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -57,10 +57,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Order</span>
+              <span class="link_text">Orders</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -71,7 +71,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -131,7 +131,7 @@
             </a>
           </li>
           <li class="menu_item">
-            <a class="menu_link" href="help.html">
+            <a class="menu_link active" href="help.html">
               <span class="material-symbols-outlined link_icon">inbox</span>
               <span class="link_text">Help</span>
             </a>
@@ -186,24 +186,80 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
-            </ol>
-          </nav>
-          <!-- <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks" />
-            <h3>Thank You for your payment.</h3>
-            <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-          </div> -->
-          <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks">
-            <h3 class="mb-1">Thank You for your payment.</h3>
-            <h3>You can now go ahead to upload campaign.</h3>
-            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
-            <p class="order_id">Transaction Id: SCPI8792306925</p>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="help.html">Help</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Support Request</li>
+          </ol>
+          <div class="reports_box">
+            <div class="heading_box">
+              <div class="headLeft">
+                <h3>My Support Request</h3>
+              </div>
+              <div class="headRight">
+                <a href="create-request.html" class="blue_btn">New Request</a>
+              </div>
+            </div>
+            <div class="table_view reports_table hori_scroll">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th width="16%">ID</th>
+                    <th width="31%">Subject</th>
+                    <th width="19%">Last Created</th>
+                    <th width="18%">Last Activity</th>
+                    <th width="16%">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">How can Retinaad help track audience sentiment?</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_1">In Progress</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Getting started with Retinaad</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_5">Solved</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Unable to log into my Retinaad account</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_2">Open</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Chat question from user@gmail.com</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_7">Pending</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Getting started with Retinaad</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_1">In Progress</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Unable to log into my Retinaad account</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_5">Solved</span></p></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="noFoundInner">
+                <img src="images/request-not-found.svg" alt="Not Found" />
+                <h3>No Requests Found!</h3>
+              </div>
+            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -240,32 +296,10 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
     });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(".form-select").click(function (evt) {
-        evt.stopPropagation();
-        $(this).addClass('active');
-        $(".menu_drop").hide();
-        $(this).parent().find(".menu_drop").show();
-        
-      });
-    });
-    $(document).click(function (e) {
-      var container = $(".menu_drop");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
-    }});
   </script>
   <!--======= MOBILE MENU START =======-->
   <script>

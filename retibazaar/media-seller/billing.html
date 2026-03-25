@@ -30,11 +30,27 @@
               <span class="link_text">Dashboard</span>
             </a>
           </li>
-          <li class="menu_item">
-            <a class="menu_link" href="media-location.html">
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">ads_click</span>
-              <span class="link_text">Media Location</span>
-            </a>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="menu_item">
             <a class="menu_link" href="bookings.html">
@@ -66,8 +82,14 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
           <li class="menu_item">
@@ -78,8 +100,33 @@
           </li>
         </ul>
         <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
-            <a class="menu_link" href="billing.html">
+            <a class="menu_link active" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
               <span class="link_text">Billing</span>
             </a>
@@ -93,6 +140,13 @@
         </ul>
         <ul class="menu_list fixed_menu">
           <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
             <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
               <span class="material-symbols-outlined link_icon">logout</span>
               <span class="link_text">Logout</span>
@@ -133,12 +187,6 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Billing</li>
-            </ol>
-          </nav>
           <div class="reports_box">
             <div class="heading_box">
               <div class="headLeft">

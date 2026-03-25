@@ -9,6 +9,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/introjs.min.css" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/responsive.css" />
@@ -21,21 +22,37 @@
         <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
         <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
       </div>
-      <div class="sidebar_menu">
+      <div class="sidebar_menu sidebar_scroll">
         <ul class="menu_list">
-          <li class="menu_item">
+          <li class="menu_item" data-intro="View key metrics including locations, media types, orders, payments and top-performing inventory in one real-time overview." data-step="1">
             <a class="menu_link active" href="dashboard.html">
               <span class="material-symbols-outlined link_icon">dashboard</span>
               <span class="link_text">Dashboard</span>
             </a>
           </li>
-          <li class="menu_item">
-            <a class="menu_link" href="media-location.html">
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);" data-intro="Add, manage, and organize all listed locations. Filter sites by city, media type, screen type, and status." data-step="2">
               <span class="material-symbols-outlined link_icon">ads_click</span>
-              <span class="link_text">Media Location</span>
-            </a>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0" data-intro="View your DOOH inventory by location, pricing, and slot availability. Bulk update discounts, total slots, and availability." data-step="3">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="menu_item">
+          <li class="menu_item" data-intro="Manage all bookings in a calendar view. Filter by location or type, access detailed information, and block dates as needed." data-step="4">
             <a class="menu_link" href="bookings.html">
               <span class="material-symbols-outlined link_icon">edit_calendar</span>
               <span class="link_text">Bookings</span>
@@ -48,13 +65,13 @@
             </button>
             <div class="inner_items">
               <ul class="menu_list">
-                <li class="menu_item mb-0">
+                <li class="menu_item mb-0" data-intro="Review requested orders with campaign details, dates, locations, and pricing at a glance. Approve or reject based on location availability." data-step="5">
                   <a class="menu_link" href="order-requests.html">
                     <span class="link_span">O</span>
                     <span class="link_text">Order Requests</span>
                   </a>
                 </li>
-                <li class="menu_item mb-0">
+                <li class="menu_item mb-0" data-intro="View all final orders in one place. Track confirmed, pending, and completed orders along with their payment status." data-step="6">
                   <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
@@ -63,10 +80,16 @@
               </ul>
             </div>
           </li>
-          <li class="menu_item">
+          <li class="menu_item" data-intro="Track campaigns and proof of posting by campaign or location. Monitor proof status, bookings, and payment details at a glance." data-step="7">
             <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item" data-intro="Manage buyer requests for ongoing campaigns, including renewals, pauses, and cancellations, with options to approve or reject them fully or partially." data-step="8">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
           <li class="menu_item">
@@ -77,13 +100,38 @@
           </li>
         </ul>
         <ul class="menu_list">
-          <li class="menu_item">
+          <li class="menu_item inner_list">
+            <div class="flex_menu" data-intro="Get a consolidated view of campaign payments, including total earnings, active orders, location overview, and recent transactions in real time." data-step="9">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0" data-intro="Track payout status by order, including released, withheld, and refunded payments across all campaigns." data-step="10">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0" data-intro="Track location-wise payout status including released, withheld, and refunded payments across all campaigns." data-step="11">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item" data-intro="View your billing history by order and download invoices for easy record-keeping." data-step="12">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">receipt_long</span>
               <span class="link_text">Billing</span>
             </a>
           </li>
-          <li class="menu_item">
+          <li class="menu_item" data-intro="Contact support for assistance or track your existing support tickets in one place." data-step="13">
             <a class="menu_link" href="help.html">
               <span class="material-symbols-outlined link_icon">inbox</span>
               <span class="link_text">Help</span>
@@ -92,6 +140,13 @@
         </ul>
         <ul class="menu_list fixed_menu">
           <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
             <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
               <span class="material-symbols-outlined link_icon">logout</span>
               <span class="link_text">Logout</span>
@@ -117,6 +172,7 @@
           </div>
           <div class="head_part3">
             <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><button type="button" class="guide_btn" onclick="startTour()">Guide Me</button></div>
             <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
             <div class="head_part31">
               <div class="dropdown">
@@ -132,12 +188,12 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <nav aria-label="breadcrumb">
+          <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
             </ol>
-          </nav>
+          </nav> -->
           <div class="campaign_box">
             <div class="heading_box">
               <div class="headLeft">
@@ -191,7 +247,8 @@
                     </ul>
                   </div>
                   <div class="dash_112">
-                    <img src="images/report-chart.png" />
+                    <!-- <img src="images/report-chart.png" /> -->
+                    <div id="all_orders"></div>
                   </div>
                 </div>
                 <div class="dash_11 p-0">
@@ -270,42 +327,42 @@
                   <h4>Top Selling Locations</h4>
                   <ul class="vertical_scroll">
                     <li>
-                      <h6>41 Atanda Street</h6>
+                      <h6>41 Atanda Street <span class="badge badge-digital ms-1">Digital</span></h6>
                       <p>AdedayoVille, Lagos</p>
                       <p>5 Orders</p>
                     </li>
                     <li>
-                      <h6>41 Atanda Street</h6>
+                      <h6>41 Atanda Street <span class="badge badge-static ms-1">Static</span></h6>
                       <p>AdedayoVille, Lagos</p>
                       <p>5 Orders</p>
                     </li>
                     <li>
-                      <h6>41 Atanda Street</h6>
+                      <h6>41 Atanda Street <span class="badge badge-digital ms-1">Digital</span></h6>
                       <p>AdedayoVille, Lagos</p>
                       <p>5 Orders</p>
                     </li>
                     <li>
-                      <h6>41 Atanda Street</h6>
+                      <h6>41 Atanda Street <span class="badge badge-static ms-1">Static</span></h6>
                       <p>AdedayoVille, Lagos</p>
                       <p>5 Orders</p>
                     </li>
                     <li>
-                      <h6>41 Atanda Street</h6>
+                      <h6>41 Atanda Street <span class="badge badge-digital ms-1">Digital</span></h6>
                       <p>AdedayoVille, Lagos</p>
                       <p>5 Orders</p>
                     </li>
                     <li>
-                      <h6>41 Atanda Street</h6>
+                      <h6>41 Atanda Street <span class="badge badge-static ms-1">Static</span></h6>
                       <p>AdedayoVille, Lagos</p>
                       <p>5 Orders</p>
                     </li>
                     <li>
-                      <h6>41 Atanda Street</h6>
+                      <h6>41 Atanda Street <span class="badge badge-digital ms-1">Digital</span></h6>
                       <p>AdedayoVille, Lagos</p>
                       <p>5 Orders</p>
                     </li>
                     <li>
-                      <h6>41 Atanda Street</h6>
+                      <h6>41 Atanda Street <span class="badge badge-static ms-1">Static</span></h6>
                       <p>AdedayoVille, Lagos</p>
                       <p>5 Orders</p>
                     </li>
@@ -315,27 +372,27 @@
                   <h4>Top Media Types</h4>
                   <ul class="vertical_scroll">
                     <li>
-                      <h6><img src="images/unipole.svg" alt="Unipole" />Unipole</h6>
+                      <h6><img src="images/unipole.svg" alt="Unipole" />Unipole <span class="badge badge-digital ms-1">Digital</span></h6>
                       <p>100 Orders</p>
                     </li>
                     <li>
-                      <h6><img src="images/rooftop.svg" alt="Rooftop" />Rooftop Advertising</h6>
+                      <h6><img src="images/rooftop.svg" alt="Rooftop" />Rooftop Advertising <span class="badge badge-static ms-1">Static</span></h6>
                       <p>100 Orders</p>
                     </li>
                     <li>
-                      <h6><img src="images/bus.svg" alt="Bus" />Transit Bus Advertising</h6>
+                      <h6><img src="images/bus.svg" alt="Bus" />Transit Bus Advertising <span class="badge badge-static ms-1">Static</span></h6>
                       <p>100 Orders</p>
                     </li>
                     <li>
-                      <h6><img src="images/shelter.svg" alt="Bus Shelter" />Bus Shelter</h6>
+                      <h6><img src="images/shelter.svg" alt="Bus Shelter" />Bus Shelter <span class="badge badge-digital ms-1">Digital</span></h6>
                       <p>100 Orders</p>
                     </li>
                     <li>
-                      <h6><img src="images/lamp.svg" alt="UniLamppole" />Lamp Pole</h6>
+                      <h6><img src="images/lamp.svg" alt="UniLamppole" />Lamp Pole <span class="badge badge-digital ms-1">Digital</span></h6>
                       <p>100 Orders</p>
                     </li>
                     <li>
-                      <h6><img src="images/hoarding.svg" alt="Hoarding" />Hoarding</h6>
+                      <h6><img src="images/hoarding.svg" alt="Hoarding" />Hoarding <span class="badge badge-static ms-1">Static</span></h6>
                       <p>100 Orders</p>
                     </li>
                   </ul>
@@ -367,8 +424,82 @@
       </div>
     </main>
   </div>
+  <script src="js/intro.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script>
+    function startTour() {
+
+      const intro = introJs();
+
+      // Enable built-in scrolling
+      intro.setOptions({
+        scrollToElement: false // disable default scroll
+      });
+
+      // Custom scroll for sidebar
+      intro.onbeforechange(function (targetElement) {
+
+        const sidebar = document.querySelector('.sidebar_scroll');
+
+        if (!sidebar || !targetElement) return;
+
+        // check if element is inside sidebar
+        if (sidebar.contains(targetElement)) {
+
+          const elementTop = targetElement.offsetTop;
+          const elementHeight = targetElement.offsetHeight;
+          const sidebarHeight = sidebar.clientHeight;
+
+          sidebar.scrollTo({
+            top: elementTop - (sidebarHeight / 2) + (elementHeight / 2),
+            behavior: 'instant'
+          });
+
+          // Important: refresh after scroll
+          setTimeout(() => {
+            intro.refresh();
+          }, 300);
+        }
+      });
+
+      if (window.innerWidth < 768) {
+        $('.inner_list').addClass('active');
+        $('.main_sidebar').addClass('open');
+
+        setTimeout(function () {
+          intro.start();
+        }, 290);
+
+      } else {
+        $('.inner_list').addClass('active');
+        $('.fixed_sidebar').removeClass('small_sidebar');
+        $('.expand_btn').removeClass('active');
+
+        setTimeout(function () {
+          intro.start();
+        }, 200);
+      }
+    }
+  </script>
+  <!-- <script>
+    function startTour() {
+      if (window.innerWidth < 768) {
+        $('.inner_list').addClass('active');
+        $('.main_sidebar').addClass('open');
+        setTimeout(function() {
+          introJs().start();
+        }, 290);
+      } else {
+        $('.inner_list').addClass('active');
+        $('.fixed_sidebar').removeClass('small_sidebar');
+        $('.expand_btn').removeClass('active');
+        setTimeout(function() {
+          introJs().start();
+        }, 200);
+      }
+    }
+  </script> -->
   <script>
     $(document).ready(function(){
       $('.inner_list').on('click', function(){
@@ -410,13 +541,139 @@
       }, false);
     
       $('body,html').click(function (e) {
-        var container = $('.main_sidebar , .b-menu');
+        var container = $('.main_sidebar , .b-menu, .guide_btn, .introjs-tour');
         if (!container.is(e.target) && container.has(e.target).length === 0) {
           container.removeClass('open');
         }
       });
     })();
   </script>
-  <!--======== MOBILE MENU END ========-->
+<!--======== MOBILE MENU END ========-->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+am5.ready(function () {
+  var root = am5.Root.new("all_orders");
+  root.setThemes([am5themes_Animated.new(root)]);
+
+  // Create chart
+  var chart = root.container.children.push(am5xy.XYChart.new(root, {
+    panX: false,
+    panY: false,
+    wheelX: "none",
+    wheelY: "none",
+    paddingLeft: 0,
+    paddingBottom: 0,
+    layout: root.verticalLayout
+  }));
+
+  // Create X Axis
+  var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+    categoryField: "day",
+    renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 40 })
+  }));
+
+  xAxis.get("renderer").labels.template.setAll({
+    fontSize: 12,
+    paddingTop: 8,
+    fill: am5.color(0x777E87)
+  });
+
+  // Create Y Axis
+  var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+    renderer: am5xy.AxisRendererY.new(root, {})
+  }));
+
+  yAxis.get("renderer").labels.template.setAll({
+    fontSize: 12,
+    fill: am5.color(0x777E87)
+  });
+
+  // Add Y-axis title
+  yAxis.children.unshift(
+    am5.Label.new(root, {
+      rotation: -90,
+      text: "No. of Orders",
+      y: am5.p50,
+      centerX: am5.p50,
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    })
+  );
+
+  // Grid styles
+  xAxis.get("renderer").grid.template.setAll({ stroke: am5.color(0x777E87), strokeOpacity: 0.3 });
+  yAxis.get("renderer").grid.template.setAll({ stroke: am5.color(0x777E87), strokeOpacity: 0.3 });
+
+  // Add smooth line series
+  var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+    name: "Orders",
+    xAxis: xAxis,
+    yAxis: yAxis,
+    valueYField: "value",
+    categoryXField: "day",
+    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" }),
+    tension: 0.5, // adjust 0 (straight) to 1 (very smooth)
+    stroke: am5.color(0x016DD5) 
+  }));
+
+  series.strokes.template.setAll({
+    strokeWidth: 2,
+    strokeOpacity: 0.9
+  });
+
+  // Set bullets to match the line color
+  series.bullets.push(function () {
+    return am5.Bullet.new(root, {
+      sprite: am5.Circle.new(root, {
+        radius: 0,
+        fill: am5.color(0x016DD5), // same color as line
+        strokeWidth: 0
+      })
+    });
+  });
+
+  // Add scrollbar
+  chart.set("scrollbarX", am5.Scrollbar.new(root, { orientation: "horizontal" }));
+
+  // Data
+  var data = [
+    { day: "01/Jul", value: 0 },
+    { day: "02/Jul", value: 0 },
+    { day: "03/Jul", value: 0 },
+    { day: "04/Jul", value: 0 },
+    { day: "05/Jul", value: 0 },
+    { day: "06/Jul", value: 0 },
+    { day: "07/Jul", value: 0 },
+    { day: "08/Jul", value: 0 },
+    { day: "09/Jul", value: 0 },
+    { day: "10/Jul", value: 0 },
+    { day: "11/Jul", value: 0 },
+    { day: "12/Jul", value: 0 },
+    { day: "13/Jul", value: 0 },
+    { day: "14/Jul", value: 0 },
+    { day: "15/Jul", value: 0 },
+    { day: "16/Jul", value: 0 },
+    { day: "17/Jul", value: 17 },
+    { day: "18/Jul", value: 9 },
+    { day: "19/Jul", value: 11 },
+    { day: "20/Jul", value: 3 },
+    { day: "21/Jul", value: 9 },
+    { day: "22/Jul", value: 2 },
+    { day: "23/Jul", value: 12 },
+    { day: "24/Jul", value: 14 },
+    { day: "25/Jul", value: 2 },
+    { day: "26/Jul", value: 0 }
+  ];
+
+  xAxis.data.setAll(data);
+  series.data.setAll(data);
+
+  // Animate on load
+  series.appear(1000);
+  chart.appear(1000, 100);
+});
+</script>
 </body>
 </html>

@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail</title>
+<title>Location Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/responsive.css" />
@@ -57,10 +58,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Order</span>
+              <span class="link_text">Orders</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -71,7 +72,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -80,7 +81,7 @@
             </div>
           </li>
           <li class="menu_item">
-            <a class="menu_link" href="proof-of-posting.html">
+            <a class="menu_link active" href="proof-of-posting.html">
               <span class="material-symbols-outlined link_icon">outbox</span>
               <span class="link_text">Campaigns & PoP</span>
             </a>
@@ -126,7 +127,7 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
-              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
           </li>
@@ -188,22 +189,93 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
+              <li class="breadcrumb-item"><a href="proof-of-posting.html">Campaigns & PoP</a></li>
+              <li class="breadcrumb-item"><a href="pop-campaign-detail.html">Campaign Detail</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Location Detail</li>
             </ol>
           </nav>
-          <!-- <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks" />
-            <h3>Thank You for your payment.</h3>
-            <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-          </div> -->
-          <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks">
-            <h3 class="mb-1">Thank You for your payment.</h3>
-            <h3>You can now go ahead to upload campaign.</h3>
-            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
-            <p class="order_id">Transaction Id: SCPI8792306925</p>
+          <div class="campaign_box">
+            <div class="campaign_dtl">
+              <h3>5 Joel Ogunnaike St, Ikea GRA<span class="badge badge-success ms-2">Approved</span></h3>
+              <h4>We Are Here Campaign</h4>
+              <div class="flex_box2 flex_box3 align-items-baseline">
+                <span class="badge badge-request">Awaiting Proof of Posting</span>
+                <span class="badge badge-grey">Payment Status</span>
+                <span class="badge badge-static">Static</span>
+              </div>
+              <p class="mb-0 mt-3"><span>Apr 10, 2025</span> - <span>Apr 20, 2025</span></p>
+            </div>
+            <div class="loc_dtl">
+              <div class="locDtl_head">
+                <div class="loc_head1">
+                  <div class="loc_head11">
+                    <h4>5 Joel Ogunnaike St, Ikeja GRA</h4>
+                  </div>
+                  <div class="loc_head12">
+                    <ul>
+                      <li><h5 class="mt-0">Address</h5></li>
+                      <li>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</li>
+                      <li><h5>Area Description</h5></li>
+                      <li>Behnd ABC street,</li>
+                      <li>6.5872721, 3.3569867</li>
+                      <li><h5>Billboard</h5></li>
+                      <li>Static, Back-lit</li>
+                      <li>4.6 m x 6.6 m, 162.36 sq. m</li>
+                      <li>Orientation - West</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="loc_head2">
+                  <div class="loc_head11">
+                    <h4>Location Map</h4>
+                  </div>
+                  <div class="loc_head22">
+                    <div id="location_map3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pop_box">
+                <div class="pop_box1">
+                  <div class="pop_box11">
+                    <h4>Proof of Posting</h4>
+                  </div>
+                </div>
+                <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">By Seller</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false" tabindex="-1">By Admin</button>
+                  </li>
+                </ul>
+                <div class="tab-content locations_con" id="myTabContent">
+                  <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                    <div class="pop_box2">
+                      <div class="files_flex">
+                        <input class="file_input2" type="file" accept="image/jpeg, image/png, video/mp4" multiple="">
+                        <div class="files_box">
+                          <img src="images/upload-icon.svg" alt="Upload Icon">
+                          <h6>Choose an image or video to upload</h6>
+                        </div>
+                      </div>
+                      <button type="button" class="blue_btn">Upload</button>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                    <div class="pop_box2">
+                      <div class="files_flex">
+                        <input class="file_input2" type="file" accept="image/jpeg, image/png, video/mp4" multiple="">
+                        <div class="files_box">
+                          <img src="images/upload-icon.svg" alt="Upload Icon">
+                          <h6>Choose an image or video to upload</h6>
+                        </div>
+                      </div>
+                      <button type="button" class="blue_btn">Upload</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -231,6 +303,16 @@
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+    const location_map3 = new mapboxgl.Map({
+      container: 'location_map3',
+      style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+      center: [8.141140, 9.611302],
+      zoom: 5
+    });
+  </script>
   <script>
     $(document).ready(function(){
       $('.inner_list').on('click', function(){
@@ -240,32 +322,10 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
     });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(".form-select").click(function (evt) {
-        evt.stopPropagation();
-        $(this).addClass('active');
-        $(".menu_drop").hide();
-        $(this).parent().find(".menu_drop").show();
-        
-      });
-    });
-    $(document).click(function (e) {
-      var container = $(".menu_drop");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
-    }});
   </script>
   <!--======= MOBILE MENU START =======-->
   <script>

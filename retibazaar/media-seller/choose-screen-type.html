@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail</title>
+<title>Location Inventory</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
               <span class="link_text">Dashboard</span>
             </a>
           </li>
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">ads_click</span>
               <span class="link_text">Location Inventory</span>
@@ -37,7 +37,7 @@
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="location-inventory.html">
+                  <a class="menu_link active" href="location-inventory.html">
                     <span class="link_span">L</span>
                     <span class="link_text">Locations</span>
                   </a>
@@ -57,10 +57,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Order</span>
+              <span class="link_text">Orders</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -71,7 +71,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -188,22 +188,36 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Location Inventory</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Choose Screen Type</li>
             </ol>
           </nav>
-          <!-- <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks" />
-            <h3>Thank You for your payment.</h3>
-            <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-          </div> -->
-          <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks">
-            <h3 class="mb-1">Thank You for your payment.</h3>
-            <h3>You can now go ahead to upload campaign.</h3>
-            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
-            <p class="order_id">Transaction Id: SCPI8792306925</p>
+          <div class="choose_option choose_option2">
+            <h1>Choose Screen Type</h1>
+            <p>Select the type of OOH screen you’re adding to your inventory.</p>
+            <ul>
+              <li class="nav_item">
+                <a class="nav_link" href="#">
+                  <img src="images/static-media.svg" alt="Static Media" />
+                  <div class="margin_top">
+                    <h3>Static</h3>
+                    <p class="mb-0">Traditional printed fixed creative display requiring manual replacement.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#">
+                  <img src="images/digital-media.svg" alt="Digital Media" />
+                  <div class="margin_top">
+                    <h3>Digital</h3>
+                    <p class="mb-0">Electronic display capable of showing dynamic or rotating digital ads.</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="login_buttons login_buttons2">
+              <button type="button" class="blue_btn2">Continue</button>
+            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -248,24 +262,9 @@
   <script>
     $('.nav_link').on('click', function (e) {
       e.preventDefault();
+      $('.nav_link').removeClass('active');
       $(this).toggleClass('active');
     });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(".form-select").click(function (evt) {
-        evt.stopPropagation();
-        $(this).addClass('active');
-        $(".menu_drop").hide();
-        $(this).parent().find(".menu_drop").show();
-        
-      });
-    });
-    $(document).click(function (e) {
-      var container = $(".menu_drop");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
-    }});
   </script>
   <!--======= MOBILE MENU START =======-->
   <script>

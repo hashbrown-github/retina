@@ -1,0 +1,599 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Location Insights</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="dashboard.html">
+              <span class="material-symbols-outlined link_icon">dashboard</span>
+              <span class="link_text">Dashboard</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list active">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">ads_click</span>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link active" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="bookings.html">
+              <span class="material-symbols-outlined link_icon">edit_calendar</span>
+              <span class="link_text">Bookings</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">package_2</span>
+              <span class="link_text">Orders</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="proof-of-posting.html">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">map</span>
+              <span class="link_text">Map</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Location Inventory</a></li>
+              <li class="breadcrumb-item"><a href="location-inventory.html">Locations</a></li>
+              <li class="breadcrumb-item"><a href="location-detail.html">Location Detail</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Location Insights</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="campaign_dtl">
+              <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
+              <div class="loc_media">
+                <p class="camType mb-0 ms-1">#123456</p>
+                <p class="camType mb-0 ms-1"><img src="images/billboard.svg">Billboard</p>
+                <span class="badge badge-digital ms-1">Digital</span>
+                <span class="badge badge-premium ms-1"><img src="images/premium-icon.svg" alt="Premium" />Premium</span>
+                <span class="badge badge-standard ms-1"><img src="images/standard-icon.svg" alt="Standard" />Standard</span>
+                <span class="badge badge-high ms-1"><img src="images/high-traffic.svg" alt="High Traffic" />High Traffic</span>
+                <span class="badge badge-moderate ms-1"><img src="images/moderate-traffic.svg" alt="Moderate Traffic" />Moderate Traffic</span>
+                <span class="badge badge-low ms-1"><img src="images/low-traffic.svg" alt="Low Traffic" />Low Traffic</span>
+              </div>
+            </div>
+            <div class="insightsBox">
+              <div class="loc_media2">
+                <p class="blueBox"><img src="images/place-icon-1.svg" alt="High Football" /><span>High Football</span></p>
+                <p class="yellowBox"><img src="images/place-icon-2.svg" alt="Fashion Hub" /><span>Fashion Hub</span></p>
+                <p class="purpleBox"><img src="images/place-icon-3.svg" alt="Health/Finance" /><span>Health/Finance</span></p>
+                <p class="purpleBox"><img src="images/place-icon-4.svg" alt="Food Court" /><span>Food Court</span></p>
+              </div>
+              <div class="loc_media3">
+                <p><b>Quick Insight:</b> <i>This location has high exposure to young professionals seeking fashion and grocery options. Parking density suggests strong drive-by visibility.</i></p>
+              </div>
+              <div class="loc_dtl">
+                <div class="locDtl_head">
+                  <div class="loc_head1">
+                    <div class="loc_head11">
+                      <h4 class="blue_txt">#123456</h4>
+                    </div>
+                    <div class="loc_head12 sep_border">
+                      <ul>
+                        <li><h5 class="mt-0 mb-3">Screen & Location</h5></li>
+                        <li><b>Address: </b>Highway Billboard, 5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</li>
+                        <li><b>Venue Type: </b>Mall</li>
+                        <li><b>DOOH Type: </b>Digital Billboard</li>
+                        <li><b>Area: </b>Behind ABC street</li>
+                        <li><b>Latitude/ Longitude: </b>6.5872721, 3.3569867</li>
+                        <li><b>Environment: </b>Indoor</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="locationDTL">
+                    <div class="loc_head2 mb-0">
+                      <div class="loc_head11">
+                        <h4>5 Joel Ogunnaike St, Ikea GRA</h4>
+                      </div>
+                      <div class="loc_head22">
+                        <div id="map"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="locInsiteBox mt-0">
+                <div class="locInsite_h">
+                  <img src="images/Key-matrics.svg" alt="Key Metrics" /><h4>Key Metrics</h4>
+                </div>
+                <div class="locInsite_b">
+                  <ul>
+                    <li>
+                      <div class="locInsite_h2">
+                        <img src="images/Impressions.svg" alt="Impressions" /><h5>Impressions</h5>
+                      </div>
+                      <div class="locInsite_b2 locInsite_b3">
+                        <div class="locInsite_b31">
+                          <p>Avg Daily Imp.:</p>
+                          <h5>12,450</h5>
+                        </div>
+                        <div class="locInsite_b31">
+                          <p>Avg Weekly Imp.:</p>
+                          <h5>87,000</h5>
+                        </div>
+                        <div class="locInsite_b31">
+                          <p>Avg Monthly Imp.:</p>
+                          <h5>12,450</h5>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locInsite_h2">
+                        <img src="images/Reach.svg" alt="Reach" /><h5>Reach</h5>
+                      </div>
+                      <div class="locInsite_b2">
+                        <div id="reach_chart"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locInsite_h2">
+                        <img src="images/Frequency.svg" alt="Frequency" /><h5>Frequency</h5>
+                      </div>
+                      <div class="locInsite_b2 locInsite_b4">
+                        <h5>6.1</h5>
+                        <img src="images/frequency-img.svg" alt="Frequency" />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locInsite_h2">
+                        <img src="images/Population.svg" alt="Population Density" /><h5>Population Density</h5>
+                      </div>
+                      <div class="locInsite_b2 locInsite_b4">
+                        <h5>22,000/sq.mi</h5>
+                        <img src="images/population-img.svg" alt="Population" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="locInsiteBox">
+                <div class="locInsite_h">
+                  <img src="images/POI-Insight.svg" alt="POI Insight" /><h4>POI Insight</h4>
+                </div>
+                <div class="locInsite_b5">
+                  <ul>
+                    <li>
+                      <p><img src="images/Fashion-District.svg" alt="Fashion District" />Fashion District</p>
+                      <h5>364 Stores</h5>
+                    </li>
+                    <li>
+                      <p><img src="images/Parking-Central.svg" alt="Parking Central" />Parking Central</p>
+                      <h5>356 Slots</h5>
+                    </li>
+                    <li>
+                      <p><img src="images/Grocery-Gateway.svg" alt="Grocery Gateway" />Grocery Gateway</p>
+                      <h5>265 Markets</h5>
+                    </li>
+                    <li>
+                      <p><img src="images/Health-Finance-Corridor.svg" alt="Health & Finance Corridor" />Health & Finance Corridor</p>
+                      <h5>237 Pharmacies/Banks</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="locInsiteBox">
+                <div class="locInsite_h">
+                  <img src="images/User-Personas.svg" alt="User Personas" /><h4>User Personas</h4>
+                </div>
+                <div class="locInsite_b6">
+                  <ul>
+                    <li>
+                      <div class="locInsite_b60">
+                        <img src="images/Urban-Shopper-Sally.svg" alt="Urban Shopper" />
+                        <div class="locInsite_b61">
+                          <h5><b><i>Urban Shopper</i></b> <span class="block_txt">Sally</span></h5>
+                          <button type="button" class="blue_txt exapnd_info">
+                            <span>Expand for <i><b>Age Group</b></i>, <i><b>Occupations</b></i>, <i><b>Interests</b></i> & <i><b>Behaviour</b></i></span>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="locInsite_b62">
+                        <p><span class="block_txt grey_txt small_txt mb-1">Age:</span> <b>30-55</b></p>
+                        <p><span class="block_txt grey_txt small_txt mb-1">Occupation:</span> <b>Professional</b></p>
+                        <p><span class="block_txt grey_txt small_txt mb-1">Interests:</span> <b>Convenient parking | Easy access to amenities</b></p>
+                        <p class="mb-0"><span class="block_txt grey_txt small_txt mb-1">Behavior:</span> <b>Regularly uses parking lots | Visits nearby supermarkets and pharmacies</b></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locInsite_b60">
+                        <img src="images/Commuting-Carl.svg" alt="Commuting" />
+                        <div class="locInsite_b61">
+                          <h5><b><i>Commuting</i></b> <span class="block_txt">Carl</span></h5>
+                          <button type="button" class="blue_txt exapnd_info">
+                            <span>Expand for <i><b>Age Group</b></i>, <i><b>Occupations</b></i>, <i><b>Interests</b></i> & <i><b>Behaviour</b></i></span>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="locInsite_b62">
+                        <p><span class="block_txt grey_txt small_txt mb-1">Age:</span> <b>30-55</b></p>
+                        <p><span class="block_txt grey_txt small_txt mb-1">Occupation:</span> <b>Professional</b></p>
+                        <p><span class="block_txt grey_txt small_txt mb-1">Interests:</span> <b>Convenient parking | Easy access to amenities</b></p>
+                        <p class="mb-0"><span class="block_txt grey_txt small_txt mb-1">Behavior:</span> <b>Regularly uses parking lots | Visits nearby supermarkets and pharmacies</b></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="locInsite_b60">
+                        <img src="images/Health-Conscious-Helen.svg" alt="Health-Conscious" />
+                        <div class="locInsite_b61">
+                          <h5><b><i>Health-Conscious</i></b> <span class="block_txt">Helen</span></h5>
+                          <button type="button" class="blue_txt exapnd_info">
+                            <span>Expand for <i><b>Age Group</b></i>, <i><b>Occupations</b></i>, <i><b>Interests</b></i> & <i><b>Behaviour</b></i></span>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="locInsite_b62">
+                        <p><span class="block_txt grey_txt small_txt mb-1">Age:</span> <b>30-55</b></p>
+                        <p><span class="block_txt grey_txt small_txt mb-1">Occupation:</span> <b>Professional</b></p>
+                        <p><span class="block_txt grey_txt small_txt mb-1">Interests:</span> <b>Convenient parking | Easy access to amenities</b></p>
+                        <p class="mb-0"><span class="block_txt grey_txt small_txt mb-1">Behavior:</span> <b>Regularly uses parking lots | Visits nearby supermarkets and pharmacies</b></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== LOGOUT POPUP START =====-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+    center: [8.141140, 9.611302],
+    zoom: 5
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $('.inner_list').on('click', function () {
+      $(this).toggleClass('active');
+    });
+  });
+</script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.main_sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
+<!--======= MOBILE MENU START =======-->
+<script>
+  (function () {
+    var body = document.body;
+    var burgerMenu = document.getElementsByClassName('b-menu')[0];
+    var closeBtn = document.getElementsByClassName('b-menu2')[0];
+    var sidebar = document.getElementsByClassName('main_sidebar')[0];
+
+    burgerMenu.addEventListener('click', function toggleClasses() {
+      [sidebar].forEach(function (el) {
+        el.classList.toggle('open');
+      });
+    }, false);
+    closeBtn.addEventListener('click', function toggleClasses() {
+      [sidebar].forEach(function (el) {
+        el.classList.toggle('open');
+      });
+    }, false);
+
+    $('body,html').click(function (e) {
+      var container = $('.main_sidebar , .b-menu');
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.removeClass('open');
+      }
+    });
+  })();
+</script>
+<!--======== MOBILE MENU END ========-->
+<script>
+  $(document).ready(function () {
+    $('.exapnd_info').on('click', function () {
+      const li = $(this).closest('li');
+      li.toggleClass('expanded');
+    });
+  });
+</script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+  am5.ready(function () {
+    var root = am5.Root.new("reach_chart");
+
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    // Create chart
+    var chart = root.container.children.push(am5radar.RadarChart.new(root, {
+      panX: false,
+      panY: false,
+      innerRadius: am5.percent(80),
+      startAngle: -250,
+      endAngle: 20,
+      paddingTop: -5,
+      paddingBottom: -10,
+      paddingLeft: 0,
+      paddingRight: 0
+    }));
+
+    // Data
+    var data = [{
+      category: "Reach",
+      value: 82,
+      full: 100,
+      columnSettings: {
+        fill: am5.color(0x016DD5) // Blue color for the filled part
+      }
+    }];
+
+    // Disable cursor interactions
+    var cursor = chart.set("cursor", am5radar.RadarCursor.new(root, {
+      behavior: "none"
+    }));
+    cursor.lineY.set("visible", false);
+    cursor.lineX.set("visible", false);
+
+    // Create axes
+    var xRenderer = am5radar.AxisRendererCircular.new(root, {
+      strokeOpacity: 0
+    });
+    xRenderer.labels.template.setAll({ visible: false });
+    xRenderer.grid.template.setAll({ visible: false });
+
+    var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+      renderer: xRenderer,
+      min: 0,
+      max: 100,
+      strictMinMax: true
+    }));
+
+    var yRenderer = am5radar.AxisRendererRadial.new(root, {});
+    yRenderer.labels.template.setAll({ visible: false });
+    yRenderer.grid.template.setAll({ visible: false });
+
+    var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "category",
+      renderer: yRenderer
+    }));
+    yAxis.data.setAll(data);
+
+    // Background (light fill)
+    var series1 = chart.series.push(am5radar.RadarColumnSeries.new(root, {
+      xAxis: xAxis,
+      yAxis: yAxis,
+      clustered: false,
+      valueXField: "full",
+      categoryYField: "category",
+      fill: am5.color(0xDDEDFF)
+    }));
+    series1.columns.template.setAll({
+      width: am5.p100,
+      fillOpacity: 1,
+      strokeOpacity: 0,
+      cornerRadius: 20
+    });
+    series1.data.setAll(data);
+
+    // Foreground (actual reach value)
+    var series2 = chart.series.push(am5radar.RadarColumnSeries.new(root, {
+      xAxis: xAxis,
+      yAxis: yAxis,
+      clustered: false,
+      valueXField: "value",
+      categoryYField: "category"
+    }));
+    series2.columns.template.setAll({
+      width: am5.p100,
+      strokeOpacity: 0,
+      tooltipText: "{category}: {valueX}%",
+      cornerRadius: 20,
+      fill: am5.color(0x016DD5)
+    });
+    series2.data.setAll(data);
+
+    // Add centered percentage text
+    chart.radarContainer.children.push(am5.Label.new(root, {
+     text: data[0].value + "%",
+      centerX: am5.percent(50),
+      centerY: am5.percent(50),
+      fontSize: 18,
+      fontWeight: "600",
+      fill: am5.color(0x000000)
+    }));
+
+    // Animate
+    series1.appear(1000);
+    series2.appear(1000);
+    chart.appear(1000, 100);
+
+  }); // end am5.ready()
+</script>
+</body>
+</html>

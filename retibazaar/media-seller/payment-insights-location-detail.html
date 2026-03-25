@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail</title>
+<title>Location Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -57,10 +57,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Order</span>
+              <span class="link_text">Orders</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -71,7 +71,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -99,7 +99,7 @@
           </li>
         </ul>
         <ul class="menu_list">
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <div class="flex_menu">
               <a href="payment-insights.html" class="menu_link">
                 <span class="material-symbols-outlined link_icon">checkbook</span>
@@ -116,7 +116,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="payment-insights-by-location.html">
+                  <a class="menu_link active" href="payment-insights-by-location.html">
                     <span class="link_span">B</span>
                     <span class="link_text">By Location</span>
                   </a>
@@ -126,7 +126,7 @@
           </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
-              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
           </li>
@@ -188,22 +188,158 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Payment Insights</a></li>
+              <li class="breadcrumb-item"><a href="payment-insights-by-location.html">By Location</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Location Detail</li>
             </ol>
           </nav>
-          <!-- <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks" />
-            <h3>Thank You for your payment.</h3>
-            <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-          </div> -->
-          <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks">
-            <h3 class="mb-1">Thank You for your payment.</h3>
-            <h3>You can now go ahead to upload campaign.</h3>
-            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
-            <p class="order_id">Transaction Id: SCPI8792306925</p>
+          <div class="campaign_box">
+            <div class="campaign_dtl">
+              <h3>5 Joel Ogunnaike St, Ikea GRA<span class="badge badge-static ms-2">Static</span></h3>
+              <p class="mb-3"><span>Apr 10, 2025</span> - <span>Apr 30, 2025</span></p>
+            </div>
+          </div>
+          <div class="locVeri_list">
+            <h3>Active Campaign</h3>
+            <div class="table_view camLoc_table hori_scroll">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th width="16%">Campaign Name</th>
+                    <th width="14%">Install Status</th>
+                    <th width="10%">Payout Status</th>
+                    <th width="9%">Location Rate</th>
+                    <th width="7%">Dicount</th>
+                    <th width="9%">Estimated Payout</th>
+                    <th width="9%">Refunds Done</th>
+                    <th width="6%">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p><span class="blue_txt">My First Campaign</span><span class="block_txt small_p">(23 Sep, 2025- 30 Sep, 2025)</span></p></td>
+                    <td><p><span class="status_type warning_5">Verification Passed</span></p></td>
+                    <td><p><span class="status_type warning_5">Payout Released</span></p></td>
+                    <td><p>₦22,500</p></td>
+                    <td><p>10%</p></td>
+                    <td><p>₦22,500</p></td>
+                    <td><p>--</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="noCamFound">
+              <h3>No Active Campaign Found!</h3>
+            </div>
+            <div class="sec_62 payIn_locDtl">
+              <div class="sec_621">
+                <h3 class="mt-4">Past Campaign</h3>
+                <div class="table_view camLoc_table hori_scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th width="16%">Campaign Name</th>
+                        <th width="14%">Install Status</th>
+                        <th width="10%">Payout Status</th>
+                        <th width="9%">Location Rate</th>
+                        <th width="7%">Dicount</th>
+                        <th width="9%">Estimated Payout</th>
+                        <th width="9%">Refunds Done</th>
+                        <th width="6%">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><p><span class="blue_txt">My First Campaign</span><span class="block_txt small_p">(23 Sep, 2025- 30 Sep, 2025)</span></p></td>
+                        <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                        <td><p><span class="status_type warning_6">Withholding</span></p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>10%</p></td>
+                        <td><p>₦22,500</p></td>
+                        <td><p>--</p></td>
+                        <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                      </tr>
+                      <tr>
+                        <td><p><span class="blue_txt">My First Campaign</span><span class="block_txt small_p">(23 Sep, 2025- 30 Sep, 2025)</span></p></td>
+                        <td><p><span class="status_type warning_2">Under Field Verification</span></p></td>
+                        <td><p><span class="status_type warning_5">Payout Released</span></p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>--</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                      </tr>
+                      <tr>
+                        <td><p><span class="blue_txt">My First Campaign</span><span class="block_txt small_p">(23 Sep, 2025- 30 Sep, 2025)</span></p></td>
+                        <td><p><span class="status_type warning_5">Verification Passed</span></p></td>
+                        <td><p><span class="status_type warning_3">Refund Initiated</span></p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>15%</p></td>
+                        <td><p>₦20,000</p></td>
+                        <td><p>--</p></td>
+                        <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                      </tr>
+                      <tr>
+                        <td><p><span class="blue_txt">My First Campaign</span><span class="block_txt small_p">(23 Sep, 2025- 30 Sep, 2025)</span></p></td>
+                        <td><p><span class="status_type warning_7">Verification Failed</span></p></td>
+                        <td><p><span class="status_type warning_6">Withholding</span></p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>--</p></td>
+                        <td><p>₦15,000</p></td>
+                        <td><p>₦15,000</p></td>
+                        <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                      </tr>
+                      <tr>
+                        <td><p><span class="blue_txt">My First Campaign</span><span class="block_txt small_p">(23 Sep, 2025- 30 Sep, 2025)</span></p></td>
+                        <td><p><span class="status_type warning_2">Under Field Verification</span></p></td>
+                        <td><p><span class="status_type warning_5">Payout Released</span></p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>--</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                      </tr>
+                      <tr>
+                        <td><p><span class="blue_txt">My First Campaign</span><span class="block_txt small_p">(23 Sep, 2025- 30 Sep, 2025)</span></p></td>
+                        <td><p><span class="status_type warning_2">Under Field Verification</span></p></td>
+                        <td><p><span class="status_type warning_5">Payout Released</span></p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>--</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="sec_622">
+                <div class="sec_6222">
+                  <h3>Location Details</h3>
+                  <ul>
+                    <li>
+                      <p><b class="block_txt">Location ID</b><span class="blue_txt">#1234567</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Added Date</b><span>23 Sep, 2025</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Admin Approval Date</b><span>30 Sep, 2025</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Number of Campaigns</b><span>50</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Location Rate</b><span>₦25,000</span></p>
+                    </li>
+                    <li>
+                      <p><b class="block_txt">Dicount</b><span>15%</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -240,32 +376,10 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
     });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(".form-select").click(function (evt) {
-        evt.stopPropagation();
-        $(this).addClass('active');
-        $(".menu_drop").hide();
-        $(this).parent().find(".menu_drop").show();
-        
-      });
-    });
-    $(document).click(function (e) {
-      var container = $(".menu_drop");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
-    }});
   </script>
   <!--======= MOBILE MENU START =======-->
   <script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Location Detail</title>
+<title>Static Media Location Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -205,8 +205,8 @@
             <div class="campaign_dtl">
               <h3>5 Joel Ogunnaike St, Ikeja GRA</h3>
               <div class="loc_media">
-                <span class="badge badge-grey"><img src="images/billboard.svg" alt="">Billboard</span>
-                <span class="badge badge-digital ms-1">Digital</span>
+                <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
+                <span class="badge badge-static ms-1">Static</span>
               </div>
             </div>
             <div class="loc_dtl">
@@ -217,36 +217,26 @@
                   </div>
                   <div class="loc_head12 sep_border">
                     <ul>
-                      <li><h5 class="mt-0">Screen & Location</h5></li>
+                      <li><h5 class="mt-0">Site Information</h5></li>
                       <li><b>Address: </b>Highway Billboard, 5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</li>
-                      <li><b>Venue Type: </b>Mall</li>
-                      <li><b>DOOH Type: </b>Digital Billboard</li>
+                      <li><b>Location Name: </b>Mall Entrance</li>
+                      <li><b>Media Type: </b>Unipole</li>
                       <li><b>Area: </b>Behind ABC street</li>
-                      <li><b>Latitude/ Longitude: </b>6.5872721, 3.3569867</li>
+                      <li><b>Latitude/Longitude: </b>6.5872721, 3.3569867</li>
                       <li><b>Environment: </b>Indoor</li>
-                      <li><h5>Display & Hardware</h5></li>
-                      <li><b>Size Dimensions: </b>4.6 m x 6.6 m</li>
-                      <li><b>Screen Size: </b>168” × 576” inches</li>
-                      <li><b>Resolution & Aspect Ratio: </b>16 mm, 24:7</li>
-                      <li><b>Orientation: </b>Portrait</li>
-                      <li><b>Brightness: </b>500 – 1,500 nits</li>
-                      <li><h5>Availability, Loop & Delivery</h5></li>
-                      <li><b>Operating Hours: </b>6 AM – 12 AM</li>
-                      <li><b>Loop Length: </b>60 seconds</li>
-                      <li><b>Permitted Ad Duration: </b>10 Seconds</li>
-                      <li><b>SoV: </b>30 %</li>
-                      <li><b>Screen Status: </b>Active</li>
-                      <li><b>Total Slots: </b>12 slots per loop</li>
-                      <li><b>Slots Available: </b>4 available</li>
-                      <li><h5>Pricing</h5></li>
-                      <li><b>Fixed rate per slot/week: </b>NGN 25,000 per slot/week</li>
+                      <li><h5>Display Specifications</h5></li>
+                      <li><b>Size Dimensions: </b>2 m × 1 m</li>
+                      <li><b>Illumination Type: </b>Digital LED inches</li>
+                      <li><b>Orientation: </b>Landscape</li>
+                      <li><b>Occupancy Rate: </b>75%</li>
+                      <li><b>Impressions/4 weeks: </b>1,200,000 impressions / 4 weeks</li>
+                      <li><b>Availability Status: </b>Available</li>
+                      <li><h5>Pricing & Charges</h5></li>
+                      <li><b>Price/4 weeks: </b>NGN 25,000 /week</li>
+                      <li><b>Installation chargeS: </b>NGN 2,000</li>
+                      <li><b>Printing chargeS: </b>NGN 5,000</li>
                       <li><b>Discount: </b>10% off for 12-week booking</li>
-                      <li><h5>Creative Specs & Policies</h5></li>
-                      <li><b>Accept File Type: </b>MP4 (video)</li>
-                      <li><b>CMS/ Ad Server: </b>Broadsign</li>
-                      <li><h5>Additional</h5></li>
-                      <li><b>Impression/4 weeks: </b>1,200,000 impressions / 4 weeks</li>
-                      <li><b>Reach/4 weeks: </b>350,000 reach / 4 weeks</li>
+                      <li><b>Current Installation: </b>11 Sep, 2025 - 22 Sep, 2025</li>
                     </ul>
                   </div>
                 </div>
@@ -265,10 +255,31 @@
                       <a href="add-media.html" class="blue_btn">Add Media</a>
                     </div>
                     <div class="loc_head12">
-                      <div class="payment_box p-0">
-                        <img src="images/contact-img.svg" alt="Contact Us">
-                        <h4>No Image/Video Found!</h4>
-                        <p class="mb-2">Click on "Add Media" to add your location's images.</p>
+                      <div class="locDtl_body">
+                        <ul>
+                          <li>
+                            <div class="locCard_img">
+                              <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="locCard_img">
+                              <video width="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen playsinline"  data-bs-toggle="modal" data-bs-target="#videoModal">
+                                <source type="video/mp4" src="images/video.mp4">
+                              </video>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="locCard_img">
+                              <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="locCard_img">
+                              <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal" />
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
