@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* CSS Document */
+/* SELLER CSS Document */
 @media (max-width: 1680px) {
 .locDtl_head, .activity_body ul {
   gap: 20px;
@@ -16,6 +16,18 @@
 .page_2 .page_12 {
   width: 55%;
 }
+.addLocForm {
+  gap: 40px;
+}
+.addLocForm1, .addLocForm2 {
+  width: calc(50% - 20px);
+}
+.pop_box .locDtl_body > ul {
+  gap: 20px;
+}
+.pop_box .locDtl_body > ul > li {
+  width: calc(25% - 15px);
+}
 }
 @media (max-width: 1540px) {
 .report_header .card_header ul li {
@@ -31,6 +43,41 @@
 }
 .page_2 .page_12 {
   width: 50%;
+}
+.search_filters.inven_filter .filter_div {
+  width: calc(25% - 11.25px);
+}
+.pop_filters .filter_div, .pop_filters .filter_div.filter_1 {
+  width: calc(25% - 11.25px);
+}
+.locInsite_b ul {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.locInsite_b ul li:first-child {
+  grid-column: 1 / 4;
+}
+.locInsite_b31 {
+  min-height: 100px;
+}
+.locInsite_b60 {
+  gap: 15px;
+}
+.locInsite_b5 ul li {
+  min-height: 140px;
+}
+.search_filters.inven_filter .filter_div.filter_1, .search_filters.inven_filter .filter_div.filter_2, .search_filters.inven_filter .filter_div.filter_3, .search_filters.inven_filter .filter_div.filter_4 {
+  flex-grow: unset;
+}
+}
+@media (max-width: 1440px) {
+.dash_0 {
+  gap: 20px;
+}
+.dash_1 {
+  width: calc(100% - 390px);
+}
+.paymentTbl_box {
+  margin-top: 30px;
 }
 }
 @media (max-width: 1399px) {
@@ -74,10 +121,46 @@
   width: 45%;
 }
 .dash_1 {
-  width: calc(100% - 350px);
+  width: calc(100% - 340px);
 }
 .dash_2 {
   width: 320px;
+}
+.addLocForm {
+  gap: 20px;
+}
+.addLocForm1, .addLocForm2 {
+  width: calc(50% - 10px);
+}
+.addLocForm2 .loc_body {
+  padding: 20px;
+}
+.pop_filters .filter_div, .pop_filters .filter_div.filter_1 {
+  width: calc(33.33% - 10px);
+}
+.locInsite_b60 img {
+  max-width: 100px;
+  height: 90px;
+}
+.locInsite_b61 h5 {
+  font-size: 22px;
+  line-height: 28px;
+}
+.locInsite_b31 h5, .locInsite_b4 h5, .locInsite_b5 ul li h5 {
+  font-size: 18px;
+  line-height: 24px;
+}
+.card_header.inven_cards ul, .card_header ul {
+  gap: 15px;
+}
+.inven_cards.card_header ul li, .card_header ul li {
+  width: calc(25% - 11.25px);
+}
+.choose_option ul {
+  gap: 40px;
+}
+.choose_option ul li {
+  width: calc(50% - 20px);
 }
 }
 @media (max-width: 1280px) {
@@ -140,6 +223,26 @@
 }
 .header_sec1 ul, .header_sec2 {
   gap: 30px;
+}
+.locInsite_b60 img {
+  max-width: 60px;
+  height: 50px;
+}
+.campaign_tabs {
+  margin-top: 30px;
+}
+.locCard_img {
+  height: 200px;
+}
+.sec_62 {
+  gap: 40px;
+}
+.sec_621 {
+  width: calc(70% - 20px);
+}
+.sec_622 {
+  width: calc(30% - 20px);
+  min-width: unset;
 }
 }
 @media (max-width: 1199px) {
@@ -233,6 +336,49 @@
 .full_width .loc_head1 {
   width: 100%;
 }
+.locInsite_b31 {
+  min-height: unset;
+  gap: 10px;
+}
+.locInsite_b5 ul {
+  flex-wrap: wrap;
+}
+.locInsite_b5 ul li {
+  min-height: unset;
+  width: calc(50% - 7.5px);
+  align-items: flex-start;
+  gap: 10px;
+}
+.locInsite_b61 h5 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.profile_1 {
+  gap: 40px;
+}
+.addLocForm {
+  flex-direction: column;
+}
+.addLocForm1, .addLocForm2 {
+  width: 100%;
+  max-width: 612px;
+}
+.addLocForm2 .addLoc_box {
+  margin-top: 0;
+}
+.pop_box .locDtl_body > ul > li {
+  width: calc(33.33% - 13.33px);
+}
+.chat_box {
+  gap: 20px;
+}
+.chat_box1 {
+  width: calc(100% - 280px);
+  padding: 20px;
+}
+.chat_box2 {
+  width: 260px;
+}
 }
 @media (max-width: 1100px) {
 .secMap_legends {
@@ -267,6 +413,47 @@
   width: calc(50% - 10px);
   padding: 10px;
 }
+.inven_cards.card_header ul {
+  gap: 15px;
+}
+.inven_cards.card_header ul li, .card_header ul li {
+  width: calc(33.33% - 10px);
+}
+.camFilter .filter_div.filter_1, .camFilter .filter_div.filter_3, .camFilter .filter_div.filter_4 {
+  width: calc(33.33% - 26px);
+  min-width: unset;
+}
+.search_filters.inven_filter .filter_div {
+  width: calc(33.33% - 10px);
+}
+.card_body2 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.card_body22 {
+  text-align: left;
+}
+.req_box {
+  margin-top: 0;
+  justify-content: flex-start;
+}
+.next_btn {
+  position: unset;
+}
+.chat_box131 {
+  margin-bottom: 20px;
+}
+.upload_btns {
+  margin: 20px 0;
+}
+.chat_box11 h4 {
+  font-size: 16px;
+  line-height: 22px;
+}
+.chat_box21 {
+  padding: 15px;
+}
 }
 @media (max-width: 991px) {
 .authen_sc1 {
@@ -286,17 +473,11 @@
 .filter_div.filter_2, .filter_div.filter_4 {
   padding-right: 0;
 }
-.filter_div.filter_3 {
-  padding-right: 12px;
-}
 .rep_filter1, .rep_filter2 {
   padding-right: 12px;
 }
 .header_inner {
   padding: 0 25px;
-}
-.head_part1 {
-  display: none;
 }
 .activate_box2 ul li {
   width: 100%;
@@ -310,6 +491,9 @@
 }
 .contact_left {
   width: 100%;
+}
+.contact_left .headLeft {
+  padding-right: 0;
 }
 .contact_right {
   width: 100%;
@@ -327,16 +511,74 @@
   padding: 40px 0;
 }
 .choose_option ul {
-  gap: 40px;
+  gap: 30px;
 }
 .choose_option ul li {
-  width: calc(50% - 20px);
+  width: calc(50% - 15px);
 }
 .uploaded_box ul {
   margin-bottom: 30px;
 }
 .uploaded_box, .saveCam_btn {
   margin-top: 30px;
+}
+.profile_1 {
+  flex-direction: column;
+  gap: 0;
+}
+.profile_11 ul {
+  gap: 15px;
+}
+.profile_11 ul li:first-child {
+  padding-bottom: 15px;
+}
+.profile_11.profile_12 {
+  max-width: 100%;
+  margin-top: 25px;
+  border: 1px solid #dddddd;
+  padding: 15px;
+  border-radius: 3px;
+}
+.profile_11 h3, .profile_2 h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+.defEmail h4 {
+  font-size: 16px;
+  line-height: 22px;
+}
+.changePass1 {
+  margin-top: 30px;
+  padding: 15px;
+  gap: 20px;
+}
+.inven_cards.card_header ul li, .card_header ul li {
+  width: calc(50% - 7.5px);
+  max-width: unset;
+}
+.p_flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+.p_flex span {
+  margin: 0 !important;
+}
+.pop_box .locDtl_body > ul > li {
+  width: calc(50% - 10px);
+}
+.sec_621 {
+  width: calc(100% - 290px);
+}
+.sec_622 {
+  width: 250px;
+}
+.sec_6211 ul li {
+  padding-bottom: 40px;
+}
+.choose_option ul li img {
+  height: 50px;
 }
 }
 @media (max-width: 960px) {
@@ -367,7 +609,10 @@
   padding-bottom: 4px;
 }
 .campaignTabs.nav-tabs .nav-link {
-  width: 119px;
+  width: auto;
+  padding: 30px;
+  padding-top: 0;
+  padding-bottom: 10px;
 }
 .add_cam0 {
   flex-direction: column;
@@ -386,6 +631,55 @@
 }
 .input_group .audit_category input.nav_link {
   width: 80px;
+}
+.locations_box > ul {
+  gap: 15px;
+}
+.locations_box ul li, .locDtl_body > ul > li {
+  width: calc(50% - 7.5px);
+}
+.campDtl_2 ul {
+  flex-direction: column;
+}
+.campDtl_2 ul li {
+  width: 100%;
+}
+.sec_62 {
+  gap: 25px;
+  flex-direction: column;
+}
+.sec_621 {
+  width: 100%;
+}
+.sec_622 {
+  width: 100%;
+}
+.sec_6221, .sec_6222 {
+  width: 100%;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  padding: 15px;
+}
+.sec_6222 {
+  margin-top: 20px;
+}
+.insightsByLoc .campaignTabs.nav-tabs .nav-link {
+  width: unset;
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+.sec_62.payIn_locDtl {
+  gap: 0;
+}
+.chat_box {
+  flex-direction: column-reverse;
+}
+.chat_box1, .chat_box2 {
+  width: 100%;
+}
+.payIn_locDtl .sec_621, .payIn_locDtl .sec_622 {
+  width: 100%;
 }
 }
 @media (max-width: 883px) {
@@ -407,6 +701,15 @@
 }
 .pay_methods.campaign_payment ul li img {
   height: 64px;
+}
+.locations_box ul li, .locDtl_body > ul > li {
+  width: 100%;
+}
+.search_filters.camFilter {
+  gap: 15px;
+}
+.camFilter .filter_div.filter_1, .camFilter .filter_div.filter_3, .camFilter .filter_div.filter_4 {
+  width: calc(50% - 7.5px);
 }
 }
 @media (max-width: 767px) {
@@ -435,7 +738,8 @@
   margin-top: 30px;
 }
 .authen_sc13 {
-  display: none;
+  position: unset;
+  margin-top: 30px;
 }
 .tabs_left {
   width: 260px;
@@ -452,6 +756,9 @@
 }
 .report_header .card_header ul li {
   width: calc(50% - 10px);
+}
+.addLocForm1, .addLocForm2 {
+  max-width: 100%;
 }
 /*====== MOBILE SIDEBAR CSS START =====*/
 .sidebar_header {
@@ -530,6 +837,14 @@
 .vid_demo11 {
   margin-top: 30px;
 }
+.locations_box ul li, .locDtl_body > ul > li {
+  width: calc(50% - 7.5px);
+}
+.insightsByLoc .campaignTabs.nav-tabs .nav-link {
+  padding: 15px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
 }
 @media (max-width: 680px) {
 .tabs_box {
@@ -586,6 +901,9 @@
 .footer_part {
   padding: 20px 30px;
 }
+.tabs_left, .content_box {
+  padding: 15px;
+}
 .filter_div, .filter_div.filter_1 {
   width: 100%;
   padding-right: 0 !important;
@@ -637,7 +955,7 @@
 }
 .campaignTabs.nav-tabs .nav-link {
   width: unset;
-  padding: 0 15px 10px;
+  padding: 0 20px 10px;
 }
 .campaign_cards ul li {
   width: 100%;
@@ -739,19 +1057,49 @@
 .modal.modalCustomRight .modal-dialog {
   max-width: 360px;
 }
+.search_filters.inven_filter .filter_div {
+  width: calc(50% - 7.5px);
+}
+.pop_filters .filter_div, .pop_filters .filter_div.filter_1 {
+  width: calc(50% - 7.5px);
+}
+.noCamFound {
+  padding: 30px 15px;
+  text-align: center;
+}
+.help_search {
+  margin: 20px 0;
+}
+.profile_11.profile_12 ul li > p, .profile_2 > p {
+  font-size: 14px;
+  line-height: 18px;
+}
+.changePass1 {
+  gap: 15px;
+  flex-wrap: wrap;
+}
 }
 @media (max-width: 480px) {
 .authen_sec {
   padding: 0 15px;
+}
+.header_inner {
+  padding: 0 15px;
+}
+.mobile_header {
+  gap: 5px;
+}
+.head_part3 {
+  gap: 10px;
 }
 .campaignTabs.nav-tabs .nav-link {
   font-size: 14px;
   padding: 0 10px 10px;
 }
 .heading_box {
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 10px;
+  /* align-items: flex-start; */
+  /* flex-direction: column; */
+  /* gap: 10px; */
 }
 .noFoundInner h3, .head_part h3, .activate_box2 h3, .headLeft h3, .vid_demo1 h3 {
   font-size: 20px;
@@ -772,8 +1120,48 @@
 .card_header ul li img {
   width: 30px;
 }
+.introjs-tooltip {
+  min-width: 350px;
+  max-width: 350px;
+}
+.editPrice {
+  top: 76px;
+}
+.camFilter .filter_div.filter_1, .camFilter .filter_div.filter_3, .camFilter .filter_div.filter_4 {
+  width: 100%;
+}
+.pop_box .locDtl_body > ul > li {
+  width: 100%;
+}
+.defEmail p {
+  min-width: 340px;
+}
+.addLocForm111 {
+  padding: 15px;
+}
 }
 @media (max-width: 430px) {
+.mobile_header img {
+  height: 20px;
+}
+.guide_btn {
+  font-size: 12px;
+  line-height: 14px;
+  padding: 5px 12px;
+}
+.mobile_header button {
+  width: 32px;
+  height: 32px;
+}
+.mobile_header span {
+  font-size: 32px;
+}
+.mobile_header {
+  gap: 0;
+}
+.head_part3 {
+  gap: 8px;
+}
 .locSearch_box0 {
   width: calc(100% - 30px);
   top: 15px;
@@ -788,8 +1176,20 @@
 .card_header ul li {
   padding: 8px 10px;
 }
+.addLocForm111, .addLocForm2 .loc_body {
+  padding: 15px;
+}
+.defEmail p {
+  min-width: 100%;
+}
 }
 @media (max-width: 400px) {
+.mobile_header img {
+  height: 18px;
+}
+.head_part3 {
+  gap: 4px;
+}
 .authen_sec {
   gap: 20px;
 }
@@ -834,6 +1234,12 @@
 .modal.modalCustomRight .modal-dialog {
   max-width: 320px;
 }
+.search_filters.inven_filter .filter_div {
+  width: 100%;
+}
+.pop_filters .filter_div, .pop_filters .filter_div.filter_1 {
+  width: 100%;
+}
 }
 @media (max-width: 360px) {
 .choose_option ul li a {
@@ -841,5 +1247,19 @@
 }
 .modal.modalCustomRight .modal-dialog {
   max-width: 300px;
+}
+.inven_cards.card_header ul li, .card_header ul li {
+  width: 100%;
+}
+.date_box, .msg_box {
+  max-width: 90%;
+}
+}
+@media (max-width: 330px) {
+.mobile_header img {
+  height: 17px;
+}
+.guide_btn {
+  padding: 4px 10px;
 }
 }

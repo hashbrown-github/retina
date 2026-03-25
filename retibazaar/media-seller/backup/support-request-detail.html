@@ -1,0 +1,397 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Request Detail</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="dashboard.html">
+              <span class="material-symbols-outlined link_icon">dashboard</span>
+              <span class="link_text">Dashboard</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">ads_click</span>
+              <span class="link_text">Location Inventory</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="location-inventory.html">
+                    <span class="link_span">L</span>
+                    <span class="link_text">Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="inventory-management.html">
+                    <span class="link_span">I</span>
+                    <span class="link_text">Inventory Management</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="bookings.html">
+              <span class="material-symbols-outlined link_icon">edit_calendar</span>
+              <span class="link_text">Bookings</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">package_2</span>
+              <span class="link_text">Orders</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="proof-of-posting.html">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="#">
+              <span class="material-symbols-outlined link_icon">map</span>
+              <span class="link_text">Map</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">receipt_long</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link active" href="help.html">
+              <span class="material-symbols-outlined link_icon">inbox</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="help.html">Help</a></li>
+            <li class="breadcrumb-item"><a href="support-requests.html">My Support Request</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Request Detail</li>
+          </ol>
+          <div class="chat_box">
+            <div class="chat_box1">
+              <div class="chat_box11">
+                <h4>Hello, I’m trying to configure real-time alerts for media mentions but not receiving notifications. Can you guide me through the setup?</h4>
+                <p><span>John Doe</span><span>02 Nov, 2025, 12:00AM</span></p>
+              </div>
+              <div class="chat_box12">
+                <h5>John Doe (3 Oct, 2025, 2:00 AM)</h5>
+              </div>
+              <div class="chat_box13">
+                <div class="chat_box131">
+                  <div class="date_box">
+                    <p><span>John Doe</span> <span>(3 Oct, 2025, 2:00 AM)</span></p>
+                  </div>
+                  <div class="msg_box">
+                    <p>Hello, I’m trying to configure real-time alerts for media mentions but not receiving notifications. Can you guide me through the setup?</p>
+                  </div>
+                </div>
+                <div class="chat_box131 chat_box132">
+                  <div class="date_box">
+                    <p><span>support@retinaad.africa</span> <span>(3 Oct, 2025, 2:00 AM)</span></p>
+                  </div>
+                  <div class="msg_box">
+                    <p>Please check that your real-time alerts are enabled under Alerts > Settings and your notification email is verified; if the issue persists, reply with the alert name so we can assist further.</p>
+                  </div>
+                </div>
+                <div class="chat_box131">
+                  <div class="date_box">
+                    <p><span>John Doe</span> <span>(3 Oct, 2025, 2:00 AM)</span></p>
+                  </div>
+                  <div class="msg_box">
+                    <p>Okay, I’ve checked. Everything seems correct, but I’m still not getting alerts.</p>
+                  </div>
+                </div>
+                <div class="chat_box131 chat_box132">
+                  <div class="date_box">
+                    <p><span>support@retinaad.africa</span> <span>(3 Oct, 2025, 2:00 AM)</span></p>
+                  </div>
+                  <div class="msg_box">
+                    <p>Thanks for confirming. Could you share the name of the alert you set up? Our team will review it and get back to you shortly.</p>
+                  </div>
+                </div>
+                <div class="chat_box131">
+                  <div class="date_box">
+                    <p><span>John Doe</span> <span>(3 Oct, 2025, 2:00 AM)</span></p>
+                  </div>
+                  <div class="msg_box">
+                    <p>Sure, the alert is called “Brand Mentions – John Co.</p>
+                  </div>
+                </div>
+                <div class="chat_box131 chat_box132">
+                  <div class="date_box">
+                    <p><span>support@retinaad.africa</span> <span>(3 Oct, 2025, 2:00 AM)</span></p>
+                  </div>
+                  <div class="msg_box">
+                    <p>Got it! We’ll look into it and update you within the next hour.</p>
+                    <p>Hi John, the alert configuration is correct. There was a minor issue with the notification system which is now fixed. You should start receiving alerts now.</p>
+                  </div>
+                </div>
+                <div class="chat_box131">
+                  <div class="date_box">
+                    <p><span>John Doe</span> <span>(3 Oct, 2025, 2:00 AM)</span></p>
+                  </div>
+                  <div class="msg_box">
+                    <p>Perfect, I just got my first alert. Thanks for the quick help!</p>
+                  </div>
+                </div>
+                <div class="chat_box131 chat_box132">
+                  <div class="date_box">
+                    <p><span>support@retinaad.africa</span> <span>(3 Oct, 2025, 2:00 AM)</span></p>
+                  </div>
+                  <div class="msg_box">
+                    <p>Happy to help, John! Let us know if you face any other issues.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat_box2">
+              <p><b>Request ID: </b><span>#123456</span></p>
+              <p><b>Last Generated: </b><span>2 Aug, 2025</span></p>
+              <p><b>Last Updated: </b><span>2 Sep, 2025</span></p>
+              <p><b>Status: </b><span class="status_type warning_1">In Progress</span></p>
+            </div>
+          </div>
+          <div class="chat_box1 comment_box">
+            <div class="addLoc_form">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="input_group mb-0">
+                    <label class="form_label">Comment*</label>
+                    <textarea rows="4" class="form_control" type="text"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <div class="upload_btns">
+                    <div class="upload_btns1">
+                      <input type="file" accept="application/pdf" multiple="">
+                      <button type="button"><span class="material-symbols-outlined">attach_file</span></button>
+                    </div>
+                    <div class="upload_btns1">
+                      <input type="file" accept="image/png, image/jpeg" multiple="">
+                      <button type="button"><span class="material-symbols-outlined">image_arrow_up</span></button>
+                    </div>
+                  </div>
+                  <div class="upload_box">
+                    <h4>2 Files Uploading…</h4>
+                    <ul>
+                      <li>
+                        <button type="button"><span class="material-symbols-outlined">close</span></button>
+                        <p><span><span class="material-symbols-outlined">image</span><span>Img.jpg</span></span><span>70%</span></p>
+                        <div class="progress progressBar" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar blue_bar1" style="width: 70%"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <button type="button"><span class="material-symbols-outlined">close</span></button>
+                        <p><span><span class="material-symbols-outlined">article</span><span>Locations.pdf</span></span><span>50%</span></p>
+                        <div class="progress progressBar" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar blue_bar1" style="width: 50%"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <button type="button" class="blue_btn mt-4">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== LOGOUT POPUP START =====-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.inner_list').on('click', function(){
+        $(this).toggleClass('active');
+      });
+    });
+  </script>
+  <script>
+    $('#expand_btn').on('click', function (e) {
+        e.preventDefault();
+        $('.main_sidebar').toggleClass('small_sidebar');
+        $(this).toggleClass('active');
+    });
+  </script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var sidebar = document.getElementsByClassName('main_sidebar')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [sidebar].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.main_sidebar , .b-menu');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+        }
+      });
+    })();
+  </script>
+  <!--======== MOBILE MENU END ========-->
+</body>
+</html>

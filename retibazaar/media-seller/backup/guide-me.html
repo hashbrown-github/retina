@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro.js 5 Step Demo</title>
+
+    <!-- Intro.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        .step-box {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 data-intro="Welcome to the platform walkthrough!" data-step="">
+        Welcome to Our Platform
+    </h1>
+
+    <div class="step-box" data-intro="Step 2: This is your dashboard overview." data-step="2">
+        Dashboard Overview Section
+    </div>
+
+    <div class="step-box" data-intro="Step 3: Here you can manage your listings." data-step="3">
+        Manage Listings Section
+    </div>
+
+    <div class="step-box" data-intro="Step 4: Monitor campaign performance here." data-step="4">
+        Campaign Analytics Section
+    </div>
+
+    <div class="step-box" data-intro="Step 5: Access account settings and preferences here." data-step="5">
+        Account Settings Section
+    </div>
+
+    <br><br>
+
+    <button onclick="startTour()">Start Tour</button>
+
+    <!-- Intro.js Script -->
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+
+    <script>
+        function startTour() {
+            introJs().start();
+        }
+    </script>
+
+</body>
+</html>
