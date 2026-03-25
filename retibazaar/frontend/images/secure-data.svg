@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="Secure_Data_Handling" data-name="Secure Data Handling" transform="translate(-1.5 -1.5)">
+    <path id="Path_253078" data-name="Path 253078" d="M22.5,5A3.5,3.5,0,0,0,19,1.5H5A3.5,3.5,0,0,0,1.5,5v6a.5.5,0,0,0,1,0V5A2.5,2.5,0,0,1,5,2.5H19A2.5,2.5,0,0,1,21.5,5V19A2.5,2.5,0,0,1,19,21.5H13a.5.5,0,0,0,0,1h6A3.5,3.5,0,0,0,22.5,19Z" fill-rule="evenodd"/>
+    <path id="Path_253079" data-name="Path 253079" d="M2,17a1.5,1.5,0,0,1,1.5-1.5h5A1.5,1.5,0,0,1,10,17v4a1.5,1.5,0,0,1-1.5,1.5h-5A1.5,1.5,0,0,1,2,21Zm1.5-.5A.5.5,0,0,0,3,17v4a.5.5,0,0,0,.5.5h5A.5.5,0,0,0,9,21V17a.5.5,0,0,0-.5-.5Z" fill-rule="evenodd"/>
+    <path id="Path_253080" data-name="Path 253080" d="M3,14.5A2.5,2.5,0,0,1,5.5,12h1A2.5,2.5,0,0,1,9,14.5V16a.5.5,0,0,1-.5.5h-5A.5.5,0,0,1,3,16ZM5.5,13A1.5,1.5,0,0,0,4,14.5v1H8v-1A1.5,1.5,0,0,0,6.5,13Z" fill-rule="evenodd"/>
+    <path id="Path_253081" data-name="Path 253081" d="M9,6.5h6v-1H9Z" fill-rule="evenodd"/>
+  </g>
+</svg>
