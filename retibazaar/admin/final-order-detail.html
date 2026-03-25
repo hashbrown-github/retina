@@ -74,6 +74,16 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="sidebar__text">Users</div>
                 </a>
               </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html">Inventory</a></span>
+                <span><a href="location-request.html">Location Request</a></span>
+              </div>
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
@@ -87,7 +97,7 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
-                    <span class="material-symbols-outlined icon">outbox</span>
+                    <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
@@ -255,6 +265,7 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                 </div>
                 <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
               </div>
             </div>
             <div class="campaign_list mt-20">
@@ -321,7 +332,7 @@ if (localStorage.getItem('darkMode') === "on") {
                     <p><b>Add On OOH Tracker Fee</b><b>+ NGN 20,000</b></p>
                   </li>
                   <li>
-                    <p><b>Plateform Fee</b><b>+ NGN 30,000</b></p>
+                    <p><b>Platform Fee</b><b>+ NGN 30,000</b></p>
                   </li>
                   <li>
                     <p><b>Net Amount</b><b>NGN 95,000</b></p>
@@ -351,7 +362,20 @@ if (localStorage.getItem('darkMode') === "on") {
                         <option>Cheque</option>
                         <option>Cash</option>
                         <option>Bank Transfer</option>
-                        <option selected>Other</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option selected disabled>Media Seller</option>
+                        <option>Media Seller 1</option>
+                        <option>Media Seller 2</option>
+                        <option>Media Seller 3</option>
+                        <option>Media Seller 4</option>
+                        <option>Media Seller 5</option>
                       </select>
                     </div>
                   </div>
@@ -377,6 +401,12 @@ if (localStorage.getItem('darkMode') === "on") {
                       <p class="small_p mb-0"><b>Payment Receipt.pdf</b></p>
                       <button type="button" class="outline_btn"><span class="material-symbols-outlined">close</span></button>
                     </div>
+                    <p class="small_p mt-3 mb-0">No of Locations: <b>2</b></p>
+                    <p class="small_p mt-1 mb-0">Location Price: <b>NGN 67,000.00</b></p>
+                    <p class="small_p mt-1 mb-0">Printing Charges + Installation Charges: <b>NGN 22,900.00</b></p>
+                    <p class="small_p mt-1 mb-0">Platform Fee: <b>NGN 2,010.00</b></p>
+                    <p class="small_p mt-1 mb-0">VAT: <b>NGN 5,175.75</b></p>
+                    <p class="small_p blue_txt mt-2 mb-0"><b>Total Price: </b><b>NGN 74,185.75</b></p>
                   </div>
                 </div>
               </div>

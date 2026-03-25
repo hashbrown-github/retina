@@ -77,6 +77,16 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html">Inventory</a></span>
+                <span><a href="location-request.html">Location Request</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">package_2</span>
                   </div>
                   <div class="sidebar__text">Orders</div>
@@ -87,7 +97,7 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
-                    <span class="material-symbols-outlined icon">outbox</span>
+                    <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
@@ -254,7 +264,7 @@ if (localStorage.getItem('darkMode') === "on") {
           <div class="w-100 mt-20">
             <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="false">Summary</button>
+                <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">Summary</button>
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false">Orders</button>
@@ -263,17 +273,235 @@ if (localStorage.getItem('darkMode') === "on") {
                 <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" type="button" role="tab" aria-controls="three-tab-pane" aria-selected="false">Payments</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" type="button" role="tab" aria-controls="four-tab-pane" aria-selected="true">KYC</button>
+                <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" type="button" role="tab" aria-controls="four-tab-pane" aria-selected="false">KYC</button>
               </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+              <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                <div class="sec_4 card_body mt-20">
+                  <ul class="nav nav-tabs campaignTabs2" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="activitylog-tab" data-bs-toggle="tab" data-bs-target="#activitylog-tab-pane" type="button" role="tab" aria-controls="activitylog-tab-pane" aria-selected="true">Activity Logs</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="sessionlog-tab" data-bs-toggle="tab" data-bs-target="#sessionlog-tab-pane" type="button" role="tab" aria-controls="sessionlog-tab-pane" aria-selected="false" tabindex="-1">Session Logs</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content mt-20" id="myTabContent">
+                    <div class="tab-pane fade show active" id="activitylog-tab-pane" role="tabpanel" aria-labelledby="activitylog-tab" tabindex="0">
+                      <div class="sec_6 campaign_logs mt-0">
+                        <div class="sec_62">
+                          <div class="sec_621">
+                            <div class="sec_6211">
+                              <h3>Activity Logs</h3>
+                              <ul>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">Order Confirmed.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                                </li>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">Locations requested for order, Order ID: <span class="blue_txt">#12345678</span></b><span>Apr 10, 2025, 05:25 PM</span></p>
+                                </li>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">Uploaded Locations.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                                </li>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">Approved / Rejected by admin.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                                </li>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">Customer created as media owner.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="sec_622">
+                            <div class="sec_6221">
+                              <h3>Media Owner Details</h3>
+                              <ul>
+                                <li>
+                                  <p><b class="block_txt">Name</b><span>John Doe</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Email</b><span>johndoe@gmail.com</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Phone Number</b><span>+91910000077</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="sec_6222">
+                              <h3>Business Details</h3>
+                              <ul>
+                                <li>
+                                  <p><b class="block_txt">Company Name</b><span>ABC Company</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Official Address</b><span>Chandigarh</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Email Address</b><span>johndoe@gmail.com</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Phone Number</b><span>+234 9876543210</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">TIN/VAT</b><span>123456</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">VAT Number</b><span>123456</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Website</b><span>https//localhost:3456onboarding</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="sec_6222">
+                              <h3>Managing Director Details</h3>
+                              <ul>
+                                <li>
+                                  <p><b class="block_txt">Name</b><span>John Doe</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Email</b><span>johndoe@gmail.com</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Phone Number</b><span>+234 9876543210</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="sec_6222">
+                              <h3>Bank Account Details</h3>
+                              <ul>
+                                <li>
+                                  <p><b class="block_txt">Currency</b><span>John Doe</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Country of Bank Account</b><span>Nigeria</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Account Number</b><span>400150098765</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="sessionlog-tab-pane" role="tabpanel" aria-labelledby="sessionlog-tab" tabindex="0">
+                      <div class="sec_6 campaign_logs mt-0">
+                        <div class="sec_62">
+                          <div class="sec_621">
+                            <div class="sec_6211">
+                              <h3>Session Logs</h3>
+                              <ul>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">User Login</b><span>Sep 5, 2025, 05:25 PM</span></p>
+                                </li>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">User Logout</b><span>Sep 4, 2025, 05:25 PM</span></p>
+                                </li>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">User Login</b><span>July 1, 2025, 05:25 PM</span></p>
+                                </li>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">User Logout</b><span>Jun 28, 2025, 05:25 PM</span></p>
+                                </li>
+                                <li>
+                                  <span></span>
+                                  <p><b class="block_txt">User Login</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="sec_622">
+                            <div class="sec_6221">
+                              <h3>Media Owner Details</h3>
+                              <ul>
+                                <li>
+                                  <p><b class="block_txt">Name</b><span>John Doe</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Email</b><span>johndoe@gmail.com</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Phone Number</b><span>+91910000077</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="sec_6222">
+                              <h3>Business Details</h3>
+                              <ul>
+                                <li>
+                                  <p><b class="block_txt">Company Name</b><span>ABC Company</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Official Address</b><span>Chandigarh</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Email Address</b><span>johndoe@gmail.com</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Phone Number</b><span>+234 9876543210</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">TIN/VAT</b><span>123456</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">VAT Number</b><span>123456</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Website</b><span>https//localhost:3456onboarding</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="sec_6222">
+                              <h3>Managing Director Details</h3>
+                              <ul>
+                                <li>
+                                  <p><b class="block_txt">Name</b><span>John Doe</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Email</b><span>johndoe@gmail.com</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Phone Number</b><span>+234 9876543210</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="sec_6222">
+                              <h3>Bank Account Details</h3>
+                              <ul>
+                                <li>
+                                  <p><b class="block_txt">Currency</b><span>John Doe</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Country of Bank Account</b><span>Nigeria</span></p>
+                                </li>
+                                <li>
+                                  <p><b class="block_txt">Account Number</b><span>400150098765</span></p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
               </div>
               <div class="tab-pane fade" id="three-tab-pane" role="tabpanel" aria-labelledby="three-tab" tabindex="0">
               </div>
-              <div class="tab-pane fade show active" id="four-tab-pane" role="tabpanel" aria-labelledby="four-tab" tabindex="0">
+              <div class="tab-pane fade" id="four-tab-pane" role="tabpanel" aria-labelledby="four-tab" tabindex="0">
                 <div class="userDtl1 card_body mt-20">
                   <div class="userDtl_head">
                     <div class="profile_box">

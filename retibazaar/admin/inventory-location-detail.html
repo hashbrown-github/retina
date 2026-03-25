@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Payout Detail | Retibazaar</title>
-<meta name="title" content="Transaction | Retibazaar" />
-<meta name="description" content="Transaction | Retibazaar" />
+<title>Inventory Location Detail | Retibazaar</title>
+<meta name="title" content="Inventory Location Detail | Retibazaar" />
+<meta name="description" content="Inventory Location Detail | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
@@ -59,7 +59,7 @@ if (localStorage.getItem('darkMode') === "on") {
                 </a>
               </div>
               <div class="side_dropdown">
-                <a class="sidebar__item active" href="transaction.html">
+                <a class="sidebar__item" href="transaction.html">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">credit_card</span>
                   </div>
@@ -74,14 +74,14 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="sidebar__text">Users</div>
                 </a>
               </div>
-              <div class="side_dropdown arrow_drop dropdown_btn">
-                <a class="sidebar__item" href="javascript:void(0);">
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">mode_of_travel</span>
                   </div>
                   <div class="sidebar__text">Media Locations</div>
                 </a>
-                <span><a href="inventory.html">Inventory</a></span>
+                <span class="active"><a href="inventory.html">Inventory</a></span>
                 <span><a href="location-request.html">Location Request</a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
@@ -178,106 +178,117 @@ if (localStorage.getItem('darkMode') === "on") {
       </div>
       <div class="main_div">
         <div class="main_content">
-          <div class="sec_6 card_body">
-            <div class="page_head">
-              <h6><span class="material-symbols-outlined">credit_card</span>Payouts</h6>
-            </div>
-            <div class="sec_61 mb-20">
-              <div class="sec_611">
-                <h3>NGN 6750<span class="status_type success_1">Paid</span></h3>
-                <p class="mb-1">Completed On <span>Apr 14, 2025</span></p>
-                <p class="mb-0">Charged to <b class="blue_txt">johndoe@gmail.com</b></p>
+          <div class="sec_9 card_body">
+            <div class="loc_head0">
+              <div class="loc_head01">
+                <h3 class="mb-0">Location Detail</h3>
               </div>
-              <div class="sec_612">
-                <button type="button" class="blue_btn">View Receipt<div class="spinner-border text-white" role="status"></div></button>
+              <div class="loc_head02">
+                <button type="button" class="blue_btn">Edit Location</button>
+                <a href="digital-location-logs.html" class="blue_btn loc_dtl">Location Logs</a>
               </div>
             </div>
-            <div class="sec_62">
-              <div class="sec_621">
-                <div class="sec_6211">
-                  <h3>Recent Activity</h3>
-                  <ul>
-                    <li>
-                      <span class="material-symbols-outlined success_color">task_alt</span>
-                      <!-- <span class="material-symbols-outlined danger_color">error</span>
-                      <span class="material-symbols-outlined warning_color">undo</span> -->
-                      <p><b class="block_txt">Transaction Succeeded</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">credit_score</span>
-                      <p><span class="block_txt">This transaction successfully set up for ABC location payment.</span><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">payments</span>
-                      <p><b class="block_txt">Transaction Started</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
+            <div class="locDtl_head my-0">
+              <div class="loc_head1">
+                <div class="loc_head11">
+                  <h4 class="text_sm mb-0">5 Joel Ogunnaike St, Ikeja GRA</h4>
                 </div>
-                <div class="sec_6212">
-                  <h3>Transaction Breakdown</h3>
-                  <ul class="mb-0">
-                    <li>
-                      <p><span></span><b>Total</b></p>
-                    </li>
-                    <li>
-                      <p><span>Media Location 1</span><span>NGN 25,000</span></p>
-                    </li>
-                    <li>
-                      <p><span>Media Location 2</span><span>NGN 20,000</span></p>
-                    </li>
-                    <li>
-                      <p><span>Media Location 3</span><span>NGN 20,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Processing Fee</b><b>- NGN 30,000</b></p>
-                    </li>
-                    <li>
-                      <p><b>Net Amount</b><b>NGN 35,000</b></p>
-                    </li>
+                <div class="loc_head12">
+                  <ul>
+                    <li><h5 class="mt-0">Address</h5></li>
+                    <li>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</li>
+                    <li><h5>Area Description</h5></li>
+                    <li>Behnd ABC street,</li>
+                    <li class="blue_txt">6.5872721, 3.3569867</li>
+                    <li><h5>Billboard</h5></li>
+                    <li>Static, Back-lit</li>
+                    <li>4.6 m x 6.6 m, 162.36 sq. m</li>
+                    <li>Orientation - West</li>
                   </ul>
                 </div>
               </div>
-              <div class="sec_622">
-                <div class="sec_6221">
-                  <h3>Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Transaction ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Transaction Method</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Last Updated</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
+              <div class="loc_head2">
+                <div class="loc_head11">
+                  <h4 class="text_sm mb-0">Location Map</h4>
                 </div>
-                <div class="sec_6222">
-                  <h3>Customer Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Customer ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Customer Name</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Email</b><span class="blue_txt">johndoe@gmail.com</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Phone</b><span>+234-809-555-60</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Country</b><span>Nigeria</span></p>
-                    </li>
-                  </ul>
+                <div class="loc_head22">
+                  <div id="map_box2"></div>
                 </div>
+              </div>
+            </div>
+            <div class="payBreakdown">
+              <div class="sec_6212 mt-0">
+                <h3 class="mb-3">Transaction Breakdown</h3>
+                <ul class="mb-0">
+                  <li>
+                    <p><span>Location Charges</span><span>NGN 20,000</span></p>
+                  </li>
+                  <li>
+                    <p><span>Printing & Installation Charges</span><span>NGN 2,000</span></p>
+                  </li>
+                  <li>
+                    <p><span>Miscellaneous Charges</span><span>+ NGN 500</span></p>
+                  </li>
+                  <!-- <li>
+                    <p><b>Plateform Fee</b><b>+ NGN 30,000</b></p>
+                  </li> -->
+                  <li class="mb-0">
+                    <p><b>Net Amount</b><b>NGN 22,500</b></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="sec_92 card_body mt-20">
+            <h6 class="text_lg mb-15">Real Visuals</h6>
+            <div class="activity_grid mt-20">
+              <ul>
+                <li>
+                  <div class="activity_img">
+                    <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                </li>
+                <li>
+                  <div class="activity_img">
+                    <video width="100%" height="100%" controls disablepictureinpicture controlslist="nodownload noplaybackrate nofullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                      <source type="video/mp4" src="images/demo-video.mp4">
+                    </video>
+                  </div>
+                </li>
+                <li>
+                  <div class="activity_img">
+                    <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                </li>
+                <li>
+                  <div class="activity_img">
+                    <img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--===== IMAGE POPUP START =====-->
+        <div class="modal modal_box fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body img_slider">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="images/location-img.jpg" alt="Location Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== VIDEO POPUP START =====-->
+        <div class="modal modal_box fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body img_slider">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate fullscreen playsinline">
+                  <source type="video/mp4" src="images/demo-video.mp4">
+                </video>
               </div>
             </div>
           </div>
@@ -290,6 +301,18 @@ if (localStorage.getItem('darkMode') === "on") {
 <script src="js/jquery.min.js"></script>
 <script src="js/magnific-popup-svg4-app.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+  const map_box2 = new mapboxgl.Map({
+    container: 'map_box2',
+    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+    // style: 'mapbox://styles/meridian0/clhhjph1m01dv01pn7p7oh8ns',
+    style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+    center: [8.141140, 9.611302],
+    zoom: 5
+  });
+</script>
 <!--==== SIDEBAR DROPDOWN OPEN START ====-->
 <script>
   $(document).ready(function(){

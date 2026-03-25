@@ -74,6 +74,16 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="sidebar__text">Users</div>
                 </a>
               </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html">Inventory</a></span>
+                <span><a href="location-request.html">Location Request</a></span>
+              </div>
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
@@ -87,7 +97,7 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
-                    <span class="material-symbols-outlined icon">outbox</span>
+                    <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
@@ -185,7 +195,7 @@ if (localStorage.getItem('darkMode') === "on") {
             </div>
           </div>
           <div class="note_box">
-            <p class="small_p mb-0"><b>Note:</b> <span class="me-1">How many Sellers responded: <b>Note:</b></span> | <span class="ms-1">How many Buyers Responded: <b>10</b></span></p>
+            <p class="small_p mb-0"><b>Note:</b> <span class="me-1">How many Sellers responded: <b>20</b></span> | <span class="ms-1">How many Buyers Responded: <b>10</b></span></p>
           </div>
           <div class="reqOrder_dtl card_body">
             <div class="filter_box">
@@ -235,6 +245,7 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                 </div>
                 <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
               </div>
             </div>
             <div class="accordion order_collapse mt-20" id="accordionRental">
@@ -248,7 +259,7 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="profile_info">
                     <p class="small_p mb-0">Seller Name<b class="block_txt mt-1">John Doe</b></p>
                     <span class="border_line"></span>
-                    <p class="small_p mb-0">Email<b class="block_txt blue_txt mt-1">johndoe@gmail.com</b></p>
+                    <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
                     <span class="border_line"></span>
                     <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
                   </div>
@@ -532,7 +543,7 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="profile_info">
                     <p class="small_p mb-0">Seller Name<b class="block_txt mt-1">John Doe</b></p>
                     <span class="border_line"></span>
-                    <p class="small_p mb-0">Email<b class="block_txt blue_txt mt-1">johndoe@gmail.com</b></p>
+                    <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
                     <span class="border_line"></span>
                     <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
                   </div>
@@ -816,7 +827,7 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="profile_info">
                     <p class="small_p mb-0">Seller Name<b class="block_txt mt-1">John Doe</b></p>
                     <span class="border_line"></span>
-                    <p class="small_p mb-0">Email<b class="block_txt blue_txt mt-1">johndoe@gmail.com</b></p>
+                    <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
                     <span class="border_line"></span>
                     <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
                   </div>
@@ -1108,7 +1119,7 @@ if (localStorage.getItem('darkMode') === "on") {
                     <p><span>Media Location 3</span><span>NGN 20,000</span></p>
                   </li>
                   <li>
-                    <p><b>Plateform Fee</b><b>+ NGN 30,000</b></p>
+                    <p><b>Platform Fee</b><b>+ NGN 30,000</b></p>
                   </li>
                   <li>
                     <p><b>Net Amount</b><b>NGN 95,000</b></p>

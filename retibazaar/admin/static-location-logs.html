@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Assigned Locations | Retibazaar</title>
+<title>Static Location Logs | Retibazaar</title>
 <meta name="title" content="Transaction | Retibazaar" />
 <meta name="description" content="Transaction | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -94,24 +94,24 @@ if (localStorage.getItem('darkMode') === "on") {
                 <span><a href="requested-orders.html">Requested Orders</a></span>
                 <span><a href="final-orders.html">Final Orders</a></span>
               </div>
-              <div class="side_dropdown arrow_drop dropdown_btn">
-                <a class="sidebar__item" href="javascript:void(0);">
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
-                <span><a href="campaigns.html">Active Campaigns</a></span>
+                <span class="active"><a href="campaigns.html">Active Campaigns</a></span>
                 <span><a href="pop-and-verification.html">PoP & Verification</a></span>
               </div>
-              <div class="side_dropdown arrow_drop dropdown_btn active">
-                <a class="sidebar__item active" href="javascript:void(0);">
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">layers</span>
                   </div>
                   <div class="sidebar__text">Teams</div>
                 </a>
-                <span class="active"><a href="field-executives.html">Field Executives</a></span>
+                <span><a href="field-executives.html">Field Executives</a></span>
                 <span><a href="sales-team.html">Sales Team</a></span>
                 <span><a href="#">Quality Auditors</a></span>
               </div>
@@ -178,149 +178,183 @@ if (localStorage.getItem('darkMode') === "on") {
       </div>
       <div class="main_div">
         <div class="main_content">
-          <div class="sec_thirteen card_body">
+          <div class="sec_4 card_body">
             <div class="userDtl_head">
               <div class="profile_box">
-                <h6 class="text_md text_dark mb-2">John Doe</h6>
-                <!-- <p class="small_p icon_size mb-0">
-                  <span class="material-symbols-outlined">mark_email_read</span>
-                  <span>johndoe@gmail.com</span> | <span class="material-symbols-outlined">phone</span>
-                  <span>+234 946 380 2786</span>
-                </p> -->
-                <div class="profile_info">
-                  <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
-                  <span class="border_line"></span>
-                  <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+234 946 380 2786</b></p>
-                </div>
+                <h6 class="text_md text_dark mb-0">Static Location Logs</h6>
               </div>
             </div>
-          </div>
-          <div class="reqOrder_dtl card_body mt-20">
-            <h3 class="text_md text_dark mb-2">Assigned Locations</h3>
-            <div class="filter_box">
-              <div class="filter_box1 order_filters">
-                <div class="filter_div filter_div1">
-                  <div class="input_group">
-                    <div class="search_box">
-                      <input class="form_control" type="text" placeholder="Media Location">
-                      <button type="button" class="searchIcon"><span class="material-symbols-outlined">search</span></button>
-                    </div>
-                  </div>
+            <div class="sec_6 campaign_logs">
+              <div class="sec_61">
+                <div class="sec_611">
+                  <p class="mb-2">Location ID: <b class="blue_txt">#123456</b></p>
+                  <h3>5 Joel Ogunnaike St, Ikea GRA<span class="badge badge-static">Static</span></h3>
+                  <p class="mb-0">Ikeja 101233, Lagos, Nigeria, Ikeja, Lagos</p>
                 </div>
-                <div class="filter_div filter_div2">
-                  <div class="input_group">
-                    <span class="material-symbols-outlined searchIcon">expand_more</span>
-                    <select class="form_control">
-                      <option selected="">State</option>
-                      <option>State 1</option>
-                      <option>State 2</option>
-                      <option>State 3</option>
-                      <option>State 4</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="filter_div filter_div3">
-                  <div class="input_group">
-                    <span class="material-symbols-outlined searchIcon">expand_more</span>
-                    <select class="form_control">
-                      <option selected="">LGA</option>
-                      <option>LGA 1</option>
-                      <option>LGA 2</option>
-                      <option>LGA 3</option>
-                      <option>LGA 4</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="filter_div filter_div4">
-                  <div class="input_group">
-                    <span class="material-symbols-outlined searchIcon">expand_more</span>
-                    <select class="form_control">
-                      <option selected="">City</option>
-                      <option>City 1</option>
-                      <option>City 2</option>
-                      <option>City 3</option>
-                      <option>City 4</option>
-                    </select>
-                  </div>
-                </div>
-                <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
-                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
               </div>
-            </div>
-            <div class="campaign_list mt-15">
-              <ul>
-                <li>
-                  <div class="d-flex gap-2">
-                    <!-- <div class="select_unselect">
-                      <label class="checkbox mt-1">
-                        <input class="checkbox__input m-0" type="checkbox">
-                        <span class="checkbox__in">
-                          <span class="checkbox__tick"></span>
-                        </span>
-                      </label>
-                    </div> -->
-                    <div class="cam_head">
-                      <a href="location-detail.html">
-                        <h5 class="text_sm text_dark mb-1">Media Location 1</h5>
-                        <p class="small_p mb-1">Ikeja, Lagos</p>
-                      </a>
-                      <p class="small_p blue_txt mb-1">28.4480496, 77.0992021</p>
-                      <div class="agents_btn mt-0">
-                        <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#unassign_loc">Unassign Location</button>
-                      </div>
-                    </div>
+              <div class="sec_62">
+                <div class="sec_621">
+                  <div class="sec_6211">
+                    <h3>Location Logs</h3>
+                    <ul>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Payout released for Location.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location confirmed by media owner.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location requested for order, Order ID: <span class="blue_txt">#12345678</span></b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location edited (price, state) by media owner.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location approved / rejected by admin.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location was created.</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                    </ul>
                   </div>
-                </li>
-                <li>
-                  <div class="d-flex gap-2">
-                    <div class="cam_head">
-                      <a href="location-detail.html">
-                        <h5 class="text_sm text_dark mb-1">Media Location 1</h5>
-                        <p class="small_p mb-1">Ikeja, Lagos</p>
-                      </a>
-                      <p class="small_p blue_txt mb-1">28.4480496, 77.0992021</p>
-                      <div class="agents_btn mt-0">
-                        <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#unassign_loc">Unassign Location</button>
-                      </div>
-                    </div>
+                </div>
+                <div class="sec_622">
+                  <div class="sec_6221">
+                    <h3>Site Information</h3>
+                    <ul>
+                      <li>
+                        <p><b class="block_txt">Location Name</b><span>Mall Entrance</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Media Type</b><span>Billboard</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Area</b><span>Behind ABC Street</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Latitude/Longitude</b><span>6.5872721, 3.3569867</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Environment</b><span>Indoor</span></p>
+                      </li>
+                    </ul>
                   </div>
-                </li>
-                <li>
-                  <div class="d-flex gap-2">
-                    <div class="cam_head">
-                      <a href="location-detail.html">
-                        <h5 class="text_sm text_dark mb-1">Media Location 1</h5>
-                        <p class="small_p mb-1">Ikeja, Lagos</p>
-                      </a>
-                      <p class="small_p blue_txt mb-1">28.4480496, 77.0992021</p>
-                      <div class="agents_btn mt-0">
-                        <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#unassign_loc">Unassign Location</button>
-                      </div>
-                    </div>
+                  <div class="sec_6222">
+                    <h3>Display Specifications</h3>
+                    <ul>
+                      <li>
+                        <p><b class="block_txt">Size Dimensions</b><span>2 m × 1 m</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Illumination Type</b><span>Digital LED inches</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Orientation</b><span>Landscape</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Occupancy Rate</b><span>75%</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Impressions/4 weeks</b><span>1,200,000 impressions / 4 weeks</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Availability Status</b><span>Available</span></p>
+                      </li>
+                    </ul>
                   </div>
-                </li>
-              </ul>
+                  <div class="sec_6222">
+                    <h3>Pricing & Charges</h3>
+                    <ul>
+                      <li>
+                        <p><b class="block_txt">Price/4 weeks</b><span>NGN 25,000 /week</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Installation charges</b><span>NGN 2,000</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Printing charges</b><span>NGN 5,000</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Discount</b><span>10% off for 12-week booking</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Current Installation</b><span>11 Sep, 2025 - 22 Sep, 2025</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!--======= UNASSIGN LOCATION MODAL START =======-->
-        <div class="modal fade" id="unassign_loc" tabindex="-1" role="dialog" aria-labelledby="unassign_locLabel" aria-hidden="true">
+        <!--======= FINALIZE APPROVED LOCATION POPUP =======-->
+        <div class="modal fade" id="finalize_loc" tabindex="-1" role="dialog" aria-labelledby="finalize_loc_modalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title modal_h" id="unassign_locLabel">Unassign Location</h5>
+                <h5 class="modal-title modal_h" id="finalize_loc_modalLabel">Finalise Approved Media Locations</h5>
                 <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">×</span>
                 </button>
               </div>
               <div class="modal-body">
                 <div class="modal_body">
-                  <p class="small_p mb-0">Do your really want to unassign this location?</p>
+                  <p class="small_p mb-0">Are you sure you want to create final order?</p>
                 </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Unassign</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= APPROVE LOCATION POPUP=======-->
+        <div class="modal fade" id="approve_loc" tabindex="-1" role="dialog" aria-labelledby="approve_locLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="approve_locLabel">Approve Location</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="small_p mb-0">Are you sure you want to approve location?</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Approve</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= REJECT LOCATION POPUP=======-->
+        <div class="modal fade" id="reject_loc" tabindex="-1" role="dialog" aria-labelledby="reject_locLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h font-weight-normal" id="reject_locLabel">Reject Location</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="small_p mb-0">Do you really want to reject location?</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Reject</button>
               </div>
             </div>
           </div>

@@ -198,6 +198,8 @@ button {
 .page_head h6 span {
   font-size: 22px;
   font-weight: 300;
+  position: relative;
+  top: -1px;
 }
 .mt-15 {
   margin-top: 15px;
@@ -253,7 +255,145 @@ button {
   border-radius: 4px;
   overflow: hidden;
 }
+/*======= LOGIN PAGE START =======*/
+.login_section, .authentication_sc {
+  display: table;
+  width: 100%;
+}
+.authen_sc1 {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: table;
+  padding: 20px;
+  background-color: #EAF1FD;
+  background-image: linear-gradient(322deg, #ffffff 20%, #F1F6FF 54%, #d6e4fb 100%);
+}
+.authen_sc11 {
+  display: table-cell;
+  vertical-align: middle;
+}
+.authen_sc22 {
+  width: unset;
+  max-width: 560px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 42px 40px;
+  text-align: center;
+  box-shadow: 0 2px var(--bs-blue);
+}
+.authen_sc22 > a {
+  text-align: center;
+  display: inline-block;
+}
+.authen_sc22 > a img {
+  width: 180px;
+}
+.account_fields {
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+}
+.account_fields .form_field {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 20px;
+  position: relative;
+}
+.form_field label {
+  font-family: 'Gothampro-Medium';
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.form_field input {
+  font-family: 'Gothampro-Regular';
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  padding: 12px 15px;
+  border-radius: 5px;
+  background: unset;
+  border: 1px solid #EAEAEA;
+  width: 100%;
+  margin-bottom: 0;
+}
+.form_field button {
+  position: absolute;
+  top: 37px;
+  right: 14px;
+  cursor: pointer;
+}
+.form_field button span {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 300;
+}
+.login_buttons {
+  width: 100%;
+  margin-top: 40px;
+}
+.login_buttons button {
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 15px;
+}
+/*======== LOGIN PAGE END ========*/
+.noFoundInner {
+  width: 100%;
+  margin: 40px 0;
+  text-align: center;
+}
+.noFoundInner img {
+  width: auto;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.noFoundInner h3 {
+  font-family: 'Gothampro-Medium';
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+.noFoundInner p {
+  margin-bottom: 20px;
+}
+.blue_btn2 {
+  font-family: 'Gothampro-Medium';
+  font-size: 13px;
+  line-height: 19px;
+  color: #ffffff;
+  background-color: var(--bs-blue);
+  padding: 10px 15px;
+  padding-bottom: 9px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+}
 /*===== DASHBOARD PAGE START =====*/
+#users_count, #orders_refunds {
+  width: 100%;
+  height: 300px;
+}
+.lengends_sec2 {
+  width: 100%;
+  text-align: center;
+}
+.lengends_sec2 .lengends_sec {
+  display: inline-flex;
+  gap: 10px 14px;
+  padding: 8px;
+  margin: 0;
+}
+.box_0.ordersBox {
+  background-color: #67b6dc;
+}
+.box_0.refundBox {
+  background-color: #6694dc;
+}
 .sec_1 {
   width: 100%;
   display: flex;
@@ -540,7 +680,7 @@ textarea.form_control {
 }
 .filter_box1 {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 .filter_div {
   width: 260px;
@@ -627,6 +767,11 @@ textarea.form_control {
   gap: 5px;
   white-space: nowrap;
   height: 38px;
+}
+.spinner-border {
+  width: 14px;
+  height: 14px;
+  border-width: 2px;
 }
 .width_70 {
   width: calc(70% - 10px);
@@ -749,13 +894,14 @@ textarea.form_control {
 }
 .sec_611 h3 {
   font-family: 'Gothampro-Medium';
-  font-size: 24px;
+  font-size: 22px;
   line-height: 29px;
   color: #000000;
   margin-bottom: 6px;
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 4px 10px;
+  flex-wrap: wrap;
 }
 .sec_62 {
   width: 100%;
@@ -809,6 +955,12 @@ textarea.form_control {
   font-size: 13px;
   line-height: 20px;
   margin-bottom: 0;
+}
+.sec_6211 ul li p a {
+  font-family: 'Gothampro-Medium';
+  font-size: 13px;
+  color: #016DD5;
+  text-decoration: underline;
 }
 .sec_6212 {
   width: 100%;
@@ -872,7 +1024,7 @@ textarea.form_control {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px 20px;
 }
 .profile_info {
   display: flex;
@@ -1049,7 +1201,7 @@ textarea.form_control {
 .accordion div button[aria-expanded=true] .collapse-open {
   display: block;
 }
-.accordion .collapse_item .accordion-button span {
+.accordion .collapse_item .accordion-button .collapse-open, .accordion .collapse_item .accordion-button .collapse-close {
   font-size: 21px;
   font-weight: 300;
   position: absolute;
@@ -1259,6 +1411,69 @@ textarea.form_control {
   margin-top: 20px;
   justify-content: flex-start;
 }
+.payoutSum0 {
+  width: 100%;
+}
+.payoutSum01 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.payoutSum01 .campaignTabs2.nav-tabs .nav-link {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+.payoutSum01 .campaignTabs2 {
+  gap: 10px;
+}
+.accordion-button.payoutSum1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.accordion-button.payoutSum1::after {
+  display: none;
+}
+.payoutSum1 p b {
+  font-family: 'Gothampro-Regular';
+}
+.payoutSum2 {
+  display: flex;
+  gap: 5px;
+}
+.payoutSum2 p {
+  position: unset;
+  margin-bottom: 0;
+}
+.payoutSum3 {
+  border-top: 0;
+  padding-top: 0;
+}
+.payoutSum311 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.payout_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 15px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.payout_head > p {
+  font-size: 15px;
+}
+.payout_head2 {
+  display: flex;
+  gap: 6px;
+}
+.blue_btn.green_btn {
+  background-color: #408442;
+}
 /*========= CAMPAIGNS & DETAIL END ========*/
 /*========== PAYMENT DETAILS START ========*/
 .sec_7 {
@@ -1267,7 +1482,7 @@ textarea.form_control {
   gap: 20px;
 }
 .sec_71, .sec_72 {
-  width: calc(50% - 15px);
+  width: calc(50% - 10px);
   position: relative;
 }
 .sec_71 h6 {
@@ -1328,7 +1543,7 @@ textarea.form_control {
   flex-wrap: wrap;
 }
 .loc_head1, .loc_head2 {
-  width: calc(50% - 15px);
+  width: calc(50% - 10px);
   border-radius: 8px;
   border: 1px solid #EAEAEA;
   overflow: hidden;
@@ -1366,7 +1581,7 @@ textarea.form_control {
 }
 #map_box2 {
   width: 100%;
-  height: 250px;
+  height: 280px;
 }
 .h_flex {
   display: flex;
@@ -1442,7 +1657,7 @@ textarea.form_control {
   gap: 10px;
 }
 .card_header.card_header2 ul li {
-  width: calc(16.67% - 8.4px);
+  width: calc(16.667% - 8.34px);
 }
 .status_flex {
   display: flex;
@@ -1620,9 +1835,248 @@ textarea.form_control {
   font-size: 18px;
 }
 /*============ TEAMS CSS END ==============*/
-
-
-
+/*========= LOCATION DETAIL START =========*/
+.loc_head0 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.loc_head01 h3 {
+  font-family: 'Gothampro-Medium';
+  font-size: 20px;
+  line-height: 26px;
+}
+.loc_head02 {
+  display: flex;
+  gap: 10px;
+}
+.loc_head02, .loc_head03 {
+  justify-content: flex-end;
+}
+.addLoc_box {
+  max-width: 600px;
+}
+.addLoc_box1 {
+  width: 100%;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.loc_head {
+  width: 100%;
+  padding: 14px 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E0E0E0;
+  text-align: center;
+  position: relative;
+}
+.loc_head h4 {
+  font-family: 'Gothampro-Medium';
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 0;
+}
+.loc_stripe {
+  width: 100%;
+  padding: 12px;
+  background-color: #F5F6F8;
+  border-bottom: 1px solid #EAEAEA;
+}
+.loc_stripe button span.icon_down {
+  color: #000000;
+  font-weight: 300;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+}
+.loc_stripe button span.text_down {
+  border-left: 1px solid #000000;
+  margin-left: 5px;
+  padding-left: 10px;
+  display: inline-block;
+}
+.loc_body {
+  width: 100%;
+  padding: 25px;
+}
+.form_label {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.upload_file {
+  width: 100%;
+  display: flex;
+}
+.upload_file .file_input {
+  width: calc(100% - 120px);
+  position: relative;
+}
+.file_input2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  font-size: 0;
+  line-height: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+.loc_body .form_control {
+  height: 40px;
+  border-radius: 0;
+  border-right: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.file_btn {
+  width: 120px;
+}
+.upload_file .blue_btn {
+  width: 120px;
+  height: 40px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.fail_box {
+  padding: 10px 14px;
+  background-color: rgb(244 67 53 / 16%);
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.fail_box p {
+  font-size: 13px;
+  line-height: 18px;
+  color: #f44335;
+  margin-bottom: 5px;
+}
+.succes_box {
+  padding: 10px 14px;
+  background-color: rgb(35 157 40 / 16%);
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.succes_box p {
+  font-size: 13px;
+  line-height: 18px;
+  color: #239d28;
+  margin-bottom: 5px;
+}
+.info_box {
+  padding: 10px 14px;
+  color: var(--bs-blue);
+  background-color: rgb(1 109 213 / 20%);
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.info_box p {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--bs-blue);
+  margin-bottom: 5px;
+}
+.fail_box p:last-of-type, .succes_box p:last-of-type, .info_box p:last-of-type {
+  margin-bottom: 0;
+}
+.loc_note {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: rgb(1 109 213 / 8%);
+  border: 1px solid var(--bs-blue);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.loc_note a {
+  text-decoration: underline;
+}
+.select_screen {
+  max-width: 470px;
+}
+.select_screen ul {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+.select_screen ul li {
+  width: calc(50% - 7.5px);
+  padding: 20px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+.select_screen ul li.active {
+  border-color: var(--bs-blue);
+  background-color: rgb(1 109 213 / 8%);
+}
+.select_screen ul li img {
+  margin: 0 auto;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.select_screen ul li h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.select_screen ul li p {
+  font-size: 13px;
+  line-height: 17px;
+}
+/*========== LOCATION DETAIL END ==========*/
+/*========== CAMPAIGN LOGS START ==========*/
+.campaign_logs {
+  width: 100%;
+  margin-top: 30px;
+}
+.campaign_logs .sec_61 {
+  margin-bottom: 30px;
+}
+.campaign_logs .sec_6211 ul li > span {
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  top: 6px;
+  left: 6px;
+}
+.campaign_logs .sec_6211 ul li > span:after {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background-color: #000000;
+  display: block;
+  margin-top: 4px;
+}
+.campaign_logs .sec_6211 ul li:not(:last-child):after {
+  top: 6px;
+}
+.badge {
+  font-family: 'Gothampro-Regular';
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  font-weight: normal;
+  padding: 4px 10px;
+  padding-bottom: 3px;
+  border-radius: 2px;
+}
+.badge-digital {
+  color: #e29300;
+  background-color: rgb(255 187 133 / 31%);
+  vertical-align: middle;
+}
+.badge-static {
+  color: #a06ef7;
+  background-color: rgb(196 170 255 / 22%);
+  vertical-align: middle;
+}
+/*=========== CAMPAIGN LOGS END ===========*/
 
 
 
@@ -1640,7 +2094,7 @@ textarea.form_control {
 body.dark p, body.dark .secHead1 h4, body.dark .secHead2 h3, body.dark .secHead3 h3, body.dark .text_dark, body.dark .form_control, 
 body.dark .campaignTabs.nav-tabs .nav-link, body.dark .table_view .table th, body.dark .table_view .table td, body.dark .table_view .table td p,
 body.dark .card_header ul li h3, body.dark .sec_611 h3, body.dark .search_box .searchIcon span, body.dark .accordion .collapse_item .accordion-button,
-body.dark .sec_twelve ul li .icon_small.material-symbols-outlined {
+body.dark .sec_twelve ul li .icon_small.material-symbols-outlined, body.dark .loc_stripe button span.icon_down {
   color: #ffffff;
 }
 body.dark .card_body {
@@ -1652,14 +2106,18 @@ body.dark .secHead3, body.dark .campaignTabs, body.dark .date_flex .input-group-
 body.dark .sec_6211 h3, body.dark .sec_6212 h3, body.dark .sec_6221 h3, body.dark .sec_6222 h3, body.dark .sec_6212 ul li, body.dark .border_line, body.dark .userDtlBody,
 body.dark .resend_btn, body.dark .modal-header, body.dark .modal-footer, body.dark .campaign_list ul li, body.dark .accordion-item.collapse_item, body.dark .collapse_body,
 body.dark .uploadDocs, body.dark .campDtl_2 ul li, body.dark .lengends_sec, body.dark .loc_head1, body.dark .loc_head2, body.dark .activity_grid ul li, body.dark .loc_head11,
-body.dark .sec_twelve ul li, body.dark .sidebar_header, body.dark .sidebar_footer, body.dark .addExe_item0 {
+body.dark .sec_twelve ul li, body.dark .sidebar_header, body.dark .sidebar_footer, body.dark .addExe_item0, body.dark .addLoc_box1, body.dark .loc_stripe,
+body.dark .loc_stripe button span.text_down, body.dark .select_screen ul li, body.dark .sec_622 {
   border-color: #2E3031;
+}
+body.dark .select_screen ul li.active {
+  border-color: var(--bs-blue);
 }
 body.dark .card_header ul li {
   background-color: #000203;
   border-color: #2E3031;
 }
-body.dark .sec_41 .secHead0, body.dark .table_view .table th, body.dark .loc_head11 {
+body.dark .sec_41 .secHead0, body.dark .table_view .table th, body.dark .loc_head11, body.dark .loc_stripe {
   background-color: #000203;
 }
 body.dark .filterBtn {
@@ -1713,7 +2171,22 @@ body.dark .sidebar_list.open {
 body.dark .agents_btn > * {
   background-color: rgb(1 109 213 / 24%);
 }
-
+body.dark .authen_sc1 {
+  background: unset;
+}
+body.dark .authen_sc22 {
+  background-color: #111617;
+}
+body.dark .form_field input {
+  color: #ffffff;
+  border-color: #2E3031;
+}
+body.dark .form_field label, body.dark .form_field button span {
+  color: #ffffff;
+}
+body.dark .campaign_logs .sec_6211 ul li > span, body.dark .campaign_logs .sec_6211 ul li > span:after {
+  background-color: #717171;
+}
 /*===== MEDIA QUERY START =====*/
 @media (max-width: 1860px) {
 .lengends_sec {
@@ -1751,7 +2224,7 @@ body.dark .agents_btn > * {
   width: 100%;
 }
 .order_filters .filter_div {
-  width: calc(25% - 25.5px);
+  width: calc(25% - 33.5px);
 }
 .card_header.card_header2 ul li {
   width: calc(33.33% - 6.66px);
@@ -1768,12 +2241,17 @@ body.dark .agents_btn > * {
   width: calc(33.33% - 13.33px);
 }
 }
+@media (max-width: 1366px) {
+.filter_box1.campDtl_filter {
+  flex-wrap: wrap;
+}
+.campDtl_filter .filter_div {
+  width: calc(33.33% - 6.66px);
+}
+}
 @media (max-width: 1280px) {
 .filter_box1.campDtl_filter {
   gap: 10px;
-}
-.campDtl_filter .filter_div {
-  width: calc(20% - 10px);
 }
 .card_body, .card_body2 {
   padding: 15px;
@@ -1811,12 +2289,6 @@ body.dark .agents_btn > * {
   gap: 10px;
 }
 .order_filters .filter_div {
-  width: calc(25% - 20.5px);
-}
-.filter_box1.campDtl_filter {
-  flex-wrap: wrap;
-}
-.campDtl_filter .filter_div {
   width: calc(33.33% - 6.66px);
 }
 .activity_img {
@@ -1841,6 +2313,7 @@ body.dark .agents_btn > * {
 }
 .sec_622 {
   width: calc(30% - 20px);
+  min-width: 260px;
 }
 .sec_92 .campaignTabs.nav-tabs .nav-link {
   width: unset;
@@ -1861,9 +2334,202 @@ body.dark .agents_btn > * {
 .activity_img {
   height: 200px;
 }
+.width_70 .filter_div {
+  width: 216px;
+}
+.sec_7 {
+  flex-wrap: wrap;
+}
+.sec_71, .sec_72 {
+  width: 100%;
+}
 }
 @media (max-width: 991px) {
 .activity_img {
   height: 180px;
+}
+.width_70 .filter_box1 {
+  width: 100%;
+}
+.width_70 .filter_div {
+  width: calc(50% - 57px);
+}
+.order_filters .filter_div, .campDtl_filter .filter_div {
+  width: calc(50% - 10px);
+}
+.loc_head1, .loc_head2 {
+  width: 100%;
+}
+.reqOrder_dtl .media_txt {
+  position: unset;
+  display: inline-block;
+  margin-top: 8px;
+}
+.sec_62 {
+  gap: 30px;
+}
+.sec_621 {
+  width: calc(100% - 270px);
+}
+.sec_622 {
+  width: 240px;
+  min-width: unset;
+}
+.sec_611 h3 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.card_header ul li {
+  width: calc(33.33% - 6.66px);
+}
+.campDtl_2 ul {
+  flex-wrap: wrap;
+}
+.campDtl_2 ul li {
+  width: 100%;
+}
+}
+@media (max-width: 900px) {
+.sec_twelve ul li {
+  width: 100%;
+}
+.sec_62 {
+  gap: 20px;
+}
+.sec_621 {
+  width: calc(100% - 220px);
+}
+.sec_622 {
+  width: 200px;
+  min-width: unset;
+}
+}
+@media (max-width: 767px) {
+.media_txt {
+  top: 15px;
+  bottom: unset;
+}
+.sec_twelve ul li {
+  width: calc(50% - 7.5px);
+}
+.sec_621 {
+  width: calc(100% - 250px);
+}
+.sec_622 {
+  width: 230px;
+  min-width: unset;
+}
+}
+@media (max-width: 600px) {
+.sec_13 {
+  width: 100%;
+}
+.card_header ul li, .card_header.card_header2 ul li {
+  width: calc(50% - 5px);
+}
+.sec_12 {
+  min-width: unset;
+}
+.campaignTabs.nav-tabs .nav-link {
+  width: auto;
+  padding: 0 15px;
+  padding-bottom: 5px;
+}
+.campaignTabs {
+  gap: 10px 0;
+}
+.sec_61 {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sec_62 {
+  flex-wrap: wrap;
+}
+.sec_621 {
+  width: 100%;
+}
+.sec_622 {
+  width: 100%;
+}
+.sec_6221, .sec_6222 {
+  width: 100%;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  padding: 15px;
+}
+.sec_6222 {
+  margin-top: 20PX;
+}
+.userDtlBody1 {
+  flex-direction: column;
+}
+.userDtlBody1 .border_line {
+  margin: 15px 0;
+  border-top: 1px solid #EAEAEA;
+}
+.right_side {
+  flex-wrap: wrap;
+}
+.loc_head0 {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.sec_twelve ul li {
+  width: 100%;
+}
+.sec_6211 ul li {
+  padding-bottom: 40px;
+}
+}
+@media (max-width: 575px) {
+.profile_box, .profile_box .right_side {
+  width: 100%;
+}
+.right_side .action_dropdown {
+  width: auto;
+}
+.profile_info {
+  flex-direction: column;
+}
+.profile_info .border_line {
+  margin: 6px 0;
+  border-top: 1px solid #EAEAEA;
+}
+.cam_head .media_txt {
+  position: unset;
+  display: inline-block;
+  margin-top: 8px;
+}
+.activity_grid ul li {
+  width: 100%;
+}
+.activity_img {
+  height: 230px;
+}
+.select_screen ul {
+  flex-wrap: wrap;
+}
+.loc_body {
+  padding: 15px;
+}
+.userDtl_head {
+  gap: 15px;
+}
+.reqOrdDtl p span, .finOrdDtl p span {
+  white-space: nowrap;
+}
+.reqOrdDtl p button, .finOrdDtl p button {
+  margin-top: 8px;
+}
+.sec_62 {
+  gap: 20px;
+}
+}
+@media (max-width: 480px) {
+.order_filters .filter_div, .campDtl_filter .filter_div {
+  width: 100%;
+}
+.select_screen ul li {
+  width: 100%;
 }
 }

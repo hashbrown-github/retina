@@ -75,6 +75,16 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="sidebar__text">Users</div>
                 </a>
               </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html">Inventory</a></span>
+                <span><a href="location-request.html">Location Request</a></span>
+              </div>
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
@@ -88,7 +98,7 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
-                    <span class="material-symbols-outlined icon">outbox</span>
+                    <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
@@ -252,6 +262,7 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                 </div>
                 <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
               </div>
             </div>
             <div class="campaign_list mt-20">

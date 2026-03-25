@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Payout Detail | Retibazaar</title>
+<title>Transaction Detail | Retibazaar</title>
 <meta name="title" content="Transaction | Retibazaar" />
 <meta name="description" content="Transaction | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -180,12 +180,11 @@ if (localStorage.getItem('darkMode') === "on") {
         <div class="main_content">
           <div class="sec_6 card_body">
             <div class="page_head">
-              <h6><span class="material-symbols-outlined">credit_card</span>Payouts</h6>
+              <h6><span class="material-symbols-outlined">credit_card</span>Transaction</h6>
             </div>
             <div class="sec_61 mb-20">
               <div class="sec_611">
-                <h3>NGN 6750<span class="status_type success_1">Paid</span></h3>
-                <p class="mb-1">Completed On <span>Apr 14, 2025</span></p>
+                <h3>NGN 6750<span class="status_type warning_1">Refunded</span></h3>
                 <p class="mb-0">Charged to <b class="blue_txt">johndoe@gmail.com</b></p>
               </div>
               <div class="sec_612">
@@ -198,14 +197,19 @@ if (localStorage.getItem('darkMode') === "on") {
                   <h3>Recent Activity</h3>
                   <ul>
                     <li>
-                      <span class="material-symbols-outlined success_color">task_alt</span>
-                      <!-- <span class="material-symbols-outlined danger_color">error</span>
-                      <span class="material-symbols-outlined warning_color">undo</span> -->
-                      <p><b class="block_txt">Transaction Succeeded</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      <!-- <span class="material-symbols-outlined success_color">task_alt</span>
+                      <span class="material-symbols-outlined danger_color">error</span> -->
+                      <span class="material-symbols-outlined warning_color">undo</span>
+                      <p>
+                        <b class="block_txt">Payment Refunded</b>
+                        <span class="block_txt">It may take a few days for the money to reach the customer’s bank account.</span>
+                        <a href="#" class="block_txt">View Detail</a>
+                        <span>Apr 10, 2025, 05:25 PM</span>
+                      </p>
                     </li>
                     <li>
-                      <span class="material-symbols-outlined">credit_score</span>
-                      <p><span class="block_txt">This transaction successfully set up for ABC location payment.</span><span>Apr 10, 2025, 05:25 PM</span></p>
+                      <span class="material-symbols-outlined">task_alt</span>
+                      <p><b class="block_txt">Transaction Succeeded</b><span>Apr 10, 2025, 05:25 PM</span></p>
                     </li>
                     <li>
                       <span class="material-symbols-outlined">payments</span>
@@ -214,27 +218,19 @@ if (localStorage.getItem('darkMode') === "on") {
                   </ul>
                 </div>
                 <div class="sec_6212">
-                  <h3>Transaction Breakdown</h3>
-                  <ul class="mb-0">
+                  <h3>Transaction Breakdown (Location 1 Transaction)</h3>
+                  <ul class="mb-20">
                     <li>
-                      <p><span></span><b>Total</b></p>
+                      <p><b>Amount for Location 1</b><span>NGN 25,000</span></p>
                     </li>
                     <li>
-                      <p><span>Media Location 1</span><span>NGN 25,000</span></p>
+                      <p><b>Processing Fee</b><span>- NGN 5,000</span></p>
                     </li>
                     <li>
-                      <p><span>Media Location 2</span><span>NGN 20,000</span></p>
-                    </li>
-                    <li>
-                      <p><span>Media Location 3</span><span>NGN 20,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Processing Fee</b><b>- NGN 30,000</b></p>
-                    </li>
-                    <li>
-                      <p><b>Net Amount</b><b>NGN 35,000</b></p>
+                      <p><b>Net Amount</b><b>NGN 20,000</b></p>
                     </li>
                   </ul>
+                  <p class="small_p mb-0"><b>Note:</b> The amount is refunded as the location could not be verified.</p>
                 </div>
               </div>
               <div class="sec_622">

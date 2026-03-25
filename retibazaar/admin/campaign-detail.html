@@ -78,6 +78,16 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html">Inventory</a></span>
+                <span><a href="location-request.html">Location Request</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">package_2</span>
                   </div>
                   <div class="sidebar__text">Orders</div>
@@ -88,7 +98,7 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
-                    <span class="material-symbols-outlined icon">outbox</span>
+                    <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
@@ -172,18 +182,28 @@ if (localStorage.getItem('darkMode') === "on") {
           <div class="campDtl_1 card_body">
             <div class="page_head">
               <h6><span class="material-symbols-outlined">campaign</span>Active Campaigns</h6>
+              <div class="right_side">
+                <a href="campaign-logs.html" class="blue_btn">Campaign Logs</a>
+              </div>
             </div>
             <div class="campaign_list">
               <ul>
                 <li class="mb-0">
-                  <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                  <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
-                  <p class="small_p mb-2">Order Status: <span class="status_type warning_1">Proof Pending</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
-                  <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                  <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-                  <div class="addOnSer">
-                    <p class="small_p mb-1"><b>Add on Service:</b> <span class="status_type retibazaar_1"><b>OOH Tracker</b></span></p>
-                    <p class="small_p mb-0">Audit Duration: <span>6 Months</span> | Audit Frequency: <span>Every 15 Days</span></p>
+                  <div class="userDtl_head">
+                     <div class="profile_box">
+                      <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                      <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                      <p class="small_p mb-2">Order Status: <span class="status_type warning_1">Proof Pending</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
+                      <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                      <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                      <div class="addOnSer">
+                        <p class="small_p mb-0"><b>Mode of Payment:</b> <span class="status_type retitrak_1"><b>Offline</b></span></p>
+                        <!-- <p class="small_p mb-0">Audit Duration: <span>6 Months</span> | Audit Frequency: <span>Every 15 Days</span></p> -->
+                      </div>
+                    </div>
+                    <div class="right_side">
+                      <span class="status_type danger_1"><b>Pending Payouts: <span>20</span></b></span>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -223,197 +243,597 @@ if (localStorage.getItem('darkMode') === "on") {
                 </li>
               </ul>
             </div>
-            <div class="filter_box mt-20">
-              <div class="filter_box1 campDtl_filter">
-                <div class="filter_div filter_div1">
-                  <div class="input_group">
-                    <span class="material-symbols-outlined searchIcon">expand_more</span>
-                    <select class="form_control">
-                      <option selected disabled>Install Status</option>
-                      <option>Awaiting Proof of Posting</option>
-                      <option>Under Field Verification</option>
-                      <option>Verification Failed</option>
-                      <option>Verification Passed</option>
-                      <option>All</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="filter_div filter_div2">
-                  <div class="input_group">
-                    <span class="material-symbols-outlined searchIcon">expand_more</span>
-                    <select class="form_control">
-                      <option selected disabled>Payout Status</option>
-                      <option>Withholding</option>
-                      <option>Refund Initiated</option>
-                      <option>Payout Released</option>
-                      <option>All</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="filter_div filter_div3">
-                  <div class="input_group">
-                    <span class="material-symbols-outlined searchIcon">expand_more</span>
-                    <select class="form_control">
-                      <option selected disabled>PoP Provided</option>
-                      <option>Yes</option>
-                      <option>No</option>
-                      <option>All</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="filter_div filter_div4">
-                  <div class="input_group">
-                    <span class="material-symbols-outlined searchIcon">expand_more</span>
-                    <select class="form_control">
-                      <option selected disabled>Admin Verified</option>
-                      <option>Yes</option>
-                      <option>No</option>
-                      <option>All</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="filter_div filter_div5">
-                  <div class="input_group">
-                    <span class="material-symbols-outlined searchIcon">expand_more</span>
-                    <select class="form_control">
-                      <option selected disabled>Assigned Agent</option>
-                      <option>John Doe</option>
-                      <option>Maria</option>
-                      <option>All</option>
-                    </select>
-                  </div>
-                </div>
-                <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+            <div class="payoutSum0 mt-20">
+              <div class="payoutSum01">
+                <ul class="nav nav-tabs campaignTabs2" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">Locations</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false">Payout Summary</button>
+                  </li>
+                </ul>
+                <a href="#" class="blue_btn" data-bs-toggle="modal" data-bs-target="#approvePayment">Pay Manually to All</a>
               </div>
-            </div>
-            <div class="campDtl_3 mt-20">
-              <div class="sec_1 sec_41">
-                <div class="sec_11 card_body p-0">
-                  <div class="table_view camLoc_table hori_scroll">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th width="11%">Location ID</th>
-                          <th width="10%">Media Owner</th>
-                          <th width="18%">Install Status</th>
-                          <th width="14%">Payout Status</th>
-                          <th width="11%">Location Amount</th>
-                          <th width="10%">POP Provided</th>
-                          <th width="10%">Admin Verified</th>
-                          <th width="10%">Field Agent</th>
-                          <th width="6%">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                          <td><p class="blue_txt">John Doe</p></td>
-                          <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                          <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                          <td><p>NGN 20,000</p></td>
-                          <td><p>No</p></td>
-                          <td><p>No</p></td>
-                          <td><p>John Doe</p></td>
-                          <td>
-                            <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                          <td><p class="blue_txt">John Doe</p></td>
-                          <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
-                          <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                          <td><p>NGN 20,000</p></td>
-                          <td><p>No</p></td>
-                          <td><p>No</p></td>
-                          <td><p>John Doe</p></td>
-                          <td>
-                            <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                          <td><p class="blue_txt">John Doe</p></td>
-                          <td><p><span class="status_type success_1">Verification Passed</span></p></td>
-                          <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
-                          <td><p>NGN 20,000</p></td>
-                          <td><p>No</p></td>
-                          <td><p>No</p></td>
-                          <td><p>John Doe</p></td>
-                          <td>
-                            <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                          <td><p class="blue_txt">John Doe</p></td>
-                          <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
-                          <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                          <td><p>NGN 20,000</p></td>
-                          <td><p>No</p></td>
-                          <td><p>No</p></td>
-                          <td><p>John Doe</p></td>
-                          <td>
-                            <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                          <td><p class="blue_txt">John Doe</p></td>
-                          <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                          <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
-                          <td><p>NGN 20,000</p></td>
-                          <td><p>No</p></td>
-                          <td><p>No</p></td>
-                          <td><p>John Doe</p></td>
-                          <td>
-                            <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                          <td><p class="blue_txt">John Doe</p></td>
-                          <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                          <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                          <td><p>NGN 20,000</p></td>
-                          <td><p>No</p></td>
-                          <td><p>No</p></td>
-                          <td><p>John Doe</p></td>
-                          <td>
-                            <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="sec_12 card_body card_body2">
-                  <div class="secHead2">
-                    <div class="secHead21">
-                      <img src="images/Field-Agent-Assigned.svg" alt="Field Agent" />
-                      <h3>Field Agent Assigned</h3>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                  <div class="filter_box mt-20">
+                    <div class="filter_box1 campDtl_filter">
+                      <div class="filter_div filter_div1">
+                        <div class="input_group">
+                          <span class="material-symbols-outlined searchIcon">expand_more</span>
+                          <select class="form_control">
+                            <option selected disabled>Install Status</option>
+                            <option>Awaiting Proof of Posting</option>
+                            <option>Under Field Verification</option>
+                            <option>Verification Failed</option>
+                            <option>Verification Passed</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filter_div filter_div2">
+                        <div class="input_group">
+                          <span class="material-symbols-outlined searchIcon">expand_more</span>
+                          <select class="form_control">
+                            <option selected disabled>Payout Status</option>
+                            <option>Withholding</option>
+                            <option>Refund Initiated</option>
+                            <option>Payout Released</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filter_div filter_div3">
+                        <div class="input_group">
+                          <span class="material-symbols-outlined searchIcon">expand_more</span>
+                          <select class="form_control">
+                            <option selected disabled>PoP Provided</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filter_div filter_div4">
+                        <div class="input_group">
+                          <span class="material-symbols-outlined searchIcon">expand_more</span>
+                          <select class="form_control">
+                            <option selected disabled>Admin Verified</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filter_div filter_div5">
+                        <div class="input_group">
+                          <span class="material-symbols-outlined searchIcon">expand_more</span>
+                          <select class="form_control">
+                            <option selected disabled>Assigned Agent</option>
+                            <option>John Doe</option>
+                            <option>Maria</option>
+                            <option>All</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                      <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
                     </div>
                   </div>
-                  <div class="sec_body">
-                    <ul>
-                      <li>
-                        <p class="small_p mb-0">Total Locations</p>
-                        <h4 class="blue_txt">500</h4>
-                      </li>
-                      <li>
-                        <p class="small_p mb-0">Assigned Locations</p>
-                        <h4 class="blue_txt">200</h4>
-                      </li>
-                      <li>
-                        <p class="small_p mb-0">Verified Locations</p>
-                        <h4 class="blue_txt">100</h4>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="assignAgentBtn">
-                    <a href="field-executives-2.html" class="blue_btn">Assign Field Agent</a>
+                  <div class="campDtl_3 mt-20">
+                    <div class="sec_1 sec_41">
+                      <div class="sec_11 card_body p-0">
+                        <div class="table_view camLoc_table hori_scroll">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th width="11%">Location ID</th>
+                                <th width="10%">Media Owner</th>
+                                <th width="18%">Install Status</th>
+                                <th width="14%">Payout Status</th>
+                                <th width="11%">Location Amount</th>
+                                <th width="10%">POP Provided</th>
+                                <th width="10%">Admin Verified</th>
+                                <th width="10%">Field Agent</th>
+                                <th width="6%">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                <td><p class="blue_txt">John Doe</p></td>
+                                <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
+                                <td><p>NGN 20,000</p></td>
+                                <td><p>No</p></td>
+                                <td><p>No</p></td>
+                                <td><p>John Doe</p></td>
+                                <td>
+                                  <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                <td><p class="blue_txt">John Doe</p></td>
+                                <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                                <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                <td><p>NGN 20,000</p></td>
+                                <td><p>No</p></td>
+                                <td><p>No</p></td>
+                                <td><p>John Doe</p></td>
+                                <td>
+                                  <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                <td><p class="blue_txt">John Doe</p></td>
+                                <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                                <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                <td><p>NGN 20,000</p></td>
+                                <td><p>No</p></td>
+                                <td><p>No</p></td>
+                                <td><p>John Doe</p></td>
+                                <td>
+                                  <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                <td><p class="blue_txt">John Doe</p></td>
+                                <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                                <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                <td><p>NGN 20,000</p></td>
+                                <td><p>No</p></td>
+                                <td><p>No</p></td>
+                                <td><p>John Doe</p></td>
+                                <td>
+                                  <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                <td><p class="blue_txt">John Doe</p></td>
+                                <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                <td><p>NGN 20,000</p></td>
+                                <td><p>No</p></td>
+                                <td><p>No</p></td>
+                                <td><p>John Doe</p></td>
+                                <td>
+                                  <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                <td><p class="blue_txt">John Doe</p></td>
+                                <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
+                                <td><p>NGN 20,000</p></td>
+                                <td><p>No</p></td>
+                                <td><p>No</p></td>
+                                <td><p>John Doe</p></td>
+                                <td>
+                                  <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="sec_12 card_body card_body2">
+                        <div class="secHead2">
+                          <div class="secHead21">
+                            <img src="images/Field-Agent-Assigned.svg" alt="Field Agent" />
+                            <h3>Field Agent Assigned</h3>
+                          </div>
+                        </div>
+                        <div class="sec_body">
+                          <ul>
+                            <li>
+                              <p class="small_p mb-0">Total Locations</p>
+                              <h4 class="blue_txt">500</h4>
+                            </li>
+                            <li>
+                              <p class="small_p mb-0">Assigned Locations</p>
+                              <h4 class="blue_txt">200</h4>
+                            </li>
+                            <li>
+                              <p class="small_p mb-0">Verified Locations</p>
+                              <h4 class="blue_txt">100</h4>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="assignAgentBtn">
+                          <a href="field-executives-2.html" class="blue_btn">Assign Field Agent</a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                  <div class="accordion order_collapse mt-20" id="accordionRental">
+                    <div class="accordion-item collapse_item">
+                      <h6 class="accordion-header" id="headingOne">
+                        <button class="accordion-button payoutSum1 mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="text_md mb-2">Date: <b>Apr 16, 2025</b></p>
+                          <div class="payoutSum2">
+                            <span class="status_type success_1">Verification Passed: 15</span>
+                            <span class="status_type danger_1">Verification Failed: 10</span>
+                          </div>
+                          <span class="collapse-close material-symbols-outlined">add</span>
+                          <span class="collapse-open material-symbols-outlined">remove</span>
+                        </button>
+                      </h6>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
+                        <div class="accordion-body collapse_body payoutSum3">
+                          <div class="payoutSum31">
+                            <div class="payoutSum311">
+                              <div class="payout_head">
+                                <p class="mb-0"><b>Media Owner 1: </b><span>John Doe</span> | <b>Verified Locations: </b><span>60</span> | <b>Expected Payout: </b><span>₦ 20,000</span></p>
+                                <div class="payout_head2">
+                                  <a href="#" class="blue_btn">Pay Online</a>
+                                  <a href="#" class="blue_btn" data-bs-toggle="modal" data-bs-target="#approvePayment">Pay Manually</a>
+                                </div>
+                              </div>
+                              <div class="card_body p-0">
+                                <div class="table_view camLoc_table hori_scroll">
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th width="11%">Location ID</th>
+                                        <th width="10%">Media Owner</th>
+                                        <th width="18%">Install Status</th>
+                                        <th width="14%">Payout Status</th>
+                                        <th width="11%">Location Amount</th>
+                                        <th width="10%">POP Provided</th>
+                                        <th width="10%">Admin Verified</th>
+                                        <th width="10%">Field Agent</th>
+                                        <th width="6%">Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                                        <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                                        <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                        <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="payoutSum311">
+                              <div class="payout_head">
+                                <p class="mb-0"><b>Media Owner 1: </b><span>John Doe</span> | <b>Verified Locations: </b><span>60</span> | <b>Expected Payout: </b><span>₦ 20,000</span></p>
+                                <div class="payout_head2">
+                                  <a href="#" class="blue_btn">Pay Online</a>
+                                  <a href="#" class="blue_btn" data-bs-toggle="modal" data-bs-target="#approvePayment">Pay Manually</a>
+                                </div>
+                              </div>
+                              <div class="card_body p-0">
+                                <div class="table_view camLoc_table hori_scroll">
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th width="11%">Location ID</th>
+                                        <th width="10%">Media Owner</th>
+                                        <th width="18%">Install Status</th>
+                                        <th width="14%">Payout Status</th>
+                                        <th width="11%">Location Amount</th>
+                                        <th width="10%">POP Provided</th>
+                                        <th width="10%">Admin Verified</th>
+                                        <th width="10%">Field Agent</th>
+                                        <th width="6%">Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                                        <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                                        <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                        <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item collapse_item">
+                      <h6 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button payoutSum1 mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <p class="text_md mb-2">Date: <b>Apr 16, 2025</b></p>
+                          <div class="payoutSum2">
+                            <span class="status_type success_1">Verification Passed: 15</span>
+                            <span class="status_type danger_1">Verification Failed: 10</span>
+                          </div>
+                          <span class="collapse-close material-symbols-outlined">add</span>
+                          <span class="collapse-open material-symbols-outlined">remove</span>
+                        </button>
+                      </h6>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
+                        <div class="accordion-body collapse_body payoutSum3">
+                          <div class="payoutSum31">
+                            <div class="payoutSum311">
+                              <div class="payout_head">
+                                <p class="mb-0"><b>Media Owner 1: </b><span>John Doe</span> | <b>Verified Locations: </b><span>60</span> | <b>Expected Payout: </b><span>₦ 20,000</span></p>
+                                <div class="payout_head2">
+                                  <a href="#" class="blue_btn green_btn">Paid</a>
+                                </div>
+                              </div>
+                              <div class="card_body p-0">
+                                <div class="table_view camLoc_table hori_scroll">
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th width="11%">Location ID</th>
+                                        <th width="10%">Media Owner</th>
+                                        <th width="18%">Install Status</th>
+                                        <th width="14%">Payout Status</th>
+                                        <th width="11%">Location Amount</th>
+                                        <th width="10%">POP Provided</th>
+                                        <th width="10%">Admin Verified</th>
+                                        <th width="10%">Field Agent</th>
+                                        <th width="6%">Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                                        <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                                        <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
+                                        <td><p class="blue_txt">John Doe</p></td>
+                                        <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                        <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                        <td><p>NGN 20,000</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>No</p></td>
+                                        <td><p>John Doe</p></td>
+                                        <td>
+                                          <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== APPROVE PAYMENT MODAL START =======-->
+        <div class="modal fade" id="approvePayment" tabindex="-1" role="dialog" aria-labelledby="approvePaymentLabelModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="approvePaymentLabelModal">Record Offline Payment</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option selected disabled>Payment Type</option>
+                        <option>Cheque</option>
+                        <option>Cash</option>
+                        <option>Bank Transfer</option>
+                        <option selected>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <input type="text" class="form_control" placeholder="Enter other payment type*" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <input type="text" class="form_control" placeholder="Enter cheque number, transaction id or reference number*" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12 uploadDocs">
+                    <p class="mb-2"><b>Supporting Documentation (Optional)</b></p>
+                    <p class="small_p mb-1">Please upload one of the following documents:</p>
+                    <p class="small_p mb-0">Cheque Scan/Photo, Bank Transfer Receipt, or Payment Receipt.</p>
+                    <div class="markPaid mt-2">
+                      <input type="file">
+                      <button type="button" class="blue_btn">Upload</button>
+                    </div>
+                    <div class="markPaid cancelBtn mt-2">
+                      <p class="small_p mb-0"><b>Payment Receipt.pdf</b></p>
+                      <button type="button" class="outline_btn"><span class="material-symbols-outlined">close</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Save</button>
               </div>
             </div>
           </div>

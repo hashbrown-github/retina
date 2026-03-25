@@ -633,7 +633,22 @@ $('.activity__item').on('click', function () {
 });
 /*============= APP.JS SCRIPT END ==============*/
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize all toasts
+  document.querySelectorAll(".toast").forEach(function(toastEl) {
+    bootstrap.Toast.getOrCreateInstance(toastEl);
+  });
 
+  // Bind button click to toast show
+  document.querySelectorAll(".toast-btn").forEach(function(button) {
+    button.addEventListener("click", function() {
+      var toastEl = document.getElementById(button.dataset.target);
+      if (toastEl) {
+        bootstrap.Toast.getOrCreateInstance(toastEl).show();
+      }
+    });
+  });
+});
 
 /*========== SORTTABLE SCRIPT START ===========*/
 /*

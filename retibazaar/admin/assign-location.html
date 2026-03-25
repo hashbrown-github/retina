@@ -77,6 +77,16 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html">Inventory</a></span>
+                <span><a href="location-request.html">Location Request</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">package_2</span>
                   </div>
                   <div class="sidebar__text">Orders</div>
@@ -87,7 +97,7 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
-                    <span class="material-symbols-outlined icon">outbox</span>
+                    <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
@@ -172,11 +182,11 @@ if (localStorage.getItem('darkMode') === "on") {
             <div class="userDtl_head">
               <div class="profile_box">
                 <h6 class="text_md text_dark mb-2">Assign Locations to John Doe</h6>
-                <p class="small_p icon_size mb-0">
-                  <span class="material-symbols-outlined">mark_email_read</span>
-                  <span>johndoe@gmail.com</span> | <span class="material-symbols-outlined">phone</span>
-                  <span>+234 946 380 2786</span>
-                </p>
+                <div class="profile_info">
+                  <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
+                  <span class="border_line"></span>
+                  <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+234 946 380 2786</b></p>
+                </div>
               </div>
             </div>
           </div>
@@ -229,6 +239,7 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                 </div>
                 <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
               </div>
             </div>
             <div class="select_items0 mt-15">

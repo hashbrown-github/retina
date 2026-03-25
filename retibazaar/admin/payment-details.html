@@ -78,6 +78,16 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html">Inventory</a></span>
+                <span><a href="location-request.html">Location Request</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">package_2</span>
                   </div>
                   <div class="sidebar__text">Orders</div>
@@ -88,7 +98,7 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
-                    <span class="material-symbols-outlined icon">outbox</span>
+                    <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
@@ -359,7 +369,7 @@ if (localStorage.getItem('darkMode') === "on") {
     // Add labels inside slices
     series.labels.template.setAll({
       fontSize: 11,
-      fontWeight:600,
+      fontWeight: 600,
       text: "NGN {value}",
       radius: 10,
       fill: am5.color(0x777E87)

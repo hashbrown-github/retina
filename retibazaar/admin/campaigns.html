@@ -78,6 +78,16 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
                   <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html">Inventory</a></span>
+                <span><a href="location-request.html">Location Request</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">package_2</span>
                   </div>
                   <div class="sidebar__text">Orders</div>
@@ -88,7 +98,7 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
-                    <span class="material-symbols-outlined icon">outbox</span>
+                    <span class="material-symbols-outlined icon">campaign</span>
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
@@ -165,7 +175,7 @@ if (localStorage.getItem('darkMode') === "on") {
         <div class="head_part2">
           <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
           <a href="#"><span class="material-symbols-outlined">person</span></a>
-        </div>
+        </div>  
       </div>
       <div class="main_div">
         <div class="main_content">
@@ -206,7 +216,7 @@ if (localStorage.getItem('darkMode') === "on") {
               </ul>
             </div>
             <div class="filter_box mt-20">
-              <div class="filter_box1 order_filters">
+              <div class="filter_box1 campDtl_filter">
                 <div class="filter_div filter_div1">
                   <div class="input_group">
                     <span class="material-symbols-outlined searchIcon">expand_more</span>
@@ -251,52 +261,90 @@ if (localStorage.getItem('darkMode') === "on") {
                     </select>
                   </div>
                 </div>
+                <div class="filter_div filter_div5">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected disabled>Mode of Payment</option>
+                      <option>All</option>
+                      <option>Online</option>
+                      <option>Offline</option>
+                    </select>
+                  </div>
+                </div>
                 <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
               </div>
             </div>
             <div class="campaign_list mt-20">
               <ul>
                 <li>
                   <a href="campaign-detail.html">
-                    <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
-                    <p class="small_p mb-2">Order Status: <span class="status_type warning_1">Proof Pending</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
-                    <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                    <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-                  </a>
-                </li>
-                <li>
-                  <a href="campaign-detail.html">
-                    <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
-                    <p class="small_p mb-2">Order Status: <span class="status_type retibazaar_1">Proof Uploaded (In Progress)</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
-                    <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                    <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-                    <div class="addOnSer">
-                      <p class="small_p mb-1"><b>Add on Service:</b> <span class="status_type retibazaar_1"><b>OOH Tracker</b></span></p>
-                      <p class="small_p mb-0">Audit Duration: <span>6 Months</span> | Audit Frequency: <span>Every 15 Days</span></p>
+                    <div class="userDtl_head">
+                      <div class="profile_box">
+                        <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                        <p class="small_p mb-2">Order Status: <span class="status_type warning_1">Proof Pending</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
+                        <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                        <div class="addOnSer">
+                          <p class="small_p mb-0"><b>Mode of Payment:</b> <span class="status_type retitrak_1"><b>Offline</b></span></p>
+                        </div>
+                      </div>
+                      <div class="right_side">
+                        <span class="status_type danger_1"><b>Pending Payouts: <span>20</span></b></span>
+                      </div>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a href="campaign-detail.html">
-                    <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
-                    <p class="small_p mb-2">Order Status: <span class="status_type pending_1">Partially Verified</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
-                    <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                    <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                    <div class="userDtl_head">
+                      <div class="profile_box">
+                        <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                        <p class="small_p mb-2">Order Status: <span class="status_type retibazaar_1">Proof Uploaded (In Progress)</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
+                        <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                        <div class="addOnSer">
+                          <p class="small_p mb-0"><b>Mode of Payment:</b> <span class="status_type retibazaar_1"><b>Online</b></span></p>
+                        </div>
+                      </div>
+                    </div>
                   </a>
                 </li>
                 <li>
                   <a href="campaign-detail.html">
-                    <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                    <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
-                    <p class="small_p mb-2">Order Status: <span class="status_type success_1">Completed (All Verified)</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
-                    <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                    <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-                    <div class="addOnSer">
-                      <p class="small_p mb-1"><b>Add on Service:</b> <span class="status_type retibazaar_1"><b>OOH Tracker</b></span></p>
-                      <p class="small_p mb-0">Audit Duration: <span>6 Months</span> | Audit Frequency: <span>Every 15 Days</span></p>
+                    <div class="userDtl_head">
+                      <div class="profile_box">
+                        <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                        <p class="small_p mb-2">Order Status: <span class="status_type pending_1">Partially Verified</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
+                        <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                        <div class="addOnSer">
+                          <p class="small_p mb-0"><b>Mode of Payment:</b> <span class="status_type retitrak_1"><b>Offline</b></span></p>
+                        </div>
+                      </div>
+                      <div class="right_side">
+                        <span class="status_type danger_1"><b>Pending Payouts: <span>20</span></b></span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="campaign-detail.html">
+                    <div class="userDtl_head">
+                      <div class="profile_box">
+                        <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                        <p class="small_p mb-2">Order Status: <span class="status_type success_1">Completed (All Verified)</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></p>
+                        <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                        <div class="addOnSer">
+                          <p class="small_p mb-0"><b>Mode of Payment:</b> <span class="status_type retibazaar_1"><b>Online</b></span></p>
+                        </div>
+                      </div>
                     </div>
                   </a>
                 </li>

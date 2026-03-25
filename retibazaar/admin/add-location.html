@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Payout Detail | Retibazaar</title>
-<meta name="title" content="Transaction | Retibazaar" />
-<meta name="description" content="Transaction | Retibazaar" />
+<title>Add Location | Retibazaar</title>
+<meta name="title" content="Add Location | Retibazaar" />
+<meta name="description" content="Add Location | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
@@ -59,7 +59,7 @@ if (localStorage.getItem('darkMode') === "on") {
                 </a>
               </div>
               <div class="side_dropdown">
-                <a class="sidebar__item active" href="transaction.html">
+                <a class="sidebar__item" href="transaction.html">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">credit_card</span>
                   </div>
@@ -74,14 +74,14 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="sidebar__text">Users</div>
                 </a>
               </div>
-              <div class="side_dropdown arrow_drop dropdown_btn">
-                <a class="sidebar__item" href="javascript:void(0);">
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">mode_of_travel</span>
                   </div>
                   <div class="sidebar__text">Media Locations</div>
                 </a>
-                <span><a href="inventory.html">Inventory</a></span>
+                <span class="active"><a href="inventory.html">Inventory</a></span>
                 <span><a href="location-request.html">Location Request</a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
@@ -178,107 +178,58 @@ if (localStorage.getItem('darkMode') === "on") {
       </div>
       <div class="main_div">
         <div class="main_content">
-          <div class="sec_6 card_body">
-            <div class="page_head">
-              <h6><span class="material-symbols-outlined">credit_card</span>Payouts</h6>
+          <div class="userDtl1 card_body">
+            <div class="userDtl_head">
+              <div class="profile_box">
+                <h3 class="mb-20">John Doe<span class="status_type buyer_1">Owner</span><span class="status_type success_1">Approved</span></h3>
+                <div class="profile_info">
+                  <p class="small_p mb-0">Company Name<b class="block_txt mt-1">Vehement Capital Partners</b></p>
+                  <span class="border_line"></span>
+                  <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
+                  <span class="border_line"></span>
+                  <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
+                </div>
+              </div>
             </div>
-            <div class="sec_61 mb-20">
-              <div class="sec_611">
-                <h3>NGN 6750<span class="status_type success_1">Paid</span></h3>
-                <p class="mb-1">Completed On <span>Apr 14, 2025</span></p>
-                <p class="mb-0">Charged to <b class="blue_txt">johndoe@gmail.com</b></p>
-              </div>
-              <div class="sec_612">
-                <button type="button" class="blue_btn">View Receipt<div class="spinner-border text-white" role="status"></div></button>
-              </div>
-            </div>
-            <div class="sec_62">
-              <div class="sec_621">
-                <div class="sec_6211">
-                  <h3>Recent Activity</h3>
-                  <ul>
-                    <li>
-                      <span class="material-symbols-outlined success_color">task_alt</span>
-                      <!-- <span class="material-symbols-outlined danger_color">error</span>
-                      <span class="material-symbols-outlined warning_color">undo</span> -->
-                      <p><b class="block_txt">Transaction Succeeded</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">credit_score</span>
-                      <p><span class="block_txt">This transaction successfully set up for ABC location payment.</span><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">payments</span>
-                      <p><b class="block_txt">Transaction Started</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
+          </div>
+          <div class="card_body mt-20">
+            <h3 class="text_md text_dark mb-3">Add Location</h3>
+            <div class="addLoc_box">
+              <div class="addLoc_box1">
+                <div class="loc_stripe">
+                  <p class="mb-0"><button type="button"><span class="material-symbols-outlined icon_down">download</span><span class="text_down blue_txt">Download Template Excel</span></button> to upload thousands of Locations.</p>
                 </div>
-                <div class="sec_6212">
-                  <h3>Transaction Breakdown</h3>
-                  <ul class="mb-0">
-                    <li>
-                      <p><span></span><b>Total</b></p>
-                    </li>
-                    <li>
-                      <p><span>Media Location 1</span><span>NGN 25,000</span></p>
-                    </li>
-                    <li>
-                      <p><span>Media Location 2</span><span>NGN 20,000</span></p>
-                    </li>
-                    <li>
-                      <p><span>Media Location 3</span><span>NGN 20,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Processing Fee</b><b>- NGN 30,000</b></p>
-                    </li>
-                    <li>
-                      <p><b>Net Amount</b><b>NGN 35,000</b></p>
-                    </li>
-                  </ul>
+                <div class="loc_body">
+                  <div class="row">
+                    <div class="col-12 col-sm-12">
+                      <div class="input_group mb-0">
+                        <label class="form_label"><span class="blue_txt">Choose file</span> or drag and drop</label>
+                        <div class="upload_file">
+                          <div class="file_input">
+                            <input class="form_control" type="text" name="license" readonly="" placeholder="Maximum file size 20 MB">
+                            <input class="file_input2" type="file">
+                          </div>
+                          <div class="file_btn">
+                            <button type="button" class="blue_btn">Upload</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="fail_box">
+                        <p>• Row 1: Lorem ipsunm Long established fact that a reader will be distracted.</p>
+                        <p>• Row 2: Readable English. Many desktop publishing packages and web page.</p>
+                      </div>
+                      <div class="succes_box">
+                        <p>Your excel file has been uploaded successfully</p>
+                      </div>
+                      <div class="info_box">
+                        <p>Lorem ipsum long established fact that a reader will be distracted.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="sec_622">
-                <div class="sec_6221">
-                  <h3>Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Transaction ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Transaction Method</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Last Updated</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sec_6222">
-                  <h3>Customer Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Customer ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Customer Name</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Email</b><span class="blue_txt">johndoe@gmail.com</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Phone</b><span>+234-809-555-60</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Country</b><span>Nigeria</span></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <p class="loc_note">Ensure your Excel file contains the exact names as per our predefined data for matching. Refer to our <a href="#" target="_blank" class="blue_txt">guide here</a> for details.</p>
+              <a href="#" class="blue_btn">Continue</a>
             </div>
           </div>
         </div>
