@@ -51,14 +51,61 @@
               </ul>
             </div>
           </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="campaigns.html">
+                    <span class="link_span">A</span>
+                    <span class="link_text">Active Campaigns</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="proof-of-posting.html">
+                    <span class="link_span">P</span>
+                    <span class="link_text">Proof of Posting</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
-            <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
         </ul>
         <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">credit_card</span>
@@ -123,15 +170,23 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
+              <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
+              <li class="breadcrumb-item"><a href="final-order-detail.html">Final Order Detail</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Thanks for Payment</li>
             </ol>
           </nav>
-          <div class="noFoundInner">
+          <!-- <div class="noFoundInner">
             <img src="images/thanks-img.svg" alt="Thanks" />
             <h3>Thank You for your payment.</h3>
             <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
+          </div> -->
+          <div class="noFoundInner">
+            <img src="images/thanks-img.svg" alt="Thanks">
+            <h3 class="mb-1">Thank You for your payment.</h3>
+            <h3>You can now go ahead to upload campaign.</h3>
+            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
+            <p class="order_id">Transaction Id: SCPI8792306925</p>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->

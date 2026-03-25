@@ -1,0 +1,622 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Payment Insights</title>
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="main_body">
+    <aside class="main_sidebar fixed_sidebar">
+      <div class="sidebar_header">
+        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
+        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="sidebar_menu">
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a class="menu_link" href="search-location.html">
+              <span class="material-symbols-outlined link_icon">travel_explore</span>
+              <span class="link_text">Search Location</span>
+            </a>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">package_2</span>
+              <span class="link_text">Order</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="order-requests.html">
+                    <span class="link_span">O</span>
+                    <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="final-orders.html">
+                    <span class="link_span">F</span>
+                    <span class="link_text">Final Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="campaigns.html">
+                    <span class="link_span">A</span>
+                    <span class="link_text">Active Campaigns</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="proof-of-posting.html">
+                    <span class="link_span">P</span>
+                    <span class="link_text">Proof of Posting</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list">
+          <!-- <li class="menu_item">
+            <a class="menu_link active" href="payment-insights.html">
+              <span class="material-symbols-outlined link_icon">checkbook</span>
+              <span class="link_text">Payment Insights</span>
+            </a>
+          </li> -->
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link active">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="billing.html">
+              <span class="material-symbols-outlined link_icon">credit_card</span>
+              <span class="link_text">Billing</span>
+            </a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="help.html">
+              <span class="material-symbols-outlined link_icon">forum</span>
+              <span class="link_text">Help</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_list fixed_menu">
+          <li class="menu_item">
+            <div class="profile_txt">
+              <p class="name_letter">J</p>
+              <p>
+                <span>Welcome,</span>
+                <span>John Doe</span>
+              </p>
+            </div>
+            <a class="menu_link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+              <span class="material-symbols-outlined link_icon">logout</span>
+              <span class="link_text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main_content">
+      <header>
+        <div class="header_inner">
+          <div class="head_part1">
+            <div class="mobile_header">
+              <button type="button" class="b-menu"><span class="material-symbols-outlined">menu</span></button>
+              <img src="images/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="head_part2">
+            <div class="head_part21">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div class="head_part3">
+            <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
+            <div class="head_part31">
+              <div class="dropdown">
+                <button class="profile_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined">tune</span></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">person</span>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="material-symbols-outlined">logout</span>Signout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_container">
+        <div class="main_inner">
+          <div class="reports_box">
+            <div class="heading_box">
+              <div class="headLeft">
+                <h3>Payment Insights</h3>
+              </div>
+            </div>
+            <div class="card_header">
+              <ul>
+                <li>
+                  <img src="images/order-placed.svg" alt="Order placed" />
+                  <div>
+                    <h3>7</h3>
+                    <p class="mb-0">Order placed</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/approve-location.svg" alt="Approved Locations" />
+                  <div>
+                    <h3>25</h3>
+                    <p class="mb-0">Approved Locations</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/installations.svg" alt="Pending Installations" />
+                  <div>
+                    <h3>3</h3>
+                    <p class="mb-0">Pending Seller Installations</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/pending-verification.svg" alt="Pending Verification" />
+                  <div>
+                    <h3>2</h3>
+                    <p class="mb-0">Pending Verification</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="dash_0">
+              <div class="dash_1">
+                <div class="dash_11">
+                  <div class="secHead0">
+                    <p class="mb-0">Total Orders</p>
+                  </div>
+                  <div class="secHead1">
+                    <h4>Order Spent vs Refunds</h4>
+                  </div>
+                  <div class="dash_112">
+                    <!-- <img src="images/orders-refunds.png" /> -->
+                    <div id="orders_refunds"></div>
+                    <div class="secMap_legends pos_unset1">
+                      <div class="pos_unset2">
+                        <p><span class="box_0 ordersBox"></span>Order Spent Amount</p>
+                        <p><span class="box_0 refundBox"></span>Refunds Over Time</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dash_2">
+                <div class="dash_21">
+                  <h4>Payment Summmary</h4>
+                  <ul>
+                    <li>
+                      <p>Payments Done</p>
+                      <h6>NG 4567</h6>
+                      <p class="small_txt">Total amount already paid out.</p>
+                    </li>
+                    <li>
+                      <p>Amount Withholding</p>
+                      <h6>NG 6789</h6>
+                      <p class="small_txt">Funds pending release (i.e. locations have not yet passed field verification).</p>
+                    </li>
+                    <li>
+                      <p>Amount Refunded</p>
+                      <h6>NG 6789</h6>
+                      <p class="small_txt">Total amount refunded due to unverified locations.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="paymentTbl_box">
+              <div class="secHead0">
+                <p class="small_p mb-0">Active Orders</p>
+              </div>
+              <div class="table_view payment_table hori_scroll">
+                <table class="table border-0">
+                  <thead>
+                    <tr>
+                      <th width="8%">Order ID</th>
+                      <th width="15%">Campaign Name</th>
+                      <th width="15%">Campaign Period</th>
+                      <th width="10%">Active Locations</th>
+                      <th width="10%">Pending Locations</th>
+                      <th width="17%">Status</th>
+                      <th width="15%">Total Amount</th>
+                      <th width="10%">View Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>We Are Hiring</p></td>
+                      <td><p>Apr 3, 2025 - Apr 13, 2025</p></td>
+                      <td><p>24</p></td>
+                      <td><p>45</p></td>
+                      <td><p><span class="status_type warning_1">Proof Pending</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="payment-order-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>On-Board Hoarding</p></td>
+                      <td><p>Apr 3, 2025 - Apr 13, 2025</p></td>
+                      <td><p>45</p></td>
+                      <td><p>24</p></td>
+                      <td><p><span class="status_type warning_2">Proof Uploaded (In Progress)</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="payment-order-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>On-Board Hoarding</p></td>
+                      <td><p>Apr 3, 2025 - Apr 13, 2025</p></td>
+                      <td><p>45</p></td>
+                      <td><p>24</p></td>
+                      <td><p><span class="status_type warning_3">Under Verification</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="payment-order-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>On-Board Hoarding</p></td>
+                      <td><p>Apr 3, 2025 - Apr 13, 2025</p></td>
+                      <td><p>45</p></td>
+                      <td><p>24</p></td>
+                      <td><p><span class="status_type warning_4">Partially Verified</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="payment-order-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>On-Board Hoarding</p></td>
+                      <td><p>Apr 3, 2025 - Apr 13, 2025</p></td>
+                      <td><p>45</p></td>
+                      <td><p>24</p></td>
+                      <td><p><span class="status_type warning_5">Completed (All Verified)</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="payment-order-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>On-Board Hoarding</p></td>
+                      <td><p>Apr 3, 2025 - Apr 13, 2025</p></td>
+                      <td><p>45</p></td>
+                      <td><p>24</p></td>
+                      <td><p><span class="status_type warning_6">Partially Refunded</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="payment-order-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>On-Board Hoarding</p></td>
+                      <td><p>Apr 3, 2025 - Apr 13, 2025</p></td>
+                      <td><p>45</p></td>
+                      <td><p>24</p></td>
+                      <td><p><span class="status_type warning_7">Fully Refunded</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="payment-order-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="paymentTbl_box">
+              <div class="secHead0">
+                <p class="small_p mb-0">Recent Transactions</p>
+              </div>
+              <div class="table_view payment_table hori_scroll">
+                <table class="table border-0">
+                  <thead>
+                    <tr>
+                      <th width="20%">Transaction ID</th>
+                      <th width="20%">Transaction Date & Time</th>
+                      <th width="20%">Status</th>
+                      <th width="20%">Amount</th>
+                      <th width="20%">View Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>Apr 3, 2025, 11:00 AM</p></td>
+                      <td><p><span class="status_type warning_6">Refunded</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="transaction-detail-refunded.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>Apr 3, 2025, 11:00 AM</p></td>
+                      <td><p><span class="status_type warning_5">Completed</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="transaction-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>Apr 3, 2025, 11:00 AM</p></td>
+                      <td><p><span class="status_type warning_7">Cancelled</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="transaction-detail-failed.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>Apr 3, 2025, 11:00 AM</p></td>
+                      <td><p><span class="status_type warning_6">Refunded</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="transaction-detail-refunded.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>Apr 3, 2025, 11:00 AM</p></td>
+                      <td><p><span class="status_type warning_5">Completed</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="transaction-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                    <tr>
+                      <td><p class="text_blue">#12345</p></td>
+                      <td><p>Apr 3, 2025, 11:00 AM</p></td>
+                      <td><p><span class="status_type warning_7">Cancelled</span></p></td>
+                      <td><p>₦230,000</p></td>
+                      <td><a href="transaction-detail-failed.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== LOGOUT POPUP START =====-->
+        <div class="modal modal_box fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="logoutModalLabel">Logout</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Do you really want to logout?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.inner_list').on('click', function(){
+      $(this).toggleClass('active');
+    });
+  });
+</script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.main_sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
+<!--======= MOBILE MENU START =======-->
+<script>
+  (function () {
+    var body = document.body;
+    var burgerMenu = document.getElementsByClassName('b-menu')[0];
+    var closeBtn = document.getElementsByClassName('b-menu2')[0];
+    var sidebar = document.getElementsByClassName('main_sidebar')[0];
+
+    burgerMenu.addEventListener('click', function toggleClasses() {
+      [sidebar].forEach(function (el) {
+        el.classList.toggle('open');
+      });
+    }, false);
+    closeBtn.addEventListener('click', function toggleClasses() {
+      [sidebar].forEach(function (el) {
+        el.classList.toggle('open');
+      });
+    }, false);
+
+    $('body,html').click(function (e) {
+      var container = $('.main_sidebar , .b-menu');
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.removeClass('open');
+      }
+    });
+  })();
+</script>
+<!--======== MOBILE MENU END ========-->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+  am5.ready(function () {
+
+    // Root element
+    var root = am5.Root.new("orders_refunds");
+
+    // Apply theme
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    // Chart container
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      layout: root.verticalLayout,
+      paddingLeft: 0,
+      paddingRight: 10,
+      paddingBottom: -15
+    }));
+
+    // Add legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50,
+      layout: root.horizontalLayout
+    }));
+
+    // Data
+    var data = [
+      { month: "Jan", order: 72000, refund: 35000 },
+      { month: "Feb", order: 95000, refund: 75000 },
+      { month: "Mar", order: 75000, refund: 62000 },
+      { month: "Apr", order: 82000, refund: 50000 },
+      { month: "May", order: 120000, refund: 74000 },
+      { month: "Jun", order: 108000, refund: 73000 },
+      { month: "July", order: 76000, refund: 25000 },
+      { month: "Aug", order: 60000, refund: 40000 },
+      { month: "Sep", order: 73000, refund: 30000 },
+      { month: "Oct", order: 110000, refund: 76000 },
+      { month: "Nov", order: 72000, refund: 55000 },
+      { month: "Dec", order: 102000, refund: 73000 }
+    ];
+
+    // Create X Axis
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      cellStartLocation: 0.2,
+      cellEndLocation: 0.8,
+      minGridDistance: 20
+    });
+
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "month",
+      renderer: xRenderer,
+    }));
+
+    xRenderer.labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    xAxis.data.setAll(data);
+
+    // Create Y Axis
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      strokeOpacity: 0.1
+    });
+
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      renderer: yRenderer
+    }));
+
+    yRenderer.labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87),
+      textAlign: "right"
+    });
+
+    yAxis.children.unshift(
+      am5.Label.new(root, {
+        rotation: -90,
+        text: "Amount",
+        y: am5.p50,
+        centerX: am5.p50,
+        fontSize: 12,
+        fill: am5.color(0x777E87),
+      })
+    );
+
+    xAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    yAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    // Helper to create series
+    function makeSeries(name, field, color) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: field,
+        categoryXField: "month",
+        clustered: true,
+        fill: am5.color(color),
+        stroke: am5.color(color)
+      }));
+
+      series.columns.template.setAll({
+        width: am5.percent(100), // 🔥 full width of cluster, bars touch each other
+        cornerRadiusTL: 0,
+        cornerRadiusTR: 0,
+        strokeOpacity: 0
+      });
+
+      series.data.setAll(data);
+      legend.data.push(series);
+      series.appear();
+    }
+
+    // Series
+    makeSeries("Order Spent Amount", "order", 0x7c69d5);
+    makeSeries("Refunds over time", "refund", 0x9b6ad5);
+
+    // Animation
+    chart.appear(1000, 100);
+
+  }); // end am5.ready()
+</script>
+
+</body>
+</html>

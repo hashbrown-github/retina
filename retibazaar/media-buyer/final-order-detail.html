@@ -51,14 +51,61 @@
               </ul>
             </div>
           </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="campaigns.html">
+                    <span class="link_span">A</span>
+                    <span class="link_text">Active Campaigns</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="proof-of-posting.html">
+                    <span class="link_span">P</span>
+                    <span class="link_text">Proof of Posting</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
-            <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
         </ul>
         <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">credit_card</span>
@@ -123,25 +170,47 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
               <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
               <li class="breadcrumb-item active" aria-current="page">Final Order Detail</li>
             </ol>
           </nav>
           <div class="campaign_box">
             <div class="campaign_dtl">
-              <h3>The rise of advertising<span class="badge badge-grey ms-3">Pending</span></h3>
+              <h3>The Rise of Advertising<span class="badge badge-grey ms-2">Pending</span><span class="badge badge-static ms-2">Static</span></h3>
               <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
               <div class="flex_box2 flex_box3">
                 <div class="frequency_div">No. of Locations: <span>50</span></div>
-                <div class="frequency_div">Order Price: <span>N 78,750</span></div>
+                <div class="frequency_div">Order Price: <span>₦ 78,750</span></div>
+                <div class="frequency_div">Order ID: <span>#12345678</span></div>
                 <div class="pay_div">
                   <p class="red_txt mb-1"><span class="material-symbols-outlined">error</span>Last Payment Date: June 19, 2024</p>
-                  <div class="frequency_div">Order Price: <span class="bold_txt">N 78,750</span>
-                    <button type="button" class="blue_btn pay_button ms-2" data-bs-toggle="modal" data-bs-target="#paymentModal" style="display: none;">Pay</button>
-                    <button type="button" class="blue_btn pay_button ms-2 disabled">Pay</button>
+                  <div class="frequency_div">Order Price: <span class="bold_txt">₦ 78,750</span>
+                    <button type="button" class="blue_btn pay_button payInfo ms-2" data-bs-toggle="modal" data-bs-target="#payLimitReachModal">Pay<span class="material-symbols-outlined" data-bs-custom-class="custom-tooltip custom-tooltip2" data-bs-toggle="tooltip" title="The final payment amount will include installation, printing, platform fees, and applicable VAT.">error</span></button>
+                    <button type="button" class="blue_btn pay_button ms-2 disabled" style="display: none;">Pay</button>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="timeDur_1">
+              <h3>Flight Time Duration</h3>
+              <div class="timeDur_11">
+                <div class="timeDur_111">
+                  <h4>Static Campaign:</h4>
+                  <p><b>Lagos:</b> 48 hours after order/payment or on campaign start date</p>
+                  <p><b>Outstations:</b> 5 days after order/payment or on campaign start date</p>
+                </div>
+                <div class="timeDur_111">
+                  <a href="choose-printing.html" class="smallBlu_btn">Choose</a>
+                </div>
+              </div>
+              <div class="timeDur_11 mb-0">
+                <div class="timeDur_111">
+                  <h4>LED Campaign:</h4>
+                  <p>Immediate deployment after payment or on campaign start date</p>
+                </div>
+                <div class="timeDur_111">
+                  <a href="choose-printing.html" class="smallBlu_btn">Choose</a>
                 </div>
               </div>
             </div>
@@ -167,6 +236,43 @@
                   </a>
                 </li>
               </ul>
+            </div>
+          </div>
+          <!--===== PAYMENT LIMIT REACH POPUP START =====-->
+          <div class="modal modal_box limit_modal fade" id="payLimitReachModal" tabindex="-1" aria-labelledby="payLimitReachModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="payLimitReachModalLabel">Online Payment Limit Reached <span class="block_txt">(Order Id: #123456)</span></h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="modal_body">
+                    <p>This order exceeds the maximum online transaction limit.</p>
+                    <div class="confirmOrder mw-100 my-3">
+                      <p>Total Location: <b>50</b></p>
+                      <p>Location Price: <b>NGN 2625738.57</b></p>
+                      <p>Installation Fee & Printing Charges: <b>NGN 10,000</b></p>
+                      <p>Total Price: <b>NGN 20,000</b></p>
+                    </div>
+                    <p class="mb-0">To complete your booking, please proceed with payment using the details below.</p>
+                    <div class="bnk_dtl">
+                      <p class="mb-1"><b>Bank Name: </b><span>Zenith Bank</span></p>
+                      <p class="mb-1"><b>Account Holder Name: </b><span>Retinaad Limited</span></p>
+                      <p class="mb-0"><b>Account Number: </b><span>1228646335</span></p>
+                    </div>
+                    <p class="mb-0">Once the payment is made, kindly share the transfer confirmation along with your Order ID so our support team can verify and activate your booking promptly.</p>
+                    <div class="bnk_dtl2">
+                      <p>If you need any assistance, we’re here to help.</p>
+                      <p class="mb-1"><b>Email: </b><span>support@retinaad.africa</span></p>
+                      <p class="mb-0"><b>Phone: </b><span>+234(0) 916 000 0938, +234(0) 707 219 0284</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer border-top-0">
+                  <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Okay</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -230,5 +336,11 @@
     })();
   </script>
   <!--======== MOBILE MENU END ========-->
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
 </body>
 </html>

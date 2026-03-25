@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Billing</title>
+<title>Order Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -82,7 +82,7 @@
           </li>
         </ul>
         <ul class="menu_list">
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <div class="flex_menu">
               <a href="payment-insights.html" class="menu_link">
                 <span class="material-symbols-outlined link_icon">checkbook</span>
@@ -93,7 +93,7 @@
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="payment-insights-by-order.html">
+                  <a class="menu_link active" href="payment-insights-by-order.html">
                     <span class="link_span">B</span>
                     <span class="link_text">By Order</span>
                   </a>
@@ -108,7 +108,7 @@
             </div>
           </li>
           <li class="menu_item">
-            <a class="menu_link active" href="billing.html">
+            <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
@@ -169,121 +169,216 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="reports_box">
-            <div class="heading_box">
-              <div class="headLeft">
-                <h3>Billing History</h3>
-              </div>
-              <div class="headRight">
-                <div class="input-daterange input-group" id="datepicker">
-                  <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" />
-                  <span class="input-group-addon">-</span>
-                  <input type="text" class="input-sm form-control" name="end" placeholder="End Date" />
-                  <span class="input-group-btn">
-                    <span class="material-symbols-outlined">calendar_month</span>
-                  </span>
-                </div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Payment Insights</a></li>
+              <li class="breadcrumb-item"><a href="payment-insights-by-order.html">By Order</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Order Detail</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="campaign_dtl">
+              <h3>The Rise of Advertisement<span class="badge badge-static ms-2">Static</span></h3>
+              <p class="mb-2">Campaign ID: <span>#123456</span></p>
+              <p class="mb-2"><span>Apr 10, 2025</span> - <span>Apr 30, 2025</span></p>
+              <div class="flex_box2 flex_box3">
+                <div class="frequency_div">No. of Locations: <span>50</span></div>
+                <div class="frequency_div">Order Price: <span>₦ 78,750</span></div>
+                <div class="frequency_div">Order ID: <span>#12345678</span></div>
+                <a href="campaign-logs.html" class="next_btn smallBlu_btn">View Campaign Logs</a>
               </div>
             </div>
-            <div class="table_view reports_table hori_scroll">
+            <div class="card_header card_header2">
+              <ul>
+                <li>
+                  <img src="images/approve-location.svg" alt="Active Locations" />
+                  <div>
+                    <h3>27</h3>
+                    <p class="mb-0">Active Locations</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/verified-location.svg" alt="Verified Locations" />
+                  <div>
+                    <h3>22</h3>
+                    <p class="mb-0">Verified Locations</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/pending-locations.svg" alt="Pending Locations" />
+                  <div>
+                    <h3>5</h3>
+                    <p class="mb-0">Pending Locations</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="locVeri_list">
+            <h3>Locations</h3>
+            <div class="search_filters camFilter mt-0">
+              <div class="filter_div filter_1">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>Install Status</option>
+                        <option>Awaiting Proof of Posting</option>
+                        <option>Under Field Verification</option>
+                        <option>Verification Passed</option>
+                        <option>Verification Failed</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_3">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>Payout Status</option>
+                        <option>Withholding</option>
+                        <option>Payout Released</option>
+                        <option>Refund Initiated</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_4">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>Amount Released</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>All</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_6 w-auto">
+                <button type="button"><img src="images/filters.svg" class="border-0" alt="Filter"></button>
+              </div>
+            </div>
+            <div class="table_view camLoc_table hori_scroll">
               <table class="table">
                 <thead>
                   <tr>
-                    <th width="16%">Order ID</th>
-                    <th width="20%">Order Name</th>
-                    <th width="16%">Billing Date</th>
-                    <th width="16%">Billing Amount</th>
-                    <th width="17%">Payment Method</th>
-                    <th width="15%">Invoice</th>
+                    <th width="15%">Location ID</th>
+                    <th width="20%">Install Status</th>
+                    <th width="15%">Payout Status</th>
+                    <th width="15%">Location Rate</th>
+                    <th width="12%">Dicount</th>
+                    <th width="15%">Payment Done</th>
+                    <th width="8%">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p>The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
+                    <td><p class="blue_txt">#123456</p></td>
+                    <td><p><span class="status_type warning_7">Verification Failed</span></p></td>
+                    <td><p><span class="status_type warning_6">Withholding</span></p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><p>10%</p></td>
+                    <td><p>₦22,500</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                   </tr>
                   <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p>The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
+                    <td><p class="blue_txt">#123456</p></td>
+                    <td><p><span class="status_type warning_2">Under Field Verification</span></p></td>
+                    <td><p><span class="status_type warning_5">Payout Released</span></p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><p>--</p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                   </tr>
                   <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p>The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
+                    <td><p class="blue_txt">#123456</p></td>
+                    <td><p><span class="status_type warning_5">Verification Passed</span></p></td>
+                    <td><p><span class="status_type warning_3">Refund Initiated</span></p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><p>15%</p></td>
+                    <td><p>₦20,000</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                   </tr>
                   <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p>The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p>The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p>The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p>The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
+                    <td><p class="blue_txt">#123456</p></td>
+                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                    <td><p><span class="status_type warning_6">Withholding</span></p></td>
+                    <td><p>₦25,000</p></td>
+                    <td><p>--</p></td>
+                    <td><p>₦15,000</p></td>
+                    <td><a href="#" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+            <div class="payBreakdown payBreakdown2">
+              <div class="sec_6212 mt-0">
+                <h3>Payment Breakdown</h3>
+                <div class="longPrice hori_scroll">
+                  <ul class="mb-0">
+                    <li>
+                      <table class="beakdown_table">
+                        <thead>
+                          <tr>
+                            <th width="24%"><p><b>Locations</b></p></th>
+                            <th width="20%"><p><b>Rate</b></p></th>
+                            <th width="16%"><p><b>Discount</b></p></th>
+                            <th width="20%"><p><b>Payment Done</b></p></th>
+                            <th width="20%"><p class="text-end"><b>Total</b></p></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><p>Media Location 1</p></td>
+                            <td><p>₦25,000</p></td>
+                            <td><p>10%</p></td>
+                            <td><p>₦22,500</p></td>
+                            <td><p class="text-end"><span>₦22,500</span> / <span class="line_through">₦25,000</span></p></td>
+                          </tr>
+                          <tr>
+                            <td><p>Media Location 2</p></td>
+                            <td><p>₦25,000</p></td>
+                            <td><p>--</p></td>
+                            <td><p>₦25,000</p></td>
+                            <td><p class="text-end"><span>₦25,000</span></p></td>
+                          </tr>
+                          <tr>
+                            <td><p>Media Location 3</p></td>
+                            <td><p>₦25,000</p></td>
+                            <td><p>15%</p></td>
+                            <td><p>₦21,250</p></td>
+                            <td><p class="text-end"><span>₦21,250</span> / <span class="line_through">₦21,000</span></p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                    <li>
+                      <p><b>Subtotal</b><b>₦68,750</b></p>
+                    </li>
+                    <li>
+                      <p><b>Platform Fee</b><b>₦15,000</b></p>
+                    </li>
+                    <li>
+                      <p><b>Installation Charges</b><b>₦10,000</b></p>
+                    </li>
+                    <li>
+                      <p><b>Printing Charges</b><b>₦5,000</b></p>
+                    </li>
+                    <li>
+                      <p><b>VAT</b><b>₦10,000</b></p>
+                    </li>
+                    <li class="mb-0">
+                      <p><b>Net Amount</b><b>₦108,750</b></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -312,11 +407,6 @@
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
-  <script>
-    $('#datepicker').datepicker({
-    });
-  </script>
   <script>
     $(document).ready(function(){
       $('.inner_list').on('click', function(){

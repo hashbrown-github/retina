@@ -52,14 +52,61 @@
               </ul>
             </div>
           </li>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="campaigns.html">
+                    <span class="link_span">A</span>
+                    <span class="link_text">Active Campaigns</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="proof-of-posting.html">
+                    <span class="link_span">P</span>
+                    <span class="link_text">Proof of Posting</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
-            <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
         </ul>
         <ul class="menu_list">
+          <li class="menu_item inner_list">
+            <div class="flex_menu">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="menu_item">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">credit_card</span>
@@ -124,8 +171,8 @@
         <div class="main_inner">
           <div class="page_0">
             <!-- <p>Campaign Goals<span>Brand Awareness</span></p> -->
-            <p>Media Types<span>Rooftop Advertising, Unipole, Billboard, Walldrape…</span></p>
-            <p>Budget<span>NG 20,000</span></p>
+            <p>Screen Type<span>Static</span></p>
+            <p>Budget<span>NGN 20,000</span></p>
             <p>Campaign Timing<span>Aug 01, 2024 - Aug 11, 2024</span></p>
           </div>
           <div class="page_1 page_2">
@@ -170,36 +217,38 @@
                         <input type="text" placeholder="Search POI or Select from the list" />
                         <span class="material-symbols-outlined">search</span>
                       </div>
-                      <div class="page_211">
-                        <ul>
-                          <li>
-                            <p>Food Joints</p>
-                            <span class="switch1 switch-sm">
-                              <label class="m-0">
-                                <input type="checkbox" name="select">
-                                <span id="food_joints"></span>
-                              </label>
-                            </span>
-                          </li>
-                          <li>
-                            <p>Entertainment</p>
-                            <span class="switch1 switch-sm">
-                              <label class="m-0">
-                                <input type="checkbox" name="select">
-                                <span id="entertainment"></span>
-                              </label>
-                            </span>
-                          </li>
-                          <li>
-                            <p>Clothing</p>
-                            <span class="switch1 switch-sm">
-                              <label class="m-0">
-                                <input type="checkbox" name="select">
-                                <span id="clothing"></span>
-                              </label>
-                            </span>
-                          </li>
-                        </ul>
+                      <div class="poiUser_traffic box_scroll">
+                        <div class="page_211">
+                          <ul>
+                            <li>
+                              <p>Food Joints</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select">
+                                  <span id="food_joints"></span>
+                                </label>
+                              </span>
+                            </li>
+                            <li>
+                              <p>Entertainment</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select">
+                                  <span id="entertainment"></span>
+                                </label>
+                              </span>
+                            </li>
+                            <li>
+                              <p>Clothing</p>
+                              <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" name="select">
+                                  <span id="clothing"></span>
+                                </label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -209,142 +258,147 @@
                         <input type="text" placeholder="Search POI or Select from the list" />
                         <span class="material-symbols-outlined">search</span>
                       </div>
-                      <div class="page_211">
-                        <ul>
-                          <li>
-                            <p>Persona</p>
-                            <!-- <span class="switch1 switch-sm">
-                              <label class="m-0">
-                                <input type="checkbox" checked name="select">
-                                <span></span> 
-                              </label>
-                            </span> -->
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="page_212">
-                        <ul>
-                          <li class="nav_item" id="female_adults">
-                            <a class="nav_link" href="#">
-                              <p>Female Adults</p>
-                              <img src="images/female-adults.svg" alt="Female Adults">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="male_adults">
-                            <a class="nav_link" href="#">
-                              <p>Male Adults</p>
-                              <img src="images/male-adults.svg" alt="Male Adults">
-                            </a>
-                          </li>
-                          <!-- <li class="nav_item">
-                            <a class="nav_link" href="#">
-                              <p>Female Senior Citizen</p>
-                              <img src="images/female-senior-citizen.svg" alt="Female Senior Citizen">
-                            </a>
-                          </li>
-                          <li class="nav_item">
-                            <a class="nav_link" href="#">
-                              <p>Male Senior Citizen</p>
-                              <img src="images/male-senior-citizen.svg" alt="Male Senior Citizen">
-                            </a>
-                          </li> -->
-                          <li class="nav_item" id="artists">
-                            <a class="nav_link" href="#">
-                              <p>Artists</p>
-                              <img src="images/artists.svg" alt="Artists">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="family_oriented">
-                            <a class="nav_link" href="#">
-                              <p>Family Oriented People</p>
-                              <img src="images/family-oriented.svg" alt="Family Oriented People">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="firstTime_voters">
-                            <a class="nav_link" href="#">
-                              <p>First Time Voters</p>
-                              <img src="images/first-time-voters.svg" alt="First Time Voters">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="fitness_freaks">
-                            <a class="nav_link" href="#">
-                              <p>Fitness Freaks</p>
-                              <img src="images/gym.svg" alt="Fitness Freaks">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="food_enthusiasts">
-                            <a class="nav_link" href="#">
-                              <p>Food Enthusiasts</p>
-                              <img src="images/food-enthusiasts.svg" alt="Food Enthusiasts">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="infrequent_voters">
-                            <a class="nav_link" href="#">
-                              <p>Infrequent Voters</p>
-                              <img src="images/infrequent-voter.svg" alt="Infrequent Voters">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="middle_class">
-                            <a class="nav_link" href="#">
-                              <p>Middle Class</p>
-                              <img src="images/middle-class.svg" alt="Middle Class">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="movie_enthusisats">
-                            <a class="nav_link" href="#">
-                              <p>Movie Enthusiasts</p>
-                              <img src="images/movie-enthusiasts.svg" alt="Movie Enthusiasts">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="skilled-job-seekers">
-                            <a class="nav_link" href="#">
-                              <p>Skilled Job Seekers</p>
-                              <img src="images/skilled-job-seeker.svg" alt="Skilled Job Seekers">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="teenagers">
-                            <a class="nav_link" href="#">
-                              <p>Teenagers</p>
-                              <img src="images/teenagers.svg" alt="Teenagers">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="travel_enthusiasts">
-                            <a class="nav_link" href="#">
-                              <p>Travel Enthusiasts</p>
-                              <img src="images/travel-enthusiasts.svg" alt="Travel Enthusiasts">
-                            </a>
-                          </li>
-                          <li id="urban_male" class="nav_item">
-                            <a class="nav_link" href="#">
-                              <p>Urban Male</p>
-                              <img src="images/urban-male.svg" alt="Urban Male">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="urban_Female">
-                            <a class="nav_link" href="#">
-                              <p>Urban Female</p>
-                              <img src="images/urban-female.svg" alt="Urban Female">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="wealth_limitedEdu">
-                            <a class="nav_link" href="#">
-                              <p>Wealthy with Limited Education</p>
-                              <img src="images/wealthy.svg" alt="Wealthy">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="young_enthusiasts">
-                            <a class="nav_link" href="#">
-                              <p>Young Enthusiasts</p>
-                              <img src="images/young-enthusiasts.svg" alt="Young Enthusiasts">
-                            </a>
-                          </li>
-                          <li class="nav_item" id="young_parents">
-                            <a class="nav_link" href="#">
-                              <p>Young Parents</p>
-                              <img src="images/young-parents.svg" alt="Young Parents">
-                            </a>
-                          </li>
-                        </ul>
+                      <div class="poiUser_traffic box_scroll">
+                        <div class="page_211">
+                          <ul>
+                            <li>
+                              <p>Persona</p>
+                              <!-- <span class="switch1 switch-sm">
+                                <label class="m-0">
+                                  <input type="checkbox" checked name="select">
+                                  <span></span> 
+                                </label>
+                              </span> -->
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="page_212">
+                          <ul>
+                            <li class="nav_item" id="female_adults">
+                              <a class="nav_link" href="#">
+                                <p>Female Adults</p>
+                                <div class="dots_loader">
+                                  <span class="dots_loader1"></span>
+                                </div>
+                                <img src="images/female-adults.svg" alt="Female Adults">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="male_adults">
+                              <a class="nav_link" href="#">
+                                <p>Male Adults</p>
+                                <img src="images/male-adults.svg" alt="Male Adults">
+                              </a>
+                            </li>
+                            <!-- <li class="nav_item">
+                              <a class="nav_link" href="#">
+                                <p>Female Senior Citizen</p>
+                                <img src="images/female-senior-citizen.svg" alt="Female Senior Citizen">
+                              </a>
+                            </li>
+                            <li class="nav_item">
+                              <a class="nav_link" href="#">
+                                <p>Male Senior Citizen</p>
+                                <img src="images/male-senior-citizen.svg" alt="Male Senior Citizen">
+                              </a>
+                            </li> -->
+                            <li class="nav_item" id="artists">
+                              <a class="nav_link" href="#">
+                                <p>Artists</p>
+                                <img src="images/artists.svg" alt="Artists">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="family_oriented">
+                              <a class="nav_link" href="#">
+                                <p>Family Oriented People</p>
+                                <img src="images/family-oriented.svg" alt="Family Oriented People">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="firstTime_voters">
+                              <a class="nav_link" href="#">
+                                <p>First Time Voters</p>
+                                <img src="images/first-time-voters.svg" alt="First Time Voters">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="fitness_freaks">
+                              <a class="nav_link" href="#">
+                                <p>Fitness Freaks</p>
+                                <img src="images/gym.svg" alt="Fitness Freaks">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="food_enthusiasts">
+                              <a class="nav_link" href="#">
+                                <p>Food Enthusiasts</p>
+                                <img src="images/food-enthusiasts.svg" alt="Food Enthusiasts">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="infrequent_voters">
+                              <a class="nav_link" href="#">
+                                <p>Infrequent Voters</p>
+                                <img src="images/infrequent-voter.svg" alt="Infrequent Voters">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="middle_class">
+                              <a class="nav_link" href="#">
+                                <p>Middle Class</p>
+                                <img src="images/middle-class.svg" alt="Middle Class">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="movie_enthusisats">
+                              <a class="nav_link" href="#">
+                                <p>Movie Enthusiasts</p>
+                                <img src="images/movie-enthusiasts.svg" alt="Movie Enthusiasts">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="skilled-job-seekers">
+                              <a class="nav_link" href="#">
+                                <p>Skilled Job Seekers</p>
+                                <img src="images/skilled-job-seeker.svg" alt="Skilled Job Seekers">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="teenagers">
+                              <a class="nav_link" href="#">
+                                <p>Teenagers</p>
+                                <img src="images/teenagers.svg" alt="Teenagers">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="travel_enthusiasts">
+                              <a class="nav_link" href="#">
+                                <p>Travel Enthusiasts</p>
+                                <img src="images/travel-enthusiasts.svg" alt="Travel Enthusiasts">
+                              </a>
+                            </li>
+                            <li id="urban_male" class="nav_item">
+                              <a class="nav_link" href="#">
+                                <p>Urban Male</p>
+                                <img src="images/urban-male.svg" alt="Urban Male">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="urban_Female">
+                              <a class="nav_link" href="#">
+                                <p>Urban Female</p>
+                                <img src="images/urban-female.svg" alt="Urban Female">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="wealth_limitedEdu">
+                              <a class="nav_link" href="#">
+                                <p>Wealthy with Limited Education</p>
+                                <img src="images/wealthy.svg" alt="Wealthy">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="young_enthusiasts">
+                              <a class="nav_link" href="#">
+                                <p>Young Enthusiasts</p>
+                                <img src="images/young-enthusiasts.svg" alt="Young Enthusiasts">
+                              </a>
+                            </li>
+                            <li class="nav_item" id="young_parents">
+                              <a class="nav_link" href="#">
+                                <p>Young Parents</p>
+                                <img src="images/young-parents.svg" alt="Young Parents">
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -355,59 +409,76 @@
                         <span class="material-symbols-outlined">search</span>
                       </div>
                       <div class="page_213">
-                        <ul>
-                          <li>
-                            <div class="li_head">
-                              <p class="traffic_count">1</p>
-                              <p class="small_txt">Min. Expression - Max. Expression</p>
-                              <h5>2,440,536 - 3,416,784</h5>
-                            </div>
-                            <div class="li_body">
-                              <p>Average Emp <span class="bold_txt">2.4M</span></p>
-                              <p>Reach <span class="bold_txt">1.91%</span></p>
-                              <p>frequency <span class="bold_txt">0.5</span></p>
-                            </div>
-                            <div class="li_bottom">
-                              <p>418,380<span class="block_txt small_txt">Daily</span></p>
-                              <p>2,928,660<span class="block_txt small_txt">Weekly</span></p>
-                              <p>87,859,800<span class="block_txt small_txt">Monthly</span></p>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="li_head">
-                              <p class="traffic_count">2</p>
-                              <p class="small_txt">Min. Expression - Max. Expression</p>
-                              <h5>2,440,536 - 3,416,784</h5>
-                            </div>
-                            <div class="li_body">
-                              <p>Average Emp <span class="bold_txt">2.4M</span></p>
-                              <p>Reach <span class="bold_txt">1.91%</span></p>
-                              <p>frequency <span class="bold_txt">0.5</span></p>
-                            </div>
-                            <div class="li_bottom">
-                              <p>418,380<span class="block_txt small_txt">Daily</span></p>
-                              <p>2,928,660<span class="block_txt small_txt">Weekly</span></p>
-                              <p>87,859,800<span class="block_txt small_txt">Monthly</span></p>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="li_head">
-                              <p class="traffic_count">3</p>
-                              <p class="small_txt">Min. Expression - Max. Expression</p>
-                              <h5>2,440,536 - 3,416,784</h5>
-                            </div>
-                            <div class="li_body">
-                              <p>Average Emp <span class="bold_txt">2.4M</span></p>
-                              <p>Reach <span class="bold_txt">1.91%</span></p>
-                              <p>frequency <span class="bold_txt">0.5</span></p>
-                            </div>
-                            <div class="li_bottom">
-                              <p>418,380<span class="block_txt small_txt">Daily</span></p>
-                              <p>2,928,660<span class="block_txt small_txt">Weekly</span></p>
-                              <p>87,859,800<span class="block_txt small_txt">Monthly</span></p>
-                            </div>
-                          </li>
-                        </ul>
+                        <div class="clusterMean">
+                          <a href="#"><p>What do these clusters mean?</p></a>
+                        </div>
+                        <div class="poiUser_traffic box_scroll">
+                          <ul>
+                            <li>
+                              <p class="traffic_count">Cluster 1_Subcluster 1</p>
+                              <div class="li_head">
+                                <p class="small_txt">Min. Impression - Max. Impression</p>
+                                <h5>2,440,536 - 3,416,784</h5>
+                              </div>
+                              <div class="li_body">
+                                <!-- <p>Average Impression <span class="bold_txt">87,859,800</span></p> -->
+                                <p>Reach <span class="bold_txt">1.91%</span></p>
+                                <p>Frequency <span class="bold_txt">0.5</span></p>
+                              </div>
+                              <div class="li_bottom">
+                                <div class="w-100">
+                                  <p>Average Impression</p>
+                                </div>
+                                <p>418,380<span class="block_txt small_txt">Daily</span></p>
+                                <p>2,928,660<span class="block_txt small_txt">Weekly</span></p>
+                                <p>87,859,800<span class="block_txt small_txt">Monthly</span></p>
+                              </div>
+                            </li>
+                            <li>
+                              <p class="traffic_count">LAG-C1-S1</p>
+                              <div class="li_head">
+                                <p class="small_txt">Min. Impression - Max. Impression</p>
+                                <h5>2,440,536 - 3,416,784</h5>
+                              </div>
+                              <div class="li_body">
+                                <!-- <p>Average Impression <span class="bold_txt">87,859,800</span></p> -->
+                                <p>Reach <span class="bold_txt">1.91%</span></p>
+                                <p>Frequency <span class="bold_txt">0.5</span></p>
+                              </div>
+                              <div class="li_bottom">
+                                <div class="w-100">
+                                  <p>Average Impression</p>
+                                </div>
+                                <p>418,380<span class="block_txt small_txt">Daily</span></p>
+                                <p>2,928,660<span class="block_txt small_txt">Weekly</span></p>
+                                <p>87,859,800<span class="block_txt small_txt">Monthly</span></p>
+                              </div>
+                            </li>
+                            <li>
+                              <p class="traffic_count">LAG_CL1_SC1</p>
+                              <div class="li_head">
+                                <p class="small_txt">Min. Impression - Max. Impression</p>
+                                <h5>2,440,536 - 3,416,784</h5>
+                              </div>
+                              <div class="li_body">
+                                <!-- <p>Average Impression <span class="bold_txt">87,859,800</span></p> -->
+                                <p>Reach <span class="bold_txt">1.91%</span></p>
+                                <p>Frequency <span class="bold_txt">0.5</span></p>
+                              </div>
+                              <div class="li_bottom">
+                                <div class="w-100">
+                                  <p>Average Impression</p>
+                                </div>
+                                <p>418,380<span class="block_txt small_txt">Daily</span></p>
+                                <p>2,928,660<span class="block_txt small_txt">Weekly</span></p>
+                                <p>87,859,800<span class="block_txt small_txt">Monthly</span></p>
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="tableLoader" style="display: block;">
+                            <button type="button" class="loadMore">Loading... <div class="spinner-border text-primary" role="status"></div></button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -457,6 +528,12 @@
   <script src="js/mapbox-javascript.js"></script>
   <script>
     $('.nav_link').on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    $('.page_213 ul li').on('click', function (e) {
       e.preventDefault();
       $(this).toggleClass('active');
     });

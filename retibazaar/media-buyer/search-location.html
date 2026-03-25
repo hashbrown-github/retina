@@ -9,6 +9,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/introjs.min.css" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/responsive.css" />
@@ -21,9 +22,9 @@
         <button type="button" class="expand_btn active" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
         <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
       </div>
-      <div class="sidebar_menu">
+      <div class="sidebar_menu sidebar_scroll">
         <ul class="menu_list">
-          <li class="menu_item">
+          <li class="menu_item" data-intro="Search and select media locations to plan and book your campaigns seamlessly." data-step="1">
             <a class="menu_link active" href="search-location.html">
               <span class="material-symbols-outlined link_icon">travel_explore</span>
               <span class="link_text">Search Location</span>
@@ -36,13 +37,13 @@
             </button>
             <div class="inner_items">
               <ul class="menu_list">
-                <li class="menu_item mb-0">
+                <li class="menu_item mb-0" data-intro="View and manage all order requests with campaign details, selected locations, timelines, and pricing in one place" data-step="2">
                   <a class="menu_link" href="order-requests.html">
                     <span class="link_span">O</span>
                     <span class="link_text">Order Requests</span>
                   </a>
                 </li>
-                <li class="menu_item mb-0">
+                <li class="menu_item mb-0" data-intro="Track your confirmed, pending, and completed orders, and make payments directly for outstanding campaigns." data-step="3">
                   <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
@@ -51,21 +52,68 @@
               </ul>
             </div>
           </li>
-          <li class="menu_item">
-            <a class="menu_link" href="proof-of-posting.html">
-              <span class="material-symbols-outlined link_icon">library_books</span>
-              <span class="link_text">Proof of Posting</span>
+          <li class="menu_item inner_list">
+            <button type="button" class="menu_link" href="javascript:void(0);">
+              <span class="material-symbols-outlined link_icon">outbox</span>
+              <span class="link_text">Campaigns & PoP</span>
+            </button>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0" data-intro="Track your active campaigns and filter them by media seller, campaign dates, and order status." data-step="4">
+                  <a class="menu_link" href="campaigns.html">
+                    <span class="link_span">A</span>
+                    <span class="link_text">Active Campaigns</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0" data-intro="View proof of posting by campaign or activity log and monitor upload, verification, and installation status in real time." data-step="5">
+                  <a class="menu_link" href="proof-of-posting.html">
+                    <span class="link_span">P</span>
+                    <span class="link_text">Proof of Posting</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item" data-intro="Review and track all submitted requests, categorized by request status and seller responses." data-step="6">
+            <a class="menu_link" href="manage-requests.html">
+              <span class="material-symbols-outlined link_icon">place_item</span>
+              <span class="link_text">Manage Requests</span>
             </a>
           </li>
         </ul>
         <ul class="menu_list">
-          <li class="menu_item">
+          <li class="menu_item inner_list">
+            <div class="flex_menu" data-intro="Get a real-time overview of campaign spend, refunds, order status, and recent transactions." data-step="7">
+              <a href="payment-insights.html" class="menu_link">
+                <span class="material-symbols-outlined link_icon">checkbook</span>
+                <span class="link_text">Payment Insights</span>
+              </a>
+              <button type="button"></button>
+            </div>
+            <div class="inner_items">
+              <ul class="menu_list">
+                <li class="menu_item mb-0" data-intro="Track order-wise payments, including total spend and withheld amounts across all campaigns." data-step="8">
+                  <a class="menu_link" href="payment-insights-by-order.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Order</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0" data-intro="Monitor payout status including released, withheld, and refunded payments for every campaign location" data-step="9">
+                  <a class="menu_link" href="payment-insights-by-location.html">
+                    <span class="link_span">B</span>
+                    <span class="link_text">By Location</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu_item" data-intro="Access billing history by order and download invoices for streamlined record-keeping." data-step="10">
             <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
           </li>
-          <li class="menu_item">
+          <li class="menu_item" data-intro="Raise support requests, track ticket status, and get assistance from the RetiBazaar team." data-step="11">
             <a class="menu_link" href="help.html">
               <span class="material-symbols-outlined link_icon">forum</span>
               <span class="link_text">Help</span>
@@ -106,6 +154,7 @@
           </div>
           <div class="head_part3">
             <div class="head_part31"><a href="#"><span class="material-symbols-outlined">info</span></a></div>
+            <div class="head_part31"><button type="button" class="guide_btn" onclick="startTour()">Guide Me</button></div>
             <div class="head_part31"><a href="notifications.html"><span class="material-symbols-outlined size_lg">notifications_unread</span></a></div>
             <div class="head_part31">
               <div class="dropdown">
@@ -175,8 +224,82 @@
       </div>
     </main>
   </div>
+  <script src="js/intro.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script>
+    function startTour() {
+
+      const intro = introJs();
+
+      // Enable built-in scrolling
+      intro.setOptions({
+        scrollToElement: false // disable default scroll
+      });
+
+      // Custom scroll for sidebar
+      intro.onbeforechange(function (targetElement) {
+
+        const sidebar = document.querySelector('.sidebar_scroll');
+
+        if (!sidebar || !targetElement) return;
+
+        // check if element is inside sidebar
+        if (sidebar.contains(targetElement)) {
+
+          const elementTop = targetElement.offsetTop;
+          const elementHeight = targetElement.offsetHeight;
+          const sidebarHeight = sidebar.clientHeight;
+
+          sidebar.scrollTo({
+            top: elementTop - (sidebarHeight / 2) + (elementHeight / 2),
+            behavior: 'instant'
+          });
+
+          // Important: refresh after scroll
+          setTimeout(() => {
+            intro.refresh();
+          }, 300);
+        }
+      });
+
+      if (window.innerWidth < 768) {
+        $('.inner_list').addClass('active');
+        $('.main_sidebar').addClass('open');
+
+        setTimeout(function () {
+          intro.start();
+        }, 290);
+
+      } else {
+        $('.inner_list').addClass('active');
+        $('.fixed_sidebar').removeClass('small_sidebar');
+        $('.expand_btn').removeClass('active');
+
+        setTimeout(function () {
+          intro.start();
+        }, 200);
+      }
+    }
+  </script>
+  <!-- <script>
+    function startTour() {
+      if (window.innerWidth < 768) {
+        $('.inner_list').addClass('active');
+        $('.main_sidebar').addClass('open');
+        setTimeout(function() {
+          introJs().start();
+        }, 290);
+      } else {
+        $('.inner_list').addClass('active');
+        $('.fixed_sidebar').removeClass('small_sidebar');
+        $('.expand_btn').removeClass('active');
+        setTimeout(function() {
+          introJs().start();
+        }, 200);
+      }
+    }
+  </script> -->
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
@@ -184,8 +307,28 @@
       container: 'location_map',
       style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
       center: [8.141140, 9.611302],
-      zoom: 5
+      zoom: 3
     });
+  </script>
+  <script>
+    function handleResize() {
+      const sidebar = document.querySelector('.fixed_sidebar');
+      const expandBtn = document.getElementById('expand_btn');
+
+      if (window.innerWidth <= 767) {
+        sidebar.classList.remove('small_sidebar');
+        expandBtn.classList.remove('active');
+        if (typeof location_map !== 'undefined') {
+          setTimeout(() => {
+            location_map.resize();
+          }, 300); // adjust if sidebar has animation
+        }
+      }
+    }
+    // Run on load
+    window.addEventListener('DOMContentLoaded', handleResize);
+    // Run on resize
+    window.addEventListener('resize', handleResize);
   </script>
   <script>
     $(document).ready(function(){
@@ -193,20 +336,6 @@
         $(this).toggleClass('active');
       });
     });
-  </script>
-  <script>
-    function handleResize() {
-      const sidebar = document.querySelector('.fixed_sidebar');
-      const expandBtn = document.getElementById('expand_btn');
-      if (window.innerWidth <= 767) {
-        sidebar.classList.remove('small_sidebar');
-        expandBtn.classList.remove('active');
-      }
-    }
-    // Run on load
-    window.addEventListener('DOMContentLoaded', handleResize);
-    // Run on resize
-    window.addEventListener('resize', handleResize);
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
@@ -235,7 +364,7 @@
       }, false);
     
       $('body,html').click(function (e) {
-        var container = $('.main_sidebar , .b-menu');
+        var container = $('.main_sidebar , .b-menu, .guide_btn, .introjs-tour');
         if (!container.is(e.target) && container.has(e.target).length === 0) {
           container.removeClass('open');
         }

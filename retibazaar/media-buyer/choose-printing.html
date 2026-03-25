@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Help</title>
+<title>Choose Printing</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -29,7 +29,7 @@
               <span class="link_text">Search Location</span>
             </a>
           </li>
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
               <span class="link_text">Order</span>
@@ -43,7 +43,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="final-orders.html">
+                  <a class="menu_link active" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -113,7 +113,7 @@
             </a>
           </li>
           <li class="menu_item">
-            <a class="menu_link active" href="help.html">
+            <a class="menu_link" href="help.html">
               <span class="material-symbols-outlined link_icon">forum</span>
               <span class="link_text">Help</span>
             </a>
@@ -168,35 +168,57 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="choose_option choose_option3">
-            <h1>Please select how you would like to proceed.</h1>
-            <p>You can explore help resources, raise a new support request, or track an existing query.</p>
-            <div class="help_search">
-              <p><a href="#"><b class="blue_txt">Have any questions?</b></a></p>
-            </div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
+              <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Choose Printing</li>
+            </ol>
+          </nav>
+          <div class="choose_option choose_option2">
+            <h1>Choose an Option for Printing Responsibility</h1>
+            <p>Simply dummy text of the printing and typesetting industry.</p>
             <ul>
               <li class="nav_item">
-                <a class="nav_link" href="contact.html">
-                  <img src="images/contact-support.svg" alt="Contact Support" />
+                <a class="nav_link active" href="upload-ad-creatives.html">
+                  <img src="images/admin-prints.svg" alt="Admin Prints">
                   <div class="margin_top">
-                    <h3>Contact Support</h3>
-                    <p class="mb-0">Reach out to us directly for urgent assistance. We aim to respond to all queries as quickly as possible.</p>
+                    <h3>Admin Prints</h3>
+                    <p class="mb-2">Printing managed by platform, printing cost shown upfront.</p>
+                    <p class="mb-0"><b>Cost: NGN 25,000/Location</b></p>
+                  </div>
+                  <div class="login_buttons mt-0">
+                    <button type="button" class="blue_btn2">Continue</button>
                   </div>
                 </a>
               </li>
               <li class="nav_item">
-                <a class="nav_link active" href="support-requests.html">
-                  <img src="images/support-request.svg" alt="Support Request" />
+                <a class="nav_link" href="upload-ad-creatives.html">
+                  <img src="images/buyer-prints.svg" alt="Buyer Prints">
                   <div class="margin_top">
-                    <h3>Support Request</h3>
-                    <p class="mb-0">Submit a new request describing your issue in detail. Our team will review it and get back to you with a resolution.</p>
+                    <h3>Buyer Prints</h3>
+                    <p class="mb-2">Buyer handles printing, must provide correct board specs for quality assurance.</p>
+                    <p class="mb-0"><b>Cost: 0</b></p>
+                  </div>
+                  <div class="login_buttons mt-0">
+                    <button type="button" class="blue_btn2">Continue</button>
+                  </div>
+                </a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="upload-ad-creatives.html">
+                  <img src="images/seller-prints.svg" alt="Seller Prints">
+                  <div class="margin_top">
+                    <h3>Seller Prints</h3>
+                    <p class="mb-2">Creative file is sent to seller, cost clearly shown below.</p>
+                    <p class="mb-0"><b>Cost: NGN 20,000/Location</b></p>
+                  </div>
+                  <div class="login_buttons mt-0">
+                    <button type="button" class="blue_btn2">Continue</button>
                   </div>
                 </a>
               </li>
             </ul>
-            <div class="login_buttons login_buttons2">
-              <a href="support-requests.html" class="blue_btn2">Continue</a>
-            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -231,20 +253,6 @@
       });
     });
   </script>
-  <script>
-    $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $('.nav_link').removeClass('active');
-      $(this).toggleClass('active');
-    });
-  </script>
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {
@@ -273,5 +281,12 @@
     })();
   </script>
   <!--======== MOBILE MENU END ========-->
+<!--   <script>
+    $('.nav_link').on('click', function (e) {
+        e.preventDefault();
+        $('.nav_link').removeClass('active');
+        $(this).toggleClass('active');
+    });
+  </script> -->
 </body>
 </html>

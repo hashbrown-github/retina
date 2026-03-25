@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Help</title>
+<title>Support Requests</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -168,34 +168,79 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="choose_option choose_option3">
-            <h1>Please select how you would like to proceed.</h1>
-            <p>You can explore help resources, raise a new support request, or track an existing query.</p>
-            <div class="help_search">
-              <p><a href="#"><b class="blue_txt">Have any questions?</b></a></p>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="help.html">Help</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Support Request</li>
+          </ol>
+          <div class="reports_box">
+            <div class="heading_box">
+              <div class="headLeft">
+                <h3>My Support Request</h3>
+              </div>
+              <div class="headRight">
+                <a href="create-request.html" class="blue_btn">New Request</a>
+              </div>
             </div>
-            <ul>
-              <li class="nav_item">
-                <a class="nav_link" href="contact.html">
-                  <img src="images/contact-support.svg" alt="Contact Support" />
-                  <div class="margin_top">
-                    <h3>Contact Support</h3>
-                    <p class="mb-0">Reach out to us directly for urgent assistance. We aim to respond to all queries as quickly as possible.</p>
-                  </div>
-                </a>
-              </li>
-              <li class="nav_item">
-                <a class="nav_link active" href="support-requests.html">
-                  <img src="images/support-request.svg" alt="Support Request" />
-                  <div class="margin_top">
-                    <h3>Support Request</h3>
-                    <p class="mb-0">Submit a new request describing your issue in detail. Our team will review it and get back to you with a resolution.</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="login_buttons login_buttons2">
-              <a href="support-requests.html" class="blue_btn2">Continue</a>
+            <div class="table_view reports_table hori_scroll">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th width="16%">ID</th>
+                    <th width="31%">Subject</th>
+                    <th width="19%">Last Created</th>
+                    <th width="18%">Last Activity</th>
+                    <th width="16%">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">How can Retinaad help track audience sentiment?</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_1">In Progress</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Getting started with Retinaad</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_5">Solved</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Unable to log into my Retinaad account</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_2">Open</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Chat question from user@gmail.com</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_7">Pending</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Getting started with Retinaad</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_1">In Progress</span></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="support-request-detail.html"><p class="blue_txt">#12345</p></a></td>
+                    <td><p class="blue_txt">Unable to log into my Retinaad account</p></td>
+                    <td><p>Sep 2, 2025</p></td>
+                    <td><p>Oct 3, 2025</p></td>
+                    <td><p><span class="status_type warning_5">Solved</span></p></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="noFoundInner">
+                <img src="images/request-not-found.svg" alt="Not Found" />
+                <h3>No Requests Found!</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -235,13 +280,6 @@
     $('#expand_btn').on('click', function (e) {
       e.preventDefault();
       $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
-      e.preventDefault();
-      $('.nav_link').removeClass('active');
       $(this).toggleClass('active');
     });
   </script>
