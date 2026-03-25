@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <g id="Sites_Condition" data-name="Sites Condition" transform="translate(-376 -246)">
+    <rect id="Rectangle_7018" data-name="Rectangle 7018" width="42" height="42" rx="6" transform="translate(376 246)" fill="#e2edf8"/>
+    <g id="Group_37257" data-name="Group 37257" transform="translate(382 253)">
+      <path id="Path_99612" data-name="Path 99612" d="M38.174,25.311c.245-.442,5.691-10.941,5.691-14.13A6.133,6.133,0,1,0,31.6,11.133c0,3.189,5.495,13.688,5.691,14.13A.492.492,0,0,0,38.174,25.311Zm-3.729-14.13a3.287,3.287,0,1,1,3.287,3.287A3.287,3.287,0,0,1,34.446,11.182Z" transform="translate(-16.833 -5)" fill="#006dd5"/>
+      <path id="Path_99613" data-name="Path 99613" d="M33.687,39.545a.515.515,0,0,0-.442-.245h-.883c-.883,1.815-1.619,3.336-1.962,3.925a1.464,1.464,0,0,1-2.6,0c0-.049-.883-1.717-1.962-3.925H14.7l24.383,9.518Z" transform="translate(-8.224 -22.473)" fill="#006dd5"/>
+      <path id="Path_99614" data-name="Path 99614" d="M18.583,49.7,2,55.195H32.467c.1,0,.147,0,.2-.049Z" transform="translate(-1.754 -27.77)" fill="#006dd5"/>
+      <path id="Path_99615" data-name="Path 99615" d="M6.8,40.5,1.5,49.576l15.405-5.151Z" transform="translate(-1.5 -23.084)" fill="#006dd5"/>
+      <path id="Path_99616" data-name="Path 99616" d="M20.191,17.713a.464.464,0,0,0,.491-.491v-.932a.491.491,0,0,0-.981,0v.932A.492.492,0,0,0,20.191,17.713Z" transform="translate(-10.771 -10.501)" fill="#006dd5"/>
+      <path id="Path_99617" data-name="Path 99617" d="M20.191,10.962a.464.464,0,0,0,.491-.491V9.491a.491.491,0,0,0-.981,0v.981A.492.492,0,0,0,20.191,10.962Z" transform="translate(-10.771 -7.038)" fill="#006dd5"/>
+      <path id="Path_99618" data-name="Path 99618" d="M20.191,24.413a.464.464,0,0,0,.491-.491v-.932a.491.491,0,0,0-.981,0v.932A.492.492,0,0,0,20.191,24.413Z" transform="translate(-10.771 -13.915)" fill="#006dd5"/>
+      <path id="Path_99619" data-name="Path 99619" d="M18.013,30.851a.53.53,0,0,0,.343.147.445.445,0,0,0,.343-.147l1.766-1.717a.486.486,0,0,0-.687-.687L18.357,29.87l-1.423-1.423a.486.486,0,0,0-.687.687Z" transform="translate(-8.937 -16.869)" fill="#006dd5"/>
+    </g>
+  </g>
+</svg>
