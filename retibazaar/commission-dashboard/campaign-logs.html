@@ -1,0 +1,243 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Campaign Logs | Retibazaar</title>
+<meta name="title" content="Dashboard | Retibazaar" />
+<meta name="description" content="Dashboard | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">account_balance_wallet</span>
+                  </div>
+                  <div class="sidebar__text">Commission</div>
+                </a>
+                <span class="active"><a href="by-order.html">By Order</a></span>
+                <span><a href="by-location.html">By Location</a></span>
+                <span><a href="by-seller.html">By Seller</a></span>
+                <span><a href="commission-structure.html">Commission Structure</a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="sec_4 card_body">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="by-order.html">By Orders</a></li>
+                <li class="breadcrumb-item"><a href="order-detail.html">Order Detail</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Campaign Logs</li>
+              </ol>
+            </nav>
+            <div class="sec_6 campaign_logs">
+              <div class="sec_61 mb-20">
+                <div class="sec_611">
+                  <p class="mb-1">Order ID <span class="blue_txt">#123456</span></p>
+                  <h3>The Rise of Advertising</h3>
+                  <p class="mb-0">Uploaded By Media Seller: <b class="blue_txt">John Doe</b></p>
+                </div>
+              </div>
+              <div class="sec_62">
+                <div class="sec_621">
+                  <div class="sec_6211">
+                    <h3>Location Log for Campaign 1</h3>
+                    <ul>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Accepted By Admin</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Seller A Provided PoP for Location ABC</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Campaign Active</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Order Finalised by Admin</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Approved By Seller, Location ID: <span class="blue_txt">#123456</span></b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Request for Order, Order ID: <span class="blue_txt">#123456</span></b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Approved By Admin</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Added</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="sec_622">
+                  <div class="sec_6221">
+                    <h3>Details</h3>
+                    <ul>
+                      <li>
+                        <p><b class="block_txt">Order ID</b><span class="blue_txt">#12345678</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Requested On</b><span>Apr 10, 2025</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Confirmed On</b><span>Apr 12, 2025</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Total Media Sites</b><span>52</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Static Sites / Digital Sites</b><span>32 / 20</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Campaign Start Date</b><span>May 10, 2025</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Campaign End Date</b><span>June 20, 2025</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Campaign Last Status</b><span>Completed</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->

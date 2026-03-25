@@ -1,0 +1,560 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Seller Detail | Retibazaar</title>
+<meta name="title" content="Dashboard | Retibazaar" />
+<meta name="description" content="Dashboard | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">account_balance_wallet</span>
+                  </div>
+                  <div class="sidebar__text">Commission</div>
+                </a>
+                <span><a href="by-order.html">By Order</a></span>
+                <span><a href="by-location.html">By Location</a></span>
+                <span class="active"><a href="by-seller.html">By Seller</a></span>
+                <span><a href="commission-structure.html">Commission Structure</a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="sec_4 card_body">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="by-location.html">By Seller</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Seller Detail</li>
+              </ol>
+            </nav>
+            <div class="campaign_list">
+              <div class="userDtl_head">
+                <div class="profile_box">
+                  <h6 class="text_md text_dark mb-2">John Doe</h6>
+                  <p class="small_p mb-0"><b>Added Date: </b><span>25 Sep, 2025</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="byOrder_box">
+              <div class="card_header card_header4">
+                <ul>
+                  <li>
+                    <img src="images/order-served.svg" alt="Orders" />
+                    <div>
+                      <h3>40</h3>
+                      <p class="mb-0">Total Orders</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="images/active-location.svg" alt="Active Locations" />
+                    <div>
+                      <h3>40</h3>
+                      <p class="mb-0">Active Locations</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="images/blue-card.svg" alt="Commission" />
+                    <div>
+                      <h3>₦5000</h3>
+                      <p class="mb-0">Total Commission Earned (₦)</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="images/red-card.svg" alt="Refunded" />
+                    <div>
+                      <h3>₦4,500</h3>
+                      <p class="mb-0">Refunded Commission</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="byOrder_box">
+              <div class="card_body p-0">
+                <div class="table_view sellerLoc_tbl hori_scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th width="12%">Location ID</th>
+                        <th width="30%">Location Name</th>
+                        <th width="10%">Tier</th>
+                        <th width="12%">Base Rate</th>
+                        <th width="12%">Total Orders</th>
+                        <th width="12%">Commission Earned</th>
+                        <th width="12%">Refunds Done</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td>
+                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-static">Static</span></p>
+                        </td>
+                        <td><p>3</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>30</p></td>
+                        <td><p>₦1200</p></td>
+                        <td><p>₦1200</p></td>
+                      </tr>
+                      <tr>
+                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td>
+                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-digital">Digital</span></p>
+                        </td>
+                        <td><p>5</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>21</p></td>
+                        <td><p>₦1200</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                      <tr>
+                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td>
+                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-static">Static</span></p>
+                        </td>
+                        <td><p>3</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>45</p></td>
+                        <td><p>₦1200</p></td>
+                        <td><p>₦1200</p></td>
+                      </tr>
+                      <tr>
+                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td>
+                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-static">Static</span></p>
+                        </td>
+                        <td><p>4</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>15</p></td>
+                        <td><p>₦1200</p></td>
+                        <td><p>₦1200</p></td>
+                      </tr>
+                      <tr>
+                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td>
+                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-digital">Digital</span></p>
+                        </td>
+                        <td><p>1</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>20</p></td>
+                        <td><p>₦1200</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="byOrder_box">
+              <h3 class="text_md text_dark mb-3">Active Campaigns</h3>
+              <div class="card_body p-0">
+                <div class="table_view sellerLoc_tbl2 hori_scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th width="23%">Campaign Name</th>
+                        <th width="18%">Install Status</th>
+                        <th width="15%">Payout Status</th>
+                        <th width="11%">Total Locations</th>
+                        <th width="14%">Commission Earned</th>
+                        <th width="12%">Refunds Done</th>
+                        <th width="7%">Log</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                        </td>
+                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                        <td><p>34</p></td>
+                        <td><p>₦1200</p></td>
+                        <td><p>--</p></td>
+                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="noCamFound">
+                <h3 class="text_md text_dark mb-0">No Active Campaign Found!</h3>
+              </div>
+            </div>
+            <div class="byOrder_box">
+              <div class="secHead2 align-items-center">
+                <div class="secHead21">
+                  <h4 class="text_dark mb-0">Past Campaigns</h4>
+                </div>
+                <div class="secHead22 icons_tabs">
+                  <ul class="nav nav-tabs campaignTabs2" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">
+                        <span class="material-symbols-outlined">data_table</span>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false" tabindex="-1">
+                        <span class="material-symbols-outlined">bar_chart_4_bars</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="">
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                    <div class="card_body p-0">
+                      <div class="table_view sellerLoc_tbl2 hori_scroll">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th width="23%">Campaign Name</th>
+                              <th width="18%">Install Status</th>
+                              <th width="15%">Payout Status</th>
+                              <th width="11%">Total Locations</th>
+                              <th width="14%">Commission Earned</th>
+                              <th width="12%">Refunds Done</th>
+                              <th width="7%">Log</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                              </td>
+                              <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                              <td><p>23</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p>--</p></td>
+                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                              </td>
+                              <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                              <td><p>56</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p>--</p></td>
+                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                              </td>
+                              <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                              <td><p>32</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p>--</p></td>
+                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                              </td>
+                              <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                              <td><p>54</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p>--</p></td>
+                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                              </td>
+                              <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                              <td><p>12</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p>--</p></td>
+                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                              </td>
+                              <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                              <td><p>23</p></td>
+                              <td><p>--</p></td>
+                              <td><p>₦3000</p></td>
+                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                    <div class="border_box">
+                      <!-- <img src="images/screenshot2.png" alt="" style="width: 800px; max-width: 100%; margin: 0 auto; object-fit: contain;"> -->
+                      <div id="orderLevel_insights"></div>
+                      <div class="secMap_legends pos_unset1">
+                        <div class="pos_unset2">
+                          <p>Buyer Paid<span class="buyer_box"></span></p>
+                          <p>Seller Earnings<span class="seller_box"></span></p>
+                          <p>Commission<span class="commi_box"></span></p>
+                          <p>Refunds<span class="refunds_box"></span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+  am5.ready(function () {
+
+    // Root element
+    var root = am5.Root.new("orderLevel_insights");
+
+    // Apply theme
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    // Chart container
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      layout: root.verticalLayout,
+      paddingLeft: 0,
+      paddingRight: 10,
+      paddingBottom: -15
+    }));
+
+    // Add legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50,
+      layout: root.horizontalLayout
+    }));
+
+    // Data
+    var data = [
+      { campaign: "Campaign 1", paid: 115, earnings: 88, commission: 52, refunds: 17 },
+      { campaign: "Campaign 2", paid: 88, earnings: 64, commission: 77, refunds: 58 },
+      { campaign: "Campaign 3", paid: 115, earnings: 88, commission: 52, refunds: 17 },
+      { campaign: "Campaign 4", paid: 97, earnings: 84, commission: 50, refunds: 70 }
+    ];
+
+    // Create X Axis
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      cellStartLocation: 0.2,
+      cellEndLocation: 0.8,
+      minGridDistance: 10
+    });
+
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "campaign",
+      renderer: xRenderer,
+    }));
+
+    xRenderer.labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    xAxis.data.setAll(data);
+
+    // Create Y Axis
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      strokeOpacity: 0.1
+    });
+
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      renderer: yRenderer
+    }));
+
+    yRenderer.labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87),
+      textAlign: "right"
+    });
+    
+    xAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    yAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    // Helper to create series
+    function makeSeries(name, field, color) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: field,
+        categoryXField: "campaign",
+        clustered: true,
+        fill: am5.color(color),
+        stroke: am5.color(color)
+      }));
+
+      series.columns.template.setAll({
+        width: am5.percent(100), // 🔥 full width of cluster, bars touch each other
+        cornerRadiusTL: 0,
+        cornerRadiusTR: 0,
+        strokeOpacity: 0
+      });
+
+      series.data.setAll(data);
+      legend.data.push(series);
+      series.appear();
+    }
+
+    // Series
+    makeSeries("Buyer Paid", "paid", 0xEFD0A0);
+    makeSeries("Seller Earnings", "earnings", 0xF7A3A3);
+    makeSeries("Commission", "commission", 0x5AAD6E);
+    makeSeries("Refunds", "refunds", 0xBABABA);
+
+    // Animation
+    chart.appear(1000, 100);
+
+  }); // end am5.ready()
+</script>

@@ -1,0 +1,1509 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dashboard | Retibazaar</title>
+<meta name="title" content="Dashboard | Retibazaar" />
+<meta name="description" content="Dashboard | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item active" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">account_balance_wallet</span>
+                  </div>
+                  <div class="sidebar__text">Commission</div>
+                </a>
+                <span><a href="by-order.html">By Order</a></span>
+                <span><a href="by-location.html">By Location</a></span>
+                <span><a href="by-seller.html">By Seller</a></span>
+                <span><a href="commission-structure.html">Commission Structure</a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="sec_1 mt-0">
+            <div class="card_body w-100">
+              <div class="page_head">
+                <h6><span class="material-symbols-outlined">dashboard</span>Dashboard</h6>
+              </div>
+              <div class="card_header3">
+                <ul>
+                  <li class="pb-0">
+                    <div class="img_head">
+                      <img src="images/blue-card.svg" alt="Card" />
+                      <h3>₦25,000</h3>
+                    </div>
+                    <p>Total Commission Earned (₦)</p>
+                    <div id="earned_comm"></div>
+                  </li>
+                  <li class="pb-0">
+                    <div class="img_head">
+                      <img src="images/purple-card.svg" alt="Card" />
+                      <h3>₦25,000</h3>
+                    </div>
+                    <p>Commission This Month (₦)</p>
+                    <div id="month_comm"></div>
+                  </li>
+                  <li class="pb-0">
+                    <div class="img_head">
+                      <img src="images/yellow-card.svg" alt="Card" />
+                      <h3>₦5,000</h3>
+                    </div>
+                    <p>Average Commission Per Order</p>
+                    <div id="order_comm"></div>
+                  </li>
+                  <li class="pb-0">
+                    <div class="img_head">
+                      <img src="images/green-location.svg" alt="Card" />
+                      <h3>₦4500 <span class="block_txt">Location ABC</span></h3>
+                    </div>
+                    <p>Highest Commission Location</p>
+                    <div id="highest_comm"></div>
+                  </li>
+                  <li class="pb-0">
+                    <div class="img_head">
+                      <img src="images/red-card.svg" alt="Card" />
+                      <h3>₦4500 <span class="block_txt">John Doe</span></h3>
+                    </div>
+                    <p>Top Seller by Commission</p>
+                    <div id="seller_comm"></div>
+                  </li>
+                  <li class="pb-0">
+                    <div class="img_head">
+                      <img src="images/dark-blue-card.svg" alt="Card" />
+                      <h3>₦4500</h3>
+                    </div>
+                    <p>Refunded Commission</p>
+                    <div id="refund_comm"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="dashboard1 border_box">
+                <div class="secHead2">
+                  <div class="secHead21">
+                    <h3>Commission Trend Over Time</h3>
+                  </div>
+                  <div class="secHead22">
+                    <div class="input_group">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option selected>Months</option>
+                        <option>Year</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="sec_body">
+                  <!-- <img src="images/screenshot1.png" style="width: 1600px; height: 300px; max-width: 100%; margin: 0 auto; object-fit: contain;"> -->
+                  <div id="commission_trend"></div>
+                </div>
+              </div>
+              <div class="dashboard2 border_box">
+                <div class="secHead2">
+                  <div class="secHead21">
+                    <h3>Orders Level Insights</h3>
+                  </div>
+                </div>
+                <div class="dashbd21">
+                  <div class="dashbd211 border_box">
+                    <!-- <img src="images/screenshot2.png" alt="" style="width: 600px; max-width: 100%; margin: 0 auto; object-fit: contain;"> -->
+                    <div class="noFoundInner noFoundInner2" style="display: none;">
+                      <img src="images/data-not-found.svg" alt="Data not Found">
+                      <h3>Data not Found!</h3>
+                    </div>
+                    <div id="orderLevel_insights"></div>
+                    <div class="secMap_legends pos_unset1">
+                      <div class="pos_unset2">
+                        <p>Buyer Paid<span class="buyer_box"></span></p>
+                        <p>Seller Earnings<span class="seller_box"></span></p>
+                        <p>Commission<span class="commi_box"></span></p>
+                        <p>Refunds<span class="refunds_box"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashbd211 border_box">
+                    <div class="secHead2">
+                      <div class="secHead21">
+                        <ul class="nav nav-tabs campaignTabs2" id="myTab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">Highest Commission</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false" tabindex="-1">Highest Refunds</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="secHead22">
+                        <a href="#"><u>View all</u><span class="material-symbols-outlined">trending_flat</span></a>
+                      </div>
+                    </div>
+                    <div class="secBody2">
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                          <div class="card_body p-0">
+                            <div class="table_view comisonTbl hori_scroll">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="20%">Order ID</th>
+                                    <th width="40%">Campaign Name</th>
+                                    <th width="20%">Buyer Name</th>
+                                    <th width="20%">Commission</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                          <div class="card_body p-0">
+                            <div class="table_view comisonTbl hori_scroll">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="20%">Order ID</th>
+                                    <th width="40%">Campaign Name</th>
+                                    <th width="20%">Buyer Name</th>
+                                    <th width="20%">Refunds</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td>
+                                      <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                    </td>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard3 border_box">
+                <div class="secHead2">
+                  <div class="secHead21">
+                    <h3>Location Level Insights</h3>
+                  </div>
+                </div>
+                <div class="dashbd21">
+                  <div class="dashbd211 border_box">
+                    <div class="secHead2">
+                      <div class="secHead21">
+                        <ul class="nav nav-tabs campaignTabs2" id="myTab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" type="button" role="tab" aria-controls="three-tab-pane" aria-selected="true">Highest Commission</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" type="button" role="tab" aria-controls="four-tab-pane" aria-selected="false" tabindex="-1">Highest Refunds</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="secHead22">
+                        <a href="#"><u>View all</u><span class="material-symbols-outlined">trending_flat</span></a>
+                      </div>
+                    </div>
+                    <div class="secBody2">
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="three-tab-pane" role="tabpanel" aria-labelledby="three-tab" tabindex="0">
+                          <div class="card_body p-0">
+                            <div class="table_view comisonTbl hori_scroll">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="20%">Location ID</th>
+                                    <th width="33%">Location Name</th>
+                                    <th width="27%">Campaigns Covered</th>
+                                    <th width="20%">Commission</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>12</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>24</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>14</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>25</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>14</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>25</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="four-tab-pane" role="tabpanel" aria-labelledby="four-tab" tabindex="0">
+                          <div class="card_body p-0">
+                            <div class="table_view comisonTbl hori_scroll">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="20%">Location ID</th>
+                                    <th width="33%">Location Name</th>
+                                    <th width="27%">Campaigns Covered</th>
+                                    <th width="20%">Refunds</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>12</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>24</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>14</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>25</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>14</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="blue_txt">#123456</p></td>
+                                    <td><p>ABC Location</p></td>
+                                    <td><p>25</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashbd211 border_box">
+                    <div class="secHead2">
+                      <div class="secHead21">
+                        <h4>Top 10 Locations</h4>
+                      </div>
+                    </div>
+                    <!-- <img src="images/screenshot3.png" alt="" style="width: 650px; max-width: 100%; margin: 0 auto; object-fit: contain;"> -->
+                    <div id="top10_locations"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard4">
+                <div class="dashbd41">
+                  <div class="dashbd411 border_box">
+                    <div class="secHead2">
+                      <div class="secHead21">
+                        <h3 class="mb-2">Top Performing Clusters</h3>
+                        <ul class="nav nav-tabs campaignTabs2" id="myTab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="five-tab" data-bs-toggle="tab" data-bs-target="#five-tab-pane" type="button" role="tab" aria-controls="five-tab-pane" aria-selected="true">Highest Commission</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="secBody2">
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="five-tab-pane" role="tabpanel" aria-labelledby="five-tab" tabindex="0">
+                          <div class="card_body p-0">
+                            <div class="table_view comisonTbl hori_scroll">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="28%">LGA/Subcluster</th>
+                                    <th width="25%">State</th>
+                                    <th width="22%">Tier</th>
+                                    <th width="25%">Commission Earned</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><p>Ikeja(2_1)</p></td>
+                                    <td><p>Lagos</p></td>
+                                    <td><p>1</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>Ikeja(3_1)</p></td>
+                                    <td><p>Lagos</p></td>
+                                    <td><p>12</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>Ikeja (3_2)</p></td>
+                                    <td><p>Lagos</p></td>
+                                    <td><p>4</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>Ikeja (1_4)</p></td>
+                                    <td><p>Lagos</p></td>
+                                    <td><p>14</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>Ikeja(2_3)</p></td>
+                                    <td><p>Lagos</p></td>
+                                    <td><p>6</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>Ikeja (1_4)</p></td>
+                                    <td><p>Lagos</p></td>
+                                    <td><p>14</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>Ikeja(2_3)</p></td>
+                                    <td><p>Lagos</p></td>
+                                    <td><p>6</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashbd411 border_box">
+                    <div class="secHead2">
+                      <div class="secHead21">
+                        <h3>Commission Split by Media Type</h3>
+                      </div>
+                    </div>
+                    <div class="secBody2">
+                      <div id="media_type"></div>
+                      <div class="secMap_legends pos_unset1">
+                        <div class="pos_unset2">
+                          <p>Static Media<span class="static_box"></span></p>
+                          <p>Digital Media<span class="digital_box"></span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="secHead2 mb-0 mt-3">
+                      <h3>Total Commission: ₦3,750</h3>
+                    </div>
+                  </div>
+                  <div class="dashbd411 dashbd412 border_box p-0">
+                    <div class="secHead2">
+                      <div class="secHead21">
+                        <h3>Distribution Level Insights</h3>
+                      </div>
+                    </div>
+                    <div class="secBody2">
+                      <div id="map_box2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard5">
+                <div class="dashbd21">
+                  <div class="dashbd211 border_box">
+                    <div class="secHead2">
+                      <div class="secHead21">
+                        <h3 class="mb-2">Top Earning Sellers (Commission Contribution)</h3>
+                        <ul class="nav nav-tabs campaignTabs2" id="myTab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="six-tab" data-bs-toggle="tab" data-bs-target="#six-tab-pane" type="button" role="tab" aria-controls="six-tab-pane" aria-selected="true">Highest Commission</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="seven-tab" data-bs-toggle="tab" data-bs-target="#seven-tab-pane" type="button" role="tab" aria-controls="seven-tab-pane" aria-selected="false" tabindex="-1">Highest Refunds</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="secHead22">
+                        <a href="#"><u>View all</u><span class="material-symbols-outlined">trending_flat</span></a>
+                      </div>
+                    </div>
+                    <div class="secBody2">
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="six-tab-pane" role="tabpanel" aria-labelledby="six-tab" tabindex="0">
+                          <div class="card_body p-0">
+                            <div class="table_view comisonTbl hori_scroll">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="25%">Seller Name</th>
+                                    <th width="25%">Total Locations</th>
+                                    <th width="28%">Campaigns Covered</th>
+                                    <th width="22%">Commission</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="seven-tab-pane" role="tabpanel" aria-labelledby="seven-tab" tabindex="0">
+                          <div class="card_body p-0">
+                            <div class="table_view comisonTbl hori_scroll">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="25%">Seller Name</th>
+                                    <th width="25%">Total Locations</th>
+                                    <th width="28%">Campaigns Covered</th>
+                                    <th width="22%">Refunds</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><p>John Doe</p></td>
+                                    <td><p>26</p></td>
+                                    <td><p>30</p></td>
+                                    <td><p>₦3,750</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashbd211 border_box">
+                    <div class="secHead2">
+                      <div class="secHead21">
+                        <h4>Commission Contribution</h4>
+                      </div>
+                    </div>
+                    <!-- <img src="images/screenshot5.png" alt="" style="width: 600px; max-width: 100%; margin: 0 auto; object-fit: contain;"> -->
+                    <div id="commission_contribution"></div>
+                    <div class="secMap_legends pos_unset1">
+                      <div class="pos_unset2">
+                        <p>Buyer Paid<span class="buyer_box"></span></p>
+                        <p>Seller Earnings<span class="seller_box"></span></p>
+                        <p>Commission<span class="commi_box"></span></p>
+                        <p>Refunds<span class="refunds_box"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+  const map_box2 = new mapboxgl.Map({
+    container: 'map_box2',
+    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+    // style: 'mapbox://styles/meridian0/clhhjph1m01dv01pn7p7oh8ns',
+    style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+    center: [8.141140, 9.611302],
+    zoom: 5
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+<script>
+  am5.ready(function () {
+
+    // Create root
+    var root = am5.Root.new("earned_comm");
+
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    // Create chart
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      paddingLeft: 0,
+      paddingTop: -10,
+      paddingRight: -18,
+      paddingBottom: -18,
+    }));
+
+    // Cursor
+    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+      behavior: "none"
+    }));
+    cursor.lineY.set("visible", false);
+    cursor.lineX.set("visible", false);
+
+    // X Axis (Category for months)
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "month",
+      renderer: am5xy.AxisRendererX.new(root, {})
+    }));
+
+    // Hide X axis
+    xAxis.get("renderer").labels.template.setAll({ visible: false });
+    xAxis.get("renderer").grid.template.setAll({ visible: false });
+    xAxis.get("renderer").ticks.template.setAll({ visible: false });
+
+    // Y Axis
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      renderer: am5xy.AxisRendererY.new(root, {})
+    }));
+
+    // Hide Y axis
+    yAxis.get("renderer").labels.template.setAll({ visible: false });
+    yAxis.get("renderer").grid.template.setAll({ visible: false });
+    yAxis.get("renderer").ticks.template.setAll({ visible: false });
+
+    // Define line color
+    var lineColor = am5.color(0x016DD5);
+
+    // Series
+    var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+      xAxis: xAxis,
+      yAxis: yAxis,
+      categoryXField: "month",
+      valueYField: "value",
+      tensionX: 1,
+      stroke: lineColor,
+      tooltip: am5.Tooltip.new(root, {
+        labelText: "{valueY}"
+      })
+    }));
+
+    // Style the line
+    series.strokes.template.setAll({
+      strokeWidth: 2,
+      stroke: lineColor,
+      strokeOpacity: 1
+    });
+
+
+    // Gradient area fill
+    series.fills.template.setAll({
+      visible: true,
+      fillGradient: am5.LinearGradient.new(root, {
+        rotation: 90,
+        stops: [
+          { color: am5.color(0x016DD5), opacity: 0.2 },
+          { color: am5.color(0x016DD5), opacity: 0 }
+        ]
+      })
+    });
+
+    // Data
+    var data = [
+      { month: "Jan", value: 30 },
+      { month: "Feb", value: 70 },
+      { month: "Mar", value: 125 },
+      { month: "Apr", value: 35 },
+      { month: "May", value: 90 },
+      { month: "Jun", value: 70 },
+      { month: "July", value: 130 },
+      { month: "Aug", value: 50 },
+      { month: "Sep", value: 90 },
+      { month: "Oct", value: 40 }
+    ];
+
+    xAxis.data.setAll(data);
+    series.data.setAll(data);
+
+    // Animation
+    series.appear(1000);
+    chart.appear(1000, 100);
+
+  });
+</script>
+
+<script>
+  am5.ready(function () {
+    var root = am5.Root.new("commission_trend");
+
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    // Create chart
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      paddingLeft: 0,
+      paddingBottom: 0,
+      layout: root.verticalLayout
+    }));
+
+    // Create X Axis
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "month",
+      renderer: am5xy.AxisRendererX.new(root, {
+        minGridDistance: 40
+      })
+    }));
+
+    xAxis.get("renderer").labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    // Create Y Axis
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      renderer: am5xy.AxisRendererY.new(root, {})
+    }));
+
+    yAxis.get("renderer").labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    xAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+    
+    yAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    // Define line color
+    var lineColor = am5.color(0x016DD5);
+
+    // Add series
+    var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+      name: "Users",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value",
+      categoryXField: "month",
+      tensionX: 1,
+      tensionY: 0,
+      stroke: lineColor,
+      tooltip: am5.Tooltip.new(root, {
+        labelText: "{valueY}"
+      })
+    }));
+
+    // Style the line
+    series.strokes.template.setAll({
+      strokeWidth: 2,
+      stroke: lineColor,
+      strokeOpacity: 1
+    });
+
+
+    // Add scrollbar
+    chart.set("scrollbarX", am5.Scrollbar.new(root, {
+      orientation: "horizontal"
+    }));
+
+    // Data
+    var data = [
+      { month: "Jan", value: 30 },
+      { month: "Feb", value: 70 },
+      { month: "Mar", value: 125 },
+      { month: "Apr", value: 35 },
+      { month: "May", value: 90 },
+      { month: "Jun", value: 70 },
+      { month: "July", value: 130 },
+      { month: "Aug", value: 50 },
+      { month: "Sep", value: 90 },
+      { month: "Oct", value: 40 },
+      { month: "Nov", value: null },
+      { month: "Dec", value: null }
+    ];
+
+    xAxis.data.setAll(data);
+    series.data.setAll(data);
+
+    // Animate on load
+    series.appear(1000);
+    chart.appear(1000, 100);
+
+  });
+</script>
+
+<script>
+  am5.ready(function () {
+    var root = am5.Root.new("media_type");
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    var chart = root.container.children.push(am5percent.PieChart.new(root, {
+      paddingTop: 10,
+      paddingBottom: 10,
+      layout: root.verticalLayout
+    }));
+
+    var series = chart.series.push(am5percent.PieSeries.new(root, {
+      valueField: "value",
+      categoryField: "category",
+      alignLabels: false
+    }));
+
+    series.slices.template.adapters.add("fill", function (fill, target) {
+      if (target.dataItem.get("category") == "Static Media") {
+        return am5.color(0xfccc50);
+      }
+      else if (target.dataItem.get("category") == "Digital Media") {
+        return am5.color(0x338bdf);
+      }
+      else {
+        return fill;
+      }
+    });
+    series.slices.template.adapters.add("stroke", function (stroke, target) {
+      if (target.dataItem.get("category") == "Static Media") {
+        return am5.color(0xfccc50);
+      }
+      else if (target.dataItem.get("category") == "Digital Media") {
+        return am5.color(0x338bdf);
+      }
+    });
+
+    // Add labels inside slices
+    series.labels.template.setAll({
+      fontSize: 12,
+      fontWeight: 600,
+      text: "{category}: ₦{value}",
+      radius: 10,
+      fill: am5.color(0x777E87)
+    });
+
+    series.ticks.template.setAll({
+      strokeWidth: 1,
+      strokeOpacity: 1,
+      stroke: am5.color(0x777E87),
+      strokeDasharray: [4, 2]
+    });
+
+    series.data.setAll([
+      { value: 7200, category: "Static Media" },
+      { value: 1800, category: "Digital Media" }
+    ]);
+    series.appear(1000, 100);
+  });
+</script>
+
+<script>
+  am5.ready(function () {
+
+    // Root element
+    var root = am5.Root.new("orderLevel_insights");
+
+    // Apply theme
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    // Chart container
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      layout: root.verticalLayout,
+      paddingLeft: 0,
+      paddingRight: 10,
+      paddingBottom: -15
+    }));
+
+    // Add legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50,
+      layout: root.horizontalLayout
+    }));
+
+    // Data
+    var data = [
+      { campaign: "DigitalLagosOrder1", paid: 115, earnings: 88, commission: 52, refunds: 17 },
+      { campaign: "StaticLagosOrder1", paid: 88, earnings: 64, commission: 77, refunds: 58 },
+      { campaign: "DigitalLagosOrder2", paid: 115, earnings: 88, commission: 52, refunds: 17 },
+      { campaign: "DigitalLagosOrder4", paid: 97, earnings: 84, commission: 50, refunds: 70 }
+    ];
+
+    // Create X Axis
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      cellStartLocation: 0.2,
+      cellEndLocation: 0.8,
+      minGridDistance: 10
+    });
+
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "campaign",
+      renderer: xRenderer,
+    }));
+
+    xRenderer.labels.template.setAll({
+      oversizedBehavior: "truncate",
+      maxWidth: 70,
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    xAxis.data.setAll(data);
+
+    // Create Y Axis
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      strokeOpacity: 0.1
+    });
+
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      renderer: yRenderer
+    }));
+
+    yRenderer.labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87),
+      textAlign: "right"
+    });
+    
+    xAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    yAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    // Helper to create series
+    function makeSeries(name, field, color) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: field,
+        categoryXField: "campaign",
+        clustered: true,
+        fill: am5.color(color),
+        stroke: am5.color(color)
+      }));
+
+      series.columns.template.setAll({
+        width: am5.percent(100), // full width of cluster, bars touch each other
+        cornerRadiusTL: 0,
+        cornerRadiusTR: 0,
+        strokeOpacity: 0
+      });
+
+      series.data.setAll(data);
+      legend.data.push(series);
+      series.appear();
+    }
+
+    // Series
+    makeSeries("Buyer Paid", "paid", 0xEFD0A0);
+    makeSeries("Seller Earnings", "earnings", 0xF7A3A3);
+    makeSeries("Commission", "commission", 0x5AAD6E);
+    makeSeries("Refunds", "refunds", 0xBABABA);
+
+    // Animation
+    chart.appear(1000, 100);
+
+  }); // end am5.ready()
+</script>
+
+<script>
+  am5.ready(function () {
+
+    // Root element
+    var root = am5.Root.new("top10_locations");
+
+    // Apply theme
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    // Chart container
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      layout: root.verticalLayout,
+      paddingLeft: 0,
+      paddingRight: 10,
+      paddingBottom: -25
+    }));
+
+    // Add legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50,
+      layout: root.horizontalLayout
+    }));
+
+    // Data
+    var data = [
+      { location: "Location Lagos, Nigeria", commission: 1300},
+      { location: "Loc 2", commission: 670},
+      { location: "Loc 3", commission: 760},
+      { location: "Loc 4", commission: 1390},
+      { location: "Loc 5", commission: 380},
+      { location: "Loc 6", commission: 570},
+      { location: "Loc 7", commission: 780},
+      { location: "Loc 8", commission: 1370},
+      { location: "Loc 9", commission: 560},
+      { location: "Loc 10", commission: 760}
+    ];
+
+    // Create X Axis
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      cellStartLocation: 0.2,
+      cellEndLocation: 0.8,
+      minGridDistance: 10
+    });
+
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "location",
+      renderer: xRenderer,
+    }));
+
+    xRenderer.labels.template.setAll({
+      oversizedBehavior: "truncate",
+      maxWidth: 70,
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    xAxis.data.setAll(data);
+
+    // Create Y Axis
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      strokeOpacity: 0.1
+    });
+
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      renderer: yRenderer
+    }));
+
+    yRenderer.labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87),
+      textAlign: "right"
+    });
+
+    yRenderer.labels.template.adapters.add("text", function (text) {
+      if (text) {
+        return "₦" + text;
+      }
+      return text;
+    });
+    
+    xAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    yAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    // Helper to create series
+    function makeSeries(name, field, color) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: field,
+        categoryXField: "location",
+        clustered: true,
+        fill: am5.color(color),
+        stroke: am5.color(color)
+      }));
+
+      series.columns.template.setAll({
+        width: am5.percent(100), // full width of cluster, bars touch each other
+        cornerRadiusTL: 0,
+        cornerRadiusTR: 0,
+        strokeOpacity: 0
+      });
+
+      series.data.setAll(data);
+      legend.data.push(series);
+      series.appear();
+    }
+
+    // Series
+    makeSeries("Commission", "commission", 0x016DD5);
+
+    // Animation
+    chart.appear(1000, 100);
+
+  }); // end am5.ready()
+</script>
+
+<script>
+  am5.ready(function () {
+
+    // Root element
+    var root = am5.Root.new("commission_contribution");
+
+    // Apply theme
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    // Chart container
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      layout: root.verticalLayout,
+      paddingLeft: 0,
+      paddingRight: 10,
+      paddingBottom: -15
+    }));
+
+    // Add legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50,
+      layout: root.horizontalLayout
+    }));
+
+    // Data
+    var data = [
+      { seller: "Seller Name", paid: 1115, earnings: 888, commission: 552, refunds: 117 },
+      { seller: "Seller 2", paid: 888, earnings: 664, commission: 777, refunds: 558 },
+      { seller: "Seller 3", paid: 1115, earnings: 888, commission: 552, refunds: 117 },
+      { seller: "Seller 4", paid: 997, earnings: 884, commission: 550, refunds: 770 }
+    ];
+
+    // Create X Axis
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      cellStartLocation: 0.2,
+      cellEndLocation: 0.8,
+      minGridDistance: 10
+    });
+
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "seller",
+      renderer: xRenderer,
+    }));
+
+    xRenderer.labels.template.setAll({
+      oversizedBehavior: "truncate",
+      maxWidth: 80,
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    xAxis.data.setAll(data);
+
+    // Create Y Axis
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      strokeOpacity: 0.1
+    });
+
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      renderer: yRenderer
+    }));
+
+    yRenderer.labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87),
+      textAlign: "right"
+    });
+
+    yRenderer.labels.template.adapters.add("text", function (text) {
+      if (text) {
+        return "₦" + text;
+      }
+      return text;
+    });
+    
+    xAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    yAxis.get("renderer").grid.template.setAll({
+      stroke: am5.color(0x777E87),
+      strokeOpacity: 0.3
+    });
+
+    // Helper to create series
+    function makeSeries(name, field, color) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: field,
+        categoryXField: "seller",
+        clustered: true,
+        fill: am5.color(color),
+        stroke: am5.color(color)
+      }));
+
+      series.columns.template.setAll({
+        width: am5.percent(100), // full width of cluster, bars touch each other
+        cornerRadiusTL: 0,
+        cornerRadiusTR: 0,
+        strokeOpacity: 0
+      });
+
+      series.data.setAll(data);
+      legend.data.push(series);
+      series.appear();
+    }
+
+    // Series
+    makeSeries("Buyer Paid", "paid", 0xEFD0A0);
+    makeSeries("Seller Earnings", "earnings", 0xF7A3A3);
+    makeSeries("Commission", "commission", 0x5AAD6E);
+    makeSeries("Refunds", "refunds", 0xBABABA);
+
+    // Animation
+    chart.appear(1000, 100);
+
+  }); // end am5.ready()
+</script>

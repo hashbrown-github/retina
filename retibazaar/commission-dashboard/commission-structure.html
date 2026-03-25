@@ -1,0 +1,329 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Commission Structure | Retibazaar</title>
+<meta name="title" content="Dashboard | Retibazaar" />
+<meta name="description" content="Dashboard | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">account_balance_wallet</span>
+                  </div>
+                  <div class="sidebar__text">Commission</div>
+                </a>
+                <span><a href="by-order.html">By Order</a></span>
+                <span><a href="by-location.html">By Location</a></span>
+                <span><a href="by-seller.html">By Seller</a></span>
+                <span class="active"><a href="commission-structure.html">Commission Structure</a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_container">
+          <div class="sec_4 card_body">
+            <div class="page_head">
+              <h6><span class="material-symbols-outlined">account_balance_wallet</span>Commission Structure</h6>
+            </div>
+            <div class="card_header card_header4">
+              <ul>
+                <li>
+                  <img src="images/total-lga.svg" alt="LGAs" />
+                  <div>
+                    <h3>100</h3>
+                    <p class="mb-0">Total LGAs</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/tier.svg" alt="Tier" />
+                  <div>
+                    <h3>5</h3>
+                    <p class="mb-0">Tier Distribution (4 Tiers + 1 Override Tier)</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="images/lga-overridden.svg" alt="LGA Overridden" />
+                  <div>
+                    <h3>5</h3>
+                    <p class="mb-0">LGA Manually Overridden</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="filter_box mt-20">
+              <div class="filter_box1 order_filters">
+                <div class="filter_div filter_div1">
+                  <div class="input_group">
+                    <div class="search_box">
+                      <input class="form_control" type="text" placeholder="Search by seller" />
+                      <button type="button" class="searchIcon"><span class="material-symbols-outlined">search</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter_div filter_div2">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>LGA</option>
+                      <option>LGA 1</option>
+                      <option>LGA 2</option>
+                      <option>LGA 3</option>
+                      <option>LGA 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div3">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>Tier</option>
+                      <option>Tier 1</option>
+                      <option>Tier 2</option>
+                      <option>Tier 3</option>
+                      <option>Tier 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div4">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected disabled>Override</option>
+                      <option>All</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
+              </div>
+            </div>
+            <div class="byOrder_box">
+              <div class="card_body p-0">
+                <div class="table_view lga_tbl hori_scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th width="20%">LGA Name</th>
+                        <th width="15%">Tier Assigned</th>
+                        <th width="17%">Default Commission(%)</th>
+                        <th width="17%">Current Applied Commission(%)</th>
+                        <th width="16%">Override Status</th>
+                        <th width="15%">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><p class="blue_txt">Lagos Mainland</p></td>
+                        <td><p>Tier 1</p></td>
+                        <td><p>70%</p></td>
+                        <td><p>20%</p></td>
+                        <td><p>No</p></td>
+                        <td>
+                          <div class="overrideBox">
+                            <p><button type="button" class="media_txt" data-bs-toggle="modal" data-bs-target="#overrideModal">Override</button></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p class="blue_txt">Ikeja</p></td>
+                        <td><p>Tier 3</p></td>
+                        <td><p>50%</p></td>
+                        <td><p>18%</p></td>
+                        <td><p>Yes</p></td>
+                        <td>
+                          <div class="overrideBox">
+                            <p><button type="button" class="blueBtn" data-bs-toggle="modal" data-bs-target="#overrideModal">Edit</button> | <button type="button" class="blueBtn">Reset</button></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p class="blue_txt">Abuja Central</p></td>
+                        <td><p>Tier 4</p></td>
+                        <td><p>20%</p></td>
+                        <td><p>20%</p></td>
+                        <td><p>No</p></td>
+                        <td>
+                          <div class="overrideBox">
+                            <p><button type="button" class="media_txt" data-bs-toggle="modal" data-bs-target="#overrideModal">Override</button></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p class="blue_txt">Kano City</p></td>
+                        <td><p>Tier 2</p></td>
+                        <td><p>10%</p></td>
+                        <td><p>12%</p></td>
+                        <td><p>Yes</p></td>
+                        <td>
+                          <div class="overrideBox">
+                            <p><button type="button" class="blueBtn" data-bs-toggle="modal" data-bs-target="#overrideModal">Edit</button> | <button type="button" class="blueBtn">Reset</button></p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--======== APPROVE PAYMENT MODAL START =======-->
+          <div class="modal fade" id="overrideModal" tabindex="-1" role="dialog" aria-labelledby="overrideLabelModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title modal_h" id="overrideLabelModal">Override Commision for LGA</h5>
+                  <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="modal_body">
+                    <p class="mb-3">Set Discount Commission for <b>Lagos Mainland</b></p>
+                    <div class="col-12 col-sm-12">
+                      <div class="input_group mb-3">
+                        <input type="text" class="form_control" placeholder="Please enter a valid amount (%)" />
+                      </div>
+                    </div>
+                    <p class="small_p mb-2">Enter the percentage of seller discount that the platform will keep as commission. The remaining portion will be passed on to buyers as visible discount.</p>
+                    <p class="small_p grey_txt mb-0"><i>E.g., If seller gives 10% discount and you set 70%, platform keeps 7% as commission and buyer sees 3% discount.</i></p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
