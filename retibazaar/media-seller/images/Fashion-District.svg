@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Fashion_District" data-name="Fashion District" transform="translate(-381 -1132)">
+    <rect id="Rectangle_7018" data-name="Rectangle 7018" width="40" height="40" rx="2" transform="translate(381 1132)" fill="#e2edf8"/>
+    <g id="ClothingStore" transform="translate(389.49 1140.489)">
+      <path id="Path_28303" data-name="Path 28303" d="M31.429,18v.959a1.918,1.918,0,1,1-3.837,0V18H21.837L18,19.17v7.635l5.045-.834a13.634,13.634,0,0,0,1.506,2.58h9.928a13.347,13.347,0,0,0,1.554-2.7l4.988,1V19.17L37.184,18Z" transform="translate(-18 -18)" fill="#016dd5"/>
+      <path id="Path_28304" data-name="Path 28304" d="M24.7,31A13.818,13.818,0,0,0,22,39.249v2.3H37.347v-2.3A13.818,13.818,0,0,0,34.642,31Z" transform="translate(-18.163 -18.53)" fill="#016dd5"/>
+    </g>
+  </g>
+</svg>
