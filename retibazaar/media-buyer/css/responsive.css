@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* CSS Document */
+/* BUYER CSS Document */
 @media (max-width: 1680px) {
 .locDtl_head, .locDtl_body > ul, .activity_body ul {
   gap: 20px;
@@ -267,6 +267,17 @@ header {
   padding: 6px 8px;
 }
 }
+@media (max-width: 1440px) {
+.dash_0 {
+  gap: 20px;
+}
+.dash_1 {
+  width: calc(100% - 390px);
+}
+.paymentTbl_box {
+  margin-top: 30px;
+}
+}
 @media (max-width: 1399px) {
 .filter_div {
   padding-right: 12px;
@@ -311,14 +322,10 @@ header {
   width: 45%;
 }
 .page_11 {
-  width: 320px;
+  width: 360px;
 }
 .page_12 {
-  width: calc(100% - 335px);
-}
-.search_form {
-  gap: 10px;
-  flex-direction: column;
+  width: calc(100% - 375px);
 }
 .page_114 .nav-pills .nav-link {
   padding: 6px 11px;
@@ -338,6 +345,27 @@ header {
 }
 .menu_drop.photo_drop {
   left: -38px;
+}
+.campaign_tabs {
+  margin-top: 30px;
+}
+.card_header ul {
+  gap: 15px;
+}
+.card_header ul li {
+  width: calc(25% - 11.25px);
+}
+.dash_1 {
+  width: calc(100% - 340px);
+}
+.dash_2 {
+  width: 320px;
+}
+.choose_option ul {
+  gap: 40px;
+}
+.choose_option ul li {
+  width: calc(50% - 20px);
 }
 }
 @media (max-width: 1280px) {
@@ -378,6 +406,62 @@ header {
 }
 .page_114 .nav-pills .nav-link {
   padding: 4px 10px;
+}
+.search_filters {
+  margin: 20px 0;
+}
+.locDtl_head {
+  margin-top: 20px;
+}
+.locations_con {
+  margin-top: 20px;
+}
+.campaign_tabs {
+  margin-top: 20px;
+}
+.horiz_cards {
+  margin-top: 20px;
+}
+.preview_dtl31 {
+  gap: 10px;
+}
+.preview_dtl311 {
+  width: calc(50% - 5px);
+}
+#pie_chart, #cohorts_chart {
+  height: 360px;
+}
+.choose_option.choose_option2 ul {
+  gap: 15px;
+}
+.choose_option.choose_option2 ul li {
+  width: calc(33.33% - 10px);
+}
+.card_header ul li {
+  padding: 10px 15px;
+}
+.card_header ul li h3 {
+  font-size: 20px;
+  line-height: 22px;
+}
+.card_header ul li img {
+  width: 40px;
+}
+.dash_1 {
+  width: calc(100% - 320px);
+}
+.dash_2 {
+  width: 300px;
+}
+.sec_62 {
+  gap: 40px;
+}
+.sec_621 {
+  width: calc(70% - 20px);
+}
+.sec_622 {
+  width: calc(30% - 20px);
+  min-width: unset;
 }
 }
 @media (max-width: 1240px) {
@@ -481,6 +565,29 @@ header {
 .page_114 .nav-pills .nav-item {
   width: unset;
 }
+.profile_1 {
+  gap: 40px;
+}
+.chat_box {
+  gap: 20px;
+}
+.chat_box1 {
+  width: calc(100% - 280px);
+  padding: 20px;
+}
+.chat_box2 {
+  width: 260px;
+}
+#pie_chart, #cohorts_chart {
+  height: 300px;
+}
+.next_btn {
+  position: unset;
+  display: inline-block;
+}
+.addLoc_box {
+  margin-top: 25px;
+}
 }
 @media (max-width: 1100px) {
 .secMap_legends {
@@ -494,6 +601,57 @@ header {
 .secMap_legends p {
   font-size: 13px;
   line-height: 15px;
+}
+.locVeri_list .filter_div.filter_1, .locVeri_list .filter_div.filter_3, .locVeri_list .filter_div.filter_4, .m_1540px .filter_div.filter_1, .m_1540px .filter_div.filter_2, .m_1540px .filter_div.filter_3 {
+  width: calc(33.33% - 26px);
+  min-width: unset;
+}
+.card_body2 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.card_body22 {
+  text-align: left;
+}
+.chat_box131 {
+  margin-bottom: 20px;
+}
+.upload_btns {
+  margin: 20px 0;
+}
+.chat_box11 h4 {
+  font-size: 16px;
+  line-height: 22px;
+}
+.chat_box21 {
+  padding: 15px;
+}
+#pie_chart, #cohorts_chart {
+  height: 250px;
+}
+.card_header ul li {
+  padding: 10px;
+  gap: 10px;
+}
+.dash_0 {
+  flex-direction: column;
+  gap: 25px;
+}
+.dash_1 {
+  width: 100%;
+  gap: 25px;
+}
+.dash_2 {
+  width: 100%;
+  flex-direction: row;
+  gap: 20px;
+}
+.card_header ul {
+  flex-wrap: wrap;
+}
+.card_header ul li {
+  width: calc(33.33% - 10px);
 }
 }
 @media (max-width: 991px) {
@@ -526,10 +684,6 @@ header {
 .card_header ul {
   flex-wrap: wrap;
 }
-.card_header ul li {
-  width: calc(50% - 10px);
-  padding: 10px;
-}
 .campaignTabs.nav-tabs .nav-link {
   width: 150px;
 }
@@ -539,6 +693,9 @@ header {
 }
 .contact_left {
   width: 100%;
+}
+.contact_left .headLeft {
+  padding-right: 0;
 }
 .contact_right {
   width: 100%;
@@ -560,6 +717,120 @@ header {
 }
 .choose_option ul li {
   width: calc(50% - 20px);
+}
+.profile_1 {
+  flex-direction: column;
+  gap: 0;
+}
+.profile_11 ul {
+  gap: 15px;
+}
+.profile_11 ul li:first-child {
+  padding-bottom: 15px;
+}
+.profile_11.profile_12 {
+  max-width: 100%;
+  margin-top: 25px;
+  border: 1px solid #dddddd;
+  padding: 15px;
+  border-radius: 3px;
+}
+.profile_11 h3, .profile_2 h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+.defEmail h4 {
+  font-size: 16px;
+  line-height: 22px;
+}
+.changePass1 {
+  margin-top: 30px;
+  padding: 15px;
+  gap: 20px;
+}
+.page_1 {
+  height: unset;
+  flex-direction: column;
+}
+.page_11 {
+  width: 100%;
+  padding-right: 0;
+  height: unset;
+}
+.search_form {
+  flex-direction: row;
+}
+.page_12 {
+  width: 100%;
+  height: 500px;
+}
+.page_1.page_2 {
+  height: unset;
+}
+.poiUser_traffic {
+  max-height: 420px;
+}
+.manager_grid li {
+  width: calc(50% - 7.5px);
+}
+.page_33 {
+  max-height: 550px; 
+}
+.choose_option.choose_option2 ul {
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.choose_option.choose_option2 ul li {
+  width: calc(50% - 10px);
+}
+.p_flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+.p_flex span {
+  margin: 0 !important;
+}
+.loc_count2 {
+  position: unset;
+  margin-top: 10px;
+}
+.breakdownBox {
+  margin-top: 20px;
+}
+.req_box {
+  margin-top: 5px;
+  justify-content: flex-start;
+}
+.border_line {
+  margin: 0 10px;
+}
+.card_header ul li {
+  width: calc(50% - 7.5px);
+  max-width: unset;
+}
+.sec_621 {
+  width: calc(100% - 290px);
+}
+.sec_622 {
+  width: 250px;
+}
+.sec_6211 ul li {
+  padding-bottom: 40px;
+}
+.choose_option {
+  padding: 40px 0;
+}
+.choose_option ul {
+  gap: 30px;
+}
+.choose_option ul li {
+  width: calc(50% - 15px);
+}
+.choose_option ul li img {
+  height: 50px;
 }
 }
 @media (max-width: 960px) {
@@ -589,8 +860,12 @@ header {
   padding: 6px 12px;
   padding-bottom: 4px;
 }
+.campaignTabs.nav-tabs {
+  gap: 10px;
+}
 .campaignTabs.nav-tabs .nav-link {
-  width: 119px;
+  width: unset;
+  min-width: 120px;
 }
 .add_cam0 {
   flex-direction: column;
@@ -613,6 +888,55 @@ header {
 .search_filters.locationsFilter .filter_div.filter_1, .search_filters.locationsFilter .filter_div.filter_21, .search_filters.locationsFilter .filter_div.filter_22, .search_filters.locationsFilter .filter_div.filter_3, .search_filters.locationsFilter .filter_div.filter_4 {
   width: calc(50% - 10px);
 }
+.chat_box {
+  flex-direction: column-reverse;
+}
+.chat_box1, .chat_box2 {
+  width: 100%;
+}
+.preview_dtl31 {
+  flex-direction: column;
+}
+.preview_dtl311 {
+  width: 100%;
+}
+#pie_chart, #cohorts_chart {
+  height: 320px;
+}
+.choose_option.choose_option2 ul li a {
+  padding: 15px;
+}
+.campDtl_2 ul {
+  flex-direction: column;
+}
+.campDtl_2 ul li {
+  width: 100%;
+}
+.sec_62 {
+  gap: 25px;
+  flex-direction: column;
+}
+.sec_621 {
+  width: 100%;
+}
+.sec_622 {
+  width: 100%;
+}
+.sec_6221, .sec_6222 {
+  width: 100%;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  padding: 15px;
+}
+.sec_6222 {
+  margin-top: 20px;
+}
+.insightsByLoc .campaignTabs.nav-tabs .nav-link {
+  width: unset;
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
 }
 @media (max-width: 883px) {
 .report_filters {
@@ -633,6 +957,26 @@ header {
 }
 .pay_methods.campaign_payment ul li img {
   height: 64px;
+}
+.card_header ul li {
+  width: calc(50% - 7.5px);
+  max-width: unset;
+}
+.search_filters.camFilter {
+  gap: 15px;
+}
+.camFilter .filter_div.filter_1, .camFilter .filter_div.filter_3, .camFilter .filter_div.filter_4, .m_1540px .filter_div.filter_1, .m_1540px .filter_div.filter_2, .m_1540px .filter_div.filter_3 {
+  width: calc(50% - 7.5px);
+}
+.border_line {
+  display: none;
+}
+.profile_info {
+  flex-wrap: wrap;
+  gap: 5px 10px;
+}
+.profile_info p:nth-child(1), .profile_info p:nth-child(3) {
+  width: 100%;
 }
 }
 @media (max-width: 767px) {
@@ -661,7 +1005,8 @@ header {
   margin-top: 30px;
 }
 .authen_sc13 {
-  display: none;
+  position: unset;
+  margin-top: 30px;
 }
 .tabs_left {
   width: 260px;
@@ -680,6 +1025,7 @@ header {
   width: calc(50% - 10px);
 }
 /*====== MOBILE SIDEBAR CSS START =====*/
+
 .sidebar_header {
   padding: 15px 30px;
   justify-content: space-between;
@@ -861,10 +1207,6 @@ header {
 .option_or {
   margin: 15px 0;
 }
-.campaignTabs.nav-tabs .nav-link {
-  width: unset;
-  padding: 0 15px 10px;
-}
 .campaign_cards ul li {
   width: 100%;
 }
@@ -947,10 +1289,62 @@ header {
 .manager_grid.manager_list li {
   gap: 15px;
 }
+.profile_11.profile_12 ul li > p, .profile_2 > p {
+  font-size: 14px;
+  line-height: 18px;
+}
+.changePass1 {
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.choose_option h1 {
+  font-size: 22px;
+  line-height: 30px;
+}
+.choose_option.choose_option2 ul li {
+  width: 100%;
+}
+.files_flex2 .files_box {
+  gap: 0;
+}
+.files_box h6 {
+  font-size: 13px;
+  line-height: 18px;
+}
+.files_flex2 .files_box img {
+  width: 36px;
+}
+.uploadedImg li:not(:last-child) {
+  width: 50px;
+  height: 45px;
+}
+.files_flex2 {
+  width: 113px;
+}
+.left_dtl {
+  gap: 5px;
+}
+.left_dtl img, .left_dtl video {
+  width: 35px;
+  height: 40px;
+}
+.noCamFound {
+  padding: 30px 15px;
+  text-align: center;
+}
 }
 @media (max-width: 480px) {
 .authen_sec {
   padding: 0 15px;
+}
+.header_inner {
+  padding: 0 15px;
+}
+.mobile_header {
+  gap: 5px;
+}
+.head_part3 {
+  gap: 10px;
 }
 .campaignTabs.nav-tabs .nav-link {
   font-size: 14px;
@@ -971,8 +1365,67 @@ header {
 .search_filters.locationsFilter .filter_div.filter_1, .search_filters.locationsFilter .filter_div.filter_21, .search_filters.locationsFilter .filter_div.filter_22, .search_filters.locationsFilter .filter_div.filter_3, .search_filters.locationsFilter .filter_div.filter_4 {
   width: 100%;
 }
+.introjs-tooltip {
+  min-width: 350px;
+  max-width: 350px;
+}
+.defEmail p {
+  min-width: 340px;
+}
+.preview_dtl1, .preview_dtl3, .headPart, .bodyPart {
+  padding: 15px;
+}
+.head_part h3, .activate_box2 h3, .headLeft h3, .vid_demo1 h3, .preview_dtl3 h3 {
+  font-size: 20px;
+  line-height: 28px;
+}
+#pie_chart, #cohorts_chart {
+  height: 250px;
+}
+.preview_dtl2 ul li {
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.sec_6212 ul li > p {
+  font-size: 14px;
+  line-height: 18px;
+}
+.timeDur_11 {
+  flex-wrap: wrap;
+  padding: 15px;
+}
+.camFilter .filter_div.filter_1, .camFilter .filter_div.filter_3, .camFilter .filter_div.filter_4, .m_1540px .filter_div.filter_1, .m_1540px .filter_div.filter_2, .m_1540px .filter_div.filter_3 {
+  width: 100%;
+}
+.card_header ul li {
+  width: 100%;
+}
+.addLocForm111 {
+  padding: 15px;
+}
 }
 @media (max-width: 430px) {
+.mobile_header img {
+  height: 20px;
+}
+.guide_btn {
+  font-size: 12px;
+  line-height: 14px;
+  padding: 5px 12px;
+}
+.mobile_header button {
+  width: 32px;
+  height: 32px;
+}
+.mobile_header span {
+  font-size: 32px;
+}
+.mobile_header {
+  gap: 0;
+}
+.head_part3 {
+  gap: 8px;
+}
 .locSearch_box0 {
   width: calc(100% - 30px);
   top: 15px;
@@ -984,8 +1437,27 @@ header {
   bottom: 15px;
   width: 280px;
 }
+.defEmail p {
+  min-width: 100%;
+}
+#pie_chart, #cohorts_chart {
+  height: 200px;
+}
+.uploadedImg li:not(:last-child) {
+  width: 40px;
+  height: 40px;
+}
+.files_flex2 {
+  width: 90px;
+}
 }
 @media (max-width: 400px) {
+.mobile_header img {
+  height: 18px;
+}
+.head_part3 {
+  gap: 4px;
+}
 .authen_sec {
   gap: 20px;
 }
@@ -1038,5 +1510,22 @@ header {
 @media (max-width: 360px) {
 .choose_option ul li a {
   padding: 20px;
+}
+.date_box, .msg_box {
+  max-width: 90%;
+}
+#pie_chart, #cohorts_chart {
+  height: 160px;
+}
+.card_header ul li img {
+  width: 30px;
+}
+}
+@media (max-width: 330px) {
+.mobile_header img {
+  height: 17px;
+}
+.guide_btn {
+  padding: 4px 10px;
 }
 }

@@ -348,7 +348,7 @@ document.getElementById('traffic-tab').addEventListener('click', function () {
     });
   // End User Persona
 
-  // Show POI by default on POI tab
+  // Show POI by default  on POI tab
     map.setLayoutProperty('traffic', 'visibility', 'none'); //hide traffic by default
     document.getElementById('food_joints').addEventListener('click', function () {
         var visibility = map.getLayoutProperty('Food-Joints', 'visibility');
@@ -374,7 +374,31 @@ document.getElementById('traffic-tab').addEventListener('click', function () {
             map.setLayoutProperty('Clothing-store', 'visibility', 'none');
         }
     });
-// Show POI by default on POI tab
+// Show POI by default  on POI tab
+
+/* map.on('click', 'Food-Joints', function (e) {
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    const name = e.features[0].properties.Name;
+
+    // Handle wrapped maps (important if zoomed out)
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+
+    new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(`<strong>${name}</strong>`)
+        .addTo(map);
+});
+
+map.on('mouseenter', 'Food-Joints', () => {
+    map.getCanvas().style.cursor = 'pointer';
+});
+
+map.on('mouseleave', 'Food-Joints', () => {
+    map.getCanvas().style.cursor = '';
+});
+ */
 
 const layers = map.getStyle().layers;
     layers.forEach(layer => {
