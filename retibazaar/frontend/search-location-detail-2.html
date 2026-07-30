@@ -580,33 +580,61 @@
     });
 
     const zoomThreshold = 7;
-  const sidebar = document.querySelector(".loc_dtl1");
+    const sidebar = document.querySelector(".loc_dtl1");
 
-  // initial state (sidebar hidden off-screen)
- /*  sidebar.style.marginLeft = "-750px"; */
+    location_map.on("zoomend", function () {
+      const zoomLevel = location_map.getZoom();
+      const screenWidth = window.innerWidth;
+      const isSmallScreen = screenWidth <= 1100;
 
-  location_map.on("zoomend", function () {
-    const zoomLevel = location_map.getZoom();
+      // dynamic margin based on screen width
+      let hiddenMargin = "-750px"; // default
 
-    if (zoomLevel > zoomThreshold) {
-      sidebar.style.marginLeft = "0";
-      sidebar.style.transition = ".5s margin";
-      
-      // resize map after sidebar slides in
-      setTimeout(() => {
-        location_map.resize();
-      }, 400); // match transition duration
-    } else {
-      sidebar.style.marginLeft = "-750px";
-      sidebar.style.transition = "none";
+      if (screenWidth <= 1399 && screenWidth > 1280) {
+        hiddenMargin = "-600px";
+      } else if (screenWidth <= 1280 && screenWidth > 1100) {
+        hiddenMargin = "-548px";
+      } else if (screenWidth <= 1100) {
+        hiddenMargin = "0";
+      }
 
-      // resize map after sidebar slides out
-      setTimeout(() => {
-        location_map.resize();
-      }, 500);
-    }
-  });
+      if (zoomLevel > zoomThreshold) {
+        sidebar.style.marginLeft = "0";
+        sidebar.style.transition = ".5s margin";
+
+        // apply extra styles only for <=1100px
+        if (isSmallScreen) {
+          sidebar.style.maxHeight = "536px";
+          sidebar.style.padding = "20px";
+          sidebar.style.marginBottom = "20px";
+          sidebar.style.transition = ".5s max-height";
+        }
+
+        setTimeout(() => {
+          location_map.resize();
+        }, 400);
+      }
+
+      else {
+        sidebar.style.marginLeft = hiddenMargin; // use dynamic value
+        sidebar.style.transition = "none";
+
+        // reset styles for small screen
+        if (isSmallScreen) {
+          sidebar.style.maxHeight = "0";
+          sidebar.style.padding = "0";
+          sidebar.style.marginBottom = "0";
+          sidebar.style.transition = ".5s max-height";
+        }
+
+        setTimeout(() => {
+          location_map.resize();
+        }, 500);
+      }
+    });
+
   </script>
+
   <!--========= MOBILE MENU SCRIPT START =========-->
   <script>
     (function () {

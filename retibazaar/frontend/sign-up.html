@@ -93,7 +93,12 @@
                   <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="form_field">
                       <label>Password*</label>
-                      <input type="password" name="password" />
+                      <div class="password_box">
+                        <input type="password" name="password" />
+                        <button type="button" class="visibilityIcon">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                      </div>
                       <p class="text_italic">Password must be 8-16 characters long with upper & lowercase letters, numbers, and one special character.</p>
                     </div>
                   </div>
@@ -102,7 +107,12 @@
                   <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="form_field mb-0">
                       <label>Confirm Password*</label>
-                      <input type="password" name="confirmpassword" />
+                      <div class="password_box">
+                        <input type="password" name="confirmpassword" />
+                        <button type="button" class="visibilityIcon">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -160,5 +170,22 @@
     }
   </script>
   <!--======= TOAST SCRIPT END =======-->
+
+  <script>
+    document.querySelectorAll('.visibilityIcon').forEach(button => {
+      button.addEventListener('click', function () {
+        const input = this.previousElementSibling; // the input field
+        const icon = this.querySelector('span');
+
+        if (input.type === 'password') {
+          input.type = 'text';
+          icon.textContent = 'visibility_off';
+        } else {
+          input.type = 'password';
+          icon.textContent = 'visibility';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
