@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Help</title>
+<title>Final Order Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -69,10 +69,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Orders</span>
+              <span class="link_text">Order</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -83,7 +83,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="final-orders.html">
+                  <a class="menu_link active" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -143,7 +143,7 @@
             </a>
           </li>
           <li class="menu_item">
-            <a class="menu_link active" href="help.html">
+            <a class="menu_link" href="help.html">
               <span class="material-symbols-outlined link_icon">inbox</span>
               <span class="link_text">Help</span>
             </a>
@@ -198,34 +198,104 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="choose_option choose_option2">
-            <h1>Please select how you would like to proceed.</h1>
-            <p>You can explore help resources, raise a new support request, or track an existing query.</p>
-            <div class="help_search">
-              <p><a href="#"><b class="blue_txt">Have any questions?</b></a></p>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
+              <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Final Order Detail</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="horiz_cards">
+              <ul>
+                <li class="red_order">
+                  <div class="card_body card_body2">
+                    <div class="card_body21">
+                      <p class="mb-1">ORD-00482</p>
+                      <h3 class="p_flex text-caps mb-2">The Rise of Advertising</h3>
+                      <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>30 Days</span></p>
+                      <p class="mb-0">Locations: <b>10</b> | Payout Cycle: <b>3</b></p>
+                      <div class="pay_status">
+                        <div class="pay_dtl">
+                          <div class="pay_no"><p class="mb-0"><b>0/2</b> Paid</p></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card_body23">
+                      <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
+                      <span class="status_type warning_7">Expired</span>
+                    </div>
+                  </div>
+                  <div class="bottom_body">
+                    <p class="mb-0"><b class="color_p">Expired</b></p>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li class="nav_item">
-                <a class="nav_link" href="contact.html">
-                  <img src="images/contact-support.svg" alt="Contact Support" />
-                  <div class="margin_top">
-                    <h3>Contact Support</h3>
-                    <p class="mb-0">Reach out to us directly for urgent assistance. We aim to respond to all queries as quickly as possible.</p>
-                  </div>
-                </a>
-              </li>
-              <li class="nav_item">
-                <a class="nav_link active" href="support-requests.html">
-                  <img src="images/support-request.svg" alt="Support Request" />
-                  <div class="margin_top">
-                    <h3>Support Request</h3>
-                    <p class="mb-0">Submit a new request describing your issue in detail. Our team will review it and get back to you with a resolution.</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="login_buttons login_buttons2">
-              <a href="support-requests.html" class="blue_btn2">Continue</a>
+            <div class="note_box note_box3 red_noti">
+              <p class="mb-0">
+                <b class="block_txt mb-2"><span class="material-symbols-outlined noti_icon">disabled_by_default</span>Order expired — locations returned to inventory</b>
+                <span class="block_txt">The buyer did not make the first payment within the required window. This order has been cancelled.</span>
+                <span class="block_txt mt-1">Your <b>2 locations</b> have been released back to your inventory and are available for new bookings.</span>
+              </p>
+            </div>
+            <div class="timeDur_1">
+              <h3>Flight Time Duration</h3>
+              <div class="timeDur_11">
+                <div class="timeDur_111">
+                  <h4>Static Screens:</h4>
+                  <p><b>Lagos:</b> 48 hours after order/payment or on campaign start date</p>
+                  <p><b>Outstations:</b> 5 days after order/payment or on campaign start date</p>
+                </div>
+              </div>
+              <div class="timeDur_11">
+                <div class="timeDur_111">
+                  <h4>Digital/LED Screens:</h4>
+                  <p>Immediate deployment after payment or on campaign start date</p>
+                </div>
+              </div>
+              <div class="timeDur_11 mb-0">
+                <div class="timeDur_111">
+                  <h4>Transit Screens:</h4>
+                  <p>7 days after order/payment or on campaign start date</p>
+                </div>
+              </div>
+            </div>
+            <div class="campaign_cards">
+              <ul>
+                <li>
+                  <a href="final-order-locations.html">
+                    <div class="inner_div">
+                      <img src="images/locations.svg" alt="Locations">
+                      <h4>Locations</h4>
+                      <p class="mb-0">Add multiple of location through excel or manually.</p>
+                      <span class="total_count2">
+                        <span class="badge badge-transit">Transit: 15</span>
+                        <span class="badge badge-static">Static: 20</span>
+                        <span class="badge badge-digital">Digital: 30</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="inner_div">
+                      <img src="images/images.svg" alt="Ad Creatives">
+                      <h4>Upload Ad Creatives</h4>
+                      <p class="mb-0">Lorem established fact that a reader content.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="final-order-payment-3.html">
+                    <div class="inner_div">
+                      <img src="images/Payments.svg" alt="Payment">
+                      <h4>Payment Schedule</h4>
+                      <p class="mb-0">View order installment payment schedule.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -263,18 +333,39 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-        e.preventDefault();
-        $('.main_sidebar').toggleClass('small_sidebar');
-        $(this).toggleClass('active');
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
     });
   </script>
   <script>
     $('.nav_link').on('click', function (e) {
       e.preventDefault();
-      $('.nav_link').removeClass('active');
       $(this).toggleClass('active');
     });
   </script>
+  <script>
+    $(document).ready(function(){
+      $(".form-select").click(function (evt) {
+        evt.stopPropagation();
+        $(this).addClass('active');
+        $(".menu_drop").hide();
+        $(this).parent().find(".menu_drop").show();
+        
+      });
+    });
+    $(document).click(function (e) {
+      var container = $(".menu_drop");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.hide();
+    }});
+  </script>
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {

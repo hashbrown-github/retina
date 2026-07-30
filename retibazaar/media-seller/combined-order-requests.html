@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Help</title>
+<title>Order Requests</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -69,21 +69,27 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list">
+          <li class="menu_item inner_list active">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Orders</span>
+              <span class="link_text">Order</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="order-requests.html">
+                  <a class="menu_link active" href="order-requests.html">
                     <span class="link_span">O</span>
                     <span class="link_text">Order Requests</span>
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="final-orders.html">
+                  <a class="menu_link" href="proposal.html">
+                    <span class="link_span">P</span>
+                    <span class="link_text">Proposal</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="combined-final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -143,7 +149,7 @@
             </a>
           </li>
           <li class="menu_item">
-            <a class="menu_link active" href="help.html">
+            <a class="menu_link" href="help.html">
               <span class="material-symbols-outlined link_icon">inbox</span>
               <span class="link_text">Help</span>
             </a>
@@ -198,34 +204,99 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="choose_option choose_option2">
-            <h1>Please select how you would like to proceed.</h1>
-            <p>You can explore help resources, raise a new support request, or track an existing query.</p>
-            <div class="help_search">
-              <p><a href="#"><b class="blue_txt">Have any questions?</b></a></p>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Order Requests</li>
+            </ol>
+          </nav>
+          <div class="campaign_box">
+            <div class="heading_box">
+              <div class="headLeft">
+                <h3>Order Requests</h3>
+              </div>
             </div>
-            <ul>
-              <li class="nav_item">
-                <a class="nav_link" href="contact.html">
-                  <img src="images/contact-support.svg" alt="Contact Support" />
-                  <div class="margin_top">
-                    <h3>Contact Support</h3>
-                    <p class="mb-0">Reach out to us directly for urgent assistance. We aim to respond to all queries as quickly as possible.</p>
-                  </div>
-                </a>
-              </li>
-              <li class="nav_item">
-                <a class="nav_link active" href="support-requests.html">
-                  <img src="images/support-request.svg" alt="Support Request" />
-                  <div class="margin_top">
-                    <h3>Support Request</h3>
-                    <p class="mb-0">Submit a new request describing your issue in detail. Our team will review it and get back to you with a resolution.</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="login_buttons login_buttons2">
-              <a href="support-requests.html" class="blue_btn2">Continue</a>
+            <div class="orderReq_box">
+              <div class="horiz_cards mt-0">
+                <ul>
+                  <li>
+                    <a href="combined-request-order-detail.html">
+                      <div class="card_body">
+                        <p class="mb-1">ORD-00482</p>
+                        <h3 class="text-caps">The Rise of Advertising</h3>
+                        <p class="green_txt mb-2"><span>Aug 05, 2024</span> - <span>Sep 06, 2025</span></p>
+                        <p class="mb-2"><b>Order By: </b><span class="blue_txt">ABC Company</span></p>
+                        <p class="mb-0"><span class="status_type warning_2 black_txt">Expected Payment: <span>₦ 25,000</span></span></p>
+                      </div>
+                      <div class="bottom_body grey_bg">
+                        <p class="mb-0">Media Locations: <span class="bold_txt">50</span></p>
+                        <p class="mb-0">
+                          <span class="badge badge-transit">Transit: 10</span>
+                          <span class="badge badge-static">Static: 20</span>
+                          <span class="badge badge-digital">Digital: 20</span>
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="combined-request-order-detail.html">
+                      <div class="card_body">
+                        <p class="mb-1">ORD-00482</p>
+                        <h3 class="text-caps">The Rise of Advertising</h3>
+                        <p class="green_txt mb-2"><span>Aug 05, 2024</span> - <span>Sep 06, 2025</span></p>
+                        <p class="mb-2"><b>Order By: </b><span class="blue_txt">ABC Company</span></p>
+                        <p class="mb-0"><span class="status_type warning_2 black_txt">Expected Payment: <span>₦ 25,000</span></span></p>
+                      </div>
+                      <div class="bottom_body grey_bg">
+                        <p class="mb-0">Media Locations: <span class="bold_txt">50</span></p>
+                        <p class="mb-0">
+                          <span class="badge badge-transit">Transit: 10</span>
+                          <span class="badge badge-static">Static: 20</span>
+                          <span class="badge badge-digital">Digital: 20</span>
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="combined-request-order-detail.html">
+                      <div class="card_body">
+                        <p class="mb-1">ORD-00482</p>
+                        <h3 class="text-caps">The Rise of Advertising</h3>
+                        <p class="green_txt mb-2"><span>Aug 05, 2024</span> - <span>Sep 06, 2025</span></p>
+                        <p class="mb-2"><b>Order By: </b><span class="blue_txt">ABC Company</span></p>
+                        <p class="mb-0"><span class="status_type warning_2 black_txt">Expected Payment: <span>₦ 25,000</span></span></p>
+                      </div>
+                      <div class="bottom_body grey_bg">
+                        <p class="mb-0">Media Locations: <span class="bold_txt">50</span></p>
+                        <p class="mb-0">
+                          <span class="badge badge-transit">Transit: 10</span>
+                          <span class="badge badge-static">Static: 20</span>
+                          <span class="badge badge-digital">Digital: 20</span>
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="combined-request-order-detail.html">
+                      <div class="card_body">
+                        <p class="mb-1">ORD-00482</p>
+                        <h3 class="text-caps">The Rise of Advertising</h3>
+                        <p class="green_txt mb-2"><span>Aug 05, 2024</span> - <span>Sep 06, 2025</span></p>
+                        <p class="mb-2"><b>Order By: </b><span class="blue_txt">ABC Company</span></p>
+                        <p class="mb-0"><span class="status_type warning_2 black_txt">Expected Payment: <span>₦ 25,000</span></span></p>
+                      </div>
+                      <div class="bottom_body grey_bg">
+                        <p class="mb-0">Media Locations: <span class="bold_txt">50</span></p>
+                        <p class="mb-0">
+                          <span class="badge badge-transit">Transit: 10</span>
+                          <span class="badge badge-static">Static: 20</span>
+                          <span class="badge badge-digital">Digital: 20</span>
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -263,15 +334,8 @@
   </script>
   <script>
     $('#expand_btn').on('click', function (e) {
-        e.preventDefault();
-        $('.main_sidebar').toggleClass('small_sidebar');
-        $(this).toggleClass('active');
-    });
-  </script>
-  <script>
-    $('.nav_link').on('click', function (e) {
       e.preventDefault();
-      $('.nav_link').removeClass('active');
+      $('.main_sidebar').toggleClass('small_sidebar');
       $(this).toggleClass('active');
     });
   </script>

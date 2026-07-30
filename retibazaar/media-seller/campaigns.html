@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Orders</title>
+<title>Campaigns & PoP</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -70,10 +70,10 @@
               <span class="link_text">Bookings</span>
             </a>
           </li>
-          <li class="menu_item inner_list active">
+          <li class="menu_item inner_list">
             <button type="button" class="menu_link" href="javascript:void(0);">
               <span class="material-symbols-outlined link_icon">package_2</span>
-              <span class="link_text">Order</span>
+              <span class="link_text">Orders</span>
             </button>
             <div class="inner_items">
               <ul class="menu_list">
@@ -84,13 +84,7 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="proposal.html">
-                    <span class="link_span">P</span>
-                    <span class="link_text">Proposal</span>
-                  </a>
-                </li>
-                <li class="menu_item mb-0">
-                  <a class="menu_link active" href="combined-final-orders.html">
+                  <a class="menu_link" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -99,7 +93,7 @@
             </div>
           </li>
           <li class="menu_item">
-            <a class="menu_link" href="proof-of-posting.html">
+            <a class="menu_link active" href="proof-of-posting.html">
               <span class="material-symbols-outlined link_icon">outbox</span>
               <span class="link_text">Campaigns & PoP</span>
             </a>
@@ -205,43 +199,37 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
-            </ol>
-          </nav>
           <div class="campaign_box">
             <div class="heading_box">
               <div class="headLeft">
-                <h3>Final Orders</h3>
+                <h3>Campaigns & PoP</h3>
               </div>
             </div>
             <div class="card_header card_header2 mt-0">
               <ul>
                 <li>
-                  <img src="images/order-placed.svg" alt="Orders">
+                  <img src="images/campaign.svg" alt="Campaigns">
                   <div>
                     <h3>10</h3>
-                    <p class="mb-0">Total Orders</p>
+                    <p class="mb-0">All</p>
                   </div>
                 </li>
                 <li>
-                  <img src="images/Pending.svg" alt="Orders">
+                  <img src="images/cancelled.svg" alt="Active">
                   <div>
                     <h3>3</h3>
-                    <p class="mb-0">Campaign Live</p>
+                    <p class="mb-0">Active Campaigns</p>
                   </div>
                 </li>
                 <li>
-                  <img src="images/Paid.svg" alt="Orders">
+                  <img src="images/renewed.svg" alt="Completed">
                   <div>
                     <h3>3</h3>
-                    <p class="mb-0">Awaiting Activation</p>
+                    <p class="mb-0">Completed</p>
                   </div>
                 </li>
                 <li>
-                  <img src="images/expired.svg" alt="Orders">
+                  <img src="images/expired-campaign.svg" alt="Expired">
                   <div>
                     <h3>2</h3>
                     <p class="mb-0">Expired</p>
@@ -255,30 +243,28 @@
                   <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">All</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false" tabindex="-1">Campaign Live</button>
+                  <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false" tabindex="-1">Active</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" type="button" role="tab" aria-controls="three-tab-pane" aria-selected="false" tabindex="-1">Awaiting Activation</button>
+                  <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" type="button" role="tab" aria-controls="three-tab-pane" aria-selected="false" tabindex="-1">Completed</button>
                 </li>
                 <li class="nav-item" role="presentation">
                   <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" type="button" role="tab" aria-controls="four-tab-pane" aria-selected="false" tabindex="-1">Expired</button>
                 </li>
+                
               </ul>
               <div class="tab-content campaignTabs_con" id="myTabContent">
                 <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
                   <div class="notification_box mt-20">
-                    <div class="note_box red_noti">
-                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">disabled_by_default</span><b>1 order expired</b> - buyer did not pay within 4-day window. Your locations have been returned to inventory.</p>
-                    </div>
-                    <div class="note_box ornge_noti">
-                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">credit_card</span><b>Buyer payment pending on 2 orders. Your locations are reserved. Campaign activates once first payment is received.</b></p>
+                    <div class="note_box blue_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">credit_card</span><b>Your locations are active in the campaigns below. You’ll receive payouts as buyer installments are collected.</b></p>
                     </div>
                   </div>
                   <div class="orderReq_box">
                     <div class="horiz_cards">
                       <ul>
-                        <li class="awaiting_order">
-                          <a href="final-order-detail-2.html">
+                        <li class="green_order">
+                          <a href="campaign-detail-2.html">
                             <div class="card_body card_body2">
                               <div class="card_body21">
                                 <p class="mb-1">ORD-00482</p>
@@ -292,22 +278,57 @@
                                       <span class="paymentPend"></span>
                                       <span class="paymentPend"></span>
                                     </div>
-                                    <div class="pay_no"><p class="mb-0"><b>0/3</b> Paid</p></div>
+                                    <div class="pay_no">
+                                      <p class="mb-0"><b>0/3</b> Paid · Estimated Payout: <b>₦16,666</b> on <span>15 Jun 2026</span></p>
+                                    </div>
                                   </div>
                                 </div>
+                                <p class="mt-2 mb-0">Order Status: <span class="status_type warning_1">Pending Seller Response</span></p>
                               </div>
-                              <div class="card_body23">
-                                <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
+                              <div class="card_body23 card_body24">
+                                <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦50,000</span></span></p>
+                                <span class="status_type warning_2 blue_txt">Verification</span>
+                              </div>
+                            </div>
+                            <div class="bottom_body">
+                              <p class="mb-0"><b class="color_p">Campaign Active</b></p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="green_order">
+                          <a href="campaign-detail.html">
+                            <div class="card_body card_body2">
+                              <div class="card_body21">
+                                <p class="mb-1">ORD-00482</p>
+                                <h3 class="p_flex text-caps mb-2">The Rise of Advertising</h3>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>30 Days</span></p>
+                                <p class="mb-0">Locations: <b>10</b> | Payout Cycle: <b>3</b></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPend"></span>
+                                    </div>
+                                    <div class="pay_no">
+                                      <p class="mb-0"><b>2/3</b> Paid · Estimated Payout: <b>₦16,666</b> on <span>15 Jun 2026</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <p class="mt-2 mb-0">Order Status: <span class="status_type warning_3">Partially Responded</span></p>
+                              </div>
+                              <div class="card_body23 card_body24">
+                                <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦50,000</span></span></p>
                                 <span class="status_type warning_1">Pending</span>
                               </div>
                             </div>
                             <div class="bottom_body">
-                              <p class="mb-0"><b class="color_p">Awaiting Activation</b></p>
+                              <p class="mb-0"><b class="color_p">Campaign Active</b></p>
                             </div>
                           </a>
                         </li>
                         <li class="green_order">
-                          <a href="final-order-detail.html">
+                          <a href="campaign-detail.html">
                             <div class="card_body card_body2">
                               <div class="card_body21">
                                 <p class="mb-1">ORD-00482</p>
@@ -319,52 +340,27 @@
                                     <div class="pay_box">
                                       <span class="paymentPaid"></span>
                                       <span class="paymentPaid"></span>
-                                      <span class="paymentPend"></span>
+                                      <span class="paymentPaid"></span>
                                     </div>
-                                    <div class="pay_no"><p class="mb-0"><b>2/3</b> Paid</p></div>
+                                    <div class="pay_no">
+                                      <p class="mb-0"><b>3/3</b> Paid · Estimated Payout: <b>₦16,666</b> on <span>15 Jun 2026</span></p>
+                                    </div>
                                   </div>
                                 </div>
+                                <p class="mt-2 mb-0">Order Status: <span class="status_type warning_5">All Seller Responded</span></p>
                               </div>
-                              <div class="card_body23">
-                                <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
-                                <span class="status_type warning_7">Pay Toady</span>
+                              <div class="card_body23 card_body24">
+                                <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1"><span>All Paid</span></span></p>
+                                <span class="status_type warning_5">Completed</span>
                               </div>
                             </div>
                             <div class="bottom_body">
-                              <p class="mb-0"><b class="color_p">Campaign Live</b></p>
-                            </div>
-                          </a>
-                        </li>
-                        <li class="green_order">
-                          <a href="final-order-detail.html">
-                            <div class="card_body card_body2">
-                              <div class="card_body21">
-                                <p class="mb-1">ORD-00482</p>
-                                <h3 class="p_flex text-caps mb-2">The Rise of Advertising</h3>
-                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>30 Days</span></p>
-                                <p class="mb-0">Locations: <b>10</b> | Payout Cycle: <b>3</b></p>
-                                <div class="pay_status">
-                                  <div class="pay_dtl">
-                                    <div class="pay_box">
-                                      <span class="paymentPaid"></span>
-                                      <span class="paymentPaid"></span>
-                                    </div>
-                                    <div class="pay_no"><p class="mb-0"><b>2/2</b> Paid</p></div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card_body23">
-                                <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
-                                <span class="status_type warning_5">Live</span>
-                              </div>
-                            </div>
-                            <div class="bottom_body">
-                              <p class="mb-0"><b class="color_p">Campaign Live</b></p>
+                              <p class="mb-0"><b class="color_p">Completed</b></p>
                             </div>
                           </a>
                         </li>
                         <li class="red_order">
-                          <a href="final-order-detail-3.html">
+                          <a href="campaign-detail-3.html">
                             <div class="card_body card_body2">
                               <div class="card_body21">
                                 <p class="mb-1">ORD-00482</p>
@@ -373,12 +369,20 @@
                                 <p class="mb-0">Locations: <b>10</b> | Payout Cycle: <b>3</b></p>
                                 <div class="pay_status">
                                   <div class="pay_dtl">
-                                    <div class="pay_no"><p class="mb-0"><b>0/2</b> Paid</p></div>
+                                    <div class="pay_box">
+                                      <span class="paymentExpi"></span>
+                                      <span class="paymentExpi"></span>
+                                      <span class="paymentExpi"></span>
+                                    </div>
+                                    <div class="pay_no">
+                                      <p class="mb-0"><b>0/3</b> Paid</p>
+                                    </div>
                                   </div>
                                 </div>
+                                <p class="mt-2 mb-0">Order Status: <span class="status_type warning_1">Pending Seller Response</span></p>
                               </div>
-                              <div class="card_body23">
-                                <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
+                              <div class="card_body23 card_body24">
+                                <p class="mb-0"><b>₦50,000</b><span class="block_txt red_txt2 mt-1">Due: <span>₦50,000</span></span></p>
                                 <span class="status_type warning_7">Expired</span>
                               </div>
                             </div>
@@ -392,11 +396,48 @@
                   </div>
                 </div>
                 <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                  <div class="notification_box mt-20">
+                    <div class="note_box blue_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">credit_card</span><b>Your locations are active in the campaigns below. You’ll receive payouts as buyer installments are collected.</b></p>
+                    </div>
+                  </div>
                   <div class="orderReq_box">
                     <div class="horiz_cards">
                       <ul>
                         <li class="green_order">
-                          <a href="final-order-detail.html">
+                          <a href="campaign-detail.html">
+                            <div class="card_body card_body2">
+                              <div class="card_body21">
+                                <p class="mb-1">ORD-00482</p>
+                                <h3 class="p_flex text-caps mb-2">The Rise of Advertising</h3>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>30 Days</span></p>
+                                <p class="mb-0">Locations: <b>10</b> | Payout Cycle: <b>3</b></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPend"></span>
+                                      <span class="paymentPend"></span>
+                                      <span class="paymentPend"></span>
+                                    </div>
+                                    <div class="pay_no">
+                                      <p class="mb-0"><b>0/3</b> Paid · Estimated Payout: <b>₦16,666</b> on <span>15 Jun 2026</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <p class="mt-2 mb-0">Order Status: <span class="status_type warning_1">Pending Seller Response</span></p>
+                              </div>
+                              <div class="card_body23 card_body24">
+                                <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦50,000</span></span></p>
+                                <span class="status_type warning_2 blue_txt">Verification</span>
+                              </div>
+                            </div>
+                            <div class="bottom_body">
+                              <p class="mb-0"><b class="color_p">Campaign Active</b></p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="green_order">
+                          <a href="campaign-detail.html">
                             <div class="card_body card_body2">
                               <div class="card_body21">
                                 <p class="mb-1">ORD-00482</p>
@@ -410,45 +451,20 @@
                                       <span class="paymentPaid"></span>
                                       <span class="paymentPend"></span>
                                     </div>
-                                    <div class="pay_no"><p class="mb-0"><b>2/3</b> Paid</p></div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card_body23">
-                                <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
-                                <span class="status_type warning_7">Pay Toady</span>
-                              </div>
-                            </div>
-                            <div class="bottom_body">
-                              <p class="mb-0"><b class="color_p">Campaign Live</b></p>
-                            </div>
-                          </a>
-                        </li>
-                        <li class="green_order">
-                          <a href="final-order-detail.html">
-                            <div class="card_body card_body2">
-                              <div class="card_body21">
-                                <p class="mb-1">ORD-00482</p>
-                                <h3 class="p_flex text-caps mb-2">The Rise of Advertising</h3>
-                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>30 Days</span></p>
-                                <p class="mb-0">Locations: <b>10</b> | Payout Cycle: <b>3</b></p>
-                                <div class="pay_status">
-                                  <div class="pay_dtl">
-                                    <div class="pay_box">
-                                      <span class="paymentPaid"></span>
-                                      <span class="paymentPaid"></span>
+                                    <div class="pay_no">
+                                      <p class="mb-0"><b>2/3</b> Paid · Estimated Payout: <b>₦16,666</b> on <span>15 Jun 2026</span></p>
                                     </div>
-                                    <div class="pay_no"><p class="mb-0"><b>2/2</b> Paid</p></div>
                                   </div>
                                 </div>
+                                <p class="mt-2 mb-0">Order Status: <span class="status_type warning_3">Partially Responded</span></p>
                               </div>
-                              <div class="card_body23">
-                                <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
-                                <span class="status_type warning_5">Live</span>
+                              <div class="card_body23 card_body24">
+                                <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦50,000</span></span></p>
+                                <span class="status_type warning_1">Pending</span>
                               </div>
                             </div>
                             <div class="bottom_body">
-                              <p class="mb-0"><b class="color_p">Campaign Live</b></p>
+                              <p class="mb-0"><b class="color_p">Campaign Active</b></p>
                             </div>
                           </a>
                         </li>
@@ -460,8 +476,8 @@
                   <div class="orderReq_box">
                     <div class="horiz_cards">
                       <ul>
-                        <li class="awaiting_order">
-                          <a href="final-order-detail-2.html">
+                        <li class="green_order">
+                          <a href="campaign-detail.html">
                             <div class="card_body card_body2">
                               <div class="card_body21">
                                 <p class="mb-1">ORD-00482</p>
@@ -471,21 +487,24 @@
                                 <div class="pay_status">
                                   <div class="pay_dtl">
                                     <div class="pay_box">
-                                      <span class="paymentPend"></span>
-                                      <span class="paymentPend"></span>
-                                      <span class="paymentPend"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
                                     </div>
-                                    <div class="pay_no"><p class="mb-0"><b>0/3</b> Paid</p></div>
+                                    <div class="pay_no">
+                                      <p class="mb-0"><b>3/3</b> Paid · Estimated Payout: <b>₦16,666</b> on <span>15 Jun 2026</span></p>
+                                    </div>
                                   </div>
                                 </div>
+                                <p class="mt-2 mb-0">Order Status: <span class="status_type warning_5">All Seller Responded</span></p>
                               </div>
-                              <div class="card_body23">
-                                <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
-                                <span class="status_type warning_1">Pending</span>
+                              <div class="card_body23 card_body24">
+                                <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1"><span>All Paid</span></span></p>
+                                <span class="status_type warning_5">Completed</span>
                               </div>
                             </div>
                             <div class="bottom_body">
-                              <p class="mb-0"><b class="color_p">Awaiting Activation</b></p>
+                              <p class="mb-0"><b class="color_p">Completed</b></p>
                             </div>
                           </a>
                         </li>
@@ -498,7 +517,7 @@
                     <div class="horiz_cards">
                       <ul>
                         <li class="red_order">
-                          <a href="final-order-detail-3.html">
+                          <a href="campaign-detail-3.html">
                             <div class="card_body card_body2">
                               <div class="card_body21">
                                 <p class="mb-1">ORD-00482</p>
@@ -507,12 +526,20 @@
                                 <p class="mb-0">Locations: <b>10</b> | Payout Cycle: <b>3</b></p>
                                 <div class="pay_status">
                                   <div class="pay_dtl">
-                                    <div class="pay_no"><p class="mb-0"><b>0/2</b> Paid</p></div>
+                                    <div class="pay_box">
+                                      <span class="paymentExpi"></span>
+                                      <span class="paymentExpi"></span>
+                                      <span class="paymentExpi"></span>
+                                    </div>
+                                    <div class="pay_no">
+                                      <p class="mb-0"><b>0/3</b> Paid</p>
+                                    </div>
                                   </div>
                                 </div>
+                                <p class="mt-2 mb-0">Order Status: <span class="status_type warning_1">Pending Seller Response</span></p>
                               </div>
-                              <div class="card_body23">
-                                <p class="mb-0">Total Order Amount: <b class="block_txt mt-1">₦50,000</b></p>
+                              <div class="card_body23 card_body24">
+                                <p class="mb-0"><b>₦50,000</b><span class="block_txt red_txt2 mt-1">Due: <span>₦50,000</span></span></p>
                                 <span class="status_type warning_7">Expired</span>
                               </div>
                             </div>
@@ -554,6 +581,12 @@
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "dd-mm-yyyy"
+    });
+  </script>
   <script>
     $(document).ready(function(){
       $('.inner_list').on('click', function(){
@@ -565,6 +598,13 @@
     $('#expand_btn').on('click', function (e) {
       e.preventDefault();
       $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    $('.nav_link').on('click', function (e) {
+      e.preventDefault();
+      $('.nav_link').removeClass('active');
       $(this).toggleClass('active');
     });
   </script>
@@ -596,11 +636,5 @@
     })();
   </script>
   <!--======== MOBILE MENU END ========-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
-  <script>
-    $(".date").datepicker({
-      format: "dd-mm-yyyy"
-    });
-  </script>
 </body>
 </html>
