@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Billing</title>
+<title>Search Location</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -16,16 +16,16 @@
 </head>
 <body>
   <div class="main_body">
-    <aside class="main_sidebar fixed_sidebar">
+    <aside class="main_sidebar fixed_sidebar small_sidebar">
       <div class="sidebar_header">
-        <a href="#"><img src="images/logo.svg" alt="Retitrak" /></a>
-        <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+        <a href="#"><img src="images/logo.svg" alt="RetiBazaar" /></a>
+        <button type="button" class="expand_btn active" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
         <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
       </div>
       <div class="sidebar_menu">
         <ul class="menu_list">
           <li class="menu_item">
-            <a class="menu_link" href="search-location.html">
+            <a class="menu_link active" href="search-location.html">
               <span class="material-symbols-outlined link_icon">travel_explore</span>
               <span class="link_text">Search Location</span>
             </a>
@@ -41,6 +41,12 @@
                   <a class="menu_link" href="order-requests.html">
                     <span class="link_span">O</span>
                     <span class="link_text">Order Requests</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="proposal.html">
+                    <span class="link_span">P</span>
+                    <span class="link_text">Proposal</span>
                   </a>
                 </li>
                 <li class="menu_item mb-0">
@@ -108,7 +114,7 @@
             </div>
           </li>
           <li class="menu_item">
-            <a class="menu_link active" href="billing.html">
+            <a class="menu_link" href="billing.html">
               <span class="material-symbols-outlined link_icon">credit_card</span>
               <span class="link_text">Billing</span>
             </a>
@@ -169,121 +175,124 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
-          <div class="reports_box">
-            <div class="heading_box">
-              <div class="headLeft">
-                <h3>Billing History</h3>
-              </div>
-              <div class="headRight">
-                <div class="input-daterange input-group" id="datepicker">
-                  <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" />
-                  <span class="input-group-addon">-</span>
-                  <input type="text" class="input-sm form-control" name="end" placeholder="End Date" />
-                  <span class="input-group-btn">
-                    <span class="material-symbols-outlined">calendar_month</span>
-                  </span>
+          <div class="page_1">
+            <div class="page_11 box_scroll">
+              <div class="heading_box">
+                <div class="headLeft">
+                  <h3>Ikeja</h3>
+                </div>
+                <div class="headRight">
+                  <a href="#" class="smallBlu_btn">Change State</a>
                 </div>
               </div>
+              <div class="page_111">
+                <img src="images/loc-img.svg" alt="Location" />
+                <p><b>Ikeja</b><span>Population: <b>1,132,383</b> | Rank: <b>35</b></span></p>
+              </div>
+              <!-- <div class="page_112">
+                <h4>What is your campaign goals</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                <ul>
+                  <li class="nav_item">
+                    <a class="nav_link active" href="#">Brand Awareness</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link" href="#">Brand Awareness</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link" href="#">Brand Awareness</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link active" href="#">Brand Awareness</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link" href="#">Brand Awareness</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link" href="#">Brand Awareness</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link" href="#">Brand Awareness</a>
+                  </li>
+                </ul>
+              </div> -->
+              <div class="page_112">
+                <h4>What are your media types?</h4>
+                <ul>
+                  <li class="nav_item">
+                    <a class="nav_link" href="#"><img src="images/billboard.svg" alt="Static">Static</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link" href="#"><img src="images/unipole.svg" alt="Digital">Digital</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link" href="#"><img src="images/bus.svg" alt="Transit">Transit</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_link active" href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Static, Digital and Transit Media"><img src="images/combined.svg" alt="Combined">Combined</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page_112">
+                <h4>Budget</h4>
+                <div class="search_form grey_form">
+                  <div class="search_box">
+                    <div class="input_group mb-0">
+                      <input class="form_control" type="text" name="budget" placeholder="₦ Budget" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page_112">
+                <h4>Campaign Timing</h4>
+                <div class="search_form grey_form">
+                  <div class="search_box">
+                    <div class="input_group">
+                      <div class="date_flex">
+                        <input class="form_control date" type="text" name="startdate" placeholder="Start Date" />
+                        <span class="input-group-btn">
+                          <span class="material-symbols-outlined">calendar_month</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="search_box">
+                    <div class="input_group">
+                      <div class="date_flex">
+                        <input class="form_control date" type="text" name="enddate" placeholder="End Date">
+                        <span class="input-group-btn">
+                          <span class="material-symbols-outlined">calendar_month</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tooltip_head tooltip_head2">
+                  <p class="small_p mb-0">Min. Duration Window for Digital Media</p>
+                  <div class="tooltip_hover1">
+                    <span class="material-symbols-outlined">info</span>
+                    <div class="tooltip_box tooltip_box1">
+                      <p>For combined orders, you can specify the minimum number of days you need for the digital media component. This helps us show you the right digital inventory in your results.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="search_form grey_form">
+                  <div class="search_box">
+                    <div class="input_group mb-0">
+                      <input class="form_control" type="text" name="duration" placeholder="Number of Days" />
+                      <span class="error_msg position-static mt-1" style="display: block;">Minimum days cannot be less then 1 day</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page_113">
+                <a href="#" class="smallBlu_btn">Continue</a>
+              </div>
             </div>
-            <div class="table_view reports_table hori_scroll">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th width="16%">Order ID</th>
-                    <th width="20%">Order Name</th>
-                    <th width="16%">Billing Date</th>
-                    <th width="16%">Billing Amount</th>
-                    <th width="17%">Payment Method</th>
-                    <th width="15%">Invoice</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p class="text-caps">The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p class="text-caps">The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p class="text-caps">The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p class="text-caps">The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p class="text-caps">The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p class="text-caps">The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><p>#456788999</p></td>
-                    <td><p class="text-caps">The Rise of Advertising</p></td>
-                    <td><p>July 25, 2024</p></td>
-                    <td><p>NG 20,000</p></td>
-                    <td><p>Flutterwave</p></td>
-                    <td>
-                      <div class="downBtns">
-                        <button type="button">Download</button>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="page_12">
+              <div class="searchLoc_map">
+                <div id="location_map2"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -312,10 +321,14 @@
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
   <script>
-    $('#datepicker').datepicker({
-      format: 'dd M, yyyy'
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmV0aW5hYWQiLCJhIjoiY20wNmt6anUwMG81NDJyczRoOW0zdmZjbyJ9.xJOw8JwObQUAneO2SmCNqw';
+    const location_map2 = new mapboxgl.Map({
+      container: 'location_map2',
+      style: 'mapbox://styles/retinaad/cm1hd0ap2003g01ph3i6b49u5',
+      center: [8.141140, 9.611302],
+      zoom: 5
     });
   </script>
   <script>
@@ -326,11 +339,42 @@
     });
   </script>
   <script>
+    function handleResize() {
+      const sidebar = document.querySelector('.fixed_sidebar');
+      const expandBtn = document.getElementById('expand_btn');
+      if (window.innerWidth <= 767) {
+        sidebar.classList.remove('small_sidebar');
+        expandBtn.classList.remove('active');
+      }
+    }
+    // Run on load
+    window.addEventListener('DOMContentLoaded', handleResize);
+    // Run on resize
+    window.addEventListener('resize', handleResize);
+  </script>
+  <script>
     $('#expand_btn').on('click', function (e) {
-        e.preventDefault();
-        $('.main_sidebar').toggleClass('small_sidebar');
-        $(this).toggleClass('active');
+      e.preventDefault();
+      $('.main_sidebar').toggleClass('small_sidebar');
+      $(this).toggleClass('active');
     });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "dd-mm-yyyy"
+    });
+  </script>
+  <script>
+    $('.nav_link').on('click', function (e) {
+      e.preventDefault();
+      $('.nav_link').removeClass('active');
+      $(this).toggleClass('active');
+    });
+  </script>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
   </script>
   <!--======= MOBILE MENU START =======-->
   <script>
@@ -360,5 +404,27 @@
     })();
   </script>
   <!--======== MOBILE MENU END ========-->
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    $(document).ready(function () {
+      $('.tooltip_hover1 span').click(function (evt) {
+        evt.stopPropagation();
+        $(".tooltip_box1").css({
+          "opacity": "1",
+          "visibility": "visible",
+        });
+      });
+    });
+    $(document).click(function (e) {
+      var container = $(".tooltip_hover1");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $(".tooltip_box1").css({
+          "opacity": "0",
+          "visibility": "hidden",
+        });
+      }
+    });
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
 </body>
 </html>

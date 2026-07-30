@@ -181,7 +181,7 @@
                 <h3>Active Campaigns</h3>
               </div>
             </div>
-            <div class="card_header card_header2 mt-4 mb-0">
+            <div class="card_header card_header2 mt-0">
               <ul>
                 <li>
                   <img src="images/campaign.svg" alt="All">
@@ -213,172 +213,685 @@
                 </li>
               </ul>
             </div>
-            <div class="search_filters camFilter m_1540px">
-              <div class="filter_div filter_1">
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group mb-0">
-                      <select class="form_control">
-                        <option selected disabled>Media Seller</option>
-                        <option>All</option>
-                        <option>Media Seller 1</option>
-                        <option>Media Seller 2</option>
-                        <option>Media Seller 3</option>
-                        <option>Media Seller 4</option>
-                      </select>
+            <div class="campaign_tabs mt-0">
+              <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false" tabindex="-1">Active</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" type="button" role="tab" aria-controls="three-tab-pane" aria-selected="false" tabindex="-1">Payment Due</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" type="button" role="tab" aria-controls="four-tab-pane" aria-selected="false" tabindex="-1">Completed</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="five-tab" data-bs-toggle="tab" data-bs-target="#five-tab-pane" type="button" role="tab" aria-controls="five-tab-pane" aria-selected="false" tabindex="-1">Expired</button>
+                </li>
+              </ul>
+              <div class="tab-content campaignTabs_con" id="myTabContent">
+                <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                  <div class="notification_box mt-20">
+                    <div class="note_box red_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">disabled_by_default</span><b>Installment overdue on 1 campaign. Please pay to avoid campaign suspension.</b></p>
+                    </div>
+                    <div class="note_box ornge_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">alarm</span><b>Installment due soon on 1 campaign. Pay on time to keep your campaign running smoothly.</b></p>
+                    </div>
+                    <div class="note_box blue_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">notifications_unread</span><b>1 campaign is active..</b></p>
+                    </div>
+                  </div>
+                  <div class="search_filters camFilter m_1540px">
+                    <div class="filter_div filter_1">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Media Seller</option>
+                              <option>All</option>
+                              <option>Media Seller 1</option>
+                              <option>Media Seller 2</option>
+                              <option>Media Seller 3</option>
+                              <option>Media Seller 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="startdate" placeholder="Ordered Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_3">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Filter by Status</option>
+                              <option>All</option>
+                              <option>Partially Responded</option>
+                              <option>Pending Seller Response</option>
+                              <option>All Seller Responded</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_6 w-auto">
+                      <button type="button"><img src="images/filters.svg" class="border-0" alt="Filter"></button>
+                    </div>
+                  </div>
+                  <div class="orderReq_box">
+                    <div class="horiz_cards">
+                      <ul>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_1">Proof Pending</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPend"></span>
+                                      <span class="paymentPend"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>1/3</b> Paid · Next: <b>₦33,332 on 15 Jun 2026</b></p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦33,332</span></span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_2 blue_txt">Under Verification</span>
+                                <a href="#" class="badge badge-blue w-auto">View</a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_2">Proof Uploaded (In Progress)</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPend"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>2/3</b> Paid · Next: <b>₦16,666 on 15 Jun 2026</b></p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦16,666</span></span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_1">Payment due soon</span>
+                                <button type="button" class="badge badge-success-solid w-auto">Pay Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_5">Completed (All Verified)</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>3/3</b> Paid · Fully Paid</p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Fully Paid</span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_5">Completed</span>
+                                <a href="#" class="badge badge-blue w-auto">View</a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail-2.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_4">Partially Verified</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentExpi"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>2/3</b> Paid · Next: <b>₦16,666 on 15 Jun 2026</b></p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt red_txt2 mt-1">Due: <span>₦16,666</span></span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_7">Payment overdue</span>
+                                <button type="button" class="badge badge-success-solid w-auto">Pay Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="filter_div filter_2">
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group mb-0">
-                      <div class="date_flex">
-                        <input class="form_control date" type="text" name="startdate" placeholder="Ordered Date">
-                        <span class="input-group-btn">
-                          <span class="material-symbols-outlined">calendar_month</span>
-                        </span>
+                <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                  <div class="notification_box mt-20">
+                    <div class="note_box red_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">disabled_by_default</span><b>Installment overdue on 1 campaign. Please pay to avoid campaign suspension.</b></p>
+                    </div>
+                    <div class="note_box ornge_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">alarm</span><b>Installment due soon on 1 campaign. Pay on time to keep your campaign running smoothly.</b></p>
+                    </div>
+                    <div class="note_box blue_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">notifications_unread</span><b>1 campaign is active..</b></p>
+                    </div>
+                  </div>
+                  <div class="search_filters camFilter m_1540px">
+                    <div class="filter_div filter_1">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Media Seller</option>
+                              <option>All</option>
+                              <option>Media Seller 1</option>
+                              <option>Media Seller 2</option>
+                              <option>Media Seller 3</option>
+                              <option>Media Seller 4</option>
+                            </select>
+                          </div>
+                        </div>
                       </div>
+                    </div>
+                    <div class="filter_div filter_2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="startdate" placeholder="Ordered Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_3">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Filter by Status</option>
+                              <option>All</option>
+                              <option>Partially Responded</option>
+                              <option>Pending Seller Response</option>
+                              <option>All Seller Responded</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_6 w-auto">
+                      <button type="button"><img src="images/filters.svg" class="border-0" alt="Filter"></button>
+                    </div>
+                  </div>
+                  <div class="orderReq_box">
+                    <div class="horiz_cards">
+                      <ul>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_1">Proof Pending</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPend"></span>
+                                      <span class="paymentPend"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>1/3</b> Paid · Next: <b>₦33,332 on 15 Jun 2026</b></p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦33,332</span></span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_2 blue_txt">Under Verification</span>
+                                <a href="#" class="badge badge-blue w-auto">View</a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_2">Proof Uploaded (In Progress)</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPend"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>2/3</b> Paid · Next: <b>₦16,666 on 15 Jun 2026</b></p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦16,666</span></span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_1">Payment due soon</span>
+                                <button type="button" class="badge badge-success-solid w-auto">Pay Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_4">Partially Verified</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentExpi"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>2/3</b> Paid · Next: <b>₦16,666 on 15 Jun 2026</b></p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt red_txt2 mt-1">Due: <span>₦16,666</span></span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_7">Payment overdue</span>
+                                <button type="button" class="badge badge-success-solid w-auto">Pay Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="filter_div filter_3">
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <div class="input_group mb-0">
-                      <select class="form_control">
-                        <option selected disabled>Filter by Status</option>
-                        <option>All</option>
-                        <option>Partially Responded</option>
-                        <option>Pending Seller Response</option>
-                        <option>All Seller Responded</option>
-                      </select>
+                <div class="tab-pane fade" id="three-tab-pane" role="tabpanel" aria-labelledby="three-tab" tabindex="0">
+                  <div class="notification_box mt-20">
+                    <div class="note_box red_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">disabled_by_default</span><b>Installment overdue on 1 campaign. Please pay to avoid campaign suspension.</b></p>
+                    </div>
+                    <div class="note_box ornge_noti">
+                      <p class="small_p mb-0"><span class="material-symbols-outlined noti_icon">alarm</span><b>Installment due soon on 1 campaign. Pay on time to keep your campaign running smoothly.</b></p>
+                    </div>
+                  </div>
+                  <div class="search_filters camFilter m_1540px">
+                    <div class="filter_div filter_1">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Media Seller</option>
+                              <option>All</option>
+                              <option>Media Seller 1</option>
+                              <option>Media Seller 2</option>
+                              <option>Media Seller 3</option>
+                              <option>Media Seller 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="startdate" placeholder="Ordered Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_3">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Filter by Status</option>
+                              <option>All</option>
+                              <option>Partially Responded</option>
+                              <option>Pending Seller Response</option>
+                              <option>All Seller Responded</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_6 w-auto">
+                      <button type="button"><img src="images/filters.svg" class="border-0" alt="Filter"></button>
+                    </div>
+                  </div>
+                  <div class="orderReq_box">
+                    <div class="horiz_cards">
+                      <ul>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_2">Proof Uploaded (In Progress)</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPend"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>2/3</b> Paid · Next: <b>₦16,666 on 15 Jun 2026</b></p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦16,666</span></span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_1">Payment due soon</span>
+                                <button type="button" class="badge badge-success-solid w-auto">Pay Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_4">Partially Verified</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentExpi"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>2/3</b> Paid · Next: <b>₦16,666 on 15 Jun 2026</b></p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt red_txt2 mt-1">Due: <span>₦16,666</span></span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_7">Payment overdue</span>
+                                <button type="button" class="badge badge-success-solid w-auto">Pay Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="filter_div filter_6 w-auto">
-                <button type="button"><img src="images/filters.svg" class="border-0" alt="Filter"></button>
-              </div>
-            </div>
-            <div class="orderReq_box">
-              <div class="horiz_cards">
-                <ul>
-                  <li>
-                    <div class="card_body">
-                      <div class="campaignedit">
-                        <h3 class="p_flex mb-0">The Rise of Advertising<span class="badge badge-digital ms-2">Digital</span></h3>
-                        <div class="locationEdit">
-                          <div class="drop_menu">
-                            <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                            <div class="menu_drop" style="display: none;">
-                              <ul>
-                                <li class="list_item">
-                                  <button type="button" data-bs-toggle="modal" data-bs-target="#requestType"><p>Raise Request</p></button>
-                                </li>
-                              </ul>
+                <div class="tab-pane fade" id="four-tab-pane" role="tabpanel" aria-labelledby="four-tab" tabindex="0">
+                  <div class="search_filters camFilter m_1540px">
+                    <div class="filter_div filter_1">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Media Seller</option>
+                              <option>All</option>
+                              <option>Media Seller 1</option>
+                              <option>Media Seller 2</option>
+                              <option>Media Seller 3</option>
+                              <option>Media Seller 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="startdate" placeholder="Ordered Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <a href="campaign-detail.html">
-                        <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>10 Media Locations</span></p>
-                        <p class="mb-2">Order Status: <span class="status_type warning_6">Proof Pending</span><span class="status_type warning_5 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></span></p>
-                        <p class="p_flex mb-0"><span class="status_type warning_7">Printing Responsibility: Buyer</span><span class="status_type warning_2 black_txt ms-1">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-                        <div class="loc_count2">
-                          <span class="badge badge-success">Approved - <span>20</span></span>
-                          <span class="badge badge-grey">Pending - <span>10</span></span>
-                        </div>
-                      </a>
                     </div>
-                  </li>
-                  <li>
-                    <div class="card_body">
-                      <div class="campaignedit">
-                        <h3 class="p_flex mb-0">The Rise of Advertising<span class="badge badge-static ms-2">Static</span></h3>
-                        <div class="locationEdit">
-                          <div class="drop_menu">
-                            <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                            <div class="menu_drop" style="display: none;">
-                              <ul>
-                                <li class="list_item">
-                                  <button type="button" data-bs-toggle="modal" data-bs-target="#requestType"><p>Raise Request</p></button>
-                                </li>
-                              </ul>
+                    <div class="filter_div filter_3">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Filter by Status</option>
+                              <option>All</option>
+                              <option>Partially Responded</option>
+                              <option>Pending Seller Response</option>
+                              <option>All Seller Responded</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_6 w-auto">
+                      <button type="button"><img src="images/filters.svg" class="border-0" alt="Filter"></button>
+                    </div>
+                  </div>
+                  <div class="orderReq_box">
+                    <div class="horiz_cards">
+                      <ul>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_5">Completed (All Verified)</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                      <span class="paymentPaid"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>3/3</b> Paid · Fully Paid</p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Fully Paid</span></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_5">Completed</span>
+                                <a href="#" class="badge badge-blue w-auto">View</a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="five-tab-pane" role="tabpanel" aria-labelledby="five-tab" tabindex="0">
+                  <div class="search_filters camFilter m_1540px">
+                    <div class="filter_div filter_1">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Media Seller</option>
+                              <option>All</option>
+                              <option>Media Seller 1</option>
+                              <option>Media Seller 2</option>
+                              <option>Media Seller 3</option>
+                              <option>Media Seller 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter_div filter_2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="startdate" placeholder="Ordered Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <a href="campaign-detail.html">
-                        <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>10 Media Locations</span></p>
-                        <p class="mb-2">Order Status: <span class="status_type warning_6">Proof Pending</span><span class="status_type warning_5 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></span></p>
-                        <p class="p_flex mb-0"><span class="status_type warning_7">Printing Responsibility: Buyer</span><span class="status_type warning_2 black_txt ms-1">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-                        <div class="loc_count2">
-                          <span class="badge badge-success">Approved - <span>20</span></span>
-                          <span class="badge badge-grey">Pending - <span>10</span></span>
-                        </div>
-                      </a>
                     </div>
-                  </li>
-                  <li>
-                    <div class="card_body">
-                      <div class="campaignedit">
-                        <h3 class="p_flex mb-0">The Rise of Advertising<span class="badge badge-static ms-2">Static</span></h3>
-                        <div class="locationEdit">
-                          <div class="drop_menu">
-                            <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                            <div class="menu_drop" style="display: none;">
-                              <ul>
-                                <li class="list_item">
-                                  <button type="button" data-bs-toggle="modal" data-bs-target="#requestType"><p>Raise Request</p></button>
-                                </li>
-                              </ul>
-                            </div>
+                    <div class="filter_div filter_3">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group mb-0">
+                            <select class="form_control">
+                              <option selected disabled>Filter by Status</option>
+                              <option>All</option>
+                              <option>Partially Responded</option>
+                              <option>Pending Seller Response</option>
+                              <option>All Seller Responded</option>
+                            </select>
                           </div>
                         </div>
                       </div>
-                      <a href="campaign-detail.html">
-                        <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>10 Media Locations</span></p>
-                        <p class="mb-2">Order Status: <span class="status_type warning_6">Proof Pending</span><span class="status_type warning_5 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></span></p>
-                        <p class="p_flex mb-0"><span class="status_type warning_7">Printing Responsibility: Buyer</span><span class="status_type warning_2 black_txt ms-1">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-                        <div class="loc_count2">
-                          <span class="badge badge-success">Approved - <span>20</span></span>
-                          <span class="badge badge-grey">Pending - <span>10</span></span>
-                        </div>
-                      </a>
                     </div>
-                  </li>
-                  <li>
-                    <div class="card_body">
-                      <div class="campaignedit">
-                        <h3 class="p_flex mb-0">The Rise of Advertising<span class="badge badge-digital ms-2">Digital</span></h3>
-                        <div class="locationEdit">
-                          <div class="drop_menu">
-                            <button type="button" class="form-select"><span class="material-symbols-outlined">more_vert</span></button>
-                            <div class="menu_drop" style="display: none;">
-                              <ul>
-                                <li class="list_item">
-                                  <button type="button" data-bs-toggle="modal" data-bs-target="#requestType"><p>Raise Request</p></button>
-                                </li>
-                              </ul>
+                    <div class="filter_div filter_6 w-auto">
+                      <button type="button"><img src="images/filters.svg" class="border-0" alt="Filter"></button>
+                    </div>
+                  </div>
+                  <div class="orderReq_box">
+                    <div class="horiz_cards">
+                      <ul>
+                        <li>
+                          <div class="card_body card_body2">
+                            <div class="card_body21">
+                              <a href="campaign-detail-2.html">
+                                <p class="mb-1">ORD-00482</p>
+                                <div class="campaignedit">
+                                  <h3 class="p_flex text-caps mb-0">The Rise of Advertising</h3>
+                                </div>
+                                <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+                                <p class="p_flex mb-2">Order Status: <span class="status_type warning_5">Completed (All Verified)</span><span class="status_type warning_7 ms-1">Printing Responsibility: Admin</span></p>
+                                <div class="pay_status">
+                                  <div class="pay_dtl">
+                                    <div class="pay_box">
+                                      <span class="paymentExpi"></span>
+                                      <span class="paymentExpi"></span>
+                                      <span class="paymentExpi"></span>
+                                    </div>
+                                    <div class="pay_no"><p class="mb-0"><b>0/3</b> Paid</p></div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="card_body23 card_body24 card_body25">
+                              <p class="mb-0"><b>₦50,000</b></p>
+                              <div class="card_body231">
+                                <span class="status_type warning_7">Expired</span>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <a href="campaign-detail.html">
-                        <p class="mb-2"><span>Apr 16, 2025</span> - <span>Apr 30, 2025</span> | <span>10 Media Locations</span></p>
-                        <p class="mb-2">Order Status: <span class="status_type warning_6">Proof Pending</span><span class="status_type warning_5 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></span></p>
-                        <p class="p_flex mb-0"><span class="status_type warning_7">Printing Responsibility: Buyer</span><span class="status_type warning_2 black_txt ms-1">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-                        <div class="loc_count2">
-                          <span class="badge badge-success">Approved - <span>20</span></span>
-                          <span class="badge badge-grey">Pending - <span>10</span></span>
-                        </div>
-                      </a>
+                        </li>
+                      </ul>
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -433,7 +946,7 @@
                   <div class="search_form grey_form" id="reason_box">
                     <div class="search_box">
                       <label class="form_label">Reason</label>
-                      <div class="input_group">
+                      <div class="input_group mb-0">
                         <textarea class="form_control" rows="4" name="reason" placeholder="Please provide a reason for pause"></textarea>
                       </div>
                     </div>
@@ -547,7 +1060,6 @@
         $(this).addClass('active');
         $(".menu_drop").hide();
         $(this).parent().find(".menu_drop").show();
-
       });
     });
     $(document).click(function (e) {
@@ -578,7 +1090,5 @@
       });
     });
   </script>
-
 </body>
-
 </html>
