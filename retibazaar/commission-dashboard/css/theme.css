@@ -8218,3 +8218,6 @@ body.dark .sidebar__details .side_dropdown {
 .bg_gradient {
   background: var(--bs-blue);
 }
+.text-caps {
+  text-transform: capitalize;
+}

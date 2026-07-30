@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Order Location Detail | Retibazaar</title>
+<title>Order Detail | Retibazaar</title>
 <meta name="title" content="Dashboard | Retibazaar" />
 <meta name="description" content="Dashboard | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -137,8 +137,7 @@ if (localStorage.getItem('darkMode') === "on") {
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="by-order.html">By Orders</a></li>
-                <li class="breadcrumb-item"><a href="order-detail.html">Order Detail</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Location Detail</li>
+                <li class="breadcrumb-item active" aria-current="page">Order Detail</li>
               </ol>
             </nav>
             <div class="campaign_list">
@@ -146,156 +145,170 @@ if (localStorage.getItem('darkMode') === "on") {
                 <li class="mb-0">
                   <div class="userDtl_head">
                     <div class="profile_box">
-                      <h6 class="text_md text_dark mb-2">5 Joel Ogunnaike St, Ikea GRA<span class="status_type badge-static ms-2">Static</span></h6>
-                      <p class="small_p mb-2">Ikeja, Lagos, Nigeria</p>
-                      <p class="small_p mb-0">
-                        <span class="status_type grey_box">Location ID: <b>#123456</b></span>
+                      <h6 class="text_md text_dark mb-2">The Rise of Advertising<span class="status_type badge-static ms-2">Static</span></h6>
+                      <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span></p>
+                      <p class="small_p p_flex mb-0">
+                        <span class="status_type grey_box">No. of Locations: <b>50</b></span>
+                        <span class="status_type grey_box ms-1">Order Price: <b>₦78,750</b></span>
+                        <span class="status_type grey_box ms-1">Order ID: <b>#12345678</b></span>
                       </p>
+                    </div>
+                    <div class="right_side">
+                      <a href="campaign-logs.html" class="blue_btn">Campaign Logs</a>
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="byOrder_box">
-              <h3 class="text_md text_dark mb-3">Active Campaigns</h3>
-              <div class="card_body p-0">
-                <div class="table_view byOrder_tbl hori_scroll">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th width="17%">Campaign Name</th>
-                        <th width="13%">Install Status</th>
-                        <th width="12%">Payout Status</th>
-                        <th width="11%">Base Rate/month <button type="button" class="info_icon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seller-defined rate (subject to availability & change)"><span class="material-symbols-outlined">info</span></button></th>
-                        <th width="11%">Buyer Paid (Discount)</th>
-                        <th width="11%">Seller Receivable (Discount)</th>
-                        <th width="10%">Commission Earned</th>
-                        <th width="8%">Refunds Done</th>
-                        <th width="7%">Log</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                        </td>
-                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
-                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>--</p></td>
-                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="noCamFound">
-                <h3 class="text_md text_dark mb-0">No Active Campaign Found!</h3>
+              <div class="card_header card_header5">
+                <ul>
+                  <li>
+                    <img src="images/blue-card.svg" alt="Commission">
+                    <div>
+                      <h3>₦25,000</h3>
+                      <p class="mb-0">Commission Expected</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="images/order-placed.svg" alt="VAT">
+                    <div>
+                      <h3>₦5,000</h3>
+                      <p class="mb-0">VAT</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="images/Transaction-Summary.svg" alt="Platform Fee">
+                    <div>
+                      <h3>₦5,000</h3>
+                      <p class="mb-0">Platform Fee</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="images/All-Transactions.svg" alt="Commission">
+                    <div>
+                      <h3>₦148,000</h3>
+                      <p class="mb-0">Total Commission</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="byOrder_box">
-              <h3 class="text_md text_dark mb-3">Past Campaigns</h3>
               <div class="card_body p-0">
                 <div class="table_view byOrder_tbl hori_scroll">
                   <table class="table">
                     <thead>
                       <tr>
-                        <th width="17%">Campaign Name</th>
-                        <th width="13%">Install Status</th>
-                        <th width="12%">Payout Status</th>
-                        <th width="11%">Base Rate/month <button type="button" class="info_icon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seller-defined rate (subject to availability & change)"><span class="material-symbols-outlined">info</span></button></th>
+                        <th width="10%">Location ID</th>
+                        <th width="18%">Location Name</th>
+                        <th width="7%">Tier</th>
+                        <th width="10%">Base Rate</th>
                         <th width="11%">Buyer Paid (Discount)</th>
                         <th width="11%">Seller Receivable (Discount)</th>
-                        <th width="10%">Commission Earned</th>
-                        <th width="8%">Refunds Done</th>
-                        <th width="7%">Log</th>
+                        <th width="9%">Commission Earned</th>
+                        <th width="15%">Verification Status</th>
+                        <th width="9%">Refund Status</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
-                          <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                        </td>
-                        <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
+                        <td><p>3</p></td>
                         <td><p>₦25,000</p></td>
                         <td><p>₦23,750(5%)</p></td>
                         <td><p>₦22,550(10%)</p></td>
                         <td><p>₦1200</p></td>
+                        <td><p><span class="status_type warning_1">Awaiting Proof Pending</span></p></td>
                         <td><p>--</p></td>
-                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                       </tr>
                       <tr>
-                        <td>
-                          <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                        </td>
-                        <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
-                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>--</p></td>
-                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                        </td>
-                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
-                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>--</p></td>
-                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                        </td>
-                        <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
+                        <td><p>3</p></td>
                         <td><p>₦25,000</p></td>
                         <td><p>₦23,750(5%)</p></td>
                         <td><p>₦22,550(10%)</p></td>
                         <td><p>--</p></td>
-                        <td><p>--</p></td>
-                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                        </td>
-                        <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
-                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>--</p></td>
-                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                        </td>
                         <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
-                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                        <td><p><span class="status_type warning_1 ms-1">Refunded</span></p></td>
+                      </tr>
+                      <tr>
+                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
+                        <td><p>3</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>₦23,750(5%)</p></td>
+                        <td><p>₦22,550(10%)</p></td>
+                        <td><p>₦1200</p></td>
+                        <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                      <tr>
+                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
+                        <td><p>3</p></td>
+                        <td><p>₦25,000</p></td>
+                        <td><p>₦23,750(5%)</p></td>
+                        <td><p>₦22,550(10%)</p></td>
+                        <td><p>₦1200</p></td>
+                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                      <tr>
+                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
+                        <td><p>3</p></td>
                         <td><p>₦25,000</p></td>
                         <td><p>₦23,750(5%)</p></td>
                         <td><p>₦22,550(10%)</p></td>
                         <td><p>--</p></td>
-                        <td><p>₦3000</p></td>
-                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                        <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                        <td><p><span class="status_type warning_1 ms-1">Refunded</span></p></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+              </div>
+            </div>
+            <div class="payBreakdown payBreakdown2">
+              <div class="sec_6212 mt-0">
+                <h3>Payment Breakdown</h3>
+                <ul class="mb-0">
+                  <li>
+                    <p><b>Total Buyer Paid</b><span>₦70,000</span></p>
+                  </li>
+                  <li>
+                    <p><b>Total Seller Received</b><span>₦65,000</span></p>
+                  </li>
+                  <li>
+                    <p><b>Refunds</b><span>₦10,000</span></p>
+                  </li>
+                  <li>
+                    <p><b>Commission Expected</b><b>₦25,000</b></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="sec_6212 mt-0">
+                <h3>Commission Overview</h3>
+                <ul class="mb-0">
+                  <li>
+                    <p><b>Commission Earned till Date</b><b>₦15,000</b></p>
+                  </li>
+                  <li>
+                    <p><b>VAT</b><b>₦5,000</b></p>
+                  </li>
+                  <li>
+                    <p><b>Platform Fee</b><b>₦5,000</b></p>
+                  </li>
+                  <li>
+                    <p><b>Payment Gateway Processing Chart</b><b class="danger_1 bg-transparent">- ₦2,000</b></p>
+                  </li>
+                  <li>
+                    <p><b>Total Commission on Orders</b><b>₦148,000</b></p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -317,9 +330,3 @@ if (localStorage.getItem('darkMode') === "on") {
   });
 </script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
-<!--======== TOOLTIP SCRIPT START =======-->
-<script>
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-</script>
-<!--========= TOOLTIP SCRIPT END ========-->

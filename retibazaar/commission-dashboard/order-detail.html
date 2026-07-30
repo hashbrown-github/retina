@@ -145,12 +145,13 @@ if (localStorage.getItem('darkMode') === "on") {
                 <li class="mb-0">
                   <div class="userDtl_head">
                     <div class="profile_box">
-                      <h6 class="text_md text_dark mb-2">The Rise of Advertising<span class="status_type badge-static ms-2">Static</span></h6>
+                      <h6 class="text_md text_dark text-caps mb-2">The Rise of Advertising<span class="status_type badge-static ms-2">Static</span></h6>
                       <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span></p>
                       <p class="small_p p_flex mb-0">
                         <span class="status_type grey_box">No. of Locations: <b>50</b></span>
                         <span class="status_type grey_box ms-1">Order Price: <b>₦78,750</b></span>
                         <span class="status_type grey_box ms-1">Order ID: <b>#12345678</b></span>
+                        <span class="status_type grey_box ms-1">Verification Cycles: <b>3</b></span>
                       </p>
                     </div>
                     <div class="right_side">
@@ -160,155 +161,718 @@ if (localStorage.getItem('darkMode') === "on") {
                 </li>
               </ul>
             </div>
-            <div class="byOrder_box">
-              <div class="card_header card_header5">
-                <ul>
-                  <li>
-                    <img src="images/blue-card.svg" alt="Commission">
-                    <div>
-                      <h3>₦25,000</h3>
-                      <p class="mb-0">Commission Expected</p>
+            <div class="cycle_tabs">
+              <ul class="nav nav-tabs campaignTabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">
+                    <b class="blue_txt">All</b>
+                    <span class="small_p block_txt">3 Cycles</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false" tabindex="-1">
+                    <b class="blue_txt">Cycle 1</b>
+                    <span class="small_p block_txt">(May 12, 2026 - May 30 2026)</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" type="button" role="tab" aria-controls="three-tab-pane" aria-selected="false" tabindex="-1">
+                    <b class="blue_txt">Cycle 2</b>
+                    <span class="small_p block_txt">(May 12, 2026 - May 30 2026)</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" type="button" role="tab" aria-controls="four-tab-pane" aria-selected="false" tabindex="-1">
+                    <b class="blue_txt">Cycle 3</b>
+                    <span class="small_p block_txt">(May 12, 2026 - May 30 2026)</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                  <div class="byOrder_box">
+                    <div class="card_header card_header5">
+                      <ul>
+                        <li>
+                          <div>
+                            <h3 class="blue_txt">₦25,000</h3>
+                            <p class="mb-0">Commission Expected</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="green_txt">₦5,000</h3>
+                            <p class="mb-0">VAT</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="ornge_txt">₦5,000</h3>
+                            <p class="mb-0">Platform Fee (2%)</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="green_txt">₦148,000</h3>
+                            <p class="mb-0">Total Commission</p>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-                  </li>
-                  <li>
-                    <img src="images/order-placed.svg" alt="VAT">
-                    <div>
-                      <h3>₦5,000</h3>
-                      <p class="mb-0">VAT</p>
+                    <div class="note_box blue_noti">
+                      <p class="small_p blue_txt mb-0"><b>All Cycles · 3 Verification Periods</b><span>Commission earned: <b>₦4,830</b> | Commission expected: <b>₦1,421</b> | Missed (failed/pending): <b>₦1,421</b></span></p>
                     </div>
-                  </li>
-                  <li>
-                    <img src="images/Transaction-Summary.svg" alt="Platform Fee">
-                    <div>
-                      <h3>₦5,000</h3>
-                      <p class="mb-0">Platform Fee</p>
+                    <div class="card_body p-0">
+                      <div class="table_view byOrder_tbl hori_scroll">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th width="22%">Location Name/ID</th>
+                              <th width="4%">Tier</th>
+                              <th width="9%">Booked Cycles</th>
+                              <th width="11%">Base Rate/month <button type="button" class="info_icon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seller-defined rate (subject to availability & change)"><span class="material-symbols-outlined">info</span></button></th>
+                              <th width="11%">Buyer Paid (Discount)</th>
+                              <th width="12%">Seller Receivable (Discount)</th>
+                              <th width="8%">Commission Earned</th>
+                              <th width="14%">Verification Status</th>
+                              <th width="9%">Refund Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-static">Static</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>1</p></td>
+                              <td><p>1 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type warning_1">Awaiting Proof Pending</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>4</p></td>
+                              <td><p>2 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>---</p></td>
+                              <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                              <td><p><span class="status_type warning_1 ms-1">Refunded</span></p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-transit">Transit</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>6</p></td>
+                              <td><p>1 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>2</p></td>
+                              <td><p>2 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
-                  </li>
-                  <li>
-                    <img src="images/All-Transactions.svg" alt="Commission">
-                    <div>
-                      <h3>₦148,000</h3>
-                      <p class="mb-0">Total Commission</p>
+                    <div class="payBreakdown payBreakdown2">
+                      <div class="sec_6212 mt-0">
+                        <h3>Payment Breakdown</h3>
+                        <ul class="mb-0">
+                          <li>
+                            <p><b>Total Buyer Paid</b><span>₦70,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Total Seller Received</b><span>₦65,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Refunds</b><span>₦10,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Commission Expected</b><b>₦25,000</b></p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="sec_6212 mt-0">
+                        <h3>Commission Overview</h3>
+                        <ul class="mb-0">
+                          <li>
+                            <p><b>Commission Earned till Date</b><b>₦15,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>VAT</b><b>₦5,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Platform Fee (2%)</b><b>₦5,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Payment Gateway Processing Chart</b><b class="danger_1 bg-transparent">- ₦2,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Total Commission on Orders</b><b>₦148,000</b></p>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="byOrder_box">
-              <div class="card_body p-0">
-                <div class="table_view byOrder_tbl hori_scroll">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th width="10%">Location ID</th>
-                        <th width="18%">Location Name</th>
-                        <th width="7%">Tier</th>
-                        <th width="10%">Base Rate</th>
-                        <th width="11%">Buyer Paid (Discount)</th>
-                        <th width="11%">Seller Receivable (Discount)</th>
-                        <th width="9%">Commission Earned</th>
-                        <th width="15%">Verification Status</th>
-                        <th width="9%">Refund Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
-                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
-                        <td><p>3</p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p><span class="status_type warning_1">Awaiting Proof Pending</span></p></td>
-                        <td><p>--</p></td>
-                      </tr>
-                      <tr>
-                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
-                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
-                        <td><p>3</p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>--</p></td>
-                        <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
-                        <td><p><span class="status_type warning_1 ms-1">Refunded</span></p></td>
-                      </tr>
-                      <tr>
-                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
-                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
-                        <td><p>3</p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
-                        <td><p>--</p></td>
-                      </tr>
-                      <tr>
-                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
-                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
-                        <td><p>3</p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
-                        <td><p>--</p></td>
-                      </tr>
-                      <tr>
-                        <td><a href="order-location-detail.html"><p class="blue_txt">#123456</p></a></td>
-                        <td><p>5 Joel Ogunnaike St, Ikea GRA</p></td>
-                        <td><p>3</p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>₦23,750(5%)</p></td>
-                        <td><p>₦22,550(10%)</p></td>
-                        <td><p>--</p></td>
-                        <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
-                        <td><p><span class="status_type warning_1 ms-1">Refunded</span></p></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="payBreakdown payBreakdown2">
-              <div class="sec_6212 mt-0">
-                <h3>Payment Breakdown</h3>
-                <ul class="mb-0">
-                  <li>
-                    <p><b>Total Buyer Paid</b><span>₦70,000</span></p>
-                  </li>
-                  <li>
-                    <p><b>Total Seller Received</b><span>₦65,000</span></p>
-                  </li>
-                  <li>
-                    <p><b>Refunds</b><span>₦10,000</span></p>
-                  </li>
-                  <li>
-                    <p><b>Commission Expected</b><b>₦25,000</b></p>
-                  </li>
-                </ul>
-              </div>
-              <div class="sec_6212 mt-0">
-                <h3>Commission Overview</h3>
-                <ul class="mb-0">
-                  <li>
-                    <p><b>Commission Earned till Date</b><b>₦15,000</b></p>
-                  </li>
-                  <li>
-                    <p><b>VAT</b><b>₦5,000</b></p>
-                  </li>
-                  <li>
-                    <p><b>Platform Fee</b><b>₦5,000</b></p>
-                  </li>
-                  <li>
-                    <p><b>Payment Gateway Processing Chart</b><b class="danger_1 bg-transparent">- ₦2,000</b></p>
-                  </li>
-                  <li>
-                    <p><b>Total Commission on Orders</b><b>₦148,000</b></p>
-                  </li>
-                </ul>
+                <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                  <div class="byOrder_box">
+                    <div class="card_header card_header5">
+                      <ul>
+                        <li>
+                          <div>
+                            <h3 class="blue_txt">₦25,000</h3>
+                            <p class="mb-0">Commission Expected</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="green_txt">₦5,000</h3>
+                            <p class="mb-0">VAT</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="ornge_txt">₦5,000</h3>
+                            <p class="mb-0">Platform Fee (2%)</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="green_txt">₦148,000</h3>
+                            <p class="mb-0">Total Commission</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="note_box blue_noti">
+                      <p class="small_p blue_txt mb-0"><b>Cycle 1 · 22 Apr - 22 May 2026</b><span>Verified: <b>3</b> | Commission earned: <b>₦4,830</b> | Commission expected: <b>₦1,421</b></span></p>
+                    </div>
+                    <div class="card_body p-0">
+                      <div class="table_view byOrder_tbl hori_scroll">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th width="22%">Location Name/ID</th>
+                              <th width="4%">Tier</th>
+                              <th width="9%">Booked Cycles</th>
+                              <th width="11%">Base Rate/month <button type="button" class="info_icon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seller-defined rate (subject to availability & change)"><span class="material-symbols-outlined">info</span></button></th>
+                              <th width="11%">Buyer Paid (Discount)</th>
+                              <th width="12%">Seller Receivable (Discount)</th>
+                              <th width="8%">Commission Earned</th>
+                              <th width="14%">Verification Status</th>
+                              <th width="9%">Refund Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-static">Static</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>1</p></td>
+                              <td><p>1 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type warning_1">Awaiting Proof Pending</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>4</p></td>
+                              <td><p>2 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>---</p></td>
+                              <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                              <td><p><span class="status_type warning_1 ms-1">Refunded</span></p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-transit">Transit</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>6</p></td>
+                              <td><p>1 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>2</p></td>
+                              <td><p>2 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="payBreakdown payBreakdown2">
+                      <div class="sec_6212 mt-0">
+                        <h3>Payment Breakdown - Cycle 1</h3>
+                        <ul class="mb-0">
+                          <li>
+                            <p><b>Total Buyer Paid</b><span>₦70,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Total Seller Received</b><span>₦65,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Refunds</b><span>₦10,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Commission Expected</b><b>₦25,000</b></p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="sec_6212 mt-0">
+                        <h3>Commission Overview - Cycle 1</h3>
+                        <ul class="mb-0">
+                          <li>
+                            <p><b>Commission Earned till Date</b><b>₦15,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>VAT</b><b>₦5,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Platform Fee (2%)</b><b>₦5,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Payment Gateway Processing Chart</b><b class="danger_1 bg-transparent">- ₦2,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Total Commission on Orders</b><b>₦148,000</b></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="three-tab-pane" role="tabpanel" aria-labelledby="three-tab" tabindex="0">
+                  <div class="byOrder_box">
+                    <div class="card_header card_header5">
+                      <ul>
+                        <li>
+                          <div>
+                            <h3 class="blue_txt">₦25,000</h3>
+                            <p class="mb-0">Commission Expected</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="green_txt">₦5,000</h3>
+                            <p class="mb-0">VAT</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="ornge_txt">₦5,000</h3>
+                            <p class="mb-0">Platform Fee (2%)</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="green_txt">₦148,000</h3>
+                            <p class="mb-0">Total Commission</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="note_box blue_noti">
+                      <p class="small_p blue_txt mb-0"><b>Cycle 2 · 22 Apr - 22 May 2026</b><span>Verified: <b>3</b> | Commission earned: <b>₦4,830</b> | Commission expected: <b>₦1,421</b></span></p>
+                    </div>
+                    <div class="card_body p-0">
+                      <div class="table_view byOrder_tbl hori_scroll">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th width="22%">Location Name/ID</th>
+                              <th width="4%">Tier</th>
+                              <th width="9%">Booked Cycles</th>
+                              <th width="11%">Base Rate/month <button type="button" class="info_icon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seller-defined rate (subject to availability & change)"><span class="material-symbols-outlined">info</span></button></th>
+                              <th width="11%">Buyer Paid (Discount)</th>
+                              <th width="12%">Seller Receivable (Discount)</th>
+                              <th width="8%">Commission Earned</th>
+                              <th width="14%">Verification Status</th>
+                              <th width="9%">Refund Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-static">Static</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>1</p></td>
+                              <td><p>1 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type warning_1">Awaiting Proof Pending</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>4</p></td>
+                              <td><p>2 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>---</p></td>
+                              <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                              <td><p><span class="status_type warning_1 ms-1">Refunded</span></p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-transit">Transit</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>6</p></td>
+                              <td><p>1 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>2</p></td>
+                              <td><p>2 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="payBreakdown payBreakdown2">
+                      <div class="sec_6212 mt-0">
+                        <h3>Payment Breakdown - Cycle 2</h3>
+                        <ul class="mb-0">
+                          <li>
+                            <p><b>Total Buyer Paid</b><span>₦70,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Total Seller Received</b><span>₦65,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Refunds</b><span>₦10,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Commission Expected</b><b>₦25,000</b></p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="sec_6212 mt-0">
+                        <h3>Commission Overview - Cycle 2</h3>
+                        <ul class="mb-0">
+                          <li>
+                            <p><b>Commission Earned till Date</b><b>₦15,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>VAT</b><b>₦5,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Platform Fee (2%)</b><b>₦5,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Payment Gateway Processing Chart</b><b class="danger_1 bg-transparent">- ₦2,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Total Commission on Orders</b><b>₦148,000</b></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="four-tab-pane" role="tabpanel" aria-labelledby="four-tab" tabindex="0">
+                  <div class="byOrder_box">
+                    <div class="card_header card_header5">
+                      <ul>
+                        <li>
+                          <div>
+                            <h3 class="blue_txt">₦25,000</h3>
+                            <p class="mb-0">Commission Expected</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="green_txt">₦5,000</h3>
+                            <p class="mb-0">VAT</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="ornge_txt">₦5,000</h3>
+                            <p class="mb-0">Platform Fee (2%)</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="green_txt">₦148,000</h3>
+                            <p class="mb-0">Total Commission</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="note_box blue_noti">
+                      <p class="small_p blue_txt mb-0"><b>Cycle 3 · 22 Apr - 22 May 2026</b><span>Verified: <b>3</b> | Commission earned: <b>₦4,830</b> | Commission expected: <b>₦1,421</b></span></p>
+                    </div>
+                    <div class="card_body p-0">
+                      <div class="table_view byOrder_tbl hori_scroll">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th width="22%">Location Name/ID</th>
+                              <th width="4%">Tier</th>
+                              <th width="9%">Booked Cycles</th>
+                              <th width="11%">Base Rate/month <button type="button" class="info_icon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seller-defined rate (subject to availability & change)"><span class="material-symbols-outlined">info</span></button></th>
+                              <th width="11%">Buyer Paid (Discount)</th>
+                              <th width="12%">Seller Receivable (Discount)</th>
+                              <th width="8%">Commission Earned</th>
+                              <th width="14%">Verification Status</th>
+                              <th width="9%">Refund Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-static">Static</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>1</p></td>
+                              <td><p>1 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type warning_1">Awaiting Proof Pending</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>4</p></td>
+                              <td><p>2 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>---</p></td>
+                              <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                              <td><p><span class="status_type warning_1 ms-1">Refunded</span></p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-transit">Transit</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>6</p></td>
+                              <td><p>1 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="order-location-detail.html">
+                                  <p class="inblock_txt">
+                                    <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                    <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                    <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                  </p>
+                                </a>
+                              </td>
+                              <td><p>2</p></td>
+                              <td><p>2 of 3</p></td>
+                              <td><p>₦25,000</p></td>
+                              <td><p>₦23,750(5%)</p></td>
+                              <td><p>₦22,550(10%)</p></td>
+                              <td><p>₦1200</p></td>
+                              <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                              <td><p>---</p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="payBreakdown payBreakdown2">
+                      <div class="sec_6212 mt-0">
+                        <h3>Payment Breakdown - Cycle 3</h3>
+                        <ul class="mb-0">
+                          <li>
+                            <p><b>Total Buyer Paid</b><span>₦70,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Total Seller Received</b><span>₦65,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Refunds</b><span>₦10,000</span></p>
+                          </li>
+                          <li>
+                            <p><b>Commission Expected</b><b>₦25,000</b></p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="sec_6212 mt-0">
+                        <h3>Commission Overview - Cycle 3</h3>
+                        <ul class="mb-0">
+                          <li>
+                            <p><b>Commission Earned till Date</b><b>₦15,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>VAT</b><b>₦5,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Platform Fee (2%)</b><b>₦5,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Payment Gateway Processing Chart</b><b class="danger_1 bg-transparent">- ₦2,000</b></p>
+                          </li>
+                          <li>
+                            <p><b>Total Commission on Orders</b><b>₦148,000</b></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -330,3 +894,9 @@ if (localStorage.getItem('darkMode') === "on") {
   });
 </script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<!--======== TOOLTIP SCRIPT START =======-->
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<!--========= TOOLTIP SCRIPT END ========-->

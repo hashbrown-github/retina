@@ -243,6 +243,14 @@ to {
   color: #e3b800;
   background-color: rgb(227 184 0 / 16%);
 }
+.badge-transit {
+  color: #f55e80;
+  background-color: rgb(245 94 128 / 20%);
+}
+.badge-combined {
+  color: var(--bs-blue);
+  background-color: rgb(1 109 213 / 20%);
+}
 .bg_secondary {
   background-color: rgb(1 109 213 / 20%);
 }
@@ -2198,7 +2206,7 @@ textarea.form_control {
   font-size: 0;
   line-height: 0;
 }
-.byOrder_box {
+.byOrder_box, .cycle_tabs {
   width: 100%;
   margin-top: 25px;
 }
@@ -2318,7 +2326,82 @@ textarea.form_control {
   color: #777E87 !important;
 }
 /*====== COMMISSION DASHBOARD CSS END ======*/
-
+/*============= ORDER CSS START ============*/
+.green_txt {
+  color: #239d28 !important;
+}
+.ornge_txt {
+  color: #fb8c00 !important;
+}
+.cycle_tabs .campaignTabs {
+  padding: 10px;
+  background-color: rgb(1 109 213 / 13%);
+  border: 0;
+  border-radius: 35px;
+  gap: 5px;
+}
+.cycle_tabs .campaignTabs.nav-tabs .nav-link {
+  padding: 0;
+  border: 0;
+}
+.cycle_tabs .campaignTabs.nav-tabs .nav-link {
+  font-family: 'Gothampro-Medium';
+  width: unset;
+  min-width: 240px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+}
+.cycle_tabs .campaignTabs.nav-tabs .nav-link b {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 1px;
+}
+.cycle_tabs .campaignTabs.nav-tabs .nav-link.active {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 20px rgb(197 212 222 / 55%);
+  border-color: rgb(1 109 213 / 33%);
+}
+.note_box.blue_noti {
+  color: var(--bs-blue);
+  background-color: rgb(1 109 213 / 13%);
+  border-color: var(--bs-blue);
+}
+.note_box p {
+  display: flex;
+  gap: 6px 30px;
+  flex-wrap: wrap;
+}
+.info_icon {
+  width: 15px;
+  height: 15px;
+}
+.info_icon span {
+  font-size: 15px;
+  color: var(--bs-blue);
+  vertical-align: sub;
+}
+.custom-tooltip .tooltip-inner {
+  background-color: #016DD5;
+  font-family: 'Gothampro-Medium';
+  font-size: 11px;
+  line-height: 14px;
+  max-width: 170px;
+  padding: 4px 6px;
+}
+.custom-tooltip.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .custom-tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: #016DD5;
+}
+.custom-tooltip.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before, .custom-tooltip.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: #016DD5;
+}
+.custom-tooltip.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .custom-tooltip.bs-tooltip-start .tooltip-arrow::before {
+  border-left-color: #016DD5;
+}
+.custom-tooltip.bs-tooltip-auto[data-proper-placement^=top] .tooltop-arrow::before, .custom-tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-left-color: #016DD5;
+}
+/*============== ORDER CSS END =============*/
 
 
 
@@ -2350,7 +2433,8 @@ body.dark .sec_6211 h3, body.dark .sec_6212 h3, body.dark .sec_6221 h3, body.dar
 body.dark .resend_btn, body.dark .modal-header, body.dark .modal-footer, body.dark .campaign_list ul li, body.dark .accordion-item.collapse_item, body.dark .collapse_body,
 body.dark .uploadDocs, body.dark .campDtl_2 ul li, body.dark .lengends_sec, body.dark .loc_head1, body.dark .loc_head2, body.dark .activity_grid ul li, body.dark .loc_head11,
 body.dark .sec_twelve ul li, body.dark .sidebar_header, body.dark .sidebar_footer, body.dark .addExe_item0, body.dark .addLoc_box1, body.dark .loc_stripe,
-body.dark .loc_stripe button span.text_down, body.dark .card_header3 ul li, body.dark .border_box, body.dark .pos_unset2, body.dark .payBreakdown2 .sec_6212 {
+body.dark .loc_stripe button span.text_down, body.dark .card_header3 ul li, body.dark .border_box, body.dark .pos_unset2, body.dark .payBreakdown2 .sec_6212, 
+body.dark .cycle_tabs .campaignTabs.nav-tabs .nav-link {
   border-color: #2E3031;
 }
 body.dark .card_header ul li {
@@ -2446,7 +2530,13 @@ body.dark .noFoundInner2 img {
 body.dark .successful_msgT, body.dark .failed_msgT {
   background-color: var(--bs-blue);
 }
-
+body.dark .cycle_tabs .campaignTabs.nav-tabs .nav-link.active {
+  background-color: #000203;
+  box-shadow: none;
+}
+body.dark .cycle_tabs .campaignTabs.nav-tabs .nav-link.active {
+  border-color: rgb(1 109 213 / 33%);
+}
 /*====== MEDIA QUERY START =======*/
 @media (max-width: 1920px) {
 .card_header3 ul li:first-child {
@@ -2489,6 +2579,13 @@ body.dark .successful_msgT, body.dark .failed_msgT {
 .filter_div {
   flex-grow: 1;
 }
+.cycle_tabs .campaignTabs li {
+  width: calc(25% - 3.75px);
+}
+.cycle_tabs .campaignTabs.nav-tabs .nav-link {
+  min-width: unset;
+  width: 100%;
+}
 }
 @media (max-width: 1399px) {
 .card_header.card_header2 ul li, .card_header.card_header4 ul li {
@@ -2500,6 +2597,14 @@ body.dark .successful_msgT, body.dark .failed_msgT {
 .sec_12 {
   width: 320px;
   min-width: unset;
+}
+.cycle_tabs .campaignTabs.nav-tabs .nav-link {
+  min-width: 180px;
+}
+}
+@media (max-width: 1280px) {
+.cycle_tabs .campaignTabs.nav-tabs .nav-link {
+  min-width: 120px;
 }
 }
 @media (max-width: 1200px) {
@@ -2557,6 +2662,9 @@ body.dark .successful_msgT, body.dark .failed_msgT {
   border-radius: 4px;
   padding: 15px;
 }
+body.dark .sec_6221, body.dark .sec_6222 {
+  border-color: #2E3031;
+}
 .sec_6222 {
   margin-top: 20px;
 }
@@ -2611,6 +2719,9 @@ body.dark .successful_msgT, body.dark .failed_msgT {
 }
 .sec_62 {
   gap: 20px;
+}
+.sec_6211 ul li {
+  padding-bottom: 25px;
 }
 }
 @media (max-width: 480px) {

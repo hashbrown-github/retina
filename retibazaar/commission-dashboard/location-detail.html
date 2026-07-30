@@ -145,8 +145,9 @@ if (localStorage.getItem('darkMode') === "on") {
                 <li class="mb-0">
                   <div class="userDtl_head">
                     <div class="profile_box">
-                      <h6 class="text_md text_dark mb-2">5 Joel Ogunnaike St, Ikea GRA<span class="status_type badge-static ms-2">Static</span></h6>
-                      <p class="small_p mb-2"><span>Ikeja, Lagos, Nigeria</span> | <span>Location ID: <b>#123456</b></span></p>
+                      <p class="mb-1">DIG/LAG/002</p>
+                      <h6 class="text_md text_dark mb-1">5 Joel Ogunnaike St, Ikea GRA<span class="status_type badge-static ms-2">Static</span><span class="status_type success_1 ms-1">Active</span></h6>
+                      <p class="small_p mb-2">Ikeja, Lagos, Nigeria</p>
                       <p class="small_p p_flex mb-0">
                         <span class="status_type grey_box">Media Seller: <b>John Doe</b></span>
                         <span class="status_type grey_box ms-1">Base Rate: <b>₦4500</b></span>
@@ -158,7 +159,8 @@ if (localStorage.getItem('darkMode') === "on") {
               </ul>
             </div>
             <div class="byOrder_box">
-              <div class="card_header card_header2">
+              <!-- <div class="card_header card_header2"></div> -->
+              <div class="card_header card_header4">
                 <ul>
                   <li>
                     <img src="images/blue-card.svg" alt="Commission" />
@@ -188,13 +190,13 @@ if (localStorage.getItem('darkMode') === "on") {
                       <p class="mb-0">Refunded Commission</p>
                     </div>
                   </li>
-                  <li>
+                  <!-- <li>
                     <img src="images/Campaigns.svg" alt="Campaign" />
                     <div>
                       <h3>Success</h3>
                       <p class="mb-0">Last Campaign Status</p>
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -206,29 +208,29 @@ if (localStorage.getItem('darkMode') === "on") {
                     <thead>
                       <tr>
                         <th width="17%">Campaign Name</th>
-                        <th width="13%">Install Status</th>
-                        <th width="12%">Payout Status</th>
-                        <th width="10%">Base Rate</th>
+                        <th width="13%">Booked Period</th>
+                        <th width="12%">Booked Cycle</th>
+                        <th width="10%">Active Cycle</th>
                         <th width="11%">Buyer Paid (Discount)</th>
                         <th width="11%">Seller Receivable (Discount)</th>
                         <th width="10%">Commission Earned</th>
                         <th width="9%">Refunds Done</th>
-                        <th width="7%">Log</th>
+                        <th width="7%">Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>
-                          <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                          <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
                         </td>
-                        <td><p><span class="status_type success_1">Verification Passed</span></p></td>
-                        <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                        <td><p>₦25,000</p></td>
+                        <td><p><span>May 12, 2026 - May 30, 2026</span><span class="block_txt mt-1">(1 of 2 days)</span></p></td>
+                        <td><p>3</p></td>
+                        <td><p>2/3</p></td>
                         <td><p>₦23,750(5%)</p></td>
                         <td><p>₦22,550(10%)</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>--</p></td>
-                        <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                        <td><p><span class="green_txt">₦5,250 earned</span><span class="block_txt mt-1">of ₦10,500 expected</span></p></td>
+                        <td><p>---</p></td>
+                        <td><a href="location-detail-by-campaign.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -267,94 +269,68 @@ if (localStorage.getItem('darkMode') === "on") {
                           <thead>
                             <tr>
                               <th width="17%">Campaign Name</th>
-                              <th width="13%">Install Status</th>
-                              <th width="12%">Payout Status</th>
-                              <th width="10%">Base Rate</th>
+                              <th width="13%">Booked Period</th>
+                              <th width="12%">Booked Cycle</th>
+                              <th width="10%">Active Cycle</th>
                               <th width="11%">Buyer Paid (Discount)</th>
                               <th width="11%">Seller Receivable (Discount)</th>
                               <th width="10%">Commission Earned</th>
                               <th width="9%">Refunds Done</th>
-                              <th width="7%">Log</th>
+                              <th width="7%">Action</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>
-                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
                               </td>
-                              <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                              <td><p>₦25,000</p></td>
+                              <td><p><span>May 12, 2026 - May 30, 2026</span><span class="block_txt mt-1">(1 of 2 days)</span></p></td>
+                              <td><p>3</p></td>
+                              <td><p>2/3</p></td>
                               <td><p>₦23,750(5%)</p></td>
                               <td><p>₦22,550(10%)</p></td>
-                              <td><p>₦1200</p></td>
-                              <td><p>--</p></td>
-                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                              <td><p><span class="green_txt">₦5,250 earned</span><span class="block_txt mt-1">of ₦10,500 expected</span></p></td>
+                              <td><p>---</p></td>
+                              <td><a href="location-detail-by-campaign.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                             </tr>
                             <tr>
                               <td>
-                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
                               </td>
-                              <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
-                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                              <td><p>₦25,000</p></td>
+                              <td><p><span>May 12, 2026 - May 30, 2026</span><span class="block_txt mt-1">(1 of 2 days)</span></p></td>
+                              <td><p>3</p></td>
+                              <td><p>2/3</p></td>
                               <td><p>₦23,750(5%)</p></td>
                               <td><p>₦22,550(10%)</p></td>
-                              <td><p>₦1200</p></td>
-                              <td><p>--</p></td>
-                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                              <td><p><span class="green_txt">₦5,250 earned</span><span class="block_txt mt-1">of ₦10,500 expected</span></p></td>
+                              <td><p>---</p></td>
+                              <td><a href="location-detail-by-campaign.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                             </tr>
                             <tr>
                               <td>
-                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
                               </td>
-                              <td><p><span class="status_type success_1">Verification Passed</span></p></td>
-                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                              <td><p>₦25,000</p></td>
+                              <td><p><span>May 12, 2026 - May 30, 2026</span><span class="block_txt mt-1">(1 of 2 days)</span></p></td>
+                              <td><p>3</p></td>
+                              <td><p>2/3</p></td>
                               <td><p>₦23,750(5%)</p></td>
                               <td><p>₦22,550(10%)</p></td>
-                              <td><p>₦1200</p></td>
-                              <td><p>--</p></td>
-                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                              <td><p><span class="green_txt">₦5,250 earned</span><span class="block_txt mt-1">of ₦10,500 expected</span></p></td>
+                              <td><p>---</p></td>
+                              <td><a href="location-detail-by-campaign.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                             </tr>
                             <tr>
                               <td>
-                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
+                                <p><span class="blue_txt text-caps">The Rise of Advertisement</span><span class="block_txt mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
                               </td>
-                              <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                              <td><p>₦25,000</p></td>
+                              <td><p><span>May 12, 2026 - May 30, 2026</span><span class="block_txt mt-1">(1 of 2 days)</span></p></td>
+                              <td><p>3</p></td>
+                              <td><p>2/3</p></td>
                               <td><p>₦23,750(5%)</p></td>
                               <td><p>₦22,550(10%)</p></td>
-                              <td><p>--</p></td>
-                              <td><p>--</p></td>
-                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                              </td>
-                              <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
-                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                              <td><p>₦25,000</p></td>
-                              <td><p>₦23,750(5%)</p></td>
-                              <td><p>₦22,550(10%)</p></td>
-                              <td><p>₦1200</p></td>
-                              <td><p>--</p></td>
-                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <p><span class="blue_txt">The Rise of Advertisement</span><span class="block_txt small_p mt-1">(23 Sep, 2025- 30 Sep, 2025)</span></p>
-                              </td>
-                              <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
-                              <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                              <td><p>₦25,000</p></td>
-                              <td><p>₦23,750(5%)</p></td>
-                              <td><p>₦22,550(10%)</p></td>
-                              <td><p>--</p></td>
+                              <td><p><span class="green_txt">₦5,250 earned</span><span class="block_txt mt-1">of ₦10,500 expected</span></p></td>
                               <td><p>₦3000</p></td>
-                              <td><a href="campaign-logs.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
+                              <td><a href="location-detail-by-campaign.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a></td>
                             </tr>
                           </tbody>
                         </table>

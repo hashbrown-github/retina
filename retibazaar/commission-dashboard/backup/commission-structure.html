@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Commission by Location | Retibazaar</title>
+<title>Commission Structure | Retibazaar</title>
 <meta name="title" content="Dashboard | Retibazaar" />
 <meta name="description" content="Dashboard | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -66,9 +66,9 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="sidebar__text">Commission</div>
                 </a>
                 <span><a href="by-order.html">By Order</a></span>
-                <span class="active"><a href="by-location.html">By Location</a></span>
+                <span><a href="by-location.html">By Location</a></span>
                 <span><a href="by-seller.html">By Seller</a></span>
-                <span><a href="commission-structure.html">Commission Structure</a></span>
+                <span class="active"><a href="commission-structure.html">Commission Structure</a></span>
               </div>
               <div class="side_dropdown">
                 <a class="sidebar__item" href="transaction.html">
@@ -135,36 +135,29 @@ if (localStorage.getItem('darkMode') === "on") {
         <div class="main_container">
           <div class="sec_4 card_body">
             <div class="page_head">
-              <h6><span class="material-symbols-outlined">account_balance_wallet</span>Commission by Location</h6>
+              <h6><span class="material-symbols-outlined">account_balance_wallet</span>Commission Structure</h6>
             </div>
             <div class="card_header card_header4">
               <ul>
                 <li>
-                  <img src="images/Locations.svg" alt="Location" />
+                  <img src="images/total-lga.svg" alt="LGAs" />
                   <div>
-                    <h3>50</h3>
-                    <p class="mb-0">Total Locations</p>
+                    <h3>100</h3>
+                    <p class="mb-0">Total LGAs</p>
                   </div>
                 </li>
                 <li>
-                  <img src="images/active-location.svg" alt="Active Locations" />
+                  <img src="images/tier.svg" alt="Tier" />
                   <div>
-                    <h3>40</h3>
-                    <p class="mb-0">Active Locations</p>
+                    <h3>5</h3>
+                    <p class="mb-0">Tier Distribution (4 Tiers + 1 Override Tier)</p>
                   </div>
                 </li>
                 <li>
-                  <img src="images/purple-card.svg" alt="Commission" />
+                  <img src="images/lga-overridden.svg" alt="LGA Overridden" />
                   <div>
-                    <h3>₦5,000</h3>
-                    <p class="mb-0">Total Commission Earned</p>
-                  </div>
-                </li>
-                <li>
-                  <img src="images/red-location.svg" alt="Highest-Earning Location" />
-                  <div>
-                    <h3>Location ABC, ₦2000</h3>
-                    <p class="mb-0">Highest-Earning Location</p>
+                    <h3>5</h3>
+                    <p class="mb-0">LGA Manually Overridden</p>
                   </div>
                 </li>
               </ul>
@@ -174,7 +167,7 @@ if (localStorage.getItem('darkMode') === "on") {
                 <div class="filter_div filter_div1">
                   <div class="input_group">
                     <div class="search_box">
-                      <input class="form_control" type="text" placeholder="Search by location" />
+                      <input class="form_control" type="text" placeholder="Search by seller" />
                       <button type="button" class="searchIcon"><span class="material-symbols-outlined">search</span></button>
                     </div>
                   </div>
@@ -183,9 +176,11 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="input_group">
                     <span class="material-symbols-outlined searchIcon">expand_more</span>
                     <select class="form_control">
-                      <option selected>Location Type</option>
-                      <option>Static</option>
-                      <option>Digital</option>
+                      <option selected>LGA</option>
+                      <option>LGA 1</option>
+                      <option>LGA 2</option>
+                      <option>LGA 3</option>
+                      <option>LGA 4</option>
                     </select>
                   </div>
                 </div>
@@ -193,11 +188,11 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="input_group">
                     <span class="material-symbols-outlined searchIcon">expand_more</span>
                     <select class="form_control">
-                      <option selected>Media Seller</option>
-                      <option>Media Seller 1</option>
-                      <option>Media Seller 2</option>
-                      <option>Media Seller 3</option>
-                      <option>Media Seller 4</option>
+                      <option selected>Tier</option>
+                      <option>Tier 1</option>
+                      <option>Tier 2</option>
+                      <option>Tier 3</option>
+                      <option>Tier 4</option>
                     </select>
                   </div>
                 </div>
@@ -205,11 +200,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="input_group">
                     <span class="material-symbols-outlined searchIcon">expand_more</span>
                     <select class="form_control">
-                      <option selected disabled>Filter by Status</option>
+                      <option selected disabled>Override</option>
                       <option>All</option>
-                      <option>Approved</option>
-                      <option>Blocked</option>
-                      <option>Rejected</option>
+                      <option>Yes</option>
+                      <option>No</option>
                     </select>
                   </div>
                 </div>
@@ -219,83 +213,98 @@ if (localStorage.getItem('darkMode') === "on") {
             </div>
             <div class="byOrder_box">
               <div class="card_body p-0">
-                <div class="table_view byOrder_tbl hori_scroll">
+                <div class="table_view lga_tbl hori_scroll">
                   <table class="table">
                     <thead>
                       <tr>
-                        <th width="11%">Location ID</th>
-                        <th width="17%">Location Name</th>
-                        <th width="10%">Tier</th>
-                        <th width="12%">Base Rate/month <button type="button" class="info_icon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seller-defined rate (subject to availability & change)"><span class="material-symbols-outlined">info</span></button></th>
-                        <th width="12%">Discount</th>
-                        <th width="14%">Commission Earned (Total)</th>
-                        <th width="13%">Seller</th>
-                        <th width="11%">Status</th>
+                        <th width="20%">LGA Name</th>
+                        <th width="15%">Tier Assigned</th>
+                        <th width="17%">Default Commission(%)</th>
+                        <th width="17%">Current Applied Commission(%)</th>
+                        <th width="16%">Override Status</th>
+                        <th width="15%">Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td><p class="blue_txt">Lagos Mainland</p></td>
+                        <td><p>Tier 1</p></td>
+                        <td><p>70%</p></td>
+                        <td><p>20%</p></td>
+                        <td><p>No</p></td>
                         <td>
-                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-static">Static</span></p>
+                          <div class="overrideBox">
+                            <p><button type="button" class="media_txt" data-bs-toggle="modal" data-bs-target="#overrideModal">Override</button></p>
+                          </div>
                         </td>
-                        <td><p>3</p></td>
-                        <td><p>₦25,000</p></td>
+                      </tr>
+                      <tr>
+                        <td><p class="blue_txt">Ikeja</p></td>
+                        <td><p>Tier 3</p></td>
+                        <td><p>50%</p></td>
+                        <td><p>18%</p></td>
+                        <td><p>Yes</p></td>
+                        <td>
+                          <div class="overrideBox">
+                            <p><button type="button" class="blueBtn" data-bs-toggle="modal" data-bs-target="#overrideModal">Edit</button> | <button type="button" class="blueBtn">Reset</button></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p class="blue_txt">Abuja Central</p></td>
+                        <td><p>Tier 4</p></td>
+                        <td><p>20%</p></td>
+                        <td><p>20%</p></td>
+                        <td><p>No</p></td>
+                        <td>
+                          <div class="overrideBox">
+                            <p><button type="button" class="media_txt" data-bs-toggle="modal" data-bs-target="#overrideModal">Override</button></p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p class="blue_txt">Kano City</p></td>
+                        <td><p>Tier 2</p></td>
                         <td><p>10%</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>John Doe</p></td>
-                        <td><p><span class="status_type success_1">Approved</span></p></td>
-                      </tr>
-                      <tr>
-                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
-                        <td>
-                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-digital">Digital</span></p>
-                        </td>
-                        <td><p>5</p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>15%</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>John Doe</p></td>
-                        <td><p><span class="status_type retibazaar_1">Blocked</span></p></td>
-                      </tr>
-                      <tr>
-                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
-                        <td>
-                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-static">Static</span></p>
-                        </td>
-                        <td><p>3</p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>--</p></td>
-                        <td><p>--</p></td>
-                        <td><p>John Doe</p></td>
-                        <td><p><span class="status_type danger_1">Rejected</span></p></td>
-                      </tr>
-                      <tr>
-                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
-                        <td>
-                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-static">Static</span></p>
-                        </td>
-                        <td><p>4</p></td>
-                        <td><p>₦25,000</p></td>
                         <td><p>12%</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>John Doe</p></td>
-                        <td><p><span class="status_type success_1">Approved</span></p></td>
-                      </tr>
-                      <tr>
-                        <td><a href="location-detail.html"><p class="blue_txt">#123456</p></a></td>
+                        <td><p>Yes</p></td>
                         <td>
-                          <p class="inblock_txt"><span>5 Joel Ogunnaike St, Ikea GRA</span> <span class="status_type badge-digital">Digital</span></p>
+                          <div class="overrideBox">
+                            <p><button type="button" class="blueBtn" data-bs-toggle="modal" data-bs-target="#overrideModal">Edit</button> | <button type="button" class="blueBtn">Reset</button></p>
+                          </div>
                         </td>
-                        <td><p>1</p></td>
-                        <td><p>₦25,000</p></td>
-                        <td><p>--</p></td>
-                        <td><p>₦1200</p></td>
-                        <td><p>John Doe</p></td>
-                        <td><p><span class="status_type retibazaar_1">Blocked</span></p></td>
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--======== APPROVE PAYMENT MODAL START =======-->
+          <div class="modal fade" id="overrideModal" tabindex="-1" role="dialog" aria-labelledby="overrideLabelModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title modal_h" id="overrideLabelModal">Override Commision for LGA</h5>
+                  <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="modal_body">
+                    <p class="mb-3">Set Discount Commission for <b>Lagos Mainland</b></p>
+                    <div class="col-12 col-sm-12">
+                      <div class="input_group mb-3">
+                        <input type="text" class="form_control" placeholder="Please enter a valid amount (%)" />
+                      </div>
+                    </div>
+                    <p class="small_p mb-2">Enter the percentage of seller discount that the platform will keep as commission. The remaining portion will be passed on to buyers as visible discount.</p>
+                    <p class="small_p grey_txt mb-0"><i>E.g., If seller gives 10% discount and you set 70%, platform keeps 7% as commission and buyer sees 3% discount.</i></p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Apply</button>
                 </div>
               </div>
             </div>
@@ -318,9 +327,3 @@ if (localStorage.getItem('darkMode') === "on") {
   });
 </script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
-<!--======== TOOLTIP SCRIPT START =======-->
-<script>
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-</script>
-<!--========= TOOLTIP SCRIPT END ========-->

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Transaction Detail | Retibazaar</title>
+<title>Campaign Logs | Retibazaar</title>
 <meta name="title" content="Dashboard | Retibazaar" />
 <meta name="description" content="Dashboard | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -58,20 +58,20 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="sidebar__text">Dashboard</div>
                 </a>
               </div>
-              <div class="side_dropdown arrow_drop dropdown_btn">
-                <a class="sidebar__item" href="javascript:void(0);">
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">account_balance_wallet</span>
                   </div>
                   <div class="sidebar__text">Commission</div>
                 </a>
-                <span><a href="by-order.html">By Order</a></span>
+                <span class="active"><a href="by-order.html">By Order</a></span>
                 <span><a href="by-location.html">By Location</a></span>
                 <span><a href="by-seller.html">By Seller</a></span>
                 <span><a href="commission-structure.html">Commission Structure</a></span>
               </div>
               <div class="side_dropdown">
-                <a class="sidebar__item active" href="transaction.html">
+                <a class="sidebar__item" href="transaction.html">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">credit_card</span>
                   </div>
@@ -102,7 +102,7 @@ if (localStorage.getItem('darkMode') === "on") {
               </label>
             </div>
             <div class="side_dropdown mb-0">
-              <a class="sidebar__item" href="#">
+              <a class="sidebar__item mb-0" href="#">
                 <div class="sidebar__icon">
                   <span class="material-symbols-outlined icon">logout</span>
                 </div>
@@ -136,96 +136,89 @@ if (localStorage.getItem('darkMode') === "on") {
           <div class="sec_4 card_body">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="transaction.html">Transaction</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Transaction Detail</li>
+                <li class="breadcrumb-item"><a href="by-order.html">By Orders</a></li>
+                <li class="breadcrumb-item"><a href="order-detail.html">Order Detail</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Campaign Logs</li>
               </ol>
             </nav>
-            <div class="sec_61 mb-20">
-              <div class="sec_611">
-                <h3>₦ 6750<span class="status_type success_1">Completed</span></h3>
-                <p class="mb-0">Charged to <b class="blue_txt">johndoe@gmail.com</b></p>
-              </div>
-              <div class="sec_612">
-                <button type="button" class="blue_btn">View Receipt</button>
-              </div>
-            </div>
-            <div class="sec_62">
-              <div class="sec_621">
-                <div class="sec_6211">
-                  <h3>Recent Activity</h3>
-                  <ul>
-                    <li>
-                      <span class="material-symbols-outlined success_color">task_alt</span>
-                      <!-- <span class="material-symbols-outlined danger_color">error</span>
-                      <span class="material-symbols-outlined warning_color">undo</span> -->
-                      <p><b class="block_txt">Transaction Succeeded</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">credit_score</span>
-                      <p><span class="block_txt">This transaction successfully set up for ABC location payment.</span><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">payments</span>
-                      <p><b class="block_txt">Transaction Started</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sec_6212">
-                  <h3>Transaction Breakdown (Location 1 Transaction)</h3>
-                  <ul class="mb-20">
-                    <li>
-                      <p><b>Amount for Location 1</b><span>₦ 25,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Processing Fee</b><span>- ₦ 5,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Net Amount</b><b>₦ 20,000</b></p>
-                    </li>
-                  </ul>
-                  <p class="small_p mb-0"><b>Note:</b> The amount is refunded as the location could not be verified.</p>
+            <div class="sec_6 campaign_logs">
+              <div class="sec_61 mb-20">
+                <div class="sec_611">
+                  <p class="mb-1">Order ID <span class="blue_txt">#123456</span></p>
+                  <h3>The Rise of Advertising</h3>
+                  <p class="mb-0">Uploaded By Media Seller: <b class="blue_txt">John Doe</b></p>
                 </div>
               </div>
-              <div class="sec_622">
-                <div class="sec_6221">
-                  <h3>Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Transaction ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Transaction Method</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Last Updated</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
+              <div class="sec_62">
+                <div class="sec_621">
+                  <div class="sec_6211">
+                    <h3>Location Log for Campaign 1</h3>
+                    <ul>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Accepted By Admin</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Seller A Provided PoP for Location ABC</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Campaign Active</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Order Finalised by Admin</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Approved By Seller, Location ID: <span class="blue_txt">#123456</span></b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Request for Order, Order ID: <span class="blue_txt">#123456</span></b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Approved By Admin</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                      <li>
+                        <span></span>
+                        <p><b class="block_txt">Location Added</b><span>Apr 10, 2025, 05:25 PM</span></p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="sec_6222">
-                  <h3>Customer Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Customer ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Customer Name</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Email</b><span class="blue_txt">johndoe@gmail.com</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Phone</b><span>+234-809-555-60</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Country</b><span>Nigeria</span></p>
-                    </li>
-                  </ul>
+                <div class="sec_622">
+                  <div class="sec_6221">
+                    <h3>Details</h3>
+                    <ul>
+                      <li>
+                        <p><b class="block_txt">Order ID</b><span class="blue_txt">#12345678</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Requested On</b><span>Apr 10, 2025</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Confirmed On</b><span>Apr 12, 2025</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Total Media Sites</b><span>52</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Static Sites / Digital Sites</b><span>32 / 20</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Campaign Start Date</b><span>May 10, 2025</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Campaign End Date</b><span>June 20, 2025</span></p>
+                      </li>
+                      <li>
+                        <p><b class="block_txt">Campaign Last Status</b><span>Completed</span></p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
