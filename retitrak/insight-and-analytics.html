@@ -175,6 +175,37 @@
                 </div>
               </div>
             </div>
+            <div class="reports_box">
+              <h3>Select Insight Duration</h3>
+              <div class="report_filters report_filters2">
+                <div class="rep_filter1">
+                  <div class="input_group mb-0">
+                    <label class="form_label">Start Date</label>
+                    <div class="date_flex">
+                      <input class="form_control date" type="text" name="startdate" placeholder="Start Date" value="22-08-2025" />
+                      <span class="input-group-btn">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rep_filter2">
+                  <div class="input_group mb-0">
+                    <label class="form_label">End Date</label>
+                    <div class="date_flex">
+                      <input class="form_control date" type="text" name="enddate" placeholder="End Date" value="28-09-2025" />
+                      <span class="input-group-btn">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rep_filter3">
+                  <button type="button" class="blue_btn">Generate Insights<span class="spinner-grow" role="status"></span></button>
+                </div>
+              </div>
+              <p class="selPeriod"><span class="material-symbols-outlined">date_range</span>Insight Duration - (<span>22/08/2025</span> - <span>28/09/2025</span>)</p>
+            </div>
             <div class="analyBox_1">
               <div class="analyBox_11">
                 <div class="analyBox_0">
@@ -317,8 +348,13 @@
     </main>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "dd-mm-yyyy",
+      orientation: "bottom left",
+    });
+  </script>
   <script>
     $('#expand_btn').on('click', function (e) {
       e.preventDefault();

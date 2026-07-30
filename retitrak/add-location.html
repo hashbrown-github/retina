@@ -164,7 +164,7 @@
                           <input class="form_control" type="text" name="license" readonly="" placeholder="Maximum file size 20 MB" />
                         </div>
                         <div class="file_btn">
-                          <button type="button" class="blue_btn">Upload</button>
+                          <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#uploadFiles">Upload<span class="spinner-grow" role="status"></span></button>
                         </div>
                       </div>
                     </div>
@@ -185,6 +185,26 @@
               </div>
             </div>
             <p class="loc_note">Ensure your Excel file contains the exact names for States/LGAs/Cities as per our predefined data for matching. Refer to our <a href="excel-resource.html" target="_blank">guide here</a> for details.</p>
+          </div>
+        </div>
+        <!--===== LOADING FILE POPUP START =====-->
+        <div class="modal modal_box uploadFiles fade" id="uploadFiles" tabindex="-1" aria-labelledby="uploadFilesLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header border-bottom-0"></div>
+              <div class="modal-body p-0">
+                <div class="modal_body payment_box">
+                  <div class="uploadingFile">
+                    <div class="upload_box">
+                      <h4>Processing your file...<span class="blue_txt">10%</span></h4>
+                      <div class="spinner-border text-dark" role="status"></div>
+                      <p>Your Excel file is being read and validated. This may take a few minutes depending on the file size.</p>
+                      <p class="mb-0">Please do not close or refresh this page until the upload completes.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
