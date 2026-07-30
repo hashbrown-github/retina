@@ -225,7 +225,7 @@
                 <div class="search_form grey_form">
                   <div class="search_box">
                     <div class="input_group mb-0">
-                      <input class="form_control" type="text" name="budget" placeholder="NGN Budget" />
+                      <input class="form_control" type="text" name="budget" placeholder="₦ Budget" />
                     </div>
                   </div>
                 </div>
@@ -338,6 +338,7 @@
   <script>
     $('.nav_link').on('click', function (e) {
       e.preventDefault();
+      $('.nav_link').removeClass('active');
       $(this).toggleClass('active');
     });
   </script>

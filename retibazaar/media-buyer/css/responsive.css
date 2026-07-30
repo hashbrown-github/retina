@@ -28,9 +28,6 @@
 .page_12 {
   width: calc(100% - 405px);
 }
-.manager_grid li {
-  width: 100%;
-}
 .manager_grid.manager_list li {
   gap: 10px;
   padding-bottom: 10px;
@@ -250,6 +247,17 @@ header {
   gap: 6px;
   flex-direction: column;
 }
+.tooltip_head2 .tooltip_box {
+  left: -40px;
+}
+.tooltip_head2 .tooltip_box:before {
+  left: 66%;
+}
+.alert_msg {
+  width: calc(100% + 40px);
+  top: -20px;
+  left: -20px;
+}
 }
 @media (max-width: 1540px) {
 .report_header .card_header ul li {
@@ -276,6 +284,15 @@ header {
 }
 .paymentTbl_box {
   margin-top: 30px;
+}
+.manager_grid li {
+  width: 100%;
+}
+.combined_box .page_11 {
+  width: 390px;
+}
+.combined_box .page_12 {
+  width: calc(100% - 405px);
 }
 }
 @media (max-width: 1399px) {
@@ -321,19 +338,22 @@ header {
 .cam_acti .activity_fil2 {
   width: 45%;
 }
-.page_11 {
+.page_11, .combined_box .page_11 {
   width: 360px;
 }
-.page_12 {
+.page_12, .combined_box .page_12 {
   width: calc(100% - 375px);
 }
 .page_114 .nav-pills .nav-link {
   padding: 6px 11px;
 }
-.locSearch_box0 {
-  width: 320px;
+.locSearch_box1 {
   top: 15px;
   left: 15px;
+  right: 15px;
+}
+.locSearch_box0 {
+  width: 320px;
 }
 .media_box {
   left: 15px;
@@ -366,6 +386,22 @@ header {
 }
 .choose_option ul li {
   width: calc(50% - 20px);
+}
+.loc_head1 {
+  flex-grow: 1;
+}
+.card_header ul li h3 {
+  font-size: 22px;
+  line-height: 24px;
+}
+.orderPay_sec .card_header ul li {
+  width: calc(25% - 11.25px);
+}
+.tooltip_head2 .tooltip_box {
+  left: -70px;
+}
+.tooltip_head2 .tooltip_box:before {
+  left: 76%;
 }
 }
 @media (max-width: 1280px) {
@@ -463,6 +499,13 @@ header {
   width: calc(30% - 20px);
   min-width: unset;
 }
+.card_body231 .red_txt2 {
+  max-width: 172px;
+  margin-top: -3px;
+}
+.orderPay_sec .card_header ul li {
+  width: calc(33.33% - 10px);
+}
 }
 @media (max-width: 1240px) {
 .search_filters.locationsFilter {
@@ -472,6 +515,9 @@ header {
 .search_filters.locationsFilter .filter_div.filter_3, .search_filters.locationsFilter .filter_div.filter_4 {
   width: calc(33.33% - 6.66px);
   min-width: unset;
+}
+.total_count2 {
+  width: calc(100% - 57px);
 }
 }
 @media (max-width: 1199px) {
@@ -653,6 +699,42 @@ header {
 .card_header ul li {
   width: calc(33.33% - 10px);
 }
+.p_flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+.p_flex span {
+  margin: 0 !important;
+}
+.card_body23 {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #EAEAEA;
+  padding-top: 10px;
+}
+.card_body23.card_body24 {
+  align-items: flex-end;
+}
+.card_body23.card_body24.card_body25 {
+  align-items: flex-start;
+}
+.card_body231 {
+  width: 100%;
+  justify-content: space-between;
+}
+.horiz_cards ul li .card_body24 > button {
+  width: unset;
+}
+.card_body231 .red_txt2 {
+  max-width: unset;
+  margin-top: 0;
+}
+.orderPay_sec .card_header ul li {
+  flex-grow: 1;
+}
 }
 @media (max-width: 991px) {
 .authen_sc1 {
@@ -752,7 +834,7 @@ header {
   height: unset;
   flex-direction: column;
 }
-.page_11 {
+.page_11, .combined_box .page_11 {
   width: 100%;
   padding-right: 0;
   height: unset;
@@ -760,7 +842,7 @@ header {
 .search_form {
   flex-direction: row;
 }
-.page_12 {
+.page_12, .combined_box .page_12 {
   width: 100%;
   height: 500px;
 }
@@ -783,15 +865,6 @@ header {
 }
 .choose_option.choose_option2 ul li {
   width: calc(50% - 10px);
-}
-.p_flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
-}
-.p_flex span {
-  margin: 0 !important;
 }
 .loc_count2 {
   position: unset;
@@ -831,6 +904,21 @@ header {
 }
 .choose_option ul li img {
   height: 50px;
+}
+.total_count2 {
+  width: 100%;
+  position: unset;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-top: 10px;
+}
+.tooltip_head2 .tooltip_box {
+  left: 50%;
+  width: 420px;
+  transform: translate(-50%, 0);
+}
+.tooltip_head2 .tooltip_box:before {
+  left: 50%;
 }
 }
 @media (max-width: 960px) {
@@ -977,6 +1065,16 @@ header {
 }
 .profile_info p:nth-child(1), .profile_info p:nth-child(3) {
   width: 100%;
+}
+.tooltip_box {
+  width: 410px;
+  transform: translate(-75%, 0);
+}
+.tooltip_box:before {
+  left: 75%;
+}
+.tooltip_box1 ul li p span:first-child {
+  width: 120px;
 }
 }
 @media (max-width: 767px) {
@@ -1273,7 +1371,7 @@ header {
 .page_113 {
   margin-top: 20px;
 }
-#location_map2 {
+.page_12 {
   height: 400px;
 }
 .page_114 .nav-pills .nav-item {
@@ -1331,6 +1429,32 @@ header {
 .noCamFound {
   padding: 30px 15px;
   text-align: center;
+}
+.confirm_btn {
+  position: unset;
+  margin-top: 10px;
+}
+.tooltip_box {
+  width: 290px;
+}
+.tooltip_box1 ul li p {
+  flex-direction: column;
+}
+.tooltip_box1 ul li {
+  padding: 8px 12px;
+}
+.orderPay_sec .card_header ul li {
+  width: calc(50% - 7.5px);
+}
+.orderPay_sec .card_header ul li h3 {
+  font-size: 18px;
+  line-height: 18px;
+}
+.noti_icon {
+  margin-right: 6px;
+}
+.tooltip_head2 .tooltip_box {
+  width: 310px;
 }
 }
 @media (max-width: 480px) {
@@ -1403,6 +1527,33 @@ header {
 .addLocForm111 {
   padding: 15px;
 }
+.noti_item {
+  gap: 15px;
+  padding: 0 10px;
+  align-items: flex-start;
+}
+.noti_icon {
+  padding-top: 12px;
+}
+.noti_icon span {
+  width: 40px;
+  height: 41px;
+}
+.tooltip_box {
+  transform: translate(-95%, 0);
+}
+.tooltip_box:before {
+  left: 95%;
+}
+.confirmOrder2 {
+  max-width: 100%;
+}
+.tooltip_head2 .tooltip_box {
+  left: -60px;
+}
+.tooltip_head2 .tooltip_box:before {
+  left: 72%;
+}
 }
 @media (max-width: 430px) {
 .mobile_header img {
@@ -1449,6 +1600,10 @@ header {
 }
 .files_flex2 {
   width: 90px;
+}
+.confirmOrder2 p {
+  font-size: 14px;
+  line-height: 18px;
 }
 }
 @media (max-width: 400px) {
@@ -1506,6 +1661,12 @@ header {
   width: 100px;
   height: 100px;
 }
+.tooltip_head2 .tooltip_box {
+  left: -110px;
+}
+.tooltip_head2 .tooltip_box:before {
+  left: 88%;
+}
 }
 @media (max-width: 360px) {
 .choose_option ul li a {
@@ -1519,6 +1680,13 @@ header {
 }
 .card_header ul li img {
   width: 30px;
+}
+.tooltip_head2 .tooltip_box {
+  left: -118px;
+  width: 280px;
+}
+.tooltip_head2 .tooltip_box:before {
+  left: 95%;
 }
 }
 @media (max-width: 330px) {

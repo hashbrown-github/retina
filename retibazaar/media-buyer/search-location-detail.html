@@ -9,6 +9,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/responsive.css" />
@@ -189,7 +190,7 @@
                     <div class="modal_body">
                       <p class="mb-0">You have selected 50 locations. <span class="block_txt">Do you want to proceed with submitting your order request? Once your order request 
                         is submitted, you will be notified when it is approved and you can make the payment.</span></p>
-                      <p class="estimate_p">Estimated Price: <b>NGN 78,750</b></p>
+                      <p class="estimate_p">Estimated Price: <b>₦ 78,750</b></p>
                       <!-- <div class="search_form grey_form mt-3">
                         <div class="search_box">
                           <div class="input_group mb-0">
@@ -222,10 +223,29 @@
                     <p>Screen Type<span class="block_txt">Static</span></p>
                   </li>
                   <li>
-                    <p>Budget<span class="block_txt">NGN 20,000</span></p>
+                    <p>Budget
+                      <span class="edit_span">
+                        <span class="nonedit_field pt-1 mt-0">₦ 40,000</span>
+                        <button type="button" class="editBtn"><span class="material-symbols-outlined">edit_square</span></button>
+                      </span>
+                      <span class="edit_span" style="display: none;">
+                        <input type="text" class="edit_field" placeholder="Enter Budget" value="₦ 40,000" />
+                        <button type="button" class="editBtn"><span class="material-symbols-outlined">select_check_box</span></button>
+                      </span>
+                    </p>
                   </li>
                   <li>
-                    <p>Campaign Timing<span class="block_txt">Aug 01, 2024 - Aug 11, 2024</span></p>
+                    <p>Campaign Timing
+                      <span class="edit_span">
+                        <span class="nonedit_field pt-1 mt-0">Aug 01, 2024 - Aug 11, 2024</span>
+                        <button type="button" class="editBtn"><span class="material-symbols-outlined">edit_square</span></button>
+                      </span>
+                      <span class="edit_span input-daterange" id="datepicker" style="display: none;">
+                        <input type="text" class="edit_field" name="start" placeholder="Start Date" value="Aug 01, 2024" />-<input
+                          type="text" class="edit_field" name="end" placeholder="End Date" value="Aug 11, 2024" />
+                        <button type="button" class="editBtn"><span class="material-symbols-outlined">select_check_box</span></button>
+                      </span>
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -445,13 +465,13 @@
                       <span class="checkbox__tick"></span>
                     </span>
                   </label>
-                  <p>32 Units</p>
+                  <p><span>32</span> Units</p>
                   <button type="button" class="outline_btn"><span class="material-symbols-outlined">add</span>Add to Cart <span>(2)</span></button>
                   <div class="outline_btn black_out"><p>Estimated Price: NG 20,000</p></div>
                 </div>
                 <div class="page_322">
-                  <button type="button" class="view_btn" id="grid_view"><span class="material-symbols-outlined">grid_view</span></button>
-                  <button type="button" class="view_btn active" id="list_view"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button" class="view_btn" id="grid_view" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" class="view_btn active" id="list_view" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List View"><span class="material-symbols-outlined fw-lighter">lists</span></button>
                   <div class="drop_menu">
                     <button type="button" class="form-select">Sort By Default</button>
                     <div class="menu_drop">
@@ -537,8 +557,8 @@
                           <p><button type="button" data-bs-toggle="modal" data-bs-target="#previewModal"><b>Site/LG/001</b></button></p>
                           <div class="addToC1">
                             <button type="button" class="view_btn clusterB">Cluster 1</button>
-                            <button type="button" class="view_btn"><span class="material-symbols-outlined">map</span></button>
-                            <button type="button" class="view_btn active"><span class="material-symbols-outlined">shopping_basket</span></button>
+                            <button type="button" class="view_btn" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View on Map"><span class="material-symbols-outlined">map</span></button>
+                            <button type="button" class="view_btn active" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add to Cart"><span class="material-symbols-outlined">shopping_basket</span></button>
                           </div>
                         </div>
                         <p class="loc_nme"><button type="button" data-bs-toggle="modal" data-bs-target="#previewModal"><b data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</b></button></p>
@@ -746,6 +766,13 @@
       zoom: 5
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $('#datepicker').datepicker({
+      format: 'M dd, yyyy',
+      autoclose: true
+    });
+  </script>
   <!--======== TOOLTIP SCRIPT START =======-->
   <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -853,6 +880,59 @@
         $('#grid_view').removeClass('active');
         $('.manager_grid').addClass('manager_list');
       });
+    });
+  </script>
+  <!--======== EDIT BUDGET AND CAMPAIGN TIME SCRIPT START ========-->
+  <script>
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".editBtn")) return;
+
+      const btn = e.target.closest(".editBtn");
+      const span = btn.closest(".edit_span");
+      const parent = span.closest("p");
+
+      const viewSpan = parent.querySelectorAll(".edit_span")[0];
+      const editSpan = parent.querySelectorAll(".edit_span")[1];
+
+      const inputs = editSpan.querySelectorAll(".edit_field");
+
+      // 👉 EDIT MODE
+      if (span === viewSpan) {
+        viewSpan.style.display = "none";
+        editSpan.style.display = "flex";
+
+        const text = viewSpan.querySelector(".nonedit_field").textContent.trim();
+
+        if (inputs.length === 1) {
+          // Single input (Budget)
+          inputs[0].value = text;
+        } else if (inputs.length === 2) {
+          // Date range
+          const [start, end] = text.split(" - ");
+          inputs[0].value = start || "";
+          inputs[1].value = end || "";
+        }
+      }
+
+      // 👉 SAVE MODE
+      else {
+        let finalText = "";
+
+        if (inputs.length === 1) {
+          // Budget
+          finalText = inputs[0].value.trim() || "₦ 0";
+        } else if (inputs.length === 2) {
+          // Date range
+          const start = inputs[0].value.trim() || "Start Date";
+          const end = inputs[1].value.trim() || "End Date";
+          finalText = start + " - " + end;
+        }
+
+        viewSpan.querySelector(".nonedit_field").textContent = finalText;
+
+        editSpan.style.display = "none";
+        viewSpan.style.display = "flex";
+      }
     });
   </script>
 </body>

@@ -168,6 +168,9 @@
       </header>
       <div class="main_container">
         <div class="main_inner">
+          <div class="alert_msg outlined_msg">
+            <p class="mb-0">The total amount of your selected inventory <b>(₦650,000)</b> is higher than your specified campaign budget <b>(₦500,000)</b>. You may continue with your current selection or review budget it before proceeding.</p>
+          </div>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="search-location-detail.html">Search Location</a></li>
@@ -182,9 +185,9 @@
               </div>
             </div>
             <div class="preview_dtl1">
-              <p><b>Campaign Name: </b><span>Brand Awareness</span></p>
+              <p><b>Campaign Name: </b><span class="text-caps">Brand Awareness</span></p>
               <p><b>Media Types: </b><span>Rooftop Advertising, Unipole, Billboard</span></p>
-              <p><b>Budget: </b><span>NGN 20,000</span></p>
+              <p><b>Budget: </b><span>₦ 20,000</span></p>
               <p><b>Campaign Timing: </b><span>Aug 01, 2024 - Aug 11, 2024</span></p>
               <p><b>Screen Type: </b><span>Digital</span></p>
             </div>
@@ -204,9 +207,9 @@
                     <div id="pie_chart"></div>
                     <div class="secMap_legends pos_unset1">
                       <div class="pos_unset2">
-                        <p><span class="box_1"></span>1</p>
-                        <p><span class="box_2"></span>2</p>
-                        <p><span class="box_3"></span>3</p>
+                        <p><span class="box_1"></span>Cluster 1: 1%</p>
+                        <p><span class="box_2"></span>Cluster 2: 2%</p>
+                        <p><span class="box_3"></span>Cluster 3: 97%</p>
                       </div>
                     </div>
                   </div>
@@ -219,13 +222,13 @@
                     <div id="cohorts_chart"></div>
                     <div class="secMap_legends pos_unset1">
                       <div class="pos_unset2">
-                        <p><span class="church_box"></span>Church</p>
-                        <p><span class="school_box"></span>School</p>
-                        <p><span class="hotel_box"></span>Hotel</p>
-                        <p><span class="food_box"></span>Food Point</p>
-                        <p><span class="phar_box"></span>Pharmacy</p>
-                        <p><span class="market_box"></span>Supermarket</p>
-                        <p><span class="cloth_box"></span>Clothing Store</p>
+                        <p><span class="church_box"></span>Church: 27%</p>
+                        <p><span class="school_box"></span>School: 19%</p>
+                        <p><span class="hotel_box"></span>Hotel: 15%</p>
+                        <p><span class="food_box"></span>Food Point: 12%</p>
+                        <p><span class="phar_box"></span>Pharmacy: 12%</p>
+                        <p><span class="market_box"></span>Supermarket: 9%</p>
+                        <p><span class="cloth_box"></span>Clothing Store: 6%</p>
                       </div>
                     </div>
                   </div>
@@ -247,19 +250,26 @@
                 <div class="bodyPart1">
                   <h5>Primary Cohorts:</h5>
                   <ul>
-                    <li><span></span>Food Lovers & Leisure Seekers → High attraction to FoodJoints (281), frequent visits for dining and social gatherings.</li>
-                    <li><span></span>Shoppers & Families → ClothingStores (113) attract families, fashion-conscious youth, and planned shopping trips.</li>
-                    <li><span></span>Entertainment Seekers → Entertainment spots (92) draw students, young professionals, and groups looking for leisure activities.</li>
+                    <li><span></span>Focus investment on Cluster 4 & Cluster 1 (reach: 57.32% and 39.29%) to capture both high-performing zones</li>
+                    <li><span></span>Reallocate budget from Cluster 3 (reach: 1.94%) TO Cluster 4 (reach: 57.32%) — 55.4% higher audience reach, 1,910 more POI locations, 2.4M more monthly impressions</li>
+                    <li><span></span>Reallocate budget from Cluster 2 (reach: 1.44%) TO Cluster 4 (reach: 57.32%) — 55.9% higher audience reach, 2,064 more POI locations, 1.9M more monthly impressions</li>
                   </ul>
                 </div>
                 <div class="bodyPart1">
-                  <h5>Secondary Cohorts:</h5>
+                  <h5>Combined Cohorts:</h5>
                   <ul>
-                    <li><span></span>Lifestyle & Social Groups → Youth and students combining dining with entertainment and casual shopping.</li>
-                    <li><span></span>Weekend Visitors → Higher activity expected on weekends due to synergy between FoodJoints + Entertainment.</li>
+                    <li><span></span>Fashion Enthusiasts → attract fashion-conscious individuals and families for shopping (57.54% of POIs)</li>
+                    <li><span></span>Entertainment Seekers → High attraction to Entertainment (17.30% of POIs), frequent visits for related activities</li>
+                    <li><span></span>Business Professionals → attract professionals and individuals seeking financial services (12.54% of POIs)</li>
+                    <li><span></span>Commuting → attract individuals needing quick cash access during daily commutes (5.13% of POIs)</li>
+                    <li><span></span>Urban Shoppers → Retail establishments attract families and fashion enthusiasts (57.54% of POIs)</li>
                   </ul>
                 </div>
+                </div>
               </div>
+            </div>
+            <div class="note_box">
+              <p class="mb-0"><b>Note:</b> Location(s) availability for the selected period is not guaranteed and is subject to seller approval. The selected location(s) may become unavailable or may be available for a revised duration within the requested campaign period.</p>
             </div>
             <div class="page_32">
               <div class="page_321">
@@ -273,7 +283,7 @@
               </div>
               <div class="page_322">
                 <button type="button" class="smallBlu_btn disabled">Remove All</button>
-                <!-- <button type="button" class="smallBlu_btn">Remove All</button> -->
+                <!-- <button type="button" class="smallBlu_btn" data-bs-toggle="modal" data-bs-target="#removeModal">Remove All</button> -->
               </div>
             </div>
             <div class="preview_dtl2">
@@ -302,7 +312,7 @@
                   </div>
                   <div class="remove_btn">
                     <p>Cluster 1</p>
-                    <button type="button">Remove</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#removeModal">Remove</button>
                   </div>
                 </li>
                 <li>
@@ -329,7 +339,7 @@
                   </div>
                   <div class="remove_btn">
                     <p>Cluster 1</p>
-                    <button type="button">Remove</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#removeModal">Remove</button>
                   </div>
                 </li>
                 <li>
@@ -356,7 +366,7 @@
                   </div>
                   <div class="remove_btn">
                     <p>Cluster 1</p>
-                    <button type="button">Remove</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#removeModal">Remove</button>
                   </div>
                 </li>
               </ul>
@@ -366,20 +376,40 @@
                 <h3>Payment Estimate</h3>
                 <ul class="mb-0">
                   <li>
-                    <p><b>Total Amount</b><span>NGN 25,000</span></p>
+                    <p><b>Total Amount</b><span>₦ 25,000</span></p>
                   </li>
                   <li>
-                    <p><b>Discount</b><span>NGN 5,000</span></p>
+                    <p><b>Discount</b><span>₦ 5,000</span></p>
                   </li>
                   <li>
-                    <p><b>Platform Fee (2%)</b><span>NGN 2,000</span></p>
+                    <p><b>Platform Fee (2%)</b><span>₦ 2,000</span></p>
                   </li>
                   <li class="mb-0">
-                    <p><b>Estimated Net Amount</b><b>NGN 22,000</b></p>
+                    <p><b>Estimated Net Amount</b><b>₦ 22,000</b></p>
                   </li>
                 </ul>
               </div>
               <p class="loc_note"><b>Note:</b> The final payment amount will be calculated based on the locations approved in the Final Order and their respective booking periods.</p>
+            </div>
+          </div>
+        </div>
+        <!--===== REMOVE LOCATION POPUP =====-->
+        <div class="modal modal_box fade" id="removeModal" tabindex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="removeModalLabel">Remove Location</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p class="mb-0">Are you sure you want to remove this location?</p>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0">
+                <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Yes, Remove</button>
+              </div>
             </div>
           </div>
         </div>
@@ -516,7 +546,7 @@
       innerRadius: am5.percent(75),
       startAngle: -90,
       endAngle: 180,
-      layout: root.verticalLayout
+      layout: root.verticalLayout,
     }));
 
     var data = [

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Order Requests</title>
+<title>Final Order Detail</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -37,13 +37,19 @@
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="order-requests.html">
+                  <a class="menu_link" href="order-requests.html">
                     <span class="link_span">O</span>
                     <span class="link_text">Order Requests</span>
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="final-orders.html">
+                  <a class="menu_link" href="proposal.html">
+                    <span class="link_span">P</span>
+                    <span class="link_text">Proposal</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link active" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -171,71 +177,111 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Order Requests</li>
+              <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Final Order Detail</li>
             </ol>
           </nav>
           <div class="campaign_box">
-            <div class="heading_box">
-              <div class="headLeft">
-                <h3>Order Requests</h3>
+            <div class="campaign_dtl">
+              <h3>The Rise of Advertising<span class="badge badge-grey ms-2">Pending</span></h3>
+              <p><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+              <div class="flex_box2 flex_box3">
+                <div class="frequency_div">No. of Locations: <span>50</span></div>
+                <div class="frequency_div">Order Price: <span>₦ 78,750</span></div>
+                <div class="frequency_div">Order ID: <span>#12345678</span></div>
+                <div class="pay_div">
+                  <p class="red_txt mb-1"><span class="material-symbols-outlined">error</span>Last Payment Date: June 19, 2024</p>
+                  <div class="frequency_div">Order Price: <span class="bold_txt">₦ 78,750</span>
+                    <button type="button" class="blue_btn pay_button payInfo ms-2" data-bs-toggle="modal" data-bs-target="#payLimitReachModal">Pay<span class="material-symbols-outlined" data-bs-custom-class="custom-tooltip custom-tooltip2" data-bs-toggle="tooltip" title="The final payment amount will include installation, printing, platform fees, and applicable VAT.">error</span></button>
+                    <button type="button" class="blue_btn pay_button ms-2 disabled" style="display: none;">Pay</button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="orderReq_box">
-              <div class="horiz_cards mt-0">
-                <ul>
-                  <li>
-                    <a href="request-order-detail.html">
-                      <div class="card_body">
-                        <h3>#12345</h3>
-                        <h3 class="text-caps">The Rise of Advertising</h3><p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-                        <div class="loc_count"><p class="mb-0">2 Locations</p></div>
-                      </div>
-                      <div class="bottom_body">
-                        <p class="mb-0">Price: <span class="bold_txt">₦ 78,750</span></p>
-                        <p class="mb-0"><span class="badge badge-static">Static</span></p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="request-order-detail.html">
-                      <div class="card_body">
-                        <h3>#12345</h3>
-                        <h3 class="text-caps">The Rise of Advertising</h3><p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-                        <div class="loc_count"><p class="mb-0">2 Locations</p></div>
-                      </div>
-                      <div class="bottom_body">
-                        <p class="mb-0">Price: <span class="bold_txt">₦ 78,750</span></p>
-                        <p class="mb-0"><span class="badge badge-digital">Digital</span></p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="request-order-detail.html">
-                      <div class="card_body">
-                        <h3>#12345</h3>
-                        <h3 class="text-caps">The Rise of Advertising</h3><p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-                        <div class="loc_count"><p class="mb-0">2 Locations</p></div>
-                      </div>
-                      <div class="bottom_body">
-                        <p class="mb-0">Price: <span class="bold_txt">₦ 78,750</span></p>
-                        <p class="mb-0"><span class="badge badge-static">Static</span></p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="request-order-detail.html">
-                      <div class="card_body">
-                        <h3>#12345</h3>
-                        <h3 class="text-caps">The Rise of Advertising</h3><p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-                        <div class="loc_count"><p class="mb-0">2 Locations</p></div>
-                      </div>
-                      <div class="bottom_body">
-                        <p class="mb-0">Price: <span class="bold_txt">₦ 78,750</span></p>
-                        <p class="mb-0"><span class="badge badge-digital">Digital</span></p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
+            <div class="timeDur_1">
+              <h3>Flight Time Duration</h3>
+              <div class="timeDur_11">
+                <div class="timeDur_111">
+                  <h4>Static Campaign:</h4>
+                  <p><b>Lagos:</b> 48 hours after order/payment or on campaign start date</p>
+                  <p><b>Outstations:</b> 5 days after order/payment or on campaign start date</p>
+                </div>
+                <div class="timeDur_111">
+                  <a href="choose-printing.html" class="smallBlu_btn">Choose</a>
+                </div>
+              </div>
+              <div class="timeDur_11 mb-0">
+                <div class="timeDur_111">
+                  <h4>LED Campaign:</h4>
+                  <p>Immediate deployment after payment or on campaign start date</p>
+                </div>
+                <div class="timeDur_111">
+                  <a href="choose-printing.html" class="smallBlu_btn">Choose</a>
+                </div>
+              </div>
+            </div>
+            <div class="campaign_cards">
+              <ul>
+                <li>
+                  <a href="final-order-locations.html">
+                    <div class="inner_div">
+                      <img src="images/locations.svg" alt="Locations">
+                      <h4>Locations</h4>
+                      <p class="mb-0">Add multiple of location through excel or manually.</p>
+                      <span class="total_count2">
+                        <span class="badge badge-transit">Transit: 15</span>
+                        <span class="badge badge-static">Static: 20</span>
+                        <span class="badge badge-digital">Digital: 30</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="upload-ad-creatives.html">
+                    <div class="inner_div">
+                      <img src="images/images.svg" alt="Ad Creatives">
+                      <h4>Upload Ad Creatives</h4>
+                      <p class="mb-0">Lorem established fact that a reader content.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--===== PAYMENT LIMIT REACH POPUP START =====-->
+          <div class="modal modal_box limit_modal fade" id="payLimitReachModal" tabindex="-1" aria-labelledby="payLimitReachModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="payLimitReachModalLabel">Online Payment Limit Reached <span class="block_txt">(Order Id: #123456)</span></h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="modal_body">
+                    <p>This order exceeds the maximum online transaction limit.</p>
+                    <div class="confirmOrder mw-100 my-3">
+                      <p>Total Location: <b>50</b></p>
+                      <p>Location Price: <b>₦ 2625738.57</b></p>
+                      <p>Installation Fee & Printing Charges: <b>₦ 10,000</b></p>
+                      <p>Total Price: <b>₦ 20,000</b></p>
+                    </div>
+                    <p class="mb-0">To complete your booking, please proceed with payment using the details below.</p>
+                    <div class="bnk_dtl">
+                      <p class="mb-1"><b>Bank Name: </b><span>Zenith Bank</span></p>
+                      <p class="mb-1"><b>Account Holder Name: </b><span>Retinaad Limited</span></p>
+                      <p class="mb-0"><b>Account Number: </b><span>1228646335</span></p>
+                    </div>
+                    <p class="mb-0">Once the payment is made, kindly share the transfer confirmation along with your Order ID so our support team can verify and activate your booking promptly.</p>
+                    <div class="bnk_dtl2">
+                      <p>If you need any assistance, we’re here to help.</p>
+                      <p class="mb-1"><b>Email: </b><span>support@retinaad.africa</span></p>
+                      <p class="mb-0"><b>Phone: </b><span>+234(0) 916 000 0938, +234(0) 707 219 0284</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer border-top-0">
+                  <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Okay</button>
+                </div>
               </div>
             </div>
           </div>
@@ -272,13 +318,6 @@
       });
     });
   </script>
-  <script>
-    $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
-    });
-  </script>
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {
@@ -307,5 +346,11 @@
     })();
   </script>
   <!--======== MOBILE MENU END ========-->
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
 </body>
 </html>

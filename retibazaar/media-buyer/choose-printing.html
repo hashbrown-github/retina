@@ -175,43 +175,39 @@
               <li class="breadcrumb-item active" aria-current="page">Choose Printing</li>
             </ol>
           </nav>
-          <div class="choose_option choose_option2">
-            <h1>Choose an Option for Printing Responsibility</h1>
-            <p>Simply dummy text of the printing and typesetting industry.</p>
+          <div class="choose_option">
+            <h1>Choose an Option for Printing & Installation Responsibility</h1>
+            <p>Printing and installation costs will be calculated based on the selected printing type, and media size, and will be reflected in the final cost.</p>
             <ul>
               <li class="nav_item">
-                <a class="nav_link active" href="upload-ad-creatives.html">
+                <div class="nav_link">
                   <img src="images/admin-prints.svg" alt="Admin Prints">
                   <div class="margin_top">
                     <h3>Admin Prints</h3>
-                    <p class="mb-2">Printing managed by platform, printing cost shown upfront.</p>
-                    <p class="mb-0"><b>Cost: NGN 25,000/Location</b></p>
+                    <p class="mb-2">Printing & installation managed by platform.</p>
+                    <!-- <p class="mb-0"><b>Cost: ₦ 25,000/Location</b></p> -->
+                    <select class="form_control print_type">
+                      <option selected disabled>Select Type</option>
+                      <option>SAV</option>
+                      <option>Flex (440g)</option>
+                      <option>Flex (550g)</option>
+                      <option>Reflective SAV</option>
+                      <option>Reflective Flex</option>
+                      <option>Window Graphics</option>
+                    </select>
                   </div>
                   <div class="login_buttons mt-0">
                     <button type="button" class="blue_btn2">Continue</button>
                   </div>
-                </a>
+                </div>
               </li>
-              <li class="nav_item">
-                <a class="nav_link" href="upload-ad-creatives.html">
-                  <img src="images/buyer-prints.svg" alt="Buyer Prints">
-                  <div class="margin_top">
-                    <h3>Buyer Prints</h3>
-                    <p class="mb-2">Buyer handles printing, must provide correct board specs for quality assurance.</p>
-                    <p class="mb-0"><b>Cost: 0</b></p>
-                  </div>
-                  <div class="login_buttons mt-0">
-                    <button type="button" class="blue_btn2">Continue</button>
-                  </div>
-                </a>
-              </li>
-              <li class="nav_item">
+              <li class="nav_item disabled">
                 <a class="nav_link" href="upload-ad-creatives.html">
                   <img src="images/seller-prints.svg" alt="Seller Prints">
                   <div class="margin_top">
                     <h3>Seller Prints</h3>
                     <p class="mb-2">Creative file is sent to seller, cost clearly shown below.</p>
-                    <p class="mb-0"><b>Cost: NGN 20,000/Location</b></p>
+                    <!-- <p class="mb-0"><b>Cost: ₦ 20,000/Location</b></p> -->
                   </div>
                   <div class="login_buttons mt-0">
                     <button type="button" class="blue_btn2">Continue</button>

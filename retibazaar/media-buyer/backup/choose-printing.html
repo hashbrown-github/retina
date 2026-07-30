@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Order Requests</title>
+<title>Choose Printing</title>
 <meta name="title" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -37,13 +37,13 @@
             <div class="inner_items">
               <ul class="menu_list">
                 <li class="menu_item mb-0">
-                  <a class="menu_link active" href="order-requests.html">
+                  <a class="menu_link" href="order-requests.html">
                     <span class="link_span">O</span>
                     <span class="link_text">Order Requests</span>
                   </a>
                 </li>
                 <li class="menu_item mb-0">
-                  <a class="menu_link" href="final-orders.html">
+                  <a class="menu_link active" href="final-orders.html">
                     <span class="link_span">F</span>
                     <span class="link_text">Final Orders</span>
                   </a>
@@ -171,73 +171,63 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Order Requests</li>
+              <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Choose Printing</li>
             </ol>
           </nav>
-          <div class="campaign_box">
-            <div class="heading_box">
-              <div class="headLeft">
-                <h3>Order Requests</h3>
-              </div>
-            </div>
-            <div class="orderReq_box">
-              <div class="horiz_cards mt-0">
-                <ul>
-                  <li>
-                    <a href="request-order-detail.html">
-                      <div class="card_body">
-                        <h3>#12345</h3>
-                        <h3 class="text-caps">The Rise of Advertising</h3><p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-                        <div class="loc_count"><p class="mb-0">2 Locations</p></div>
-                      </div>
-                      <div class="bottom_body">
-                        <p class="mb-0">Price: <span class="bold_txt">₦ 78,750</span></p>
-                        <p class="mb-0"><span class="badge badge-static">Static</span></p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="request-order-detail.html">
-                      <div class="card_body">
-                        <h3>#12345</h3>
-                        <h3 class="text-caps">The Rise of Advertising</h3><p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-                        <div class="loc_count"><p class="mb-0">2 Locations</p></div>
-                      </div>
-                      <div class="bottom_body">
-                        <p class="mb-0">Price: <span class="bold_txt">₦ 78,750</span></p>
-                        <p class="mb-0"><span class="badge badge-digital">Digital</span></p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="request-order-detail.html">
-                      <div class="card_body">
-                        <h3>#12345</h3>
-                        <h3 class="text-caps">The Rise of Advertising</h3><p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-                        <div class="loc_count"><p class="mb-0">2 Locations</p></div>
-                      </div>
-                      <div class="bottom_body">
-                        <p class="mb-0">Price: <span class="bold_txt">₦ 78,750</span></p>
-                        <p class="mb-0"><span class="badge badge-static">Static</span></p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="request-order-detail.html">
-                      <div class="card_body">
-                        <h3>#12345</h3>
-                        <h3 class="text-caps">The Rise of Advertising</h3><p class="mb-0"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
-                        <div class="loc_count"><p class="mb-0">2 Locations</p></div>
-                      </div>
-                      <div class="bottom_body">
-                        <p class="mb-0">Price: <span class="bold_txt">₦ 78,750</span></p>
-                        <p class="mb-0"><span class="badge badge-digital">Digital</span></p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="choose_option choose_option2">
+            <h1>Choose an Option for Printing & Installation Responsibility</h1>
+            <p>Printing and installation costs will be calculated based on the selected printing type, and media size, and will be reflected in the final cost.</p>
+            <ul>
+              <li class="nav_item">
+                <div class="nav_link">
+                  <img src="images/admin-prints.svg" alt="Admin Prints">
+                  <div class="margin_top">
+                    <h3>Admin Prints</h3>
+                    <p class="mb-2">Printing managed by platform, printing cost shown upfront.</p>
+                    <!-- <p class="mb-0"><b>Cost: NGN 25,000/Location</b></p> -->
+                    <select class="form_control print_type">
+                      <option selected disabled>Select Type</option>
+                      <option>SAV</option>
+                      <option>Flex (440g)</option>
+                      <option>Flex (550g)</option>
+                      <option>Reflective SAV</option>
+                      <option>Reflective Flex</option>
+                      <option>Window Graphics</option>
+                    </select>
+                  </div>
+                  <div class="login_buttons mt-0">
+                    <button type="button" class="blue_btn2">Continue</button>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="upload-ad-creatives.html">
+                  <img src="images/buyer-prints.svg" alt="Buyer Prints">
+                  <div class="margin_top">
+                    <h3>Buyer Prints</h3>
+                    <p class="mb-2">Buyer handles printing, must provide correct board specs for quality assurance.</p>
+                    <!-- <p class="mb-0"><b>Cost: 0</b></p> -->
+                  </div>
+                  <div class="login_buttons mt-0">
+                    <button type="button" class="blue_btn2">Continue</button>
+                  </div>
+                </a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="upload-ad-creatives.html">
+                  <img src="images/seller-prints.svg" alt="Seller Prints">
+                  <div class="margin_top">
+                    <h3>Seller Prints</h3>
+                    <p class="mb-2">Creative file is sent to seller, cost clearly shown below.</p>
+                    <!-- <p class="mb-0"><b>Cost: NGN 20,000/Location</b></p> -->
+                  </div>
+                  <div class="login_buttons mt-0">
+                    <button type="button" class="blue_btn2">Continue</button>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -272,13 +262,6 @@
       });
     });
   </script>
-  <script>
-    $('#expand_btn').on('click', function (e) {
-      e.preventDefault();
-      $('.main_sidebar').toggleClass('small_sidebar');
-      $(this).toggleClass('active');
-    });
-  </script>
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {
@@ -307,5 +290,12 @@
     })();
   </script>
   <!--======== MOBILE MENU END ========-->
+<!--   <script>
+    $('.nav_link').on('click', function (e) {
+        e.preventDefault();
+        $('.nav_link').removeClass('active');
+        $(this).toggleClass('active');
+    });
+  </script> -->
 </body>
 </html>
