@@ -150,18 +150,15 @@
             </ul>
             <div class="tab-content locations_con" id="myTabContent">
               <div class="tab-pane fade show active" id="images-tab-pane" role="tabpanel" aria-labelledby="images-tab" tabindex="0">
-                <div class="search_filters search_filters2">
+                <div class="search_filters search_filters2 search_filters3">
                   <div class="filter_div filter_1">
                     <div class="row">
                       <div class="col-12 col-sm-12">
                         <div class="input_group mb-0">
                           <select class="form_control">
-                            <option selected="" disabled="">Select Asset Tracker</option>
-                            <option>Asset Tracker 1</option>
-                            <option>Asset Tracker 2</option>
-                            <option>Asset Tracker 3</option>
-                            <option>Asset Tracker 4</option>
-                            <option>Asset Tracker 5</option>
+                            <option selected>Active</option>
+                            <option>Concluded</option>
+                            <option>All</option>
                           </select>
                         </div>
                       </div>
@@ -172,12 +169,12 @@
                       <div class="col-12 col-sm-12">
                         <div class="input_group mb-0">
                           <select class="form_control">
-                            <option selected="" disabled="">Select Asset</option>
-                            <option>Asset 1</option>
-                            <option>Asset 2</option>
-                            <option>Asset 3</option>
-                            <option>Asset 4</option>
-                            <option>Asset 5</option>
+                            <option selected disabled>Select Asset Tracker</option>
+                            <option>Asset Tracker 1</option>
+                            <option>Asset Tracker 2</option>
+                            <option>Asset Tracker 3</option>
+                            <option>Asset Tracker 4</option>
+                            <option>Asset Tracker 5</option>
                           </select>
                         </div>
                       </div>
@@ -188,7 +185,23 @@
                       <div class="col-12 col-sm-12">
                         <div class="input_group mb-0">
                           <select class="form_control">
-                            <option selected="" disabled="">Media Type</option>
+                            <option selected disabled>Select Asset</option>
+                            <option>Asset 1</option>
+                            <option>Asset 2</option>
+                            <option>Asset 3</option>
+                            <option>Asset 4</option>
+                            <option>Asset 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_div filter_4">
+                    <div class="row">
+                      <div class="col-12 col-sm-12">
+                        <div class="input_group mb-0">
+                          <select class="form_control">
+                            <option selected disabled>Media Type</option>
                             <option>Media Type 1</option>
                             <option>Media Type 2</option>
                             <option>Media Type 3</option>
@@ -290,6 +303,9 @@
                       </div>
                     </li>
                   </ul>
+                  <div class="tableLoader">
+                    <button type="button" class="loadMore">Load More.. <div class="spinner-border text-primary" role="status"></div></button>
+                  </div>
                   <div class="noFoundInner">
                     <img src="../images/images-videos-not-found.svg" alt="Not Found">
                     <h3>No Images Found</h3>
@@ -445,6 +461,9 @@
                       </div>
                     </li>
                   </ul>
+                  <div class="tableLoader">
+                    <button type="button" class="loadMore">Load More.. <div class="spinner-border text-primary" role="status"></div></button>
+                  </div>
                   <div class="noFoundInner">
                     <img src="../images/images-videos-not-found.svg" alt="Not Found">
                     <h3>No Videos Found</h3>

@@ -9,6 +9,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
 <link rel="stylesheet" href="../css/bootstrap.min.css" />
 <link rel="stylesheet" href="../css/style.css" />
 <link rel="stylesheet" href="../css/responsive.css" />
@@ -136,8 +137,40 @@
                     </select>
                   </div>
                 </div>
-                <div class="analyBox_02">
-                  <button type="button"><img src="../images/pdf.svg" alt="PDF">Export as PDF</button>
+                <div class="analyBox_02 smallExport">
+                  <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#selectDurModal" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Download as Excel" data-bs-original-title="Download as Excel"><img src="../images/excel-icon.svg" alt="Download"></button> -->
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#selectDurModal"><img src="../images/excel-icon.svg" alt="Download"></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Download as PDF" data-bs-original-title="Download as PDF"><img src="../images/pdf-icon.svg" alt="Download"></button>
+                </div>
+              </div>
+            </div>
+            <div class="reports_box" id="calendar-box">
+              <h3>Select Insight Duration</h3>
+              <div class="report_filters report_filters2">
+                <div class="rep_filter1">
+                  <div class="input_group mb-0">
+                    <label class="form_label">Start Date</label>
+                    <div class="date_flex">
+                      <input class="form_control date" type="text" name="startdate" placeholder="Start Date" />
+                      <span class="input-group-btn">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rep_filter2">
+                  <div class="input_group mb-0">
+                    <label class="form_label">End Date</label>
+                    <div class="date_flex">
+                      <input class="form_control date" type="text" name="enddate" placeholder="End Date" />
+                      <span class="input-group-btn">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rep_filter3">
+                  <button type="button" class="blue_btn" id="generate-insights">Generate Insights</button>
                 </div>
               </div>
             </div>
@@ -241,18 +274,22 @@
                 <div class="scoreHead">
                   <h3 class="mb-0">Distribution of Assets Across States</h3>
                   <div class="scoreHeadR">
-                    <button type="button" id="expandPopup1"><span class="material-symbols-outlined">zoom_out_map</span></button>
+                    <button type="button" id="expandPopup3"><span class="material-symbols-outlined">zoom_out_map</span></button>
                   </div>
                 </div>
                 <div class="first_chart">
                   <div class="bar_chart">
                     <div id="bar_chart"></div>
                   </div>
-                  <div class="secMap_legends">
-                    <p>Lagos<span class="lagos"></span></p>
-                    <p>Abia<span class="abia"></span></p>
-                    <p>Abuja<span class="abuja"></span></p>
-                    <p>Rivers<span class="rivers"></span></p>
+                  <div class="secMap_legends pos_unset1 mt-3">
+                    <div class="pos_unset2">
+                      <p>Abia<span class="loc_1"></span></p>
+                      <p>Adamawa<span class="loc_2"></span></p>
+                      <p>Akwa Ibom<span class="loc_3"></span></p>
+                      <p>Anambra<span class="loc_4"></span></p>
+                      <p>Bauchi<span class="loc_5"></span></p>
+                      <p>Bayelsa<span class="loc_6"></span></p>
+                    </div>
                   </div>
                 </div>
                 <div class="second_chart">
@@ -266,20 +303,21 @@
                       <div id="state_chart2"></div>
                     </li>
                     <li>
-                      <p><span class="bold_txt">Abuja</span><span class="block_txt">Total Sites: <span class="bold_txt">55</span></span></p>
+                      <p><span class="bold_txt">Adamawa</span><span class="block_txt">Total Sites: <span class="bold_txt">55</span></span></p>
                       <div id="state_chart3"></div>
                     </li>
                     <li>
-                      <p><span class="bold_txt">Rivers</span><span class="block_txt">Total Sites: <span class="bold_txt">60</span></span></p>
+                      <p><span class="bold_txt">Akwa Ibom</span><span class="block_txt">Total Sites: <span class="bold_txt">60</span></span></p>
                       <div id="state_chart4"></div>
                     </li>
                   </ul>
-                  <!-- <div class="secMap_legends pos_unset1 mt-2">
+                  <div class="secMap_legends pos_unset1 mt-2">
                     <div class="pos_unset2">
                       <p>OK<span class="yellow_box"></span></p>
                       <p>Not OK<span class="blue_box"></span></p>
+                      <p>Pending<span class="red_box"></span></p>
                     </div>
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -295,12 +333,64 @@
               </div>
             </div>
           </div>
+          <!--========= GENERATE REPORT POPUP START =========-->
+          <div class="modal modal_box fade" id="selectDurModal" tabindex="-1" aria-labelledby="selectDurModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="selectDurModalLabel">Select Report Duration</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="modal_body">
+                    <div class="add_cam11">
+                      <div class="row">
+                        <div class="col-6 col-sm-6 pe-2">
+                          <div class="input_group mb-0">
+                            <label class="form_label">Start Date</label>
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="startdate" placeholder="Start Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 col-sm-6 ps-1">
+                          <div class="input_group mb-0">
+                            <label class="form_label">End Date</label>
+                            <div class="date_flex">
+                              <input class="form_control date" type="text" name="enddate" placeholder="End Date">
+                              <span class="input-group-btn">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer border-top-0">
+                  <button type="button" class="grey_btn m-0" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="blue_btn m-0 ms-2" data-bs-dismiss="modal">Genrate Excel Report</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
   </div>
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "dd-mm-yyyy",
+      orientation: "bottom left",
+    });
+  </script>
   <script>
     $(document).ready(function(){
       $('#expandPopup1').on('click', function(e){
@@ -315,6 +405,17 @@
   <script>
     $(document).ready(function(){
       $('#expandPopup2').on('click', function(e){
+        let span = $(this).find("span");
+        span.text(function(_, currentText) {
+          return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
+        });
+        $(this).parent().parent().parent().toggleClass('expandPopup');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#expandPopup3').on('click', function(e){
         let span = $(this).find("span");
         span.text(function(_, currentText) {
           return currentText === "zoom_out_map" ? "close" : "zoom_out_map";
@@ -366,7 +467,6 @@
 
   <script>
     var rootLine = am5.Root.new("audit_rating_chart");
-
     rootLine.setThemes([
       am5themes_Animated.new(rootLine)
     ]);
@@ -374,11 +474,14 @@
       am5xy.XYChart.new(rootLine, {
         panX: true,
         panY: true,
-        wheelX: "panX",
-        wheelY: "zoomX",
+        wheelX: "none",
+        wheelY: "none",
         layout: rootLine.verticalLayout,
         pinchZoomX: true,
-        paddingLeft: 0
+        paddingLeft: 0,
+        paddingRight: 0,
+        paddingTop: 5,
+        paddingBottom: 0
       })
     );
 
@@ -391,67 +494,27 @@
     cursor.lineY.set("visible", false);
 
     var colorSet = am5.ColorSet.new(rootLine, {});
-
-    // The data
-    var data = [
-      {
-        asset: "Asset 1",
-        value: 1
-      },
-      {
-        asset: "Asset 2",
-        value: 4
-      },
-      {
-        asset: "Asset 3",
-        value: 5
-      },
-      {
-        asset: "Asset 4",
-        value: 7
-      },
-      {
-        asset: "Asset 5",
-        value: 8
-      },
-      {
-        asset: "Asset 6",
-        value: 6
-      },
-      {
-        asset: "Asset 7",
-        value: 9
-      },
-      {
-        asset: "Asset 8",
-        value: 8
-      },
-      {
-        asset: "Asset 9",
-        value: 7
-      },
-      {
-        asset: "Asset 10",
-        value: 7
-      }
-    ];
-
+    var auditdata = [];
+    // assetauditgraph.forEach(function (visa) {
+    //     auditdata.push({
+    //         asset: visa.assetName,
+    //         value: visa.value
+    //     });
+    // });
     var xRenderer = am5xy.AxisRendererX.new(rootLine, {
-      minorGridEnabled: true,
-      minGridDistance: 70
+      minGridDistance: 0
     });
-    xRenderer.grid.template.set("asset", 0.5);
     xRenderer.labels.template.setAll({
       fill: am5.color(0x808191),
       fontSize: 10,
       forceHidden: false
     });
     xRenderer.labels.template.setAll({
-      rotation: -48,
+      rotation: 90,
     });
 
-    var xAxis = chartLine.xAxes.push(am5xy.CategoryAxis.new(rootLine, {
-      categoryField: "asset",
+    var xAxis1 = chartLine.xAxes.push(am5xy.CategoryAxis.new(rootLine, {
+      categoryField: "assetName",
       renderer: xRenderer
     }));
     var yRenderer = am5xy.AxisRendererY.new(rootLine, {
@@ -460,43 +523,271 @@
     yRenderer.labels.template.setAll({
       fill: am5.color(0x808191),
       fontSize: 10,
-      forceHidden: false
+      forceHidden: false,
+
     });
     yRenderer.grid.template.set("forceHidden", false);
     yRenderer.labels.template.set("minPosition", 0.05);
 
-    var yAxis = chartLine.yAxes.push(
+    var yAxis1 = chartLine.yAxes.push(
       am5xy.ValueAxis.new(rootLine, {
-        min: 0,
-        max: 10,
-        strictMinMax: true,
+
         renderer: yRenderer
       })
     );
+    yAxis1.setAll({
+      extraMin: 0.001,
+      min: 0,
+      max: 10
+    });
 
+    var auditdata = [
+      {
+        "assetName": "WAG ASSET 2",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 31",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 16",
+        "value": 10
+      },
+      {
+        "assetName": "WAG ASSET 7",
+        "value": 3.7
+      },
+      {
+        "assetName": "WAG ASSET 8",
+        "value": 1.7
+      },
+      {
+        "assetName": "WAG ASSET 67",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 65",
+        "value": 7.4
+      },
+      {
+        "assetName": "WAG ASSET 62",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 63",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 24",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 25",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 30",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 60",
+        "value": 6.4
+      },
+      {
+        "assetName": "WAG ASSET 56",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 59",
+        "value": 6.4
+      },
+      {
+        "assetName": "WAG ASSET 27",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 61",
+        "value": 5.7
+      },
+      {
+        "assetName": "WAG ASSET 23",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 21",
+        "value": 4
+      },
+      {
+        "assetName": "WAG ASSET 22",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 33",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 49",
+        "value": 0
+      },
+      {
+        "assetName": "WAG ASSET 29",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 57",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 55",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 18",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 17",
+        "value": 4
+      },
+      {
+        "assetName": "WAG ASSET 68",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 66",
+        "value": 7.7
+      },
+      {
+        "assetName": "WAG ASSET 53",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 52",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 51",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 47",
+        "value": 3.7
+      },
+      {
+        "assetName": "WAG ASSET 35",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 40",
+        "value": 3.7
+      },
+      {
+        "assetName": "WAG ASSET 37",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 38",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 39",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 43",
+        "value": 0
+      },
+      {
+        "assetName": "WAG ASSET 36",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 14",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 19",
+        "value": 4
+      },
+      {
+        "assetName": "WAG ASSET 13",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 34",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 58",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 41",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 42",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 1",
+        "value": 6
+      },
+      {
+        "assetName": "WAG ASSET 3",
+        "value": 8
+      },
+      {
+        "assetName": "WAG ASSET 5",
+        "value": 0
+      },
+      {
+        "assetName": "WAG ASSET 4",
+        "value": 8
+      }
+    ]
     var series = chartLine.series.push(
       am5xy.LineSeries.new(rootLine, {
-        xAxis: xAxis,
-        yAxis: yAxis,
+        xAxis: xAxis1,
+        yAxis: yAxis1,
         valueYField: "value",
-        categoryXField: "asset",
+        categoryXField: "assetName",
         maskBullets: false
       })
     );
-    // Actual bullet
-    series.bullets.push(function () {
-      var bulletCircle = am5.Circle.new(rootLine, {
-        radius: 5,
-        fill: series.get("fill")
-      });
+
+    // Actual bullet with label
+    series.bullets.push(function (rootLine, series, dataItem) {
+      var container = am5.Container.new(rootLine, {});
+
+      var bulletCircle = container.children.push(
+        am5.Circle.new(rootLine, {
+          radius: 5,
+          fill: series.get("fill"),
+          stroke: am5.color(0x808191),
+        })
+      );
+
+      var label = container.children.push(
+        am5.Label.new(rootLine, {
+          text: dataItem.get("valueY").toString(),
+          centerY: am5.p100,
+          centerX: am5.p50, paddingTop: 5,
+          fill: am5.color(0x808191),
+          fontSize: 12,
+          fontWeight: 600
+        })
+      );
+
       return am5.Bullet.new(rootLine, {
-        sprite: bulletCircle
-      })
-    })
+        sprite: container
+      });
+    });
 
     series.strokes.template.setAll({ strokeDasharray: [3, 3], strokeWidth: 2 });
-    xAxis.data.setAll(data);
-    series.data.setAll(data);
+    xAxis1.data.setAll(auditdata);
+    series.data.setAll(auditdata);
     series.appear(1000);
     chartLine.appear(1000, 100);
   </script>
@@ -527,19 +818,62 @@
     }));
   
     var data = [{
-      "summary": "Payment Summary",
-      "totalPayment": 20000,
-      "amountwithhold": 5000,
-      "payoutsDone": 5000,
-      "refundsDone": 5000
-    }]
+      "states": "assets",
+      "abia": 12000,
+      "adamawa": 9300,
+      "akwaIbom": 15000,
+      "anambra": 11800,
+      "bauchi": 10200,
+      "bayelsa": 8500,
+      /* "benue": 10600,
+      "borno": 9700,
+      "crossRiver": 11000,
+      "delta": 13500,
+      "ebonyi": 9500,
+      "edo": 12300,
+      "ekiti": 8900,
+      "enugu": 11400,
+      "gombe": 8500,
+      "imo": 11800,
+      "jigawa": 9600,
+      "kaduna": 13200,
+      "kano": 14500,
+      "katsina": 11500,
+      "kebbi": 9900,
+      "kogi": 10600,
+      "kwara": 10200,
+      "lagos": 20000,
+      "nasarawa": 9800,
+      "niger": 10800,
+      "ogun": 12600,
+      "ondo": 12100,
+      "osun": 10900,
+      "oyo": 13400,
+      "plateau": 10100,
+      "rivers": 14000,
+      "sokoto": 9300,
+      "taraba": 9500,
+      "yobe": 8700,
+      "zamfara": 9400 */
+    }];
+
+
+    /* var colors = [am5.color(0xFFD8A3), am5.color(0xFDEC92), am5.color(0xACE2AE), am5.color(0x9DDDFA), am5.color(0xCABDE0), am5.color(0xFFD3F0)]; */
+
+    var colors = [am5.color(0xDE2F36), am5.color(0xFA5B62), am5.color(0xF1891E), am5.color(0xF8B217), 
+                  am5.color(0xF8E507), am5.color(0xFAF293)/* , am5.color(0x004D40), am5.color(0x04733A), 
+                  am5.color(0x159757), am5.color(0x20BA54), am5.color(0x4AD973), am5.color(0xC2EDCF), 
+                  am5.color(0x67751D), am5.color(0xA0B843), am5.color(0xDBED96), am5.color(0x1A237E), 
+                  am5.color(0x0D47A1), am5.color(0x0277BD), am5.color(0x03A9F4), am5.color(0x23C6DA), 
+                  am5.color(0x80DEEA), am5.color(0x733E88), am5.color(0xAE54A4), am5.color(0x9953B5), 
+                  am5.color(0xBE69E0), am5.color(0xE9B2FF), am5.color(0xCE1A6E), am5.color(0xE45688), 
+                  am5.color(0xEE9FB5), am5.color(0xFCD2E4), am5.color(0x831702), am5.color(0xA93725), 
+                  am5.color(0xC75105), am5.color(0xD37D27), am5.color(0xDA9E40), am5.color(0xF4D3A7) */];
    
-    var colors = [am5.color(0x84B9F2), am5.color(0xED8C44), am5.color(0x4FDBE6), am5.color(0x5FCF93)];
-  
     var yRenderer = am5xy.AxisRendererY.new(root, {});
   
     var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
-      categoryField: "summary",
+      categoryField: "states",
       renderer: yRenderer
     }));
   
@@ -564,9 +898,8 @@
         yAxis: yAxis,
         baseAxis: yAxis,
         valueXField: fieldName,
-        categoryYField: "summary"
+        categoryYField: "states"
       }));
-  
       series.columns.template.setAll({
         fill: colors[colorIndex],
         stroke: colors[colorIndex],
@@ -576,11 +909,43 @@
       series.data.setAll(data);
       series.appear();
     }
-    makeSeries("Total Paymentn", "totalPayment", 0);
-    makeSeries("Amount Withhold", "amountwithhold", 1);
-    makeSeries("Payouts Done", "payoutsDone", 2);
-    makeSeries("Refunds Done", "refundsDone", 3);
-  
+      makeSeries("Abia", "abia", 0);
+      makeSeries("Adamawa", "adamawa", 1);
+      makeSeries("Akwa Ibom", "akwaIbom", 2);
+      makeSeries("Anambra", "anambra", 3);
+      makeSeries("Bauchi", "bauchi", 4);
+      makeSeries("Bayelsa", "bayelsa", 5);
+      /* makeSeries("Benue", "benue", 6);
+      makeSeries("Borno", "borno", 7);
+      makeSeries("Cross River", "crossRiver", 8);
+      makeSeries("Delta", "delta", 9);
+      makeSeries("Ebonyi", "ebonyi", 10);
+      makeSeries("Edo", "edo", 11);
+      makeSeries("Ekiti", "ekiti", 12);
+      makeSeries("Enugu", "enugu", 13);
+      makeSeries("Gombe", "gombe", 14);
+      makeSeries("Imo", "imo", 15);
+      makeSeries("Jigawa", "jigawa", 16);
+      makeSeries("Kaduna", "kaduna", 17);
+      makeSeries("Kano", "kano", 18);
+      makeSeries("Katsina", "katsina", 19);
+      makeSeries("Kebbi", "kebbi", 20);
+      makeSeries("Kogi", "kogi", 21);
+      makeSeries("Kwara", "kwara", 22);
+      makeSeries("Lagos", "lagos", 23);
+      makeSeries("Nasarawa", "nasarawa", 24);
+      makeSeries("Niger", "niger", 25);
+      makeSeries("Ogun", "ogun", 26);
+      makeSeries("Ondo", "ondo", 27);
+      makeSeries("Osun", "osun", 28);
+      makeSeries("Oyo", "oyo", 29);
+      makeSeries("Plateau", "plateau", 30);
+      makeSeries("Rivers", "rivers", 31);
+      makeSeries("Sokoto", "sokoto", 32);
+      makeSeries("Taraba", "taraba", 33);
+      makeSeries("Yobe", "yobe", 34);
+      makeSeries("Zamfara", "zamfara", 35); */
+
     chart.appear(1000, 100);            
   </script>
   
@@ -598,7 +963,7 @@
       var series = chart.series.push(am5percent.PieSeries.new(root, {
         valueField: "value",
         categoryField: "category",
-        alignLabels: false
+        alignLabels: true
       }));
   
       series.slices.template.adapters.add("fill", function (fill, target) {
@@ -659,7 +1024,7 @@
       var series = chart.series.push(am5percent.PieSeries.new(root, {
         valueField: "value",
         categoryField: "category",
-        alignLabels: false
+        alignLabels: true
       }));
   
       series.slices.template.adapters.add("fill", function (fill, target) {
@@ -720,7 +1085,7 @@
       var series = chart.series.push(am5percent.PieSeries.new(root, {
         valueField: "value",
         categoryField: "category",
-        alignLabels: false
+        alignLabels: true
       }));
   
       series.slices.template.adapters.add("fill", function (fill, target) {
@@ -781,7 +1146,7 @@
       var series = chart.series.push(am5percent.PieSeries.new(root, {
         valueField: "value",
         categoryField: "category",
-        alignLabels: false
+        alignLabels: true
       }));
   
       series.slices.template.adapters.add("fill", function (fill, target) {
@@ -819,10 +1184,26 @@
         fontWeight: 600,
         text: "{category}: {value}",
       });
+
+      /* // Original data
+      const rawData = [
+        { value: 60, category: "OK" },
+        { value: 1, category: "NotOK" },
+        { value: 1, category: "Pending" },
+      ];
+
+      // Only include items where value > 0
+      const filteredData = rawData.filter(item => item.value > 0);
+
+      // Set data
+      series.data.setAll(filteredData);
+
+      series.appear(1000, 100); */
+      
       series.data.setAll([
-        { value: 15, category: "OK" },
-        { value: 20, category: "NotOK" },
-        { value: 25, category: "Pending" },
+        { value: 2, category: "OK" },
+        { value: 0, category: "NotOK" },
+        { value: 0, category: "Pending" },
       ]);
       series.appear(1000, 100);
     });
