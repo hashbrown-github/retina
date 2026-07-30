@@ -200,22 +200,187 @@
         <div class="main_inner">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Orders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Final Orders</li>
+              <li class="breadcrumb-item"><a href="javascript:void(0);">Orders</a></li>
+              <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Final Order Detail</li>
             </ol>
           </nav>
-          <!-- <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks" />
-            <h3>Thank You for your payment.</h3>
-            <p class="mb-0">Reader will be distracted by the readable content of a page when looking at its layout. <span class="block_txt">The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-          </div> -->
-          <div class="noFoundInner">
-            <img src="images/thanks-img.svg" alt="Thanks">
-            <h3 class="mb-1">Thank You for your payment.</h3>
-            <h3>You can now go ahead to upload campaign.</h3>
-            <p>If you encounter any issues or have questions about your payment, feel free <span class="block_txt">to reach out to us at <span class="blue_txt">support@retinaad.africa</span> for assistance.</span></p>
-            <p class="order_id">Transaction Id: SCPI8792306925</p>
+          <div class="campaign_box">
+            <div class="campaign_dtl">
+              <h3>The rise of advertising<span class="badge badge-success ms-2">Confirmed</span><span class="badge badge-digital ms-2">Digital</span></h3>
+              <p class="mb-2"><span>June 20, 2024</span> - <span>June 30, 2024</span></p>
+              <h4>Buyer: <span>ABC Company</span></h4>
+              <div class="flex_box2 flex_box3">
+                <div class="frequency_div">No. of Locations: <span>50</span></div>
+                <div class="frequency_div">Order Price: <span>₦78,750</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="campaign_tabs">
+            <div class="search_filters">
+              <div class="filter_div filter_1">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <div class="date_flex">
+                        <input class="form_control date" type="text" name="startdate" placeholder="Search by Location" />
+                        <span class="input-group-btn">
+                          <span class="material-symbols-outlined">search</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_2">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>State</option>
+                        <option>State 1</option>
+                        <option>State 2</option>
+                        <option>State 3</option>
+                        <option>State 4</option>
+                        <option>State 5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_3">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>LGA</option>
+                        <option>LGA 1</option>
+                        <option>LGA 2</option>
+                        <option>LGA 3</option>
+                        <option>LGA 4</option>
+                        <option>LGA 5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_4">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-0">
+                      <select class="form_control">
+                        <option selected disabled>City</option>
+                        <option>City 1</option>
+                        <option>City 2</option>
+                        <option>City 3</option>
+                        <option>City 4</option>
+                        <option>City 5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_div filter_5">
+                <button type="button" class="blue_btn">Search</button>
+              </div>
+              <div class="filter_div filter_6">
+                <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View on Map"><img src="images/locations.svg" alt="map" /></button>
+              </div>
+            </div>
+            <div class="locations_box">
+              <ul>
+                <li>
+                  <div class="order_item">
+                    <a href="location-detail.html">
+                      <div class="loc_item pt-2">
+                        <p><span class="camType">Billboard</span><span class="badge badge-digital ms-2">Digital</span></p>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <p class="green_txt"><b>Available from</b> <span>May 22, 2026</span></p>
+                        <p class="green_txt mb-0"><b>Available to</b> <span>June 20, 2026</span></p>
+                        <!-- <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p> -->
+                      </div>
+                      <p class="price_box">Location Cost: <b>₦78,750</b></p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="order_item">
+                    <a href="location-detail.html">
+                      <div class="loc_item pt-2">
+                        <p><span class="camType">Unipole</span><span class="badge badge-digital ms-2">Digital</span></p>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <p class="green_txt"><b>Available from</b> <span>May 22, 2026</span></p>
+                        <p class="green_txt mb-0"><b>Available to</b> <span>June 20, 2026</span></p>
+                        <!-- <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p> -->
+                      </div>
+                      <p class="price_box">Location Cost: <b>₦78,750</b></p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="order_item">
+                    <a href="location-detail.html">
+                      <div class="loc_item pt-2">
+                        <p><span class="camType">Billboard</span><span class="badge badge-digital ms-2">Digital</span></p>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <p class="green_txt"><b>Available from</b> <span>May 22, 2026</span></p>
+                        <p class="green_txt mb-0"><b>Available to</b> <span>June 20, 2026</span></p>
+                        <!-- <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p> -->
+                      </div>
+                      <p class="price_box">Location Cost: <b>₦78,750</b></p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="order_item">
+                    <a href="location-detail.html">
+                      <div class="loc_item pt-2">
+                        <p><span class="camType">Unipole</span><span class="badge badge-digital ms-2">Digital</span></p>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <p class="green_txt"><b>Available from</b> <span>May 22, 2026</span></p>
+                        <p class="green_txt mb-0"><b>Available to</b> <span>June 20, 2026</span></p>
+                        <!-- <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p> -->
+                      </div>
+                      <p class="price_box">Location Cost: <b>₦78,750</b></p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="order_item">
+                    <a href="location-detail.html">
+                      <div class="loc_item pt-2">
+                        <p><span class="camType">Billboard</span><span class="badge badge-digital ms-2">Digital</span></p>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <p class="green_txt"><b>Available from</b> <span>May 22, 2026</span></p>
+                        <p class="green_txt mb-0"><b>Available to</b> <span>June 20, 2026</span></p>
+                        <!-- <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p> -->
+                      </div>
+                      <p class="price_box">Location Cost: <b>₦78,750</b></p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="order_item">
+                    <a href="location-detail.html">
+                      <div class="loc_item pt-2">
+                        <p><span class="camType">Unipole</span><span class="badge badge-digital ms-2">Digital</span></p>
+                        <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
+                        <p>Ikeja, lkeja, Lagos</p>
+                        <p class="green_txt"><b>Available from</b> <span>May 22, 2026</span></p>
+                        <p class="green_txt mb-0"><b>Available to</b> <span>June 20, 2026</span></p>
+                        <!-- <p class="icon_eye mb-0"><span class="material-symbols-outlined eye_icon">visibility</span><span>840,000 imp/4w</span></p> -->
+                      </div>
+                      <p class="price_box">Location Cost: <b>₦78,750</b></p>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <!--===== LOGOUT POPUP START =====-->
@@ -279,6 +444,12 @@
         container.hide();
     }});
   </script>
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {

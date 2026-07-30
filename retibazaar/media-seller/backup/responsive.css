@@ -80,9 +80,6 @@
 .p_flex span {
   margin: 0 !important;
 }
-.card_body22 .p_flex {
-  justify-content: flex-end;
-}
 }
 @media (max-width: 1464px) {
 .bookingFilter .headLeft {
@@ -193,6 +190,15 @@
 }
 .choose_option ul li {
   width: calc(50% - 20px);
+}
+.choose_option.choose_option2 ul {
+  gap: 30px;
+}
+.choose_option.choose_option2 li {
+  width: calc(33.33% - 20px);
+}
+.choose_option.choose_option2 ul li a {
+  padding: 20px 15px;
 }
 }
 @media (max-width: 1280px) {
@@ -462,7 +468,7 @@
 .card_body2 {
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
 }
 .card_body22 {
   text-align: left;
@@ -489,33 +495,6 @@
 }
 .bookingFilter .page_311:not(.page_311.booking_btn) {
   width: calc(33.33% - 6.66px);
-}
-.card_body22 .p_flex {
-  justify-content: flex-start;
-}
-.card_body23 {
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid #EAEAEA;
-  padding-top: 10px;
-}
-.card_body23.card_body24 {
-  align-items: flex-end;
-}
-.card_body23.card_body24.card_body25 {
-  align-items: flex-start;
-}
-.card_body231 {
-  width: 100%;
-  justify-content: space-between;
-}
-.horiz_cards ul li .card_body24 > button {
-  width: unset;
-}
-.card_body231 .red_txt2 {
-  max-width: unset;
-  margin-top: 0;
 }
 }
 @media (max-width: 991px) {
@@ -642,6 +621,10 @@
 }
 .locDtl_body > ul > li {
   width: calc(50% - 10px);
+}
+.choose_option.choose_option2 ul {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .choose_option.choose_option2 ul li {
   width: calc(50% - 15px);

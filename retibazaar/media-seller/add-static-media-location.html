@@ -39,8 +39,20 @@
               <ul class="menu_list">
                 <li class="menu_item mb-0">
                   <a class="menu_link active" href="location-inventory.html">
-                    <span class="link_span">L</span>
-                    <span class="link_text">Locations</span>
+                    <span class="link_span">S</span>
+                    <span class="link_text">Static Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="digital-location-inventory.html">
+                    <span class="link_span">D</span>
+                    <span class="link_text">Digital Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
+                  <a class="menu_link" href="transit-location-inventory.html">
+                    <span class="link_span">T</span>
+                    <span class="link_text">Transit Locations</span>
                   </a>
                 </li>
                 <li class="menu_item mb-0">
@@ -204,7 +216,7 @@
                         <div class="col-12 col-sm-12">
                           <div class="input_group error_box">
                             <label class="form_label">Site ID*</label>
-                            <input class="form_control" type="text" placeholder="Marketplace ID, auto-generated" />
+                            <input class="form_control" type="text" placeholder="Seller’s internal ID" />
                             <span class="error_msg">Please enter site ID</span>
                           </div>
                         </div>
@@ -289,7 +301,7 @@
                         <div class="col-12 col-sm-6 pe-2">
                           <div class="input_group">
                             <label class="form_label">Latitude*</label>
-                            <input class="form_control" type="text" placeholder="Latitude" />
+                            <input class="form_control" type="number" placeholder="Latitude" />
                           </div>
                         </div>
                         <div class="col-12 col-sm-6 ps-2">
@@ -534,6 +546,14 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <!--======= STOP SCROLLING FOR INPUT TYPE NUMBER ========-->
+  <script>
+    document.querySelectorAll('input[type="number"]').forEach(input => {
+      input.addEventListener('wheel', function (e) {
+        e.preventDefault();
+      });
+    });
+  </script>
   <script>
     $(".date").datepicker({
       format: "dd-mm-yyyy",

@@ -49,6 +49,12 @@
                   </a>
                 </li>
                 <li class="menu_item mb-0">
+                  <a class="menu_link" href="transit-location-inventory.html">
+                    <span class="link_span">T</span>
+                    <span class="link_text">Transit Locations</span>
+                  </a>
+                </li>
+                <li class="menu_item mb-0">
                   <a class="menu_link" href="inventory-management.html">
                     <span class="link_span">I</span>
                     <span class="link_text">Inventory Management</span>
@@ -331,26 +337,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="filter_div filter_6">
-                    <div class="row">
-                      <div class="col-12 col-sm-12">
-                        <div class="input_group mb-0">
-                          <select class="form_control">
-                            <option selected disabled>Screen Type</option>
-                            <option>Digital</option>
-                            <option>Static</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <div class="filter_div filter_5">
                     <div class="row">
                       <div class="col-12 col-sm-12">
                         <div class="input_group mb-0">
                           <select class="form_control">
                             <option selected disabled>Status</option>
-                            <option>Enalbed</option>
+                            <option>Enabled</option>
                             <option>Disabled</option>
                             <option>All</option>
                           </select>
@@ -363,11 +356,14 @@
                   </div>
                 </div>
                 <div class="locTblist_view">
-                  <button type="button" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
-                  <button type="button" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
-                  <button type="button"><img src="images/locations.svg" alt="map" /></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List View" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View on Map"><img src="images/locations.svg" alt="map" /></button>
                 </div>
                 <div class="locations_box">
+                  <div class="tableLoader">
+                    <button type="button" class="loadMore">Loading... <div class="spinner-grow text-primary" role="status"></div></button>
+                  </div>
                   <ul class="grid_view2 active">
                     <li>
                       <div class="order_item">
@@ -381,13 +377,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
-                                    <a href="edit-digital-media-location.html"><p>Edit Location</p></a>
+                                  <li class="list_item p-0">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -395,14 +391,14 @@
                             </div>
                           </div>
                         </div>
-                        <a href="digital-media-location-detail.html">
+                        <a href="static-media-location-detail.html">
                           <div class="loc_item border-0">
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <div class="loc_media locStatus_box mt-4">
                               <div class="p_flex">
                                 <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
-                                <span class="badge badge-digital ms-1">Digital</span>
+                                <span class="badge badge-static ms-1">Static</span>
                               </div>
                               <div class="locStatus_box1">
                                 <p class="bluTxt mb-0">Active</p>
@@ -430,13 +426,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -479,13 +475,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -528,13 +524,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -577,13 +573,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
-                                    <a href="edit-digital-media-location.html"><p>Edit Location</p></a>
+                                  <li class="list_item p-0">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -591,14 +587,14 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="static-media-location-detail.html">
                           <div class="loc_item border-0">
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <div class="loc_media locStatus_box mt-4">
                               <div class="p_flex">
                                 <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
-                                <span class="badge badge-digital ms-1">Digital</span>
+                                <span class="badge badge-static ms-1">Static</span>
                               </div>
                               <div class="locStatus_box1">
                                 <p class="bluTxt mb-0">Active</p>
@@ -626,13 +622,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
-                                    <a href="edit-digital-media-location.html"><p>Edit Location</p></a>
+                                  <li class="list_item p-0">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -640,14 +636,14 @@
                             </div>
                           </div>
                         </div>
-                        <a href="digital-media-location-detail.html">
+                        <a href="static-media-location-detail.html">
                           <div class="loc_item border-0">
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <div class="loc_media locStatus_box mt-4">
                               <div class="p_flex">
                                 <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
-                                <span class="badge badge-digital ms-1">Digital</span>
+                                <span class="badge badge-static ms-1">Static</span>
                               </div>
                               <div class="locStatus_box1">
                                 <p class="greyTxt mb-0">Disabled</p>
@@ -864,6 +860,21 @@
                       </tbody>
                     </table>
                   </div>
+                  <!-- <div class="noFoundInner">
+                    <img src="images/location-not-found.svg" alt="Locations not Found">
+                    <h3>No Locations Found!</h3>
+                    <a href="add-location.html" class="blue_btn">Add Location</a>
+                  </div> -->
+                </div>
+                <div class="List_pagination">
+                  <ul>
+                    <li class="previous_page"><a href="#"><span><i class="material-symbols-outlined">west</i>Prev</span></a></li>
+                    <li class="active"><a href="#"><span>1</span></a></li>
+                    <li><a href="#"><span>2</span></a></li>
+                    <li><a href="#"><span>3</span></a></li>
+                    <li><a href="#"><span>4</span></a></li>
+                    <li class="next_page"><a href="#"><span>Next<i class="material-symbols-outlined">east</i></span></a></li>
+                  </ul>
                 </div>
               </div>
               <div class="tab-pane fade" id="verified-tab-pane" role="tabpanel" aria-labelledby="verified-tab" tabindex="0">
@@ -943,19 +954,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="filter_div filter_6">
-                    <div class="row">
-                      <div class="col-12 col-sm-12">
-                        <div class="input_group mb-0">
-                          <select class="form_control">
-                            <option selected disabled>Screen Type</option>
-                            <option>Digital</option>
-                            <option>Static</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <div class="filter_div filter_5">
                     <div class="row">
                       <div class="col-12 col-sm-12">
@@ -975,9 +973,9 @@
                   </div>
                 </div>
                 <div class="locTblist_view">
-                  <button type="button" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
-                  <button type="button" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
-                  <button type="button"><img src="images/locations.svg" alt="map" /></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List View" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View on Map"><img src="images/locations.svg" alt="map" /></button>
                 </div>
                 <div class="locations_box">
                   <ul class="grid_view2 active">
@@ -990,13 +988,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
-                                    <a href="edit-digital-media-location.html"><p>Edit Location</p></a>
+                                  <li class="list_item p-0">
+                                    <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -1004,14 +1002,14 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="static-media-location-detail.html">
                           <div class="loc_item border-0">
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
                             <div class="loc_media locStatus_box mt-4">
                               <div class="p_flex">
                                 <p class="camType mb-0"><img src="images/billboard.svg">Billboard</p>
-                                <span class="badge badge-digital ms-1">Digital</span>
+                                <span class="badge badge-static ms-1">Static</span>
                               </div>
                               <div class="locStatus_box1">
                                 <p class="bluTxt mb-0">Active</p>
@@ -1097,6 +1095,21 @@
                       </tbody>
                     </table>
                   </div>
+                  <div class="noFoundInner">
+                    <img src="images/location-not-found.svg" alt="Locations not Found">
+                    <h3>No Locations Found!</h3>
+                    <a href="add-location.html" class="blue_btn">Add Location</a>
+                  </div>
+                </div>
+                <div class="List_pagination">
+                  <ul>
+                    <li class="previous_page"><a href="#"><span><i class="material-symbols-outlined">west</i>Prev</span></a></li>
+                    <li class="active"><a href="#"><span>1</span></a></li>
+                    <li><a href="#"><span>2</span></a></li>
+                    <li><a href="#"><span>3</span></a></li>
+                    <li><a href="#"><span>4</span></a></li>
+                    <li class="next_page"><a href="#"><span>Next<i class="material-symbols-outlined">east</i></span></a></li>
+                  </ul>
                 </div>
               </div>
               <div class="tab-pane fade" id="unverified-tab-pane" role="tabpanel" aria-labelledby="unverified-tab" tabindex="0">
@@ -1176,19 +1189,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="filter_div filter_6">
-                    <div class="row">
-                      <div class="col-12 col-sm-12">
-                        <div class="input_group mb-0">
-                          <select class="form_control">
-                            <option selected disabled>Screen Type</option>
-                            <option>Digital</option>
-                            <option>Static</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <div class="filter_div filter_5">
                     <div class="row">
                       <div class="col-12 col-sm-12">
@@ -1208,9 +1208,9 @@
                   </div>
                 </div>
                 <div class="locTblist_view">
-                  <button type="button" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
-                  <button type="button" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
-                  <button type="button"><img src="images/locations.svg" alt="map" /></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List View" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View on Map"><img src="images/locations.svg" alt="map" /></button>
                 </div>
                 <div class="locations_box">
                   <ul class="grid_view2 active">
@@ -1223,13 +1223,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -1237,7 +1237,7 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="static-media-location-detail.html">
                           <div class="loc_item border-0">
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
@@ -1330,6 +1330,21 @@
                       </tbody>
                     </table>
                   </div>
+                  <div class="noFoundInner">
+                    <img src="images/location-not-found.svg" alt="Locations not Found">
+                    <h3>No Locations Found!</h3>
+                    <a href="add-location.html" class="blue_btn">Add Location</a>
+                  </div>
+                </div>
+                <div class="List_pagination">
+                  <ul>
+                    <li class="previous_page"><a href="#"><span><i class="material-symbols-outlined">west</i>Prev</span></a></li>
+                    <li class="active"><a href="#"><span>1</span></a></li>
+                    <li><a href="#"><span>2</span></a></li>
+                    <li><a href="#"><span>3</span></a></li>
+                    <li><a href="#"><span>4</span></a></li>
+                    <li class="next_page"><a href="#"><span>Next<i class="material-symbols-outlined">east</i></span></a></li>
+                  </ul>
                 </div>
               </div>
               <div class="tab-pane fade" id="archive-tab-pane" role="tabpanel" aria-labelledby="archive-tab" tabindex="0">
@@ -1409,19 +1424,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="filter_div filter_6">
-                    <div class="row">
-                      <div class="col-12 col-sm-12">
-                        <div class="input_group mb-0">
-                          <select class="form_control">
-                            <option selected disabled>Screen Type</option>
-                            <option>Digital</option>
-                            <option>Static</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <div class="filter_div filter_5">
                     <div class="row">
                       <div class="col-12 col-sm-12">
@@ -1441,9 +1443,9 @@
                   </div>
                 </div>
                 <div class="locTblist_view">
-                  <button type="button" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
-                  <button type="button" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
-                  <button type="button"><img src="images/locations.svg" alt="map" /></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View" class="view_btn grid_view1 active"><span class="material-symbols-outlined">grid_view</span></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List View" class="view_btn list_view1"><span class="material-symbols-outlined fw-lighter">lists</span></button>
+                  <button type="button" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View on Map"><img src="images/locations.svg" alt="map" /></button>
                 </div>
                 <div class="locations_box">
                   <ul class="grid_view2 active">
@@ -1456,13 +1458,13 @@
                               <button type="button" class="form-select active"><span class="material-symbols-outlined">more_vert</span></button>
                               <div class="menu_drop">
                                 <ul>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="edit-static-media-location.html"><p>Edit Location</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Location Insight</p></a>
                                   </li>
-                                  <li class="list_item">
+                                  <li class="list_item p-0">
                                     <a href="#"><p>Archive Location</p></a>
                                   </li>
                                 </ul>
@@ -1470,7 +1472,7 @@
                             </div>
                           </div>
                         </div>
-                        <a href="location-detail.html">
+                        <a href="static-media-location-detail.html">
                           <div class="loc_item border-0">
                             <h4>5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</h4>
                             <p>Ikeja, lkeja, Lagos</p>
@@ -1563,6 +1565,21 @@
                       </tbody>
                     </table>
                   </div>
+                  <div class="noFoundInner">
+                    <img src="images/location-not-found.svg" alt="Locations not Found">
+                    <h3>No Locations Found!</h3>
+                    <a href="add-location.html" class="blue_btn">Add Location</a>
+                  </div>
+                </div>
+                <div class="List_pagination">
+                  <ul>
+                    <li class="previous_page"><a href="#"><span><i class="material-symbols-outlined">west</i>Prev</span></a></li>
+                    <li class="active"><a href="#"><span>1</span></a></li>
+                    <li><a href="#"><span>2</span></a></li>
+                    <li><a href="#"><span>3</span></a></li>
+                    <li><a href="#"><span>4</span></a></li>
+                    <li class="next_page"><a href="#"><span>Next<i class="material-symbols-outlined">east</i></span></a></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1578,8 +1595,8 @@
               </div>
               <div class="modal-body">
                 <div class="modal_body">
-                  <p class="small_p mb-1">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria <span class="badge badge-static ms-1">Static</span></p>
-                  <p class="small_p mb-4">ID: <span>#123456</span></p>
+                  <p class="mb-1">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</p>
+                  <p class="mb-4">ID: <span>#123456</span></p>
                   <p class="mb-0">Do you really want to enable location?</p>
                 </div>
               </div>
@@ -1600,8 +1617,8 @@
               </div>
               <div class="modal-body">
                 <div class="modal_body">
-                  <p class="small_p mb-1">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria <span class="badge badge-digital ms-1">Digital</span></p>
-                  <p class="small_p mb-4">ID: <span>#123456</span></p>
+                  <p class="mb-1">5 Joel Ogunnaike St, Ikeja GRA, Ikeja 101233, Lagos, Nigeria</p>
+                  <p class="mb-4">ID: <span>#123456</span></p>
                   <p class="mb-0">Do you really want to disable location?</p>
                 </div>
               </div>
@@ -1651,6 +1668,12 @@
       $(this).toggleClass('active');
     });
   </script>
+  <!--======== TOOLTIP SCRIPT START =======-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <!--========= TOOLTIP SCRIPT END ========-->
   <!--======= MOBILE MENU START =======-->
   <script>
     (function() {
@@ -1698,24 +1721,24 @@
 
   <script>
     $(document).ready(function () {
-  $('.grid_view1').on('click', function () {
-    const $wrapper = $(this).closest('.tab-pane');
+      $('.grid_view1').on('click', function () {
+        const $wrapper = $(this).closest('.tab-pane');
 
-    $(this).addClass('active');
-    $wrapper.find('.list_view1').removeClass('active');
-    $wrapper.find('.list_view2').removeClass('active');
-    $wrapper.find('.grid_view2').addClass('active');
-  });
+        $(this).addClass('active');
+        $wrapper.find('.list_view1').removeClass('active');
+        $wrapper.find('.list_view2').removeClass('active');
+        $wrapper.find('.grid_view2').addClass('active');
+      });
 
-  $('.list_view1').on('click', function () {
-    const $wrapper = $(this).closest('.tab-pane');
+      $('.list_view1').on('click', function () {
+        const $wrapper = $(this).closest('.tab-pane');
 
-    $(this).addClass('active');
-    $wrapper.find('.grid_view1').removeClass('active');
-    $wrapper.find('.grid_view2').removeClass('active');
-    $wrapper.find('.list_view2').addClass('active');
-  });
-});
+        $(this).addClass('active');
+        $wrapper.find('.grid_view1').removeClass('active');
+        $wrapper.find('.grid_view2').removeClass('active');
+        $wrapper.find('.list_view2').addClass('active');
+      });
+    });
   </script>
 </body>
 </html>

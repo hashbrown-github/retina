@@ -31,7 +31,7 @@
               <h4 class="active"><span class="step_no">1</span>Verify Your Business</h4>
               <div class="multiple_btns">
                 <button class="nav-link active" id="v-pills-one1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-one1" type="button" role="tab" aria-controls="v-pills-one1" aria-selected="true">Business Detail</button>
-                <button class="nav-link" id="v-pills-one2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-one2" type="button" role="tab" aria-controls="v-pills-one2" aria-selected="false">Company Registration Certificate</button>
+                <button class="nav-link" id="v-pills-one2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-one2" type="button" role="tab" aria-controls="v-pills-one2" aria-selected="false">Identity Verification</button>
               </div>
             </div>
             <button class="nav-link" id="v-pills-two-tab" data-bs-toggle="pill" data-bs-target="#v-pills-two" type="button" role="tab" aria-controls="v-pills-two" aria-selected="false">
@@ -131,7 +131,7 @@
                     </div>
                   </div>
                   <div class="login_buttons">
-                    <a href="#" class="blue_btn2" data-bs-toggle="modal" data-bs-target="#continueModal">Continue</a>
+                    <button type="button" class="blue_btn2" data-bs-toggle="modal" data-bs-target="#continueModal">Continue</button>
                   </div>
                   <div class="modal modal_box fade" id="continueModal" tabindex="-1" aria-labelledby="continueModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -147,7 +147,7 @@
                         </div>
                         <div class="modal-footer border-top-0">
                           <button type="button" class="blue_btn m-0" data-bs-dismiss="modal">Stay on Page</button>
-                          <button type="button" class="grey_btn m-0 ms-2" data-bs-dismiss="modal">Leave</button>
+                          <button type="button" class="continue_btn grey_btn m-0 ms-2" data-bs-dismiss="modal">Leave</button>
                         </div>
                       </div>
                     </div>
@@ -160,32 +160,197 @@
               <div class="content_box">
                 <div class="head_part">
                   <div class="head_left">
-                    <h3>Company Registration Certificate</h3>
-                    <p class="head_para">Registration of Organization for business practice e.g. Corporate Affairs Commission Certificate in Nigeria.</p>
+                    <h3>Identity Verification</h3>
+                    <p class="head_para">Verify your identity or business by uploading a valid CAC Certificate, NIN Slip, or Passport. This helps us maintain a secure and trusted marketplace.</p>
                   </div>
                   <div class="head_right">
                     <div class="steps_box">1/6 Steps Completed</div>
                   </div>
                 </div>
-                <div class="form_fields" id="check_localPart">
-                  <div class="row">
-                    <div class="col-12 col-sm-12">
-                      <div class="input_group mb-0">
-                        <label class="form_label">Choose file or drag and drop</label>
-                        <div class="upload_file">
-                          <div class="file_input">
-                            <input class="file_input2" type="file">
-                            <input class="form_control" type="text" name="license" readonly="" placeholder="Maximum file size 20 MB" />
-                          </div>
-                          <div class="file_btn">
-                            <button type="button" class="blue_btn">Upload</button>
+                <div class="selectOption">
+                  <label class="radio">
+                    <input class="radio__input" type="radio" name="identity" checked>
+                    <span class="radio__in">
+                      <span class="radio__tick"></span>
+                      <span class="radio__text">CAC</span>
+                    </span>
+                  </label>
+                  <label class="radio">
+                    <input class="radio__input" type="radio" name="identity">
+                    <span class="radio__in">
+                      <span class="radio__tick"></span>
+                      <span class="radio__text">NIN</span>
+                    </span>
+                  </label>
+                  <label class="radio">
+                    <input class="radio__input" type="radio" name="identity">
+                    <span class="radio__in">
+                      <span class="radio__tick"></span>
+                      <span class="radio__text">Passport</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="identityVer">
+                  <div class="identityVer1">
+                    <div class="head_part">
+                      <div class="head_left">
+                        <h3>Company Registration Certificate</h3>
+                        <p class="head_para">Registration of Organization for business practice e.g. Corporate Affairs Commission Certificate in Nigeria.</p>
+                      </div>
+                    </div>
+                    <div class="form_fields" id="check_localPart">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Upload Certificate*</label>
+                            <div class="upload_file">
+                              <div class="file_input">
+                                <input class="file_input2" type="file">
+                                <input class="form_control" type="text" name="certificate" readonly="" placeholder="Maximum file size 20 MB" />
+                              </div>
+                              <div class="file_btn">
+                                <button type="button" class="blue_btn">Upload</button>
+                              </div>
+                            </div>
+                            <span class="error_msg" style="display: block;">Please select file</span>
                           </div>
                         </div>
                       </div>
+                      <div class="consentDiv0">
+                        <div class="consentDiv">
+                          <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="userconsent"/>
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                              <span class="checkbox__text">Consent</span>
+                            </span>
+                          </label>
+                          <p class="small_p mt-1 mb-0">I consent to the collection, processing, and secure storage of my personal information, including my NIN, passport, or CAC documents, for identity verification and compliance purposes. I confirm that the information I provide is accurate and authorize its verification through authorized verification providers.</p>
+                        </div>
+                        <span class="error_msg" style="display: block;">Please check the consent box to proceed. We need your consent to verify your identity.</span>
+                      </div>
+                      <div class="login_buttons">
+                        <button type="button" class="continue_btn blue_btn2">Continue</button>
+                      </div>
                     </div>
                   </div>
-                  <div class="login_buttons">
-                    <a href="#" class="blue_btn2">Continue</a>
+                  <div class="identityVer1">
+                    <div class="head_part">
+                      <div class="head_left">
+                        <h3>National Identification Number (NIN)</h3>
+                        <p class="head_para">Government-issued unique identification number used to verify an individual's identity and confirm account ownership in Nigeria.</p>
+                      </div>
+                    </div>
+                    <div class="form_fields" id="check_localPart">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">NIN Number*</label>
+                            <input class="form_control" type="text" name="ninnumber" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">NIN Document*</label>
+                            <div class="upload_file">
+                              <div class="file_input">
+                                <input class="file_input2" type="file">
+                                <input class="form_control" type="text" name="passport" readonly="" placeholder="Maximum file size 20 MB" />
+                              </div>
+                              <div class="file_btn">
+                                <button type="button" class="blue_btn">Upload</button>
+                              </div>
+                            </div>
+                            <p class="small_p mt-2 mb-0"><i>Upload a clear copy of your NIN Slip for identity verification. Supported formats: JPG, PNG, or PDF</i></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="consentDiv0">
+                        <div class="consentDiv">
+                          <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="userconsent"/>
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                              <span class="checkbox__text">Consent</span>
+                            </span>
+                          </label>
+                          <p class="small_p mt-1 mb-0">I consent to the collection, processing, and secure storage of my personal information, including my NIN, passport, or CAC documents, for identity verification and compliance purposes. I confirm that the information I provide is accurate and authorize its verification through authorized verification providers.</p>
+                        </div>
+                        <span class="error_msg">Please check the consent box to proceed. We need your consent to verify your identity.</span>
+                      </div>
+                      <div class="login_buttons">
+                        <button type="button" class="continue_btn blue_btn2">Continue</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="identityVer1">
+                    <div class="head_part">
+                      <div class="head_left">
+                        <h3>Passport</h3>
+                        <p class="head_para">Government-issued passport used to verify an individual's identity for account verification and compliance purposes.</p>
+                      </div>
+                    </div>
+                    <div class="form_fields" id="check_localPart">
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">First Name*</label>
+                            <input class="form_control" type="text" name="firstname" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Last Name*</label>
+                            <input class="form_control" type="text" name="lastname" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Passport Number*</label>
+                            <input class="form_control" type="text" name="passportnumber" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-12">
+                          <div class="input_group">
+                            <label class="form_label">Upload Passport*</label>
+                            <div class="upload_file">
+                              <div class="file_input">
+                                <input class="file_input2" type="file">
+                                <input class="form_control" type="text" name="passport" readonly="" placeholder="Maximum file size 20 MB" />
+                              </div>
+                              <div class="file_btn">
+                                <button type="button" class="blue_btn">Upload</button>
+                              </div>
+                            </div>
+                            <p class="small_p mt-2 mb-0"><i>Upload a clear copy of your Passport for identity verification. Supported formats: JPG, PNG, or PDF</i></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="consentDiv0">
+                        <div class="consentDiv">
+                          <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="userconsent"/>
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                              <span class="checkbox__text">Consent</span>
+                            </span>
+                          </label>
+                          <p class="small_p mt-1 mb-0">I consent to the collection, processing, and secure storage of my personal information, including my NIN, passport, or CAC documents, for identity verification and compliance purposes. I confirm that the information I provide is accurate and authorize its verification through authorized verification providers.</p>
+                        </div>
+                        <span class="error_msg">Please check the consent box to proceed. We need your consent to verify your identity.</span>
+                      </div>
+                      <div class="login_buttons">
+                        <button type="button" class="continue_btn blue_btn2">Continue</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -238,7 +403,7 @@
                     </div>
                   </div>
                   <div class="login_buttons">
-                    <a href="#" class="blue_btn2">Continue</a>
+                    <button type="button" class="continue_btn blue_btn2">Continue</button>
                   </div>
                 </div>
               </div>
@@ -273,7 +438,7 @@
                   </div>
                   <div class="row">
                     <div class="col-12 col-sm-12">
-                      <div class="input_group mb-0">
+                      <div class="input_group">
                         <label class="form_label">Phone Number*</label>
                         <div class="input_flex">
                           <div class="left_width">
@@ -290,8 +455,19 @@
                       </div>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-12 col-sm-12">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="information">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Same as Managing Director Information</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
                   <div class="login_buttons">
-                    <a href="#" class="blue_btn2">Continue</a>
+                    <button type="button" class="continue_btn blue_btn2">Continue</button>
                   </div>
                 </div>
               </div>
@@ -344,7 +520,7 @@
                     </div>
                   </div>
                   <div class="login_buttons">
-                    <a href="#" class="blue_btn2">Continue</a>
+                    <button type="button" class="continue_btn blue_btn2">Continue</button>
                   </div>
                 </div>
               </div>
@@ -417,7 +593,7 @@
                     </div>
                   </div>
                   <div class="login_buttons">
-                    <a href="#" class="blue_btn2">Continue</a>
+                    <button type="button" class="continue_btn blue_btn2">Continue</button>
                   </div>
                 </div>
               </div>
@@ -447,11 +623,13 @@
                       </div>
                     </li>
                     <li>
-                      <h4>Company Registration Certificate</h4>
+                      <h4>Identity Verification - <span>Passport</span></h4>
                       <div class="completed_dtl">
                         <div class="inner_box">
+                          <p><span class="bold_txt">Name*</span> <span class="block_txt mt-1">John Doe</span></p>
+                          <p><span class="bold_txt">Passport Number*</span> <span class="block_txt mt-1">M1234567</span></p>
                           <div class="download_pdf">
-                            <p class="mb-0"><span class="bold_txt">License from CAC</span> <span class="block_txt mt-1">License.pdf</span></p>
+                            <p class="mb-0"><span class="bold_txt">Passport*</span> <span class="block_txt mt-1">johnpassport.pdf</span></p>
                           </div>
                         </div>
                       </div>
@@ -474,6 +652,7 @@
                           <p><span class="bold_txt">Name</span> <span class="block_txt mt-1">Shalewa Omowale</span></p>
                           <p><span class="bold_txt">Phone Number</span> <span class="block_txt mt-1">+234 0807 117 7777</span></p>
                           <p><span class="bold_txt">Address</span> <span class="block_txt mt-1">4, Asiwaju Street, Satellite Town, Lagos, Nigeria, 540221</span></p>
+                        </div>
                       </div>
                     </li>
                     <li>
@@ -483,13 +662,14 @@
                           <p><span class="bold_txt">Name</span> <span class="block_txt mt-1">Shalewa Omowale</span></p>
                           <p><span class="bold_txt">Phone Number</span> <span class="block_txt mt-1">+234 0807 117 7777</span></p>
                           <p><span class="bold_txt">Address</span> <span class="block_txt mt-1">4, Asiwaju Street, Satellite Town, Lagos, Nigeria, 540221</span></p>
+                        </div>
                       </div>
                     </li>
                     <li>
                       <h4>Bank Account Details</h4>
                       <div class="completed_dtl">
                         <div class="inner_box">
-                          <p><span class="bold_txt">Currency</span> <span class="block_txt mt-1">NGN</span></p>
+                          <p><span class="bold_txt">Currency</span> <span class="block_txt mt-1">₦</span></p>
                         </div>
                       </div>
                     </li>
@@ -507,5 +687,52 @@
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script>
+    const steps = [
+      '#v-pills-one1-tab',
+      '#v-pills-one2-tab',
+      '#v-pills-two-tab',
+      '#v-pills-three-tab',
+      '#v-pills-four-tab',
+      '#v-pills-five-tab',
+      '#v-pills-seven-tab'
+    ];
+
+    document.querySelectorAll('.continue_btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+
+        // find currently active tab
+        const activeTab = document.querySelector('.nav-link.active');
+
+        // get its index in steps array
+        const currentIndex = steps.findIndex(step => document.querySelector(step) === activeTab);
+
+        // move to next step
+        const nextStep = steps[currentIndex + 1];
+
+        if (nextStep) {
+          new bootstrap.Tab(document.querySelector(nextStep)).show();
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      function toggleIdentitySection() {
+        // Get index of checked radio
+        var index = $('.radio__input[name="identity"]:checked').closest('.radio').index();
+        // Hide all sections
+        $('.identityVer1').hide();
+        // Show corresponding section
+        $('.identityVer1').eq(index).show();
+      }
+      // Initial load
+      toggleIdentitySection();
+      // On radio change
+      $('.radio__input[name="identity"]').on('change', function () {
+        toggleIdentitySection();
+      });
+    });
+  </script>
 </body>
 </html>
