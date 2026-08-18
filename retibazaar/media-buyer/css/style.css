@@ -1057,6 +1057,7 @@ header {
 .head_part31 > a, .head_part31 .dropdown {
   display: block;
   height: 24px;
+  position: relative;
 }
 .head_part31 a span {
   font-size: 22px;
@@ -1065,6 +1066,23 @@ header {
 }
 .head_part31 a span.size_lg {
   font-size: 24px;
+}
+.head_part31 a .notiCount {
+  font-family: 'Gothampro-Medium';
+  font-size: 10px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #B90505;
+  padding: 3px;
+  border-radius: 20px;
+  width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  right: -6px;
 }
 .guide_btn {
   font-family: 'Gothampro-Medium';
@@ -2418,6 +2436,7 @@ textarea.form_control {
   background-color: #FCFCFC;
   border-top: 1px solid #E8E8E8;
   text-align: center;
+  display: none;
 }
 .pay_methods h6 {
   font-family: 'Gothampro-Medium';
