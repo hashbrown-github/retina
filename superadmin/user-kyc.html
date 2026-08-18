@@ -141,7 +141,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="javascript:void(0);" class="nav-link text-white">
+          <a href="#" class="nav-link text-white">
             <i class="material-icons-round opacity-10">format_paint</i>
             <div class="switchThemeBtn">
               <span class="nav-link-text ms-2 ps-1">Light/Dark</span>
@@ -287,64 +287,80 @@
       <div class="card mt-4">
         <div class="card-header">
           <div class="user_head">
-            <h6 class="mb-0">Business Detail</h6>
+            <div class="profile_box">
+              <h5 class="mb-0">Business Detail<span class="badge badge-success badge-sm">Verified</span>
+                <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editBussDtl">
+                  <span class="material-icons-round">edit</span>
+                </button>
+              </h5>
+            </div>
             <div class="right_check">
-              <div class="form-check verified_dtl p-0 m-0 is-filled">
-                <input class="form-check-input" checked type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+              <div class="d-flex align-items-center">
+                <div class="form-check verified_dtl p-0 m-0 is-filled">
+                  <input class="form-check-input" checked type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+                </div>
+                <label class="form-check-label mb-0">
+                  <small id="profileVisibility">Verified</small>
+                </label>
               </div>
-              <label class="form-check-label mb-0">
-                <small id="profileVisibility">Verified</small>
-              </label>
             </div>
           </div>
           <div class="user_body">
             <ul class="list-group">
               <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
                 <div class="d-flex flex-column">
-                  <span class="mb-2 text-sm">Company Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
-                  <span class="mb-2 text-sm">Official Address: <span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
-                  <span class="mb-2 text-sm">Email Address: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
-                  <span class="mb-2 text-sm">Phone Number: <span class="text-dark ms-sm-2 font-weight-bold">(44) 123 1234 123</span></span>
-                  <span class="mb-2 text-sm">TIN/Vat: <span class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
-                  <span class="text-sm">VAT Number: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson.com</span></span>
+                  <span class="mb-1 text-sm">Company Name: <span class="font-weight-bold">ABC Company</span></span>
+                  <span class="mb-1 text-sm">Official Address: <span class="font-weight-bold">Chandigarh</span></span>
+                  <span class="mb-1 text-sm">Email Address: <span class="font-weight-bold">johdoe@gmail.com</span></span>
+                  <span class="mb-1 text-sm">Phone Number: <span class="font-weight-bold">+234 9876543210</span></span>
+                  <span class="mb-1 text-sm">TIN: <span class="font-weight-bold">123456</span></span>
+                  <span class="mb-1 text-sm">VAT Number: <span class="font-weight-bold">123456</span></span>
+                  <span class="text-sm">Website: <span class="font-weight-bold">https//localhost:3456onboarding</span></span>
                 </div>
               </li>
             </ul>
-            <p class="card_footer font-weight-normal text-sm mb-0"><span class="material-icons-round">border_color</span>Shivani: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
       </div>
       <div class="card mt-4">
         <div class="card-header">
           <div class="user_head">
-            <h6 class="mb-0">Compliance Document</h6>
-            <div class="right_check">
-              <div class="form-check verified_dtl p-0 m-0 is-filled">
-                <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+            <div class="profile_box">
+              <h5 class="mb-0">Identity Verification<span class="badge badge-success badge-sm">Verified</span>
+                <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editIdentityDtl">
+                  <span class="material-icons-round">edit</span>
+                </button>
+              </h5>
+            </div>
+            <div class="right_check validateDtl">
+              <div class="validateBtn">
+                <button type="button" class="btn bg-gradient-primary text-xs shadow-none px-3 py-1 mb-0">Validate</button>
+                <div class="spinner-border loadingStatus" role="status"></div>
+                <span class="badge badge-danger badge-sm">Failed</span>
+                <span class="badge badge-success badge-sm">Passed</span>
               </div>
-              <label class="form-check-label mb-0">
-                <small id="profileVisibility">Click to Verify</small>
-              </label>
+              <div class="d-flex align-items-center">
+                <div class="form-check verified_dtl p-0 m-0 is-filled">
+                  <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+                </div>
+                <label class="form-check-label mb-0">
+                  <small id="profileVisibility">Click to Verify</small>
+                </label>
+              </div>
             </div>
           </div>
           <div class="user_body">
             <ul class="list-group">
               <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
-                <div class="d-flex gap-6">
-                  <div class="document_box">
-                    <p>License from CAC</p>
-                    <div class="">
-                      <img src="images/doc.svg">
-                      <button type="button"><span class="material-icons-round">file_download</span></button>
-                    </div>
+                <div class="d-flex flex-column">
+                  <h6 class="mb-1 text-sm">Passport</h6>
+                  <span class="mb-1 text-sm">Name: <span class="font-weight-bold">John Doe</span></span>
+                  <span class="mb-1 text-sm">Passport Number: <span class="font-weight-bold">M1234567</span></span>
+                  <span class="text-sm">Passport: <span class="font-weight-bold">johnpassport.pdf</span></span>
+                  <div class="file_box">
+                    <img src="images/doc.svg">
+                    <button type="button"><span class="material-icons-round">file_download</span></button>
                   </div>
-                  <!-- <div class="document_box">
-                    <p>Local Partner of International Media Owners</p>
-                    <div class="">
-                      <img src="images/doc.svg">
-                      <button type="button"><span class="material-icons-round">file_download</span></button>
-                    </div>
-                  </div> -->
                 </div>
               </li>
             </ul>
@@ -354,44 +370,63 @@
       <div class="card mt-4">
         <div class="card-header">
           <div class="user_head">
-            <h6 class="mb-0">Contact Information</h6>
+            <div class="profile_box">
+              <h5 class="mb-0">Contact Information<span class="badge badge-warning badge-sm">Pending</span></h5>
+            </div>
             <div class="right_check">
-              <div class="form-check verified_dtl p-0 m-0 is-filled">
-                <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+              <div class="d-flex align-items-center">
+                <div class="form-check verified_dtl p-0 m-0 is-filled">
+                  <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+                </div>
+                <label class="form-check-label mb-0">
+                  <small>Click to Verify</small>
+                </label>
               </div>
-              <label class="form-check-label mb-0">
-                <small>Click to Verify</small>
-              </label>
             </div>
           </div>
           <div class="user_body user_bodyFlex">
             <ul class="list-group">
               <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
                 <div class="d-flex flex-column">
-                  <h6 class="mb-3 text-sm">Director or Managing Director</h6>
-                  <span class="mb-2 text-sm">Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
-                  <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
-                  <span class="text-sm">Email: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
+                  <div class="edit_bank2">
+                    <h6 class="text-sm mb-0">Director or Managing Director</h6>
+                    <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editDirectorDtl">
+                      <span class="material-icons-round text_dark">edit</span>
+                    </button>
+                  </div>
+                  <span class="mb-1 text-sm">Name: <span class="font-weight-bold">John Doe</span></span>
+                  <span class="mb-1 text-sm">Email Address: <span class="font-weight-bold">johdoe@gmail.com</span></span>
+                  <span class="text-sm">Phone Number: <span class="font-weight-bold">+234 9876543210</span></span>
                 </div>
               </li>
             </ul>
             <ul class="list-group">
               <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
                 <div class="d-flex flex-column">
-                  <h6 class="mb-3 text-sm">Decision Maker</h6>
-                  <span class="mb-2 text-sm">Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
-                  <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
-                  <span class="text-sm">Email: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
+                  <div class="edit_bank2">
+                    <h6 class="text-sm mb-0">Decision Maker</h6>
+                    <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editDecisionMDtl">
+                      <span class="material-icons-round text_dark">edit</span>
+                    </button>
+                  </div>
+                  <span class="mb-1 text-sm">Name: <span class="font-weight-bold">John Doe</span></span>
+                  <span class="mb-1 text-sm">Email Address: <span class="font-weight-bold">johdoe@gmail.com</span></span>
+                  <span class="text-sm">Phone Number: <span class="font-weight-bold">+234 9876543210</span></span>
                 </div>
               </li>
             </ul>
             <ul class="list-group">
               <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
                 <div class="d-flex flex-column">
-                  <h6 class="mb-3 text-sm">Designated Contact Person</h6>
-                  <span class="mb-2 text-sm">Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
-                  <span class="mb-2 text-sm">Address: <span class="text-dark ms-sm-2 font-weight-bold">Mohali Tower, Sector 74, SAS Nagar Mohali, Punjab 160055</span></span>
-                  <span class="text-sm">Email: <span class="text-dark ms-sm-2 font-weight-bold">alecthompson@mail.com</span></span>
+                  <div class="edit_bank2">
+                    <h6 class="text-sm mb-0">Designated Contact Person</h6>
+                    <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editDesignatedDtl">
+                      <span class="material-icons-round text_dark">edit</span>
+                    </button>
+                  </div>
+                  <span class="mb-1 text-sm">Name: <span class="font-weight-bold">John Doe</span></span>
+                  <span class="mb-1 text-sm">Email Address: <span class="font-weight-bold">johdoe@gmail.com</span></span>
+                  <span class="text-sm">Phone Number: <span class="font-weight-bold">+234 9876543210</span></span>
                 </div>
               </li>
             </ul>
@@ -401,23 +436,39 @@
       <div class="card mt-4">
         <div class="card-header">
           <div class="user_head">
-            <h6 class="mb-0">Bank Account Details</h6>
-            <div class="right_check">
-              <div class="form-check verified_dtl p-0 m-0 is-filled">
-                <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+            <div class="profile_box">
+              <h5 class="mb-0">Bank Account Details<span class="badge badge-success badge-sm">Verified</span>
+                <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editBankDtl">
+                  <span class="material-icons-round">edit</span>
+                </button>
+              </h5>
+            </div>
+            <div class="right_check validateDtl">
+              <div class="validateBtn">
+                <button type="button" class="btn bg-gradient-primary text-xs shadow-none px-3 py-1 mb-0">Validate</button>
+                <div class="spinner-border loadingStatus" role="status"></div>
+                <span class="badge badge-danger badge-sm">Failed</span>
+                <span class="badge badge-success badge-sm">Passed</span>
               </div>
-              <label class="form-check-label mb-0">
-                <small id="profileVisibility">Click to Verify</small>
-              </label>
+              <div class="d-flex align-items-center">
+                <div class="form-check verified_dtl p-0 m-0 is-filled">
+                  <input class="form-check-input" type="checkbox" data-bs-toggle="modal" data-bs-target="#click_verify">
+                </div>
+                <label class="form-check-label mb-0">
+                  <small id="profileVisibility">Click to Verify</small>
+                </label>
+              </div>
             </div>
           </div>
           <div class="user_body">
             <ul class="list-group">
               <li class="list-group-item border-0 d-flex p-3 bg-gray-100 border-radius-lg">
                 <div class="d-flex flex-column">
-                  <span class="mb-2 text-sm">Currency: <span class="text-dark ms-sm-2 font-weight-bold">$5000</span></span>
-                  <span class="mb-2 text-sm">Country of Bank Account: <span class="text-dark ms-sm-2 font-weight-bold">America</span></span>
-                  <span class="text-sm">Account Number: <span class="text-dark ms-sm-2 font-weight-bold">4111 1111 1113 3422</span></span>
+                  <span class="mb-1 text-sm">Currency: <span class="font-weight-bold">United States Dollar (USD)</span></span>
+                  <span class="mb-1 text-sm">Country of Bank Account: <span class="font-weight-bold">Nigeria</span></span>
+                  <span class="mb-1 text-sm">Bank Name: <span class="font-weight-bold">First Bank Nigeria Ltd</span></span>
+                  <span class="mb-1 text-sm">Account Name: <span class="font-weight-bold">John Doe</span></span>
+                  <span class="text-sm">Account Number: <span class="font-weight-bold">2349876543219</span></span>
                 </div>
               </li>
             </ul>
@@ -441,9 +492,9 @@
             <ul class="list-group">
               <li class="list-group-item d-flex p-3 bg-danger-soft border-danger border-radius-lg">
                 <div class="d-flex flex-column">
-                  <span class="mb-2 text-sm">Cities/Area Applicable: <span class="text-dark ms-sm-2 font-weight-bold"><span class="badge badge-danger badge-sm">Information Missing</span></span></span>
-                  <span class="mb-2 text-sm">Type of Media: <span class="text-dark ms-sm-2 font-weight-bold">Digital Media</span></span>
-                  <span class="text-sm">No. of Media: <span class="text-dark ms-sm-2 font-weight-bold">40</span></span>
+                  <span class="mb-2 text-sm">Cities/Area Applicable: <span class="font-weight-bold"><span class="badge badge-danger badge-sm">Information Missing</span></span></span>
+                  <span class="mb-2 text-sm">Type of Media: <span class="font-weight-bold">Digital Media</span></span>
+                  <span class="text-sm">No. of Media: <span class="font-weight-bold">40</span></span>
                 </div>
               </li>
             </ul>
@@ -571,6 +622,376 @@
           </div>
         </div>
       </div>
+      
+      <!--======= EDIT BUSINESS DETAIL MODAL START =======-->
+      <div class="modal fade" id="editBussDtl" tabindex="-1" role="dialog" aria-labelledby="editBussDtlLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="editBussDtlLabel">Edit Business Detail</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Company Name</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="ABC Company" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Official Address</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="Chandigarh" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Email Address</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="johndoe@gmail.com" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Phone Number</label>
+                  <div class="input_flex mb-2">
+                    <div class="input-group input-group-outline left_width">
+                      <span class="material-icons-round selectIcon">expand_more</span>
+                      <select class="form-control h-auto">
+                        <option selected>+234</option>
+                        <option>+90</option>
+                        <option>+996</option>
+                      </select>
+                    </div>
+                    <div class="input-group input-group-outline left_width right_width">
+                      <input class="form-control h-auto" type="text" value="9876543210" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">TIN</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="123456" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">VAT Number</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="123456" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Website</label>
+                  <div class="input-group input-group-outline mb-0">
+                    <input class="form-control h-auto" type="text" value="https//localhost:3456onboarding" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= EDIT IDENTITY VERIFICATION DETAIL MODAL START =======-->
+      <div class="modal fade" id="editIdentityDtl" tabindex="-1" role="dialog" aria-labelledby="editIdentityDtlLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="editIdentityDtlLabel">Edit Identity Verification Detail</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="selectOption">
+
+                  <div class="d-flex align-items-center">
+                    <div class="form-check p-0 m-0 is-filled">
+                      <label class="form-check-label mb-0">
+                        <input class="form-check-input radio__input" type="radio" name="identityInfo" />
+                        <b class="text-sm">CAC</b>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="form-check p-0 m-0 is-filled">
+                      <label class="form-check-label mb-0">
+                        <input class="form-check-input radio__input" type="radio" name="identityInfo" />
+                        <b class="text-sm">NIN</b>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="form-check p-0 m-0 is-filled">
+                      <label class="form-check-label mb-0">
+                        <input class="form-check-input radio__input" type="radio" name="identityInfo" checked />
+                        <b class="text-sm">Passport</b>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="identityVer">
+                  <div class="identityVer1">
+                    <h6 class="text-sm text-dark opacity-6 mb-1">Company Registration Certificate</h6>
+                    <div class="col-12 col-sm-12">
+                      <label class="font-weight-bold mb-1 ms-0">Upload Certificate</label>
+                      <div class="markPaid">
+                        <input type="file">
+                        <button type="button" class="btn bg-gradient-primary py-1 px-3">Upload</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="identityVer1">
+                    <h6 class="text-sm text-dark opacity-6 mb-1">National Identification Number</h6>
+                    <div class="col-12 col-sm-12">
+                      <label class="text-xs font-weight-bold mb-1 ms-0">NIN Number</label>
+                      <div class="input-group input-group-outline mb-2">
+                        <input class="form-control h-auto" type="text" />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12">
+                      <label class="text-xs font-weight-bold mb-1 ms-0">NIN Document</label>
+                      <div class="markPaid">
+                        <input type="file">
+                        <button type="button" class="btn bg-gradient-primary py-1 px-3">Upload</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="identityVer1">
+                    <h6 class="text-sm text-dark opacity-6 mb-1">Passport</h6>
+                    <div class="col-12 col-sm-12">
+                      <label class="text-xs font-weight-bold mb-1 ms-0">Name</label>
+                      <div class="input-group input-group-outline mb-2">
+                        <input class="form-control h-auto" type="text" value="John Doe" />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12">
+                      <label class="text-xs font-weight-bold mb-1 ms-0">Passport Number</label>
+                      <div class="input-group input-group-outline mb-2">
+                        <input class="form-control h-auto" type="text" value="M1234567" />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12">
+                      <label class="text-xs font-weight-bold mb-1 ms-0">Passport</label>
+                      <div class="uploadDocs">
+                        <div class="markPaid cancelBtn">
+                          <p class="text-sm font-weight-bold">johnpassport.pdf</p>
+                          <button type="button" class="btn bg-gradient-light"><span class="material-icons-round">close</span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= EDIT DIRECTOR OF MANAGING DETAIL MODAL START =======-->
+      <div class="modal fade" id="editDirectorDtl" tabindex="-1" role="dialog" aria-labelledby="editDirectorDtlLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="editDirectorDtlLabel">Edit Director or Managing Director Detail</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Name</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="John Doe" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Email Address</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="johndoe@gmail.com" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Phone Number</label>
+                  <div class="input_flex mb-0">
+                    <div class="input-group input-group-outline left_width">
+                      <span class="material-icons-round selectIcon">expand_more</span>
+                      <select class="form-control h-auto">
+                        <option selected>+234</option>
+                        <option>+90</option>
+                        <option>+996</option>
+                      </select>
+                    </div>
+                    <div class="input-group input-group-outline left_width right_width">
+                      <input class="form-control h-auto" type="text" value="9876543210" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= EDIT DECISION MAKER DETAIL MODAL START =======-->
+      <div class="modal fade" id="editDecisionMDtl" tabindex="-1" role="dialog" aria-labelledby="editDecisionMDtlLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="editDecisionMDtlLabel">Edit Decision Maker Detail</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Name</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="John Doe" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Email Address</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="johndoe@gmail.com" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Phone Number</label>
+                  <div class="input_flex mb-0">
+                    <div class="input-group input-group-outline left_width">
+                      <span class="material-icons-round selectIcon">expand_more</span>
+                      <select class="form-control h-auto">
+                        <option selected>+234</option>
+                        <option>+90</option>
+                        <option>+996</option>
+                      </select>
+                    </div>
+                    <div class="input-group input-group-outline left_width right_width">
+                      <input class="form-control h-auto" type="text" value="9876543210" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= EDIT DESIGNATED DETAIL MODAL START =======-->
+      <div class="modal fade" id="editDesignatedDtl" tabindex="-1" role="dialog" aria-labelledby="editDesignatedDtlLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="editDesignatedDtlLabel">Edit Designated Contact Person Detail</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Name</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="John Doe" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Email Address</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="johndoe@gmail.com" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Phone Number</label>
+                  <div class="input_flex mb-0">
+                    <div class="input-group input-group-outline left_width">
+                      <span class="material-icons-round selectIcon">expand_more</span>
+                      <select class="form-control h-auto">
+                        <option selected>+234</option>
+                        <option>+90</option>
+                        <option>+996</option>
+                      </select>
+                    </div>
+                    <div class="input-group input-group-outline left_width right_width">
+                      <input class="form-control h-auto" type="text" value="9876543210" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= EDIT BANK DETAIL MODAL START =======-->
+      <div class="modal fade" id="editBankDtl" tabindex="-1" role="dialog" aria-labelledby="editBankDtlLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-normal" id="editBankDtlLabel">Edit Bank Account Detail</h5>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal_body">
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Bank Name</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <span class="material-icons-round selectIcon">expand_more</span>
+                    <select class="form-control h-auto">
+                      <option disabled>Choose a Bank</option>
+                      <option selected>First Bank Nigeria Ltd</option>
+                      <option>Access Bank plc</option>
+                      <option>Alpha Morgan Bank</option>
+                      <option>Fidelity Bank Plc</option>
+                      <option>Globus Bank Ltd</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Account Name</label>
+                  <div class="input-group input-group-outline mb-2">
+                    <input class="form-control h-auto" type="text" value="John Doe" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12">
+                  <label class="text-xs font-weight-bold mb-1 ms-0">Account Number</label>
+                  <div class="input-group input-group-outline">
+                    <input class="form-control h-auto" type="text" value="2349876543219" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--======= VERIFY DETAIL MODAL START ======-->
       <div class="modal fade" id="click_verify" tabindex="-1" role="dialog" aria-labelledby="click_verifyLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -603,7 +1024,26 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/perfect-scrollbar.min.js"></script>
   <script src="js/datatables.js"></script>
-  <script src="js/material-dashboard.min.js"></script> 
+  <script src="js/material-dashboard.min.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      function toggleIdentitySection() {
+        // Get index of checked radio
+        var index = $('.radio__input[name="identityInfo"]:checked').closest('.d-flex').index();
+        // Hide all sections
+        $('.identityVer1').hide();
+        // Show corresponding section
+        $('.identityVer1').eq(index).show();
+      }
+      // Initial load
+      toggleIdentitySection();
+      // On radio change
+      $('.radio__input[name="identityInfo"]').on('change', function () {
+        toggleIdentitySection();
+      });
+    });
+  </script>
 </body>
 </html>
   
