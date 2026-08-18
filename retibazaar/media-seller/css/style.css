@@ -1076,6 +1076,7 @@ header {
 .head_part31 > a, .head_part31 .dropdown {
   display: block;
   height: 24px;
+  position: relative;
 }
 .head_part31 a span {
   font-size: 22px;
@@ -1084,6 +1085,23 @@ header {
 }
 .head_part31 a span.size_lg {
   font-size: 24px;
+}
+.head_part31 a .notiCount {
+  font-family: 'Gothampro-Medium';
+  font-size: 10px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #B90505;
+  padding: 3px;
+  border-radius: 20px;
+  width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  right: -6px;
 }
 .guide_btn {
   font-family: 'Gothampro-Medium';
@@ -2442,6 +2460,7 @@ textarea.form_control {
   background-color: #FCFCFC;
   border-top: 1px solid #E8E8E8;
   text-align: center;
+  display: none;
 }
 .pay_methods h6 {
   font-family: 'Gothampro-Medium';
@@ -7215,15 +7234,8 @@ footer {
   font-weight: 400;
 }
 .custom-tooltip2 .tooltip-inner {
-  max-width: 192px;
-  font-family: 'Gothampro-Regular';
-  font-size: 12px;
-  line-height: 16px;
-  color: #000000;
+  max-width: 190px;
   text-align: left;
-  padding: 6px 12px;
-  background-color: #ffffff;
-  box-shadow: 0 1px 5px rgb(0 0 0 / 16%);
 }
 .modal_body p.editPrice2 {
   font-family: 'Gothampro-Medium';
@@ -7664,6 +7676,10 @@ select.editInput {
   font-weight: 300;
   color: #000000;
   vertical-align: bottom;
+}
+.custom-tooltip.custom-tooltip3 .tooltip-inner {
+  max-width: 190px;
+  text-align: left;
 }
 .butnIcon {
   font-size: 15px;
