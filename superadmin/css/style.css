@@ -1,8 +1,8 @@
 ﻿@charset "UTF-8";
 @font-face {
-    font-family: 'TheScientist';
-    src: url('../fonts/TheScientist.ttf') format('TrueType');
-    font-weight: normal;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    src: url('../fonts/roboto.woff') format('woff');
+    font-weight: 100 900;
     font-style: normal;
 }
 body {
@@ -708,6 +708,87 @@ body.dark_theme .switch_theme .switch__input+.switch__in .icon-sun {
 .btn-close.text-dark {
     padding-top: 0;
 }
+.profile_box h5 {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.edit_bank {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit_bank span {
+    font-size: 20px;
+    font-weight: 300;
+}
+.file_box {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    margin-top: 10px;
+}
+.file_box img {
+    width: 42px;
+    opacity: .3;
+}
+.file_box button {
+    color: #344764;
+    height: 20px;
+    cursor: pointer;
+}
+.file_box button span {
+    font-size: 20px;
+}
+.edit_bank2 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+.edit_bank2 .edit_bank {
+    width: 16px;
+    height: 16px;
+}
+.edit_bank2 .edit_bank span {
+    font-size: 16px;
+}
+.validateDtl {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.validateBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-right: 1px solid #EAEAEA;
+    padding-right: 10px;
+}
+.validateBtn button {
+    height: 32px;
+}
+.loadingStatus {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+}
+.selectOption {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.identityVer {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
 /*======== USER DETAIL PAGE END =========*/
 /*======== CAMPAIGNS PAGE START =========*/
 .campaign_list {
@@ -822,14 +903,14 @@ body.dark_theme .switch_theme .switch__input+.switch__in .icon-sun {
     display: block;
 }
 .markPaid.cancelBtn button {
-    padding: 3px 3px;
-    height: 26px;
+    padding: 2px 2px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .markPaid.cancelBtn button span {
-    font-size: 20px;
+    font-size: 18px;
 }
 /*========= CAMPAIGNS PAGE END ==========*/
 /*====== FIELD EXECUTIVES START =========*/
@@ -2653,11 +2734,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .dark-version .list-group {
     --bs-list-group-color: #ffffff;
 }
-.dark-version .document_box img {
+.dark-version .document_box img, .dark-version .file_box img {
     opacity: .5;
     filter: invert(100%);
 }
-.dark-version .document_box button span {
+.dark-version .document_box button span, .dark-version .file_box button span {
     opacity: .6;
     color: #ffffff;
 }
@@ -2668,7 +2749,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .dark-version .approval_doc, .dark-version .media_txt, .dark-version .frequency_btn, .dark-version .addExe_item input:checked~.addExe_item0, .dark-version .addExe_item.selected {
     background-image: linear-gradient(195deg, #016dd6, #0060bd);
 }
-.dark-version .icon_dtl {
+.dark-version .icon_dtl, .dark-version .edit_bank span {
     color: #ffffff;
 }
 .dark-version .modal-content {
@@ -2724,7 +2805,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .dark-version .modal_body .bootstrap-tagsinput input, .dark-version .modal_body .bootstrap-tagsinput input::placeholder, .dark-version .bootstrap-tagsinput input {
     color: #ffffff;
 }
-.dark-version .section_div, .dark-version .section_div1, .dark-version .sec_body, .dark-version .bootstrap-tagsinput, .dark-version .Right_side_input input, .dark-version .modal_body .bootstrap-tagsinput, .dark-version .logo_img, .dark-version .quot_detail0 {
+.dark-version .section_div, .dark-version .section_div1, .dark-version .sec_body, .dark-version .bootstrap-tagsinput, .dark-version .Right_side_input input, .dark-version .modal_body .bootstrap-tagsinput, .dark-version .logo_img, .dark-version .quot_detail0, .dark-version .identityVer {
     border-color: hsl(0deg 0% 100% / 13%) !important
 }
 .dark-version .assign_btns a, .dark-version .assign_btns button {
@@ -2792,6 +2873,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .dark-version .card p.text-primary {
     color: #016DD6 !important;
+}
+.dark-version .loadingStatus {
+    border-color: #ffffff;
+    border-right-color: transparent;
+}
+.dark-version .user_body .list-group .list-group-item {
+    background-color: #1a2035 !important;
 }
 /*====== DARK THEME CSS END ======*/
 /*====== MEDIA QUERY START =======*/
