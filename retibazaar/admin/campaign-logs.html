@@ -39,6 +39,7 @@ if (localStorage.getItem('darkMode') === "on") {
 <div class="page">
   <div class="sidebar">
     <div class="sidebar__top">
+      <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
       <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
       <a class="sidebar__logo" href="dashboard.html">
         <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
@@ -81,8 +82,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Media Locations</div>
                 </a>
-                <span><a href="inventory.html">Inventory</a></span>
-                <span><a href="location-request.html">Location Request</a></span>
+                <span><a href="inventory.html"><b>I</b><span>Inventory</span></a></span>
+                <span><a href="location-request.html"><b>L</b><span>Location Request</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -91,8 +92,9 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Orders</div>
                 </a>
-                <span><a href="requested-orders.html">Requested Orders</a></span>
-                <span><a href="final-orders.html">Final Orders</a></span>
+                <span><a href="requested-orders.html"><b>R</b><span>Requested Orders</span></a></span>
+                <span><a href="proposal.html"><b>P</b><span>Proposal</span></a></span>
+                <span><a href="final-orders.html"><b>F</b><span>Final Orders</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
@@ -101,8 +103,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
-                <span class="active"><a href="campaigns.html">Active Campaigns</a></span>
-                <span><a href="pop-and-verification.html">PoP & Verification</a></span>
+                <span class="active"><a href="campaigns.html"><b>A</b><span>Active Campaigns</span></a></span>
+                <span><a href="pop-and-verification.html"><b>P</b><span>PoP & Verification</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -111,9 +113,21 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Teams</div>
                 </a>
-                <span><a href="field-executives.html">Field Executives</a></span>
-                <span><a href="sales-team.html">Sales Team</a></span>
-                <span><a href="#">Quality Auditors</a></span>
+                <span><a href="field-executives.html"><b>F</b><span>Field Executives</span></a></span>
+                <span><a href="sales-team.html"><b>S</b><span>Sales Team</span></a></span>
+                <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
+                <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">topic</span>
+                  </div>
+                  <div class="sidebar__text">Excel Resource</div>
+                </a>
+                <span><a href="states.html"><b>S</b><span>States</span></a></span>
+                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
               </div>
               <div class="side_dropdown">
                 <a class="sidebar__item" href="#">
@@ -122,6 +136,20 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Tickets</div>
                 </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">cards_stack</span>
+                  </div>
+                  <div class="sidebar__text">Logs</div>
+                </a>
+                <span><a href="transaction-log.html"><b>T</b><span>Transaction Log</span></a></span>
+                <span><a href="payout-log.html"><b>P</b><span>Payout Log</span></a></span>
+                <span><a href="campaign-log.html"><b>C</b><span>Campaign Log</span></a></span>
+                <span><a href="location-log.html"><b>L</b><span>Location Log</span></a></span>
+                <span><a href="refund-log.html"><b>R</b><span>Refund Log</span></a></span>
+                <span><a href="user-activity.html"><b>U</b><span>User Activity</span></a></span>
               </div>
             </div>
           </div>
@@ -172,23 +200,25 @@ if (localStorage.getItem('darkMode') === "on") {
           </div>
         </div>
         <div class="head_part2">
-          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="notifications.html"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
           <a href="#"><span class="material-symbols-outlined">person</span></a>
         </div>
       </div>
       <div class="main_div">
         <div class="main_content">
-          <div class="sec_4 card_body">
-            <div class="userDtl_head">
-              <div class="profile_box">
-                <h6 class="text_md text_dark mb-0">Campaign Logs</h6>
-              </div>
-            </div>
-            <div class="sec_6 campaign_logs">
+          <div class="sec_all card_body">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="campaigns.html">Campaigns</a></li>
+                <li class="breadcrumb-item"><a href="campaign-detail.html">Campaign Detail</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Campaign Logs</li>
+              </ol>
+            </nav>
+            <div class="sec_6 campaign_logs mt-0">
               <div class="sec_61 mb-20">
                 <div class="sec_611">
                   <p class="mb-1">Order ID <span class="blue_txt">#123456</span></p>
-                  <h3>The Rise of Advertising</h3>
+                  <h3 class="text-caps">The Rise of Advertising</h3>
                   <p class="mb-0">Uploaded By Media Seller: <b class="blue_txt">John Doe</b></p>
                 </div>
               </div>
@@ -349,4 +379,13 @@ if (localStorage.getItem('darkMode') === "on") {
     });
   });
 </script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
+</body>
+</html>

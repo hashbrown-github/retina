@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Transaction Detail | Retibazaar</title>
-<meta name="title" content="Transaction | Retibazaar" />
-<meta name="description" content="Transaction | Retibazaar" />
+<title>Media Types | Retibazaar</title>
+<meta name="title" content="Location Inventory | Retibazaar" />
+<meta name="description" content="Location Inventory | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
@@ -60,7 +60,7 @@ if (localStorage.getItem('darkMode') === "on") {
                 </a>
               </div>
               <div class="side_dropdown">
-                <a class="sidebar__item active" href="transaction.html">
+                <a class="sidebar__item" href="transaction.html">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">credit_card</span>
                   </div>
@@ -118,15 +118,15 @@ if (localStorage.getItem('darkMode') === "on") {
                 <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
                 <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
               </div>
-              <div class="side_dropdown arrow_drop dropdown_btn">
-                <a class="sidebar__item" href="javascript:void(0);">
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">topic</span>
                   </div>
                   <div class="sidebar__text">Excel Resource</div>
                 </a>
                 <span><a href="states.html"><b>S</b><span>States</span></a></span>
-                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span class="active"><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
                 <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
               </div>
               <div class="side_dropdown">
@@ -207,107 +207,167 @@ if (localStorage.getItem('darkMode') === "on") {
       <div class="main_div">
         <div class="main_content">
           <div class="sec_all card_body">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="transaction.html">Transaction</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Transaction Detail</li>
-              </ol>
-            </nav>
-            <!-- <div class="page_head">
-              <h6><span class="material-symbols-outlined">credit_card</span>Transaction</h6>
-            </div> -->
-            <div class="sec_61 mb-20">
-              <div class="sec_611">
-                <h3>₦ 6750<span class="status_type warning_1">Refunded</span></h3>
-                <p class="mb-0">Charged to <b class="blue_txt">johndoe@gmail.com</b></p>
-              </div>
-              <div class="sec_612">
-                <button type="button" class="blue_btn">View Receipt<div class="spinner-border text-white" role="status"></div></button>
+            <div class="page_head">
+              <h6><span class="material-symbols-outlined">jamboard_kiosk</span>Media Types</h6>
+              <div class="right_side">
+                <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#add_static">Add Static Media</button>
+                <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#add_digital">Add Digital Media</button>
               </div>
             </div>
-            <div class="sec_62">
-              <div class="sec_621">
-                <div class="sec_6211">
-                  <h3>Recent Activity</h3>
-                  <ul>
-                    <li>
-                      <!-- <span class="material-symbols-outlined success_color">task_alt</span>
-                      <span class="material-symbols-outlined danger_color">error</span> -->
-                      <span class="material-symbols-outlined warning_color">undo</span>
-                      <p>
-                        <b class="block_txt">Payment Refunded</b>
-                        <span class="block_txt">It may take a few days for the money to reach the customer’s bank account.</span>
-                        <a href="#" class="block_txt">View Detail</a>
-                        <span>Apr 10, 2025, 05:25 PM</span>
-                      </p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">task_alt</span>
-                      <p><b class="block_txt">Transaction Succeeded</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">payments</span>
-                      <p><b class="block_txt">Transaction Started</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
+            <div class="excelRes_dtl">
+              <div class="excelSou_tabs">
+                <div class="addsteps_121">
+                  <button class="grey_box" type="button" data-bs-toggle="collapse" data-bs-target="#static" aria-expanded="true" aria-controls="static">Static Media Types<span class="material-symbols-outlined">expand_less</span></button>
+                  <div class="collapse show" id="static">
+                    <div class="card card-body p-0">
+                      <div class="addsteps_121 mt-0">
+                        <ul class="subsub_category">
+                          <li>
+                            <h5>
+                              <a href="#" style="display: none;">Media Type 1</a>
+                              <input type="text" class="media_input" value="Media Type 1" />
+                              <button type="button" class="mediaEdit" data-bs-toggle="modal" data-bs-target="#confirmModal"><span class="material-symbols-outlined">select_check_box</span></button>
+                            </h5>
+                          </li>
+                          <li>
+                            <h5>
+                              <a href="#">Media Type 2</a>
+                              <input type="text" class="media_input" value="Media Type 2" style="display: none;" />
+                              <button type="button" class="mediaEdit"><span class="material-symbols-outlined">stylus</span></button>
+                            </h5>
+                          </li>
+                          <li>
+                            <h5>
+                              <a href="#">Media Type 3</a>
+                              <input type="text" class="media_input" value="Media Type 3" style="display: none;" />
+                              <button type="button" class="mediaEdit"><span class="material-symbols-outlined">stylus</span></button>
+                            </h5>
+                          </li>
+                          <li>
+                            <h5>
+                              <a href="#">Media Type 4</a>
+                              <input type="text" class="media_input" value="Media Type 4" style="display: none;" />
+                              <button type="button" class="mediaEdit"><span class="material-symbols-outlined">stylus</span></button>
+                            </h5>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="sec_6212">
-                  <h3>Transaction Breakdown (Location 1 Transaction)</h3>
-                  <ul class="mb-20">
-                    <li>
-                      <p><b>Amount for Location 1</b><span>₦ 25,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Processing Fee</b><span>- ₦ 5,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Net Amount</b><b>₦ 20,000</b></p>
-                    </li>
-                  </ul>
-                  <p class="small_p mb-0"><b>Note:</b> The amount is refunded as the location could not be verified.</p>
+                <div class="addsteps_121">
+                  <button class="grey_box" type="button" data-bs-toggle="collapse" data-bs-target="#digital" aria-expanded="true" aria-controls="digital">Digital Media Types<span class="material-symbols-outlined">expand_less</span></button>
+                  <div class="collapse show" id="digital">
+                    <div class="card card-body p-0">
+                      <div class="addsteps_121 mt-0">
+                        <ul class="subsub_category">
+                          <li>
+                            <h5>
+                              <a href="#">Media Type 1</a>
+                              <input type="text" class="media_input" value="Media Type 1" style="display: none;" />
+                              <button type="button" class="mediaEdit"><span class="material-symbols-outlined">stylus</span></button>
+                            </h5>
+                          </li>
+                          <li>
+                            <h5>
+                              <a href="#">Media Type 2</a>
+                              <input type="text" class="media_input" value="Media Type 2" style="display: none;" />
+                              <button type="button" class="mediaEdit"><span class="material-symbols-outlined">stylus</span></button>
+                            </h5>
+                          </li>
+                          <li>
+                            <h5>
+                              <a href="#">Media Type 3</a>
+                              <input type="text" class="media_input" value="Media Type 3" style="display: none;" />
+                              <button type="button" class="mediaEdit"><span class="material-symbols-outlined">stylus</span></button>
+                            </h5>
+                          </li>
+                          <li>
+                            <h5>
+                              <a href="#">Media Type 4</a>
+                              <input type="text" class="media_input" value="Media Type 4" style="display: none;" />
+                              <button type="button" class="mediaEdit"><span class="material-symbols-outlined">stylus</span></button>
+                            </h5>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="sec_622">
-                <div class="sec_6221">
-                  <h3>Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Transaction ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Transaction Method</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Last Updated</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
+            </div>
+          </div>
+        </div>
+        <!--======== ADD STATIC MEDIA MODAL START =======-->
+        <div class="modal fade" id="add_static" tabindex="-1" role="dialog" aria-labelledby="add_staticLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="add_staticLabel">Add Static Media</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" placeholder="Enter media name" />
+                    </div>
+                  </div>
                 </div>
-                <div class="sec_6222">
-                  <h3>Customer Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Customer ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Customer Name</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Email</b><span class="blue_txt">johndoe@gmail.com</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Phone</b><span>+234-809-555-60</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Country</b><span>Nigeria</span></p>
-                    </li>
-                  </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== ADD DIGITAL MEDIA MODAL START =======-->
+        <div class="modal fade" id="add_digital" tabindex="-1" role="dialog" aria-labelledby="add_digitalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="add_digitalLabel">Add Digital Media</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" placeholder="Enter media name" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== CONFIRMATION MODAL START =======-->
+        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="confirmModal">Confirmation Popup</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p>Do you really want to update the media name?</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Update</button>
               </div>
             </div>
           </div>
@@ -336,5 +396,42 @@ if (localStorage.getItem('darkMode') === "on") {
   });
 </script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
+
+<!--===== EDIT MEDIA TYPE SCRIPT START =====-->
+
+<script>
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".mediaEdit")) return;
+
+    const editBtn = e.target.closest(".mediaEdit");
+    const h5 = editBtn.closest("h5");
+
+    const anchor = h5.querySelector("a");
+    const input = h5.querySelector(".media_input");
+    const icon = editBtn.querySelector(".material-symbols-outlined");
+
+    // 👉 EDIT MODE
+    if (anchor.style.display !== "none") {
+      anchor.style.display = "none";
+      input.style.display = "flex";
+
+      input.value = anchor.textContent.trim();
+      input.focus();
+
+      icon.textContent = "select_check_box";
+    }
+    // 👉 SAVE MODE
+    else {
+      const value = input.value.trim() || "Media Type";
+
+      anchor.textContent = value;
+
+      input.style.display = "none";
+      anchor.style.display = "flex";
+
+      icon.textContent = "stylus";
+    }
+  });
+</script>
 </body>
 </html>

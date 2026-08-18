@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Final Order Detail | Retibazaar</title>
+<title>Ad Creatives | Retibazaar</title>
 <meta name="title" content="Transaction | Retibazaar" />
 <meta name="description" content="Transaction | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -210,254 +210,207 @@ if (localStorage.getItem('darkMode') === "on") {
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="final-orders.html">Final Orders</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Final Order Detail</li>
+                <li class="breadcrumb-item"><a href="final-order-detail.html">Order Detail</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ad Creatives</li>
               </ol>
             </nav>
-            <div class="campaign_list">
+            <div class="campaign_list mb-20">
               <ul>
-                <li class="mb-0 p-0">
-                  <div class="green_order p-0">
-                    <div class="top_body card_body3">
-                      <div class="card_body31">
-                        <p class="small_p mb-2">ORD-00482</p>
-                        <h6 class="text_md text_dark text-caps mb-2">The Rise of Advertising</h6>
-                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>30 Days</span></p>
-                        <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                        <p class="small_p mb-0">Locations: <b>10</b> <span class="status_type blue_1">3 Equal Installments</span></p>
-                        <div class="pay_status">
-                          <div class="pay_dtl">
-                            <div class="pay_box">
-                              <span class="paymentPaid"></span>
-                              <span class="paymentPend"></span>
-                              <span class="paymentPend"></span>
-                            </div>
-                            <div class="pay_no"><p class="small_p mb-0"><b>1/3</b> Paid</p></div>
-                          </div>
-                          <p class="small_p mt-1 mb-0">Next installment due on: <b>May 12, 2026</b></p>
-                        </div>
-                      </div>
-                      <div class="card_body33 card_body34">
-                       <div class="card_body331">
-                          <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦37,500</span></span></p>
-                          <span class="status_type blue_1">Partially Paid</span>
-                        </div>
-                        <a href="ad-creatives.html" class="status_type solid-blue">View Ad Creatives</a>
-                      </div>
+                <li>
+                  <div class="userDtl_head">
+                    <div class="profile_box">
+                      <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
+                      <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
+                      <p class="small_p mb-2">Order Status: <span class="status_type success_1">Confirmed</span><span class="status_type warning_1 ms-1">Unpaid</span></p>
+                      <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+                      <p class="small_p mb-0"><span class="status_type bg_secondary me-1">Payment Payment: <span class="blue_txt">₦ 25,000</span></span> | 
+                        <button type="button" class="blue_txt text-decoration-underline ms-1">View Payment Breakdown</button>
+                      </p>
                     </div>
-                    <div class="bottom_body">
-                      <p class="mb-0"><b class="color_p">Campaign is live.</b></p>
+                    <div class="right_side">
+                      <button type="button" class="blue_txt text-decoration-underline" data-bs-toggle="modal" data-bs-target="#approvePayment">Manually Approved Payment</button>
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
-            <div class="note_box note_box3 green_noti">
-              <p class="mb-0">
-                <b class="block_txt mb-2"><span class="material-symbols-outlined noti_icon">campaign</span>Campaign is live.</b>
-                <span class="block_txt mt-1">First installment received - order moved to campaigns for verification and activation. Remaining Installments due as scheduled.</span>
-              </p>
-            </div>
-            <div class="orderPay_sec">
-              <div class="tooltip_head">
-                <h3 class="text_lg text_dark mb-0">Payment Structure · 60-Day Campaign</h3>
-                <div class="tooltip_hover1">
-                  <span class="material-symbols-outlined">info</span>
-                  <div class="tooltip_box tooltip_box1">
-                    <ul>
-                      <li class="active"><p><span>1-89 days</span><span>Full payment in advance ← this order</span></p></li>
-                      <li><p><span>90–179 days</span><span>50% upfront · 50% after 45 days</span></p></li>
-                      <li><p><span>180–269 days</span><span>33.3% upfront · 2 equal installments</span></p></li>
-                      <li><p><span>270–365+ days</span><span>25% upfront · 3 equal installments</span></p></li>
-                    </ul>
-                  </div>
+            <div class="reqOrder_dtl">
+              <div class="secHead2 align-items-center">
+                <div class="secHead21">
+                  <h6 class="text_md text_dark mb-0">View Ad Creatives</h6>
+                </div>
+                <div class="secHead22">
+                  <button type="button" class="blue_btn">Download All Creatives</button>
                 </div>
               </div>
-              <div class="byOrder_box">
-                <div class="card_header card_header5">
-                  <ul>
-                    <li>
-                      <div>
-                        <h3 class="blue_txt">₦50,000</h3>
-                        <p class="mb-0">Total Order Value</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <h3 class="green_txt">₦12,500</h3>
-                        <p class="mb-0">Amount Paid</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <h3 class="ornge_txt">₦37,500</h3>
-                        <p class="mb-0">Balance Pending</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <h3>1/3</h3>
-                        <p class="mb-0">Installments Paid</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <h3>₦10,000</h3>
-                        <p class="mb-0">Printing & Installation Charges</p>
-                      </div>
-                    </li>
-                  </ul>
+              <div class="campaign_list card_body p-0 mt-15">
+                <div class="table_view ad_table hori_scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th width="13%">Screen Type</th>
+                        <th width="20%">Media/Vehicle Type</th>
+                        <th width="12%">Media Size</th>
+                        <th width="33%">Locations</th>
+                        <th width="10%">File Type</th>
+                        <th width="12%">Image/Video</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p><span class="status_type badge-transit">Transit</span></p>
+                        </td>
+                        <td>
+                          <p>Hoarding/Bus</p>
+                        </td>
+                        <td>
+                          <p>3ft x 5ft</p>
+                        </td>
+                        <td>
+                          <p><a href="#" class="blue_txt small_p">LAB/BILL/002</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a></p>
+                        </td>
+                        <td>
+                          <p>png</p>
+                        </td>
+                        <td>
+                          <div class="note_box21">
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">visibility</span>
+                            </button>
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">download</span>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><span class="status_type badge-digital">Digital</span></p>
+                        </td>
+                        <td>
+                          <p>Panel</p>
+                        </td>
+                        <td>
+                          <p>5m x 8m</p>
+                        </td>
+                        <td>
+                          <p><a href="#" class="blue_txt small_p">LAB/BILL/002</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a> | <a href="#" class="blue_txt small_p">LAB/BILL/004</a> | <a href="#" class="blue_txt small_p">LAB/BILL/005</a></p>
+                        </td>
+                        <td>
+                          <p>jpg</p>
+                        </td>
+                        <td>
+                          <div class="note_box21">
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">visibility</span>
+                            </button>
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">download</span>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><span class="status_type badge-transit">Transit</span></p>
+                        </td>
+                        <td>
+                          <p>Hoarding/Taxi</p>
+                        </td>
+                        <td>
+                          <p>3ft x 5ft</p>
+                        </td>
+                        <td>
+                          <p><a href="#" class="blue_txt small_p">LAB/BILL/002</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a></p>
+                        </td>
+                        <td>
+                          <p>mp4</p>
+                        </td>
+                        <td>
+                          <div class="note_box21">
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">visibility</span>
+                            </button>
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">download</span>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><span class="status_type badge-digital">Digital</span></p>
+                        </td>
+                        <td>
+                          <p>Hoarding</p>
+                        </td>
+                        <td>
+                          <p>5m x 8m</p>
+                        </td>
+                        <td>
+                          <p><a href="#" class="blue_txt small_p">LAB/BILL/002</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a></p>
+                        </td>
+                        <td>
+                          <p>jpg</p>
+                        </td>
+                        <td>
+                          <div class="note_box21">
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">visibility</span>
+                            </button>
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">download</span>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><span class="status_type badge-static">Static</span></p>
+                        </td>
+                        <td>
+                          <p>Hoarding</p>
+                        </td>
+                        <td>
+                          <p>3ft x 5ft</p>
+                        </td>
+                        <td>
+                          <p><a href="#" class="blue_txt small_p">LAB/BILL/002</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a> | <a href="#" class="blue_txt small_p">LAB/BILL/003</a></p>
+                        </td>
+                        <td>
+                          <p>mp4</p>
+                        </td>
+                        <td>
+                          <div class="note_box21">
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">visibility</span>
+                            </button>
+                            <button type="button" class="status_type grey_1 downIcon">
+                              <span class="material-symbols-outlined">download</span>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-              <h4 class="text_md text_dark">Instalment Schedule</h4>
-              <div class="notification_box">
-                <div class="note_box note_box2 green_noti">
-                  <p class="mb-0">
-                    <span><b>Installment 1</b></span>
-                    <span class="block_txt mt-1">Due: 5 Due: 5 May 2026</span>
-                    <span class="block_txt mt-1">33% of total order value: <b>₦16,666</b> | Printing & Installation Charges: <b>₦10,000</b></span>
-                  </p>
-                  <div class="note_box21">
-                    <span class="status_type solid-success">Paid</span>
-                    <button type="button" class="status_type success_1 downIcon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Download Invoice">
-                      <span class="material-symbols-outlined">download</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="note_box note_box2 ornge_noti">
-                  <p class="mb-0">
-                    <span><b>Installment 2</b> <span class="ornge_txt">(activates campaign)</span></span>
-                    <span class="block_txt mt-1">Due: 5 Due: 5 May 2026</span>
-                    <span class="block_txt mt-1">33% of total order value: <b>₦16,666</b></span>
-                  </p>
-                  <div class="note_box21">
-                    <span class="status_type warning_1">Due Now</span>
-                  </div>
-                </div>
-                <div class="note_box note_box2 grey_noti">
-                  <p class="mb-0">
-                    <span><b>Installment 3</b></span>
-                    <span class="block_txt mt-1">Due: 5 Due: 5 May 2026</span>
-                    <span class="block_txt mt-1">33% of total order value: <b>₦16,666</b></span>
-                  </p>
-                  <div class="note_box21">
-                    <span class="status_type blue_1">Upcoming</span>
-                  </div>
-                </div>
+              <div class="downloadBtn mt-15">
+                <p class="text-center mb-15"><b>OR</b></p>
               </div>
-              <div class="reqOrder_dtl">
-                <div class="secHead2 align-items-center">
-                  <div class="secHead21">
-                    <h6 class="text_md text_dark mb-0">Locations: <span>12</span></h6>
-                  </div>
+              <div class="secHead21">
+                <h6 class="text_md text_dark mb-0">Download Zip File</h6>
+              </div>
+              <div class="downloadBtn downloadBtn2 mt-15">
+                <div class="report_pdf">
+                  <div class="nav_link"><img src="images/file.png" alt="zip">location-images.zip</div>
                 </div>
-                <div class="campaign_list card_body p-0 mt-15">
-                  <div class="table_view reqordr_table hori_scroll">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th width="20%">Location/Route Name</th>
-                          <th width="16%">Media Type/Format</th>
-                          <th width="14%">Screen Type</th>
-                          <th width="18%">Seller Info</th>
-                          <th width="20%">Period</th>
-                          <th width="12%">Rate</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <p><a href="location-detail.html" class="blue_txt">Media Location 4</a></p>
-                          </td>
-                          <td>
-                            <p>Billboard (40×20m)</p>
-                          </td>
-                          <td>
-                            <p><span class="status_type badge-static">Static</span></p>
-                          </td>
-                          <td>
-                            <p><span>Media Seller 1</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
-                          </td>
-                          <td>
-                            <p class="green_txt"><span>Aug 05, 2024</span> - <span>Sep 06, 2025</span></p>
-                          </td>
-                          <td>
-                            <p>₦ 25,000</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p><a href="location-detail.html" class="blue_txt">Media Location 4</a></p>
-                          </td>
-                          <td>
-                            <p>Billboard (40×20m)</p>
-                          </td>
-                          <td>
-                            <p><span class="status_type badge-digital">Digital</span></p>
-                          </td>
-                          <td>
-                            <p><span>Media Seller 1</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
-                          </td>
-                          <td>
-                            <p class="green_txt"><span>Aug 05, 2024</span> - <span>Sep 06, 2025</span><span class="block_txt mt-1">Total Slots: <span>30</span></span></p>
-                          </td>
-                          <td>
-                            <p>₦ 25,000</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p><span class="blue_txt">Abuja to Lagos</span></p>
-                          </td>
-                          <td>
-                            <p>Billboard (40×20m)</p>
-                          </td>
-                          <td>
-                            <p><span class="status_type badge-transit">Transit</span></p>
-                          </td>
-                          <td>
-                            <p><span>Media Seller 1</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
-                          </td>
-                          <td>
-                            <p class="green_txt"><span>Aug 05, 2024</span> - <span>Sep 06, 2025</span></p>
-                          </td>
-                          <td>
-                            <p>₦ 25,000</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="notification_box proposal_head">
-                  <div class="note_box note_box2 ornge_noti mb-0">
-                    <p class="mb-0">1/3 Installment Received - <b>Pending: ₦33,332</b></p>
-                  </div>
-                </div>
-                <div class="payBreakdown">
-                  <div class="sec_6212 mt-0">
-                    <h3>Payment Breakdown</h3>
-                    <ul class="mb-0">
-                      <li>
-                        <p><span></span><b>Total</b></p>
-                      </li>
-                      <li>
-                        <p><span>Media Location 1</span><span>₦ 25,000</span></p>
-                      </li>
-                      <li>
-                        <p><span>Media Location 2</span><span>₦ 20,000</span></p>
-                      </li>
-                      <li>
-                        <p><span>Media Location 3</span><span>₦ 20,000</span></p>
-                      </li>
-                      <li>
-                        <p><b>Platform Fee (2%)</b><b>+ ₦ 30,000</b></p>
-                      </li>
-                      <li>
-                        <p><b>Net Amount</b><b>₦ 95,000</b></p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <button type="button" class="status_type bg_secondary"><span class="material-symbols-outlined">download</span></button>
+              </div>
+              <div class="noFoundInner">
+                <img src="images/not-found.svg" alt="Ad Creatives not Found">
+                <h3>No Ad Creatives Found!</h3>
               </div>
             </div>
           </div>
@@ -523,7 +476,7 @@ if (localStorage.getItem('darkMode') === "on") {
                     </div>
                     <p class="small_p mt-3 mb-0">No of Locations: <b>2</b></p>
                     <p class="small_p mt-1 mb-0">Location Price: <b>₦ 67,000.00</b></p>
-                    <p class="small_p mt-1 mb-0">Platform Fee (2%): <b>₦ 2,010.00</b></p>
+                    <p class="small_p mt-1 mb-0">Platform Fee: <b>₦ 2,010.00</b></p>
                     <p class="small_p mt-1 mb-0">Printing Charges + Installation Charges: <b>₦ 22,900.00</b></p>
                     <p class="small_p mt-1 mb-0">VAT: <b>₦ 5,175.75</b></p>
                     <p class="small_p blue_txt mt-2 mb-0"><b>Total Price: </b><b>₦ 74,185.75</b></p>

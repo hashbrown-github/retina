@@ -40,6 +40,7 @@ if (localStorage.getItem('darkMode') === "on") {
 <div class="page">
   <div class="sidebar">
     <div class="sidebar__top">
+      <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
       <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
       <a class="sidebar__logo" href="dashboard.html">
         <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
@@ -82,8 +83,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Media Locations</div>
                 </a>
-                <span><a href="inventory.html">Inventory</a></span>
-                <span><a href="location-request.html">Location Request</a></span>
+                <span><a href="inventory.html"><b>I</b><span>Inventory</span></a></span>
+                <span><a href="location-request.html"><b>L</b><span>Location Request</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -92,8 +93,9 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Orders</div>
                 </a>
-                <span><a href="requested-orders.html">Requested Orders</a></span>
-                <span><a href="final-orders.html">Final Orders</a></span>
+                <span><a href="requested-orders.html"><b>R</b><span>Requested Orders</span></a></span>
+                <span><a href="proposal.html"><b>P</b><span>Proposal</span></a></span>
+                <span><a href="final-orders.html"><b>F</b><span>Final Orders</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
@@ -102,8 +104,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
-                <span><a href="campaigns.html">Active Campaigns</a></span>
-                <span class="active"><a href="pop-and-verification.html">PoP & Verification</a></span>
+                <span><a href="campaigns.html"><b>A</b><span>Active Campaigns</span></a></span>
+                <span class="active"><a href="pop-and-verification.html"><b>P</b><span>PoP & Verification</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -112,9 +114,21 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Teams</div>
                 </a>
-                <span><a href="field-executives.html">Field Executives</a></span>
-                <span><a href="sales-team.html">Sales Team</a></span>
-                <span><a href="#">Quality Auditors</a></span>
+                <span><a href="field-executives.html"><b>F</b><span>Field Executives</span></a></span>
+                <span><a href="sales-team.html"><b>S</b><span>Sales Team</span></a></span>
+                <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
+                <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">topic</span>
+                  </div>
+                  <div class="sidebar__text">Excel Resource</div>
+                </a>
+                <span><a href="states.html"><b>S</b><span>States</span></a></span>
+                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
               </div>
               <div class="side_dropdown">
                 <a class="sidebar__item" href="#">
@@ -123,6 +137,20 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Tickets</div>
                 </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">cards_stack</span>
+                  </div>
+                  <div class="sidebar__text">Logs</div>
+                </a>
+                <span><a href="transaction-log.html"><b>T</b><span>Transaction Log</span></a></span>
+                <span><a href="payout-log.html"><b>P</b><span>Payout Log</span></a></span>
+                <span><a href="campaign-log.html"><b>C</b><span>Campaign Log</span></a></span>
+                <span><a href="location-log.html"><b>L</b><span>Location Log</span></a></span>
+                <span><a href="refund-log.html"><b>R</b><span>Refund Log</span></a></span>
+                <span><a href="user-activity.html"><b>U</b><span>User Activity</span></a></span>
               </div>
             </div>
           </div>
@@ -173,13 +201,13 @@ if (localStorage.getItem('darkMode') === "on") {
           </div>
         </div>
         <div class="head_part2">
-          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="notifications.html"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
           <a href="#"><span class="material-symbols-outlined">person</span></a>
         </div>
       </div>
       <div class="main_div">
         <div class="main_content">
-          <div class="sec_4 card_body">
+          <div class="sec_all card_body">
             <div class="page_head">
               <h6><span class="material-symbols-outlined">install_desktop</span>PoP & Verification</h6>
             </div>
@@ -293,38 +321,42 @@ if (localStorage.getItem('darkMode') === "on") {
                   <ul>
                     <li>
                       <a href="pop-and-verification-detail.html">
-                        <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>100 Media Locations</span></p>
+                        <p class="mb-2">ORD-00482</p>
+                        <h6 class="text_md text_dark text-caps mb-1">The Rise of Advertising</h6>
+                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
                         <p class="small_p mb-2 status_flex"><span class="status_type warning_1">Proof Pending: 30</span><span class="status_type pending_1">Proof Uploaded: 40</span><span class="status_type success_1">Fully Uploaded: 20</span></p>
                         <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">₦ 25,000</span></span></p>
                       </a>
                     </li>
                     <li>
                       <a href="pop-and-verification-detail.html">
-                        <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>100 Media Locations</span></p>
+                        <p class="mb-2">ORD-00482</p>
+                        <h6 class="text_md text_dark text-caps mb-2">The Rise of Advertising</h6>
+                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
                         <p class="small_p mb-2 status_flex"><span class="status_type danger_1">Proof Rejected: 20</span><span class="status_type pending_1">Proof Uploaded: 40</span><span class="status_type success_1">Fully Uploaded: 20</span></p>
                         <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">₦ 25,000</span></span></p>
                       </a>
                     </li>
                     <li>
                       <a href="pop-and-verification-detail.html">
-                        <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>100 Media Locations</span></p>
+                        <p class="mb-2">ORD-00482</p>
+                        <h6 class="text_md text_dark text-caps mb-2">The Rise of Advertising</h6>
+                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
                         <p class="small_p mb-2 status_flex"><span class="status_type warning_1">Proof Pending: 30</span><span class="status_type pending_1">Proof Uploaded: 40</span><span class="status_type success_1">Fully Uploaded: 20</span></p>
                         <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">₦ 25,000</span></span></p>
                       </a>
                     </li>
                     <li>
                       <a href="pop-and-verification-detail.html">
-                        <h6 class="text_md text_dark mb-2">The Rise of Advertising</h6>
-                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>100 Media Locations</span></p>
+                        <p class="mb-2">ORD-00482</p>
+                        <h6 class="text_md text_dark text-caps mb-2">The Rise of Advertising</h6>
+                        <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
                         <p class="small_p mb-2 status_flex"><span class="status_type warning_1">Proof Pending: 30</span><span class="status_type pending_1">Proof Uploaded: 40</span><span class="status_type success_1">Fully Uploaded: 20</span></p>
                         <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                        <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">₦ 25,000</span></span></p>
                       </a>
                     </li>
                   </ul>
@@ -395,12 +427,13 @@ if (localStorage.getItem('darkMode') === "on") {
                               <th width="7%">Date &amp; Time</th>
                               <th width="10%">Location Name</th>
                               <th width="12%">Campaign Name</th>
-                              <th width="10%">Media Owner</th>
-                              <th width="14%">Install Status</th>
+                              <th width="8%">Media Owner</th>
+                              <th width="13%">Install Status</th>
                               <th width="10%">Payout Status</th>
-                              <th width="10%">Location Amount</th>
+                              <th width="8%">Duration in Cycle</th>
+                              <th width="8%">Location Amount</th>
                               <th width="8%">Activity Type</th>
-                              <th width="10%">Field Agent</th>
+                              <th width="7%">Field Agent</th>
                               <th width="4">Action</th>
                             </tr>
                           </thead>
@@ -409,11 +442,12 @@ if (localStorage.getItem('darkMode') === "on") {
                               <td><img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal"></td>
                               <td><p>Apr 25, 2025, 11:00 AM</p></td>
                               <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                              <td><p>The Rise of Advertising</p></td>
+                              <td><p class="text-caps">The Rise of Advertising</p></td>
                               <td><p class="blue_txt">John Doe</p></td>
                               <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
                               <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                              <td><p>NGN 20,000</p></td>
+                              <td><p>Month 1 of 3</p></td>
+                              <td><p>₦ 20,000</p></td>
                               <td><p>PoP Provided</p></td>
                               <td><p>John Doe</p></td>
                               <td>
@@ -421,14 +455,19 @@ if (localStorage.getItem('darkMode') === "on") {
                               </td>
                             </tr>
                             <tr>
-                              <td><img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal"></td>
+                              <td>
+                                <video width="100%" height="100%" controls disablePictureInPicture controlsList="nodownload noplaybackrate fullscreen playsinline" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                  <source type="video/mp4" src="images/demo-video.mp4">
+                                </video>
+                              </td>
                               <td><p>Apr 25, 2025, 11:00 AM</p></td>
                               <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                              <td><p>The Rise of Advertising</p></td>
+                              <td><p class="text-caps">The Rise of Advertising</p></td>
                               <td><p class="blue_txt">John Doe</p></td>
                               <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
                               <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                              <td><p>NGN 20,000</p></td>
+                              <td><p>Month 1 of 1</p></td>
+                              <td><p>₦ 20,000</p></td>
                               <td><p>Admin Verified</p></td>
                               <td><p>Maria</p></td>
                               <td>
@@ -439,11 +478,12 @@ if (localStorage.getItem('darkMode') === "on") {
                               <td><img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal"></td>
                               <td><p>Apr 25, 2025, 11:00 AM</p></td>
                               <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                              <td><p>The Rise of Advertising</p></td>
+                              <td><p class="text-caps">The Rise of Advertising</p></td>
                               <td><p class="blue_txt">John Doe</p></td>
                               <td><p><span class="status_type success_1">Verification Passed</span></p></td>
                               <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
-                              <td><p>NGN 20,000</p></td>
+                              <td class="rejected_row"><p>Not Booked</p></td>
+                              <td><p>₦ 20,000</p></td>
                               <td><p>PoP Provided</p></td>
                               <td><p>John Doe</p></td>
                               <td>
@@ -454,26 +494,28 @@ if (localStorage.getItem('darkMode') === "on") {
                               <td><img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal"></td>
                               <td><p>Apr 25, 2025, 11:00 AM</p></td>
                               <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                              <td><p>The Rise of Advertising</p></td>
+                              <td><p class="text-caps">The Rise of Advertising</p></td>
                               <td><p class="blue_txt">John Doe</p></td>
                               <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
                               <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                              <td><p>NGN 20,000</p></td>
+                              <td><p>Month 1 of 2</p></td>
+                              <td><p>₦ 20,000</p></td>
                               <td><p>Admin Verified</p></td>
                               <td><p>Maria</p></td>
                               <td>
-                                <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                <a href="location-detail-2.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
                               </td>
                             </tr>
                             <tr>
                               <td><img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal"></td>
                               <td><p>Apr 25, 2025, 11:00 AM</p></td>
                               <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                              <td><p>The Rise of Advertising</p></td>
+                              <td><p class="text-caps">The Rise of Advertising</p></td>
                               <td><p class="blue_txt">John Doe</p></td>
                               <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
                               <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
-                              <td><p>NGN 20,000</p></td>
+                              <td><p>Month 1 of 3</p></td>
+                              <td><p>₦ 20,000</p></td>
                               <td><p>PoP Provided</p></td>
                               <td><p>John Doe</p></td>
                               <td>
@@ -484,11 +526,12 @@ if (localStorage.getItem('darkMode') === "on") {
                               <td><img src="images/location-img.jpg" alt="Location Image" data-bs-toggle="modal" data-bs-target="#imgModal"></td>
                               <td><p>Apr 25, 2025, 11:00 AM</p></td>
                               <td><a href="location-detail.html"><p class="blue_txt">ABC Location</p></a></td>
-                              <td><p>The Rise of Advertising</p></td>
+                              <td><p class="text-caps">The Rise of Advertising</p></td>
                               <td><p class="blue_txt">John Doe</p></td>
                               <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
                               <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                              <td><p>NGN 20,000</p></td>
+                              <td><p>Month 1 of 2</p></td>
+                              <td><p>₦ 20,000</p></td>
                               <td><p>Admin Verified</p></td>
                               <td><p>Maria</p></td>
                               <td>
@@ -553,4 +596,13 @@ if (localStorage.getItem('darkMode') === "on") {
     });
   });
 </script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
+</body>
+</html>

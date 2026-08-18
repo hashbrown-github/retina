@@ -39,6 +39,7 @@ if (localStorage.getItem('darkMode') === "on") {
 <div class="page">
   <div class="sidebar">
     <div class="sidebar__top">
+      <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
       <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
       <a class="sidebar__logo" href="dashboard.html">
         <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
@@ -81,8 +82,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Media Locations</div>
                 </a>
-                <span><a href="inventory.html">Inventory</a></span>
-                <span><a href="location-request.html">Location Request</a></span>
+                <span><a href="inventory.html"><b>I</b><span>Inventory</span></a></span>
+                <span><a href="location-request.html"><b>L</b><span>Location Request</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -91,8 +92,9 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Orders</div>
                 </a>
-                <span><a href="requested-orders.html">Requested Orders</a></span>
-                <span><a href="final-orders.html">Final Orders</a></span>
+                <span><a href="requested-orders.html"><b>R</b><span>Requested Orders</span></a></span>
+                <span><a href="proposal.html"><b>P</b><span>Proposal</span></a></span>
+                <span><a href="final-orders.html"><b>F</b><span>Final Orders</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
@@ -101,8 +103,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
-                <span><a href="campaigns.html">Active Campaigns</a></span>
-                <span class="active"><a href="pop-and-verification.html">PoP & Verification</a></span>
+                <span><a href="campaigns.html"><b>A</b><span>Active Campaigns</span></a></span>
+                <span class="active"><a href="pop-and-verification.html"><b>P</b><span>PoP & Verification</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -111,9 +113,21 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Teams</div>
                 </a>
-                <span><a href="field-executives.html">Field Executives</a></span>
-                <span><a href="sales-team.html">Sales Team</a></span>
-                <span><a href="#">Quality Auditors</a></span>
+                <span><a href="field-executives.html"><b>F</b><span>Field Executives</span></a></span>
+                <span><a href="sales-team.html"><b>S</b><span>Sales Team</span></a></span>
+                <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
+                <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">topic</span>
+                  </div>
+                  <div class="sidebar__text">Excel Resource</div>
+                </a>
+                <span><a href="states.html"><b>S</b><span>States</span></a></span>
+                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
               </div>
               <div class="side_dropdown">
                 <a class="sidebar__item" href="#">
@@ -122,6 +136,20 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Tickets</div>
                 </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">cards_stack</span>
+                  </div>
+                  <div class="sidebar__text">Logs</div>
+                </a>
+                <span><a href="transaction-log.html"><b>T</b><span>Transaction Log</span></a></span>
+                <span><a href="payout-log.html"><b>P</b><span>Payout Log</span></a></span>
+                <span><a href="campaign-log.html"><b>C</b><span>Campaign Log</span></a></span>
+                <span><a href="location-log.html"><b>L</b><span>Location Log</span></a></span>
+                <span><a href="refund-log.html"><b>R</b><span>Refund Log</span></a></span>
+                <span><a href="user-activity.html"><b>U</b><span>User Activity</span></a></span>
               </div>
             </div>
           </div>
@@ -172,35 +200,26 @@ if (localStorage.getItem('darkMode') === "on") {
           </div>
         </div>
         <div class="head_part2">
-          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="notifications.html"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
           <a href="#"><span class="material-symbols-outlined">person</span></a>
         </div>
       </div>
       <div class="main_div">
         <div class="main_content">
-          <div class="sec_4 card_body">
-            <div class="page_head">
-              <h6><span class="material-symbols-outlined">install_desktop</span>PoP & Verification</h6>
-            </div>
-            <div class="sec_7">
-              <div class="sec_71 card_body card_body2">
-                <h6 class="text_md text_dark">The Rise of Advertising</h6>
-                <p class="small_p"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>100 Media Locations</span></p>
-                <p class="small_p status_flex"><span class="status_type warning_1">Proof Pending: 30</span><span class="status_type pending_1">Proof Uploaded: 40</span><span class="status_type success_1">Fully Uploaded: 20</span></p>
-                <p class="small_p">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
-                <p class="small_p"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
-              </div>
-              <div class="sec_72 card_body card_body2">
-                <h4 class="text_sm text-center mb-3">Payment Summary</h4>
-                <!-- <img src="images/pie_chart.png" style="width: 900px; height: 200px; max-width: 100%; margin: 0 auto; object-fit: contain;"> -->
-                <div id="state_chart2"></div>
-                <div class="lengends_sec">
-                  <p class="small_p"><span class="box_0 box_11"></span>Total Payment</p>
-                  <p class="small_p"><span class="box_0 box_21"></span>Amount Withhold</p>
-                  <p class="small_p"><span class="box_0 box_31"></span>Payouts Done</p>
-                  <p class="small_p"><span class="box_0 box_41"></span>Refunds Done</p>
-                </div>
-              </div>
+          <div class="sec_all card_body">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="pop-and-verification.html">PoP & Verification</a></li>
+                <li class="breadcrumb-item active" aria-current="page">PoP & Verification Detail</li>
+              </ol>
+            </nav>
+            <div class="card_body card_body2">
+              <p class="mb-2">ORD-00482</p>
+              <h6 class="text_md text_dark text-caps mb-1">The Rise of Advertising</h6>
+              <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span><b>20</b> Days</span> | <span><b>10</b> Media Locations</span></p>
+              <p class="small_p mb-2 status_flex"><span class="status_type warning_1">Proof Pending: 30</span><span class="status_type pending_1">Proof Uploaded: 40</span><span class="status_type success_1">Fully Uploaded: 20</span></p>
+              <p class="small_p mb-2">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
+              <p class="small_p mb-0"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">₦ 25,000</span></span></p>
             </div>
             <div class="sec_ten mt-20">
               <h3 class="text_md text_dark mb-2">Media Locations</h3>
@@ -276,13 +295,14 @@ if (localStorage.getItem('darkMode') === "on") {
                         <tr>
                           <th width="11%">Location ID</th>
                           <th width="10%">Media Owner</th>
-                          <th width="18%">Install Status</th>
-                          <th width="14%">Payout Status</th>
+                          <th width="16%">Install Status</th>
+                          <th width="12%">Payout Status</th>
                           <th width="11%">Location Amount</th>
-                          <th width="10%">POP Provided</th>
-                          <th width="10%">Admin Verified</th>
-                          <th width="10%">Field Agent</th>
-                          <th width="6%">Action</th>
+                          <th width="10%">Duration in Cycle</th>
+                          <th width="8%">POP Provided</th>
+                          <th width="9%">Admin Verified</th>
+                          <th width="8%">Field Agent</th>
+                          <th width="5%">Action</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -291,7 +311,8 @@ if (localStorage.getItem('darkMode') === "on") {
                           <td><p class="blue_txt">John Doe</p></td>
                           <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
                           <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                          <td><p>NGN 20,000</p></td>
+                          <td><p>₦ 20,000</p></td>
+                          <td><p>Month 1 of 3</p></td>
                           <td><p>No</p></td>
                           <td><p>No</p></td>
                           <td><p>John Doe</p></td>
@@ -304,7 +325,8 @@ if (localStorage.getItem('darkMode') === "on") {
                           <td><p class="blue_txt">John Doe</p></td>
                           <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
                           <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                          <td><p>NGN 20,000</p></td>
+                          <td><p>₦ 20,000</p></td>
+                          <td><p>Month 1 of 2</p></td>
                           <td><p>No</p></td>
                           <td><p>No</p></td>
                           <td><p>John Doe</p></td>
@@ -317,7 +339,8 @@ if (localStorage.getItem('darkMode') === "on") {
                           <td><p class="blue_txt">John Doe</p></td>
                           <td><p><span class="status_type success_1">Verification Passed</span></p></td>
                           <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
-                          <td><p>NGN 20,000</p></td>
+                          <td><p>₦ 20,000</p></td>
+                          <td><p>Month 1 of 3</p></td>
                           <td><p>No</p></td>
                           <td><p>No</p></td>
                           <td><p>John Doe</p></td>
@@ -330,12 +353,13 @@ if (localStorage.getItem('darkMode') === "on") {
                           <td><p class="blue_txt">John Doe</p></td>
                           <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
                           <td><p><span class="status_type pending_1">Payout Released</span></p></td>
-                          <td><p>NGN 20,000</p></td>
+                          <td><p>₦ 20,000</p></td>
+                          <td><p>Month 1 of 3</p></td>
                           <td><p>No</p></td>
                           <td><p>No</p></td>
                           <td><p>John Doe</p></td>
                           <td>
-                            <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                            <a href="location-detail-2.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
                           </td>
                         </tr>
                         <tr>
@@ -343,7 +367,8 @@ if (localStorage.getItem('darkMode') === "on") {
                           <td><p class="blue_txt">John Doe</p></td>
                           <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
                           <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
-                          <td><p>NGN 20,000</p></td>
+                          <td><p>₦ 20,000</p></td>
+                          <td class="rejected_row"><p>Not Booked</p></td>
                           <td><p>No</p></td>
                           <td><p>No</p></td>
                           <td><p>John Doe</p></td>
@@ -356,7 +381,8 @@ if (localStorage.getItem('darkMode') === "on") {
                           <td><p class="blue_txt">John Doe</p></td>
                           <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
                           <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                          <td><p>NGN 20,000</p></td>
+                          <td><p>₦ 20,000</p></td>
+                          <td class="rejected_row"><p>Not Booked</p></td>
                           <td><p>No</p></td>
                           <td><p>No</p></td>
                           <td><p>John Doe</p></td>
@@ -378,19 +404,19 @@ if (localStorage.getItem('darkMode') === "on") {
                     <p><span></span><b>Total</b></p>
                   </li>
                   <li>
-                    <p><span>Media Location 1</span><span>NGN 25,000</span></p>
+                    <p><span>Media Location 1</span><span>₦ 25,000</span></p>
                   </li>
                   <li>
-                    <p><span>Media Location 2</span><span>NGN 20,000</span></p>
+                    <p><span>Media Location 2</span><span>₦ 20,000</span></p>
                   </li>
                   <li>
-                    <p><span>Media Location 3</span><span>NGN 20,000</span></p>
+                    <p><span>Media Location 3</span><span>₦ 20,000</span></p>
                   </li>
                   <li>
-                    <p><b>Platform Fee</b><b>+ NGN 30,000</b></p>
+                    <p><b>Platform Fee (2%)</b><b>+ ₦ 30,000</b></p>
                   </li>
                   <li>
-                    <p><b>Net Amount</b><b>NGN 95,000</b></p>
+                    <p><b>Net Amount</b><b>₦ 95,000</b></p>
                   </li>
                 </ul>
               </div>
@@ -413,83 +439,13 @@ if (localStorage.getItem('darkMode') === "on") {
     });
   });
 </script>
-<!--===== SIDEBAR DROPDOWN OPEN END =====-->
-<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 <script>
-  am5.ready(function () {
-    var root = am5.Root.new("state_chart2");
-    root.setThemes([
-      am5themes_Animated.new(root)
-    ]);
-
-    var chart = root.container.children.push(am5percent.PieChart.new(root, {
-      paddingTop: 10,
-      paddingBottom: 10,
-      layout: root.verticalLayout
-    }));
-
-    var series = chart.series.push(am5percent.PieSeries.new(root, {
-      valueField: "value",
-      categoryField: "category",
-      alignLabels: false
-    }));
-
-    series.slices.template.adapters.add("fill", function (fill, target) {
-      if (target.dataItem.get("category") == "Total Payments") {
-        return am5.color(0xACC7FF);
-      }
-      else if (target.dataItem.get("category") == "Amount Withhold") {
-        return am5.color(0xb3bade);
-      }
-      else if (target.dataItem.get("category") == "Payouts Done") {
-        return am5.color(0xDDD8F5);
-      }
-      else if (target.dataItem.get("category") == "Refunds Done") {
-        return am5.color(0xDDE8FF);
-      }
-      else {
-        return fill;
-      }
-    });
-    series.slices.template.adapters.add("stroke", function (stroke, target) {
-      if (target.dataItem.get("category") == "Total Payments") {
-        return am5.color(0xACC7FF);
-      }
-      else if (target.dataItem.get("category") == "Amount Withhold") {
-        return am5.color(0xb3bade);
-      }
-      else if (target.dataItem.get("category") == "Payouts Done") {
-        return am5.color(0xDDD8F5);
-      }
-      else if (target.dataItem.get("category") == "Refunds Done") {
-        return am5.color(0xDDE8FF);
-      }
-    });
-
-    // Add labels inside slices
-    series.labels.template.setAll({
-      fontSize: 11,
-      fontWeight:600,
-      text: "NGN {value}",
-      radius: 10,
-      fill: am5.color(0x777E87)
-    });
-
-    series.ticks.template.setAll({
-      strokeWidth: 1,
-      strokeOpacity: 1,
-      stroke: am5.color(0x777E87),
-      strokeDasharray: [4, 2]
-    });
-
-    series.data.setAll([
-      { value: 15000, category: "Amount Withhold" },
-      { value: 50000, category: "Total Payments" },
-      { value: 20000, category: "Payouts Done" },
-      { value: 15000, category: "Refunds Done" },
-    ]);
-    series.appear(1000, 100);
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
   });
 </script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+</body>
+</html>

@@ -227,25 +227,26 @@ if (localStorage.getItem('darkMode') === "on") {
                         <p class="small_p mb-2">ORD-00482</p>
                         <h6 class="text_md text_dark text-caps mb-2">The Rise of Advertising</h6>
                         <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <b>30</b> Days | <b>10</b> Media Locations</p>
-                        <p class="small_p mb-2">Ordered Status: <span class="status_type warning_1">Proof Pending</span><span class="status_type success_1 ms-1">Paid</span> | Mode of Payment: <span class="status_type blue_1">Online</span></p>
+                        <p class="small_p mb-2">Ordered Status: <span class="status_type retibazaar_1">Proof Uploaded (In Progress)</span><span class="status_type success_1 ms-1">Paid</span> | Mode of Paymenr: <span class="status_type purple_1">Offline</span></p>
                         <p class="small_p mb-0">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
                         <div class="pay_status">
                           <div class="pay_dtl">
                             <div class="pay_box">
                               <span class="paymentPaid"></span>
-                              <span class="paymentPend"></span>
+                              <span class="paymentPaid"></span>
                               <span class="paymentPend"></span>
                             </div>
                             <div class="pay_no">
-                              <p class="small_p mb-0"><span>1/3</span> paid (33% each · 45-day gap) · Next: <b>₦33,332 on 15 Jun 2026</b></p>
+                              <p class="small_p mb-0"><span>2/3</span> paid (33% each · 45-day gap) · Next: <b>₦16,666 on 15 Jun 2026</b></p>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="card_body33 card_body34 card_body35">
-                        <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦33,332</span></span></p>
+                        <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦16,666</span></span></p>
                         <div class="card_body331">
-                          <span class="status_type blue_1">Under Verification</span>
+                          <span class="status_type danger_1">Pending Payouts: 20</span>
+                          <span class="status_type warning_1">Payment Due Soon</span>
                         </div>
                       </div>
                     </div>
@@ -274,19 +275,19 @@ if (localStorage.getItem('darkMode') === "on") {
                           </li>
                           <li>
                             <div>
-                              <h3 class="green_txt">₦16.666</h3>
+                              <h3 class="green_txt">₦33,332</h3>
                               <p class="mb-0">Amount Paid</p>
                             </div>
                           </li>
                           <li>
                             <div>
-                              <h3 class="ornge_txt">₦33,332</h3>
+                              <h3 class="ornge_txt">₦16.666</h3>
                               <p class="mb-0">Balance Pending</p>
                             </div>
                           </li>
                           <li>
                             <div>
-                              <h3>1/3</h3>
+                              <h3>2/3</h3>
                               <p class="mb-0">Installments Paid</p>
                             </div>
                           </li>
@@ -299,10 +300,11 @@ if (localStorage.getItem('darkMode') === "on") {
                         </ul>
                       </div>
                     </div>
-                    <div class="note_box note_box3 blue_noti">
+                    <div class="note_box note_box3 ornge_noti">
                       <p class="mb-0">
-                        <b class="block_txt mb-2"><span class="material-symbols-outlined noti_icon">campaign</span>Campaign live — 1 of 2 installments received.</b>
-                        <span class="block_txt mt-1">Campaign is active. Next installment of <b>₦16,666</b> is due on 12 June 2026.</span>
+                        <b class="block_txt mb-2"><span class="material-symbols-outlined noti_icon">campaign</span>Installment 3 is due. Campaign remains live.</b>
+                        <span class="block_txt mt-1">Installment 3 of <b>₦ 33,332</b> was due on 12 June 2026 and has not been received. Campaign is still running.</span>
+                        <span class="block_txt mt-1">Seller verification and payout cycle continues independently. Send reminder to buyer.</span>
                       </p>
                     </div>
                     <div class="assignAgentBtn justify-content-end mt-0">
@@ -357,8 +359,8 @@ if (localStorage.getItem('darkMode') === "on") {
                                     <td>
                                       <p><span class="blue_txt">John Doe</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
                                     </td>
-                                    <td><p><span class="status_type success_1">Verification Passed</span></p></td>
-                                    <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                    <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
                                     <td><p>₦ 20,000</p></td>
                                     <td><p>Month 1 of 3</p></td>
                                     <td><p>No</p></td>
@@ -381,7 +383,7 @@ if (localStorage.getItem('darkMode') === "on") {
                                     <td>
                                       <p><span class="blue_txt">Maria</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
                                     </td>
-                                    <td><p><span class="status_type success_1">Verification Passed</span></p></td>
+                                    <td><p><span class="status_type retibazaar_1">Under Field Verification</span></p></td>
                                     <td><p><span class="status_type pending_1">Payout Released</span></p></td>
                                     <td><p>₦ 20,000</p></td>
                                     <td><p>Month 1 of 3</p></td>
@@ -406,7 +408,175 @@ if (localStorage.getItem('darkMode') === "on") {
                                       <p><span class="blue_txt">John Doe</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
                                     </td>
                                     <td><p><span class="status_type success_1">Verification Passed</span></p></td>
-                                    <td><p><span class="status_type pending_1">Payout Released</span></p></td>
+                                    <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
+                                    <td><p>₦ 20,000</p></td>
+                                    <td><p>Month 1 of 3</p></td>
+                                    <td><p>No</p></td>
+                                    <td><p>No</p></td>
+                                    <td><p>John Doe</p></td>
+                                    <td>
+                                      <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#">
+                                        <p class="inblock_txt">
+                                          <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                          <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                          <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                        </p>
+                                      </a>
+                                    </td>
+                                    <td>
+                                      <p><span class="blue_txt">Maria</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
+                                    </td>
+                                    <td><p><span class="status_type danger_1">Verification Failed</span></p></td>
+                                    <td><p><span class="status_type success_1">Refund Initiated</span></p></td>
+                                    <td><p>₦ 20,000</p></td>
+                                    <td><p>Month 1 of 3</p></td>
+                                    <td><p>Yes</p></td>
+                                    <td><p>Yes</p></td>
+                                    <td><p>John Doe</p></td>
+                                    <td>
+                                      <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="sec_12 card_body card_body2">
+                            <div class="secHead2">
+                              <div class="secHead21">
+                                <img src="images/Field-Agent-Assigned.svg" alt="Field Agent" />
+                                <h3>Field Agent Assigned</h3>
+                              </div>
+                            </div>
+                            <div class="sec_body">
+                              <ul>
+                                <li>
+                                  <p class="small_p mb-0">Total Locations</p>
+                                  <h4 class="blue_txt">500</h4>
+                                </li>
+                                <li>
+                                  <p class="small_p mb-0">Assigned Locations</p>
+                                  <h4 class="blue_txt">200</h4>
+                                </li>
+                                <li>
+                                  <p class="small_p mb-0">Verified Locations</p>
+                                  <h4 class="blue_txt">100</h4>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="notification_box proposal_head">
+                        <div class="note_box note_box2 green_noti mb-0">
+                          <p class="small_p mb-0"><b>Campaign complete. All payments received.</b></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="orderPay_sec mt-0">
+                      <div class="notification_box">
+                        <div class="note_box note_box2 green_noti">
+                          <p class="mb-0">
+                            <span><b>Installment 2</b></span>
+                            <span class="block_txt mt-1">Due: 5 Due: 5 May 2026</span>
+                            <span class="block_txt mt-1">33% of total order value: <b>₦16,666</b></span>
+                          </p>
+                          <div class="note_box21">
+                            <span class="status_type solid-success">Paid</span>
+                            <button type="button" class="status_type success_1 downIcon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Download Invoice">
+                              <span class="material-symbols-outlined">download</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="campDtl_3 mt-20">
+                        <div class="sec_1 sec_41">
+                          <div class="sec_11 card_body p-0">
+                            <div class="table_view camLoc_table hori_scroll">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="16%">Location Name/ID</th>
+                                    <th width="13%">Media Owner</th>
+                                    <th width="15%">Install Status</th>
+                                    <th width="11%">Payout Status</th>
+                                    <th width="8%">Location Amount</th>
+                                    <th width="10%">Duration in Cycle</th>
+                                    <th width="7%">POP Provided</th>
+                                    <th width="6%">Admin Verified</th>
+                                    <th width="9%">Field Agent</th>
+                                    <th width="5%">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <a href="#">
+                                        <p class="inblock_txt">
+                                          <span class="blue_txt small_p">LAB/BILL/002</span> <span class="status_type badge-static">Static</span>
+                                          <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                          <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span>)</span>
+                                        </p>
+                                      </a>
+                                    </td>
+                                    <td>
+                                      <p><span class="blue_txt">John Doe</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
+                                    </td>
+                                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                    <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
+                                    <td><p>₦ 20,000</p></td>
+                                    <td><p>Month 1 of 3</p></td>
+                                    <td><p>No</p></td>
+                                    <td><p>No</p></td>
+                                    <td><p>John Doe</p></td>
+                                    <td>
+                                      <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#">
+                                        <p class="inblock_txt">
+                                          <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
+                                          <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
+                                          <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                        </p>
+                                      </a>
+                                    </td>
+                                    <td>
+                                      <p><span class="blue_txt">Maria</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
+                                    </td>
+                                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                    <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
+                                    <td><p>₦ 20,000</p></td>
+                                    <td><p>Month 1 of 3</p></td>
+                                    <td><p>Yes</p></td>
+                                    <td><p>Yes</p></td>
+                                    <td><p>John Doe</p></td>
+                                    <td>
+                                      <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#">
+                                        <p class="inblock_txt">
+                                          <span class="blue_txt small_p">#123456</span> <span class="status_type badge-transit">Transit</span>
+                                          <span class="block_txt w-100">Lagos to Abuja</span>
+                                          <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
+                                        </p>
+                                      </a>
+                                    </td>
+                                    <td>
+                                      <p><span class="blue_txt">John Doe</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
+                                    </td>
+                                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
+                                    <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
                                     <td><p>₦ 20,000</p></td>
                                     <td><p>Month 1 of 3</p></td>
                                     <td><p>No</p></td>
@@ -456,13 +626,13 @@ if (localStorage.getItem('darkMode') === "on") {
                       <div class="notification_box">
                         <div class="note_box note_box2 ornge_noti">
                           <p class="mb-0">
-                            <span><b>Installment 2</b></span>
+                            <span><b>Installment 3</b></span>
                             <span class="block_txt mt-1">Due: 5 Due: 5 May 2026</span>
                             <span class="block_txt mt-1">33% of total order value: <b>₦16,666</b></span>
                           </p>
                           <div class="note_box21">
-                            <span class="status_type warning_1">Due Now</span>
-                            <button type="button" class="status_type solid-blue" data-bs-toggle="modal" data-bs-target="#approvePayment">Pay Manually</button>
+                            <span class="status_type warning_1">Payment Due Soon</span>
+                            <span class="status_type warning_1">Remind Buyer</span>
                           </div>
                         </div>
                       </div>
@@ -590,147 +760,6 @@ if (localStorage.getItem('darkMode') === "on") {
                       </div>
                       <div class="notification_box proposal_head">
                         <div class="note_box note_box2 ornge_noti mb-0">
-                          <p class="small_p mb-0"><b>Complete verification checklist to activate campaign.</b></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="orderPay_sec mt-0">
-                      <div class="notification_box">
-                        <div class="note_box note_box2 grey_noti">
-                          <p class="mb-0">
-                            <span><b>Installment 3</b></span>
-                            <span class="block_txt mt-1">Due: 5 Due: 5 May 2026</span>
-                            <span class="block_txt mt-1">33% of total order value: <b>₦16,666</b></span>
-                          </p>
-                          <div class="note_box21">
-                            <span class="status_type blue_1">Upcoming</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="campDtl_3 mt-20">
-                        <div class="sec_1 sec_41">
-                          <div class="sec_11 card_body p-0">
-                            <div class="table_view camLoc_table hori_scroll">
-                              <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th width="16%">Location Name/ID</th>
-                                    <th width="13%">Media Owner</th>
-                                    <th width="15%">Install Status</th>
-                                    <th width="11%">Payout Status</th>
-                                    <th width="8%">Location Amount</th>
-                                    <th width="10%">Duration in Cycle</th>
-                                    <th width="7%">POP Provided</th>
-                                    <th width="6%">Admin Verified</th>
-                                    <th width="9%">Field Agent</th>
-                                    <th width="5%">Action</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>
-                                      <a href="#">
-                                        <p class="inblock_txt">
-                                          <span class="blue_txt small_p">LAB/BILL/002</span> <span class="status_type badge-static">Static</span>
-                                          <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
-                                          <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span>)</span>
-                                        </p>
-                                      </a>
-                                    </td>
-                                    <td>
-                                      <p><span class="blue_txt">John Doe</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
-                                    </td>
-                                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                                    <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                                    <td><p>₦ 20,000</p></td>
-                                    <td><p>Month 1 of 3</p></td>
-                                    <td><p>No</p></td>
-                                    <td><p>No</p></td>
-                                    <td><p>John Doe</p></td>
-                                    <td>
-                                      <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#">
-                                        <p class="inblock_txt">
-                                          <span class="blue_txt small_p">#123456</span> <span class="status_type badge-digital">Digital</span>
-                                          <span class="block_txt w-100">5 Joel Ogunnaike St, Ikea GRA</span>
-                                          <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
-                                        </p>
-                                      </a>
-                                    </td>
-                                    <td>
-                                      <p><span class="blue_txt">Maria</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
-                                    </td>
-                                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                                    <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                                    <td><p>₦ 20,000</p></td>
-                                    <td><p>Month 1 of 3</p></td>
-                                    <td><p>Yes</p></td>
-                                    <td><p>Yes</p></td>
-                                    <td><p>John Doe</p></td>
-                                    <td>
-                                      <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#">
-                                        <p class="inblock_txt">
-                                          <span class="blue_txt small_p">#123456</span> <span class="status_type badge-transit">Transit</span>
-                                          <span class="block_txt w-100">Lagos to Abuja</span>
-                                          <span>(<span>Aug 05, 2024</span> - <span>Sep 06, 2025</span> | Total Slots: <span>10</span>)</span>
-                                        </p>
-                                      </a>
-                                    </td>
-                                    <td>
-                                      <p><span class="blue_txt">John Doe</span><span class="block_txt mt-1">johndoe@gmail.com</span><span class="block_txt mt-1">+234 567876652</span></p>
-                                    </td>
-                                    <td><p><span class="status_type warning_1">Awaiting Proof of Posting</span></p></td>
-                                    <td><p><span class="status_type retibazaar_1">Withholding</span></p></td>
-                                    <td><p>₦ 20,000</p></td>
-                                    <td><p>Month 1 of 3</p></td>
-                                    <td><p>No</p></td>
-                                    <td><p>No</p></td>
-                                    <td><p>John Doe</p></td>
-                                    <td>
-                                      <a href="location-detail.html" class="actionBtn"><span class="material-symbols-outlined">visibility</span></a>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                          <div class="sec_12 card_body card_body2">
-                            <div class="secHead2">
-                              <div class="secHead21">
-                                <img src="images/Field-Agent-Assigned.svg" alt="Field Agent" />
-                                <h3>Field Agent Assigned</h3>
-                              </div>
-                            </div>
-                            <div class="sec_body">
-                              <ul>
-                                <li>
-                                  <p class="small_p mb-0">Total Locations</p>
-                                  <h4 class="blue_txt">500</h4>
-                                </li>
-                                <li>
-                                  <p class="small_p mb-0">Assigned Locations</p>
-                                  <h4 class="blue_txt">200</h4>
-                                </li>
-                                <li>
-                                  <p class="small_p mb-0">Verified Locations</p>
-                                  <h4 class="blue_txt">100</h4>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="notification_box proposal_head">
-                        <div class="note_box note_box2 grey_noti mb-0">
                           <p class="small_p mb-0"><b>Next payment: ₦ 16,666 due 15 Jun 2026</b></p>
                         </div>
                       </div>
@@ -845,7 +874,7 @@ if (localStorage.getItem('darkMode') === "on") {
                           <div class="accordion-header" id="headingOne">
                             <button class="accordion-button payoutSum4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                               <div class="notification_box">
-                                <div class="note_box note_box2 green_noti m-0">
+                                <div class="note_box note_box2 ornge_noti m-0">
                                   <p class="mb-0">
                                     <span><b>Cycle 1</b></span>
                                     <span class="block_txt mt-2">1 May 2026 - 31 May 2026</span>
@@ -854,8 +883,8 @@ if (localStorage.getItem('darkMode') === "on") {
                                   </p>
                                   <div class="note_box21 note_box22">
                                     <div class="note_box221">
-                                      <span class="status_type success_1">Verification Passed</span>
-                                      <span class="status_type success_1">Active</span>
+                                      <span class="status_type warning_1">Awaiting Proof of Posting</span>
+                                      <span class="status_type warning_1">Payment Due</span>
                                     </div>
                                     <div class="note_box221">
                                       <span class="status_type success_1">Verification Passed: 15</span>

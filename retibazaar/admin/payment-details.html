@@ -40,6 +40,7 @@ if (localStorage.getItem('darkMode') === "on") {
 <div class="page">
   <div class="sidebar">
     <div class="sidebar__top">
+      <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
       <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
       <a class="sidebar__logo" href="dashboard.html">
         <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
@@ -82,8 +83,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Media Locations</div>
                 </a>
-                <span><a href="inventory.html">Inventory</a></span>
-                <span><a href="location-request.html">Location Request</a></span>
+                <span><a href="inventory.html"><b>I</b><span>Inventory</span></a></span>
+                <span><a href="location-request.html"><b>L</b><span>Location Request</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -92,8 +93,9 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Orders</div>
                 </a>
-                <span><a href="requested-orders.html">Requested Orders</a></span>
-                <span><a href="final-orders.html">Final Orders</a></span>
+                <span><a href="requested-orders.html"><b>R</b><span>Requested Orders</span></a></span>
+                <span><a href="proposal.html"><b>P</b><span>Proposal</span></a></span>
+                <span><a href="final-orders.html"><b>F</b><span>Final Orders</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn active">
                 <a class="sidebar__item active" href="javascript:void(0);">
@@ -102,8 +104,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
-                <span class="active"><a href="campaigns.html">Active Campaigns</a></span>
-                <span><a href="pop-and-verification.html">PoP & Verification</a></span>
+                <span class="active"><a href="campaigns.html"><b>A</b><span>Active Campaigns</span></a></span>
+                <span><a href="pop-and-verification.html"><b>P</b><span>PoP & Verification</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -112,9 +114,21 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Teams</div>
                 </a>
-                <span><a href="field-executives.html">Field Executives</a></span>
-                <span><a href="sales-team.html">Sales Team</a></span>
-                <span><a href="#">Quality Auditors</a></span>
+                <span><a href="field-executives.html"><b>F</b><span>Field Executives</span></a></span>
+                <span><a href="sales-team.html"><b>S</b><span>Sales Team</span></a></span>
+                <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
+                <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">topic</span>
+                  </div>
+                  <div class="sidebar__text">Excel Resource</div>
+                </a>
+                <span><a href="states.html"><b>S</b><span>States</span></a></span>
+                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
               </div>
               <div class="side_dropdown">
                 <a class="sidebar__item" href="#">
@@ -123,6 +137,20 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Tickets</div>
                 </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">cards_stack</span>
+                  </div>
+                  <div class="sidebar__text">Logs</div>
+                </a>
+                <span><a href="transaction-log.html"><b>T</b><span>Transaction Log</span></a></span>
+                <span><a href="payout-log.html"><b>P</b><span>Payout Log</span></a></span>
+                <span><a href="campaign-log.html"><b>C</b><span>Campaign Log</span></a></span>
+                <span><a href="location-log.html"><b>L</b><span>Location Log</span></a></span>
+                <span><a href="refund-log.html"><b>R</b><span>Refund Log</span></a></span>
+                <span><a href="user-activity.html"><b>U</b><span>User Activity</span></a></span>
               </div>
             </div>
           </div>
@@ -173,25 +201,25 @@ if (localStorage.getItem('darkMode') === "on") {
           </div>
         </div>
         <div class="head_part2">
-          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="notifications.html"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
           <a href="#"><span class="material-symbols-outlined">person</span></a>
         </div>
       </div>
       <div class="main_div">
         <div class="main_content">
-          <div class="sec_4 card_body">
+          <div class="sec_all card_body">
             <div class="page_head">
               <h6><span class="material-symbols-outlined">credit_card</span>Transaction</h6>
             </div>
             <div class="sec_7">
               <div class="sec_71 card_body card_body2">
-                <h6 class="text_md text_dark">The Rise of Advertising</h6>
+                <h6 class="text_md text_dark text-caps">The Rise of Advertising</h6>
                 <p class="small_p"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>10 Media Locations</span></p>
                 <p class="small_p">Order Status: <span class="status_type warning_1">Proof Pending</span><span class="status_type success_1 ms-1">Paid</span> | <span>Order ID: <span class="blue_txt">#123456</span></span></p>
                 <p class="small_p">Media Buyer: <span class="blue_txt">John Doe</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
                 <p class="small_p"><b>Add on Service:</b> <span class="status_type retibazaar_1"><b>OOH Tracker</b></span></p>
                 <p class="small_p">Audit Duration: <span>6 Months</span> | Audit Frequency: <span>Every 15 Days</span></p>
-                <p class="small_p"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">NGN 25,000</span></span></p>
+                <p class="small_p"><span class="status_type bg_secondary">Payment Amount: <span class="blue_txt">₦ 25,000</span></span></p>
               </div>
               <div class="sec_72 card_body card_body2">
                 <h4 class="text_sm text-center mb-3">Payment Summary</h4>
@@ -206,7 +234,7 @@ if (localStorage.getItem('darkMode') === "on") {
               </div>
             </div>
             <div class="sec_8 mt-20">
-              <h3 class="text_lg mb-1">The Rise of Campaign</h3>
+              <h3 class="text_lg text-caps mb-1">The Rise of Campaign</h3>
               <p class="small_p mb-0"><span>Apr 17, 2025</span> - <span>Apr 30, 2025</span></p>
             </div>
             <div class="sec_1 sec_41 mt-15">
@@ -310,6 +338,13 @@ if (localStorage.getItem('darkMode') === "on") {
     });
   });
 </script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
 
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -370,7 +405,7 @@ if (localStorage.getItem('darkMode') === "on") {
     series.labels.template.setAll({
       fontSize: 11,
       fontWeight: 600,
-      text: "NGN {value}",
+      text: "₦ {value}",
       radius: 10,
       fill: am5.color(0x777E87)
     });
@@ -391,3 +426,5 @@ if (localStorage.getItem('darkMode') === "on") {
     series.appear(1000, 100);
   });
 </script>
+</body>
+</html>

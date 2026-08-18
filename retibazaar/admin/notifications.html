@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Transaction Detail | Retibazaar</title>
-<meta name="title" content="Transaction | Retibazaar" />
-<meta name="description" content="Transaction | Retibazaar" />
+<title>Notifications | Retibazaar</title>
+<meta name="title" content="Notifications | Retibazaar" />
+<meta name="description" content="Notifications | Retibazaar" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
@@ -60,7 +60,7 @@ if (localStorage.getItem('darkMode') === "on") {
                 </a>
               </div>
               <div class="side_dropdown">
-                <a class="sidebar__item active" href="transaction.html">
+                <a class="sidebar__item" href="transaction.html">
                   <div class="sidebar__icon">
                     <span class="material-symbols-outlined icon">credit_card</span>
                   </div>
@@ -207,108 +207,88 @@ if (localStorage.getItem('darkMode') === "on") {
       <div class="main_div">
         <div class="main_content">
           <div class="sec_all card_body">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="transaction.html">Transaction</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Transaction Detail</li>
-              </ol>
-            </nav>
-            <!-- <div class="page_head">
-              <h6><span class="material-symbols-outlined">credit_card</span>Transaction</h6>
-            </div> -->
-            <div class="sec_61 mb-20">
-              <div class="sec_611">
-                <h3>₦ 6750<span class="status_type warning_1">Refunded</span></h3>
-                <p class="mb-0">Charged to <b class="blue_txt">johndoe@gmail.com</b></p>
+            <div class="page_head">
+              <h6><span class="material-symbols-outlined">notifications_unread</span>Notifications</h6>
+            </div>
+            <div class="notifi_box">
+            <div class="notifi_head">
+              <ul class="noti_tabs">
+                <li>
+                  <a class="nav_link" href="#">All</a>
+                </li>
+                <li>
+                  <a class="nav_link" href="#">Read (3)</a>
+                </li>
+                <li>
+                  <a class="nav_link active" href="#">Unread (1)</a>
+                </li>
+              </ul>
+            </div>
+            <div class="notifi_body">
+              <div class="noti_list">
+                <h4>Today</h4>
+                <ul>
+                  <li class="unread_noti">
+                    <div class="noti_item">
+                      <div class="noti_icon">
+                        <span class="material-symbols-outlined">notifications</span>
+                      </div>
+                      <div class="noti_cont">
+                        <h5>Order Request Update</h5>
+                        <p>Locations approved for <span class="blue_txt">ORD_1122</span> by seller.<!-- - <a href="#" class="blue_txt">take to order request detail</a> --></p>
+                        <span class="time_txt">14:36 pm</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="noti_item">
+                      <div class="noti_icon">
+                        <span class="material-symbols-outlined">notifications</span>
+                      </div>
+                      <div class="noti_cont">
+                        <h5>Order Finalized</h5>
+                        <p>Order request <span class="blue_txt">ORD_1122</span> has been finalized.</p>
+                        <span class="time_txt">14:36 pm</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="noti_item">
+                      <div class="noti_icon">
+                        <span class="material-symbols-outlined">notifications</span>
+                      </div>
+                      <div class="noti_cont">
+                        <h5>Proof of Posting Received</h5>
+                        <p>PoP received for Location <span>"name"</span> in campaign <span>"name"</span>.</p>
+                        <span class="time_txt">14:36 pm</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="sec_612">
-                <button type="button" class="blue_btn">View Receipt<div class="spinner-border text-white" role="status"></div></button>
+              <div class="noti_list">
+                <h4>2 April, 2026</h4>
+                <ul>
+                  <li>
+                    <div class="noti_item">
+                      <div class="noti_icon">
+                        <span class="material-symbols-outlined">notifications</span>
+                      </div>
+                      <div class="noti_cont">
+                        <h5>Location Verified</h5>
+                        <p>Location <span>"name"</span> has passed verification in Campaign <span>"name"</span>.</p>
+                        <span class="time_txt">14:36 pm</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="sec_62">
-              <div class="sec_621">
-                <div class="sec_6211">
-                  <h3>Recent Activity</h3>
-                  <ul>
-                    <li>
-                      <!-- <span class="material-symbols-outlined success_color">task_alt</span>
-                      <span class="material-symbols-outlined danger_color">error</span> -->
-                      <span class="material-symbols-outlined warning_color">undo</span>
-                      <p>
-                        <b class="block_txt">Payment Refunded</b>
-                        <span class="block_txt">It may take a few days for the money to reach the customer’s bank account.</span>
-                        <a href="#" class="block_txt">View Detail</a>
-                        <span>Apr 10, 2025, 05:25 PM</span>
-                      </p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">task_alt</span>
-                      <p><b class="block_txt">Transaction Succeeded</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                    <li>
-                      <span class="material-symbols-outlined">payments</span>
-                      <p><b class="block_txt">Transaction Started</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sec_6212">
-                  <h3>Transaction Breakdown (Location 1 Transaction)</h3>
-                  <ul class="mb-20">
-                    <li>
-                      <p><b>Amount for Location 1</b><span>₦ 25,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Processing Fee</b><span>- ₦ 5,000</span></p>
-                    </li>
-                    <li>
-                      <p><b>Net Amount</b><b>₦ 20,000</b></p>
-                    </li>
-                  </ul>
-                  <p class="small_p mb-0"><b>Note:</b> The amount is refunded as the location could not be verified.</p>
-                </div>
-              </div>
-              <div class="sec_622">
-                <div class="sec_6221">
-                  <h3>Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Transaction ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Transaction Method</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Last Updated</b><span>Apr 10, 2025, 05:25 PM</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sec_6222">
-                  <h3>Customer Details</h3>
-                  <ul>
-                    <li>
-                      <p><b class="block_txt">Customer ID</b><span class="blue_txt">#1234567</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Customer Name</b><span>John Doe</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Description</b><span>Location Payout</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Email</b><span class="blue_txt">johndoe@gmail.com</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Phone</b><span>+234-809-555-60</span></p>
-                    </li>
-                    <li>
-                      <p><b class="block_txt">Country</b><span>Nigeria</span></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          </div>
+            <div class="noFoundInner">
+              <img src="images/notification-empty.svg" alt="Notification not Found" />
+              <h3>No Notification</h3>
+              <p class="mb-0">When you have notification, you'll see them here.</p>
             </div>
           </div>
         </div>
@@ -336,5 +316,12 @@ if (localStorage.getItem('darkMode') === "on") {
   });
 </script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script>
+  $('.noti_tabs li .nav_link').on('click', function (e) {
+    e.preventDefault();
+    $('.noti_tabs li .nav_link').removeClass('active');
+    $(this).toggleClass('active');
+  });
+</script>
 </body>
 </html>

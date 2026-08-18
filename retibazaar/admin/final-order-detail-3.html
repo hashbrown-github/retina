@@ -216,7 +216,7 @@ if (localStorage.getItem('darkMode') === "on") {
             <div class="campaign_list">
               <ul>
                 <li class="mb-0 p-0">
-                  <div class="green_order p-0">
+                  <div class="red_order p-0">
                     <div class="top_body card_body3">
                       <div class="card_body31">
                         <p class="small_p mb-2">ORD-00482</p>
@@ -224,38 +224,30 @@ if (localStorage.getItem('darkMode') === "on") {
                         <p class="small_p mb-2"><span>Apr 16, 2024</span> - <span>Apr 30 2025</span> | <span>30 Days</span></p>
                         <p class="small_p mb-2">Ordered By: <span class="blue_txt">ABC Company</span> | <span>johndoe@gmail.com</span> | <span>+234 946 380 2786</span></p>
                         <p class="small_p mb-0">Locations: <b>10</b> <span class="status_type blue_1">3 Equal Installments</span></p>
-                        <div class="pay_status">
-                          <div class="pay_dtl">
-                            <div class="pay_box">
-                              <span class="paymentPaid"></span>
-                              <span class="paymentPend"></span>
-                              <span class="paymentPend"></span>
-                            </div>
-                            <div class="pay_no"><p class="small_p mb-0"><b>1/3</b> Paid</p></div>
-                          </div>
-                          <p class="small_p mt-1 mb-0">Next installment due on: <b>May 12, 2026</b></p>
-                        </div>
                       </div>
                       <div class="card_body33 card_body34">
                        <div class="card_body331">
-                          <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦37,500</span></span></p>
-                          <span class="status_type blue_1">Partially Paid</span>
+                          <p class="mb-0"><b>₦50,000</b><span class="block_txt mt-1">Due: <span>₦50,000</span></span></p>
+                          <span class="status_type danger_1">Pay Today</span>
                         </div>
                         <a href="ad-creatives.html" class="status_type solid-blue">View Ad Creatives</a>
                       </div>
                     </div>
                     <div class="bottom_body">
-                      <p class="mb-0"><b class="color_p">Campaign is live.</b></p>
+                      <p class="mb-0"><b class="color_p">Due today - last chance to pay.</b></p>
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
-            <div class="note_box note_box3 green_noti">
+            <div class="note_box note_box3 red_noti">
               <p class="mb-0">
-                <b class="block_txt mb-2"><span class="material-symbols-outlined noti_icon">campaign</span>Campaign is live.</b>
-                <span class="block_txt mt-1">First installment received - order moved to campaigns for verification and activation. Remaining Installments due as scheduled.</span>
+                <b class="block_txt mb-2"><span class="material-symbols-outlined noti_icon">alarm</span>First payment window closes today</b>
+                <span class="block_txt">Order finalized <b>27 Apr 2026</b>. First payment must be made by <b>1 May 2026</b>.</span>
+                <b class="block_txt red_txt mt-1"> If not paid today, this order will be automatically deleted and all 7 locations released to inventory.</b>
+                <span class="block_txt mt-2">Expires: 1 May 2026</span>
               </p>
+              <button type="button" class="status_type solid-blue" data-bs-toggle="modal" data-bs-target="#approvePayment">Manually Approved Payment</button>
             </div>
             <div class="orderPay_sec">
               <div class="tooltip_head">
@@ -277,25 +269,25 @@ if (localStorage.getItem('darkMode') === "on") {
                   <ul>
                     <li>
                       <div>
-                        <h3 class="blue_txt">₦50,000</h3>
+                        <h3 class="blue_txt">₦25,000</h3>
                         <p class="mb-0">Total Order Value</p>
                       </div>
                     </li>
                     <li>
                       <div>
-                        <h3 class="green_txt">₦12,500</h3>
+                        <h3 class="green_txt">₦0</h3>
                         <p class="mb-0">Amount Paid</p>
                       </div>
                     </li>
                     <li>
                       <div>
-                        <h3 class="ornge_txt">₦37,500</h3>
+                        <h3 class="ornge_txt">₦25,000</h3>
                         <p class="mb-0">Balance Pending</p>
                       </div>
                     </li>
                     <li>
                       <div>
-                        <h3>1/3</h3>
+                        <h3>0/3</h3>
                         <p class="mb-0">Installments Paid</p>
                       </div>
                     </li>
@@ -310,27 +302,24 @@ if (localStorage.getItem('darkMode') === "on") {
               </div>
               <h4 class="text_md text_dark">Instalment Schedule</h4>
               <div class="notification_box">
-                <div class="note_box note_box2 green_noti">
+                <div class="note_box note_box2 ornge_noti">
                   <p class="mb-0">
-                    <span><b>Installment 1</b></span>
+                    <span><b>Installment 1</b> <span class="ornge_txt">(activates campaign)</span></span>
                     <span class="block_txt mt-1">Due: 5 Due: 5 May 2026</span>
                     <span class="block_txt mt-1">33% of total order value: <b>₦16,666</b> | Printing & Installation Charges: <b>₦10,000</b></span>
                   </p>
                   <div class="note_box21">
-                    <span class="status_type solid-success">Paid</span>
-                    <button type="button" class="status_type success_1 downIcon" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Download Invoice">
-                      <span class="material-symbols-outlined">download</span>
-                    </button>
+                    <span class="status_type warning_1">3 day window left</span>
                   </div>
                 </div>
-                <div class="note_box note_box2 ornge_noti">
+                <div class="note_box note_box2 grey_noti">
                   <p class="mb-0">
-                    <span><b>Installment 2</b> <span class="ornge_txt">(activates campaign)</span></span>
+                    <span><b>Installment 2</b></span>
                     <span class="block_txt mt-1">Due: 5 Due: 5 May 2026</span>
                     <span class="block_txt mt-1">33% of total order value: <b>₦16,666</b></span>
                   </p>
                   <div class="note_box21">
-                    <span class="status_type warning_1">Due Now</span>
+                    <span class="status_type blue_1">Upcoming</span>
                   </div>
                 </div>
                 <div class="note_box note_box2 grey_noti">
@@ -424,13 +413,13 @@ if (localStorage.getItem('darkMode') === "on") {
                             <p>₦ 25,000</p>
                           </td>
                         </tr>
-                      </tbody>
-                    </table>
+                    </tbody>
+                  </table>
                   </div>
                 </div>
                 <div class="notification_box proposal_head">
-                  <div class="note_box note_box2 ornge_noti mb-0">
-                    <p class="mb-0">1/3 Installment Received - <b>Pending: ₦33,332</b></p>
+                  <div class="note_box note_box2 ornge_noti">
+                    <p class="mb-0">Window expires: <b>1 May 2026</b></p>
                   </div>
                 </div>
                 <div class="payBreakdown">
@@ -581,11 +570,6 @@ if (localStorage.getItem('darkMode') === "on") {
       });
     }
   });
-</script>
-
-<script>
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 </script>
 <!--========= TOOLTIP SCRIPT END ========-->
 </body>

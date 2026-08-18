@@ -39,6 +39,7 @@ if (localStorage.getItem('darkMode') === "on") {
 <div class="page">
   <div class="sidebar">
     <div class="sidebar__top">
+      <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
       <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
       <a class="sidebar__logo" href="dashboard.html">
         <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
@@ -81,8 +82,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Media Locations</div>
                 </a>
-                <span><a href="inventory.html">Inventory</a></span>
-                <span><a href="location-request.html">Location Request</a></span>
+                <span><a href="inventory.html"><b>I</b><span>Inventory</span></a></span>
+                <span><a href="location-request.html"><b>L</b><span>Location Request</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -91,8 +92,9 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Orders</div>
                 </a>
-                <span><a href="requested-orders.html">Requested Orders</a></span>
-                <span><a href="final-orders.html">Final Orders</a></span>
+                <span><a href="requested-orders.html"><b>R</b><span>Requested Orders</span></a></span>
+                <span><a href="proposal.html"><b>P</b><span>Proposal</span></a></span>
+                <span><a href="final-orders.html"><b>F</b><span>Final Orders</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -101,8 +103,8 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Campaigns</div>
                 </a>
-                <span><a href="campaigns.html">Active Campaigns</a></span>
-                <span><a href="pop-and-verification.html">PoP & Verification</a></span>
+                <span><a href="campaigns.html"><b>A</b><span>Active Campaigns</span></a></span>
+                <span><a href="pop-and-verification.html"><b>P</b><span>PoP & Verification</span></a></span>
               </div>
               <div class="side_dropdown arrow_drop dropdown_btn">
                 <a class="sidebar__item" href="javascript:void(0);">
@@ -111,9 +113,21 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Teams</div>
                 </a>
-                <span><a href="field-executives.html">Field Executives</a></span>
-                <span><a href="sales-team.html">Sales Team</a></span>
-                <span><a href="#">Quality Auditors</a></span>
+                <span><a href="field-executives.html"><b>F</b><span>Field Executives</span></a></span>
+                <span><a href="sales-team.html"><b>S</b><span>Sales Team</span></a></span>
+                <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
+                <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">topic</span>
+                  </div>
+                  <div class="sidebar__text">Excel Resource</div>
+                </a>
+                <span><a href="states.html"><b>S</b><span>States</span></a></span>
+                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
               </div>
               <div class="side_dropdown">
                 <a class="sidebar__item" href="#">
@@ -122,6 +136,20 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                   <div class="sidebar__text">Tickets</div>
                 </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">cards_stack</span>
+                  </div>
+                  <div class="sidebar__text">Logs</div>
+                </a>
+                <span><a href="transaction-log.html"><b>T</b><span>Transaction Log</span></a></span>
+                <span><a href="payout-log.html"><b>P</b><span>Payout Log</span></a></span>
+                <span><a href="campaign-log.html"><b>C</b><span>Campaign Log</span></a></span>
+                <span><a href="location-log.html"><b>L</b><span>Location Log</span></a></span>
+                <span><a href="refund-log.html"><b>R</b><span>Refund Log</span></a></span>
+                <span><a href="user-activity.html"><b>U</b><span>User Activity</span></a></span>
               </div>
             </div>
           </div>
@@ -172,93 +200,109 @@ if (localStorage.getItem('darkMode') === "on") {
           </div>
         </div>
         <div class="head_part2">
-          <a href="#"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="notifications.html"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
           <a href="#"><span class="material-symbols-outlined">person</span></a>
         </div>
       </div>
       <div class="main_div">
         <div class="main_content">
-          <div class="userDtl1 card_body">
-            <div class="userDtl_head">
-              <div class="profile_box">
-                <h3 class="mb-20">John Doe<span class="status_type buyer_1">Buyer</span><span class="status_type warning_1">Pending</span></h3>
-                <div class="profile_info">
-                  <p class="small_p mb-0">Company Name<b class="block_txt mt-1">ABC Company</b></p>
-                  <span class="border_line"></span>
-                  <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
-                  <span class="border_line"></span>
-                  <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
-                </div>
-              </div>
-              <div class="right_side">
-                <button type="button" class="outline_btn" data-bs-toggle="modal" data-bs-target="#kyc_concern">Raise KYC Concern</button>
-                <div class="dropdown action_dropdown">
-                  <button class="blue_btn" id="actionDropdownLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action<span class="material-symbols-outlined">arrow_forward_ios</span>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="actionDropdownLink">
-                    <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
-                    <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_user">Reject</a>
+          <div class="sec_all card_body">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="users.html">Users</a></li>
+                <li class="breadcrumb-item active" aria-current="page">User Detail</li>
+              </ol>
+            </nav>
+            <div class="campaign_list">
+              <ul>
+                <li class="mb-0">
+                  <div class="userDtl1">
+                    <div class="userDtl_head">
+                      <div class="profile_box">
+                        <h3 class="mb-20">John Doe<span class="status_type buyer_1">Buyer</span><span class="status_type warning_1">Pending</span></h3>
+                        <div class="profile_info">
+                          <p class="small_p mb-0">Company Name<b class="block_txt mt-1">ABC Company</b></p>
+                          <span class="border_line"></span>
+                          <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
+                          <span class="border_line"></span>
+                          <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
+                        </div>
+                      </div>
+                      <div class="right_side">
+                        <button type="button" class="outline_btn" data-bs-toggle="modal" data-bs-target="#kyc_concern">Raise KYC Concern</button>
+                        <div class="dropdown action_dropdown">
+                          <button class="blue_btn" id="actionDropdownLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action<span class="material-symbols-outlined">arrow_forward_ios</span></button>
+                          <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="actionDropdownLink">
+                            <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
+                            <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_user">Reject</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="userDtl1 card_body">
-            <div class="userDtl_head">
-              <div class="profile_box">
-                <h3 class="mb-20">John Doe<span class="status_type buyer_1">Buyer</span><span class="status_type warning_1">Pending</span></h3>
-                <div class="profile_info">
-                  <p class="small_p mb-0">Company Name<b class="block_txt mt-1">ABC Company</b></p>
-                  <span class="border_line"></span>
-                  <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
-                  <span class="border_line"></span>
-                  <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
-                </div>
-              </div>
-              <div class="right_side">
-                <button type="button" class="outline_btn">Agreement Pending</button>
-                <div class="dropdown action_dropdown">
-                  <button class="blue_btn" id="actionDropdownLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action<span class="material-symbols-outlined">arrow_forward_ios</span>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="actionDropdownLink">
-                    <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
-                    <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_user">Reject</a>
+                </li>
+                <br>
+                <li class="mb-0">
+                  <div class="userDtl1">
+                    <div class="userDtl_head">
+                      <div class="profile_box">
+                        <h3 class="mb-20">John Doe<span class="status_type buyer_1">Buyer</span><span class="status_type warning_1">Pending</span></h3>
+                        <div class="profile_info">
+                          <p class="small_p mb-0">Company Name<b class="block_txt mt-1">ABC Company</b></p>
+                          <span class="border_line"></span>
+                          <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
+                          <span class="border_line"></span>
+                          <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
+                        </div>
+                      </div>
+                      <div class="right_side">
+                        <div class="agree_send"><span class="outline_btn">Agreement Pending</span><button type="button" class="blue_btn">Resend</button></div>
+                        <div class="dropdown action_dropdown">
+                          <button class="blue_btn" id="actionDropdownLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action<span class="material-symbols-outlined">arrow_forward_ios</span>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="actionDropdownLink">
+                            <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#approve_user">Approve</a>
+                            <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#reject_user">Reject</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="userDtl1 card_body">
-            <div class="userDtl_head">
-              <div class="profile_box">
-                <h3 class="mb-20">John Doe<span class="status_type buyer_1">Buyer</span><span class="status_type success_1">Approved</span></h3>
-                <div class="profile_info">
-                  <p class="small_p mb-0">Company Name<b class="block_txt mt-1">ABC Company</b></p>
-                  <span class="border_line"></span>
-                  <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
-                  <span class="border_line"></span>
-                  <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
-                </div>
-              </div>
-              <div class="right_side">
-                <div class="aggree_pen outline_btn gap-0 text_dark">
-                  Agreement Signed
-                  <button type="button" class="resend_btn"><span class="material-symbols-outlined">file_download</span></button>
-                  <button type="button" class="resend_btn"><span class="material-symbols-outlined">visibility</span></button>
-                </div>
-                <div class="dropdown action_dropdown">
-                  <button class="blue_btn" id="actionDropdownLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action<span class="material-symbols-outlined">arrow_forward_ios</span>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="actionDropdownLink">
-                    <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#disable_user">Disable</a>
+                </li>
+                <br>
+                <li class="mb-0">
+                  <div class="userDtl1">
+                    <div class="userDtl_head">
+                      <div class="profile_box">
+                        <h3 class="mb-20">John Doe<span class="status_type buyer_1">Buyer</span><span class="status_type success_1">Approved</span></h3>
+                        <div class="profile_info">
+                          <p class="small_p mb-0">Company Name<b class="block_txt mt-1">ABC Company</b></p>
+                          <span class="border_line"></span>
+                          <p class="small_p mb-0">Email<b class="block_txt mt-1">johndoe@gmail.com</b></p>
+                          <span class="border_line"></span>
+                          <p class="small_p mb-0">Phone Number<b class="block_txt mt-1">+91910000077</b></p>
+                        </div>
+                      </div>
+                      <div class="right_side">
+                        <div class="aggree_pen outline_btn gap-0 text_dark">
+                          Agreement Signed
+                          <button type="button" class="resend_btn"><span class="material-symbols-outlined">file_download</span></button>
+                          <button type="button" class="resend_btn"><span class="material-symbols-outlined">visibility</span></button>
+                        </div>
+                        <div class="dropdown action_dropdown">
+                          <button class="blue_btn" id="actionDropdownLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action<span class="material-symbols-outlined">arrow_forward_ios</span>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end me-sm-n4 me-n3" aria-labelledby="actionDropdownLink">
+                            <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#disable_user">Disable</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="w-100 mt-20">
@@ -505,7 +549,11 @@ if (localStorage.getItem('darkMode') === "on") {
                 <div class="userDtl1 card_body mt-20">
                   <div class="userDtl_head">
                     <div class="profile_box">
-                      <h3 class="mb-0">Business Details<span class="status_type success_1">Verified</span></h3>
+                      <h3 class="mb-0">Business Details<span class="status_type success_1">Verified</span>
+                        <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editBussDtl">
+                          <span class="material-symbols-outlined text_dark">edit</span>
+                        </button>
+                      </h3>
                     </div>
                   </div>
                   <div class="userDtlBody">
@@ -523,7 +571,7 @@ if (localStorage.getItem('darkMode') === "on") {
                         <p class="small_p mb-2">Phone Number: <b>+234 9876543210</b></p>
                       </li>
                       <li>
-                        <p class="small_p mb-2">TIN/VAT: <b>123456</b></p>
+                        <p class="small_p mb-2">TIN: <b>123456</b></p>
                       </li>
                       <li>
                         <p class="small_p mb-2">VAT Number: <b>123456</b></p>
@@ -537,24 +585,45 @@ if (localStorage.getItem('darkMode') === "on") {
                 <div class="userDtl1 card_body mt-20">
                   <div class="userDtl_head">
                     <div class="profile_box">
-                      <h3 class="mb-0">Compliance Document<span class="status_type warning_1">Pending</span></h3>
+                      <h3 class="mb-0">Identity Verification<span class="status_type success_1">Verified</span>
+                        <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editIdentityDtl">
+                          <span class="material-symbols-outlined text_dark">edit</span>
+                        </button>
+                      </h3>
                     </div>
-                    <div class="right_side">
+                    <div class="right_side validateDtl">
+                      <div class="validateBtn">
+                        <button type="button">Validate</button>
+                        <div class="spinner-border loadingStatus" role="status"></div>
+                        <span class="status_type danger_1">Failed</span>
+                        <span class="status_type success_1">Passed</span>
+                      </div>
                       <div class="d-flex align-items-end" data-bs-toggle="modal" data-bs-target="#click_verify">
                         <label class="checkbox">
-                          <input class="checkbox__input m-0" type="checkbox">
+                          <input class="checkbox__input m-0" type="checkbox" checked>
                           <span class="checkbox__in">
                             <span class="checkbox__tick"></span>
                           </span>
                         </label>
-                        <span class="check_txt ms-2">Click to Verify</span>
+                        <span class="check_txt ms-2">Verified</span>
                       </div>
                     </div>
                   </div>
                   <div class="userDtlBody">
-                    <p class="small_p mb-2">Audit Report: <b>abcreport.pdf</b></p>
+                    <ul>
+                      <li>
+                        <p class="small_p mb-2"><b>Passport</b></p>
+                      </li>
+                      <li>
+                        <p class="small_p mb-2">Name: <b>John Doe</b></p>
+                      </li>
+                      <li>
+                        <p class="small_p mb-2">Passport Number: <b>M1234567</b></p>
+                      </li>
+                    </ul>
+                    <p class="small_p mb-2">Passport: <b>johnpassport.pdf</b></p>
                     <div class="report_pdf">
-                      <div class="nav_link"><img src="images/pdf.svg" alt="PDF">PDF</div>
+                      <div class="nav_link"><img src="images/file.png" alt="PDF">johnpassport.pdf</div>
                     </div>
                   </div>
                 </div>
@@ -579,7 +648,12 @@ if (localStorage.getItem('darkMode') === "on") {
                     <div class="userDtlBody1">
                       <ul>
                         <li>
-                          <p class="small_p mb-2"><b>Director or Managing Director</b></p>
+                          <p class="small_p edit_bank2 mb-2">
+                            <b>Director or Managing Director</b>
+                            <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editDirectorDtl">
+                              <span class="material-symbols-outlined text_dark">edit</span>
+                            </button>
+                          </p>
                         </li>
                         <li>
                           <p class="small_p mb-2">Name: <b>John Doe</b></p>
@@ -594,7 +668,12 @@ if (localStorage.getItem('darkMode') === "on") {
                       <span class="border_line"></span>
                       <ul>
                         <li>
-                          <p class="small_p mb-2"><b>Decision Maker</b></p>
+                          <p class="small_p edit_bank2 mb-2">
+                            <b>Decision Maker</b>
+                            <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editDecisionMDtl">
+                              <span class="material-symbols-outlined text_dark">edit</span>
+                            </button>
+                          </p>
                         </li>
                         <li>
                           <p class="small_p mb-2">Name: <b>John Doe</b></p>
@@ -609,7 +688,12 @@ if (localStorage.getItem('darkMode') === "on") {
                       <span class="border_line"></span>
                       <ul>
                         <li>
-                          <p class="small_p mb-2"><b>Designated Contact Person</b></p>
+                          <p class="small_p edit_bank2 mb-2">
+                            <b>Designated Contact Person</b>
+                            <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editDesignatedDtl">
+                              <span class="material-symbols-outlined text_dark">edit</span>
+                            </button>
+                          </p>
                         </li>
                         <li>
                           <p class="small_p mb-2">Name: <b>John Doe</b></p>
@@ -627,30 +711,46 @@ if (localStorage.getItem('darkMode') === "on") {
                 <div class="userDtl1 card_body mt-20">
                   <div class="userDtl_head">
                     <div class="profile_box">
-                      <h3 class="mb-0">Bank Account Details<span class="status_type warning_1">Pending</span></h3>
+                      <h3 class="mb-0">Bank Account Details<span class="status_type success_1">Verified</span>
+                        <button type="button" class="edit_bank" data-bs-toggle="modal" data-bs-target="#editBankDtl">
+                          <span class="material-symbols-outlined text_dark">edit</span>
+                        </button>
+                      </h3>
                     </div>
-                    <div class="right_side">
+                    <div class="right_side validateDtl">
+                      <div class="validateBtn">
+                        <button type="button">Validate</button>
+                        <div class="spinner-border loadingStatus" role="status"></div>
+                        <span class="status_type danger_1">Failed</span>
+                        <span class="status_type success_1">Passed</span>
+                      </div>
                       <div class="d-flex align-items-end" data-bs-toggle="modal" data-bs-target="#click_verify">
                         <label class="checkbox">
-                          <input class="checkbox__input m-0" type="checkbox">
+                          <input class="checkbox__input m-0" type="checkbox" checked>
                           <span class="checkbox__in">
                             <span class="checkbox__tick"></span>
                           </span>
                         </label>
-                        <span class="check_txt ms-2">Click to Verify</span>
+                        <span class="check_txt ms-2">Verified</span>
                       </div>
                     </div>
                   </div>
                   <div class="userDtlBody">
                     <ul>
                       <li>
-                        <p class="small_p mb-2">Currency: <b>NGN 2000</b></p>
+                        <p class="small_p mb-2">Currency: <b>United States Dollar (USD)</b></p>
                       </li>
                       <li>
                         <p class="small_p mb-2">Country of Bank Account: <b>Nigeria</b></p>
                       </li>
                       <li>
-                        <p class="small_p mb-0">Account Number: <b>+234 9876543219</b></p>
+                        <p class="small_p mb-2">Bank Name: <b>First Bank Nigeria Ltd</b></p>
+                      </li>
+                      <li>
+                        <p class="small_p mb-2">Account Name: <b>John Doe</b></p>
+                      </li>
+                      <li>
+                        <p class="small_p mb-0">Account Number: <b>2349876543219</b></p>
                       </li>
                     </ul>
                   </div>
@@ -783,6 +883,384 @@ if (localStorage.getItem('darkMode') === "on") {
             </div>
           </div>
         </div>
+
+        <!--======= EDIT BUSINESS DETAIL MODAL START =======-->
+        <div class="modal fade" id="editBussDtl" tabindex="-1" role="dialog" aria-labelledby="editBussDtlLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="editBussDtlLabel">Edit Business Detail</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Company Name</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="ABC Company" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Official Address</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="Chandigarh" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Email Address</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="johndoe@gmail.com" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                     <label class="small_p mb-1"><p class="small_p mb-0"><b>Phone Number</b></p></label>
+                    <div class="input_flex mb-3">
+                      <div class="input_group left_width">
+                        <span class="material-symbols-outlined searchIcon">expand_more</span>
+                        <select class="form_control">
+                          <option selected>+234</option>
+                          <option>+90</option>
+                          <option>+996</option>
+                        </select>
+                      </div>
+                      <div class="input_group right_width">
+                        <input class="form_control" type="text" value="9876543210"  />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>TIN</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="123456" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>VAT Number</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="123456" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Website</b></p></label>
+                    <div class="input_group">
+                      <input class="form_control" type="text" value="https//localhost:3456onboarding" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= EDIT IDENTITY VERIFICATION DETAIL MODAL START =======-->
+        <div class="modal fade" id="editIdentityDtl" tabindex="-1" role="dialog" aria-labelledby="editIdentityDtlLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="editIdentityDtlLabel">Edit Identity Verification Detail</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="selectOption">
+                    <label class="radio">
+                      <input class="radio__input m-0" type="radio" name="identityInfo" />
+                      <span class="radio__in">
+                        <span class="radio__tick"></span>
+                        <b class="check_txt ms-2">CAC</b>
+                      </span>
+                    </label>
+                    <label class="radio">
+                      <input class="radio__input m-0" type="radio" name="identityInfo" />
+                      <span class="radio__in">
+                        <span class="radio__tick"></span>
+                        <b class="check_txt ms-2">NIN</b>
+                      </span>
+                    </label>
+                    <label class="radio">
+                      <input class="radio__input m-0" type="radio" name="identityInfo" checked />
+                      <span class="radio__in">
+                        <span class="radio__tick"></span>
+                        <b class="check_txt ms-2">Passport</b>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="identityVer">
+                    <div class="identityVer1">
+                      <h6 class="text_md mb-3">Company Registration Certificate</h6>
+                      <div class="col-12 col-sm-12">
+                        <label class="small_p mb-1"><p class="small_p mb-0"><b>Upload Certificate</b></p></label>
+                        <div class="markPaid mt-1">
+                          <input type="file">
+                          <button type="button" class="blue_btn">Upload</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="identityVer1">
+                      <h6 class="text_md mb-3">National Identification Number</h6>
+                      <div class="col-12 col-sm-12">
+                        <label class="small_p mb-1"><p class="small_p mb-0"><b>NIN Number</b></p></label>
+                        <div class="input_group mb-3">
+                          <input class="form_control" type="text" />
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-12">
+                        <label class="small_p mb-1"><p class="small_p mb-0"><b>NIN Document</b></p></label>
+                        <div class="markPaid mt-1">
+                          <input type="file">
+                          <button type="button" class="blue_btn">Upload</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="identityVer1">
+                      <h6 class="text_md mb-3">Passport</h6>
+                      <div class="col-12 col-sm-12">
+                        <label class="small_p mb-1"><p class="small_p mb-0"><b>Name</b></p></label>
+                        <div class="input_group mb-3">
+                          <input class="form_control" type="text" value="John Doe" />
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-12">
+                        <label class="small_p mb-1"><p class="small_p mb-0"><b>Passport Number</b></p></label>
+                        <div class="input_group mb-3">
+                          <input class="form_control" type="text" value="M1234567" />
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-12">
+                        <label class="small_p mb-1"><p class="small_p mb-0"><b>Passport</b></p></label>
+                        <div class="uploadDocs">
+                          <div class="markPaid cancelBtn">
+                            <p class="small_p mb-0"><b>johnpassport.pdf</b></p>
+                            <button type="button" class="outline_btn"><span class="material-symbols-outlined">close</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= EDIT DIRECTOR OF MANAGING DETAIL MODAL START =======-->
+        <div class="modal fade" id="editDirectorDtl" tabindex="-1" role="dialog" aria-labelledby="editDirectorDtlLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="editDirectorDtlLabel">Edit Director or Managing Director Detail</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Name</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="John Doe" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Email Address</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="johndoe@gmail.com" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                     <label class="small_p mb-1"><p class="small_p mb-0"><b>Phone Number</b></p></label>
+                    <div class="input_flex">
+                      <div class="input_group left_width">
+                        <span class="material-symbols-outlined searchIcon">expand_more</span>
+                        <select class="form_control">
+                          <option selected>+234</option>
+                          <option>+90</option>
+                          <option>+996</option>
+                        </select>
+                      </div>
+                      <div class="input_group right_width">
+                        <input class="form_control" type="text" value="9876543210"  />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= EDIT DECISION MAKER DETAIL MODAL START =======-->
+        <div class="modal fade" id="editDecisionMDtl" tabindex="-1" role="dialog" aria-labelledby="editDecisionMDtlLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="editDecisionMDtlLabel">Edit Decision Maker Detail</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Name</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="John Doe" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Email Address</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="johndoe@gmail.com" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                     <label class="small_p mb-1"><p class="small_p mb-0"><b>Phone Number</b></p></label>
+                    <div class="input_flex">
+                      <div class="input_group left_width">
+                        <span class="material-symbols-outlined searchIcon">expand_more</span>
+                        <select class="form_control">
+                          <option selected>+234</option>
+                          <option>+90</option>
+                          <option>+996</option>
+                        </select>
+                      </div>
+                      <div class="input_group right_width">
+                        <input class="form_control" type="text" value="9876543210"  />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= EDIT DESIGNATED DETAIL MODAL START =======-->
+        <div class="modal fade" id="editDesignatedDtl" tabindex="-1" role="dialog" aria-labelledby="editDesignatedDtlLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="editDesignatedDtlLabel">Edit Designated Contact Person Detail</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Name</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="John Doe" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Email Address</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="johndoe@gmail.com" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                     <label class="small_p mb-1"><p class="small_p mb-0"><b>Phone Number</b></p></label>
+                    <div class="input_flex">
+                      <div class="input_group left_width">
+                        <span class="material-symbols-outlined searchIcon">expand_more</span>
+                        <select class="form_control">
+                          <option selected>+234</option>
+                          <option>+90</option>
+                          <option>+996</option>
+                        </select>
+                      </div>
+                      <div class="input_group right_width">
+                        <input class="form_control" type="text" value="9876543210"  />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= EDIT BANK DETAIL MODAL START =======-->
+        <div class="modal fade" id="editBankDtl" tabindex="-1" role="dialog" aria-labelledby="editBankDtlLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="editBankDtlLabel">Edit Bank Account Detail</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <!-- <div class="col-12 col-sm-12">
+                    <label class="mb-1"><p class="small_p mb-0"><b>Country of Bank Account</b></p></label>
+                    <div class="input_group mb-3">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option disabled>Choose Country of Bank Account</option>
+                        <option selected>Nigeria</option>
+                        <option>Belgium</option>
+                        <option>Colombia</option>
+                        <option>France</option>
+                        <option>Algeria</option>
+                      </select>
+                    </div>
+                  </div> -->
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Bank Name</b></p></label>
+                    <div class="input_group mb-3">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option disabled>Choose a Bank</option>
+                        <option selected>First Bank Nigeria Ltd</option>
+                        <option>Access Bank plc</option>
+                        <option>Alpha Morgan Bank</option>
+                        <option>Fidelity Bank Plc</option>
+                        <option>Globus Bank Ltd</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Account Name</b></p></label>
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" value="John Doe" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <label class="small_p mb-1"><p class="small_p mb-0"><b>Account Number</b></p></label>
+                    <div class="input_group">
+                      <input class="form_control" type="text" value="2349876543219" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!--====== VERIFY POPUP START ======-->
         <div class="modal fade" id="click_verify" tabindex="-1" aria-labelledby="click_verify_modalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -825,4 +1303,31 @@ if (localStorage.getItem('darkMode') === "on") {
     });
   });
 </script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
 <!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script>
+    $(document).ready(function () {
+      function toggleIdentitySection() {
+        // Get index of checked radio
+        var index = $('.radio__input[name="identityInfo"]:checked').closest('.radio').index();
+        // Hide all sections
+        $('.identityVer1').hide();
+        // Show corresponding section
+        $('.identityVer1').eq(index).show();
+      }
+      // Initial load
+      toggleIdentitySection();
+      // On radio change
+      $('.radio__input[name="identityInfo"]').on('change', function () {
+        toggleIdentitySection();
+      });
+    });
+  </script>
+</body>
+</html>

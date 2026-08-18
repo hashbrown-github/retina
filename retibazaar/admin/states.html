@@ -1,0 +1,727 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>States | Retibazaar</title>
+<meta name="title" content="Location Inventory | Retibazaar" />
+<meta name="description" content="Location Inventory | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="users.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">group</span>
+                  </div>
+                  <div class="sidebar__text">Users</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html"><b>I</b><span>Inventory</span></a></span>
+                <span><a href="location-request.html"><b>L</b><span>Location Request</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">package_2</span>
+                  </div>
+                  <div class="sidebar__text">Orders</div>
+                </a>
+                <span><a href="requested-orders.html"><b>R</b><span>Requested Orders</span></a></span>
+                <span><a href="proposal.html"><b>P</b><span>Proposal</span></a></span>
+                <span><a href="final-orders.html"><b>F</b><span>Final Orders</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">campaign</span>
+                  </div>
+                  <div class="sidebar__text">Campaigns</div>
+                </a>
+                <span><a href="campaigns.html"><b>A</b><span>Active Campaigns</span></a></span>
+                <span><a href="pop-and-verification.html"><b>P</b><span>PoP & Verification</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">layers</span>
+                  </div>
+                  <div class="sidebar__text">Teams</div>
+                </a>
+                <span><a href="field-executives.html"><b>F</b><span>Field Executives</span></a></span>
+                <span><a href="sales-team.html"><b>S</b><span>Sales Team</span></a></span>
+                <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
+                <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">topic</span>
+                  </div>
+                  <div class="sidebar__text">Excel Resource</div>
+                </a>
+                <span class="active"><a href="states.html"><b>S</b><span>States</span></a></span>
+                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="#">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">confirmation_number</span>
+                  </div>
+                  <div class="sidebar__text">Tickets</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">cards_stack</span>
+                  </div>
+                  <div class="sidebar__text">Logs</div>
+                </a>
+                <span><a href="transaction-log.html"><b>T</b><span>Transaction Log</span></a></span>
+                <span><a href="payout-log.html"><b>P</b><span>Payout Log</span></a></span>
+                <span><a href="campaign-log.html"><b>C</b><span>Campaign Log</span></a></span>
+                <span><a href="location-log.html"><b>L</b><span>Location Log</span></a></span>
+                <span><a href="refund-log.html"><b>R</b><span>Refund Log</span></a></span>
+                <span><a href="user-activity.html"><b>U</b><span>User Activity</span></a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="notifications.html"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="sec_all card_body">
+            <div class="page_head">
+              <h6><span class="material-symbols-outlined">travel_explore</span>States</h6>
+              <div class="right_side">
+                <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#add_lga">Add LGA</button>
+                <button type="button" class="blue_btn" data-bs-toggle="modal" data-bs-target="#add_city">Add City</button>
+              </div>
+            </div>
+            <div class="excelRes_dtl">
+              <div class="excelSou_tabs">
+                <p class="subLine">Click on a state name to view the associated LGAs.</p>
+                <div class="addsteps_121">
+                  <button class="grey_box collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#state1" aria-expanded="false" aria-controls="state1">State 1<span class="material-symbols-outlined">expand_less</span></button>
+                  <div class="collapse" id="state1">
+                    <div class="card card-body">
+                      <p class="subLine">Click on an LGA name to view the associated cities.</p>
+                      <div class="addsteps_121 mt-0">
+                        <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header grey_box2">
+                              <button class="accordion-button grey_box collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lga1" aria-expanded="false" aria-controls="lga1" style="display: none;">
+                                LGA 1
+                              </button>
+                              <button class="accordion-button grey_box collapsed" type="button">
+                                <input type="text" class="lga_input" value="LGA 1">
+                              </button>
+                              <button type="button" class="lgaEdit" data-bs-toggle="modal" data-bs-target="#confirmModal"><span class="material-symbols-outlined">select_check_box</span></button>
+                            </h2>
+                            <div id="lga1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <ul class="subsub_category">
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 1</a>
+                                      <input type="text" class="city_input" value="City 1" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 2</a>
+                                      <input type="text" class="city_input" value="City 2" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 3</a>
+                                      <input type="text" class="city_input" value="City 3" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 4</a>
+                                      <input type="text" class="city_input" value="City 4" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header grey_box2">
+                              <button class="accordion-button grey_box collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lga2" aria-expanded="false" aria-controls="lga2">
+                                LGA 2
+                              </button>
+                              <button class="accordion-button grey_box collapsed" type="button" style="display: none;">
+                                <input type="text" class="lga_input" value="LGA 2" />
+                              </button>
+                              <button type="button" class="lgaEdit"><span class="material-symbols-outlined">edit_square</span></button>
+                            </h2>
+                            <div id="lga2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <ul class="subsub_category">
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 1</a>
+                                      <input type="text" class="city_input" value="City 1" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 2</a>
+                                      <input type="text" class="city_input" value="City 2" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 3</a>
+                                      <input type="text" class="city_input" value="City 3" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 4</a>
+                                      <input type="text" class="city_input" value="City 4" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header grey_box2">
+                              <button class="accordion-button grey_box collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lga3" aria-expanded="false" aria-controls="lga3">
+                                LGA 3
+                              </button>
+                              <button class="accordion-button grey_box collapsed" type="button" style="display: none;">
+                                <input type="text" class="lga_input" value="LGA 3" />
+                              </button>
+                              <button type="button" class="lgaEdit"><span class="material-symbols-outlined">edit_square</span></button>
+                            </h2>
+                            <div id="lga3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <ul class="subsub_category">
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 1</a>
+                                      <input type="text" class="city_input" value="City 1" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 2</a>
+                                      <input type="text" class="city_input" value="City 2" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 3</a>
+                                      <input type="text" class="city_input" value="City 3" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 4</a>
+                                      <input type="text" class="city_input" value="City 4" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="addsteps_121">
+                  <button class="grey_box collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#state2" aria-expanded="false" aria-controls="state2">State 2<span class="material-symbols-outlined">expand_less</span></button>
+                  <div class="collapse" id="state2">
+                    <div class="card card-body">
+                      <p class="subLine">Click on an LGA name to view the associated cities.</p>
+                      <div class="addsteps_121 mt-0">
+                        <div class="accordion" id="accordionExample2">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header grey_box2">
+                              <button class="accordion-button grey_box collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lga4" aria-expanded="false" aria-controls="lga4">
+                                LGA 1
+                              </button>
+                              <button class="accordion-button grey_box collapsed" type="button" style="display: none;">
+                                <input type="text" class="lga_input" value="LGA 1" />
+                              </button>
+                              <button type="button" class="lgaEdit"><span class="material-symbols-outlined">edit_square</span></button>
+                            </h2>
+                            <div id="lga4" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                              <div class="accordion-body">
+                                <ul class="subsub_category">
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 1</a>
+                                      <input type="text" class="city_input" value="City 1" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 2</a>
+                                      <input type="text" class="city_input" value="City 2" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 3</a>
+                                      <input type="text" class="city_input" value="City 3" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 4</a>
+                                      <input type="text" class="city_input" value="City 4" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header grey_box2">
+                              <button class="accordion-button grey_box collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lga5" aria-expanded="false" aria-controls="lga5">
+                                LGA 2
+                              </button>
+                              <button class="accordion-button grey_box collapsed" type="button" style="display: none;">
+                                <input type="text" class="lga_input" value="LGA 2" />
+                              </button>
+                              <button type="button" class="lgaEdit"><span class="material-symbols-outlined">edit_square</span></button>
+                            </h2>
+                            <div id="lga5" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                              <div class="accordion-body">
+                                <ul class="subsub_category">
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 1</a>
+                                      <input type="text" class="city_input" value="City 1" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 2</a>
+                                      <input type="text" class="city_input" value="City 2" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 3</a>
+                                      <input type="text" class="city_input" value="City 3" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 4</a>
+                                      <input type="text" class="city_input" value="City 4" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header grey_box2">
+                              <button class="accordion-button grey_box collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lga6" aria-expanded="false" aria-controls="lga6">
+                                LGA 3
+                              </button>
+                              <button class="accordion-button grey_box collapsed" type="button" style="display: none;">
+                                <input type="text" class="lga_input" value="LGA 3" />
+                              </button>
+                              <button type="button" class="lgaEdit"><span class="material-symbols-outlined">edit_square</span></button>
+                            </h2>
+                            <div id="lga6" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                              <div class="accordion-body">
+                                <ul class="subsub_category">
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 1</a>
+                                      <input type="text" class="city_input" value="City 1" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 2</a>
+                                      <input type="text" class="city_input" value="City 2" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 3</a>
+                                      <input type="text" class="city_input" value="City 3" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                  <li>
+                                    <h5>
+                                      <a href="#">City 4</a>
+                                      <input type="text" class="city_input" value="City 4" style="display: none;" />
+                                      <button type="button" class="cityEdit"><span class="material-symbols-outlined">stylus</span></button>
+                                    </h5>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== ADD LGA MODAL START =======-->
+        <div class="modal fade" id="add_lga" tabindex="-1" role="dialog" aria-labelledby="add_lgaLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="add_lgaLabel">Add LGA</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option selected disabled>Select State</option>
+                        <option>State 1</option>
+                        <option>State 2</option>
+                        <option>State 3</option>
+                        <option>State 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" placeholder="Enter LGA" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== ADD LGA MODAL START =======-->
+        <div class="modal fade" id="add_city" tabindex="-1" role="dialog" aria-labelledby="add_cityLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="add_cityLabel">Add City</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option selected disabled>Select State</option>
+                        <option>State 1</option>
+                        <option>State 2</option>
+                        <option>State 3</option>
+                        <option>State 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <span class="material-symbols-outlined searchIcon">expand_more</span>
+                      <select class="form_control">
+                        <option selected disabled>Select LGA</option>
+                        <option>LGA 1</option>
+                        <option>LGA 2</option>
+                        <option>LGA 3</option>
+                        <option>LGA 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-12">
+                    <div class="input_group mb-3">
+                      <input class="form_control" type="text" placeholder="Enter City" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== CONFIRMATION MODAL START =======-->
+        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title modal_h" id="confirmModal">Confirmation Popup</h5>
+                <button type="button" class="btn-close text_dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal_body">
+                  <p>Do you really want to update the LGA name?</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="outline_btn px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="blue_btn px-3" data-bs-dismiss="modal">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+
+<!--===== EDIT LGA & CITY SCRIPT START =====-->
+<script>
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".lgaEdit")) return;
+
+    const editBtn = e.target.closest(".lgaEdit");
+    const block = editBtn.closest(".accordion-header");
+
+    const viewBtn = block.querySelector('[data-bs-toggle="collapse"]');
+    const editBtnField = block.querySelectorAll('.accordion-button')[1];
+    const input = block.querySelector('.lga_input');
+    const icon = editBtn.querySelector(".material-symbols-outlined");
+
+    // EDIT MODE
+    if (viewBtn.style.display !== "none") {
+      viewBtn.style.display = "none";
+      editBtnField.style.display = "flex";
+
+      input.value = viewBtn.textContent.trim();
+      input.focus();
+
+      // change icon
+      icon.textContent = "select_check_box";
+    }
+    // SAVE MODE
+    else {
+      const value = input.value.trim() || "LGA";
+
+      viewBtn.textContent = value;
+
+      editBtnField.style.display = "none";
+      viewBtn.style.display = "flex";
+
+      // change icon back
+      icon.textContent = "edit_square";
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".cityEdit")) return;
+
+    const editBtn = e.target.closest(".cityEdit");
+    const h5 = editBtn.closest("h5");
+
+    const anchor = h5.querySelector("a");
+    const input = h5.querySelector(".city_input");
+    const icon = editBtn.querySelector(".material-symbols-outlined");
+
+    // EDIT MODE
+    if (anchor.style.display !== "none") {
+      anchor.style.display = "none";
+      input.style.display = "inline-block";
+
+      input.value = anchor.textContent.trim();
+      input.focus();
+
+      icon.textContent = "select_check_box";
+    }
+    // SAVE MODE
+    else {
+      const value = input.value.trim() || "City";
+
+      anchor.textContent = value;
+
+      input.style.display = "none";
+      anchor.style.display = "inline";
+
+      icon.textContent = "stylus";
+    }
+  });
+</script>
+</body>
+</html>

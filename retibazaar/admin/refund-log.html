@@ -1,0 +1,706 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Refund Log | Retibazaar</title>
+<meta name="title" content="Refund Log | Retibazaar" />
+<meta name="description" content="Refund Log | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="users.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">group</span>
+                  </div>
+                  <div class="sidebar__text">Users</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html"><b>I</b><span>Inventory</span></a></span>
+                <span><a href="location-request.html"><b>L</b><span>Location Request</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">package_2</span>
+                  </div>
+                  <div class="sidebar__text">Orders</div>
+                </a>
+                <span><a href="requested-orders.html"><b>R</b><span>Requested Orders</span></a></span>
+                <span><a href="proposal.html"><b>P</b><span>Proposal</span></a></span>
+                <span><a href="final-orders.html"><b>F</b><span>Final Orders</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">campaign</span>
+                  </div>
+                  <div class="sidebar__text">Campaigns</div>
+                </a>
+                <span><a href="campaigns.html"><b>A</b><span>Active Campaigns</span></a></span>
+                <span><a href="pop-and-verification.html"><b>P</b><span>PoP & Verification</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">layers</span>
+                  </div>
+                  <div class="sidebar__text">Teams</div>
+                </a>
+                <span><a href="field-executives.html"><b>F</b><span>Field Executives</span></a></span>
+                <span><a href="sales-team.html"><b>S</b><span>Sales Team</span></a></span>
+                <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
+                <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">topic</span>
+                  </div>
+                  <div class="sidebar__text">Excel Resource</div>
+                </a>
+                <span><a href="states.html"><b>S</b><span>States</span></a></span>
+                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="#">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">confirmation_number</span>
+                  </div>
+                  <div class="sidebar__text">Tickets</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">cards_stack</span>
+                  </div>
+                  <div class="sidebar__text">Logs</div>
+                </a>
+                <span><a href="transaction-log.html"><b>T</b><span>Transaction Log</span></a></span>
+                <span><a href="payout-log.html"><b>P</b><span>Payout Log</span></a></span>
+                <span><a href="campaign-log.html"><b>C</b><span>Campaign Log</span></a></span>
+                <span><a href="location-log.html"><b>L</b><span>Location Log</span></a></span>
+                <span class="active"><a href="refund-log.html"><b>R</b><span>Refund Log</span></a></span>
+                <span><a href="user-activity.html"><b>U</b><span>User Activity</span></a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="notifications.html"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="sec_all card_body">
+            <div class="page_head2 mb-20">
+              <h5>Refund Log</h5>
+              <p>Buyer refunds triggered by unverified locations at campaign end</p>
+            </div>
+            <div class="filter_box filter_box3 mb-20">
+              <div class="filter_box1">
+                <div class="filter_div filter_div1">
+                  <div class="input_group">
+                    <div class="search_box">
+                      <input class="form_control" type="text" placeholder="Refund ID, Order ID or Buyer name" />
+                      <button type="button" class="searchIcon"><span class="material-symbols-outlined">search</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter_div filter_div2">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>All Types</option>
+                      <option>Static</option>
+                      <option>Digital</option>
+                      <option>Transit</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div3">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>All Statuses</option>
+                      <option>Queued</option>
+                      <option>Processing</option>
+                      <option>Paid</option>
+                      <option>Failed</option>
+                      <option>RetryQueued</option>
+                      <option>ManualReview</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div4">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>All Gateways</option>
+                      <option>KoraPay</option>
+                      <option>Paystack</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div5">
+                  <div class="date_flex">
+                    <div class="form_control input-daterange input-group" id="datepicker">
+                      <input type="text" name="startdate" placeholder="Start Date" />
+                      <span class="input-group-addon">-</span>
+                      <input type="text" name="enddate" placeholder="End Date" />
+                    </div>
+                    <span class="input-group-btn">
+                      <span class="material-symbols-outlined">calendar_month</span>
+                    </span>
+                  </div>
+                </div>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
+              </div>
+            </div>
+            <div class="logs_head">
+              <div class="logs_head1">
+                <h6>All Refunds</h6>
+              </div>
+              <div class="logs_head12">
+                <ul class="nav_menu">
+                  <li><button type="button" class="nav_item active">All</button></li>
+                  <li><button type="button" class="nav_item">Queued</button></li>
+                  <li><button type="button" class="nav_item">Paid</button></li>
+                  <li><button type="button" class="nav_item">Failed</button></li>
+                  <li><button type="button" class="nav_item">ManualReview</button></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tableLog_list">
+              <div class="card_body p-0">
+                <div class="table_view log_table refund_log hori_scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th width="">Refund ID</th>
+                        <th width="">Order</th>
+                        <th width="">Buyer</th>
+                        <th width="">Location</th>
+                        <th width="">Type</th>
+                        <th width="">Amount</th>
+                        <th width="">Status</th>
+                        <th width="">Attempt</th>
+                        <th width="">Gateway</th>
+                        <th width="">Batch Ref</th>
+                        <th width="">Reason</th>
+                        <th width="">Triggered</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p class="blue_txt">RFD-001</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0399</p>
+                        </td>
+                        <td>
+                          <p>Amaka Nwosu</p>
+                        </td>
+                        <td>
+                          <p>Victoria Island Screen</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type badge-digital">Digital</span></p>
+                        </td>
+                        <td>
+                          <p>₦18,500</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type success_1">Paid</span></p>
+                        </td>
+                        <td>
+                          <p>1</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type blue_1">KoraPay</span></p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">RBATCH_20250801</p>
+                        </td>
+                        <td>
+                          <p>Location unverified</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">2025-06-28</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p class="blue_txt">RFD-002</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0441</p>
+                        </td>
+                        <td>
+                          <p>Chidi Okonkwo</p>
+                        </td>
+                        <td>
+                          <p>Ajah Highway Billboard</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type badge-static">Static</span></p>
+                        </td>
+                        <td>
+                          <p>₦85,000</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type blue_1">Queued</span></p>
+                        </td>
+                        <td>
+                          <p>--</p>
+                        </td>
+                        <td>
+                          <p>--</p>
+                        </td>
+                        <td>
+                          <p>--</p>
+                        </td>
+                        <td>
+                          <p>Location unverified</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">2025-07-29</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p class="blue_txt">RFD-003</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0312</p>
+                        </td>
+                        <td>
+                          <p>Ngozi Adeyemi</p>
+                        </td>
+                        <td>
+                          <p>Surulere Wall Panel</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type badge-static">Static</span></p>
+                        </td>
+                        <td>
+                          <p>₦52,500</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type warning_1">RetryQueued</span></p>
+                        </td>
+                        <td>
+                          <p>2</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type blue_1">KoraPay</span></p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">RBATCH_20250803</p>
+                        </td>
+                        <td>
+                          <p>Location unverified</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">2025-07-21</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p class="blue_txt">RFD-004</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0418</p>
+                        </td>
+                        <td>
+                          <p>Tunde Adeleke</p>
+                        </td>
+                        <td>
+                          <p>Mushin Transit Route</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type badge-transit">Transit</span></p>
+                        </td>
+                        <td>
+                          <p>₦33,500</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type blue_1">Processing</span></p>
+                        </td>
+                        <td>
+                          <p>1</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type blue_1">KoraPay</span></p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">RBATCH_20250804</p>
+                        </td>
+                        <td>
+                          <p>Location unverified</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">2025-08-01</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p class="blue_txt">RFD-005</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0388</p>
+                        </td>
+                        <td>
+                          <p>Emeka Obi</p>
+                        </td>
+                        <td>
+                          <p>Marina Screen C</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type badge-digital">Digital</span></p>
+                        </td>
+                        <td>
+                          <p>₦120,000</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type purple_1">ManualReview</span></p>
+                        </td>
+                        <td>
+                          <p>9</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type blue_1">Paystack</span></p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">RBATCH_20250730_3</p>
+                        </td>
+                        <td>
+                          <p>Location unverified</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">2025-07-28</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p class="blue_txt">RFD-006</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0450</p>
+                        </td>
+                        <td>
+                          <p>Chidi Okonkwo</p>
+                        </td>
+                        <td>
+                          <p>Surulere Transit Route 1</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type badge-transit">Transit</span></p>
+                        </td>
+                        <td>
+                          <p>₦80,000</p>
+                        </td>
+                        <td>
+                          <p><span class="status_type blue_1">Queued</span></p>
+                        </td>
+                        <td>
+                          <p>--</p>
+                        </td>
+                        <td>
+                          <p>--</p>
+                        </td>
+                        <td>
+                          <p->--</p>
+                        </td>
+                        <td>
+                          <p>Location unverified</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">2025-08-02</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="List_pagination">
+                <ul>
+                  <li class="previous_page"><a href="#"><span><i class="material-symbols-outlined">west</i>Prev</span></a></li>
+                  <li class="active"><a href="#"><span>1</span></a></li>
+                  <li><a href="#"><span>2</span></a></li>
+                  <li><a href="#"><span>3</span></a></li>
+                  <li><a href="#"><span>4</span></a></li>
+                  <li class="next_page"><a href="#"><span>Next<i class="material-symbols-outlined">east</i></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--===== SIDEBAR START =====-->
+          <div class="backdrop_sidebar"></div>
+          <div class="sidebar_list logs_sidebar">
+            <div class="sidebar_inner">
+              <div class="sidebar_header">
+                <div class="logSide_head">
+                  <h3 class="text_sm">Refund <span>RFD-001</span></h4>
+                  <p><span>ORD-2025-0399</span> · <span>Amaka Nwosu</span></b>
+                </div>
+                <span class="material-symbols-outlined close_btn">close</span>
+              </div>
+              <div class="panel-summary">
+                <div class="summary-item">
+                  <div class="summary-label">Order</div>
+                  <div class="summary-value">ORD-2025-0399</div>
+                </div>
+                <div class="summary-item">
+                  <div class="summary-label">Buyer</div>
+                  <div class="summary-value">Amaka Nwosu</div>
+                </div>
+                <div class="summary-item">
+                  <div class="summary-label">Amount</div>
+                  <div class="summary-value">₦18,500</div>
+                </div>
+                <div class="summary-item">
+                  <div class="summary-label">Location</div>
+                  <div class="summary-value">Victoria Island Screen</div>
+                </div>
+                <div class="summary-item">
+                  <div class="summary-label">Status</div>
+                  <div class="summary-value"><span class="status_type success_1">Paid</span></div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="timeline-wrap">
+                  <div class="tl-item">
+                    <div class="tl-dot yellow_dot"></div>
+                    <div class="tl-card">
+                      <div class="tl-row1"><span class="status_type warning_1">CampaignEnded</span><span class="tl-event">Campaign Ended — Location Unverified</span><span class="tl-time">2025-07-25</span></div>
+                      <div class="tl-desc">Campaign closed. Seller did not verify this digital location within the SLA window.</div>
+                      <div class="tl-meta">
+                        <div class="tl-kv"><span class="tl-k">Location: </span><span class="tl-v">Victoria Island Screen</span></div>
+                        <div class="tl-kv"><span class="tl-k">Seller: </span><span class="tl-v">Lagos Billboards</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tl-item">
+                    <div class="tl-dot red_dot"></div>
+                    <div class="tl-card">
+                      <div class="tl-row1"><span class="status_type danger_1">RefundTriggered</span><span class="tl-event">Refund Queued by Detector Job</span><span class="tl-time">2025-07-26</span></div>
+                      <div class="tl-desc">CampaignRefundDetectorJob detected the unverified location and created refund entry.</div>
+                      <div class="tl-meta">
+                        <div class="tl-kv"><span class="tl-k">Queue ID: </span><span class="tl-v">RQUE-4421</span></div>
+                        <div class="tl-kv"><span class="tl-k">Amount: </span><span class="tl-v">₦18,500</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tl-item">
+                    <div class="tl-dot blue_dot"></div>
+                    <div class="tl-card">
+                      <div class="tl-row1"><span class="status_type blue_1">Initiated</span><span class="tl-event">Refund Initiated</span><span class="tl-time">2025-08-01 02:06 WAT</span></div>
+                      <div class="tl-desc">NightRefundJob dispatched to KoraPay.</div>
+                      <div class="tl-meta">
+                        <div class="tl-kv"><span class="tl-k">Gateway: </span><span class="tl-v">KoraPay</span></div>
+                        <div class="tl-kv"><span class="tl-k">Batch: </span><span class="tl-v">RBATCH_20250801</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tl-item">
+                    <div class="tl-dot green_dot"></div>
+                    <div class="tl-card">
+                      <div class="tl-row1"><span class="status_type success_1">Paid</span><span class="tl-event">Refund Disbursed</span><span class="tl-time">2025-08-01 02:08 WAT</span></div>
+                      <div class="tl-desc">Transfer confirmed. Buyer bank account credited.</div>
+                      <div class="tl-meta">
+                        <div class="tl-kv"><span class="tl-k">Ref: </span><span class="tl-v">KP_R0021</span></div>
+                        <div class="tl-kv"><span class="tl-k">Verified: </span><span class="tl-v">2025-08-01 04:10 WAT</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== SIDEBAR END ======-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+  $('#datepicker').datepicker({
+    format: 'dd M, yyyy',
+    orientation: 'bottom',
+    autoclose: true
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script>
+  $('.nav_menu .nav_item').on('click', function (e) {
+    e.preventDefault();
+    $('.nav_menu .nav_item').removeClass('active');
+    $(this).toggleClass('active');
+  });
+</script>
+<script>
+  $(document).on("click", ".logDtl_sidebar", function (event) {
+    event.preventDefault();
+    var target1 = document.querySelector('.sidebar_list');
+    var target2 = document.querySelector('.backdrop_sidebar');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+      target2.classList.remove('open');
+    }
+    else {
+      target1.classList.add('open');
+      target2.classList.add('open');
+    }
+  });
+  $('.close_btn, .backdrop_sidebar').click(function (evt) {
+    evt.stopPropagation();
+    $('.sidebar_list').removeClass('open');
+    $('.backdrop_sidebar').removeClass('open');
+  });
+  $('body,html').click(function (e) {
+    var container = $('.sidebar_list , .logDtl_sidebar,');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass('open');
+    }
+  });
+</script>
+</body>
+</html>

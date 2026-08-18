@@ -1,0 +1,636 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>User Activity | Retibazaar</title>
+<meta name="title" content="User Activity | Retibazaar" />
+<meta name="description" content="User Activity | Retibazaar" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button type="button" class="expand_btn" id="expand_btn"><span class="material-symbols-outlined">chevron_left</span></button>
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="dashboard.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+      </a>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="transaction.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">credit_card</span>
+                  </div>
+                  <div class="sidebar__text">Transaction</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="users.html">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">group</span>
+                  </div>
+                  <div class="sidebar__text">Users</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">mode_of_travel</span>
+                  </div>
+                  <div class="sidebar__text">Media Locations</div>
+                </a>
+                <span><a href="inventory.html"><b>I</b><span>Inventory</span></a></span>
+                <span><a href="location-request.html"><b>L</b><span>Location Request</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">package_2</span>
+                  </div>
+                  <div class="sidebar__text">Orders</div>
+                </a>
+                <span><a href="requested-orders.html"><b>R</b><span>Requested Orders</span></a></span>
+                <span><a href="proposal.html"><b>P</b><span>Proposal</span></a></span>
+                <span><a href="final-orders.html"><b>F</b><span>Final Orders</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">campaign</span>
+                  </div>
+                  <div class="sidebar__text">Campaigns</div>
+                </a>
+                <span><a href="campaigns.html"><b>A</b><span>Active Campaigns</span></a></span>
+                <span><a href="pop-and-verification.html"><b>P</b><span>PoP & Verification</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">layers</span>
+                  </div>
+                  <div class="sidebar__text">Teams</div>
+                </a>
+                <span><a href="field-executives.html"><b>F</b><span>Field Executives</span></a></span>
+                <span><a href="sales-team.html"><b>S</b><span>Sales Team</span></a></span>
+                <span><a href="#"><b>Q</b><span>Quality Auditors</span></a></span>
+                <span><a href="finance-team.html"><b>F</b><span>Finance Team</span></a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">topic</span>
+                  </div>
+                  <div class="sidebar__text">Excel Resource</div>
+                </a>
+                <span><a href="states.html"><b>S</b><span>States</span></a></span>
+                <span><a href="media-types.html"><b>M</b><span>Media Types</span></a></span>
+                <span><a href="start-end_points.html"><b>S</b><span>Start / End Points</span></a></span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="#">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">confirmation_number</span>
+                  </div>
+                  <div class="sidebar__text">Tickets</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn active">
+                <a class="sidebar__item active" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <span class="material-symbols-outlined icon">cards_stack</span>
+                  </div>
+                  <div class="sidebar__text">Logs</div>
+                </a>
+                <span><a href="transaction-log.html"><b>T</b><span>Transaction Log</span></a></span>
+                <span><a href="payout-log.html"><b>P</b><span>Payout Log</span></a></span>
+                <span><a href="campaign-log.html"><b>C</b><span>Campaign Log</span></a></span>
+                <span><a href="location-log.html"><b>L</b><span>Location Log</span></a></span>
+                <span><a href="refund-log.html"><b>R</b><span>Refund Log</span></a></span>
+                <span class="active"><a href="user-activity.html"><b>U</b><span>User Activity</span></a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <div class="side_dropdown theme_switchBtn">
+              <div class="sidebar__item mb-0">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">imagesearch_roller</span>
+                </div>
+                <div class="sidebar__text">Theme</div>
+              </div>
+              <label class="switch switch_theme js-switch-theme">
+                <input class="switch__input" type="checkbox" />
+                <span class="switch__in">
+                  <span class="switch__box"></span>
+                  <span class="switch__icon">
+                    <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                    <span class="material-symbols-outlined icon-moon">light_mode</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="side_dropdown mb-0">
+              <a class="sidebar__item mb-0" href="#">
+                <div class="sidebar__icon">
+                  <span class="material-symbols-outlined icon">logout</span>
+                </div>
+                <div class="sidebar__text">Logout</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <div class="head_part1">
+          <button class="header__burger"></button>
+          <div class="mobile_header">
+            <a class="sidebar__logo" href="stock-detail.html">
+              <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="Retibazaar Logo" />
+              <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="Retibazaar Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="head_part2">
+          <a href="notifications.html"><span class="material-symbols-outlined">notifications_active</span><span class="notiCount">10</span></a>
+          <a href="#"><span class="material-symbols-outlined">person</span></a>
+        </div>
+      </div>
+      <div class="main_div">
+        <div class="main_content">
+          <div class="sec_all card_body">
+            <div class="page_head2 mb-20">
+              <h5>User Activity Log</h5>
+              <p>Session-level actions across buyers, sellers, and admins</p>
+            </div>
+            <div class="filter_box filter_box4 mb-20">
+              <div class="filter_box1">
+                <div class="filter_div filter_div1">
+                  <div class="input_group">
+                    <div class="search_box">
+                      <input class="form_control" type="text" placeholder="User name, ID, or IP" />
+                      <button type="button" class="searchIcon"><span class="material-symbols-outlined">search</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter_div filter_div2">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>All Roles</option>
+                      <option>Buyer</option>
+                      <option>Seller</option>
+                      <option>Admin</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div3">
+                  <div class="input_group">
+                    <span class="material-symbols-outlined searchIcon">expand_more</span>
+                    <select class="form_control">
+                      <option selected>All Categories</option>
+                      <option>Auth</option>
+                      <option>Order</option>
+                      <option>Payment</option>
+                      <option>Profile</option>
+                      <option>Payout</option>
+                      <option>Support</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter_div filter_div5">
+                  <div class="date_flex">
+                    <div class="form_control input-daterange input-group" id="datepicker">
+                      <input type="text" name="startdate" placeholder="Start Date" />
+                      <span class="input-group-addon">-</span>
+                      <input type="text" name="enddate" placeholder="End Date" />
+                    </div>
+                    <span class="input-group-btn">
+                      <span class="material-symbols-outlined">calendar_month</span>
+                    </span>
+                  </div>
+                </div>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">tune</span></button>
+                <button type="button" class="filterBtn"><span class="material-symbols-outlined">undo</span></button>
+              </div>
+            </div>
+            <div class="logs_head">
+              <div class="logs_head1">
+                <h6>Recent Activity</h6>
+              </div>
+              <div class="logs_head12">
+                <ul class="nav_menu">
+                  <li><button type="button" class="nav_item active">All</button></li>
+                  <li><button type="button" class="nav_item">Auth</button></li>
+                  <li><button type="button" class="nav_item">Order</button></li>
+                  <li><button type="button" class="nav_item">Payment</button></li>
+                  <li><button type="button" class="nav_item">Profile</button></li>
+                  <li><button type="button" class="nav_item">Support</button></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tableLog_list">
+              <div class="card_body p-0">
+                <div class="table_view log_table hori_scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th width="">User</th>
+                        <th width="">Role</th>
+                        <th width="">Category</th>
+                        <th width="">Action</th>
+                        <th width="">Entity</th>
+                        <th width="">IP Address</th>
+                        <th width="">Session</th>
+                        <th width="">Timestamp</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p><span>Chidi Okonkwo</span><span class="grey_txt block_txt">#2041</span></p>
+                        </td>
+                        <td>
+                          <p><span class="status_type grey_1">Buyer</span></p>
+                        </td>
+                        <td>
+                          <p>Payment</p>
+                        </td>
+                        <td>
+                          <p>MakePayment</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0451</p>
+                        </td>
+                        <td>
+                          <p class="ip_address">41.58.12.9</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">SES-8812A</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">08:14:22 WAT</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p><span>Tunde Adeleke</span><span class="grey_txt block_txt">#1102</span></p>
+                        </td>
+                        <td>
+                          <p><span class="status_type grey_1">Seller</span></p>
+                        </td>
+                        <td>
+                          <p>Profile</p>
+                        </td>
+                        <td>
+                          <p>UpdateBankDetails</p>
+                        </td>
+                        <td>
+                          <p>Profile #1102</p>
+                        </td>
+                        <td>
+                          <p class="ip_address">197.210.44.3</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">SES-4421B</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">08:32:07 WAT</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p><span>Amaka Nwosu</span><span class="grey_txt block_txt">#3301</span></p>
+                        </td>
+                        <td>
+                          <p><span class="status_type grey_1">Buyer</span></p>
+                        </td>
+                        <td>
+                          <p>Auth</p>
+                        </td>
+                        <td>
+                          <p>Login</p>
+                        </td>
+                        <td>
+                          <p>--</p>
+                        </td>
+                        <td>
+                          <p class="ip_address">105.113.88.21</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">SES-9902C</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">09:01:55 WAT</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p><span>Emeka Obi</span><span class="grey_txt block_txt">#2218</span></p>
+                        </td>
+                        <td>
+                          <p><span class="status_type grey_1">Buyer</span></p>
+                        </td>
+                        <td>
+                          <p>Order</p>
+                        </td>
+                        <td>
+                          <p>ViewOrder</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0388</p>
+                        </td>
+                        <td>
+                          <p class="ip_address">41.73.2.180</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">SES-1234D</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">09:15:33 WAT</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p><span>Ngozi Adeyemi</span><span class="grey_txt block_txt">#1045</span></p>
+                        </td>
+                        <td>
+                          <p><span class="status_type grey_1">Seller</span></p>
+                        </td>
+                        <td>
+                          <p>Support</p>
+                        </td>
+                        <td>
+                          <p>RaiseSupport</p>
+                        </td>
+                        <td>
+                          <p>Ticket #T-0091</p>
+                        </td>
+                        <td>
+                          <p class="ip_address">102.89.31.7</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">SES-5501E</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">09:44:12 WAT</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p><span>Akshay Kumar</span><span class="grey_txt block_txt">#1</span></p>
+                        </td>
+                        <td>
+                          <p><span class="status_type purple_1">Admin</span></p>
+                        </td>
+                        <td>
+                          <p>Payout</p>
+                        </td>
+                        <td>
+                          <p>RequeueInvalidPayout</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">ORD-2025-0312</p>
+                        </td>
+                        <td>
+                          <p class="ip_address">10.0.0.1</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">SES-0001F</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">10:02:48 WAT</p>
+                        </td>
+                      </tr>
+                      <tr class="logDtl_sidebar">
+                        <td>
+                          <p><span>Chidi Okonkwo</span><span class="grey_txt block_txt">#2041</span></p>
+                        </td>
+                        <td>
+                          <p><span class="status_type grey_1">Buyer</span></p>
+                        </td>
+                        <td>
+                          <p>Auth</p>
+                        </td>
+                        <td>
+                          <p>Logout</p>
+                        </td>
+                        <td>
+                          <p>--</p>
+                        </td>
+                        <td>
+                          <p class="ip_address">41.58.12.9</p>
+                        </td>
+                        <td>
+                          <p class="blue_txt">SES-8812A</p>
+                        </td>
+                        <td>
+                          <p class="grey_txt">10:31:59 WAT</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="List_pagination">
+                <ul>
+                  <li class="previous_page"><a href="#"><span><i class="material-symbols-outlined">west</i>Prev</span></a></li>
+                  <li class="active"><a href="#"><span>1</span></a></li>
+                  <li><a href="#"><span>2</span></a></li>
+                  <li><a href="#"><span>3</span></a></li>
+                  <li><a href="#"><span>4</span></a></li>
+                  <li class="next_page"><a href="#"><span>Next<i class="material-symbols-outlined">east</i></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--===== SIDEBAR START =====-->
+          <div class="backdrop_sidebar"></div>
+          <div class="sidebar_list logs_sidebar">
+            <div class="sidebar_inner">
+              <div class="sidebar_header">
+                <div class="logSide_head">
+                  <h3 class="text_sm">Session <span>SES-8812A</span></h4>
+                  <p><span>Chidi Okonkwo</span> · <span>Buyer</span></b>
+                </div>
+                <span class="material-symbols-outlined close_btn">close</span>
+              </div>
+              <div class="panel-summary">
+                <div class="summary-item">
+                  <div class="summary-label">User</div>
+                  <div class="summary-value">Chidi Okonkwo #2041</div>
+                </div>
+                <div class="summary-item">
+                  <div class="summary-label">Role</div>
+                  <div class="summary-value">Buyer</div>
+                </div>
+                <div class="summary-item">
+                  <div class="summary-label">IP</div>
+                  <div class="summary-value">41.58.12.9</div>
+                </div>
+                <div class="summary-item">
+                  <div class="summary-label">Events</div>
+                  <div class="summary-value">3</div>
+                </div>
+                <div class="summary-item">
+                  <div class="summary-label">Date</div>
+                  <div class="summary-value">2025-08-05</div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="timeline-wrap">
+                  <div class="tl-item">
+                    <div class="tl-dot green_dot"></div>
+                    <div class="tl-card">
+                      <div class="tl-row1"><span class="status_type success_1">Auth</span><span class="tl-event">Login</span><span class="tl-time">08:12:01 WAT</span></div>
+                      <div class="tl-desc">User authenticated via email/password.</div>
+                      <div class="tl-meta">
+                        <div class="tl-kv"><span class="tl-k">IP: </span><span class="tl-v">41.58.12.9</span></div>
+                        <div class="tl-kv"><span class="tl-k">Device: </span><span class="tl-v">Chrome/Win11</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tl-item">
+                    <div class="tl-dot blue_dot"></div>
+                    <div class="tl-card">
+                      <div class="tl-row1"><span class="status_type blue_1">Payment</span><span class="tl-event">MakePayment</span><span class="tl-time">208:14:22 WAT</span></div>
+                      <div class="tl-desc">Buyer completed payment for new static campaign.</div>
+                      <div class="tl-meta">
+                        <div class="tl-kv"><span class="tl-k">Order: </span><span class="tl-v">ORD-2025-0451</span></div>
+                        <div class="tl-kv"><span class="tl-k">Amount: </span><span class="tl-v">₦120,000</span></div>
+                        <div class="tl-kv"><span class="tl-k">Gateway: </span><span class="tl-v">Paystack</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tl-item">
+                    <div class="tl-dot yellow_dot"></div>
+                    <div class="tl-card">
+                      <div class="tl-row1"><span class="status_type warning_1">Auth</span><span class="tl-event">Logout</span><span class="tl-time">08:31:59 WAT</span></div>
+                      <div class="tl-desc">Session ended by user.</div>
+                      <div class="tl-meta">
+                        <div class="tl-kv"><span class="tl-k">Duration: </span><span class="tl-v">19m 58s</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== SIDEBAR END ======-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+  $('#datepicker').datepicker({
+    format: 'dd M, yyyy',
+    orientation: 'bottom',
+    autoclose: true
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<script>
+  $('#expand_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('small_sidebar');
+    $(this).toggleClass('active');
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script>
+  $('.nav_menu .nav_item').on('click', function (e) {
+    e.preventDefault();
+    $('.nav_menu .nav_item').removeClass('active');
+    $(this).toggleClass('active');
+  });
+</script>
+<script>
+  $(document).on("click", ".logDtl_sidebar", function (event) {
+    event.preventDefault();
+    var target1 = document.querySelector('.sidebar_list');
+    var target2 = document.querySelector('.backdrop_sidebar');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+      target2.classList.remove('open');
+    }
+    else {
+      target1.classList.add('open');
+      target2.classList.add('open');
+    }
+  });
+  $('.close_btn, .backdrop_sidebar').click(function (evt) {
+    evt.stopPropagation();
+    $('.sidebar_list').removeClass('open');
+    $('.backdrop_sidebar').removeClass('open');
+  });
+  $('body,html').click(function (e) {
+    var container = $('.sidebar_list , .logDtl_sidebar,');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass('open');
+    }
+  });
+</script>
+</body>
+</html>
