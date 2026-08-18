@@ -923,7 +923,7 @@ header.header_outer {
 .home_111 h1, .landSec_12 h1, .discovery_11 h1, .invent_11 h1 {
   font-family: 'Avenir-Heavy', sans-serif;
   font-size: 70px;
-  line-height: 93px;
+  line-height: 86px;
   color: #ffffff;
   margin-bottom: 15px;
 }
@@ -1050,12 +1050,12 @@ header.header_outer {
   color: #000000;
   margin-bottom: 26px;
 }
-.home_21 h3 b {
+.home_21 h3 b, .buyer_21 h3 b {
   position: relative;
 }
-.home_21 h3 b:before {
+.home_21 h3 b:before, .buyer_21 h3 b:before {
   position: absolute;
-  left: -8px;
+  left: -4px;
   content: '';
   background: url('../images/blue-box.svg') no-repeat;
   width: 256px;
@@ -1064,7 +1064,14 @@ header.header_outer {
   /* background-color: #006DD6;
   transform: rotate(-1.4deg); */
 }
-.home_21 h3 span {
+.buyer_21 h3 b:before {
+  width: 166px;
+}
+.buyer_21.buyer_211 h3 b:before {
+  width: 358px;
+  background-size: cover;
+}
+.home_21 h3 span, .buyer_21 h3 span {
   color: #ffffff;
   position: relative;
   z-index: 1;
@@ -1073,7 +1080,6 @@ header.header_outer {
   height: 1px;
   display: inline-block;
 }
-
 .home_21 p, .home_22 ul li p, .home_311 ul li p, .home_411 ul li p, .home_511 p, .home_81 p, .client_review p, .buyer_241 p, .reviewItem p, .invent_211 ul li p, .disco_511 ul li p, .insight_2 .disco_511 p, .latest_sec .disco_511 p, .insight_32 > p, .insight_4 .disco_511 > p, .aiSec_31 p, .insight_32 ul li p, .buyer_8 .disco_511 p {
   font-size: 18px;
   line-height: 24px;
@@ -1709,7 +1715,7 @@ header.header_outer {
 .buyer_1 {
   width: 100%;
   height: 643px;
-  background: url('../images/buyer-banner.jpg') no-repeat;
+  background: url('../images/home-banner.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #1a223e;
@@ -1807,7 +1813,7 @@ header.header_outer {
   font-family: 'Avenir-Heavy', sans-serif;
   font-size: 28px;
   line-height: 37px;
-  color: #000000;
+  color: #006DD6;
   margin-bottom: 0;
   width: calc(50% - 30px);
 }
@@ -2224,9 +2230,9 @@ header.header_outer {
   width: 100%;
   display: flex;
 }
-.buyer_1.seller_1 {
+.buyer_1.seller_1:not(.buyer_11) {
   background: none;
-  background-color: #0E1116;
+  background-color: #1a223e;
 }
 .buyer_1.seller_1 .home_11 {
   gap: 0;
@@ -3116,6 +3122,8 @@ header.header_outer {
   width: 100%;
   background: url('../images/planning-banner.jpg') no-repeat;
   background-size: cover;
+  background-blend-mode: color-burn;
+  background-color: rgb(203 229 255 / 25%);
   padding: 100px 0;
   position: relative;
   overflow: hidden;
@@ -3472,6 +3480,8 @@ header.header_outer {
   height: 800px;
   background: url('../images/inventory-banner.jpg') no-repeat;
   background-size: cover;
+  background-blend-mode: color-burn;
+  background-color: rgb(203 229 255 / 25%);
   display: table;
   overflow: hidden;
 }
@@ -3598,7 +3608,8 @@ header.header_outer {
   height: 800px;
   background: url('../images/insights-banner.png') no-repeat;
   background-size: cover;
-  background-color: #f7f7f7;
+  background-blend-mode: overlay;
+  background-color: rgb(203 229 255 / 22%);
   display: table;
   overflow: hidden;
 }
@@ -3697,6 +3708,8 @@ header.header_outer {
   height: 800px;
   background: url('../images/inventory-banner.jpg') no-repeat;
   background-size: cover;
+  background-blend-mode: color-burn;
+  background-color: rgb(203 229 255 / 20%);
   display: table;
   overflow: hidden;
 }
